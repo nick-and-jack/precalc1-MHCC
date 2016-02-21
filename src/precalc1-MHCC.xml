@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********************************************************************
+Copyright 2016 Jack Green and Nick Chura
+
+
+*********************************************************************-->
+
+<!-- USE XINCLUDE SWITCH ON XSLTPROC -->
+
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
+    <xi:include href="./bookinfo.xml" /> <!-- ISBN, website, other metadata -->
+ 
+    <book xml:id="precalc1-MHCC">
+        <title>Mt. Hood Precaclucus</title>
+        <subtitle>Elementary Functions</subtitle>
+
+        <xi:include href="./frontmatter.xml" />                <!-- Title Page, Preface, etc. -->
+
+        <xi:include href="./functions.xml" />
+        <xi:include href="./domain-range-piecewise.xml" />
+        <xi:include href="./exponential-functions.xml" />
+        <xi:include href="./logarithmic-functions.xml" />
+        <xi:include href="./vertical-and-horizontal-translations.xml" />
+        <xi:include href="./reflections-and-vertical-stretches.xml" />
+        <xi:include href="./composition-and-inverse.xml" />
+        <xi:include href="./combinations-of-functions.xml" />
+        <xi:include href="./power-functions-and-polynomials.xml" />
+
+        <!--<xi:include href="./backmatter.xml" />-->
+    </book>
+
+</mathbook>
