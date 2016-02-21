@@ -11,9 +11,56 @@ Copyright 2016 Jack Green and Nick Chura
 <title>Functions</title>
 
 
-    <introduction>
-        <p>HI my name is Jack.  A certain amount of mathematical maturity is necessary to find and study applications of abstract algebra.  A basic knowledge of set theory, mathematical induction, equivalence relations, and matrices is a must.  Even more important is the ability to read and understand mathematical proofs.  In this chapter we will outline the background needed for a course in abstract algebra.</p>
-    </introduction>
+  <section xml:id="functions-gist">
+        <p>A function is a rule that be in the form of a graph or a table of values or a formula.  It may even be a sentence or a set of instructions.  A function takes an input value and uses the rule to create an output value.</p>
+
+       <p>Function notation looks like this: <m>f(\text{input})=\text{output}</m></p>
+
+        <p>But, instead of writing the words <q>input</q> and <q>output</q> we usually use variables, like x and y. Then we define in words what the variables actually mean or represent.  Most often the notation will look something like this: <m>f(x)=y</m>
+</p>
+
+     <p>Inside the parentheses is the <term>Independent Variable</term>, like <m>x</m>, and outside the parentheses, on the other side of the equals sign, is the <term>Dependent Variable</term>, like <m>y</m>.</p>
+
+
+     <example>
+         <p>Let <m>E</m> be the fuel efficiency, in miles per gallon, of a car traveling at <m>s</m> miles per hour. For speeds between 5 and 75 miles per hour, the function in <xref ref="speed-vs-efficiency"/> tells us the efficiency of the car.</p>
+
+
+          <figure xml:id="speed-vs-efficiency">
+              <caption>Fuel Economy versus Speed</caption>
+              <image>
+                <latex-image-code>
+                <![CDATA[\begin{tikzpicture}
+                \begin{axis}[ymin=0, ymax=35, xlabel={Speed (mph)}, ylabel={Fuel Economy (mpg)}, ytick={0,10,...,30}, minor ytick={0,5,...,35}, xmin=5, xmax=75, grid=both]
+                    \addplot[smooth] coordinates {(5, 10) (15, 22) (20, 25) (35, 30) (45, 31) (55, 30) (65,26) (75, 24)};
+                \end{axis}
+                \end{tikzpicture}]]>
+                </latex-image-code>
+              </image>
+
+          </figure>
+
+          <p>Therefore, the <em>efficiency is a function of the speed</em>.    Using function notation we could write an equation saying the same thing: <m>E=f(s)</m></p>
+
+          <p>The input is the speed, <m>s</m>, and the output is the efficiency <m>E</m>. The function <m>f(s)</m> is the graph itself.</p>
+
+          <p>The efficiency of the car is given by the height of the graph.  Therefore <m>f(35) = 28</m> means, <q>The efficiency of the car traveling at 35 mph is 28 mpg</q>.</p>
+
+     </example>
+
+
+       <subsection>
+           <title>Inputs have UNIQUE outputs</title> 
+
+           <p>An important aspect of functions is that each input can only have one output.  For instance the car can only have one efficiency at a given speed. The cannot get 10 mpg and 20 mpg simultaneously.</p>
+  
+           <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of 25 mpg can be attained by traveling at a speed of about 20 mph and also at about 70 mph.</p>
+
+
+       </subsection>
+
+
+    </section>
 
     <section xml:id="section-note-on-proofs">
         <title>A Short Note on Proofs</title>
@@ -651,97 +698,5 @@ Copyright 2016 Jack Green and Nick Chura
         </subsection>
     </section>
 
-<xi:include href="./exercises/sets.xml" />
-
-    <references>
-        <title>References and Suggested Readings</title>
-        <!--
-        <p>The following list contains references suitable for further reading.  With the exception of [8] and [9] and perhaps [1] and [3], all of these books are more or less  at the same level as this text.  Interesting applications of algebra  can be found in [2], [5], [10], and [11].</p>
-        -->
-
-        <biblio type="raw"> <!-- was [1] -->
-        <!-- Reference updated 5/4/2010 - TWJ -->
-        Artin, M. <title>Abstract Algebra</title>. 2nd ed. Pearson, Upper Saddle River, NJ, 2011.</biblio>
-
-        <biblio type="raw"> <!-- was [2] -->
-        <!-- Reference updated 5/4/2010 - TWJ -->
-        Childs, L. <title>A Concrete Introduction to Higher Algebra</title>. 2nd ed. Springer-Verlag, New York, 1995.</biblio>
-
-        <biblio type="raw"> <!-- was [3] -->
-        <!-- Reference updated 5/4/2010 - TWJ -->
-        Dummit, D. and Foote, R.  <title>Abstract Algebra</title>. 3rd ed. Wiley, New York, 2003.</biblio>
-
-        <biblio type="raw"> <!-- was [2] -->
-        <!--Seems to be out of print 5/4/2010 - TWJ -->
-        Ehrlich, G. <title>Fundamental Concepts of Algebra</title>. PWS-KENT, Boston, 1991.</biblio>
-
-        <biblio type="raw"> <!-- was [4] -->
-         <!-- Reference updated 5/4/2010 - TWJ -->
-        Fraleigh, J. B. <title>A First Course in Abstract Algebra</title>. 7th ed. Pearson, Upper Saddle River, NJ, 2003.</biblio>
-
-        <biblio type="raw"> <!-- was [5] -->
-        <!-- Reference updated 5/4/2010 - TWJ -->
-        Gallian, J. A. <title>Contemporary Abstract Algebra</title>. 7th ed. Brooks/Cole, Belmont, CA, 2009.</biblio>
-
-        <biblio type="raw"> <!-- was [6] -->
-        <!-- I believe that this is not still in print, but it is certainly available through amazon.com 5/4/2010 - TWJ -->
-        Halmos, P. <title>Naive Set Theory</title>.  Springer, New York, 1991. One of the best references for set theory.</biblio>
-
-        <biblio type="raw"> <!-- was [7] -->
-        <!-- Reference updated 5/4/2010 - TWJ -->
-        Herstein, I. N. 
-        <title>Abstract Algebra</title>. 3rd ed. Wiley, New York, 1996.</biblio>
-
-        <biblio type="raw"> <!-- was [8] -->
-        <!-- Reference updated 5/4/2010 - TWJ -->
-        Hungerford, T. W. 
-        <title>Algebra</title>. Springer, New York, 1974. One
-        of the standard graduate algebra texts.
-        </biblio>
-
-        <biblio type="raw"> <!-- was [9] -->
-         <!-- Reference updated 5/4/2010 - TWJ -->
-        Lang, S. 
-        <title>Algebra</title>. 3rd ed. Springer, New York, 2002.
-        Another standard graduate text.
-        </biblio>
-
-        <biblio type="raw"> <!-- was [10] -->
-        <!-- Reference updated 5/4/2010 - TWJ -->
-        Lidl, R. and Pilz, G. 
-        <title>Applied Abstract Algebra</title>. 2nd ed. Springer,
-        New York, 1998. 
-        </biblio>
-
-        <biblio type="raw"> <!-- was [11] -->
-        <!-- No longer in print 5/4/2010 - TWJ -->
-        Mackiw, G. <title>Applications of Abstract Algebra</title>. Wiley, New York,
-        1985. 
-        </biblio>
-
-        <biblio type="raw"> <!-- was [12] -->
-        Nickelson, W. K. <!-- Reference updated 5/4/2010 - TWJ -->
-        <title>Introduction to Abstract Algebra</title>. 3rd ed. Wiley, New York,
-        2006. 
-        </biblio>
-
-        <biblio type="raw"> <!-- was [13] -->
-        <!-- Reference updated 5/4/2010 - TWJ -->
-        Solow, D. 
-        <title>How to Read and Do Proofs</title>. 5th ed. Wiley, New York,
-        2009. 
-        </biblio>
-
-        <biblio type="raw"> <!-- was [14] -->
-        <!-- No longer in print 5/4/2010 - TWJ -->
-        van der Waerden, B. L. 
-        <title>A History of Algebra</title>. Springer-Verlag,
-        New York, 1985. An account of the historical development of algebra. 
-        </biblio>
-
-    </references> <!-- References need to be updated -->
-
-    <xi:include href="./sage/sets-sage.xml" />
-    <xi:include href="./sage/sets-sage-exercises.xml" />
 
 </chapter>
