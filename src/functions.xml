@@ -31,8 +31,8 @@ Copyright 2016 Jack Green and Nick Chura
               <image>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
-                \begin{axis}[ymin=0, ymax=35, xlabel={Speed (mph)}, ylabel={Fuel Economy (mpg)}, ytick={0,10,...,30}, minor ytick={0,5,...,35}, xmin=5, xmax=75, grid=both]
-                    \addplot[smooth] coordinates {(5, 10) (15, 22) (20, 25) (35, 30) (45, 31) (55, 30) (65,26) (75, 24)};
+                \begin{axis}[ymin=0, ymax=35, xlabel={Speed (mph)}, ylabel={Fuel Economy (mpg)}, minor xtick={5,10,...,75}, ytick={0,10,...,30}, minor ytick={0,5,...,35}, xmin=5, xmax=75, grid=both, axis background/.style={fill=yellow!40}]
+                    \addplot[smooth, thick, color=red] coordinates {(5, 11) (10, 16) (15, 22) (20, 26) (25, 28) (30,29) (35, 29.5) (40, 30) (50, 30.5) (55, 30) (65,27) (70, 25) (75, 23)};
                 \end{axis}
                 \end{tikzpicture}]]>
                 </latex-image-code>
