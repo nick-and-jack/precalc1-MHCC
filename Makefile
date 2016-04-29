@@ -83,7 +83,7 @@ SERVER = https://webwork.pcc.edu
 pg:
 	install -d $(PGOUT)
 	cd $(PGOUT); \
-	xsltproc -xinclude --stringparam chunk.level 2 $(MBXSL)/extract-webwork.xsl $(PRJSRC)/precalc1-MHCC.xml
+	xsltproc -xinclude --stringparam chunk.level 2 $(MBXSL)/mathbook-webwork-archive.xsl $(PRJSRC)/precalc1-MHCC.xml
 
 #  HTML output 
 #  Output lands in the subdirectory:  $(HTMLOUT)
@@ -93,7 +93,7 @@ html:
 	-rm $(HTMLOUT)/knowl/*.html
 	cp -a $(IMAGESOUT) $(HTMLOUT)
 	cd $(HTMLOUT); \
-	xsltproc -xinclude --stringparam webwork.server $(SERVER) --stringparam html.knowl.exercise.inline no $(MBXSL)/mathbook-html.xsl $(PRJSRC)/precalc1-MHCC.xml
+	xsltproc -xinclude --stringparam webwork.server $(SERVER) --stringparam html.knowl.exercise.inline yes $(MBXSL)/mathbook-html.xsl $(PRJSRC)/precalc1-MHCC.xml
 
 # make all the image files in svg format
 images:
@@ -143,7 +143,7 @@ pdf:
 #     "Element XXXX content does not follow"
 #     "No declaration for"
 #   Automatically invokes the "less" pager, could configure as $(PAGER)
-syllabus-check:
+check:
 	install -d $(OUTPUT)
 	-rm $(OUTPUT)/dtderrors.*
 	-xmllint --xinclude --postvalid --noout --dtdvalid $(DTD)/mathbook.dtd $(PRJSRC)/precalc1-MHCC.xml 2> $(OUTPUT)/dtderrors.txt
