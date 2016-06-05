@@ -11,14 +11,112 @@
 ## ********************************************************************* ##
 -->
 
-<section xml:id="activity-function-notation" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="activity-functions-function-notation" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Function Notation (Input, Output)</title>
 
-    <subsection xml:id="subsection-what-is-a-function">
-        <title>What is a Function?</title>
+    <introduction>
+        <p>In this activity we develop an understanding of function notation by comparing statements we already understand in English to equivalent statements written in <q>math</q> language.   We interpret our statements about functions using graphs, tables and formulas.</p>
+        <p>There are <m>34</m> questions in this activity.  All questions need to be answered correctly in order for the activity to be complete.  Each question is numbered and is written in bold.  A correct answer will show <q>correct</q> while an incorrect answer will show <q>Try again</q>.</p>
+        <p>At the end of the activity you will see how many questions you answered correctly.</p> 
+        <p>After completing this lesson you will be able to:
+            <ul>
+                 <li><p>Interpret the meaning of function notation.</p></li>
+                 <li><p>Use function notation to describe an event.</p></li>
+                 <li><p>Evaluate a function.</p></li>
+            </ul>
+        </p>
+        <p>The prerequisites for this lesson are knowing how to read a graph or a table of values and how to use a formula to make a calculation.</p>
+    </introduction>
 
-        <p>A function is a rule, like a formula or a graph or a table of values, that assigns an ouput value for a given input.</p>
-        <p>The formula <m>y = 2^{x}</m> is a function because if you pick an input like <m>x=3</m>, you get an ouput <m>y=8</m>. (since <m>8= 2^{3}</m>) </p>
+    <subsection>
+        <exercise>
+            <webwork>
+                <pg-macros>
+                    <macro-file>parserPopUp.pl</macro-file>
+                </pg-macros>
+
+                <setup>
+
+                    <var name="$time">
+                        <static>2</static>
+                    </var>
+                    <var name="$position">
+                        <static>30</static>
+                    </var>
+                    <var name="$units" category="set">
+                        <set>
+                             <member>\text{miles}</member>
+                             <member>\text{hours}</member>
+                             <member>\text{miles per hour}</member>
+                             <member>\text{hours per mile}</member>
+                        </set>
+                    </var>
+
+                    <pg-code>
+                        $time = Real(2);
+                        $position = Real(30);
+                        $units = PopUp(["?", "miles", "hours", "miles per hour", "hours per mile"], "miles");
+                    </pg-code>
+            </setup>
+
+            <statement>
+                <p>Consider the graph below.</p>
+
+                <p>The dot on the graph represents the position of a train at a particular time. The blue crosshairs represent the time.</p>
+
+                <p>Adjust the time by sliding crosshairs left and right.  Notice that the train's distance, in miles, from downtown depends on the time, in hours, after 8 a.m.</p>
+
+                <p>Without knowing anything about function notation, you can still use a language you already know, English, to describe information about the train.</p>
+
+                <p>For instance:</p>
+
+                <ul>
+                    <li><p>The train can only be in one place at any particular time.</p></li> 
+                    <li><p>As time passes the train gets farther from downtown.</p></li>
+                    <li><p>The speed of the train changes during its trip.</p></li>
+                </ul>
+
+                <p>There are also some aspects of the graph itself that you can easily describe in English:</p>
+                <ul>
+                    <li><p>The graph rises as we read it from left to right.</p></li>
+                    <li><p>Sometimes the graph is curved upwards.</p></li>
+                    <li><p>Sometimes the graph curves downwards.</p></li>
+                    <li><p>Some parts of the graph are steeper than others.</p></li>
+                </ul>
+
+                <p>In this lesson we learn to describe situations in math language using function notation.  Later the notation itself will allow us to use math in making calculations.</p>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/3633323/width/450/height/459/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="450px" height="459px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+                <p>How far from downtown is the train <m><var name="$time" /></m> hours after 8 a.m.?</p>
+                <p><var name="$position" width="5" /> <var name="$units" form="popup" /></p>
+            </statement>
+
+            </webwork>
+        </exercise>
+
+        <paragraphs>
+            <p>In math we use variables and symbols to replace entire words or even entire sentences.</p> 
+
+            <p>For instance, instead of <q>Train's distance in miles from downtown</q> we can use the variable <m>D</m></p>  
+
+            <p>Instead of the <q>number of hours after 8 a.m.</q>, we can use the variable t.</p>  
+
+            <p>We call the letters <m>D</m> and <m>t</m> variables because they represent values that can change.  Typically we use variables that have something to do with the context of the problem, but sometimes we generalize an expression or equation with <m>x</m>'s and <m>y</m>'s when we have nothing specific in mind.</p>
+
+            <p>If the variables represent actual things or events we must define the varialbles to include the units we used to measure the event. </p> 
+
+            <blockquote>If <m>D</m> is distance you must define the units in which the distance is measured: miles, inches, centimeters, light years<ellipsis />what? </blockquote> 
+
+            <blblockquoteockquote>If <m>t</m> is time, will it be measured with units of seconds, hours<ellipsis />years?</>
+
+            <p>Since the po<m></m>sition of the train depends on the amount of time that has passed, we say <q>the distance depends on time</q>.  In fact, the distance of the train from downtown is a <q>function of time</q>.</p>  
+
+            <p>Funtion notation allows us to communicate that distance is a function of time by simply writing <m>D = f(t)</m> [say , <q><m>D</m> equals <m>f</m> of <m>t</m></q>].  Don't confuse the notation with multiplication!  <m>f(t)</m> does <em>not</em> mean <m>f</m> times <m>t</m>.</p>
+
+        </paragraphs>
+
+
 
     </subsection>
+
 </section>

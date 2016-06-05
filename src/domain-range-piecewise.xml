@@ -11,30 +11,24 @@
 ## ********************************************************************* ##
 -->
 
-<section xml:id="activity-functions-domain-range-piecewise" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="chapter-domain-range-piecewise" xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <title>Domain and Range; Piecewise-Defined Functions</title>
 
-<subsection>
-    <paragraphs>
-        <title>Blank Method</title>
+<paragraphs><title>Blank Method</title><p>Function notation is a way to tell the reader information about the input and what the output. Again, the way it works is <m>f(input)=output</m>. Whatever is in the parenthesis is the input.</p>
+<p>The input can be a simple number like <m>2</m> or <m>-4</m> or the input can be a complicated expression like <m>{x^2} - x</m>.</p>
+<p>Your success in this course is almost entirely dependent on your understanding of this simple concept: <em>The <q>blank</q> method.</em></p>
+<p>When you see a formula like <m>{x^2} - x</m>. It really means this</p>
+<p><m>f(blank) = {\left( {blank} \right)^2} - \left( {blank} \right)</m></p>
+<p>At least that's the way formulas really work.</p>
+<p>Using this function as an example, <m>f(5)</m> means <q>The formula with a <m>5</m>in it</q>. Literally it means place the number <m>5</m> in all the blanks. As in</p>
+<p><m>f(5) = {\left( 5 \right)^2} - \left( 5 \right) = 20</m></p>
+<p>The beauty of this is it does NOT matter what you put into the formula (as long as the formula can handle it which we will get into later), the formula does the same thing every time.</p>
+<p>You can put <m>5</m> into the formula or you can put something complicated into the formula like <m>\frac{{{x^2}}}{{{x^2} + 1}}</m> which would look like this</p>
+<p><m>f\left( {\frac{{{x^2}}}{{{x^2} + 1}}} \right) = {\left( {\frac{{{x^2}}}{{{x^2} + 1}}} \right)^2} - \left( {\frac{{{x^2}}}{{{x^2} + 1}}} \right)</m></p>
+<p>Simplifying this equation is another matter.</p></paragraphs>
 
-        <p>Function notation is a way to tell the reader information about the input and what the output. Again, the way it works is <m>f(input)=output</m>. Whatever is in the parenthesis is the input.</p>
-        <p>The input can be a simple number like <m>2</m> or <m>-4</m> or the input can be a complicated expression like <m>{x^2} - x</m>.</p>
-        <p>Your success in this course is almost entirely dependent on your understanding of this simple concept: <em>The <q>blank</q> method.</em></p>
-        <p>When you see a formula like <m>{x^2} - x</m>. It really means this</p>
-        <p><m>f(blank) = {\left( {blank} \right)^2} - \left( {blank} \right)</m></p>
-        <p>At least that's the way formulas really work.</p>
-        <p>Using this function as an example, <m>f(5)</m> means <q>The formula with a <m>5</m>in it</q>. Literally it means place the number <m>5</m> in all the blanks. As in</p>
-        <p><m>f(5) = {\left( 5 \right)^2} - \left( 5 \right) = 20</m></p>
-        <p>The beauty of this is it does NOT matter what you put into the formula (as long as the formula can handle it which we will get into later), the formula does the same thing every time.</p>
-        <p>You can put <m>5</m> into the formula or you can put something complicated into the formula like <m>\frac{{{x^2}}}{{{x^2} + 1}}</m> which would look like this</p>
-        <p><m>f\left( {\frac{{{x^2}}}{{{x^2} + 1}}} \right) = {\left( {\frac{{{x^2}}}{{{x^2} + 1}}} \right)^2} - \left( {\frac{{{x^2}}}{{{x^2} + 1}}} \right)</m></p>
-        <p>Simplifying this equation is another matter.</p>
-
-    </paragraphs>
-
-    <paragraphs>
+<paragraphs>
 	<title>Domain and Range</title>
 	<p>Sometimes a formula can only accept certain kinds of values. For instance the square root function <m>f(x) = \sqrt x</m> can only accept values of x are NOT negative.</p>
 	<p>In math we say <m>x \geqslant 0</m> meaning the values we choose for <m>x</m> must be greater than or equal to zero.</p>
@@ -48,10 +42,9 @@
 	<p><m>x \geqslant 8</m></p>
 	<p>Under these conditions the function will never yeild negative results.  Only <m>y = 0</m> or positive results will ever come out of this function. Therefore the <em>Range</em>  of <m>f(x)</m> is <m>f(x) \geqslant 0</m></p>
 	<p>Domain and Range are often more clear if we look at functions graphically. Below is a graph of <m>f(x) = \sqrt {x - 8}</m></p>
-    </paragraphs>
 
-    <example>	    
-        <figure xml:id="graph-of-root-x-minus-8">
+	<example>	    
+		<figure xml:id="graph-of-root-x-minus-8">
             <caption>Graph of root function </caption>
             <image>
                 <latex-image-code>
@@ -63,10 +56,10 @@
                 </latex-image-code>
             </image>
         </figure> 
-    </example>
+	</example>
 
-   <p>Notice the graph only appears from <m>x = 8</m> and to the right. That's the domain of <m>f(x)</m>.</p>
-   <p>Also notice that the graph only appears at or above the <m>x</m>- axis (<m>y = 0</m> or <m>y > 0</m>).  That is the range of <m>f(x)</m> (i.e. range is <m>f(x) \geqslant 0</m>)</p>
+	<p>Notice the graph only appears from <m>x = 8</m> and to the right. That's the domain of <m>f(x)</m>.</p>
+	<p>Also notice that the graph only appears at or above the <m>x</m>- axis (<m>y = 0</m> or <m>y > 0</m>).  That is the range of <m>f(x)</m> (i.e. range is <m>f(x) \geqslant 0</m>)</p>
 
-</subsection>
-</section>
+</paragraphs>
+</chapter>
