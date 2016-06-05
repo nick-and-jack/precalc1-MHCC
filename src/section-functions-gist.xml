@@ -97,21 +97,29 @@
             </pg-macros>
 
             <setup>
+
+                <var name="$a">
+                    <static>0.12</static>
+                </var>
+                <var name="$b">
+                    <static>-0.08</static>
+                </var>
+
                 <pg-code>
-                $desmos = MODES(HTML=> "<iframe src='https://www.desmos.com/calculator/z8bvam4mxi?lockViewport=true&amp;expressionsCollapsed=true' frameborder='0' width='450' height='450'></iframe>", TeX => "An embedded Google slide show.");
+                    $a = 0.12;
+                    $b = -0.08;
                 </pg-code>
-                
             </setup>
 
             <statement>
                 <p>Below is a table of data and corresponding graph of the fuel efficiency of a midsize car (<quantity><unit base="milepergallon"/></quantity>) as a function of the speed of the car (<quantity><unit base="mileperhour"/></quantity>). Each point on the graph is an ordered pair (speed vs. fuel efficiency). If the car travels at 15 <quantity><unit base="mileperhour"/></quantity>, the fuel efficiency is about 15.3 <quantity><unit base="milepergallon"/></quantity>. If the car changes speed, then the fuel efficiency changes.</p>
 
-                <p>Place one dot at the ordered pair <m>(15, 15.3)</m>.  You can click on the dot to show its coordinates. Place the other dot at the ordered pair <m>(25, 29)</m>. Notice as the input changes from <m>15</m> to <m>25</m> (from one dot to the other), the output changes from <m>15.3</m> to <m>29</m>.</p>
+                <p>Place one dot at the ordered pair <m>(15, 15.3)</m>. Place the other dot at the ordered pair <m>(25, 29)</m>. Notice as the input changes from <m>15</m> to <m>25</m> (from one dot to the other), the output changes from <m>15.3</m> to <m>29</m>.</p>
 
                 <p>Let <m>m</m> be the slope of the line between the two points.  Notice the slope of the line is <m>m = 1.37</m>.  It turns out <q>average rate of change</q> is just the slope!</p>
 
                 <table>
-                    <tabular bottom="medium" top="medium" left="medium">
+                    <tabular left="medium">
                         <col right="medium"/>
                         <col/>
                         <col/>
@@ -133,7 +141,15 @@
                     </tabular>
                 </table>
 
-                <p><var name="$desmos"/></p>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/nzGcHyhr/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+                <p>What is the average rate of change of the fuel efficiency as the car goes from <quantity><mag>45</mag><unit base="mileperhour" /></quantity> to <quantity><mag>55</mag><unit base="mileperhour" /></quantity>?</p>
+
+                <p><var name="$a" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
+
+                <p>A positive rate of change means the function is increasing on that interval.  A negative rate of change means the function is decreasing on that interval. What is the average rate of change between <quantity><mag>60</mag><unit base="mileperhour" /></quantity> and <quantity><mag>65</mag><unit base="mileperhour" /></quantity>?</p>
+
+                <p><var name="$b" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
 
             </statement>
         </webwork>
@@ -196,7 +212,7 @@
 
             <statement>
                 <p>Find a formula for the line passing through the function <m>f(x) = <var name="$f"/></m>  at <m>x = <var name="$x1"/></m> and <m>x = <var name="$x2"/></m>.</p>
-                <p><answer var="$line" width="20" /></p>
+                <p><var name="$line" width="20" /></p>
             </statement>
 
             <solution>
