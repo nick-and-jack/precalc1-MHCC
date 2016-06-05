@@ -93,7 +93,7 @@ html:
 	-rm $(HTMLOUT)/knowl/*.html
 	cp -a $(IMAGESOUT) $(HTMLOUT)
 	cd $(HTMLOUT); \
-	xsltproc -xinclude --stringparam webwork.server $(SERVER) --stringparam html.knowl.exercise.inline yes $(MBXSL)/mathbook-html.xsl $(PRJSRC)/precalc1-MHCC.xml
+	xsltproc -xinclude --stringparam webwork.server $(SERVER) --stringparam html.knowl.exercise.inline no $(MBXSL)/mathbook-html.xsl $(PRJSRC)/precalc1-MHCC.xml
 
 # make all the image files in svg format
 images:
