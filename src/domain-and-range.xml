@@ -11,9 +11,9 @@
 ## ********************************************************************* ##
 -->
 
-<chapter xml:id="chapter-domain-range-piecewise" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="chapter-domain-and-range" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-<title>Domain and Range; Piecewise-Defined Functions</title>
+<title>Domain and Range</title>
 
 <paragraphs><title>Blank Method</title><p>Function notation is a way to tell the reader information about the input and what the output. Again, the way it works is <m>f(input)=output</m>. Whatever is in the parenthesis is the input.</p>
 <p>The input can be a simple number like <m>2</m> or <m>-4</m> or the input can be a complicated expression like <m>{x^2} - x</m>.</p>
@@ -36,7 +36,7 @@
 	<p>Another example is <m>f(x) = \frac{x}{{{x^2} - 1}}</m>. In this case the denominator could be zero (a big no-no) if <m>x</m> is either <m>1</m> or <m>-1</m>. So the domain if this function si <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
 	<p>An easier way to say the same thing is to state what values you CAN'T use, as in <m>x \ne  \pm 1</m></p>
 	<p>For now the only functions that should raise re flags are those that have square roots (because you can't take the square root of negative numbers) and those with deonominators (because we have to avoid any numbers that give us zero in the denominator).</p>
-	<p>Once we know what numbers a function can use, we cna then consider what kinds of results we can get. This is called the <em>Range</em> of the function.</p>
+	<p>Once we know what numbers a function can use, we can then consider what kinds of results we can get. This is called the <em>Range</em> of the function.</p>
 	<p>For example, the square root function <m>f(x) = \sqrt {x - 8} </m> has a domain such that <m>x-8</m> must be positive. Therefor the domain is</p>
 	<p><m>x - 8 \geqslant 0</m></p>
 	<p><m>x \geqslant 8</m></p>
@@ -45,12 +45,12 @@
 
 	<example>	    
 		<figure xml:id="graph-of-root-x-minus-8">
-            <caption>Graph of root function </caption>
-            <image>
+            <caption>Graph of <m>f(x)=\sqrt{x-8}</m></caption>
+            <image xml:id="image-graph-of-root-x-minus-8">
                 <latex-image-code>
                     <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[ymin=-5, ymax=7, xlabel={x}, ylabel={f(x)}, minor xtick={1,2,...,25}, ytick={-5,-4,...,7}, minor ytick={-5,-4,...,7}, xmin=-1, xmax=25, grid=both, axis background/.style={fill=yellow!40}]
-                    \addplot[smooth, thick, color=red] coordinates {(8, 0) (9, 1) (12, 2) (17, 3) (24, 4)};
+                    \begin{axis}[ymin=-5, ymax=7, xlabel={$x$}, ylabel={$f(x)$}, xtick={4,8,...,24}, minor xtick={-3,-2,...,25}, ytick={-4,-2,...,6}, minor ytick={-5,-4,...,7}, xmin=-3, xmax=25, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
+                    \addplot[thick, color=red, domain=0:4,->] ({x^2+8},{x});
                     \end{axis}
                     \end{tikzpicture}]]>
                 </latex-image-code>
