@@ -94,34 +94,21 @@
             </webwork>
         </exercise>
 
-        <paragraphs>
-            <p>In English you can communicate information about time and position in a simple sentence like</p> 
+        <p>In English you can communicate information about time and position in a simple sentence like</p> 
 
-     <p>English:  "2 hours after 8 a.m. the train is 30 miles from downtown".</p>  
+        <blockquote>English:  <q>2 hours after 8 <init>a.m.</init> the train is 30 miles from downtown</q>.</blockquote>  
 
-Here is what that same sentence looks like in Spanish
+        <p>Here is what that same sentence looks like in Spanish.</p>
 
-     Spanish:  "2 horas despues de las 8 del la maÃ±ana el tren esta 30 millas lejos del centro".
+        <blockquote>Spanish:  <q>2 horas despues de las 8 del la mañana el tren esta 30 millas lejos del centro</q>.</blockquote>
 
-Here is what that same sentence could look like in "math".
+        <p>Here is what that same sentence could look like in <q>math</q>.</p>
 
-     Math:  
-                               f
-(2) = 30
+        <blockquote>Math:  <m>f(2) = 30</m></blockquote>
 
-The math "sentence" above is actually an equation and it uses function notation to express the information about the train.  
+        <p>The math <q>sentence</q> above is actually an equation and it uses <term>function notation</term> to express the information about the train. Of course, the equation is meaningless unless the reader knows how the notation is defined.  If you know Spanish or <q>math</q> you can <em>interpret</em> the meaning of something you read in those languages into English.  There will be much interpretation in this class.</p>
 
-Of course, the equation is meaningless unless the reader knows how the notation is defined.  If you know Spanish or "math" you can interpret the meaning of something you read in those languages into English.  There will be much interpretation in this class.
-
-        </paragraphs>
-
-
-        <paragraphs>
-            <p>In math we use variables and symbols to replace entire words or even entire sentences.</p> 
-
-            <p>For instance, instead of <q>Train's distance in miles from downtown</q> we can use the variable <m>D</m></p>  
-
-            <p>Instead of the <q>number of hours after 8 a.m.</q>, we can use the variable t.</p>  
+            <p>In math we use variables and symbols to replace entire words or even entire sentences. For instance, instead of <q>Train's distance in miles from downtown</q> we can use the variable <m>D</m>. Instead of the <q>number of hours after 8 <init>a.m.</init></q>, we can use the variable <m>t</m>.</p>  
 
             <p>We call the letters <m>D</m> and <m>t</m> variables because they represent values that can change.  Typically we use variables that have something to do with the context of the problem, but sometimes we generalize an expression or equation with <m>x</m>'s and <m>y</m>'s when we have nothing specific in mind.</p>
 
@@ -131,27 +118,89 @@ Of course, the equation is meaningless unless the reader knows how the notation 
 
             <blockquote>If <m>t</m> is time, will it be measured with units of seconds, hours<ellipsis />years?</blockquote>
 
-            <p>Since the position of the train depends on the amount of time that has passed, we say <q>the distance depends on time</q>.  In fact, the distance of the train from downtown is a <q>function of time</q>.</p>  
+            <p>Since the position of the train depends on the amount of time that has passed, we say <q>the distance depends on time</q>.  In fact, the distance of the train from downtown is a <term>function of time</term>.</p>  
 
-            <p>Funtion notation allows us to communicate that distance is a function of time by simply writing <m>D = f(t)</m> [say , <q><m>D</m> equals <m>f</m> of <m>t</m></q>].  Don't confuse the notation with multiplication!  <m>f(t)</m> does <em>not</em> mean <m>f</m> times <m>t</m>.</p>
+            <p>Function notation allows us to communicate that distance is a function of time by simply writing <m>D = f(t)</m> [say, <q><m>D</m> equals <m>f</m> of <m>t</m></q>].  Don't confuse the notation with multiplication!  <m>f(t)</m> does <alert>not</alert> mean <m>f</m> times <m>t</m>.</p>
 
-        </paragraphs>
+            
+        <exercise>
+            <webwork>
+                <pg-macros>
+                    <macro-file>parserPopUp.pl</macro-file>
+                </pg-macros>
 
-            <p>The format of function notation works on the basic principle of input and output. </p> 
+                <setup>
 
-<p>Choose some input, like a time, and the function gives an output like a distance.  The notation tells the reader what the input is by showing it in the parentheses.</p>
+                    <var name="$tarzan">
+                        <set>
+                            <member>Tarzan times the jungle.</member>
+                            <member>Tarzan outside the jungle.</member>
+                            <member correct="yes">Tarzan of the jungle.</member>
+                            <member>Jungle after Tarzan.</member>
+                        </set>
+                    </var>
 
-    f (input) = output
+                    <pg-code>
+                        $tarzan = PopUp(["?","Tarzan times the jungle.","Tarzan outside the jungle.","Tarzan of the jungle.","Jungle after Tarzan."],"Tarzan of the jungle.");
+                    </pg-code>
+                </setup>
 
-In the train problem, the function notation f(0) is telling us the input is 0.  The value 0 in the parentheses means, "0 hours after 8 a.m.".  In other words it's 8 a.m.
+                <statement>
+                    <p>How would you say the function notation in each statement below?</p>
+
+                    <ol>
+                        <li>Tarzan(the jungle) <var name="$tarzan" form="popup" /></li>
+                    </ol>
+                </statement>
+
+            </webwork>
+        </exercise>
+
+        <p>The format of function notation works on the basic principle of input and output.</p> 
+
+        <p>Choose some input, like a time, and the function gives an output like a distance.  The notation tells the reader what the input is by showing it in the parentheses.<me>f(\text{input}) = \mathit{output}</me> In the train problem, the function notation <m>f(0)</m> is telling us the input is <m>0</m>.  The value <m>0</m> in the parentheses means, <q>0 hours after 8 <init>a.m.</init></q>.  In other words it's 8 <init>a.m.</init></p>
 
 
-f(0) is an output.  It represents the "train's distance from downtown, 0 hours after 8 a.m."
+        <p><m>f(0)</m> is an output.  It represents <q>the train's distance from downtown, <m>0</m> hours after 8 a.m.</q> Together, the input and output create an <term>ordered pair</term> <m>(0, f(0))</m>.  On a graph the ordered pair is a <term>point</term>.</p>
 
-Together, the input and output create an ordered pair (0, f(0))  On a graph the ordered pair is a point.
+        <exercise>
+            <webwork>
+                <pg-macros>
+                    <macro-file>parserPopUp.pl</macro-file>
+                </pg-macros>
 
-The graph below is a function that illustrates a train's distance from downtown, in miles,  as a function of time in hours after 8 a.m.  When using a graph the best you can do is estimate.
+                <setup>
 
+                    <var name="$distance">
+                        <static>10</static>
+                    </var>
+                    <var name="$units" category="set">
+                        <set>
+                             <member>\text{miles}</member>
+                             <member>\text{hours}</member>
+                             <member>\text{miles per hour}</member>
+                             <member>\text{hours per mile}</member>
+                        </set>
+                    </var>
+
+                    <pg-code>
+                        $distance = Real(10);
+                        $units = PopUp(["?", "miles", "hours", "miles per hour", "hours per mile"], "miles");
+                    </pg-code>
+            </setup>
+
+            <statement>
+                <p>The graph below is a function that illustrates a train's distance from downtown, in miles,  as a function of time in hours after 8 a.m.  When using a graph the best you can do is estimate. Since <m>f(0)</m> represents a distance at 8 <init>a.m.</init>, we can use the graph to find what the distance is.</p>
+
+                <p>Move the point onto <m>(0,f(0))</m>.</p>
+
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/P6uUYQqH/width/402/height/499/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="402px" height="499px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+                <p><m>f(0)\approx</m> <var name="$distance" width="5" /> <var name="$units" form="popup" /></p>
+            </statement>
+
+            </webwork>
+        </exercise>
 
 
 
