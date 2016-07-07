@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
+ 
 <!-- 
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -139,10 +139,28 @@
                             <member>Jungle after Tarzan.</member>
                         </set>
                     </var>
-
+                    <var name="$helen">
+                        <set>
+                            <member>Helen loves Troy</member>
+                            <member>Helen multiplied by Troy</member>
+                            <member>Helen next to Troy</member>
+                            <member correct="yes">Helen of Troy</member>
+                        </set>
+                    </var>
+                    <var name="$f(x)">
+                        <set>
+                            <member correct="yes">f of x</member>
+                            <member>f times x</member>
+                            <member>f parentheses x</member>
+                            <member>f next to x</member>
+                        </set>
+                    </var>
                     <pg-code>
                         $tarzan = PopUp(["?","Tarzan times the jungle.","Tarzan outside the jungle.","Tarzan of the jungle.","Jungle after Tarzan."],"Tarzan of the jungle.");
+                        $helen = PopUp(["?","Helen loves Troy.","Helen multiplied by Troy.","Helen next to Troy.","Helen of Troy."],"Helen of Troy.");
+                        $f(x) = PopUp(["?","f of x.","f times x.","f parentheses x.","f next to x."],"f of x.");
                     </pg-code>
+
                 </setup>
 
                 <statement>
@@ -150,6 +168,8 @@
 
                     <ol>
                         <li>Tarzan(the jungle) <var name="$tarzan" form="popup" /></li>
+                        <li>Helen(Troy) <var name="$helen" form="popup" /></li>
+                        <li><m>f(x)</m> <var name="$f(x)" form="popup" /></li>
                     </ol>
                 </statement>
 
