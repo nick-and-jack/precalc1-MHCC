@@ -36,7 +36,6 @@
                 </pg-macros>
 
                 <setup>
-
                     <var name="$time">
                         <static>2</static>
                     </var>
@@ -133,10 +132,10 @@
 
                     <var name="$tarzan">
                         <set>
-                            <member>Tarzan times the jungle.</member>
-                            <member>Tarzan outside the jungle.</member>
-                            <member correct="yes">Tarzan of the jungle.</member>
-                            <member>Jungle after Tarzan.</member>
+                            <member>Tarzan times the jungle</member>
+                            <member>Tarzan jungle</member>
+                            <member correct="yes">Tarzan of the jungle</member>
+                            <member>Jungle after Tarzan</member>
                         </set>
                     </var>
                     <var name="$helen">
@@ -147,18 +146,18 @@
                             <member correct="yes">Helen of Troy</member>
                         </set>
                     </var>
-                    <var name="$f(x)">
+                    <var name="$f">
                         <set>
                             <member correct="yes">f of x</member>
                             <member>f times x</member>
                             <member>f parentheses x</member>
-                            <member>f next to x</member>
+                            <member>f x</member>
                         </set>
                     </var>
                     <pg-code>
-                        $tarzan = PopUp(["?","Tarzan times the jungle.","Tarzan outside the jungle.","Tarzan of the jungle.","Jungle after Tarzan."],"Tarzan of the jungle.");
-                        $helen = PopUp(["?","Helen loves Troy.","Helen multiplied by Troy.","Helen next to Troy.","Helen of Troy."],"Helen of Troy.");
-                        $f(x) = PopUp(["?","f of x.","f times x.","f parentheses x.","f next to x."],"f of x.");
+                        $tarzan = PopUp(["?","Tarzan times the jungle","Tarzan jungle","Tarzan of the jungle","Jungle after Tarzan"],"Tarzan of the jungle");
+                        $helen = PopUp(["?","Helen loves Troy","Helen multiplied by Troy","Helen next to Troy","Helen of Troy"],"Helen of Troy");
+                        $f = PopUp(["?","f of x","f times x","f parentheses x","f x"],"f of x");
                     </pg-code>
 
                 </setup>
@@ -169,7 +168,7 @@
                     <ol>
                         <li>Tarzan(the jungle) <var name="$tarzan" form="popup" /></li>
                         <li>Helen(Troy) <var name="$helen" form="popup" /></li>
-                        <li><m>f(x)</m> <var name="$f(x)" form="popup" /></li>
+                        <li><m>f(x)</m> <var name="$f" form="popup" /></li>
                     </ol>
                 </statement>
 
