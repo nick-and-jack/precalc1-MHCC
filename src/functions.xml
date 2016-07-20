@@ -68,6 +68,40 @@ Add a few webwork problems here for the terms "function", "independent variable"
             Options: The tree has been growing for 2 years and is now 60 feet tall, The tree has been growing for 60 months and is now 2 feet tall, The tree has been growing for 2 years and is now 60 inches tall, The tree has been growing for 2 months and is now 60 inches tall.
 -->
 
+<exercise>
+    <title>Using Function Notation</title>
+    <webwork xml:id="webwork-function-notation-circle">
+        <setup>
+          <var name="$notation">
+            <set>
+                <member>f(\text{radius}) = \text{area}</member>
+                <member correct="yes">f(\text{area}) = \text{radius}</member>
+                <member>\text{None of these}</member>
+            </set>
+          </var>
+            <pg-code>
+                Context('Numeric');
+                $notation = RadioButtons(
+                ["f(radius) = area","f(area) = radius", "None of these"],
+                "f(area) = radius", # correct answer
+                last => ["None of these"], # can be a list
+                );
+            </pg-code>
+        </setup>
+        <statement>
+          <p>Suppose <m>f</m> is the rule that takes the area of a circle as its input and then outputs the radius of the circle.</p>
+            <ol>
+              <li>
+                <p>What is the correct way to write this rule in function notation? <var name="$notation" form="buttons"/></p>
+              </li>
+            </ol>
+        </statement>
+        <solution>
+          <p>The correct answer is <var name="$notation" />. We were told that the function takes the area as the input, so the area must be in the parentheses.</p>
+              </solution>
+    </webwork>
+</exercise>
+
     <example>
         <p>Let <m>E</m> be the fuel efficiency, in miles per gallon, of a car traveling at <m>s</m> miles per hour. For speeds between 5 and 75 miles per hour, the function in <xref ref="speed-vs-efficiency"/> tells us the efficiency of the car.</p>
 
@@ -105,14 +139,10 @@ Add a webwork problem here for the "well-defined" part of the definition.
 -->
     <paragraphs>
         <title>Describing functions with intervals.</title>
-            <p>A function may have many different characteristics: Its output values may increase or decrease, its graph may curve up or curve down, it may have positive outputs or negative outputs. When we describe a function, we make our observations relative to the intervals (sections) of the input on which the observation takes place.</p>
-            <!--  Some edits in the above paragraph, but the last sentence is confusing.
-            Would this be an acceptable re-write:
-                "When describing these characteristics for a function, we typically refer to an <term>interval</term> (connected part) of the input axis, or a particular value of the input where something interesting occurs.
-            -->
+            <p>A function may have many different characteristics: Its output values may increase or decrease, its graph may curve up or curve down, it may have positive outputs or negative outputs. When describing these characteristics for a function, we typically refer to an <term>interval</term> (connected part) of the input axis, or a particular value of the input where something interesting occurs.</p>
             <p>Using our efficiency example, the fuel efficiency increases (goes up) between <quantity><mag>5</mag></quantity> and <quantity><mag>55</mag><unit base="mileperhour"/></quantity> then decreases (goes down) for speeds between <quantity><mag>55</mag></quantity> and <quantity><mag>75</mag><unit base="mileperhour"/></quantity>. Also, the efficiency is lowest at about <quantity><mag>5</mag><unit base="mileperhour"/></quantity> and highest at about <quantity><mag>55</mag><unit base="mileperhour"/></quantity>. </p>
-            <p>Any connected portion of the horizontal (speed) axis or the vertical (efficiency) axis is called an interval.  It is important to be able to correctly describe an interval.</p>
-            <p>We could use an <term>inequality</term> to describe when the efficiency function is increasing: <m>5\lt s\lt55</m>.  This means that as the car's speed changes from <quantity><mag>5</mag></quantity> to <quantity><mag>55</mag><unit base="mileperhour"/></quantity>, the efficiency is increasing.</p>
+            <p>Any connected portion of the horizontal (speed) axis or the vertical (efficiency) axis is called an <term>interval</term>.  It is important to be able to correctly describe an interval.</p>
+            <p>We could use an <term>inequality</term> to describe the interval where the efficiency function is increasing: <m>5\lt s\lt55</m>.  This means that as the car's speed changes from <quantity><mag>5</mag></quantity> to <quantity><mag>55</mag><unit base="mileperhour"/></quantity>, the efficiency is increasing.</p>
             <p>Another characteristic we can describe with inequalities is the <term>concavity</term> of a function. We say a function is <term>concave up</term> if its graph curves upward from left to right, and that it is <term>concave down</term> if it curves downward from left to right. We can see that the efficiency graph is:</p>
 
             <ul>
@@ -123,12 +153,16 @@ Add a webwork problem here for the "well-defined" part of the definition.
 
     <paragraphs>
         <title>Evaluating vs. Solving.</title>
+
         <p>The word <term>Evaluate</term> means to use a known input value to find the output value. Evaluating a function looks like this:<me>f(25)</me>It means, <q>Find the result of choosing <quantity><mag>25</mag><unit base="mileperhour"/></quantity></q> as the input. The expression <m>f(25)</m> represents the output <m>27</m>, which we can see from the graph.</p>
         <p><term>Solve</term> means the output is already known and we are trying to find all the possible inputs that give us that output. These input values are called <term>solutions</term> of the equation. For instance, we may be asked to <me>\text{Solve }f(s)=25</me>This means that we are to find all input values (solutions) that would give us the output <m>25</m>.</p>
         <p>Using the graph of the efficiency function, we see that the equation <m>f(s)=25</m> has two solutions:  <m>s = 20</m> and <m>s = 70</m>.</p>
 <!--
 Add a webwork problem for these key terms:
-    1.  
+    <p>The graph below shows a graph of the function <m>T(F) = C</m>, where <m>F</m> is temperature in degrees Fahrenheit, and <m>C</m> is temperature in degrees Celsius.</p>
+    <p>Use the graph to answer each question below.</p>
+    (a) Evaluate T(77)
+    (b) Solve T(F) = -22
 -->
     </paragraphs>
 
