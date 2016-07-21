@@ -79,13 +79,37 @@ Add a few webwork problems here for the terms "function", "independent variable"
                 <member>\text{None of these}</member>
             </set>
           </var>
+          <var name="$dependentVariable">
+             <set>
+                <member>\text{Radius}</member>
+                <member>\text{Area}</member>
+                <member>\text{None of these}</member>
+             </set>
+          </var>
+          <var name="$interpretation">
+             <set>
+                <member>100 \text{ft}</member>
+                <member>100 \text{ft}^2</member>
+                <member>100 \text{ft}^3</member>
+             </set>
+          </var>
             <pg-code>
-                Context('Numeric');
-                $notation = RadioButtons(
-                ["f(radius) = area","f(area) = radius", "None of these"],
-                "f(area) = radius", # correct answer
-                last => ["None of these"], # can be a list
-                );
+              Context('Numeric');
+              $notation = RadioButtons(
+                ["\(f(\)radius\()={}\)area","\(f(\)area\() ={}\)radius", "None of these"],
+                1, labels => ["f(radius)=area","f(area)=radius","None of these"],
+                displayLabels => 0
+              );
+              $dependentVariable = RadioButtons(
+                ["Radius","Area", "None of these"],
+                1, labels => ["Radius","Area","None of these"],
+                displayLabels => 0
+              );
+              $interpretation = RadioButtons(
+                ["\(5.64\) ft", "\(5.64\) ft\(^2\)", "\(5.64\) ft\(^3\)"],
+                0, labels => ["5.64 ft", "5.64 ft^2", "5.64 ft^3"],
+                displayLabels => 0
+              );
             </pg-code>
         </setup>
         <statement>
@@ -94,12 +118,74 @@ Add a few webwork problems here for the terms "function", "independent variable"
               <li>
                 <p>What is the correct way to write this rule in function notation? <var name="$notation" form="buttons"/></p>
               </li>
+              <li>
+                <p>Which is the dependent variable? <var name="$dependentVariable" form="buttons"/></p>
+              </li>
+              <li>
+                <p>In the equation <m>f(100) \approx 5.64</m>, what is a possible meaning for the number 5.64?<var name="$interpretation" form="buttons"/></p>
+              </li>
             </ol>
+
         </statement>
         <solution>
           <p>The correct answer is <var name="$notation" />. We were told that the function takes the area as the input, so the area must be in the parentheses.</p>
-              </solution>
+          <p>The correct answer is <var name="$dependentVariable" />. This function uses the area of the circle as the input, and the radius depends on the area.</p>
+          <p>The correct answer is <var name="$interpretation" />. The number 5.64 was the output of the function which is the radius of the circle. The radius of a circle must have a length unit.</p>
+        </solution>
     </webwork>
+</exercise>
+
+<exercise>
+    <title>Function Notation Application</title>
+    <webwork xml:id="webwork-function-birch-tree">
+      <pg-macros>
+          <macro-file>parserPopUp.pl</macro-file>
+      </pg-macros>
+    <setup>
+      <var name="$height">
+        <static>78</static>
+      </var>
+      <var name="$units">
+          <set>
+              <member>Inches</member>
+              <member>Years</member>
+              <member>None of these</member>
+          </set>
+      </var>
+      <var name="$interpretation">
+          <set>
+              <member>The tree was planted 2 years ago and is now 60 feet tall.</member>
+              <member>The tree was planted 60 months ago and is now 2 feet tall.</member>
+              <member>The tree was planted 2 years ago and is now 60 inches tall.</member>
+              <member>The tree was planted 2 months ago and is now 60 inches tall.</member>
+          </set>
+      </var>
+        <pg-code>
+            $height = Real(78);
+            $interpretation = PopUp(["?","The tree was planted 2 years ago and is now 60 feet tall.","The tree was planted 60 months ago and is now 2 feet tall.","The tree was planted 2 years ago and is now 60 inches tall.","The tree was planted 2 months ago and is now 60 inches tall."],"The tree was planted 2 years ago and is now 60 inches tall.");
+            $units = PopUp(["?", "Inches", "Years", "None of these"], "Inches");
+        </pg-code>
+    </setup>
+
+    <statement>
+        <p>The function <m>h(y) = 24 + 18y</m> would find the height (in inches) of a Paper Birch tree which is <m>24</m> inches tall when it is planted, and grows by 18 inches per year. The independent variable <m>y</m> is the number of years after it is planted.</p>
+        <ol>
+          <li>
+            <p>What is the value of <m>h(3)</m>, including the correct units?</p>
+            <p>h(3) = <var name="$height" width="3" /> <var name="$units" form="popup" /></p>
+          </li>
+          <li>
+            <p>For the equation <m>h(2) = 60</m>, choose the correct interpretation.</p>
+            <p><var name="$interpretation" form="popup" /></p>
+          </li>
+        </ol>
+    </statement>
+
+    <solution>
+        <p>The correct answer is: h(3) = <var name="$height" /> <var name="$units"/>.</p>
+        <p>The correct answer is: <var name="$interpretation"/></p>
+    </solution>
+  </webwork>
 </exercise>
 
     <example>
