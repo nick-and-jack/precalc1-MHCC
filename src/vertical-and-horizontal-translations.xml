@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- 
+<!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
 ## Jack Green, Nick Chura                                                ##
@@ -14,5 +14,125 @@
 <chapter xml:id="chapter-vertical-and-horizontal-translations" xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <title>Vertical and Horizontal Translations</title>
+    <introduction>
+      <paragraphs>
+        <title>Purpose</title>
+        <p>In this activity, we will explore how to <term>transform</term> the graph of a function by making changes to its formula. By the end of this activity, you will be able to</p>
+        <ul>
+          <li><p>Write the formula for a basic function which has been transformed.</p></li>
+          <li><p>Sketch the graph of a basic function which has been transformed.</p></li>
+        </ul>
+      </paragraphs>
+    </introduction>
+
+    <conclusion>
+      <exercise>
+          <title>Function Transformations 1</title>
+
+          <webwork xml:id="vertical-transformation-with-graph">
+
+              <pg-macros>
+                  <macro-file>PGchoicemacros.pl</macro-file>
+              </pg-macros>
+              <setup>
+                <var name="$choice">
+                  <set>
+                      <member>\text{The graph moves right.}</member>
+                      <member>\text{The graph moves left.}</member>
+                      <member correct="yes">\text{The graph moves up.}</member>
+                      <member>\text{The graph moves down.}</member>
+                      <member>\text{None of these}</member>
+                  </set>
+                </var>
+                <var name="$point">
+                  <set>
+                      <member correct="yes">y=f(x)-3=x^2-3</member>
+                      <member>y=f(x)+3=x^2+3</member>
+                      <member>\text{None of these}</member>
+                  </set>
+                </var>
+                <pg-code>
+                  Context('Numeric');
+                  $choice = RadioButtons(
+                    ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
+                    2, labels => ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
+                    displayLabels => 0
+                  );
+                  $point = RadioButtons(
+                    ["\(y = f(x) - 3 = x^2 - 3\)","\(y = f(x) + 3 = x^2 + 3\)","None of these"],
+                    0, labels => ["y=f(x)-3=x^2-3","\(y=f(x)+3=x^2+3\)","None of these"],
+                    displayLabels => 0
+                  );
+                </pg-code>
+              </setup>
+
+              <statement>
+                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pXUT7wZS/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                  <p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the slider at top left will change the graph of the function and its formula. What happens to the graph as you change the formula to <m>y = f(x) + 5 = x^2 + 5</m>?</p>
+                  <p><var name="$choice" form="buttons" /></p>
+                  <p>Which equation below would graph as a parabola with a vertex at the point <m>(0,-3)</m>?</p>
+                  <p><var name="$point" form="buttons" /></p>
+              </statement>
+          </webwork>
+      </exercise>
+
+      <exercise>
+          <title>Function Transformations 2</title>
+
+          <webwork xml:id="vertical-and-horizontal-transformation-with-graph">
+            <pg-macros>
+                <macro-file>PGchoicemacros.pl</macro-file>
+            </pg-macros>
+            <setup>
+              <var name="$changeH">
+                <set>
+                    <member>\text{The graph moves right.}</member>
+                    <member correct="yes">\text{The graph moves left.}</member>
+                    <member>\text{The graph moves up.}</member>
+                    <member>\text{The graph moves down.}</member>
+                    <member>\text{None of these}</member>
+                </set>
+              </var>
+              <var name="$changeHandK">
+                <set>
+                    <member>y=f(x+5)+3=(x+5)^2+3</member>
+                    <member correct="yes">y=f(x-5)+3=(x-5)^2+3</member>
+                    <member>y=f(x-3)+5=(x-3)^2+5</member>
+                    <member>y=f(x+3)-5=(x+3)^2-5</member>
+                    <member>\text{None of these}</member>
+                </set>
+              </var>
+              <pg-code>
+                Context('Numeric');
+                $changeH = RadioButtons(
+                  ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
+                  1, labels => ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
+                  displayLabels => 0
+                );
+                $changeHandK = RadioButtons(
+                  ["\(y = f(x+5) + 3 = (x+5)^2 + 3\)","\(y = f(x-5) + 3 = (x-5)^2 + 3\)","\(y = f(x-3) + 5 = (x-3)^2 + 5\)","\(y = f(x+3) - 5 = (x+3)^2 - 5\)","None of these"],
+                  1, labels => ["y=f(x+5)+3=(x+5)^2+3","y=f(x-5)+3=(x-5)^2+3","y=f(x-3)+5=(x-3)^2+5","y=f(x+3)-5=(x+3)^3+5","None of these"],
+                  displayLabels => 0
+                );
+              </pg-code>
+            </setup>
+            <statement>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                <p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders at top left will change the graph of the function and its formula. What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
+                <p><var name="$changeH" form="buttons" /></p>
+                <p>Which equation below would graph as a parabola with a vertex at the point <m>(5,3)</m>?</p>
+                <p><var name="$changeHandK" form="buttons" /></p>
+            </statement>
+          </webwork>
+      </exercise>
+      <paragraphs>
+        <p>You should now see how a function's graph is transformed by changing its formula in the following ways:</p>
+        <ul>
+          <li><m>y = f(x) + k</m></li>
+          <li><m>y = f(x + h)</m></li>
+        </ul>
+        <p>Now put that to the test to determine the equation of a basic function which has been transformed.</p>
+      </paragraphs>
+    </conclusion>
 
 </chapter>
