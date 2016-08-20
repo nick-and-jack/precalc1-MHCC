@@ -133,6 +133,75 @@
         </ul>
         <p>Now put that to the test to determine the equation of a basic function which has been transformed.</p>
       </paragraphs>
+      <exercise>
+        <title>Finding a formula from a graph</title>
+
+        <webwork xml:id="formula-for-a-transformation-horizontal-and-vertical-shifts">
+          <pg-macros>
+              <macro-file>PGchoicemacros.pl</macro-file>
+          </pg-macros>
+          <setup>
+            <var name="$formula1">
+              <set>
+                  <member>y = (x+3)^2 - \sqrt{x}</member>
+                  <member>y = x^2 - \sqrt{x+3}</member>
+                  <member correct="yes">y = (x+3)^2 - \sqrt{x+3}</member>
+                  <member>y = x^2 - \sqrt{x} - 3</member>
+                  <member>\text{None of these}</member>
+              </set>
+            </var>
+            <var name="$formula2">
+              <set>
+                  <member>y = 5\left|x-1\right| - (x-1)^2</member>
+                  <member>y = 5\left|x-2\right| - (x-2)^2</member>
+                  <member>y = 5\left|x-1\right| - (x-1)^2 - 2</member>
+                  <member correct="yes">y = 5\left|x-2\right| - (x-2)^2 - 1</member>
+                  <member>\text{None of these}</member>
+              </set>
+            </var>
+            <var name="$formula3">
+              <set>
+                  <member correct="yes">y = \sqrt{2x + 4} + 1</member>
+                  <member>y = \sqrt{2x + 2} + 1</member>
+                  <member>\text{None of these}</member>
+              </set>
+            </var>
+            <pg-code>
+              Context('Numeric');
+              $formula1 = RadioButtons(
+                ["\(y = (x+3)^2 - \sqrt{x}\)","\(y = x^2 - \sqrt{x+3}\)","\(y = (x+3)^2 - \sqrt{x+3}\)","\(y = x^2 - \sqrt{x} - 3\)","None of these"],
+                2, labels => ["y = (x+3)^2 - sqrt(x)","y = x^2 - sqrt(x+3)","y = (x+3)^2 - (x+3)","y = x^2 - sqrt(x) - 3","None of these"],
+                displayLabels => 0
+              );
+              $formula2 = RadioButtons(
+                ["\(y = 5\left|x-1\right| - (x-1)^2\)","\(y = 5\left|x-2\right| - (x-2)^2\)","\(y = 5\left|x-1\right| - (x-1)^2 - 2\)","\(y = 5\left|x-2\right| - (x-2)^2 - 1\)","None of these"],
+                3, labels => ["y = 5|x-1| - (x-1)^2","y = 5|x-2| - (x-2)^2","y = 5|x-1| - (x-1)^2 - 2","y = 5|x-2| - (x-2)^2 - 1","None of these"],
+                displayLabels => 0
+              );
+              $formula3 = RadioButtons(
+                ["\(y = \sqrt{2x + 4} + 1\)","\(y = \sqrt{2x + 2} + 1\)","None of these"],
+                0, labels => ["y = sqrt(2x + 4) + 1","y = sqrt(2x + 2) + 1","None of these"],
+                displayLabels => 0
+              );
+            </pg-code>
+          </setup>
+          <statement>
+              <p>In each graph below, think of the dashed green graph as the beginning function <m>f(x)</m>. The solid red graph is <m>y = f(x)</m> after it has been transformed in some way.</p>
+
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VdWn6se7/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>The dashed green graph shows <m>y = f(x) = x^2 - \sqrt{x}</m>. Use what you know about transformations to choose the correct formula for the solid red graph shown.</p>
+              <p><var name="$formula1" form="buttons" /></p>
+
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tunQVvGS/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>The dashed green graph shows <m>y = f(x) = 5\left|x\right| - x^2</m>. Use what you know about transformations to choose the correct formula for the solid red graph shown.</p>
+              <p><var name="$formula2" form="buttons" /></p>
+
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MRqrcdFC/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>The dashed green graph shows <m>y = f(x) = \sqrt{2x} + 1</m>. Use what you know about transformations to choose the correct formula for the solid red graph shown.</p>
+              <p><var name="$formula3" form="buttons" /></p>
+          </statement>
+        </webwork>
+      </exercise>
     </conclusion>
 
 </chapter>
