@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- 
+<!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
 ## Jack Green, Nick Chura                                                ##
@@ -14,5 +14,74 @@
 <chapter xml:id="chapter-reflections-and-vertical-stretches" xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <title>Reflections and Vertical Stretches</title>
+    <introduction>
+      <paragraphs>
+        <title>Purpose</title>
+        <p>In this activity, we will explore two more types of function <term>transformations</term>: Reflections and Vertical Scaling. By the end of this activity, you will be able to</p>
+        <ul>
+          <li><p>Predict how a function has been transformed by reflection or vertical scaling, given its formula.</p></li>
+          <li><p>Sketch the graph of a basic function which has been transformed by reflection or vertical scaling.</p></li>
+        </ul>
+      </paragraphs>
+    </introduction>
+    <conclusion>
+      <paragraphs>
+        <p>Function notation is all about describing inputs and outputs. So far we have seen inputs and outputs such as</p>
+          <ul>
+            <li><p><b>Formulas:</b> <m>P(t) = 3(1.09)^t</m></p>
+                <p>The value <m>t</m> is the input, and the value <m>P(t)</m> is the result.</p></li>
+            <li><p><b>Ordered Pairs</b>: <m>(m, W(m))</m></p>
+                <p>The input <m>m</m> is the horizontal location of a point, and <m>W(m)</m> is the vertical location of the point.</p></li>
+            <li><p><b>Tables of Values</b></p></li>
+<!-- Table of Values needed here -->
+          </ul>
+      </paragraphs>
+      <exercise>
+          <title>Interpreting a Transformation</title>
+          <webwork xml:id="webwork-interpreting-a-transformation-1">
+            <setup>
+              <var name="$withSymbols">
+                <set>
+                    <member>18</member>
+                    <member>6\text{ times the input of }3</member>
+                    <member correct="yes">6\text{ times the output when }x\text{ is }3</member>
+                    <member>f(18)</member>
+                </set>
+              </var>
+              <var name="$withNumbers">
+                <static>42</static>
+              </var>
+              <pg-code>
+                Context('Numeric');
+                $withSymbols = RadioButtons(
+                  ["18","6 times the input of 3", "6 times the output when x is 3"],
+                  2, labels => ["18","6 times the input of 3","6 times the output when x is 3"],
+                  displayLabels => 0
+                );
+                $withNumbers = Real(42);
+              </pg-code>
+            </setup>
+            <statement>
+              <ol>
+                <li><p>If <m>f(3)</m> means "the output when the input is <m>3</m>", what does <m>6*f(3)</m> mean?</p>
+                <p><var name="$withSymbols" form="buttons" /></p></li>
+                <li><p>If <m>f(3) = 7</m> means "the output is <m>7</m> when the input is <m>3</m>", what does <m>6*f(3)</m> mean?</p>
+                <p><var name="$withNumbers" width="3" /></p></li>
+              </ol>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rsSg5fd3/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            </statement>
+            <solution>
+              <p>The correct answer is <var name="$withSymbols" />. The number <m>6</m> is being multiplied by the value '<m>f(3)</m>'. So, whatever <m>f(3)</m> equals, this is just <m>6</m> times that amount.</p>
+              <p>The correct answer is <var name="$withNumbers" />. The number <m>6</m> is being multiplied by the value '<m>7</m>' which equals 42.</p>
+            </solution>
+          </webwork>
+        </exercise>
+      <paragraphs>
+        <p>Sometimes the symbol "&#8211;" is referred to as a “negative sign”, but often it helps to read it as “the opposite of”.</p>
+        <p>For instance, we can interpret the expression <m>-3</m> as the opposite of 3. If <m>a</m> is an input value, then <m>-a</m> is the opposite of <m>a</m>.</p>
+      </paragraphs>
+      </conclusion>
+
+
 
 </chapter>
