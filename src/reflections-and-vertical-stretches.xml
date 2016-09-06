@@ -17,11 +17,11 @@
     <introduction>
       <paragraphs>
         <title>Purpose</title>
-        <p>In this activity, we will explore two more types of function <term>transformations</term>: Reflections and Vertical Scaling. By the end of this activity, you will be able to</p>
-        <ul>
+        <p>In this activity, we will explore two more types of function transformations: <term>Reflections</term> and <term>Vertical Scaling</term>. By the end of this activity, you will be able to</p>
+        <ol>
           <li><p>Predict how a function has been transformed by reflection or vertical scaling, given its formula.</p></li>
           <li><p>Sketch the graph of a basic function which has been transformed by reflection or vertical scaling.</p></li>
-        </ul>
+        </ol>
       </paragraphs>
     </introduction>
     <conclusion>
@@ -31,9 +31,33 @@
             <li><p><b>Formulas:</b> <m>P(t) = 3(1.09)^t</m></p>
                 <p>The value <m>t</m> is the input, and the value <m>P(t)</m> is the result.</p></li>
             <li><p><b>Ordered Pairs</b>: <m>(m, W(m))</m></p>
-                <p>The input <m>m</m> is the horizontal location of a point, and <m>W(m)</m> is the vertical location of the point.</p></li>
-            <li><p><b>Tables of Values</b></p></li>
+                <p>The input <m>m</m> is the horizontal location of a point, and the ouput <m>W(m)</m> is the vertical location of the point.</p></li>
+            <li><p><b>Tables of Values</b></p>
 <!-- Table of Values needed here -->
+<table xml:id="function-table">
+    <tabular halign="center" top="medium" left="medium" bottom="medium" right="medium">
+        <row>
+            <cell>x</cell>
+            <cell halign="left">y</cell>
+        </row>
+
+        <row>
+            <cell>1</cell>
+            <cell halign="left">-3</cell>
+        </row>
+
+        <row>
+            <cell>2</cell>
+            <cell halign="left">-1</cell>
+        </row>
+
+        <row>
+            <cell>3</cell>
+            <cell halign="left">7</cell>
+        </row>
+    </tabular>
+</table>
+            </li>
           </ul>
       </paragraphs>
       <exercise>
@@ -68,20 +92,35 @@
                 <li><p>If <m>f(3) = 7</m> means "the output is <m>7</m> when the input is <m>3</m>", what does <m>6*f(3)</m> mean?</p>
                 <p><var name="$withNumbers" width="3" /></p></li>
               </ol>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rsSg5fd3/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
             </statement>
             <solution>
-              <p>The correct answer is <var name="$withSymbols" />. The number <m>6</m> is being multiplied by the value '<m>f(3)</m>'. So, whatever <m>f(3)</m> equals, this is just <m>6</m> times that amount.</p>
-              <p>The correct answer is <var name="$withNumbers" />. The number <m>6</m> is being multiplied by the value '<m>7</m>' which equals 42.</p>
+              <p>The correct answer is <var name="$withSymbols" />. The number <m>6</m> is being multiplied by the value <m>f(3)</m>. So, whatever <m>f(3)</m> equals, this is just <m>6</m> times that amount.</p>
+              <p>The correct answer is <var name="$withNumbers" />. The number <m>6</m> is being multiplied by the value <m>7</m>, so the result is <m>42</m>.</p>
             </solution>
           </webwork>
         </exercise>
       <paragraphs>
-        <p>Sometimes the symbol "&#8211;" is referred to as a “negative sign”, but often it helps to read it as “the opposite of”.</p>
+        <p>The Opposite. The symbol "&#8211;" is commonly referred to as a “negative sign”, but it often helps to read it as “the opposite of”.</p>
         <p>For instance, we can interpret the expression <m>-3</m> as the opposite of 3. If <m>a</m> is an input value, then <m>-a</m> is the opposite of <m>a</m>.</p>
+        <p>Check your understanding with the graph below. The values <m>a</m> and <m>b</m> are shown on a number line, and you must move the points <m>-a</m> and <m>-b</m> to their proper locations.</p>
+        <p>
+          <geogebra materialID="rsSg5fd3" width="368" height="261" />
+          <!-- https://www.geogebra.org/m/egCAt7db -->
+        </p>
+        <p>Hopefully you'll agree that saying "the opposite of <m>x</m>" instead of "negative <m>x</m>" makes good sense, especially when we don't know whether <m>x</m> was positive or negative to begin with.</p>
+<!--
+      <exercise>
+          <title>Using "the opposite of" with Function Notation</title>
+          <webwork xml:id="webwork-opposite-of-with-function-notation">
+              <pg-macros>
+                  <macro-file>PGchoicemacros.pl</macro-file>
+              </pg-macros>
+            <setup>
+-->
       </paragraphs>
-      </conclusion>
+      
 
+      </conclusion>
 
 
 </chapter>
