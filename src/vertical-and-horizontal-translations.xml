@@ -136,26 +136,19 @@
         <p>It may have been surprising to see that adding a positive number to the input will move the graph to the <it>left</it>, but consider this: In the example <m>f(x) = x^2</m>, the vertex is the lowest point, occuring when the input <m>x = 0</m>. For a parabola to be shifted horizontally <m>5</m> units to the right, this should happen when the number being squared is <m>0</m>. So, making the transformation <m>f(x-5) = (x-5)^2</m> does just that &#8211; it forces the value <m>x = 5</m> to give <m>0</m> as the argument in the function <m>f(x) = x^2</m>. So, this moves the vertext over to the value <m>x = 5</m>.</p>
       </paragraphs>
       <example>
-        <p>The function <m>h(t) = -4.9t^2 + 10t + 40</m> will approximate the height of an object which was thrown straight upward at a speed of <quantity><mag>10</mag><unit base="meterpersecond"/></quantity> at time <m>t = 0</m> seconds from a height of <quantity><mag>40</mag><unit base="meter"/></quantity>. See the graph below.</p>
-        <!--
-          Insert graph at https://www.geogebra.org/m/Ytwv3fEB
-        -->
+        <p>The function <m>h(t) = -4.9t^2 + 10t + 40</m> will approximate the height of an object which was thrown straight upward at a speed of <quantity><mag>10</mag><unit base="meter" /><per base="second"/></quantity> at time <m>t = 0</m> seconds from a height of <quantity><mag>40</mag><unit base="meter"/></quantity>. See the graph below.</p>
+        <geogebra materialID="BmHTxqW6" width="421" height="260" />
+        <!-- https://www.geogebra.org/m/Ytwv3fEB -->
         <p>You can move the point to see when the object will hit the ground. Notice that this defines the practical <term>domain</term> of the funciton:  <m>0 \leq t \leq 4.05</m></p>
-        <p>Now, we can use this function to describe other situations involving such an object. For example, if the person had waited one second to throw the object, then the graph would be shifted horizontally to the right by one second.</p>
-        <!--
-          Insert graph at https://www.geogebra.org/m/N9Tx36kF
-
-          <p>Using function notation we write <md>
-              <mrow>\frac{\Delta f}{\Delta s}\amp=\frac{27-10}{25-5}</mrow>
-              <mrow>\amp=0.85</mrow></md>The number <m>0.85</m> (notice it is positive)
-        -->
+        <p>Now, we can use this function to describe other situations involving such an object. For example, if the person had waited one second before throwing the object, then the graph would be shifted horizontally to the right by one second.</p>
+        <geogebra materialID="kCE4de8p" width="421" height="260" />
+        <!-- https://www.geogebra.org/m/N9Tx36kF -->
         <p>To shift the graph to the right, we make the transformation: <md><mrow>h(t-1) = -4.9(t-1)^2 + 10(t-1) + 40</mrow></md>Notice that this shift changed the domain of the function to: <m>1 \leq t \leq 5.05</m></p>
         <p>Next, suppose the person waited one second before throwing the object but also took it an additional <quantity><mag>12</mag><unit base="feet"/></quantity> upward before throwing it. This involves a horizontal shift of <quantity><mag>1</mag><unit base="second"/></quantity> to the right and a vertical shift of <quantity><mag>12</mag><unit base="meter"/></quantity> upward:<md>
           <mrow>h(t-1) + 12 \amp= -4.9(t-1)^2 + 10(t-1) + 40 + 12</mrow>
           <mrow>\amp=-4.9(t-1)^2 + 10(t-1) + 52</mrow></md>This also changed the domain of the function, this time to: <m>1 \leq t \leq 5.43</m></p>
-        <!--
-          Insert graph at https://www.geogebra.org/m/avHM2ZSt
-        -->
+        <geogebra materialID="neB9zc2z" width="421" height="260" />
+        <!-- https://www.geogebra.org/m/avHM2ZSt -->
       </example>
 
         <p>Now let's put this information to the test to determine the equation of a function which has been transformed.</p>
