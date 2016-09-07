@@ -193,8 +193,8 @@ Add a few webwork problems here for the terms "function", "independent variable"
             <image>
                 <latex-image-code>
                     <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[ymin=0, ymax=35, xlabel={Speed (mph)}, ylabel={Fuel Economy (mpg)}, minor xtick={5,10,...,75}, ytick={0,10,...,30}, minor ytick={0,5,...,35}, xmin=5, xmax=75, grid=both, axis background/.style={fill=yellow!40}]
-                    \addplot[smooth, thick, color=red] coordinates {(5, 11) (10, 19) (15, 24) (20, 26.5) (25, 28) (30,29) (35, 29.5) (40, 30) (55, 30.5) (65,26.5) (70, 25) (75, 24)};
+                    \begin{axis}[xmin=-5,ymin=0, ymax=35, xlabel={Speed (mph)}, ylabel={Fuel Economy (mpg)}, xtick={10,20,...,70}, minor xtick={-5,0,...,75}, ytick={0,10,...,30}, minor ytick={0,5,...,35}, xmin=5, xmax=75,]
+                    \addplot+[smooth,->] coordinates {(5, 11) (10, 19) (15, 24) (20, 26.5) (25, 28) (30,29) (35, 29.5) (40, 30) (55, 30.5) (65,26.5) (70, 25) (75, 24)};
                     \end{axis}
                     \end{tikzpicture}]]>
                 </latex-image-code>
@@ -282,8 +282,8 @@ Add a webwork problem for these key terms:
           <image>
               <latex-image-code>
                   <![CDATA[\begin{tikzpicture}
-                  \begin{axis}[ymin=-80, ymax=100, xlabel={Temperature (Degrees F)}, ylabel={Temperature (Degrees C)}, minor xtick={-110,-100,...,220}, ytick={-100,-50,...,100}, minor ytick={-80,-70,...,100}, xmin=-112, xmax=212, grid=both, axis background/.style={fill=yellow!40}]
-                  \addplot[smooth, thick, color=red] coordinates {(-100,-73.33) (-50,-45.56) (0,-17.78) (50,10) (100,37.78) (150,65.56) (200,93.33)};
+                  \begin{axis}[ymin=-80, ymax=100, xlabel={Temperature ($^{\circ}$F)}, ylabel={Temperature ($^{\circ}$C)}, xtick={-100,-50,...,200}, minor xtick={-110,-100,...,220}, ytick={-50,0,...,100}, minor ytick={-80,-70,...,100}, xmin=-112, xmax=212,] 
+                  \addplot+[domain=-100:212] {5/9*(x-32)};
                   \end{axis}
                   \end{tikzpicture}]]>
               </latex-image-code>
