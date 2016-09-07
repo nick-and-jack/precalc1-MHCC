@@ -13,6 +13,46 @@
 
 <chapter xml:id="chapter-composition-and-inverse" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <title>Composition and Inverse</title>
+    <title>Composition of Functions and Inverses of Functions</title>
+
+    <introduction>
+        <list xml:id="outcomes-composition-and-inverse">
+            <title>Student Learning Outcomes</title>
+            <ul>
+                <li><p>Define composite functions and combinations of functions and apply and interpret these in appropriate situations.</p></li>
+                <li><p>Evaluate, apply, and interpret function notation, including the notation for inverse functions and composition of functions.</p></li>
+                <li><p>Demonstrate the inverse relationship between an exponential function and a logarithmic function (with the same base).</p></li>
+            </ul>
+        </list>
+
+        <list>
+            <title>Video Lectures</title>
+            <!-- If we can get these videos up onto YouTube, much easier to embed -->
+            <dl>
+                <li>
+                    <title>Composition of Funcitons</title>
+                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-composition-captioned_-_20150124_193451_26.html" />-->
+                </li>
+                <li>
+                    <title>Inverses of Functions</title>
+                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-inverse-functions-captioned_-_20150124_202541_26.html" />-->
+                </li>
+            </dl>
+        </list>
+
+    </introduction>
+
+    <conclusion>
+        <title>Gist of Composition and Inverses</title>
+
+        <p>The composition of functions is really about making one function the input for another. Here is a medical example of the composition of two functions. Let <m>f(t)</m> be a function that relates the amount of drug, <m>D</m> in <quantity><unit prefix="milli" base="gram" /></quantity>, in a patient's bloodstream as a function of time, <m>t</m> in hours. At time goes on, the amount of drug in the paritent's body decreases as the body eliminates it.</p>
+
+        <p>On the other hand, the drug is meant to help slow the heart rate of a patient, so as the drug leaves the patient's bloodstream, the heart rate increases. Therefore, the heart rate <m>H</m>, in beats per minute, is a function of <m>D</m>, the amount of drug in the body. We can write <m>H = g(D)</m> where <m>g</m> is a function relating the Heart rate to the amount of drug in the body.</p>
+
+        <p>Therefore we have two functions: the heart rate is a function of the amount of drug in the bloodstream and the amount of drug is a function of time. Utimately, the heart rate is a function of time.</p>
+
+        <p>Using function notation the composition of these two functions looks like this:<me>H=g(D)\text{ and }D=f(t)\text{ so that }H=g(f(t))\text{.}</me> If each function had a formula then we would literally put one formula into the other.</p>
+
+    </conclusion>
 
 </chapter>
