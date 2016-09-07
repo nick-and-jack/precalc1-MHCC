@@ -15,4 +15,83 @@
 
     <title>Logarithmic Functions</title>
 
+    <introduction>
+        <list xml:id="outcomes-logarithmic-functions">
+            <title>Student Learning Outcomes</title>
+            <ul>
+                <li><p>Determine the domain and range of functions.</p></li>
+                <li><p>Sketch the graph of a logarithmic function.</p></li>
+                <li><p>Identify a vertcal/horizontal asymptote from a graph, numerical model, verbal description or equation.</p></li>
+                <li><p>Solve equations algebraically using properties of exponents and logarithms.</p></li>
+                <li><p>Use the characteristics of basic functions, especially slope intercepts, rate of change, percent change and average change to answer questions in application situations, to write equations and to create graphs by hand and on the calculator.</p></li>
+            </ul>
+        </list>
+
+        <list>
+            <title>Video Lectures</title>
+            <!-- If we can get these videos up onto YouTube, much easier to embed -->
+            <dl>
+                <li>
+                    <title>Solving Equations with Logarithms</title>
+                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/l04-how-to-use-logarithms-to-solve-equations-capti_-_20141122_220459_26.html" />-->
+                </li>
+                <li>
+                    <title>Properties of Logarithms</title>
+                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-inverse-functions-captioned_-_20150124_202541_26.html" />-->
+                </li>
+                <li>
+                    <title>Half-life and Doubling Time</title>
+                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/lec-half-life-doubling-time-captioned_-_20141122_220814_26.html" />-->
+                </li>
+            </dl>
+        </list>
+
+    </introduction>
+
+    <conclusion>
+        <title>Gist of Composition and Inverses</title>
+
+        <p>Most every function or operation in math has a <q>reverse</q> function that <q>undoes</q> the original. For instance the square root function <m>f(x)=\sqrt{x}</m> has the square function <m>f(x)=x^2</m> that undoes it.</p>
+
+        <p>The exponential function has its own <q>reverse</q> function called the <term>logarithm</term>. (Actually, these <q>reverse</q> functions are called <term>inverses</term> of each other and we will study more about that in a later lesson.) For now just know that an exponential function takes an input value as an exponent and gives a number as a result.<me>b^{\text{exponent}}=\text{result}\text{.}</me>The logarithm function takes the result and tells you what exponent you need to get it.<me>\log_b{\text{result}}=\text{exponent}\text{.}</me></p>
+
+        <p>And just like exponential functions have horizontal asymptotes as in <xref ref="figure-exponential-asymptote" />, logarithm functions have <em>vertical</em> asymptotes as in <xref ref="figure-logarithm-asymptote" />.</p> 
+
+        <sidebyside widths="48% 48%">
+            <figure>
+                <caption>Exponential function with horizontal asymptote <m>y = 0</m></caption>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[]
+                                    \addplot+[domain=-2.7:7]{2^(-x)};
+                                    \addplot[asymptote, ->] coordinates {(-7,0) (7,0)};
+                                 \end{axis}
+                            \end{tikzpicture}
+                    ]]>
+                    </latex-image-code>
+                </image>
+            </figure>
+            <figure>
+                <caption>Logarithmic function with vertical asymptote <m>x = 0</m></caption>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[]
+                                    \addplot+[domain=-7:2.7] ({2^(x)},{x});
+                                    \addplot[asymptote, ->] coordinates {(0,7) (0,-7)};
+                                 \end{axis}
+                            \end{tikzpicture}
+                    ]]>
+                    </latex-image-code>
+                </image>
+            </figure>
+        </sidebyside>
+
+        <p>The vertical asymptote is like a vertical boundary that the function can't cross. In the case of the logarithm the <m>y</m>-axis is the asymptote and the funciton only exists to the right of it. Therefore the domain of the log function is, in general, all inputs greater than zero (unless you shift the function around like we will do in another lesson).</p>
+
+        <p>For every base of an exponential function there is a corresponding logarithm function. For instance <m>2^x</m> has <m>\log_2(x)</m> and <m>3^x</m> has <m>\log_3(x)</m> and <m>e^x</m> has <m>\ln(x)</m> which means <q>natural logarithm</q> and technically should be written as <m>\log_e(x)</m> <ellipsis />oh well.</p>
+
+    </conclusion>
+
 </chapter>
