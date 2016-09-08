@@ -107,19 +107,56 @@
           <geogebra materialID="rsSg5fd3" width="368" height="261" />
           <!-- https://www.geogebra.org/m/egCAt7db -->
         </p>
-        <p>Hopefully you'll agree that saying "the opposite of <m>x</m>" instead of "negative <m>x</m>" makes good sense, especially when we don't know whether <m>x</m> was positive or negative to begin with.</p>
-<!--
+        <exercise>
+            <title>Using "the opposite of" with Function Notation</title>
+            <webwork xml:id="webwork-opposite-of-with-function-notation">
+              <setup>
+                <var name="$isNegative">
+                  <set>
+                      <member>\text{True}</member>
+                      <member correct="yes">\text{False}</member>
+                  </set>
+                </var>
+                <pg-code>
+                  Context('Numeric');
+                  $isNegative = RadioButtons(
+                    ["True","False"],
+                    1, labels => ["True","False"],
+                    displayLabels => 0
+                  );
+                </pg-code>
+              </setup>
+              <statement>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rsSg5fd3/width/368/height/261/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                <p>The values <m>a</m>, zero and <m>b</m> are shown on the number line above. Click and drag the values <m>-a</m> and <m>-b</m> to their proper locations on the number line.</p>
+                <p>Then answer the following <em>True or False</em> question:</p>
+                <p>The expression <m>-a</m> is always a negative number.</p>
+                <p><var name="$isNegative" form="buttons" /></p>
+              </statement>
+              <solution>
+                <p>The correct answer is <var name="$isNegative" />. The expression <m>-a</m> means "the opposite of <m>a</m>", so if <m>a = -4</m>, then <m>-a</m> would be the number 4.</p>
+              </solution>
+            </webwork>
+          </exercise>
+<!--      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rsSg5fd3/width/368/height/261/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+-->
+      <p>Hopefully you'll agree that saying "the opposite of <m>x</m>" instead of "negative <m>x</m>" makes good sense, especially when we don't know whether <m>x</m> was positive or negative to begin with.</p>
+      </paragraphs>
+
+      <paragraphs>
+        <p>Now let's put this into practice by writing expressions from a verbal description. For example:</p>
+        <blockquote>If <m>f(x)</m> is a function, write an expression which means "five times the output, when the input is the opposite of <m>x</m>".</blockquote>
+        <p>The answer would be:</p>
+        <blockquote><m>5f(-x)</m></blockquote>
+        <p>Now you try it.</p>
       <exercise>
           <title>Using "the opposite of" with Function Notation</title>
           <webwork xml:id="webwork-opposite-of-with-function-notation">
-              <pg-macros>
-                  <macro-file>PGchoicemacros.pl</macro-file>
-              </pg-macros>
             <setup>
--->
-      </paragraphs>
-      
 
+
+
+      </paragraphs>
       </conclusion>
 
 
