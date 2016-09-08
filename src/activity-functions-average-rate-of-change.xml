@@ -13,6 +13,147 @@
 
 <section xml:id="activity-functions-average-rate-of-change" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Average Rate of Change</title>
-	<p>hello world</p>
-	<p>this is it?</p>
+	<introduction>
+		<p>In this activity we introduce the math symbol <m>\Delta</m> that represents change and we develop the concept of <em>average rate of change</em></p>
+		<p>It will be helpful to remember that the speed of an object is defined as the distance the object travels divided by the time it takes to travel that distance.</p>
+		<p>After completing this lesson you will be able to:
+            <ul>
+                <li><p>Perform calculations using function notation including Average Rate of Change.</p></li>
+            </ul>
+        </p>
+        <p>The prerequisites for this lesson are knowing how to calculate the slope of a line and understanding the meaning of slope.</p>
+	</introduction>
+	
+	<subsection>
+	<exercise>
+		<title>Intuitive Knowledge</title>
+
+		<statement>
+			<p>Let's start by realizing you already understand the concept of <em>average rate of change</em> but maybe you have never hear the phrase before.</p>
+		</statement>
+
+		<webwork xml:id="fastest-train">
+			<pg-macros>
+				<macro-file>PGchoicemacros.pl</macro-file>
+			</pg-macros>
+			
+			<statement>
+			<p>The graph below shows the position of three trains at various times</p>
+
+			<!-- Insert the graph of three lines with varying steepness as in first graph of Maple ACT01 function notation -->
+
+			<p>Which of the three trains is traveling a the fastest speed?</p>
+			</statement>
+
+			<setup>
+				<var name="$train">
+					<set>
+						<member correct="yes">\text{Blue Train}</member>
+						<member>\text{Red Train}</member>
+						<member>\text{Green Train}</member>
+					</set>
+				</var>
+
+				<pg-code>
+                Context('Numeric');
+                $train = RadioButtons(
+                  ["Blue Train","Red Train","Green Train"],
+                  0, labels => ["Blue Train","Red Train","Green Train"],
+                  displayLabels => 0
+                );
+              	</pg-code>
+			</setup>
+				<statement>
+					<p><var name="$train" form="buttons" /></p>
+				</statement>
+
+				<statement>
+					<p><em>What do you call the steepness of the line?</em></p>
+					<p>The graph of the fastest train has the greatest <q>blank</q></p>
+				</statement>
+
+				<pg-macros>
+					<macro-file>PGchoicemacros.pl</macro-file>
+				</pg-macros>
+
+			<setup>
+				<var name="$slope">
+					<set>
+						<member>\text{mope}</member>
+						<member>\text{dope}</member>
+						<member correct="yes">\text{slope}</member>
+						<member>\text{scope}</member>
+					</set>
+				</var>
+				<pg-code>
+				Context('Numeric');
+                $slope = RadioButtons(
+                  ["mope","dope","slope","scope"],
+                  2, labels => ["mope","dope","slope","scope"],
+                  displayLabels => 0
+                );
+              </pg-code>
+			</setup>
+			
+			<statement>
+				<p><var name="$slope" form="buttons" /></p>
+			</statement>
+		</webwork>
+	</exercise>
+
+	</subsection>
+
+	<paragraphs>
+		<p>It turns out that <em>average rate of change</em> is just another way to talk about slope.</p>
+	</paragraphs>
+
+
+	<subsection>
+		<exercise>
+          <title>Interpreting a Transformation</title>
+          	<statement>
+          		<p>The interactive graph below is that of a function <m>D = f(t)</m> where <em>D</em> is the number of miles a train is from downtown at <m>t</m> hours after 8 am</p>
+          		<p>As the time changes along the horizontal axis the result is the changing position of the train measured on the vertical axis.  The key word here is <q>change</q></p>
+          	</statement>
+          <webwork xml:id="change-in-function">
+            <setup>
+              <var name="$Vchange">
+                <static>16</static>
+              </var>
+              <pg-code>
+                Context('Numeric');
+                $Vchange = Real(16);
+              </pg-code>
+            </setup>
+            <statement>
+              <ol>
+              	<li><p>Use the graph to estimate the change in distance between the 2nd and 3rd hours.</p></li>
+                <li><p><m>f(3) - f(2) = </m> <var name="$Vchange" width="3" /> miles.</p></li>
+              </ol>
+            </statement>
+
+			<setup>
+              <var name="$Hchange">
+                <static>1</static>
+              </var>
+              <pg-code>
+                Context('Numeric');
+                $Hchange = Real(1);
+              </pg-code>
+            </setup>
+            <statement>
+              <ol>
+              	<li><p>What is the change in time between the 2nd and 3rd hours?</p></li>
+                <li><p>The change in time is <var name="$Hchange" width="3" /> hour(s).</p>
+                </li>
+              </ol>
+            </statement>
+			
+			<!-- Alex! Insert here: from Maple acitivity "ACT02_average_rate_of_change", question #4 - "Use function notation to write and expression that represents the change in distance between the 2nd and the 5th hours." The answer needs to accept any spacing issues a student may have when typing in their response "f(5) - f(1)". -->
+
+          </webwork>
+        </exercise>
+	</subsection>
+	
+
 </section>
