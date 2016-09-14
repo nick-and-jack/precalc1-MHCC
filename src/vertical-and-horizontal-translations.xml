@@ -17,15 +17,20 @@
     <introduction>
       <paragraphs>
         <title>Purpose</title>
-        <p>In this activity, we will explore how to <term>transform</term> the graph of a function by making changes to its formula. By the end of this activity, you will be able to</p>
+        <p>In this activity, we will explore how to <term>transform</term> the graph of a function by making changes to its formula in the following ways:</p>
         <ul>
-          <li><p>Write the formula for a basic function which has been transformed.</p></li>
-          <li><p>Sketch the graph of a basic function which has been transformed.</p></li>
+          <li><p><m>f(x) + k</m></p></li>
+          <li><p><m>f(x + h)</m></p></li>
+          <li><p><m>af(x)</m></p></li>
+        </ul>
+        <p>By the end of this activity, you will be able to:</p>
+        <ul>
+          <li><p>Recognize the geometric effect of these types of transformations</p></li>
+          <li><p>Write the formula for a basic function which has been changed by these transformations.</p></li>
+          <li><p>Sketch the graph of a basic function which has been changed by these transformations.</p></li>
         </ul>
       </paragraphs>
-    </introduction>
 
-    <conclusion>
       <exercise>
           <title>Function Transformations 1</title>
 
@@ -68,7 +73,7 @@
 
               <statement>
                   <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pXUT7wZS/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                  <p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the slider at top left will change the graph of the function and its formula. What happens to the graph as you change the formula to <m>y = f(x) + 5 = x^2 + 5</m>?</p>
+                  <p>The graph starts by showing the function <m>f(x) = x^2</m>. Moving the slider will change the function by adding a number <m>k</m> outside of the function. Use the slider to change the value of <m>k</m> to the number <m>5</m>. What happened to the graph as you changed the formula to <m>f(x) + 5 = x^2 + 5</m>?</p>
                   <p><var name="$choice" form="buttons" /></p>
                   <p>Which equation below would graph as a parabola with a vertex at the point <m>(0,-3)</m>?</p>
                   <p><var name="$point" form="buttons" /></p>
@@ -83,6 +88,7 @@
             <pg-macros>
                 <macro-file>PGchoicemacros.pl</macro-file>
             </pg-macros>
+
             <setup>
               <var name="$changeH">
                 <set>
@@ -116,37 +122,46 @@
                 );
               </pg-code>
             </setup>
+
             <statement>
                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders at top left will change the graph of the function and its formula. What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
+                <p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders will change the function by adding a number <m>k</m> outside the function and a number <m>h</m> inside the function. What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
                 <p><var name="$changeH" form="buttons" /></p>
                 <p>Which equation below would graph as a parabola with a vertex at the point <m>(5,3)</m>?</p>
                 <p><var name="$changeHandK" form="buttons" /></p>
             </statement>
           </webwork>
       </exercise>
+<!-- Note: Another WeBWorK problem is coming for this introduction, dealing with a*f(x) transformations. I'm still dealing with the GeoGebra graph which is not working correctly. -->
+    </introduction>
+
+    <conclusion>
       <paragraphs>
         <p>You should now see how a function's graph is transformed by changing its formula in the following ways:</p>
         <ul>
-          <li><m>y = f(x) + k</m></li>
-          <li><m>y = f(x + h)</m></li>
+          <li><m>f(x) + k</m> moves the graph up or down by <m>k</m> units.</li>
+          <li><m>f(x + h)</m> moves the graph left or right by <m>h</m> units.</li>
+          <li><m>af(x)</m> makes the graph steeper by a factor of <m>a</m></li>
         </ul>
-        <p>In the first case, adding a value <m>k</m> outside of the function produced a <term>vertical shift</term> to the graph. Adding a positive number shifted the graph up, and adding a negative number shifted the graph down. This should make sense because <m>f(x)</m> is the output of the function, so adding a value outside will change the <it>y</it> values.</p>
-        <p>In the second case, adding a value <m>h</m> inside the function produced a <term>horizontal shift</term> to the graph. Adding a positive number shifted the graph to the left, and adding a negative number shifted the graph to the right. This also makes sense because <it>x</it> is the input of the function, so adding a value inside the parentheses will change the <it>x</it> values.</p>
-        <p>It may have been surprising to see that adding a positive number to the input will move the graph to the <it>left</it>, but consider this: In the example <m>f(x) = x^2</m>, the vertex is the lowest point, occuring when the input <m>x = 0</m>. For a parabola to be shifted horizontally <m>5</m> units to the right, this should happen when the number being squared is <m>0</m>. So, making the transformation <m>f(x-5) = (x-5)^2</m> does just that &#8211; it forces the value <m>x = 5</m> to give <m>0</m> as the argument in the function <m>f(x) = x^2</m>. So, this moves the vertext over to the value <m>x = 5</m>.</p>
+        <p>In the first case, adding a value <m>k</m> outside of the function produced a <term>vertical shift</term> to the graph. Adding a positive number shifted the graph up, and adding a negative number shifted the graph down. This should make sense because <m>f(x)</m> is the output of the function, so adding a value outside will change the <m>y</m> values.</p>
+        <p>In the second case, adding a value <m>h</m> inside the function produced a <term>horizontal shift</term> to the graph. Adding a positive number shifted the graph to the left, and adding a negative number shifted the graph to the right. This also makes sense because <m>x</m> is the input of the function, so adding a value inside the parentheses will change the <m>x</m> values.</p>
+        <p>It may have been surprising to see that adding a positive number to the input will move the graph to the <em>left</em>, but consider this: In the example <m>f(x) = x^2</m>, the vertex is the lowest point, occuring when the input <m>x = 0</m>. For a parabola to be shifted horizontally <m>5</m> units to the right, this should happen when the number being squared is <m>0</m>. So, making the transformation <m>f(x-5) = (x-5)^2</m> does just that &#8211; it forces the value <m>x = 5</m> to give <m>0</m> as the argument in the function <m>f(x) = x^2</m>. So, this moves the vertext over to the value <m>x = 5</m>.</p>
+        <p>In the last case, multiplying outside of the function by a value <m>a</m> <term>vertically stretched</term> the graph by a factor of <m>a</m></p>
       </paragraphs>
+
       <example>
+<!-- Note: The graphs in this <example> will not show until Rob Beezer makes appropriate changes to MBX, allowing GeoGebra graphs outside of WeBWorK problems. -->
         <p>The function <m>h(t) = -4.9t^2 + 10t + 40</m> will approximate the height of an object which was thrown straight upward at a speed of <quantity><mag>10</mag><unit base="meter" /><per base="second"/></quantity> at time <m>t = 0</m> seconds from a height of <quantity><mag>40</mag><unit base="meter"/></quantity>. See the graph below.</p>
         <geogebra materialID="BmHTxqW6" width="421" height="260" />
         <!-- https://www.geogebra.org/m/Ytwv3fEB -->
-        <p>You can move the point to see when the object will hit the ground. Notice that this defines the practical <term>domain</term> of the funciton:  <m>0 \leq t \leq 4.05</m></p>
+        <p>You can move the point to see how hight the object will be at a certain time, or when the object will hit the ground.</p>
         <p>Now, we can use this function to describe other situations involving such an object. For example, if the person had waited one second before throwing the object, then the graph would be shifted horizontally to the right by one second.</p>
         <geogebra materialID="kCE4de8p" width="421" height="260" />
         <!-- https://www.geogebra.org/m/N9Tx36kF -->
-        <p>To shift the graph to the right, we make the transformation: <md><mrow>h(t-1) = -4.9(t-1)^2 + 10(t-1) + 40</mrow></md>Notice that this shift changed the domain of the function to: <m>1 \leq t \leq 5.05</m></p>
+        <p>To shift the graph to the right, we make the transformation: <md><mrow>h(t-1) = -4.9(t-1)^2 + 10(t-1) + 40</mrow></md></p>
         <p>Next, suppose the person waited one second before throwing the object but also took it an additional <quantity><mag>12</mag><unit base="feet"/></quantity> upward before throwing it. This involves a horizontal shift of <quantity><mag>1</mag><unit base="second"/></quantity> to the right and a vertical shift of <quantity><mag>12</mag><unit base="meter"/></quantity> upward:<md>
           <mrow>h(t-1) + 12 \amp= -4.9(t-1)^2 + 10(t-1) + 40 + 12</mrow>
-          <mrow>\amp=-4.9(t-1)^2 + 10(t-1) + 52</mrow></md>This also changed the domain of the function, this time to: <m>1 \leq t \leq 5.43</m></p>
+          <mrow>\amp=-4.9(t-1)^2 + 10(t-1) + 52</mrow></md></p>
         <geogebra materialID="neB9zc2z" width="421" height="260" />
         <!-- https://www.geogebra.org/m/avHM2ZSt -->
       </example>
@@ -154,9 +169,9 @@
         <p>Now let's put this information to the test to determine the equation of a function which has been transformed.</p>
 
       <exercise>
-        <title>Finding a formula from a graph</title>
+        <title>Match a formula to its graph</title>
 
-        <webwork xml:id="formula-for-a-transformation-horizontal-and-vertical-shifts">
+        <webwork xml:id="webwork-match-formula-to-graph-horizontal-and-vertical-shifts">
           <pg-macros>
               <macro-file>PGchoicemacros.pl</macro-file>
           </pg-macros>
@@ -222,6 +237,60 @@
           </statement>
         </webwork>
       </exercise>
+
+      <exercise>
+        <title>Write a formula to match a graph</title>
+        <webwork xml:id="webwork-write-formula-for-graph-horizontal-and-vertical-shifts">
+          <pg-macros>
+          </pg-macros>
+
+          <setup>
+            <var name="$f">
+              <static>(x-4)^2+1</static>
+            </var>
+            <var name="$h1">
+              <static>4</static>
+            </var>
+            <var name="$h2">
+              <static>-2</static>
+            </var>
+            <var name="$k1">
+              <static>1</static>
+            </var>
+            <var name="$k2">
+              <static>3</static>
+            </var>
+            <var name="$g">
+              <static>(x+2)^2+3</static>
+            </var>
+
+            <pg-code>
+              $h1 = Real(random(1, 9, 1));
+              $h2 = Real(random(-9, -1, 1));
+              $k1 = Real(random(-5, 5, 1));
+              $k2 = Real(random(-5, 5, 1));
+              $f = Compute("(x - $h1)^2 + $k1");
+              $g = Compute("(x - $h2)^2 + $k2");
+            </pg-code>
+          </setup>
+
+            <statement>
+              <ul>
+                <li><p>Write a formula for the parabola <m>f(x) = x^2</m> which has been shifted so its vertex is at the point <m>(<var name="$h1"/>, <var name="$k1"/>)</m>.</p>
+                    <p><m>y = </m><var name="$f" width="20" /></p></li>
+                <li><p>Write a formula for the parabola <m>f(x) = x^2</m> which has been shifted so its vertex is at the point <m>(<var name="$h2"/>, <var name="$k2"/>)</m>.</p>
+                    <p><m>y = </m><var name="$g" width="20" /></p></li>
+              </ul>
+            </statement>
+            <solution>
+              <p>The correct formulas are <m>y = <var name="$f"/></m> and <m>y = <var name="$g"/></m>.</p>
+            </solution>
+          </webwork>
+      </exercise>
+
+      <title>Gist of Vertical and Horizontal Translations</title>
+
+
     </conclusion>
 
 </chapter>
