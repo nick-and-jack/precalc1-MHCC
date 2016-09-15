@@ -58,7 +58,7 @@
         <p>And just like exponential functions have horizontal asymptotes as in <xref ref="figure-exponential-asymptote" />, logarithm functions have <em>vertical</em> asymptotes as in <xref ref="figure-logarithm-asymptote" />.</p> 
 
         <sidebyside widths="48% 48%">
-            <figure>
+            <figure xml:id="figure-exponential-asymptote">
                 <caption>Exponential function with horizontal asymptote <m>y = 0</m></caption>
                 <image>
                     <latex-image-code>
@@ -72,7 +72,7 @@
                     </latex-image-code>
                 </image>
             </figure>
-            <figure>
+            <figure xml:id="figure-logarithm-asymptote">
                 <caption>Logarithmic function with vertical asymptote <m>x = 0</m></caption>
                 <image>
                     <latex-image-code>
@@ -92,6 +92,158 @@
 
         <p>For every base of an exponential function there is a corresponding logarithm function. For instance <m>2^x</m> has <m>\log_2(x)</m> and <m>3^x</m> has <m>\log_3(x)</m> and <m>e^x</m> has <m>\ln(x)</m> which means <q>natural logarithm</q> and technically should be written as <m>\log_e(x)</m> <ellipsis />oh well.</p>
 
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <pg-macros>
+                        <macro-file>parserNumberWithUnits.pl</macro-file>
+                    </pg-macros>
+                    <var name="$chdrp">
+                        <static>21</static>
+                    </var>
+                    <var name="$hourlyrate">
+                        <static>18.94\,\percent/\text{hr}</static>
+                    </var>
+                    <var name="$halflife">
+                        <static>3.3\,\text{hr}</static>
+                    </var>
+                    <pg-code>
+                        $chdrp=random(11,31,1);
+                        if($envir{problemSeed}==1){$chdrp=21};
+                        $hourlyrate=NumberWithUnits((1-exp(-$chdrp/100))*100,'%/hr');
+                        $halflife=NumberWithUnits(ln(0.5)/-$chdrp*100,'hr');
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>A radioactive substance has a <em>continuous</em> hourly decay rate of <m><var name="$chdrp" />\%</m>.</p>
+                    <ol>
+                        <li><p>What is the percent hourly decay rate? <var name="$hourlyrate" width="20" /></p></li>
+                        <li><p>What is the half-life of the substance? <var name="$halflife" width="20" /></p></li>
+                    </ol>
+                </statement>
+                <!--<answer>
+                </answer>
+                <solution>
+                </solution>-->
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <pg-macros>
+                        <macro-file>parserNumberWithUnits.pl</macro-file>
+                    </pg-macros>
+                    <var name="$arp">
+                        <static>9</static>
+                    </var>
+                    <var name="$contrate">
+                        <static>8.618\,\percent/\text{yr}</static>
+                    </var>
+                    <var name="$triptime">
+                        <static>12.7482\,\text{yr}</static>
+                    </var>
+                    <pg-code>
+                        $arp=random(5,15,1);
+                        if($envir{problemSeed}==1){$arp=9};
+                        $contrate=NumberWithUnits(ln(1+$arp/100)*100,'%/yr');
+                        $triptime=NumberWithUnits(ln(3)/ln(1+$arp/100),'yr');
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>A population increases at an annual rate of about <m><var name="$arp" />\%</m>.</p>
+                    <ol>
+                        <li><p>What is the continuous annual growth rate? <var name="$contrate" width="20" /></p></li>
+                        <li><p>How long does it take for the population to triple in size?<var name="$triptime" width="20" /></p></li>
+                    </ol>
+                </statement>
+                <!--<answer>
+                </answer>
+                <solution>
+                </solution>-->
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <pg-macros>
+                        <macro-file>parserNumberWithUnits.pl</macro-file>
+                    </pg-macros>
+                    <var name="$doublingdays">
+                        <static>10</static>
+                    </var>
+                    <var name="$dgr">
+                        <static>7.177\,\percent/\text{day}</static>
+                    </var>
+                    <var name="$triptime">
+                        <static>15.85\,\text{day}</static>
+                    </var>
+                    <pg-code>
+                        $doublingdays=random(8,20,1);
+                        if($envir{problemSeed}==1){$doublingdays=10};
+                        $dgr=NumberWithUnits((2**(1/$doublingdays)-1)*100,'%/day');
+                        $triptime=NumberWithUnits($doublingdays*ln(3)/ln(2),'day');
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>A population of mosquitos doubles every <m><var name="$doublingdays" /></m> days.</p>
+                    <ol>
+                        <li><p>What is the daily percent growth of the population? <var name="$dgr" width="20" /></p></li>
+                        <li><p>How long does it take for the population to triple in size? <var name="$triptime" width="20" /></p></li>
+                    </ol>
+                </statement>
+                <!--<answer>
+                </answer>
+                <solution>
+                </solution>-->
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <pg-macros>
+                        <macro-file>parserNumberWithUnits.pl</macro-file>
+                    </pg-macros>
+                    <var name="$isotope">
+                        <static>\text{Magnesium-27}</static>
+                    </var>
+                    <var name="$halflifemin">
+                        <static>9.45</static>
+                    </var>
+                    <var name="$drpmp">
+                        <static>7.335\,\percent/\text{min}</static>
+                    </var>
+                    <var name="$target">
+                        <static>10</static>
+                    </var>
+                    <var name="$time">
+                        <static>30.23\,\text{min}</static>
+                    </var>
+                    <pg-code>
+                        %hl=('Magnesium-27'=>9.45,'Carbon-11'=>20.33,'Oxygen-15'=>2.04);
+                        $isotope=list_random(keys %hl);
+                        $target=random(5,30,5);
+                        if($envir{problemSeed}==1){$isotope='Magnesium-27';$target=10;};
+                        $halflifemin=$hl{$isotope};
+                        $drpmp=NumberWithUnits(ln(2)/$halflifemin*100,'%/min');
+                        $time=NumberWithUnits(ln($target/100)/ln(1-ln(2)/$halflifemin),'min');
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p><var name="$isotope"/> has a half-life of <var name="$halflifemin" /> minutes.</p>
+                    <ol>
+                        <li><p>What is the percent decay rate per minute? <var name="$drpmp" width="20" /></p></li>
+                        <li><p>How long will it take for any amount of <var name="$isotope"/> to decay to <m><var name="$target" />\%</m> of its original amount? <var name="$time" width="20" /></p></li>
+                    </ol>
+                </statement>
+                <!--<answer>
+                </answer>
+                <solution>
+                </solution>-->
+            </webwork>
+        </exercise>
     </conclusion>
 
 </chapter>
