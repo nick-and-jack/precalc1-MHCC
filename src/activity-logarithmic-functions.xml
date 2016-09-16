@@ -199,4 +199,223 @@
             </webwork>
         </exercise>
     </subsection>
+
+    <subsection>
+        <title>Logarithms as Language</title>
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>10</static>
+                    </var>
+                    <var name="$tabout[0]">
+                        <static>0.01</static>
+                    </var>
+                    <var name="$tabout[1]">
+                        <static>0.1</static>
+                    </var>
+                    <var name="$tabout[2]">
+                        <static>1</static>
+                    </var>
+                    <var name="$tabout[3]">
+                        <static>10</static>
+                    </var>
+                    <var name="$tabout[4]">
+                        <static>100</static>
+                    </var>
+                    <pg-code>
+                        $a=list_random(2,4,5,10,20);
+                        if($envir{problemSeed}==1){$a=10;};
+                        @tabout=map{$a**$_}(-2..2);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Use the equation <m>y=<var name="$a" />^x</m> to complete the table.</p>
+                    <table>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row>
+                                <cell><m>x</m></cell>
+                                <cell><m>y</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-2</m></cell>
+                                <cell><var name="$tabout[0]" width="10"/></cell>
+                            </row>
+                            <row>
+                                <cell><m>-1</m></cell>
+                                <cell><var name="$tabout[1]" width="10"/></cell>
+                            </row>
+                            <row>
+                                <cell><m>0</m></cell>
+                                <cell><var name="$tabout[2]" width="10"/></cell>
+                            </row>
+                            <row>
+                                <cell><m>1</m></cell>
+                                <cell><var name="$tabout[3]" width="10"/></cell>
+                            </row>
+                            <row>
+                                <cell><m>2</m></cell>
+                                <cell><var name="$tabout[4]" width="10"/></cell>
+                            </row>
+                        </tabular>
+                    </table>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>Notice that for each ordered pair, we could say <q><m>10</m> raised to the (input) power is (output)</q>. For instance, <m>10</m> raised to the <m>-1</m> power is <m>0.1</m>.</p> 
+
+        <p>In the following, our goal is to find the power of <m>10</m> that equals <m>36</m>. In other words, to solve the equation <m>10^x=36</m>. First we'll try a table-based approach.</p>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>10</static>
+                    </var>
+                    <var name="$b">
+                        <static>36</static>
+                    </var>
+                    <var name="$tabout[0]">
+                        <static>0.01</static>
+                    </var>
+                    <var name="$tabout[1]">
+                        <static>0.1</static>
+                    </var>
+                    <var name="$tabout[2]">
+                        <static>1</static>
+                    </var>
+                    <var name="$tabout[3]">
+                        <static>10</static>
+                    </var>
+                    <var name="$tabout[4]">
+                        <static>100</static>
+                    </var>
+                    <var name="$low">
+                        <static>10</static>
+                    </var>
+                    <var name="$high">
+                        <static>100</static>
+                    </var>
+                    <var name="$lowx">
+                        <static>1</static>
+                    </var>
+                    <var name="$highx">
+                        <static>2</static>
+                    </var>
+                    <pg-code>
+                        $a=list_random(2,4,5,10,20);
+                        $b=int($a**random(-1.7,1.8,0.5));
+                        if($envir{problemSeed}==1){$a=10;$b=36};
+                        @tabout=map{$a**$_}(-2..2);
+                        $lowx=Real(floor(ln($b)/ln($a)));
+                        $highx=$lowx+1;
+                        $low=$a**$lowx;
+                        $high=$a**$highx;
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>You wish to solve the equation <m><var name="$a"/>^x=<var name="$b"/></m>. To that end, you make the table:</p>
+                    <table>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row>
+                                <cell><m>x</m></cell>
+                                <cell><m><var name="$a"/>^x</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-2</m></cell>
+                                <cell><m><var name="$tabout[0]"/></m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-1</m></cell>
+                                <cell><m><var name="$tabout[1]"/></m></cell>
+                            </row>
+                            <row>
+                                <cell><m>0</m></cell>
+                                <cell><m><var name="$tabout[2]"/></m></cell>
+                            </row>
+                            <row>
+                                <cell><m>1</m></cell>
+                                <cell><m><var name="$tabout[3]"/></m></cell>
+                            </row>
+                            <row>
+                                <cell><m>2</m></cell>
+                                <cell><m><var name="$tabout[4]"/></m></cell>
+                            </row>
+                        </tabular>
+                    </table>
+                    <p><m>y=<var name="$b"/></m> is between what two outputs in the table?</p>
+                    <p><m><var name="$b"/></m> is between <var name="$low" width="15"/> and <var name="$high" width="15" />.</p> 
+                    <p>Therefore, <m>x</m> must be between <var name="$lowx" width="15"/> and <var name="$highx" width="15" />.</p> 
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>Now we'll try a graphical approach.</p>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>10</static>
+                    </var>
+                    <var name="$b">
+                        <static>36</static>
+                    </var>
+                    <var name="$answer">
+                        <static>1.556</static>
+                    </var>
+                    <var name="$c">
+                        <static>0.6</static>
+                    </var>
+                    <pg-code>
+                        $a=10;
+                        $b=list_random(18,25,32,49,56,67,73,89);
+                        $c=list_random(0.2,0.3,0.4,0.5,0.6,0.7,0.9);
+                        if($envir{problemSeed}==1){$b=36;$c=0.6;};
+                        $answer=Real(ln($b)/ln(10));
+                        $answer2=Real(ln($c)/ln(10));
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>You wish to solve the equation <m><var name="$a"/>^x=<var name="$b"/></m>. To that end, you examine the graph:</p>
+                    <todo>Make GeoGebra for this.</todo>
+                    <p>To three decimal places, what is the value of <m>x</m> that solves the equation <m><var name="$a"/>^x=<var name="$b"/></m>?</p>
+                    <p><m>x={}</m><var name="$answer" width="15"/></p>
+                    <p>Use the same method to solve <m><var name="$a"/>^x=<var name="$c"/></m>.</p>
+                    <p><m>x={}</m><var name="$answer2" width="15"/></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>What we see is that different powers of <m>10</m> give us different results. There is another way to say the same thing using <q>math language</q>.</p>
+
+        <table>
+            <tabular>
+                <col right="medium"/>
+                <col right="medium"/>
+                <col />
+                <row bottom="medium">
+                    <cell></cell>
+                    <cell>can be written in <q>math</q> as</cell>
+                    <cell>read as</cell>
+                </row>
+                <row>
+                    <cell>The power of <m>10</m> that gives you <m>36</m></cell>
+                    <cell><m>\log(36)</m></cell>
+                    <cell>log base 10 of 36</cell>
+                </row>
+                <row>
+                    <cell>The power of <m>10</m> that gives you <m>0.6</m></cell>
+                    <cell><m>\log(0.6)</m></cell>
+                    <cell>log base 10 of 0.6</cell>
+                </row>
+            </tabular>
+        </table>
+
+    </subsection>
 </section>
