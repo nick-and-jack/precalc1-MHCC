@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+
+<section xml:id="activity-logarithmic-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Logarithmic Functions Activity</title>
+
+    <subsection>
+        <title>Review</title>
+        <p>Remember that negative exponents mean <q>reciprocal</q> and fraction exponents mean <q>roots</q>. Check out this review in <url href="https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-negative-exponents/v/zero-negative-and-fractional-exponents">Khan Academy</url>.</p>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>2</static>
+                    </var>
+                    <var name="$bth">
+                        <static>3\text{rd}</static>
+                    </var>
+                    <var name="$answer" category="number">
+                        <static>8</static>
+                    </var>
+                    <pg-code>
+                        $a=random(2,4,1);
+                        do{$b=random(3,5,1)}until($a!=$b and $a**$b&lt;100);
+                        if($envir{problemSeed}==1){$a=2;$b=3;};
+                        %nth=(3=>'third',4=>'fourth',5=>'fifth');
+                        $bth=$nth{"$b"};
+                        $answer=$a**$b;
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Calculate <m><var name="$a" /></m> to the <var name="$bth" /> power.</p>
+                    <p><var name="$answer" width="15" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>2</static>
+                    </var>
+                    <var name="$b" category="number">
+                        <static>3</static>
+                    </var>
+                    <var name="$c">
+                        <static>8</static>
+                    </var>
+                    <pg-code>
+                        $a=random(2,4,1);
+                        do{$b=random(3,5,1)}until($a!=$b and $a**$b&lt;100);
+                        if($envir{problemSeed}==1){$a=2;$b=3;};
+                        $c=$a**$b;
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>What power of <m><var name="$a" /></m> gives you <m><var name="$c" /></m>?</p>
+                    <p><var name="$b" width="15" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>2</static>
+                    </var>
+                    <var name="$minusb" category="number">
+                        <static>-3</static>
+                    </var>
+                    <var name="$c">
+                        <static>8</static>
+                    </var>
+                    <pg-code>
+                        $a=random(2,4,1);
+                        do{$b=random(3,5,1)}until($a!=$b and $a**$b&lt;100);
+                        if($envir{problemSeed}==1){$a=2;$b=3;};
+                        $c=$a**$b;
+                        $minusb=-$b;
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>What power of <m><var name="$a" /></m> gives you <m>\frac{1}{<var name="$c" />}</m>?</p>
+                    <p><var name="$minusb" width="15" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>2</static>
+                    </var>
+                    <var name="$radical">
+                        <static>\sqrt{2}</static>
+                    </var>
+                    <var name="$answer" category="number">
+                        <static>\frac{1}{2}</static>
+                    </var>
+                    <pg-code>
+                        $a=list_random(2,3,5,6,7,10);
+                        if($envir{problemSeed}==1){$a=2;};
+                        Context()->flags->set(reduceConstantFunctions=>0);
+                        $radical=Formula("sqrt($a)");
+                        Context()->flags->set(reduceConstants=>0);
+                        $answer=Formula("1/2");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>What power of <m><var name="$a" /></m> gives you <m><var name="$radical" /></m>?</p>
+                    <p><var name="$answer" width="15" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>2</static>
+                    </var>
+                    <var name="$radical">
+                        <static>\sqrt{2}</static>
+                    </var>
+                    <var name="$answer" category="number">
+                        <static>-\frac{1}{2}</static>
+                    </var>
+                    <pg-code>
+                        $a=list_random(2,3,5,6,7,10);
+                        if($envir{problemSeed}==1){$a=2;};
+                        Context()->flags->set(reduceConstantFunctions=>0);
+                        $radical=Formula("sqrt($a)");
+                        Context()->flags->set(reduceConstants=>0);
+                        $answer=Formula("-(1/2)");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>What power of <m><var name="$a" /></m> gives you <m>\frac{1}{<var name="$radical" />}</m>?</p>
+                    <p><var name="$answer" width="15" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>2</static>
+                    </var>
+                    <var name="$answer" category="number">
+                        <static>0</static>
+                    </var>
+                    <pg-code>
+                        $a=list_random(2,3,5,6,7,10);
+                        if($envir{problemSeed}==1){$a=2;};
+                        $answer=Real(0);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>What power of <m><var name="$a" /></m> gives you <m>1</m>?</p>
+                    <p><var name="$answer" width="15" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$a">
+                        <static>2</static>
+                    </var>
+                    <var name="$answer" category="number">
+                        <static>\text{DNE}</static>
+                    </var>
+                    <pg-code>
+                        $a=list_random(2,3,5,6,7,10);
+                        if($envir{problemSeed}==1){$a=2;};
+                        $answer=Compute("DNE");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>What power of <m><var name="$a" /></m> gives you <m>0</m>?</p>
+                    <p><var name="$answer" width="15" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+    </subsection>
+</section>
