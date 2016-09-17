@@ -397,7 +397,7 @@
         <table>
             <tabular>
                 <col right="medium"/>
-                <col right="medium"/>
+                <col right="medium" halign="center"/>
                 <col />
                 <row bottom="medium">
                     <cell></cell>
@@ -417,5 +417,269 @@
             </tabular>
         </table>
 
+        <p>For example, <m>\log(100)</m> means <q>The power of <m>10</m> that gives you <m>100</m>.</q></p>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$b">
+                        <static>2</static>
+                    </var>
+                    <var name="$c">
+                        <static>100</static>
+                    </var>
+                    <pg-code>
+                        Context("LimitedNumeric");
+                        $b=random(1,4,1);
+                        if($envir{problemSeed}==1){$b=2};
+                        $c=10**$b;
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>What is <m>\log(<var name="$c"/>)</m>? <var name="$b" width="15" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>The math word <term>log</term> is short for <term>logarithm</term>. It means <q>log base <m>10</m></q> whereas <m>\log_b</m> means <q>log base <m>b</m></q>. Since <m>\log</m> is base <m>10</m> (powers of <m>10</m>) we technically should write <m>\log_{10}</m>, but the <q><m>10</m></q> is left out for convenience.</p>
+
+        <p>Another often used logarithm is base <m>e</m>. It's called the <term>natural logarithm</term> and is written <m>\ln</m>. Again, technically we should write <m>\log_e</m>, but we write <m>\ln</m> for conveneience.</p>
+
+        <p>All other logarithms are written in standard format. The base, <m>b</m>, indicates what number is being multiplied over and over. So if <m>2</m> is the base, we write <m>\log_2</m> which indicates powers of <m>2</m>.</p>
+
+        <exercise>
+            <webwork seed="1">
+                <pg-macros>
+                    <macro-file>PGchoicemacros.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <var name="$b[0]">
+                        <static>2</static>
+                    </var>
+                    <var name="$c[0]">
+                        <static>10</static>
+                    </var>
+                    <var name="$b[1]">
+                        <static>3</static>
+                    </var>
+                    <var name="$c[1]">
+                        <static>10</static>
+                    </var>
+                    <var name="$b[2]">
+                        <static>7</static>
+                    </var>
+                    <var name="$c[2]">
+                        <static>10</static>
+                    </var>
+                    <var name="$b[3]">
+                        <static>10</static>
+                    </var>
+                    <var name="$c[3]">
+                        <static>7</static>
+                    </var>
+                    <var name="$log">
+                        <static>\log</static>
+                    </var>
+                    <pg-code>
+                        do{@b=map{$_+2}NchooseK(7,4);
+                        @c=map{floor($_**random(1.9,6.5,0.2))}@b;
+                        }until($c[0]&lt;100 and $c[1]&lt;100 and $c[2]&lt;100 and $c[3]&lt;100);
+                        if($envir{problemSeed}==1){$b[0]=2;$c[0]=10;$b[1]=3;$c[1]=10;$b[2]=7;$c[2]=10;$b[3]=10;$c[3]=7;};
+                        Context()->strings->add(log=>{});
+                        Context()->strings->add(logarithm=>{alias=>'log'});
+                        $log=String('log');
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>How would you say each expression below using logarithms?</p>
+                    <ol>
+                        <li><p>The power of <var name="$b[0]"/> that gives you <var name="$c[0]"/></p>
+                            <p><var name="$log" width="3"/> base <var name="$b[0]" width="1"/> of <var name="$c[0]" width="2"/></p></li>
+                        <li><p>The power of <var name="$b[1]"/> that gives you <var name="$c[1]"/></p>
+                            <p><var name="$log" width="3"/> base <var name="$b[1]" width="1"/> of <var name="$c[1]" width="2"/></p></li>
+                        <li><p>The power of <var name="$b[2]"/> that gives you <var name="$c[2]"/></p>
+                            <p><var name="$log" width="3"/> base <var name="$b[2]" width="1"/> of <var name="$c[2]" width="2"/></p></li>
+                        <li><p>The power of <var name="$b[3]"/> that gives you <var name="$c[3]"/></p>
+                            <p><var name="$log" width="3"/> base <var name="$b[3]" width="1"/> of <var name="$c[3]" width="2"/></p></li>
+                    </ol>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <pg-macros>
+                    <macro-file>PGchoicemacros.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <var name="$c[0]">
+                        <static>23</static>
+                    </var>
+                    <var name="$c[1]">
+                        <static>42</static>
+                    </var>
+                    <var name="$c[2]">
+                        <static>17</static>
+                    </var>
+                    <var name="$c[3]">
+                        <static>100</static>
+                    </var>
+                    <var name="$answer[0]">
+                        <static>\log(23)</static>
+                    </var>
+                    <var name="$answer[1]">
+                        <static>\log(42)</static>
+                    </var>
+                    <var name="$answer[2]">
+                        <static>\ln(17)</static>
+                    </var>
+                    <var name="$answer[3]">
+                        <static>\ln(100)</static>
+                    </var>
+                    <pg-code>
+                        Parser::Number::NoDecimals();
+                        @c=map{$_+11}NchooseK(88,4);
+                        if($envir{problemSeed}==1){@c=(23,42,17,100)};
+                        Context()->flags->set(reduceConstantFunctions=>0);
+                        $answer[0]=Formula("log($c[0])");
+                        $answer[1]=Formula("log($c[1])");
+                        $answer[2]=Formula("ln($c[2])");
+                        $answer[3]=Formula("ln($c[3])");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Using math notation, how would you write each expression below?</p>
+                    <ol>
+                        <li><p>The power of <m>10</m> that gives you <m><var name="$c[0]"/></m></p>
+                            <p><var name="$answer[0]" width="15" /></p></li>
+                        <li><p>The power of <m>10</m> that gives you <m><var name="$c[1]"/></m></p>
+                            <p><var name="$answer[1]" width="15" /></p></li>
+                        <li><p>The power of <m>e</m> that gives you <m><var name="$c[2]"/></m></p>
+                            <p><var name="$answer[2]" width="15" /></p></li>
+                        <li><p>The power of <m>e</m> that gives you <m><var name="$c[3]"/></m></p>
+                            <p><var name="$answer[3]" width="15" /></p></li>
+                    </ol>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <pg-macros>
+                    <macro-file>PGchoicemacros.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <var name="$b[0]">
+                        <static>3</static>
+                    </var>
+                    <var name="$c[0]">
+                        <static>9</static>
+                    </var>
+                    <var name="$b[1]">
+                        <static>5</static>
+                    </var>
+                    <var name="$c[1]">
+                        <static>\frac{1}{25}</static>
+                    </var>
+                    <pg-code>
+                        @b=map{$_+2}NchooseK(7,2);
+                        $c[0]=$b[0]**random(2,4,1);
+                        Context("Fraction");
+                        $c[1]=Fraction(1,$b[1]**random(2,4,1));
+                        if($envir{problemSeed}==1){$b[0]=3;$c[0]=9;$b[1]=5;$c[1]=Fraction(1,25);};
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Translate each math expression below into its meaning in English.</p>
+                    <ol>
+                        <li><p><m>\log_{<var name="$b[0]" />}<var name="$c[0]" /></m></p>
+                            <p>The power of <var name="$b[0]" width="1"/> that gives you <var name="$c[0]" width="2"/>.</p></li>
+                        <li><p><m>\log_{<var name="$b[1]" />}<var name="$c[1]" /></m></p>
+                            <p>The power of <var name="$b[1]" width="1"/> that gives you <var name="$c[1]" width="2"/>.</p></li>
+                    </ol>
+                </statement>
+            </webwork>
+        </exercise>
+    </subsection>
+
+    <subsection>
+        <title>Logarithms by Intuition</title>
+        <p>In this portion of the activity we learn to estimate the value of a given logarithm expression.</p>
+        <exercise>
+            <webwork seed="1">
+                <pg-macros>
+                    <macro-file>PGchoicemacros.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <var name="$c[0]">
+                        <static>120</static>
+                    </var>
+                    <var name="$c[1]">
+                        <static>15</static>
+                    </var>
+                    <var name="$c[2]">
+                        <static>18</static>
+                    </var>
+                    <var name="$c[3]">
+                        <static>0.7</static>
+                    </var>
+                    <var name="$b[1]">
+                        <static>5</static>
+                    </var>
+                    <var name="$b[2]">
+                        <static>2</static>
+                    </var>
+                    <var name="$b[3]">
+                        <static>2</static>
+                    </var>
+                    <var name="$low[0]">
+                        <static>2</static>
+                    </var>
+                    <var name="$low[1]">
+                        <static>1</static>
+                    </var>
+                    <var name="$low[2]">
+                        <static>4</static>
+                    </var>
+                    <var name="$low[3]">
+                        <static>-1</static>
+                    </var>
+                    <var name="$high[0]">
+                        <static>3</static>
+                    </var>
+                    <var name="$high[1]">
+                        <static>2</static>
+                    </var>
+                    <var name="$high[2]">
+                        <static>5</static>
+                    </var>
+                    <var name="$high[3]">
+                        <static>0</static>
+                    </var>
+                    <pg-code>
+                        $b[0]=10;
+                        $c[0]=floor(10**random(1.5,3.5,0.2));
+                        for my $i(1,2,3){$b[$i]=random(2,9,1);};
+                        for my $i(1,2) {do{$c[$i]=floor($b[$i]**random(0.5,4.5,0.2));}until($c[$i]&lt;100)};
+                        $c[3]=int(10*$b[3]**random(-1.9,-0.3,0.2))/10;
+                        if($envir{problemSeed}==1){@b=(10,5,2,2);@c=(120,15,18,0.7)};
+                        for my $i(0..3){$low[$i]=floor(ln($c[$i])/ln($b[$i]));$high[$i]=$low[$i]+1;};
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>For each logarithm expression below, estimate the result with an integer that is just below and an integer that is just above the result. For example, <m>\log(36)</m> is between <m>1</m> and <m>2</m> because <m>36</m> is between <m>10^1</m> and <m>10^2</m>.</p>
+                    <ol>
+                        <li><p><m>\log(<var name="$c[0]" />)</m> is between <var name="$low[0]" width="2" /> and <var name="$high[0]" width="2" />.</p></li>
+                        <li><p><m>\log_{<var name="$b[1]" />}(<var name="$c[1]" />)</m> is between <var name="$low[1]" width="2" /> and <var name="$high[1]" width="2" />.</p></li>
+                        <li><p><m>\log_{<var name="$b[2]" />}(<var name="$c[2]" />)</m> is between <var name="$low[2]" width="2" /> and <var name="$high[2]" width="2" />.</p></li>
+                        <li><p><m>\log_{<var name="$b[3]" />}(<var name="$c[3]" />)</m> is between <var name="$low[3]" width="2" /> and <var name="$high[3]" width="2" />.</p></li>
+                    </ol>
+                </statement>
+            </webwork>
+        </exercise>
+    </subsection>
+
+    <subsection>
+        <title>Domain of the Log Function</title>
     </subsection>
 </section>
