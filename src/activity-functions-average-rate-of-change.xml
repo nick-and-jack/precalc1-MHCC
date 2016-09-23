@@ -40,7 +40,7 @@
 			<statement>
 			<p>The graph below shows the position of three trains at various times</p>
 
-			<!-- Insert the graph of three lines with varying steepness as in first graph of Maple ACT01 function notation -->
+			<p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TBRTfRbt/width/431/height/313/border/888888" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
 			<p>Which of the three trains is traveling a the fastest speed?</p>
 			</statement>
@@ -113,17 +113,24 @@
           <title>Interpreting a Transformation</title>
           	<statement>
           		<p>The interactive graph below is that of a function <m>D = f(t)</m> where <em>D</em> is the number of miles a train is from downtown at <m>t</m> hours after 8 am</p>
-          		<p>As the time changes along the horizontal axis the result is the changing position of the train measured on the vertical axis.  The key word here is <q>change</q></p>
-          	</statement>
-          <webwork xml:id="change-in-function">
-            <setup>
-              <var name="$Vchange">
-                <static>16</static>
-              </var>
-              <pg-code>
-                Context('Numeric');
-                $Vchange = Real(16);
-              </pg-code>
+			</statement>
+
+			<webwork xml:id="change-in-function">
+          
+	            <statement>
+	          		<p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/gWxmhsGB/width/431/height/313/border/888888" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+	          		<p>As the time changes along the horizontal axis the result is the changing position of the train measured on the vertical axis.  The key word here is <q>change</q></p>
+	          	</statement>
+          	
+          	<setup>
+	            <var name="$Vchange">
+		            <static>16</static>
+	            </var>
+	            <pg-code>
+		            Context('Numeric');
+		            $Vchange = Real(16);
+	            </pg-code>
             </setup>
             <statement>
               <ol>
