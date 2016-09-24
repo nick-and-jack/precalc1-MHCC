@@ -103,21 +103,21 @@
 
         <p>The math <q>sentence</q> above is actually an equation and it uses <term>function notation</term> to express the information about the train. Of course, the equation is meaningless unless the reader knows how the notation is defined.  If you know Spanish or <q>math</q> you can <em>interpret</em> the meaning of something you read in those languages into English.  There will be much interpretation in this class.</p>
 
-            <p>In math we use variables and symbols to replace entire words or even entire sentences. For instance, instead of <q>Train's distance in miles from downtown</q> we can use the variable <m>D</m>. Instead of the <q>number of hours after 8 <init>a.m.</init></q>, we can use the variable <m>t</m>.</p>
+        <p>In math we use variables and symbols to replace entire words or even entire sentences. For instance, instead of <q>Train's distance in miles from downtown</q> we can use the variable <m>D</m>. Instead of the <q>number of hours after 8 <init>a.m.</init></q>, we can use the variable <m>t</m>.</p>
 
-            <p>We call the letters <m>D</m> and <m>t</m> variables because they represent values that can change.  Typically we use variables that have something to do with the context of the problem, but sometimes we generalize an expression or equation with <m>x</m>'s and <m>y</m>'s when we have nothing specific in mind.</p>
+        <p>We call the letters <m>D</m> and <m>t</m> variables because they represent values that can change.  Typically we use variables that have something to do with the context of the problem, but sometimes we generalize an expression or equation with <m>x</m>'s and <m>y</m>'s when we have nothing specific in mind.</p>
 
-            <p>If the variables represent actual things or events we must define the varialbles to include the units we used to measure the event. </p>
+        <p>If the variables represent actual things or events we must define the varialbles to include the units we used to measure the event. </p>
 
             <blockquote>If <m>D</m> is distance you must define the units in which the distance is measured: miles, inches, centimeters, light years<ellipsis />what? </blockquote>
 
             <blockquote>If <m>t</m> is time, will it be measured with units of seconds, hours<ellipsis />years?</blockquote>
 
-            <p>Since the position of the train depends on the amount of time that has passed, we say <q>the distance depends on time</q>.  In fact, the distance of the train from downtown is a <term>function of time</term>.</p>
+        <p>Since the position of the train depends on the amount of time that has passed, we say <q>the distance depends on time</q>.  In fact, the distance of the train from downtown is a <term>function of time</term>.</p>
 
-            <p>Function notation allows us to communicate that distance is a function of time by simply writing <m>D = f(t)</m> [say, <q><m>D</m> equals <m>f</m> of <m>t</m></q>].  Don't confuse the notation with multiplication!  <m>f(t)</m> does <alert>not</alert> mean <m>f</m> times <m>t</m>.</p>
+        <p>Function notation allows us to communicate that distance is a function of time by simply writing <m>D = f(t)</m> [say, <q><m>D</m> equals <m>f</m> of <m>t</m></q>].  Don't confuse the notation with multiplication!  <m>f(t)</m> does <alert>not</alert> mean <m>f</m> times <m>t</m>.</p>
 
-
+<!-- For some reason the items in this question do not vertically align.  The three questions appear on the same line instead of each question on its own line. -->
         <exercise>
             <webwork>
                 <setup>
@@ -163,7 +163,6 @@
                         <li><m>f(x)</m> <var name="$f" form="popup" /></li>
                     </ol>
                 </statement>
-
             </webwork>
         </exercise>
 
@@ -199,6 +198,8 @@
             <statement>
                 <p>The graph below is a function that illustrates a train's distance from downtown, in miles,  as a function of time in hours after 8 a.m.  When using a graph the best you can do is estimate. Since <m>f(0)</m> represents a distance at 8 <init>a.m.</init>, we can use the graph to find what the distance is.</p>
 
+<!-- It would be nice to ask the student to enter more points in function notation form.  If a point is place correctly -->
+
                 <p>Move the point onto <m>(0,f(0))</m>.</p>
 
                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/P6uUYQqH/width/402/height/499/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="402px" height="499px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
@@ -207,10 +208,323 @@
             </statement>
 
             </webwork>
+<!-- The questions 6,7,8 from Maple activity act01_function.mw need to be inserted here.  Need to know how to write a question that accepts math text as an input. -->
         </exercise>
 
+        <p>Here is another example to further explore the use function notation.</p>
 
+        <p>Let  <m>V = f(A)</m> be a function in which the input is area of a house measured in square feet and the output is the value of the house in dollars.</p>
+
+        <p>Consider the equation <m>f(900) = 209,700</m>.  The notation gives us information about the house.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$squarefeet">
+                        <static>900</static>
+                    </var>
+                    <var name="$sqft" category="set">
+                        <set>
+                             <member>\text{square inches}</member>
+                             <member>\text{dollars}</member>
+                             <member>\text{square feet}</member>
+                             <member>\text{cubic yards}</member>
+                        </set>
+                    </var>
+
+                    <pg-code>
+                        $squarefeet= Real(900);
+                        $sqft = PopUp(["?", "square inches", "dollars", "square feet", "cubic yards"], "square feet");
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>Given <m>f(900) = 209,700</m></p>
+                    <p>What is the area of the house?</p>
+
+                    <p><var name="$squarefeet" width="5" /> <var name="$sqft" form="popup" /></p>
+                </statement>
+            
+                <setup>
+                    <var name="$HouseValue">
+                        <static>209700</static>
+                    </var>
+                    <var name="$units" category="set">
+                        <set>
+                             <member>\text{cents}</member>
+                             <member>\text{turtles}</member>
+                             <member>\text{yen}</member>
+                             <member>\text{dollars}</member>
+                        </set>
+                    </var>
+
+                    <pg-code>
+                        $HouseValue= Real(209700);
+                        $units = PopUp(["?", "cents", "turtles", "yen", "dollars"], "dollars");
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>What is the value of the house?</p>
+
+                    <p><var name="$HouseValue" width="5" /> <var name="$units" form="popup" /></p>
+                </statement>                            
+                        <setup>
+                            <var name="$meaning" category="set">
+                                <set>
+                                     <member>\text{900 houses have 209,700 dollars}</member>
+                                     <member>\text{A 900 dollar house is 209,700 sq. feet}</member>
+                                     <member>\text{A 900 sq. ft. house has a value of 209,700 dollars}</member>
+                                     <member>\text{Multiply the sq. ft. by 900 to get the value of 209,700 dollars}</member>
+                                </set>
+                            </var>
+        
+                            <pg-code>
+                                $meaning = PopUp(["?", "900 houses have 209,700 dollars", "A 900 dollar house is 209,700 sq. feet", "A 900 sq. ft. house has a value of 209,700 dollars", "Multiply the sq. ft. by 900 to get the value of 209,700 dollars"], "A 900 sq. ft. house has a value of 209,700 dollars");
+                            </pg-code>
+                        </setup>
+            <statement>
+                <p>Interpret the meaning of the equation <m>f(900) = 209,700</m> in English.</p>
+
+                <p><var name="$meaning" form="popup" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>Its one thing to talk about, <q>The train's distance from downtown 2 hours after 8 a.m.</q> and a completely different thing to say what that distance actually is.</p>
+
+        <p>In our train story <m>f(2)</m> represents the train's distance 2 hours after 8 a.m. To actually find the distance we must evaluate the funtion.</p>  
+
+        <p><term>Evaluate</term> a function means to find the value of the output given an input value.  Therefore, evaluate <m>f(2)</m> in our example means <q>Find the train's distance from downtown 2 hours after 8 a.m.</q></p>
+
+        <p>Typically we use graphs, tables or formulas to evaluate funtions.</p>
+
+        <!-- If entering into an existing WeBWork question, delete the <exercise> and <webwork> tags and leave only the <setup></setup> -->
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$dist">
+                        <static>40</static>
+                    </var>
+                    <var name="$miles" category="set">
+                        <set>
+                             <member>\text{feet}</member>
+                             <member>\text{miles}</member>
+                             <member>\text{light years}</member>
+                             <member>\text{meters}</member>
+                        </set>
+                    </var>
+
+                    <pg-code>
+                        $dist= Real(40);
+                        $miles = PopUp(["?", "feet", "miles", "light years", "meters"], "miles");
+                    </pg-code>
+                </setup>
+
+<!-- Within a WeBWork exercise insert this code after 
+                        <setup>
+                        </setup>
+                    and before the </webwork> closes    
+                 -->
+                <statement>
+                    <p>Remember in a vertical table the inputs are found in the left column (independent variable) while outputs are found in the right column (dependent variable)</p>
+                    <table>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row>
+                                <cell><m>t</m> (hours after 8 a.m.)</cell>
+                                <cell><m>D = f(t)</m> (miles from downtown)</cell>
+                            </row>
+                            <row>
+                                <cell><m>0</m></cell>
+                                <cell><m>10</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>0.5</m></cell>
+                                <cell><m>12</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>1.5</m></cell>
+                                <cell><m>20</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>2.5</m></cell>
+                                <cell><m>40</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>3.0</m></cell>
+                                <cell><m>46</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>3.5</m></cell>
+                                <cell><m>47</m></cell>
+                            </row>
+                        </tabular>
+                    </table>
+                </statement>
+
+                <statement>
+                    <p>Use the table to evaluate <m>f(2.5)</m></p>
+
+                    <p><m>f(2.5)= </m><var name="$dist" width="5" /> <var name="$miles" form="popup" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>In general, when the inputs and outputs are nothing in particular, we use <m>x</m> as input and <m>y</m> as output so that <m>y = f(x)</m>.  We use <q>x</q> as symbol to hold a spot for the actual input value while <m>y</m> is a spot holder for whatever the output value will be.  The x basically says, <q>When you get the input, put it here</q> in all the places where the x is.</p>
+
+        <p>Consider this function <m>f(x) = 50x + 10</m>.  The function has no context (no story) so there are no units associated with either <m>x</m> or <m>y</m>.</p>
+
+        <p>If <m>x = 1</m> then we can evaluate <m>f(1)</m>  by replacing the <q>x</q> in the formula with a 1.  Literally, <m>f(1)</m> means, <q>the formua with a 1 in it</q>.</p>
+
+                <!-- If entering into an existing WeBWork question, delete the <exercise> and <webwork> tags and leave only the <setup></setup> -->
+                <exercise>
+                    <webwork>
+                        <setup>
+                            <var name="$output1">
+                                <static>10</static>
+                            </var>
+                            
+                            <pg-code>
+                                $output1 = Real(10);
+                            </pg-code>
+                        </setup>
+        
+                        <statement>
+                            <p>Let <m>f(x) = 50x + 10</m>.  Evaluate the expressions below:</p>
+        
+                            <p><m>f(0) = </m> <var name="$output1" width="5" /></p>
+                        </statement>
+                
+                        <!-- If entering into an existing WeBWork question, delete the <exercise> and <webwork> tags and leave only the <setup></setup> -->
+                        
+                        <setup>
+                            <var name="$output2">
+                                <static>110</static>
+                            </var>
+                            
+                            <pg-code>
+                                $output2 = Real(110);
+                            </pg-code>
+                        </setup>
+        
+                        <statement>
+                            <p><m>f(2) = </m> <var name="$output2" width="5" /></p>
+                        </statement>
+                        <!-- If entering into an existing WeBWork question, delete the <exercise> and <webwork> tags and leave only the <setup></setup> -->
+                        
+                        <setup>
+                            <var name="$output3">
+                                <static>-5</static>
+                            </var>
+                            
+                            <pg-code>
+                                $output3 = Real(-5);
+                            </pg-code>
+                        </setup>
+        
+                        <statement>
+                            <p>Even if the formula changes, we still replace all the x's in the formula with the given input value.  Try this new funtion <m>f(x) = \frac{x^2+1}{x-5}</m></p>
+        
+                            <p><m>f(-8) =</m> <var name="$output3" width="5" /></p>
+                        </statement>
+
+                        <setup>
+                            <var name="$output4">
+                                <static>-17</static>
+                            </var>
+                            
+                            <pg-code>
+                                $output4 = Real(-17);
+                            </pg-code>
+                        </setup>
+        
+                        <statement>
+                            <p><m>f(4) =</m> <var name="$output4" width="5" /></p>
+                        </statement>
+                    </webwork>
+                </exercise>
+        
+        <p>According to Wikipedia, a function has the following definition:</p>
+        <p><q>In mathematics, a function is a relation between a set of inputs and a set of permissible outputs with the property that each input is related to exactly one output.</q></p>
+
+        <p>If you actually read the entire Wikipedia entry you will find the definition of a function can be quite lengthy in order to cover all the universe of mathematics.  In this activity we are going to keep the language simple, informal and we will use some analogies from our train story as examples.
+        </p>
+        
+        <p>Remebmer this: One input, one output.</p>
+
+        <p>A function is a rule that takes a piece of "usable" information that you pick and gives you some kind of result.  By <q>usable</q> we mean information that has meaning for the function.  In our train story the only usable information we can choose are times between 0 and 7 hours after 8 a.m. (inclusive).  We have no information about times less than 0 or greater than 7.
+        </p>
+
+        <p>The most important part is that for each input the function gives you only one result, and each individual input always gives the same single result.</p>
+
+        <p>For instance, for the train fuction <m>D = f(t)</m> at any given time like t = 2 the train can only be in one place.  That's the only result.  It's not possible for the train to be in two or more places (results) at the same time.</p>
+
+                    <!-- If entering into an existing WeBWork question, delete the <exercise> and <webwork> tags and leave only the <setup></setup> -->
+                    <!-- example from vertical-and-horizonatl-translations.xml -->
+                    <exercise>
+                          <title>Decide if each situation is possible given the function f(x) as a formula</title>
+                          <webwork xml:id="one-input-one-output">
+                            <setup>
+                              <var name="$situation1">
+                                <set>
+                                    <member>\text{no}</member>
+                                    <member correct="yes">\text{yes}</member>
+                                </set>
+                              </var>
+                              <pg-code>
+                                Context('Numeric');
+                                $situation1 = RadioButtons(
+                                  ["yes","no"],
+                                  1, labels => ["yes","no"],
+                                  displayLabels => 0
+                                );
+                              </pg-code>
+                            </setup>
+
+                            <statement>
+                              <p>Is it possible that <m>f(3)=10</m> and <m>f(3) = 17</m>?</p>
+                              <p><var name="$situation1" form="buttons" /></p>
+                            </statement>
+
+                            <solution>
+                                <p>Is it possible that <m>f(3)=10</m> and <m>f(3) = 17</m>?</p>
+                              <p>The correct answer is <var name="$situation1" />. It is not possible for the same input to yield two different results.</p>
+                            </solution>
+
+                            <setup>
+                              <var name="$situation2">
+                                <set>
+                                    <member correct="yes">\text{yes}</member>
+                                    <member>\text{no}</member>
+                                </set>
+                              </var>
+                              <pg-code>
+                                Context('Numeric');
+                                $situation2 = RadioButtons(
+                                  ["yes","no"],
+                                  0, labels => ["yes","no"],
+                                  displayLabels => 0
+                                );
+                              </pg-code>
+                            </setup>
+
+                            <statement>
+                              <p>Is it possible that <m>f(3)=10</m> and <m>f(8) = 10</m>?</p>
+                              <p><var name="$situation2" form="buttons" /></p>
+                            </statement>
+
+                            <solution>
+                            <p>Is it possible that <m>f(3)=10</m> and <m>f(8) = 10</m>?</p>
+                              <p>The correct answer is <var name="$situation2" />. It is possible for the same two different inputs to yield the same result.  The only thing that matters is that each input gives only one result and the same input yields the same output.</p>
+                            </solution>
+<!-- The graph below needs to have an intro needs to address the vertical line test.  One more graph is needed. -->
+                          <statement>  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/R3ztgr5p/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p></statement>
+                          </webwork>
+                        </exercise>
+              
+       
 
     </subsection>
-
 </section>
