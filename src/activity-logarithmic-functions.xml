@@ -766,10 +766,10 @@
 
         <exercise>
             <webwork seed="1">
+                <pg-macros>
+                    <macro-file>contextInequalitySetBuilder.pl</macro-file>
+                </pg-macros>
                 <setup>
-                    <pg-macros>
-                        <macro-file>contextInequalitySetBuilder.pl</macro-file>
-                    </pg-macros>
                     <var name="$domain">
                         <static>(0,\infty)</static>
                     </var>
@@ -797,10 +797,10 @@
 
             <exercise>
                 <webwork seed="1">
+                    <pg-macros>
+                        <macro-file>bizarroArithmetic.pl</macro-file>
+                    </pg-macros>
                     <setup>
-                        <pg-macros>
-                            <macro-file>bizarroArithmetic.pl</macro-file>
-                        </pg-macros>
                         <var name="$b">
                             <static>2</static>
                         </var>
@@ -933,10 +933,10 @@
 
             <exercise>
                 <webwork>
+                    <pg-macros>
+                        <macro-file>contextLimitedRadical.pl</macro-file>
+                    </pg-macros>
                     <setup>
-                        <pg-macros>
-                            <macro-file>contextLimitedRadical.pl</macro-file>
-                        </pg-macros>
                         <var name="$answer">
                             <static>4\log(8)</static>
                         </var>
