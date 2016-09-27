@@ -600,6 +600,7 @@
                 </statement>
             </webwork>
         </exercise>
+
     </subsection>
 
     <subsection>
@@ -681,5 +682,303 @@
 
     <subsection>
         <title>Domain of the Log Function</title>
+        <p>Here is a graph of <m>y=\log_2(x)</m>. Zoom in and out some, and move the graph up, down, left, and right. This is all to explore the graph and give you a fell for it.</p>
+        <todo>Insert GeoGebra here. Possibly rework with the above line into a captioned figure or something.</todo>
+        <p>Try to evaluate <m>\log(-100)</m> on your calculator. What value does your caluclator return? Your calculator should read <q>error</q> or <q>quit</q> or something indicating it cannot be done. To understand why this is true, write out the meaning of <m>\log(-100)</m> in English.</p>
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$c">
+                        <static>-100</static>
+                    </var>
+                    <var name="$b">
+                        <static>10</static>
+                    </var>
+                    <pg-code>
+                        $b=10;
+                        $c=-$b**random(-2,4,1);
+                        if($envir{problemSeed}==1){$c=-100;};
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Translate the math expression below into what it would mean in English (even if the statement ultimately makes no sense).</p>
+                    <p><m>\log(<var name="$c" />)</m></p>
+                    <p>The power of <var name="$b" width="1"/> that gives you <var name="$c" width="2"/>.</p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>If you have a bunch of positive <m>10</m>s then how many do you have to multiply to get a <em>negative</em> <m>100</m>? In fact, you <em>can't</em> get a negative result if you only have positive <m>10</m>s! You would need at least one negative <m>10</m> and you don't have any.</p>
+
+        <p>Try to evaluate <m>\log(0)</m> on your calculator. What value does your caluclator return? Your calculator should read <q>error</q> or <q>quit</q> or something indicating it cannot be done. To understand why this is true, write out the meaning of <m>\log(0)</m> in English.</p>
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$c">
+                        <static>0</static>
+                    </var>
+                    <var name="$b">
+                        <static>10</static>
+                    </var>
+                    <pg-code>
+                        $b=10;
+                        $c=-$b**random(-2,4,1);
+                        if($envir{problemSeed}==1){$c=0;};
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Translate the math expression below into what it would mean in English (even if the statement ultimately makes no sense).</p>
+                    <p><m>\log(<var name="$c" />)</m></p>
+                    <p>The power of <var name="$b" width="1"/> that gives you <var name="$c" width="2"/>.</p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>If you have a bunch of positive <m>10</m>s then how many do you have to multiply to get <m>0</m> as a result? In fact, you <em>can't</em> get <m>0</m> as the result if you only have positive <m>10</m>s! You would need at least one negative <m>0</m> and you don't have any.</p>
+
+        <p>It turns out that the <m>\log</m> function (with any base) is <em>not defined for values that are less than or equal to <m>0</m></em>. Therefore the domain of the <m>\log</m> function (with any base) is <em>only positive numbers</em> (you can't use negatives or zero.</p>
+
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$b">
+                        <static>b</static>
+                    </var>
+                    <var name="$x">
+                        <static>x</static>
+                    </var>
+                    <var name="$y">
+                        <static>y</static>
+                    </var>
+                    <pg-code>
+                        Context()->variables->are(x=>'Real',y=>'Real',b=>'Real');
+                        $b=Formula("b");
+                        $x=Formula("x");
+                        $y=Formula("y");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p><m>\log_b(x)=y</m> means:</p>
+                    <p>The power of <var name="$b" width="1"/> that gives you <var name="$x" width="2"/> is <var name="$y" width="2"/>.</p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork seed="1">
+                <pg-macros>
+                    <macro-file>contextInequalitySetBuilder.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <var name="$domain">
+                        <static>(0,\infty)</static>
+                    </var>
+                    <pg-code>
+                        Context("InequalitySetBuilder");
+                        $domain=Compute("(0,inf)");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The domain of the <m>\log_b(x)</m> function (with any base <m>b</m>) is <var name="$domain" width="20" />. </p>
+                </statement>
+            </webwork>
+        </exercise>
+    </subsection>
+
+    <subsection>
+        <title>Properties of Logarithms (how we use logs to solve equations)</title>
+
+        <p>In order for this part of the activity to make sense, you have to remember what a <term>base</term> and an <term>expoenent</term> is. Remember that in the expression <m>b^x</m>, that <m>b</m> is the <term>base</term> and <m>x</m> is the exponent. The exponent literally counts how many times you multiplied the base. For instance <m>b^7</m> means <m>\overbrace{b\cdot b\cdot b\cdot b\cdot b\cdot b\cdot b}^{7\text{ times}}</m>.</p>
+
+        <subsubsection>
+            <title>Big Rule About Logs <hash />1</title>
+
+            <p>We start with a very simple rule for exponents: <m>x^a\cdot x^b=x^{a+b}</m>. When you multiply numbers of the same base you add the exponents.</p>
+
+            <exercise>
+                <webwork seed="1">
+                    <pg-macros>
+                        <macro-file>bizarroArithmetic.pl</macro-file>
+                    </pg-macros>
+                    <setup>
+                        <var name="$b">
+                            <static>2</static>
+                        </var>
+                        <var name="$x">
+                            <static>3</static>
+                        </var>
+                        <var name="$y">
+                            <static>4</static>
+                        </var>
+                        <var name="$z">
+                            <static>7</static>
+                        </var>
+                        <var name="$bx">
+                            <static>8</static>
+                        </var>
+                        <var name="$by">
+                            <static>16</static>
+                        </var>
+                        <var name="$bz">
+                            <static>128</static>
+                        </var>
+                        <var name="$N">
+                            <static>2^7</static>
+                        </var>
+                        <pg-code>
+                            Context()->operators->set(
+                                '**' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+                                '^' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+                            );
+                            $b = random(2,5,1);
+                            $x = random(2,5,1);
+                            do{$y=random(2,5,1)} until($x!=$y);
+                            if($envir{problemSeed}==1){$b=2;$x=3;$y=4;};
+                            $z=$x+$y;
+                            Context()->flags->set(reduceConstants=>0);
+                            $N=Formula("$b^$z");
+                            $evaluator=$N->cmp(checker=>sub{
+                                my($c,$s,$aH)=@_;
+                                return 0 if $aH->{isPreview}||$c!=$s;
+                                $s=$aH->{student_formula};
+                                $c=$c->{original_formula} if defined $c->{original_formula};
+                                $s= Formula("$s");$c=Formula("$c");
+                                return 0 unless ($c==$s);
+                                Context()->flags->set(bizarroPow=>1);
+                                delete $c->{test_values}, $s->{test_values};
+                                my $OK = (($c==$s) or ($s==$c));
+                                Context()->flags->set(bizarroPow=>0);
+                                Value::Error("This is the right number, but right now you are being asked to write it in a certain exponential form.") unless $OK;
+                                return $OK;
+                            }); 
+                            Context("LimitedNumeric");
+                            $bx=Real($b**$x);
+                            $by=Real($b**$y);
+                            $bz=Real($b**$z);
+                        </pg-code>
+                    </setup>
+                    <statement>
+                        <p>What is <m>N</m> if <m>N=<var name="$b" />^<var name="$x" />\cdot <var name="$b" />^<var name="$y" /></m>?</p>
+                        <p><m>N=</m><var name="$N" evaluator="$evaluator" width="10" />.</p>
+                        <p>Check that this is valid by using a calculator to find:</p>
+                        <p><m><var name="$b" />^<var name="$x" />=</m><var name="$bx" width="10" /></p>
+                        <p><m><var name="$b" />^<var name="$y" />=</m><var name="$by" width="10" /></p>
+                        <p><m><var name="$b" />^<var name="$z" />=</m><var name="$bz" width="10" /></p>
+                        <p>and checking that the first two multiply to the third.</p> 
+                        
+                    </statement>
+                </webwork>
+            </exercise>
+            <p>Now let's take some obvious information that you already concluded above to discover a not-so-obvious property of logarithms.</p>
+
+            <p>Start with the simple equation <me>8\cdot16=128\text{.}</me>Apply the <m>\log_2(\phantom{x})</m> funciton to both sides of the equation to get <me>\log_2(8\cdot16)=\log_2(128)\text{.}</me> Notice on the right side we already know the answer.</p>
+            <exercise>
+                <webwork seed="1">
+                    <setup>
+                        <var name="$seven">
+                            <static>7</static>
+                        </var>
+                        <pg-code>
+                            $seven=7;
+                        </pg-code>
+                    </setup>
+                    <statement>
+                        <p>What power of <m>2</m> gives you <m>128</m>?</p>
+                        <p><var name="$seven" width="15" /></p>
+                    </statement>
+                </webwork>
+            </exercise>
+
+            <p>Now you can write the equation as <me>\log_2(8\cdot16)=7\text{.}</me></p>
+
+            <p>Check this out on the left side of the equation:<ul>
+                <li>There are <m>3</m> factors of <m>2</m> in <m>8</m>. That's why <m>\log_2(8)=3</m>.</li>
+                <li>There are <m>4</m> factors of <m>2</m> in <m>16</m>. That's why <m>\log_2(8)=4</m>.</li>
+            </ul>Since <m>3+4=7</m>, then we know that <me>\log_2(8)+\log_2(16)=7\text{.}</me></p>
+
+            <p><em>What???</em></p>
+
+            <p>Yes, you just discovered that <me>\log_2(8\cdot16)=\log_2(8)+\log_2(16)\text{.}</me> In fact it does not matter what the base is.</p>
+
+            <exercise>
+                <webwork seed="1">
+                    <setup>
+                        <var name="$log128">
+                            <static>2.107</static>
+                        </var>
+                        <pg-code>
+                            $log128=ln(128)/ln(10);
+                            Context("LimitedNumeric");
+                            $log128=Real($log128);
+                        </pg-code>
+                    </setup>
+                    <statement>
+                        <p>Use your calculator to find log base <m>10</m> of <m>128</m>:</p>
+                        <p><m>\log(128)=</m><var name="$log128" width="15" /></p>
+                        <p>Since <m>128=8\cdot16</m>, you can also use your calculator to find <m>\log(8)+\log(16)</m>:</p>
+                        <p><m>\log(8)+\log(16)=</m><var name="$log128" width="15" /></p>
+                    </statement>
+                </webwork>
+            </exercise>
+
+            <p>In general, <em>for any base</em>, <me>\log_b(A\cdot B)=\log_b(A)+\log_b(B)\text{.}</me> Remember this rule! Put it on a note card for your next exam.</p>
+
+        </subsubsection>
+
+        <subsubsection>
+            <title>Big Rule About Logs <hash />2</title>
+            <p>Again, let's start with something obvious. You already know that instead of writing <m>8+8+8+8</m> you could just write <m>4\cdot8</m>. Maybe you never thought about it, but multiplication is just repeated addition. It's a shortcut way to write the same thing over and over. On the other hand, exponents are just repeated multiplication. Exponents are a shortcut way to write the same thing <em>multiplied</em> over and over.</p>
+
+            <p>Consider the expression <m>\log(8\cdot8\cdot8\cdot8)</m>. We can use some shortcuts to write the expression in at least two different ways.<me>\log(8\cdot8\cdot8\cdot8)=\log\mathopen{}\left(8^4\right)\mathclose{}</me> and <me>\log(8\cdot8\cdot8\cdot8)=\log(8)+\log(8)+\log(8)+\log(8)\text{.}</me> This last equation is using Big Rule <hash />1.</p>
+
+            <exercise>
+                <webwork>
+                    <pg-macros>
+                        <macro-file>contextLimitedRadical.pl</macro-file>
+                    </pg-macros>
+                    <setup>
+                        <var name="$answer">
+                            <static>4\log(8)</static>
+                        </var>
+                        <pg-code>
+                            Context("LimitedRadical");
+                            $answer=Formula("4*log(8)");
+                        </pg-code>
+                    </setup>
+                    <statement>
+                        <p>Instead of writing the same term added over and over, rewrite <m>\log(8)+\log(8)+\log(8)+\log(8)</m> using multiplication:</p>
+                        <p><m>\log(8)+\log(8)+\log(8)+\log(8)=</m><var name="$answer" width="10" /></p>
+                    </statement>
+                </webwork>
+            </exercise>
+
+            <p>So here is the big finale:</p>
+
+            <exercise>
+                <webwork>
+                    <setup>
+                        <var name="$c">
+                            <static>4</static>
+                        </var>
+                        <var name="$N">
+                            <static>N</static>
+                        </var>
+                        <pg-code>
+                            $c=4;
+                            Context()->variables->add(N=>'Real');
+                            $N=Formula("N");
+                        </pg-code>
+                    </setup>
+                    <statement>
+                        <p><m>\log(8^4)=</m><var name="$c" width="2" /><m>{}\cdot\log(8)</m></p>
+                        <p><m>\log(x^N)=</m><var name="$N" width="2" /><m>{}\cdot\log(x)</m></p>
+                    </statement>
+                </webwork>
+            </exercise>
+
+            <p>Watch these examples of how these rules are used to solve problems:</p>
+            <todo>Original Maple has links to some screencast.com videos that are 404</todo>
+
+        </subsubsection>
     </subsection>
 </section>
