@@ -15,18 +15,31 @@
 
     <title>Functions: Definition and Notation</title>
     <introduction>
-        <paragraphs>
+        <list>
             <title>Prerequisite Skills</title>
-            <p>Typically students need some reivew on the topics below.</p>
+            <introduction>
+                <p>Typically students need some reivew on the topics below.</p>
+            </introduction>
             <ul>
-                <li><p><url href="https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-slope-intercept-form/e/slope-intercept-equation-from-graph">Equation of a line.</url></p></li>
-                <li><p><url href="https://www.khanacademy.org/math/algebra-basics/core-algebra-graphing-lines-slope/core-algebra-graphing-slope-intercept/e/graph-from-slope-intercept-equation">Graphing the equation of a line.</url></p></li>
-                <li><p><url href="https://www.khanacademy.org/math/algebra/solving-linear-equations-and-inequalities/solving_for_variable/e/solving_for_a_variable">Solving linear equations.</url></p></li>
-                <li><p><url href="https://www.khanacademy.org/math/algebra2/rational-expressions/solving-rational-equations/e/linear_equations_4">Solving equations with fractions (rational equations).</url></p></li>
-                <li><p><url href="https://www.khanacademy.org/math/algebra/linear_inequalities/compound_absolute_value_inequali/e/compound_inequalities">Compound Inequalities.</url></p></li>
+                <li>
+                    <p><url href="https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-slope-intercept-form/e/slope-intercept-equation-from-graph">Equation of a line.</url></p>
+                </li>
+                <li>
+                    <p><url href="https://www.khanacademy.org/math/algebra-basics/core-algebra-graphing-lines-slope/core-algebra-graphing-slope-intercept/e/graph-from-slope-intercept-equation">Graphing the equation of a line.</url></p>
+                </li>
+                <li>
+                    <p><url href="https://www.khanacademy.org/math/algebra/solving-linear-equations-and-inequalities/solving_for_variable/e/solving_for_a_variable">Solving linear equations.</url></p>
+                </li>
+                <li>
+                    <p><url href="https://www.khanacademy.org/math/algebra2/rational-expressions/solving-rational-equations/e/linear_equations_4">Solving equations with fractions (rational equations).</url></p>
+                </li>
+                <li>
+                    <p><url href="https://www.khanacademy.org/math/algebra/linear_inequalities/compound_absolute_value_inequali/e/compound_inequalities">Compound Inequalities.</url></p>
+                </li>
             </ul>
-        </paragraphs>
-        <paragraphs>
+        </list>
+
+        <list>
             <title>Student Learning Outcomes</title>
             <ul>
                 <li><p>Identify a function, like from a table of values, a graph or an equation.</p></li>
@@ -37,21 +50,22 @@
                 <li><p>Determine the intervals over which a function is increasing or decreasing or constant based on a numerical, graphical or algebraic model.</p></li>
                 <li><p>Demonstrate appropriate use of inequality notation and interval notation.</p></li>
             </ul>
-        </paragraphs>
+        </list>
     </introduction>
 
     <xi:include href="./activity-functions-function-notation.xml" />
+
     <xi:include href="./activity-functions-average-rate-of-change.xml" />
 
     <conclusion>
-    <p>A <term>function</term> is a rule that may be in the form of a graph, or a table of values or a formula.  It may even be a sentence or a set of instructions.  A function takes an input value and uses the rule to create an output value.</p>
+        <p>A <term>function</term> is a rule that may be in the form of a graph, or a table of values or a formula.  It may even be a sentence or a set of instructions.  A function takes an input value and uses the rule to create an output value.</p>
 
-    <p>Function notation looks like this: <m>f(\text{input})=\text{output}</m></p>
+        <p>Function notation looks like this: <m>f(\text{input})=\text{output}</m></p>
 
-    <p>But, instead of writing the words <q>input</q> and <q>output</q> we usually use variables, like x and y. Then we define in words what the variables actually mean or represent.  Most often the notation will look something like this: <m>f(x)=y</m>
+        <p>But, instead of writing the words <q>input</q> and <q>output</q> we usually use variables, like x and y. Then we define in words what the variables actually mean or represent.  Most often the notation will look something like this: <m>f(x)=y</m>
 </p>
 
-    <p>Inside the parentheses is the <term>Independent Variable</term>, like <m>x</m>, and outside the parentheses, on the other side of the equals sign, is the <term>Dependent Variable</term>, like <m>y</m>.</p>
+        <p>Inside the parentheses is the <term>Independent Variable</term>, like <m>x</m>, and outside the parentheses, on the other side of the equals sign, is the <term>Dependent Variable</term>, like <m>y</m>.</p>
 
 <!--
 Add a few webwork problems here for the terms "function", "independent variable" and "dependent variable".
@@ -68,204 +82,234 @@ Add a few webwork problems here for the terms "function", "independent variable"
             Options: The tree has been growing for 2 years and is now 60 feet tall, The tree has been growing for 60 months and is now 2 feet tall, The tree has been growing for 2 years and is now 60 inches tall, The tree has been growing for 2 months and is now 60 inches tall.
 -->
 
-<exercise>
-    <title>Using Function Notation</title>
-    <webwork xml:id="webwork-function-notation-circle">
-        <setup>
-          <var name="$notation">
-            <set>
-                <member>f(\text{radius}) = \text{area}</member>
-                <member correct="yes">f(\text{area}) = \text{radius}</member>
-                <member>\text{None of these}</member>
-            </set>
-          </var>
-          <var name="$dependentVariable">
-             <set>
-                <member>\text{Radius}</member>
-                <member>\text{Area}</member>
-                <member>\text{None of these}</member>
-             </set>
-          </var>
-          <var name="$interpretation">
-             <set>
-                <member>100 \text{ft}</member>
-                <member>100 \text{ft}^2</member>
-                <member>100 \text{ft}^3</member>
-             </set>
-          </var>
-            <pg-code>
-              Context('Numeric');
-              $notation = RadioButtons(
-                ["\(f(\)radius\()={}\)area","\(f(\)area\() ={}\)radius", "None of these"],
-                1, labels => ["f(radius)=area","f(area)=radius","None of these"],
-                displayLabels => 0
-              );
-              $dependentVariable = RadioButtons(
-                ["Radius","Area", "None of these"],
-                1, labels => ["Radius","Area","None of these"],
-                displayLabels => 0
-              );
-              $interpretation = RadioButtons(
-                ["\(5.64\) ft", "\(5.64\) ft\(^2\)", "\(5.64\) ft\(^3\)"],
-                0, labels => ["5.64 ft", "5.64 ft^2", "5.64 ft^3"],
-                displayLabels => 0
-              );
-            </pg-code>
-        </setup>
-        <statement>
-          <p>Suppose <m>f</m> is the rule that takes the area of a circle as its input and then outputs the radius of the circle.</p>
-            <ol>
-              <li>
-                <p>What is the correct way to write this rule in function notation? <var name="$notation" form="buttons"/></p>
-              </li>
-              <li>
-                <p>Which is the dependent variable? <var name="$dependentVariable" form="buttons"/></p>
-              </li>
-              <li>
-                <p>In the equation <m>f(100) \approx 5.64</m>, what is a possible meaning for the number 5.64?<var name="$interpretation" form="buttons"/></p>
-              </li>
-            </ol>
+        <exercise>
+            <title>Using Function Notation</title>
+            <webwork xml:id="webwork-function-notation-circle">
+                <setup>
+                <var name="$notation">
+                    <set>
+                        <member>f(\text{radius}) = \text{area}</member>
+                        <member correct="yes">f(\text{area}) = \text{radius}</member>
+                        <member>\text{None of these}</member>
+                    </set>
+                </var>
+                <var name="$dependentVariable">
+                    <set>
+                        <member>\text{Radius}</member>
+                        <member>\text{Area}</member>
+                        <member>\text{None of these}</member>
+                    </set>
+                </var>
+                <var name="$interpretation">
+                    <set>
+                        <member>5.64 \mathrm{ft}</member>
+                        <member>5.64 \mathrm{ft}^2</member>
+                        <member>5.64 \mathrm{ft}^3</member>
+                    </set>
+                </var>
+                    <pg-code>
+                    Context('Numeric');
+                    $notation = RadioButtons(
+                        ["\(f(\text{radius})=\text{area}\)","\(f(\text{area})=\text{radius}\)", "None of these"],
+                        1, labels => ["f(radius)=area","f(area)=radius","None of these"],
+                        displayLabels => 0
+                    );
+                    $dependentVariable = RadioButtons(
+                        ["Radius","Area", "None of these"],
+                        1, labels => ["Radius","Area","None of these"],
+                        displayLabels => 0
+                    );
+                    $interpretation = RadioButtons(
+                        ["\(5.64 \mathrm{ft}\)", "\(5.64 \mathrm{ft}^2\)", "\(5.64 \mathrm{ft}^3\)"],
+                        0, labels => ["5.64 ft", "5.64 ft^2", "5.64 ft^3"],
+                        displayLabels => 0
+                    );
+                    </pg-code>
+                </setup>
+                <statement>
+                <p>Suppose <m>f</m> is the rule that takes the area of a circle as its input and then outputs the radius of the circle.</p>
+                    <ol>
+                        <li>
+                            <p>What is the correct way to write this rule in function notation? <var name="$notation" form="buttons"/></p>
+                        </li>
+                        <li>
+                            <p>Which is the dependent variable? <var name="$dependentVariable" form="buttons"/></p>
+                        </li>
+                        <li>
+                            <p>In the equation <m>f(100) \approx 5.64</m>, what is a possible meaning for the number <m>5.64</m>?<var name="$interpretation" form="buttons"/></p>
+                        </li>
+                    </ol>
+                </statement>
+                <solution>
+                    <ol>
+                        <li>
+                            <p>The correct answer is <var name="$notation" />. We were told that the function takes the area as the input, so the area must be in the parentheses.</p>
+                        </li>
+                        <li>
+                            <p>The correct answer is <var name="$dependentVariable" />. This function uses the area of the circle as the input, and the radius depends on the area.</p>
+                        </li>
+                        <li>
+                            <p>The correct answer is <var name="$interpretation" />. The number <m>5.64</m> was the output of the function which is the radius of the circle. The radius of a circle must have a length unit.</p>
+                        </li>
+                    </ol>
+                </solution>
+            </webwork>
+        </exercise>
 
-        </statement>
-        <solution>
-          <p>The correct answer is <var name="$notation" />. We were told that the function takes the area as the input, so the area must be in the parentheses.</p>
-          <p>The correct answer is <var name="$dependentVariable" />. This function uses the area of the circle as the input, and the radius depends on the area.</p>
-          <p>The correct answer is <var name="$interpretation" />. The number 5.64 was the output of the function which is the radius of the circle. The radius of a circle must have a length unit.</p>
-        </solution>
-    </webwork>
-</exercise>
+        <exercise>
+            <title>Function Notation Application</title>
+            <webwork xml:id="webwork-function-birch-tree">
+                <setup>
+                    <var name="$height">
+                        <static>78</static>
+                    </var>
+                    <var name="$units">
+                        <set>
+                            <member correct="yes">\text{Inches}</member>
+                            <member>\text{Years}</member>
+                            <member>\text{None of these}</member>
+                        </set>
+                    </var>
+                    <var name="$timeunits">
+                        <set>
+                            <member>\text{Months}</member>
+                            <member correct="yes">\text{Years}</member>
+                            <member>\text{None of these}</member>
+                        </set>
+                    </var>
+                    <var name="$heightunits">
+                        <set>
+                            <member>\text{Inches}</member>
+                            <member correct="yes">\text{Feet}</member>
+                            <member>\text{None of these}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $height=Real(78);
+                        $units=PopUp(["?","Inches","Years","None of these"],"Inches");
+                        $age=2;
+                        $timeunits=PopUp(["?","Months","Years","None of these"],"Years");
+                        $height2=60;
+                        $heightunits=PopUp(["?","Inches","Feet","None of these"],"Feet");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The function <m>h(y) = 24 + 18y</m> would find the height (in inches) of a Paper Birch tree which is <m>24</m> inches tall when it is planted, and grows by <m>18</m> inches per year. The independent variable <m>y</m> is the number of years after it is planted.</p>
+                    <ol>
+                        <li>
+                            <p>What is the value of <m>h(3)</m>, including the correct units?</p>
+                            <p>h(3) = <var name="$height" width="3" /> <var name="$units" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p>For the equation <m>h(2) = 60</m>, choose the correct interpretation.</p>
+                            <p>The tree was planted <var name="$age" width="5" /> <var name="$timeunits" form="popup" /> ago and is now <var name="$height2" width="5" /> <var name="$heightunits" form="popup" /> tall.</p>
+                        </li>
+                    </ol>
+                </statement>
+                <solution>
+                    <ol>
+                        <li>
+                            <p>The correct answer is: h(3) = <var name="$height" /> <var name="$units"/>.</p>
+                        </li>
+                        <li>
+                            <p>The tree was planted <var name="$age" /> <var name="$timeunits" /> ago and is now <var name="$height2" /> <var name="$heightunits" /> tall.</p>
+                        </li>
+                    </ol>
+                </solution>
+            </webwork>
+        </exercise>
 
-<exercise>
-    <title>Function Notation Application</title>
-    <webwork xml:id="webwork-function-birch-tree">
-    <setup>
-      <var name="$height">
-        <static>78</static>
-      </var>
-      <var name="$units">
-          <set>
-              <member>Inches</member>
-              <member>Years</member>
-              <member>None of these</member>
-          </set>
-      </var>
-      <var name="$interpretation">
-          <set>
-              <member>The tree was planted 2 years ago and is now 60 feet tall.</member>
-              <member>The tree was planted 60 months ago and is now 2 feet tall.</member>
-              <member>The tree was planted 2 years ago and is now 60 inches tall.</member>
-              <member>The tree was planted 2 months ago and is now 60 inches tall.</member>
-          </set>
-      </var>
-        <pg-code>
-            $height = Real(78);
-            $interpretation = PopUp(["?","The tree was planted 2 years ago and is now 60 feet tall.","The tree was planted 60 months ago and is now 2 feet tall.","The tree was planted 2 years ago and is now 60 inches tall.","The tree was planted 2 months ago and is now 60 inches tall."],"The tree was planted 2 years ago and is now 60 inches tall.");
-            $units = PopUp(["?", "Inches", "Years", "None of these"], "Inches");
-        </pg-code>
-    </setup>
+        <example>
+            <p>Let <m>E</m> be the fuel efficiency, in miles per gallon, of a car traveling at <m>s</m> miles per hour. For speeds between <m>5</m> and <m>75</m> miles per hour, the function in <xref ref="speed-vs-efficiency"/> tells us the efficiency of the car.</p>
 
-    <statement>
-        <p>The function <m>h(y) = 24 + 18y</m> would find the height (in inches) of a Paper Birch tree which is <m>24</m> inches tall when it is planted, and grows by 18 inches per year. The independent variable <m>y</m> is the number of years after it is planted.</p>
-        <ol>
-          <li>
-            <p>What is the value of <m>h(3)</m>, including the correct units?</p>
-            <p>h(3) = <var name="$height" width="3" /> <var name="$units" form="popup" /></p>
-          </li>
-          <li>
-            <p>For the equation <m>h(2) = 60</m>, choose the correct interpretation.</p>
-            <p><var name="$interpretation" form="popup" /></p>
-          </li>
-        </ol>
-    </statement>
+            <figure xml:id="speed-vs-efficiency">
+                <caption>Fuel Economy versus Speed</caption>
+                <image>
+                    <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[xmin=-5,ymin=0, ymax=35, xlabel={Speed (mph)}, ylabel={Fuel Economy (mpg)}, xtick={10,20,...,70}, minor xtick={-5,0,...,75}, ytick={0,10,...,30}, minor ytick={0,5,...,35}, xmin=5, xmax=75,]
+                        \addplot+[smooth,->] coordinates {(5, 11) (10, 19) (15, 24) (20, 26.5) (25, 28) (30,29) (35, 29.5) (40, 30) (55, 30.5) (65,26.5) (70, 25) (75, 24)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </figure>
 
-    <solution>
-        <p>The correct answer is: h(3) = <var name="$height" /> <var name="$units"/>.</p>
-        <p>The correct answer is: <var name="$interpretation"/></p>
-    </solution>
-  </webwork>
-</exercise>
+            <p>Therefore, the <em>efficiency is a function of the speed</em>. Using function notation we could write an equation saying the same thing: <m>E=f(s)</m></p>
 
-    <example>
-        <p>Let <m>E</m> be the fuel efficiency, in miles per gallon, of a car traveling at <m>s</m> miles per hour. For speeds between 5 and 75 miles per hour, the function in <xref ref="speed-vs-efficiency"/> tells us the efficiency of the car.</p>
+            <p>The input is the speed, <m>s</m>, and the output is the efficiency, <m>E</m>.</p>
 
-        <figure xml:id="speed-vs-efficiency">
-            <caption>Fuel Economy versus Speed</caption>
-            <image>
-                <latex-image-code>
-                    <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-5,ymin=0, ymax=35, xlabel={Speed (mph)}, ylabel={Fuel Economy (mpg)}, xtick={10,20,...,70}, minor xtick={-5,0,...,75}, ytick={0,10,...,30}, minor ytick={0,5,...,35}, xmin=5, xmax=75,]
-                    \addplot+[smooth,->] coordinates {(5, 11) (10, 19) (15, 24) (20, 26.5) (25, 28) (30,29) (35, 29.5) (40, 30) (55, 30.5) (65,26.5) (70, 25) (75, 24)};
-                    \end{axis}
-                    \end{tikzpicture}]]>
-                </latex-image-code>
-            </image>
-        </figure>
+            <p>The efficiency of the car is given by the height of the graph.  Therefore <m>f(35) = 28</m> means, <q>The efficiency of the car traveling at <quantity><mag>35</mag><unit base="mileperhour"/></quantity> is <quantity><mag>28</mag><unit base="milepergallon" /></quantity></q>.</p>
+        </example>
 
-        <p>Therefore, the <em>efficiency is a function of the speed</em>. Using function notation we could write an equation saying the same thing: <m>E=f(s)</m></p>
+        <paragraphs>
+            <title>Inputs have unique outputs</title>
+            <p>An important property of functions is that any single input value can only have one output value. For instance, the car can only have one efficiency at a given speed. The car cannot get <quantity><mag>10</mag><unit base="milepergallon" /></quantity> and <quantity><mag>20</mag><unit base="milepergallon" /></quantity> simultaneously.</p>
 
-        <p>The input is the speed, <m>s</m>, and the output is the efficiency, <m>E</m>.</p>
-
-        <p>The efficiency of the car is given by the height of the graph.  Therefore <m>f(35) = 28</m> means, <q>The efficiency of the car traveling at <quantity><mag>35</mag><unit base="mileperhour"/></quantity> is 28 mpg</q>.</p>
-    </example>
-
-    <paragraphs>
-        <title>Inputs have unique outputs</title>
-        <p>An important property of functions is that any single input value can only have one output value. For instance, the car can only have one efficiency at a given speed. The car cannot get 10 mpg and 20 mpg simultaneously.</p>
 <!--    Note: This could be the case if the car was driven in different gears, or if it was driven up-hill vs. down-hill. Is this important to point out?
 -->
-        <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of 25 mpg can be attained by traveling at a speed of about <quantity><mag>20</mag><unit base="mileperhour"/></quantity> and also at about <quantity><mag>70</mag><unit base="mileperhour"/></quantity>.</p>
-    </paragraphs>
+            <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of <quantity><mag>25</mag><unit base="milepergallon" /></quantity> can be attained by traveling at a speed of about <quantity><mag>20</mag><unit base="mileperhour"/></quantity> and also at about <quantity><mag>70</mag><unit base="mileperhour"/></quantity>.</p>
+        </paragraphs>
 
-    <exercise>
-        <title>Well Defined</title>
-        <webwork xml:id="webwork-well-defined">
-          <setup>
-            <var name="$choice">
-              <set>
-                  <member>f(3) = 5 \text{and} f(10) = 5</member>
-                  <member correct="yes">f(3) = 5 \text{and} f(3) = 7</member>
-                  <member>\text{None of these}</member>
-              </set>
-            </var>
-            <pg-code>
-              Context('Numeric');
-              $choice = RadioButtons(
-                ["\(f(3) = 5\) and \(f(10) = 5\)","\(f(3) = 5\) and \(f(3) = 7\)", "None of these"],
-                0, labels => ["f(3) = 5 and f(10) = 5","f(3) = 5 and f(3) = 7","None of these"],
-                displayLabels => 0
-              );
-            </pg-code>
-          </setup>
-          <statement>
-            <p>Suppose <m>f</m> is a function. Which of the following situations are possible?</p>
-            <p><var name="$choice" form="buttons" /></p>
-          </statement>
-          <solution>
-            <p>The correct answer is <var name="$choice" />. A function cannot have the same input value giving two different output values. However, it may have two different input values giving the same output value.</p>
-          </solution>
-        </webwork>
-    </exercise>
--->
-    <paragraphs>
-        <title>Describing functions with intervals</title>
+        <exercise>
+            <title>Well-Defined</title>
+            <webwork xml:id="webwork-well-defined">
+                <setup>
+                    <var name="$choice">
+                        <set>
+                            <member>f(3) = 5 \text{ and } f(10) = 5</member>
+                            <member correct="yes">f(3) = 5 \text{ and } f(3) = 7</member>
+                            <member>\text{None of these}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $choice = RadioButtons(
+                            ["\(f(3) = 5\) and \(f(10) = 5\)","\(f(3) = 5\) and \(f(3) = 7\)", "None of these"],
+                            0, labels => ["f(3) = 5 and f(10) = 5","f(3) = 5 and f(3) = 7","None of these"],
+                            displayLabels => 0
+                        );
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Suppose <m>f</m> is a function. Which of the following situations are possible?</p>
+                    <p><var name="$choice" form="buttons" /></p>
+                </statement>
+                <solution>
+                    <p>The correct answer is <var name="$choice" />. A function cannot have the same input value giving two different output values. However, it may have two different input values giving the same output value.</p>
+                </solution>
+            </webwork>
+        </exercise>
+
+        <paragraphs>
+            <title>Describing functions with intervals</title>
             <p>A function may have many different characteristics: Its output values may increase or decrease, its graph may curve up or curve down, it may have positive outputs or negative outputs. When describing these characteristics for a function, we typically refer to an <term>interval</term> (connected part) of the input axis, or a particular value of the input where something interesting occurs.</p>
+
             <p>Using our efficiency example, the fuel efficiency increases (goes up) between <quantity><mag>5</mag></quantity> and <quantity><mag>55</mag><unit base="mileperhour"/></quantity> then decreases (goes down) for speeds between <quantity><mag>55</mag></quantity> and <quantity><mag>75</mag><unit base="mileperhour"/></quantity>. Also, the efficiency is lowest at about <quantity><mag>5</mag><unit base="mileperhour"/></quantity> and highest at about <quantity><mag>55</mag><unit base="mileperhour"/></quantity>. </p>
+
             <p>Any connected portion of the horizontal (speed) axis or the vertical (efficiency) axis is called an <term>interval</term>.  It is important to be able to correctly describe an interval.</p>
+
             <p>We could use an <term>inequality</term> to describe the interval where the efficiency function is increasing: <m>5\lt s\lt55</m>.  This means that as the car's speed changes from <quantity><mag>5</mag></quantity> to <quantity><mag>55</mag><unit base="mileperhour"/></quantity>, the efficiency is increasing.</p>
+
             <p>Another characteristic we can describe with inequalities is the <term>concavity</term> of a function. We say a function is <term>concave up</term> if its graph curves upward from left to right, and that it is <term>concave down</term> if it curves downward from left to right. We can see that the efficiency graph is:</p>
 
             <ul>
-                <li><p>concave down for <m>5\lt s\lt60</m>.</p></li>
-                <li><p>concave up for <m>60\lt s\lt75</m>.</p></li>
+                <li>
+                    <p>concave down for <m>5\lt s\lt60</m>.</p>
+                </li>
+                <li>
+                    <p>concave up for <m>60\lt s\lt75</m>.</p>
+                </li>
             </ul>
-    </paragraphs>
+        </paragraphs>
 
-    <paragraphs>
-        <title>Evaluating vs. Solving.</title>
+        <paragraphs>
+            <title>Evaluating versus Solving.</title>
+            <p>The word <term>Evaluate</term> means to use a known input value to find the output value. Evaluating a function looks like this:<me>f(25)</me>It means, <q>Find the result of choosing <quantity><mag>25</mag><unit base="mileperhour"/></quantity></q> as the input. The expression <m>f(25)</m> represents the output <m>27</m>, which we can see from the graph.</p>
 
-        <p>The word <term>Evaluate</term> means to use a known input value to find the output value. Evaluating a function looks like this:<me>f(25)</me>It means, <q>Find the result of choosing <quantity><mag>25</mag><unit base="mileperhour"/></quantity></q> as the input. The expression <m>f(25)</m> represents the output <m>27</m>, which we can see from the graph.</p>
-        <p><term>Solve</term> means the output is already known and we are trying to find all the possible inputs that give us that output. These input values are called <term>solutions</term> of the equation. For instance, we may be asked to <me>\text{Solve }f(s)=25</me>This means that we are to find all input values (solutions) that would give us the output <m>25</m>.</p>
-        <p>Using the graph of the efficiency function, we see that the equation <m>f(s)=25</m> has two solutions:  <m>s = 20</m> and <m>s = 70</m>.</p>
+            <p><term>Solve</term> means the output is already known and we are trying to find all the possible inputs that give us that output. These input values are called <term>solutions</term> of the equation. For instance, we may be asked to <me>\text{Solve }f(s)=25\text{.}</me>This means that we are to find all input values (solutions) that would give us the output <m>25</m>.</p>
+
+            <p>Using the graph of the efficiency function, we see that the equation <m>f(s)=25</m> has two solutions:  <m>s = 20</m> and <m>s = 70</m>.</p>
+
 <!--
 Add a webwork problem for these key terms:
     <p>The graph below shows the function <m>T(F) = C</m>, where <m>F</m> is temperature in degrees Fahrenheit, and <m>C</m> is temperature in degrees Celsius.</p>
@@ -273,183 +317,194 @@ Add a webwork problem for these key terms:
     (a) Evaluate T(77)
     (b) Solve T(F) = -22
 -->
-    </paragraphs>
+        </paragraphs>
 
-    <example>
-      <p>Figure <xref ref="celsius-vs-fahrenheit"/> below shows the function <m>T(F) = C</m>, where <m>F</m> is temperature in degrees Fahrenheit, and <m>C</m> is temperature in degrees Celsius.</p>
-      <figure xml:id="celsius-vs-fahrenheit">
-          <caption>Celsius Versus Fahrenheit</caption>
-          <image>
-              <latex-image-code>
-                  <![CDATA[\begin{tikzpicture}
-                  \begin{axis}[ymin=-80, ymax=100, xlabel={Temperature ($^{\circ}$F)}, ylabel={Temperature ($^{\circ}$C)}, xtick={-100,-50,...,200}, minor xtick={-110,-100,...,220}, ytick={-50,0,...,100}, minor ytick={-80,-70,...,100}, xmin=-112, xmax=212,] 
-                  \addplot+[domain=-100:212] {5/9*(x-32)};
-                  \end{axis}
-                  \end{tikzpicture}]]>
-              </latex-image-code>
-          </image>
-      </figure>
+        <example>
+            <p>Figure <xref ref="celsius-vs-fahrenheit"/> below shows the function <m>T(F) = C</m>, where <m>F</m> is temperature in degrees Fahrenheit, and <m>C</m> is temperature in degrees Celsius.</p>
+            <figure xml:id="celsius-vs-fahrenheit">
+                <caption>Celsius Versus Fahrenheit</caption>
+                <image>
+                    <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[ymin=-80, ymax=100, xlabel={Temperature ($^{\circ}$F)}, ylabel={Temperature ($^{\circ}$C)}, xtick={-100,-50,...,200}, minor xtick={-110,-100,...,220}, ytick={-50,0,...,100}, minor ytick={-80,-70,...,100}, xmin=-112, xmax=212,] 
+                        \addplot+[domain=-100:212] {5/9*(x-32)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </figure>
+        </example>
 
-    </example>
+        <paragraphs>
+            <title>Average Rate of Change</title>
+            <p>This a <em>very</em> important topic of this course. You will see it over and over again in various forms. Basically it means slope, but it's more than that. It's also a notation and a concept that sets the stage for calculus.</p>
 
-    <paragraphs>
-        <title>Average Rate of Change</title>
-        <p>This a <em>very</em> important topic of this course. You will see it over and over again in various forms. Basically it means slope, but it's more than that. It's also a notation and a concept that sets the stage for calculus.</p>
-        <p>From the car's efficiency function we know <m>f(5)=10</m> which means at <quantity><mag>5</mag><unit base="mileperhour"/></quantity> the efficiency is <quantity><mag>10</mag><unit base="mile-per-gallon"/></quantity>.</p>
-        <p>We also know that <m>f(25)=27</m> which means at <quantity><mag>25</mag><unit base="mileperhour"/></quantity> the efficiency is <quantity><mag>27</mag><unit base="mile-per-gallon"/></quantity>.</p>
-        <p>Therefore, as the speed increased from <quantity><mag>5</mag><unit base="mileperhour"/></quantity> to <quantity><mag>25</mag><unit base="mileperhour"/></quantity>, the car's efficiency increased from <quantity><mag>10</mag><unit base="mile-per-gallon"/></quantity> to <quantity><mag>27</mag><unit base="mile-per-gallon"/></quantity>. On average the efficiency changed by <quantity><mag>17</mag><unit base="mile-per-gallon"/></quantity> while the speed changed by <quantity><mag>20</mag><unit base="mileperhour"/></quantity>.</p>
-        <p>We can use this information to calculate the average increase in efficiency over the increase in speed.</p>
-        <p>Using function notation we write <md>
-            <mrow>\frac{\Delta f}{\Delta s}\amp=\frac{27-10}{25-5}</mrow>
-            <mrow>\amp=0.85</mrow></md>The number <m>0.85</m> (notice it is positive) means that between speeds of <quantity><mag>5</mag><unit base="mileperhour"/></quantity> and <quantity><mag>25</mag><unit base="mileperhour"/></quantity>, the car's efficiency is increasing at an average rate of <quantity><mag>0.85</mag><unit base="milepergallon"/></quantity> per <quantity><mag>1</mag><unit base="mileperhour"/></quantity>.</p>
-        <p>The little triangle symbol <m>\Delta</m> is also very important. It means, <q>Change in</q>. Therefore <m>\Delta f</m> means <q>change in efficiency</q> and <m>\Delta s</m> means <q>change in speed</q>. Together the symbol <m>\frac{\Delta f}{\Delta s}</m> is called <q>average rate of change</q>.</p>
-    </paragraphs>
+            <p>From the car's efficiency function we know <m>f(5)=10</m> which means at <quantity><mag>5</mag><unit base="mileperhour"/></quantity> the efficiency is <quantity><mag>10</mag><unit base="mile-per-gallon"/></quantity>.</p>
 
-    <paragraphs>
-        <title>Units</title>
-        <p>Units are the <q>names</q> of the quantities we are counting.  They give meaning to the numbers or values we use in an expression.  When you measure the width of a room the tape measure might count 10.5 ft.  The number 10.5 is the value and <q>ft</q> is the units.</p> 
+            <p>We also know that <m>f(25)=27</m> which means at <quantity><mag>25</mag><unit base="mileperhour"/></quantity> the efficiency is <quantity><mag>27</mag><unit base="mile-per-gallon"/></quantity>.</p>
 
-        <p>In this example the units of efficiency are <q>mpg (miles per gallon)</q> and the units of speed are <q>mph (miles per hour)</q>.  Therefore the average rate of change for this example will have units of <m>\frac{\text{mpg}}{\text{mph}}</m>.</p>
+            <p>Therefore, as the speed increased from <quantity><mag>5</mag><unit base="mileperhour"/></quantity> to <quantity><mag>25</mag><unit base="mileperhour"/></quantity>, the car's efficiency increased from <quantity><mag>10</mag><unit base="mile-per-gallon"/></quantity> to <quantity><mag>27</mag><unit base="mile-per-gallon"/></quantity>. On average the efficiency changed by <quantity><mag>17</mag><unit base="mile-per-gallon"/></quantity> while the speed changed by <quantity><mag>20</mag><unit base="mileperhour"/></quantity>.</p>
 
-        <p>As you see, because slope is just <q>rise over run</q> the units of the average rate of change are <q>miles per gallon</q> over <q>miles per hour</q>.</p>
+            <p>We can use this information to calculate the average increase in efficiency over the increase in speed.</p>
 
+            <p>Using function notation we write<md>
+                <mrow>\frac{\Delta f}{\Delta s}\amp=\frac{27-10}{25-5}</mrow>
+                <mrow>\amp=0.85</mrow>
+            </md>The number <m>0.85</m> (notice it is positive) means that between speeds of <quantity><mag>5</mag><unit base="mileperhour"/></quantity> and <quantity><mag>25</mag><unit base="mileperhour"/></quantity>, the car's efficiency is increasing at an average rate of <quantity><mag>0.85</mag><unit base="milepergallon"/></quantity> per <quantity><mag>1</mag><unit base="mileperhour"/></quantity>.</p>
 
-    </paragraphs>
+            <p>The little triangle symbol <m>\Delta</m> is also very important. It means, <q>Change in</q>. Therefore <m>\Delta f</m> means <q>change in efficiency</q> and <m>\Delta s</m> means <q>change in speed</q>. Together the symbol <m>\frac{\Delta f}{\Delta s}</m> is called <q>average rate of change</q>.</p>
+        </paragraphs>
 
-    <exercise>
-        <title>Fuel Efficiency</title>
+        <paragraphs>
+            <title>Units</title>
+                <p>Units are the <q>names</q> of the quantities we are counting.  They give meaning to the numbers or values we use in an expression.  When you measure the width of a room the tape measure might count <quantity><mag>10.5</mag><unit base="foot" /></quantity>.  The number <m>10.5</m> is the value and <q>ft</q> is the units.</p> 
 
-        <webwork xml:id="webwork-fuel-efficiency">
+                <p>In this example the units of efficiency are <q>mpg (miles per gallon)</q> and the units of speed are <q>mph (miles per hour)</q>.  Therefore the average rate of change for this example will have units of <quantity><unit base="milepergallon" /><per base="mileperhour" /></quantity>.</p>
 
-            <pg-macros>
-                <macro-file>PGchoicemacros.pl</macro-file>
-            </pg-macros>
+                <p>As you see, because slope is just <q>rise over run</q> the units of the average rate of change are <q>miles per gallon</q> over <q>miles per hour</q>.</p>
+        </paragraphs>
 
-            <setup>
+        <exercise>
+            <title>Fuel Efficiency</title>
+            <webwork xml:id="webwork-fuel-efficiency">
+                <pg-macros>
+                    <macro-file>PGchoicemacros.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <var name="$a">
+                        <static>0.12</static>
+                    </var>
+                    <var name="$b">
+                        <static>-0.08</static>
+                    </var>
+                    <pg-code>
+                        $a = 0.12;
+                        $b = -0.08;
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Below is a table of data and corresponding graph of the fuel efficiency of a midsize car (<quantity><unit base="milepergallon"/></quantity>) as a function of the speed of the car (<quantity><unit base="mileperhour"/></quantity>). Each point on the graph is an ordered pair (speed vs. fuel efficiency). If the car travels at <quantity><mag>15</mag><unit base="mileperhour"/></quantity>, the fuel efficiency is about <quantity><mag>15.3</mag><unit base="milepergallon"/></quantity>. If the car changes speed, then the fuel efficiency changes.</p>
 
-                <var name="$a">
-                    <static>0.12</static>
-                </var>
-                <var name="$b">
-                    <static>-0.08</static>
-                </var>
+                    <p>Place one dot at the ordered pair <m>(15, 15.3)</m>. Place the other dot at the ordered pair <m>(25, 29)</m>. Notice as the input changes from <m>15</m> to <m>25</m> (from one dot to the other), the output changes from <m>15.3</m> to <m>29</m>.</p>
 
-                <pg-code>
-                    $a = 0.12;
-                    $b = -0.08;
-                </pg-code>
-            </setup>
+                    <p>Let <m>m</m> be the slope of the line between the two points.  Notice the slope of the line is <m>m = 1.37</m>.  It turns out <q>average rate of change</q> is just the slope!</p>
 
-            <statement>
-                <p>Below is a table of data and corresponding graph of the fuel efficiency of a midsize car (<quantity><unit base="milepergallon"/></quantity>) as a function of the speed of the car (<quantity><unit base="mileperhour"/></quantity>). Each point on the graph is an ordered pair (speed vs. fuel efficiency). If the car travels at 15 <quantity><unit base="mileperhour"/></quantity>, the fuel efficiency is about 15.3 <quantity><unit base="milepergallon"/></quantity>. If the car changes speed, then the fuel efficiency changes.</p>
+                    <table>
+                        <tabular left="medium">
+                            <col right="medium"/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col right="medium"/>
+                            <row>
+                                <cell><m>x</m></cell>
+                                <cell><m>0</m></cell>
+                                <cell><m>5</m></cell>
+                                <cell><m>15</m></cell>
+                                <cell><m>25</m></cell>
+                                <cell><m>35</m></cell>
+                                <cell><m>45</m></cell>
+                                <cell><m>55</m></cell>
+                                <cell><m>60</m></cell>
+                                <cell><m>65</m></cell>
+                                <cell><m>70</m></cell>
+                                <cell><m>75</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>y</m></cell>
+                                <cell><m>0</m></cell>
+                                <cell><m>3.4</m></cell>
+                                <cell><m>15.3</m></cell>
+                                <cell><m>29</m></cell>
+                                <cell><m>38.1</m></cell>
+                                <cell><m>40.5</m></cell>
+                                <cell><m>41.7</m></cell>
+                                <cell><m>40</m></cell>
+                                <cell><m>36</m></cell>
+                                <cell><m>30</m></cell>
+                                <cell><m>22</m></cell>
+                            </row>
+                        </tabular>
+                    </table>
 
-                <p>Place one dot at the ordered pair <m>(15, 15.3)</m>. Place the other dot at the ordered pair <m>(25, 29)</m>. Notice as the input changes from <m>15</m> to <m>25</m> (from one dot to the other), the output changes from <m>15.3</m> to <m>29</m>.</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/nzGcHyhr/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
-                <p>Let <m>m</m> be the slope of the line between the two points.  Notice the slope of the line is <m>m = 1.37</m>.  It turns out <q>average rate of change</q> is just the slope!</p>
+                    <p>What is the average rate of change of the fuel efficiency as the car goes from <quantity><mag>10</mag><unit base="mileperhour" /></quantity> to <quantity><mag>55</mag><unit base="mileperhour" /></quantity>?</p>
 
-                <table>
-                    <tabular left="medium">
-                        <col right="medium"/>
-                        <col/>
-                        <col/>
-                        <col/>
-                        <col/>
-                        <col/>
-                        <col/>
-                        <col/>
-                        <col/>
-                        <col/>
-                        <col/>
-                        <col right="medium"/>
-                        <row>
-                            <cell><m>x</m></cell><cell><m>0</m></cell><cell><m>5</m></cell><cell><m>15</m></cell><cell><m>25</m></cell><cell><m>35</m></cell><cell><m>45</m></cell><cell><m>55</m></cell><cell><m>60</m></cell><cell><m>65</m></cell><cell><m>70</m></cell><cell><m>75</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>y</m></cell><cell><m>0</m></cell><cell><m>3.4</m></cell><cell><m>15.3</m></cell><cell><m>29</m></cell><cell><m>38.1</m></cell><cell><m>40.5</m></cell><cell><m>41.7</m></cell><cell><m>40</m></cell><cell><m>36</m></cell><cell><m>30</m></cell><cell><m>22</m></cell>
-                        </row>
-                    </tabular>
-                </table>
+                    <p><var name="$a" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
 
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/nzGcHyhr/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>A positive rate of change means the function is increasing on that interval.  A negative rate of change means the function is decreasing on that interval. What is the average rate of change between <quantity><mag>60</mag><unit base="mileperhour" /></quantity> and <quantity><mag>65</mag><unit base="mileperhour" /></quantity>?</p>
 
-                <p>What is the average rate of change of the fuel efficiency as the car goes from <quantity><mag>10</mag><unit base="mileperhour" /></quantity> to <quantity><mag>55</mag><unit base="mileperhour" /></quantity>?</p>
+                    <p><var name="$b" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
 
-                <p><var name="$a" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
+                </statement>
+            </webwork>
+        </exercise>
 
-                <p>A positive rate of change means the function is increasing on that interval.  A negative rate of change means the function is decreasing on that interval. What is the average rate of change between <quantity><mag>60</mag><unit base="mileperhour" /></quantity> and <quantity><mag>65</mag><unit base="mileperhour" /></quantity>?</p>
-
-                <p><var name="$b" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
-
-            </statement>
-        </webwork>
-
-    </exercise>
-
-    <exercise>
-        <title>Equation for a Secant Line</title>
-
-        <webwork xml:id="webwork-secant-line">
-
-            <pg-macros>
-                <macro-file>parserImplicitPlane.pl</macro-file>
-            </pg-macros>
-
-            <setup>
-                <var name="$a">
-                    <static>10</static>
-                </var>
-                <var name="$b">
-                    <static>1</static>
-                </var>
-                <var name="$f">
-                    <static>\frac{10}{x^2+1}</static>
-                </var>
-                <var name="$x1">
-                    <static>1</static>
-                </var>
-                <var name="$x2">
-                    <static>3</static>
-                </var>
-                <var name="$y1">
-                    <static>5</static>
-                </var>
-                <var name="$y2">
-                    <static>1</static>
-                </var>
-                <var name="$slope">
-                    <static>2</static>
-                </var>
-                <var name="$line">
-                    <static>y=2(x-1)+5</static>
-                </var>
-
-                <pg-code>
-                    Context("ImplicitPlane")->flags->set(reduceConstants=>0);
-                    $x1 = Real(1);
-                    $x2 = Real(random(3, 5, 1));
-                    $b = Real(random(1,3,1));
-                    $a = Real(lcm($x1**2+$b,$x2**2+$b))*random(1,3,1);
-                    $f = Formula("$a/(x^2+$b)");
-                    $y1 = $f->eval(x=>$x1);
-                    $y2 = $f->eval(x=>$x2);
-                    $Dy = $y2 - $y1;
-                    $Dx = $x2 - $x1;
-                    $slope = Formula("$Dy/$Dx");
-                    $line = Compute("y = $slope*(x - $x1) + $y1");
-                </pg-code>
-            </setup>
-
-            <statement>
-                <p>Find a formula for the line passing through the function <m>f(x) = <var name="$f"/></m>  at <m>x = <var name="$x1"/></m> and <m>x = <var name="$x2"/></m>.</p>
-                <p><var name="$line" width="20" /></p>
-            </statement>
-
-            <solution>
-                <p>Since <m>f(<var name="$x1"/>) = <var name="$y1"/></m>, and <m>f(<var name="$x2"/>) = <var name="$y2"/></m>, then the slope of this line is <m>\frac{<var name="$y2"/> - <var name="$y1"/>}{<var name="$x2"/> - <var name="$x1"/>}=<var name="$slope"/></m>. Using the point-slope form, we can write the line's equation as <m>y=<var name="$slope"/>(x-<var name="$x1"/>)+<var name="$y1"/></m>.</p>
-            </solution>
-        </webwork>
-    </exercise>
-
+        <exercise>
+            <title>Equation for a Secant Line</title>
+            <webwork xml:id="webwork-secant-line">
+                <pg-macros>
+                    <macro-file>parserImplicitPlane.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <var name="$a">
+                        <static>10</static>
+                    </var>
+                    <var name="$b">
+                        <static>1</static>
+                    </var>
+                    <var name="$f">
+                        <static>\frac{10}{x^2+1}</static>
+                    </var>
+                    <var name="$x1">
+                        <static>1</static>
+                    </var>
+                    <var name="$x2">
+                        <static>3</static>
+                    </var>
+                    <var name="$y1">
+                        <static>5</static>
+                    </var>
+                    <var name="$y2">
+                        <static>1</static>
+                    </var>
+                    <var name="$slope">
+                        <static>2</static>
+                    </var>
+                    <var name="$line">
+                        <static>y=2(x-1)+5</static>
+                    </var>
+                    <pg-code>
+                        Context("ImplicitPlane")->flags->set(reduceConstants=>0);
+                        $x1 = Real(1);
+                        $x2 = Real(random(3, 5, 1));
+                        $b = Real(random(1,3,1));
+                        $a = Real(lcm($x1**2+$b,$x2**2+$b))*random(1,3,1);
+                        $f = Formula("$a/(x^2+$b)");
+                        $y1 = $f->eval(x=>$x1);
+                        $y2 = $f->eval(x=>$x2);
+                        $Dy = $y2 - $y1;
+                        $Dx = $x2 - $x1;
+                        $slope = Formula("$Dy/$Dx");
+                        $line = Compute("y = $slope*(x - $x1) + $y1");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Find a formula for the line passing through the function <m>f(x) = <var name="$f"/></m>  at <m>x = <var name="$x1"/></m> and <m>x = <var name="$x2"/></m>.</p>
+                    <p><var name="$line" width="20" /></p>
+                </statement>
+                <solution>
+                    <p>Since <m>f(<var name="$x1"/>) = <var name="$y1"/></m>, and <m>f(<var name="$x2"/>) = <var name="$y2"/></m>, then the slope of this line is <m>\frac{<var name="$y2"/> - <var name="$y1"/>}{<var name="$x2"/> - <var name="$x1"/>}=<var name="$slope"/></m>. Using the point-slope form, we can write the line's equation as <m>y=<var name="$slope"/>(x-<var name="$x1"/>)+<var name="$y1"/></m>.</p>
+                </solution>
+            </webwork>
+        </exercise>
     </conclusion>
-
 </chapter>
