@@ -133,136 +133,132 @@
       </exercise>
 <!-- Begin last activity here... -->
       <exercise>
-          <title>Function Transformations 3</title>
+        <webwork xml:id="vertical-and-horizontal-transformation-application-projectile-motion">
+          <setup>
 
-          <webwork xml:id="vertical-and-horizontal-transformation-application-projectile-motion">
-            <pg-macros>
-                <macro-file>PGchoicemacros.pl</macro-file>
-            </pg-macros>
+            <var name="$afterOne">
+              <static>0</static>
+            </var>
 
-            <setup>
-              <var name="$howLongNumber1">
-                <static>0</static>
-              </var>
+            <var name="$afterTwo">
+              <static>1</static>
+            </var>
 
-              <var name="$howLongNumber2">
-                <static>1</static>
-              </var>
+            <var name="$afterThree">
+              <static>2</static>
+            </var>
 
-              <var name="$howLongNumber3">
-                <static>2</static>
-              </var>
+            <var name="afterT">
+              <static>t-1</static>
+            </var>
 
-              <var name="$units">
-                <set>
-                  <member correct="yes">\text{Seconds}</member>
-                  <member>\text{Feet}</member>
-                  <member>\text{None of these}</member>
-                </set>
-              </var>
-
-              <var name="$howLongExpression">
-                <static>t-1</static>
-              </var>
-
-              <var name="$direction">
-                <set>
-                  <member>\text{Shifted Up}</member>
-                  <member>\text{Shifted Down}</member>
-                  <member correct="yes">\text{Shifted Right}</member>
-                  <member>\text{Shifted Left}</member>
-                </set>
-              </var>
-
-              <var name="$y1">
-                <static>40</static>
-              </var>
-
-              <var name="$y2">
-                <static>45.1</static>
-              </var>
-
-              <var name="$y3">
-                <static>40.4</static>
-              </var>
-
-              <var name="$y4">
-                <static>25.9</static>
-              </var>
-
-              <var name="$y5">
-                <static>1.6</static>
-              </var>
-
-            </setup>
+            <var name="$units">
+              <set>
+                <member correct="yes">\text{Seconds}</member>
+                <member>\text{Feet}</member>
+                <member>\text{None of these}</member>
+              </set>
+            </var>
 
             <pg-code>
-              $units = PopUp(["?", "Seconds", "Feet", "None of these"], "Seconds");
-              $direction = PopUp(["?", "Shifted Up", "Shifted Down", "Shifted Right", "Shifted Left"], "Shifted Right");
-              $howLongExpression = Compute("t-1");
+              Context('Numeric');
+              $afterOne=Real(0);
+              $afterTwo=Real(1);
+              $afterThree=Real(2);
+              $afterT=Formula("x-1");
+              $units=PopUp(["?","Seconds","Feet","None of these"],"Seconds");
             </pg-code>
 
-            <statement>
-              <p>The function <m>h(t) = -4.9t^2 + 10t + 40</m> will approximate the height of an object which was thrown straight upward at a speed of <quantity><mag>10</mag><unit base="meter" /><per base="second"/></quantity> at time <m>t = </m><quantity><mag>0</mag><unit base="second"/></quantity> from a height of <quantity><mag>40</mag><unit base="meter"/></quantity>. See the graph below.</p>
-              <p>You can move the point to see how high the object will be at a certain time, or when the object will hit the ground.</p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BmHTxqW6/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>Now, we can use this function to describe other situations involving such an object. For example, suppose the person had waited <quantity><mag>1</mag><unit base="second"/></quantity> until <m>t = 1</m> before throwing the object.</p>
-              <p>If the person waited <quantity><mag>1</mag><unit base="second"/></quantity>before throwing it, how long would the object be in the air when <m>t = 0</m>?</p>
-              <p><var name="$howLongNumber1" width="15" /> <var name="$units" form="buttons" /></p>
-              <p>If the person waited <quantity><mag>1</mag><unit base="second"/></quantity> before throwing it, how long would the object be in the air when <m>t = 1</m>?</p>
-              <p><var name="$howLongNumber2" width="15" /> <var name="$units" form="buttons" /></p>
-              <p>If the person waited <quantity><mag>1</mag><unit base="second"/></quantity>before throwing it, how long would the object be in the air when <m>t = 2</m>?</p>
-              <p><var name="$howLongNumber3" width="15" /> <var name="$units" form="buttons" /></p>
-              <p>For any time <m>t</m>, how long would the object be in the air when time = <quantity><mag>t</mag><unit base="second"/></quantity>?</p>
-              <p><var name="$howLongExpression" width="15" /> <var name="$units" form="buttons" /></p>
-              <p>You know that <m>f(t)</m> is a function whose formula has <m>t</m>'s in it, where t is the input.  Based on your answer to that last question, what is the input to the function now?</p>
-              <p><var name="$howLongExpression" width="15" /></p>
-              <p>What is the formula for <m>f(t-1)</m>?</p>
-              <p><m>f(t-1) = -4.9(</m><var name="$howLongExpression" width="10" /><m>)^2 + 10(</m><var name="$howLongExpression" width="10" /><m>) + 40</m></p>
-              <p>How would you expect the graph of <m>y = f(t-1)</m> to compare with the graph of <m>y = f(t)</m> shown above?</p>
-              <p>The graph of <m>y = f(t-1)</m> would be <var name="$direction" form="popup" /> from the graph of <m>f(t)</m> shown.</p>
+          </setup>
 
-              <p>Below is a table of values, showing values of <m>f(t)</m>. Complete the table with values of <m>f(t-1)</m>.</p>
-              <table>
-                  <tabular top="medium" bottom="medium" left="medium" right="medium">
-                      <col halign="center"/>
-                      <col halign="center"/>
-                      <col halign="center"/>
-                      <row>
-                          <cell><m>t</m></cell>
-                          <cell><m>f(t)</m></cell>
-                          <cell><m>f(t-1)</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>0</m></cell>
-                          <cell><m>40</m></cell>
-                          <cell><m>---</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>1</m></cell>
-                          <cell><m>45.1</m></cell>
-                          <cell><var name="y1" width="10"/></cell>
-                      </row>
-                      <row>
-                          <cell><m>2</m></cell>
-                          <cell><m>40.4</m></cell>
-                          <cell><var name="$y2" width="10"/></cell>
-                      </row>
-                      <row>
-                          <cell><m>3</m></cell>
-                          <cell><m>25.9</m></cell>
-                          <cell><var name="$y3" width="10"/></cell>
-                      </row>
-                      <row>
-                          <cell><m>4</m></cell>
-                          <cell><m>1.6</m></cell>
-                          <cell><var name="$y4" width="10"/></cell>
-                      </row>
-                  </tabular>
-              </table>
-            </statement>
-          </webwork>
-        </exercise>
+          <statement>
+            <p>The function <m>h(t) = -4.9t^2 + 10t + 40</m> will approximate the height of an object which was thrown straight upward at a speed of 10 meters per second at time <m>t = 0</m> seconds from a height of 40 meters. See the graph below.</p>
+            <p>You can move the point to see how high the object will be at a certain time, or when the object will hit the ground.</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BmHTxqW6/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Now, we can use this function to describe other situations involving such an object. For example, suppose the person had waited until <m>t = 1</m> second before throwing the object.</p>
+            <p>If the person waited 1 second before throwing it, how long would the object be in the air when <m>t = 1</m>?</p>
+            <p><var name="$afterOne" width="15" /> <var name="$units" form="popup" /></p>
+            <p>If the person waited 1 second before throwing it, how long would the object be in the air when <m>t = 2</m>?</p>
+            <p><var name="$afterTwo" width="15" /> <var name="$units" form="popup" /></p>
+            <p>If the person waited 1 second before throwing it, how long would the object be in the air when <m>t = 3</m>?</p>
+            <p><var name="$afterThree" width="15" /> <var name="$units" form="popup" /></p>
+            <p>In general, if the person waited 1 second before throwing it, how long would the object be in the air when time = <m>t</m> seconds?</p>
+            <p><var name="$afterT" width="15" /> <var name="$units" form="popup" /></p>
+          </statement>
+
+        </webwork>
+
+      </exercise>
+
+      <exercise>
+        <webwork xml:id="vertical-and-horizontal-transformation-application-projectile-motion-graph">
+          <setup>
+
+            <var name="whichGraph">
+              <set>
+                <member correct="yes">\text{Graph 1}</member>
+                <member>\text{Graph 2}</member>
+              </set>
+            </var>
+
+            <pg-code>
+              $whichGraph=RadioButtons(
+                ["Graph 1", "Graph 2"], 0, displaylabels => 0
+              );
+            </pg-code>
+
+          </setup>
+
+          <statement>
+            <p>Which graph below shows the height of the object if the person waited 1 second before throwing it?</p>
+            <p>Graph 1 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/kCE4de8p/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Graph 2 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PNeV26dS/width/421/height/226/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p><var name="$whichGraph" form="buttons" /></p>
+          </statement>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork xml:id="vertical-and-horizontal-transformations-application-projectile-motion-time-delay-and-hight-increase">
+          <setup>
+            <var name="$input">
+              <static>x-1</static>
+            </var>
+
+            <var name="addOrSubtract">
+              <set>
+                <member correct="yes">\text{Add}</member>
+                <member>\text{Subtract}</member>
+              </set>
+            </var>
+
+            <var name="outputChange">
+              <static>12</static>
+            </var>
+
+            <pg-code>
+              $input="x-1";
+              $addOrSubtract=PopUp(["?","Add","Subtract"],"Add");
+              $outputChange=Real(12);
+
+            </pg-code>
+
+          </setup>
+
+          <statement>
+
+            <p>Now let's put both types of transformations together in one application.</p>
+            <p>Again, we will use the same function <m>f(t) = -4.9t^2 + 10t + 40</m>, which represents the height of an object which was thrown straight upward at a speed of 10 meters per second, from an initial height of 40 meters.</p>
+            <p>Suppose now that the person waited 1 second and also took it an additional 12 meters higher in elevation before throwing it.</p>
+            <p>Waiting 1 second is a change to the input, so the input of the function will now be: <var name="$input" width="5" /></p>
+            <p>Carrying the object an additional 12 meters upward before throwing it is a change to the output, so we will <var name="$addOrSubtract" form="popup" /> the number <m>12</m> to the outside of the function.</p>
+            <p>Putting these transformations together, the formula will now be:</p>
+            <p><m>f(</m><var name="$input" width="5" /><m>) + </m><var name="$outputChange" width="2" /></p>
+            <p>= <m>-4.9(</m><var name="$input" width="5" /><m>)^2 + 10(</m><var name="$input" width="5" /><m>) + 40 + </m><var name="$outputChange" width="2" /></p>
+
+          </statement>
+        </webwork>
+      </exercise>
 
     </introduction>
 
