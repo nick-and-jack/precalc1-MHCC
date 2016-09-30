@@ -162,10 +162,11 @@
 
             <pg-code>
               Context('Numeric');
+              Context()->variables->are(t=>'Real');
               $afterOne=Real(0);
               $afterTwo=Real(1);
               $afterThree=Real(2);
-              $afterT=Formula("x-1");
+              $afterT=Formula("t-1");
               $units=PopUp(["?","Seconds","Feet","None of these"],"Seconds");
             </pg-code>
 
@@ -222,7 +223,7 @@
         <webwork xml:id="vertical-and-horizontal-transformations-application-projectile-motion-time-delay-and-hight-increase">
           <setup>
             <var name="$input">
-              <static>x-1</static>
+              <static>t-1</static>
             </var>
 
             <var name="addOrSubtract">
@@ -237,7 +238,8 @@
             </var>
 
             <pg-code>
-              $input="x-1";
+              Context()->variables->are(t=>'Real');
+              $input="t-1";
               $addOrSubtract=PopUp(["?","Add","Subtract"],"Add");
               $outputChange=Real(12);
 
@@ -290,26 +292,20 @@
         </p>
       </paragraphs>
 
+      <list>
+          <title>Video Lectures</title>
+          <dl>
+              <li>
+                  <title>Graph a Logarithm Function</title>
+                  <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/m05-cyu-average-rate-of-change-captioned_-_20150119_180537_26.html" />-->
+              </li>
+              <li>
+                  <title>Find Equation of a Line</title>
+                  <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/cyu-point-slope-form-captioned_-_20150114_150341_26.html" />-->
+              </li>
+          </dl>
+      </list>
 
-<!--    <example>
-
-        <p>The function <m>h(t) = -4.9t^2 + 10t + 40</m> will approximate the height of an object which was thrown straight upward at a speed of <quantity><mag>10</mag><unit base="meter" /><per base="second"/></quantity> at time <m>t = 0</m> seconds from a height of <quantity><mag>40</mag><unit base="meter"/></quantity>. See the graph below.</p>
-        <geogebra materialID="BmHTxqW6" width="421" height="260" />
-        https://www.geogebra.org/m/Ytwv3fEB
-
-        https://www.geogebra.org/material/iframe/id/BmHTxqW6/width/421/height/260/border/888888/sri/true
-        <p>You can move the point to see how hight the object will be at a certain time, or when the object will hit the ground.</p>
-        <p>Now, we can use this function to describe other situations involving such an object. For example, if the person had waited one second before throwing the object, then the graph would be shifted horizontally to the right by one second.</p>
-        <geogebra materialID="kCE4de8p" width="421" height="260" />
-        https://www.geogebra.org/m/N9Tx36kF
-        <p>To shift the graph to the right, we make the transformation: <md><mrow>h(t-1) = -4.9(t-1)^2 + 10(t-1) + 40</mrow></md></p>
-        <p>Next, suppose the person waited one second before throwing the object but also took it an additional <quantity><mag>12</mag><unit base="feet"/></quantity> upward before throwing it. This involves a horizontal shift of <quantity><mag>1</mag><unit base="second"/></quantity> to the right and a vertical shift of <quantity><mag>12</mag><unit base="meter"/></quantity> upward:<md>
-          <mrow>h(t-1) + 12 \amp= -4.9(t-1)^2 + 10(t-1) + 40 + 12</mrow>
-          <mrow>\amp=-4.9(t-1)^2 + 10(t-1) + 52</mrow></md></p>
-        <geogebra materialID="neB9zc2z" width="421" height="260" />
-        https://www.geogebra.org/m/avHM2ZSt
-      </example>
-    -->
 
         <p>Now let's put this information to the test to determine the equation of a function which has been transformed.</p>
 
