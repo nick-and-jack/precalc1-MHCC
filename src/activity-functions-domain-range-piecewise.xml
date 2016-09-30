@@ -68,5 +68,28 @@
    <p>Notice the graph only appears from <m>x = 8</m> and to the right. That's the domain of <m>f(x)</m>.</p>
    <p>Also notice that the graph only appears at or above the <m>x</m>- axis (<m>y = 0</m> or <m>y > 0</m>).  That is the range of <m>f(x)</m> (i.e. range is <m>f(x) \geqslant 0</m>)</p>
 
+
+   <exercise>
+       <webwork>
+           <pg-macros>
+             <macro-file>parserImplicitPlane.pl</macro-file>
+           </pg-macros>
+           <setup>
+               <var name="$lineA">
+                   <static>y=3x-1</static>
+               </var>
+               
+               <pg-code>
+                    Context()->variables->are(x=>'Real',y=>'Real');
+                   $lineA = ImplicitPlane("y=3x-1");
+               </pg-code>
+           </setup>
+
+           <statement>
+               <p>this is line A <var name="$lineA" width="15" /></p>
+           </statement>
+       </webwork>
+   </exercise>
+
 </subsection>
 </section>

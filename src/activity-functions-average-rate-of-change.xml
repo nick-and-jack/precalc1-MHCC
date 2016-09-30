@@ -94,6 +94,9 @@
             </introduction>
 
             <webwork xml:id="change-in-function">
+                <pg-macros>
+                    <macro-file>parserFunction.pl</macro-file>
+                </pg-macros>
                 <setup>
                     <var name="$Vchange">
                         <static>16</static>
@@ -101,11 +104,16 @@
                     <var name="$Hchange">
                         <static>1</static>
                     </var>
+                    <!-- Within parserFunction below the formula has nothing to do with the problem.  It's only there to be function to generate values for us -->
                     <pg-code>
                         Context('Numeric');
                         $Vchange = Real(16);
                         Context('Numeric');
                         $Hchange = Real(1);
+                        parserFunction("f(x)"=>"(sin(x)+2)/pi");
+                        Context()->flags->set(reduceConstantFunctions=>0);
+                        Context()->flags->set(formatStudentAnswer=>"parsed");
+                        $difference=Formula("f(5)-f(2)");
                     </pg-code>
                 </setup>
           
@@ -129,8 +137,9 @@
                             <p>The change in time is <var name="$Hchange" width="3" /> hour(s).</p>
                         </li>
                     </ol></p>
+                    <p>The change in position can be expressed using function notation as <var name="$difference" width="10" /></p>
                 </statement>
-            
+                
                 <todo>Alex! Insert here: from Maple acitivity "ACT02_average_rate_of_change", question #4 - "Use function notation to write and expression that represents the change in distance between the 2nd and the 5th hours." The answer needs to accept any spacing issues a student may have when typing in their response "f(5) - f(1)".</todo>
 
             </webwork>
