@@ -15,12 +15,24 @@
 
     <title>Functions: Definition and Notation</title>
     <introduction>
+        <list xml:id="outcomes-functions">
+            <title>Student Learning Outcomes</title>
+                <ul>
+                    <li><p>Identify a function, like from a table of values, a graph or an equation.</p></li>
+                    <li><p>Recognize, apply, interpret, evaluate and solve equations using function notation.</p></li>
+                    <li><p>Define a relation and define a function.</p></li>
+                    <li><p>Perform calculations using function notation including Average Rate of Change.</p></li>
+                    <li><p>Determine if a variable is dependent or independent.</p></li>
+                    <li><p>Determine the intervals over which a function is increasing or decreasing or constant based on a numerical, graphical or algebraic model.</p></li>
+                    <li><p>Demonstrate appropriate use of inequality notation and interval notation.</p></li>
+                </ul>
+        </list>
+
         <list>
-            <title>Prerequisite Skills</title>
-            <introduction>
+            <title>
                 <p>Typically students need some reivew on the topics below.</p>
-            </introduction>
-            <ul>
+            </title>
+            <dl>
                 <li>
                     <p><url href="https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-slope-intercept-form/e/slope-intercept-equation-from-graph">Equation of a line.</url></p>
                 </li>
@@ -36,20 +48,7 @@
                 <li>
                     <p><url href="https://www.khanacademy.org/math/algebra/linear_inequalities/compound_absolute_value_inequali/e/compound_inequalities">Compound Inequalities.</url></p>
                 </li>
-            </ul>
-        </list>
-
-        <list>
-            <title>Student Learning Outcomes</title>
-            <ul>
-                <li><p>Identify a function, like from a table of values, a graph or an equation.</p></li>
-                <li><p>Recognize, apply, interpret, evaluate and solve equations using function notation.</p></li>
-                <li><p>Define a relation and define a function.</p></li>
-                <li><p>Perform calculations using function notation including Average Rate of Change.</p></li>
-                <li><p>Determine if a variable is dependent or independent.</p></li>
-                <li><p>Determine the intervals over which a function is increasing or decreasing or constant based on a numerical, graphical or algebraic model.</p></li>
-                <li><p>Demonstrate appropriate use of inequality notation and interval notation.</p></li>
-            </ul>
+            </dl>
         </list>
     </introduction>
 
@@ -58,29 +57,30 @@
     <xi:include href="./activity-functions-average-rate-of-change.xml" />
 
     <conclusion>
+        <subsection>
+            <title>Defining a Function</title>
         <p>A <term>function</term> is a rule that may be in the form of a graph, or a table of values or a formula.  It may even be a sentence or a set of instructions.  A function takes an input value and uses the rule to create an output value.</p>
 
         <p>Function notation looks like this: <m>f(\text{input})=\text{output}</m></p>
 
-        <p>But, instead of writing the words <q>input</q> and <q>output</q> we usually use variables, like x and y. Then we define in words what the variables actually mean or represent.  Most often the notation will look something like this: <m>f(x)=y</m>
-</p>
+        <p>But, instead of writing the words <q>input</q> and <q>output</q> we usually use variables, like x and y. Then we define in words what the variables actually mean or represent.  Most often the notation will look something like this: <m>f(x)=y</m></p>
 
         <p>Inside the parentheses is the <term>Independent Variable</term>, like <m>x</m>, and outside the parentheses, on the other side of the equals sign, is the <term>Dependent Variable</term>, like <m>y</m>.</p>
 
-<!--
-Add a few webwork problems here for the terms "function", "independent variable" and "dependent variable".
-    1.  Suppose <m>f</m> is the rule that takes the area of a circle as its input and then outputs the radius of the circle.
-        (a) What is the correct way to write this rule in function notation?
-            Options:  f(radius) = area, f(area) = radius
-        (b) Which is the dependent variable?
-            Options:  Area, Radius
-        (c) In the equation <m>f(100) \approx 5.64</m>, what is a possible meaning for the number 100?
-            Options:  100 ft, 100 ft^2, 100 ft^3
-    2.  The function <m>h(y) = 24 + 18y</m> would find the height (in inches) of a Paper Birch tree which is <m>24</m> inches tall when it is planted, and grows by 18 inches per year. The independent variable <m>y</m> is the number of years after it is planted.
-        (a) What is the value of <m>h(3)</m>, including the correct units?
-        (b) For the equation <m>h(2) = 60</m>, choose the correct interpretation below:
-            Options: The tree has been growing for 2 years and is now 60 feet tall, The tree has been growing for 60 months and is now 2 feet tall, The tree has been growing for 2 years and is now 60 inches tall, The tree has been growing for 2 months and is now 60 inches tall.
--->
+        <todo>
+            Add a few webwork problems here for the terms "function", "independent variable" and "dependent variable".
+            1.  Suppose <m>f</m> is the rule that takes the area of a circle as its input and then outputs the radius of the circle.
+                (a) What is the correct way to write this rule in function notation?
+                    Options:  f(radius) = area, f(area) = radius
+                (b) Which is the dependent variable?
+                    Options:  Area, Radius
+                (c) In the equation <m>f(100) \approx 5.64</m>, what is a possible meaning for the number 100?
+                    Options:  100 ft, 100 ft^2, 100 ft^3
+            2.  The function <m>h(y) = 24 + 18y</m> would find the height (in inches) of a Paper Birch tree which is <m>24</m> inches tall when it is planted, and grows by 18 inches per year. The independent variable <m>y</m> is the number of years after it is planted.
+                (a) What is the value of <m>h(3)</m>, including the correct units?
+                (b) For the equation <m>h(2) = 60</m>, choose the correct interpretation below:
+                    Options: The tree has been growing for 2 years and is now 60 feet tall, The tree has been growing for 60 months and is now 2 feet tall, The tree has been growing for 2 years and is now 60 inches tall, The tree has been growing for 2 months and is now 60 inches tall.
+        </todo>
 
         <exercise>
             <title>Using Function Notation</title>
@@ -247,15 +247,16 @@ Add a few webwork problems here for the terms "function", "independent variable"
 
             <p>The efficiency of the car is given by the height of the graph.  Therefore <m>f(35) = 28</m> means, <q>The efficiency of the car traveling at <quantity><mag>35</mag><unit base="mileperhour"/></quantity> is <quantity><mag>28</mag><unit base="milepergallon" /></quantity></q>.</p>
         </example>
+        </subsection>
 
-        <paragraphs>
+        <subsection>
             <title>Inputs have unique outputs</title>
             <p>An important property of functions is that any single input value can only have one output value. For instance, the car can only have one efficiency at a given speed. The car cannot get <quantity><mag>10</mag><unit base="milepergallon" /></quantity> and <quantity><mag>20</mag><unit base="milepergallon" /></quantity> simultaneously.</p>
 
 <!--    Note: This could be the case if the car was driven in different gears, or if it was driven up-hill vs. down-hill. Is this important to point out?
 -->
             <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of <quantity><mag>25</mag><unit base="milepergallon" /></quantity> can be attained by traveling at a speed of about <quantity><mag>20</mag><unit base="mileperhour"/></quantity> and also at about <quantity><mag>70</mag><unit base="mileperhour"/></quantity>.</p>
-        </paragraphs>
+        
 
         <exercise>
             <title>Well-Defined</title>
@@ -285,10 +286,13 @@ Add a few webwork problems here for the terms "function", "independent variable"
                 </solution>
             </webwork>
         </exercise>
+        </subsection>
 
-        <paragraphs>
+        <subsection>
             <title>Describing functions with intervals</title>
             <p>A function may have many different characteristics: Its output values may increase or decrease, its graph may curve up or curve down, it may have positive outputs or negative outputs. When describing these characteristics for a function, we typically refer to an <term>interval</term> (connected part) of the input axis, or a particular value of the input where something interesting occurs.</p>
+            
+            <todo>Insert interactive feature so student can practice shading in sections of the vertical and horizontal axes to practice writing or understanding intervals and inequality notation.</todo>
 
             <p>Using our efficiency example, the fuel efficiency increases (goes up) between <quantity><mag>5</mag></quantity> and <quantity><mag>55</mag><unit base="mileperhour"/></quantity> then decreases (goes down) for speeds between <quantity><mag>55</mag></quantity> and <quantity><mag>75</mag><unit base="mileperhour"/></quantity>. Also, the efficiency is lowest at about <quantity><mag>5</mag><unit base="mileperhour"/></quantity> and highest at about <quantity><mag>55</mag><unit base="mileperhour"/></quantity>. </p>
 
@@ -297,7 +301,9 @@ Add a few webwork problems here for the terms "function", "independent variable"
             <p>We could use an <term>inequality</term> to describe the interval where the efficiency function is increasing: <m>5\lt s\lt55</m>.  This means that as the car's speed changes from <quantity><mag>5</mag></quantity> to <quantity><mag>55</mag><unit base="mileperhour"/></quantity>, the efficiency is increasing.</p>
 
             <p>Another characteristic we can describe with inequalities is the <term>concavity</term> of a function. We say a function is <term>concave up</term> if its graph curves upward from left to right, and that it is <term>concave down</term> if it curves downward from left to right. We can see that the efficiency graph is:</p>
-
+            
+            <todo>Insert interactive that changes a graph from concave up to concave down with a slider</todo>
+            
             <ul>
                 <li>
                     <p>concave down for <m>5\lt s\lt60</m>.</p>
@@ -306,15 +312,16 @@ Add a few webwork problems here for the terms "function", "independent variable"
                     <p>concave up for <m>60\lt s\lt75</m>.</p>
                 </li>
             </ul>
-        </paragraphs>
+        </subsection>
 
-        <paragraphs>
-            <title>Evaluating versus Solving.</title>
+        <subsection>
+            <title>Evaluate versus Solve</title>
             <p>The word <term>Evaluate</term> means to use a known input value to find the output value. Evaluating a function looks like this:<me>f(25)</me>It means, <q>Find the result of choosing <quantity><mag>25</mag><unit base="mileperhour"/></quantity></q> as the input. The expression <m>f(25)</m> represents the output <m>27</m>, which we can see from the graph.</p>
 
             <p><term>Solve</term> means the output is already known and we are trying to find all the possible inputs that give us that output. These input values are called <term>solutions</term> of the equation. For instance, we may be asked to <me>\text{Solve }f(s)=25\text{.}</me>This means that we are to find all input values (solutions) that would give us the output <m>25</m>.</p>
 
-            <p>Using the graph of the efficiency function, we see that the equation <m>f(s)=25</m> has two solutions:  <m>s = 20</m> and <m>s = 70</m>.</p>
+            <p>Using the graph of the efficiency function, we see that the equation <m>f(s)=25</m> has two solutions:  <m>s = 20</m> and <m>s = 70</m>. There are two speeds at which the car has an efficiency of <m>25 mpg</m>.</p>
+            <p>In fact, solving graphically is often a preferred method of solving equations becuase the output is essetially the height of the graph.  So when we solve <m>f(s) = 25</m> graphically, we are asking <q>What values of <m>s</m> make the graph <m>25</m> units high?</q></p>
 
 <!--
 Add a webwork problem for these key terms:
@@ -323,25 +330,24 @@ Add a webwork problem for these key terms:
     (a) Evaluate T(77)
     (b) Solve T(F) = -22
 -->
-        </paragraphs>
+            <example>
+                <p>Figure <xref ref="celsius-vs-fahrenheit"/> below shows the function <m>T(F) = C</m>, where <m>F</m> is temperature in degrees Fahrenheit, and <m>C</m> is temperature in degrees Celsius.</p>
+                <figure xml:id="celsius-vs-fahrenheit">
+                    <caption>Celsius Versus Fahrenheit</caption>
+                    <image>
+                        <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[ymin=-80, ymax=100, xlabel={Temperature ($^{\circ}$F)}, ylabel={Temperature ($^{\circ}$C)}, xtick={-100,-50,...,200}, minor xtick={-110,-100,...,220}, ytick={-50,0,...,100}, minor ytick={-80,-70,...,100}, xmin=-112, xmax=212,] 
+                            \addplot+[domain=-100:212] {5/9*(x-32)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+            </example>
+        </subsection>
 
-        <example>
-            <p>Figure <xref ref="celsius-vs-fahrenheit"/> below shows the function <m>T(F) = C</m>, where <m>F</m> is temperature in degrees Fahrenheit, and <m>C</m> is temperature in degrees Celsius.</p>
-            <figure xml:id="celsius-vs-fahrenheit">
-                <caption>Celsius Versus Fahrenheit</caption>
-                <image>
-                    <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[ymin=-80, ymax=100, xlabel={Temperature ($^{\circ}$F)}, ylabel={Temperature ($^{\circ}$C)}, xtick={-100,-50,...,200}, minor xtick={-110,-100,...,220}, ytick={-50,0,...,100}, minor ytick={-80,-70,...,100}, xmin=-112, xmax=212,] 
-                        \addplot+[domain=-100:212] {5/9*(x-32)};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                    </latex-image-code>
-                </image>
-            </figure>
-        </example>
-
-        <paragraphs>
+        <subsection>
             <title>Average Rate of Change</title>
             <p>This a <em>very</em> important topic of this course. You will see it over and over again in various forms. Basically it means slope, but it's more than that. It's also a notation and a concept that sets the stage for calculus.</p>
 
@@ -359,100 +365,100 @@ Add a webwork problem for these key terms:
             </md>The number <m>0.85</m> (notice it is positive) means that between speeds of <quantity><mag>5</mag><unit base="mileperhour"/></quantity> and <quantity><mag>25</mag><unit base="mileperhour"/></quantity>, the car's efficiency is increasing at an average rate of <quantity><mag>0.85</mag><unit base="milepergallon"/></quantity> per <quantity><mag>1</mag><unit base="mileperhour"/></quantity>.</p>
 
             <p>The little triangle symbol <m>\Delta</m> is also very important. It means, <q>Change in</q>. Therefore <m>\Delta f</m> means <q>change in efficiency</q> and <m>\Delta s</m> means <q>change in speed</q>. Together the symbol <m>\frac{\Delta f}{\Delta s}</m> is called <q>average rate of change</q>.</p>
-        </paragraphs>
+        </subsection>
 
-        <paragraphs>
+        <subsection>
             <title>Units</title>
                 <p>Units are the <q>names</q> of the quantities we are counting.  They give meaning to the numbers or values we use in an expression.  When you measure the width of a room the tape measure might count <quantity><mag>10.5</mag><unit base="foot" /></quantity>.  The number <m>10.5</m> is the value and <q>ft</q> is the units.</p> 
 
                 <p>In this example the units of efficiency are <q>mpg (miles per gallon)</q> and the units of speed are <q>mph (miles per hour)</q>.  Therefore the average rate of change for this example will have units of <quantity><unit base="milepergallon" /><per base="mileperhour" /></quantity>.</p>
 
                 <p>As you see, because slope is just <q>rise over run</q> the units of the average rate of change are <q>miles per gallon</q> over <q>miles per hour</q>.</p>
-        </paragraphs>
+        
+            <exercise>
+                <title>Fuel Efficiency</title>
+                <webwork xml:id="webwork-fuel-efficiency">
+                    <pg-macros>
+                        <macro-file>PGchoicemacros.pl</macro-file>
+                    </pg-macros>
+                    <setup>
+                        <var name="$a">
+                            <static>0.12</static>
+                        </var>
+                        <var name="$b">
+                            <static>-0.08</static>
+                        </var>
+                        <pg-code>
+                            $a = 0.12;
+                            $b = -0.08;
+                        </pg-code>
+                    </setup>
+                    <statement>
+                        <p>Below is a table of data and corresponding graph of the fuel efficiency of a midsize car (<quantity><unit base="milepergallon"/></quantity>) as a function of the speed of the car (<quantity><unit base="mileperhour"/></quantity>). Each point on the graph is an ordered pair (speed vs. fuel efficiency). If the car travels at <quantity><mag>15</mag><unit base="mileperhour"/></quantity>, the fuel efficiency is about <quantity><mag>15.3</mag><unit base="milepergallon"/></quantity>. If the car changes speed, then the fuel efficiency changes.</p>
 
-        <exercise>
-            <title>Fuel Efficiency</title>
-            <webwork xml:id="webwork-fuel-efficiency">
-                <pg-macros>
-                    <macro-file>PGchoicemacros.pl</macro-file>
-                </pg-macros>
-                <setup>
-                    <var name="$a">
-                        <static>0.12</static>
-                    </var>
-                    <var name="$b">
-                        <static>-0.08</static>
-                    </var>
-                    <pg-code>
-                        $a = 0.12;
-                        $b = -0.08;
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Below is a table of data and corresponding graph of the fuel efficiency of a midsize car (<quantity><unit base="milepergallon"/></quantity>) as a function of the speed of the car (<quantity><unit base="mileperhour"/></quantity>). Each point on the graph is an ordered pair (speed vs. fuel efficiency). If the car travels at <quantity><mag>15</mag><unit base="mileperhour"/></quantity>, the fuel efficiency is about <quantity><mag>15.3</mag><unit base="milepergallon"/></quantity>. If the car changes speed, then the fuel efficiency changes.</p>
+                        <p>Place one dot at the ordered pair <m>(15, 15.3)</m>. Place the other dot at the ordered pair <m>(25, 29)</m>. Notice as the input changes from <m>15</m> to <m>25</m> (from one dot to the other), the output changes from <m>15.3</m> to <m>29</m>.</p>
 
-                    <p>Place one dot at the ordered pair <m>(15, 15.3)</m>. Place the other dot at the ordered pair <m>(25, 29)</m>. Notice as the input changes from <m>15</m> to <m>25</m> (from one dot to the other), the output changes from <m>15.3</m> to <m>29</m>.</p>
+                        <p>Let <m>m</m> be the slope of the line between the two points.  Notice the slope of the line is <m>m = 1.37</m>.  It turns out <q>average rate of change</q> is just the slope!</p>
 
-                    <p>Let <m>m</m> be the slope of the line between the two points.  Notice the slope of the line is <m>m = 1.37</m>.  It turns out <q>average rate of change</q> is just the slope!</p>
+                        <table>
+                            <tabular left="medium">
+                                <col right="medium"/>
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col right="medium"/>
+                                <row>
+                                    <cell><m>x</m></cell>
+                                    <cell><m>0</m></cell>
+                                    <cell><m>5</m></cell>
+                                    <cell><m>15</m></cell>
+                                    <cell><m>25</m></cell>
+                                    <cell><m>35</m></cell>
+                                    <cell><m>45</m></cell>
+                                    <cell><m>55</m></cell>
+                                    <cell><m>60</m></cell>
+                                    <cell><m>65</m></cell>
+                                    <cell><m>70</m></cell>
+                                    <cell><m>75</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>y</m></cell>
+                                    <cell><m>0</m></cell>
+                                    <cell><m>3.4</m></cell>
+                                    <cell><m>15.3</m></cell>
+                                    <cell><m>29</m></cell>
+                                    <cell><m>38.1</m></cell>
+                                    <cell><m>40.5</m></cell>
+                                    <cell><m>41.7</m></cell>
+                                    <cell><m>40</m></cell>
+                                    <cell><m>36</m></cell>
+                                    <cell><m>30</m></cell>
+                                    <cell><m>22</m></cell>
+                                </row>
+                            </tabular>
+                        </table>
 
-                    <table>
-                        <tabular left="medium">
-                            <col right="medium"/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col right="medium"/>
-                            <row>
-                                <cell><m>x</m></cell>
-                                <cell><m>0</m></cell>
-                                <cell><m>5</m></cell>
-                                <cell><m>15</m></cell>
-                                <cell><m>25</m></cell>
-                                <cell><m>35</m></cell>
-                                <cell><m>45</m></cell>
-                                <cell><m>55</m></cell>
-                                <cell><m>60</m></cell>
-                                <cell><m>65</m></cell>
-                                <cell><m>70</m></cell>
-                                <cell><m>75</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>y</m></cell>
-                                <cell><m>0</m></cell>
-                                <cell><m>3.4</m></cell>
-                                <cell><m>15.3</m></cell>
-                                <cell><m>29</m></cell>
-                                <cell><m>38.1</m></cell>
-                                <cell><m>40.5</m></cell>
-                                <cell><m>41.7</m></cell>
-                                <cell><m>40</m></cell>
-                                <cell><m>36</m></cell>
-                                <cell><m>30</m></cell>
-                                <cell><m>22</m></cell>
-                            </row>
-                        </tabular>
-                    </table>
+                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/nzGcHyhr/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/nzGcHyhr/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                        <p>What is the average rate of change of the fuel efficiency as the car goes from <quantity><mag>10</mag><unit base="mileperhour" /></quantity> to <quantity><mag>55</mag><unit base="mileperhour" /></quantity>?</p>
 
-                    <p>What is the average rate of change of the fuel efficiency as the car goes from <quantity><mag>10</mag><unit base="mileperhour" /></quantity> to <quantity><mag>55</mag><unit base="mileperhour" /></quantity>?</p>
+                        <p><var name="$a" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
 
-                    <p><var name="$a" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
+                        <p>A positive rate of change means the function is increasing on that interval.  A negative rate of change means the function is decreasing on that interval. What is the average rate of change between <quantity><mag>60</mag><unit base="mileperhour" /></quantity> and <quantity><mag>65</mag><unit base="mileperhour" /></quantity>?</p>
 
-                    <p>A positive rate of change means the function is increasing on that interval.  A negative rate of change means the function is decreasing on that interval. What is the average rate of change between <quantity><mag>60</mag><unit base="mileperhour" /></quantity> and <quantity><mag>65</mag><unit base="mileperhour" /></quantity>?</p>
+                        <p><var name="$b" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
 
-                    <p><var name="$b" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
-
-                </statement>
-            </webwork>
-        </exercise>
+                    </statement>
+                </webwork>
+            </exercise>
+        </subsection>
 
         <exercise>
             <title>Equation for a Secant Line</title>

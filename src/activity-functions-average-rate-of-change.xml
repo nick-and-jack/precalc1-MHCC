@@ -22,6 +22,7 @@
             <ul>
                 <li>
                     <p>Perform calculations using function notation including Average Rate of Change.</p>
+                    <p>Define an interval and understand the use of inequality notation to denote an interval.</p>
                 </li>
             </ul>
         </p>
@@ -30,10 +31,9 @@
     </introduction>
     
     <subsection>
+        <title>Intuitive Knowledge</title>
         <p>Let's start by realizing you already understand the concept of <em>average rate of change</em> but maybe you have never hear the phrase before.</p>
         <exercise>
-            <title>Intuitive Knowledge</title>
-
             <webwork xml:id="fastest-train">
                 <pg-macros>
                     <macro-file>PGchoicemacros.pl</macro-file>
@@ -83,12 +83,8 @@
         </exercise>
 
         <p>It turns out that <em>average rate of change</em> is just another way to talk about slope.</p>
-    </subsection>
 
-
-    <subsection>
         <exercise>
-            <title>Interpreting a Transformation</title>
             <introduction>
                 <p>The interactive graph below is that of a function <m>D = f(t)</m> where <em>D</em> is the number of miles a train is from downtown at <m>t</m> hours after 8 am</p>
             </introduction>
@@ -137,12 +133,94 @@
                             <p>The change in time is <var name="$Hchange" width="3" /> hour(s).</p>
                         </li>
                     </ol></p>
-                    <p>The change in position can be expressed using function notation as <var name="$difference" width="10" /></p>
+                    <p>Use function notation to write an expression that represents the <em>chang in distance</em> between the 2nd and 5th hours</p>
+                    <p>The change in distance can be expressed as <var name="$difference" width="10" /></p>
                 </statement>
-                
-                <todo>Alex! Insert here: from Maple acitivity "ACT02_average_rate_of_change", question #4 - "Use function notation to write and expression that represents the change in distance between the 2nd and the 5th hours." The answer needs to accept any spacing issues a student may have when typing in their response "f(5) - f(1)".</todo>
-
             </webwork>
         </exercise>
+
+        <p>In math we use the greek letter <m>\Delta</m> to mean <q>change in</q>. In our train story where <m>D = f(t)</m> the expression <m>\Delta f</m> means <q>change in miles from downtown</q>.  A positive change means the train travels farther from downtown and a negative change means the train travels towards downtown.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$chngDist">
+                        <static>20</static>
+                    </var>
+                    <var name="$meaning" category="set">
+                        <set>
+                             <member correct="yes">\text{Change in hours since 8 <init>a.m.</init>}</member>
+                             <member>\text{Delta t}</member>
+                             <member>\text{Delta times t}</member>
+                             <member>\text{There is no meaning to this expression}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $chngDist = Real(20);
+                        $meaning = PopUp(["?", "Change in hours since 8 <init>a.m.</init>", "Delta t", "Delta times t", "here is no meaning to this expression"], "Change in hours since 8 <init>a.m.</init>");
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>Use your best estimate from the graph to approximate <m>\Delta f</m> during the first 2 hours of the trip</p>
+                    <p><m>\Delta f =</m> <var name="$chngDist" width="5" /> miles</p>
+                    <p>What is the meaning of the expression <m>\Delta t</m> in the context of the train story? <var name="$meaning" form="popup" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+    </subsection>
+    <subsection>
+        <title>Computing Average Rate of Change</title>
+        <p>As we move from one point to another point on a function, there are two changes that take place. The input will change, call it <m>\Delta Input</m> and the output will change, call it <m>\Delta Output</m>.</p>
+        <p>If we divide the two changes we get an <term>average rate of change</term>.</p>
+        <p>An average rate of change  = <m>\frac{\Delta Output}{\Delta Input}</m></p>
+        <p>Does this look familiar?  Think "rise over run".  Once again, average rate of change is just slope</p>
+        <todo>Create the graph of a funciton f(x) = (x-2)(x+3). User places points on the graph at (-4,f(-4)), (-1, f(-1)) and (2, f(2)) these need to be correctly placed.  Then student has to find equations of lines that pass through the first two ordered pairs and through the last two ordered pairs. Somehow need to keep track of the points they plotted on the graph.</todo>
+
+        <exercise>
+            <webwork>
+                <pg-macros>
+                     <macro-file>parserImplicitPlane.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <var name="$slope1">
+                        <static>-4</static>
+                    </var>
+                    <var name="$slope2">
+                        <static>2</static>
+                    </var>
+                    <var name="$lineA">
+                       <static>y=-4x-10</static>
+                    </var>
+                    <var name="$lineB">
+                       <static>y=2x-4</static>
+                    </var>
+                    <pg-code>
+                        $slope1 = Real(-4);
+                        $slope2 = Real(2);
+                        Context()->variables->are(x=>'Real',y=>'Real');
+                        $lineA = ImplicitPlane("y=-4x-10");
+                        $lineB = ImplicitPlane("y=2x-4");
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>The graph of the function <m>f(x) = (x-2)(x+3)</m> is shown above.  Place a point at each of these ordered pairs: <m>(-4,f(-4))</m>, <m>(-1,f(-1))</m>, <m>(2,f(2))</m></p>
+                    <p>Write the equation of the line passing through the points at <m>(-4,f(-4))</m> and <m>(-1,f(-1))</m></p>
+                    <p>The equation for the line is <var name="$lineA" width="15" /></p>
+                    <p>What is the slope of this line?</p>
+                    <p>slope is <var name="$slope1" width="5" /></p>
+                    <p>The slope of the line you found is called the average rate of change of the function on the interval <m>-4 \leq x \leq -1</m>.</p>
+                    <p>This means that as <m>x</m> changes from <m>-4</m> to <m>-1</m>, the function drops by <m>-4</m> units per unit in x, on average.</p>
+                    <p>Write the equation of the line passing through the points at <m>(-1,f(-1))</m> and <m>(2,f(2))</m></p>
+                    <p>The equation for the line is <var name="$lineB" width="15" /></p>
+                    <p>What is the slope of this line?</p>
+                    <p>slope is <var name="$slope2" width="5" /></p>
+                    <p>The slope of the line you found is called the average rate of change of the function on the interval <m>-1\leq x \leq 2</m>.</p>
+                    <p>This means that as <m>x</m> changes from <m>-1</m> to <m>2</m>, the function increases by <m>2</m> units per unit in x, on average.</p>
+                </statement>
+            </webwork>
+        </exercise>
+
     </subsection>
 </section>
