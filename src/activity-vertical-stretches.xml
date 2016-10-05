@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+
+<section xml:id="activity-vertical-stretches" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Vertical Stretches Activity</title>
+  <p>There is nothing here yet.</p>
+
+  <exercise>
+    <webwork xml:id="vertical-stretch-and-compress-table">
+      <setup>
+        <var name="$x[0]"><static>0</static></var>
+        <var name="$x[1]"><static>1</static></var>
+        <var name="$x[2]"><static>4</static></var>
+        <var name="$x[3]"><static>7</static></var>
+        <var name="$x[4]"><static>11</static></var>
+
+        <var name="$a[0]"><static>0</static></var>
+        <var name="$a[1]"><static>3</static></var>
+        <var name="$a[2]"><static>6</static></var>
+        <var name="$a[3]"><static>5</static></var>
+        <var name="$a[4]"><static>3</static></var>
+
+        <var name="$b[0]"><static>0</static></var>
+        <var name="$b[1]"><static>6</static></var>
+        <var name="$b[2]"><static>12</static></var>
+        <var name="$b[3]"><static>10</static></var>
+        <var name="$b[4]"><static>6</static></var>
+
+        <var name="$c[0]"><static>0</static></var>
+        <var name="$c[1]"><static>1.5</static></var>
+        <var name="$c[2]"><static>3</static></var>
+        <var name="$c[3]"><static>2.5</static></var>
+        <var name="$c[4]"><static>1.5</static></var>
+
+        <pg-code>
+          @x=(0,1,4,7,11);
+          @f=map{4*$_*3.14159**(-0.25*$_)}@x;
+          @a=map{($_-int($_)&lt;0.5)?int($_):int($_)+1}@f;
+          @b=map{(2*$_-int(2*$_)&lt;0.5)?int(2*$_):2*int($_)+1}@f;
+          @c=map{(0.5*$_-int(0.5*$_)&lt;0.5)?int(0.5*$_):0.5*int($_)+1}@f;
+        </pg-code>
+
+      </setup>
+
+      <statement>
+        <ul>
+          <li><p>Use the graph of <m>y = f(x)</m> above to approximate the values in the first column of the table to the nearest whole number. These will be the function values you can read directly off of the graph.</p></li>
+          <li><p>Next, using the same <m>x</m> values, approximate the values in the next two colums to the nearest whole number. Remember that multiplying outside of a function by a number will change its <m>y</m> values.</p></li>
+        </ul>
+
+        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dAA6utJV/width/433/height/376/border/888888/sri/true" width="433px" height="376px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <table>
+          <caption>Table of <m>f(x)</m>, <m>2f(x)</m> and <m>\frac{1}{2}f(x)</m></caption>
+          <tabular top="major" halign="center">
+            <col halign="left" />
+            <col />
+            <col />
+            <col />
+
+            <row bottom="medium">
+              <cell><m>x</m></cell>
+              <cell><m>f(x)</m></cell>
+              <cell><m>2f(x)</m></cell>
+              <cell><m>\frac{1}{2}f(x)</m></cell>
+            </row>
+
+            <row>
+              <cell><m><var name="$x[0]" /></m></cell>
+              <cell><var name="$a[0]" width="10" /></cell>
+              <cell><var name="$b[0]" width="10" /></cell>
+              <cell><var name="$c[0]" width="10" /></cell>
+            </row>
+
+            <row>
+              <cell><m><var name="$x[1]" /></m></cell>
+              <cell><var name="$a[1]" width="10" /></cell>
+              <cell><var name="$b[1]" width="10" /></cell>
+              <cell><var name="$c[1]" width="10" /></cell>
+            </row>
+
+            <row>
+              <cell><m><var name="$x[2]" /></m></cell>
+              <cell><var name="$a[2]" width="10" /></cell>
+              <cell><var name="$b[2]" width="10" /></cell>
+              <cell><var name="$c[2]" width="10" /></cell>
+            </row>
+
+            <row>
+              <cell><m><var name="$x[3]" /></m></cell>
+              <cell><var name="$a[3]" width="10" /></cell>
+              <cell><var name="$b[3]" width="10" /></cell>
+              <cell><var name="$c[3]" width="10" /></cell>
+            </row>
+
+            <row>
+              <cell><m><var name="$x[4]" /></m></cell>
+              <cell><var name="$a[4]" width="10" /></cell>
+              <cell><var name="$b[4]" width="10" /></cell>
+              <cell><var name="$c[4]" width="10" /></cell>
+            </row>
+
+          </tabular>
+        </table>
+      </statement>
+
+    </webwork>
+  </exercise>
+
+</section>
