@@ -13,7 +13,6 @@
 
 <section xml:id="activity-vertical-stretches" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vertical Stretches Activity</title>
-  <p>There is nothing here yet.</p>
 
   <exercise>
     <webwork xml:id="vertical-stretch-and-compress-table">
@@ -44,76 +43,201 @@
 
         <pg-code>
           @x=(0,1,4,7,11);
-          @f=map{4*$_*3.14159**(-0.25*$_)}@x;
+          @f=map{4*$_*2.71828**(-0.246*$_)}@x;
           @a=map{($_-int($_)&lt;0.5)?int($_):int($_)+1}@f;
-          @b=map{(2*$_-int(2*$_)&lt;0.5)?int(2*$_):2*int($_)+1}@f;
-          @c=map{(0.5*$_-int(0.5*$_)&lt;0.5)?int(0.5*$_):0.5*int($_)+1}@f;
+          @b=map{2*$_}@a;
+          @c=map{0.5*$_}@a;
         </pg-code>
 
       </setup>
 
       <statement>
         <ul>
-          <li><p>Use the graph of <m>y = f(x)</m> above to approximate the values in the first column of the table to the nearest whole number. These will be the function values you can read directly off of the graph.</p></li>
-          <li><p>Next, using the same <m>x</m> values, approximate the values in the next two colums to the nearest whole number. Remember that multiplying outside of a function by a number will change its <m>y</m> values.</p></li>
+          <li><p>Use the graph of <m>y = f(x)</m> below to approximate the values in the first column of the table to the nearest whole number. These will be the function values you can read directly off of the graph.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dAA6utJV/width/433/height/376/border/888888/sri/true" width="433px" height="376px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <table>
+            <caption>Table of <m>f(x)</m>, <m>2f(x)</m> and <m>1/2*f(x)</m></caption>
+            <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <col />
+              <col />
+
+              <row bottom="medium">
+                <cell><m>x</m></cell>
+                <cell><m>f(x)</m></cell>
+                <cell><m>2f(x)</m></cell>
+                <cell><m>\frac{1}{2}f(x)</m></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[0]" /></m></cell>
+                <cell><var name="$a[0]" width="10" /></cell>
+                <cell><var name="$b[0]" width="10" /></cell>
+                <cell><var name="$c[0]" width="10" /></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[1]" /></m></cell>
+                <cell><var name="$a[1]" width="10" /></cell>
+                <cell><var name="$b[1]" width="10" /></cell>
+                <cell><var name="$c[1]" width="10" /></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[2]" /></m></cell>
+                <cell><var name="$a[2]" width="10" /></cell>
+                <cell><var name="$b[2]" width="10" /></cell>
+                <cell><var name="$c[2]" width="10" /></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[3]" /></m></cell>
+                <cell><var name="$a[3]" width="10" /></cell>
+                <cell><var name="$b[3]" width="10" /></cell>
+                <cell><var name="$c[3]" width="10" /></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[4]" /></m></cell>
+                <cell><var name="$a[4]" width="10" /></cell>
+                <cell><var name="$b[4]" width="10" /></cell>
+                <cell><var name="$c[4]" width="10" /></cell>
+              </row>
+
+            </tabular>
+          </table></li>
+          <li><p>Then use your values from the first column to determine the values in the next two colums for <m>2*f(x)</m> and <m>\frac{1}{2}*f(x)</m>. Remember that multiplying outside of a function by a number will change its output values.</p></li>
         </ul>
+      </statement>
+    </webwork>
+  </exercise>
 
-        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dAA6utJV/width/433/height/376/border/888888/sri/true" width="433px" height="376px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-        <table>
-          <caption>Table of <m>f(x)</m>, <m>2f(x)</m> and <m>\frac{1}{2}f(x)</m></caption>
-          <tabular top="major" halign="center">
-            <col halign="left" />
-            <col />
-            <col />
-            <col />
+  <exercise>
+    <title>The Transformation <m>af(x)</m></title>
+    <webwork xml:id="points-on-a-times-f-of-x">
+      <setup>
+        <var name="$didItGraph"><static>1</static></var>
 
-            <row bottom="medium">
-              <cell><m>x</m></cell>
-              <cell><m>f(x)</m></cell>
-              <cell><m>2f(x)</m></cell>
-              <cell><m>\frac{1}{2}f(x)</m></cell>
-            </row>
+        <pg-code>
+          $didItGraph=Real(1);
+        </pg-code>
 
-            <row>
-              <cell><m><var name="$x[0]" /></m></cell>
-              <cell><var name="$a[0]" width="10" /></cell>
-              <cell><var name="$b[0]" width="10" /></cell>
-              <cell><var name="$c[0]" width="10" /></cell>
-            </row>
+      </setup>
+      <statement>
+        <p>The graph below shows <m>f(x) = 4xe^{-0.246x}</m>. Plot five points on the graph of <m>2f(x)</m> by moving the five blue points to appropriate locations.</p>
+        <p>Note: This is the same function from the last problem.</p>
+        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FNyrMUGq/width/433/height/406/border/888888/sri/true" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <p>Enter the value <m>1</m> if you successfully made the graph of <m>y = 2f(x)</m>.</p>
+        <p><var name="$didItGraph" width="5" /></p>
+        <p>Again, we have the graph of <m>f(x) = 4xe^{-0.246x}</m>. Plot five points on the graph of <m>\frac{1}{2}f(x)</m> by moving the five blue points to appropriate locations.</p>
+        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PFcvTbgD/width/433/height/406/border/888888/sri/true" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <p>Enter the value <m>1</m> if you successfully made the graph of <m>y = \frac{1}{2}f(x)</m>.</p>
+        <p><var name="$didItGraph" width="5" /></p>
+      </statement>
+    </webwork>
+  </exercise>
 
-            <row>
-              <cell><m><var name="$x[1]" /></m></cell>
-              <cell><var name="$a[1]" width="10" /></cell>
-              <cell><var name="$b[1]" width="10" /></cell>
-              <cell><var name="$c[1]" width="10" /></cell>
-            </row>
+  <exercise>
+    <webwork xml:id="formulas-for-a-times-f-of-x">
+      <setup>
+        <var name="$verticalStretch">
+          <set>
+            <member>\text{To make the graph of <m>a*f(x)</m> when <m>a &gt; 1</m>, you compress the graph of <m>f(x)</m> toward the x-axis.}</member>
+            <member correct="yes">\text{To make the graph of <m>a*f(x)</m> when <m>a &gt; 1</m>, you stretch the graph of <m>f(x)</m> away from the x-axis.}</member>
+          </set>
+        </var>
+        <var name="$verticalCompression">
+          <set>
+            <member correct="yes">\text{To make the graph of <m>a*f(x)</m> when <m>0 &lt; a &lt; 1</m>, you compress the graph of <m>f(x)</m> toward the x-axis.}</member>
+            <member>\text{To make the graph of <m>a*f(x)</m> when <m>0 &lt; a &lt; 1</m>, you stretch the graph of <m>f(x)</m> away from the x-axis.}</member>
+          </set>
+        </var>
 
-            <row>
-              <cell><m><var name="$x[2]" /></m></cell>
-              <cell><var name="$a[2]" width="10" /></cell>
-              <cell><var name="$b[2]" width="10" /></cell>
-              <cell><var name="$c[2]" width="10" /></cell>
-            </row>
+        <pg-code>
+          $verticalStretch = RadioButtons(
+          ["To make the graph of \(a*f(x)\) when \(a &gt; 1\), you compress the graph of \(f(x)\) toward the x-axis.","To make the graph of \(a*f(x)\) when \(a &gt; 1\), you stretch the graph of \(f(x)\) away from the x-axis.","None of these"],1,labels => ["Vertical Compression","Vertical Stretch","None of these"],displayLabels => 0
+          );
+          $verticalCompression = RadioButtons(
+          ["To make the graph of \(a*f(x)\) when \(0 &lt; a &lt; 1\), you compress the graph of \(f(x)\) toward the x-axis.","To make the graph of \(a*f(x)\) when \(0 &lt; a &lt; 1\), you stretch the graph of \(f(x)\) away from the x-axis.","None of these"],0,labels => ["Vertical Compression","Vertical Stretch","None of these"],displayLabels => 0
+          );
+        </pg-code>
+      </setup>
 
-            <row>
-              <cell><m><var name="$x[3]" /></m></cell>
-              <cell><var name="$a[3]" width="10" /></cell>
-              <cell><var name="$b[3]" width="10" /></cell>
-              <cell><var name="$c[3]" width="10" /></cell>
-            </row>
+      <statement>
+            <p>The graph below shows a function <m>y = f(x)</m>. Also shown is the graph of <m>y = a*f(x)</m>, and a slider allows you to change the value of <m>a</m> between <m>0</m> and <m>3</m>.</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aSr3RBYV/width/432/height/438/border/888888/sri/true" width="432px" height="438px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <ul>
+          <li>
+            <p>The slider begins at <m>a = 1</m>, so the graphs are identical. Move the slider so <m>a &gt; 1</m> and observe the changes to the graph.</p>
+            <p>Choose the correct statement below about the graph of <m>y = af(x)</m> when <m>a &gt; 1</m>.</p>
+            <p><var name="$verticalStretch" form="buttons" /></p></li>
+          <li>
+            <p>Now, change the slider so that <m>0 &lt; a &lt; 1</m> and observe the changes to the graph.</p>
+            <p>Choose the correct statement below about the graph of <m>y = af(x)</m> when <m>0 &lt; a &lt; 1</m>.</p>
+            <p><var name="$verticalCompression" form="buttons" /></p></li>
+        </ul>
+      </statement>
+    </webwork>
+  </exercise>
 
-            <row>
-              <cell><m><var name="$x[4]" /></m></cell>
-              <cell><var name="$a[4]" width="10" /></cell>
-              <cell><var name="$b[4]" width="10" /></cell>
-              <cell><var name="$c[4]" width="10" /></cell>
-            </row>
+  <exercise>
+    <webwork xml:id="graphs-of-a-times-f-of-x-positive-values">
+      <setup>
 
-          </tabular>
-        </table>
+        <var name="$reflection">
+          <set>
+            <member correct="yes">\text{reflected over the x-axis}</member>
+            <member>\text{reflected over the y-axis}</member>
+          </set>
+        </var>
+
+        <var name="$stretch">
+          <set>
+            <member>\text{vertically compressed by a factor of 1/2}</member>
+            <member>\text{vertically stretched by a factor of 2}</member>
+          </set>
+        </var>
+
+        <pg-code>
+          $reflection=PopUp(["?","reflected over the x-axis","reflected over the y-axis"],"reflected over the x-axis");
+          $stretch=PopUp(["?","vertically compressed by a factor of 1/2","vertically stretched by a factor of 2"],"vertically stretched by a factor of 2");
+        </pg-code>
+
+      </setup>
+
+      <statement>
+        <p>The graph below shows a function <m>y = f(x)</m>. Also shown is the graph of <m>y = a*f(x)</m>, and a slider allows you to change the value of <m>a</m> between <m>-2</m> and <m>3</m>.</p>
+        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/b2KYhMZS/width/433/height/518/border/888888/sri/true" width="433px" height="518px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <p>The slider begins at <m>a = 1</m>, so the graphs are identical. Move the slider so <m>a = -2</m> and observe the changes to the graph.</p>
+        <p>Make the statement below true by using the drop-down menus:</p>
+        <p>The graph of <m>y = -2*f(x)</m> is like the graph of <m>y = f(x)</m>, after it has been <var name="$reflection" form="popup" /> and <var name="$stretch" form="popup" />.</p>
       </statement>
 
     </webwork>
   </exercise>
 
+  <exercise>
+    <webwork xml:id="contrast-a-times-f-and-a-plus-f">
+      <setup>
+        <var name="$description">
+          <set>
+            <member>\text{The transformations <m>a*f(x)</m> and <m>f(x) + a</m> are really the same thing.}</member>
+            <member correct="yes">\text{The transformation <m>a*f(x)</m> stretches or compresses the graph vertically, but <m>f(x) + a</m> shifts the graph up or down.}</member>
+            <member>\text{The transformation <m>a*f(x)</m> shifts the graph up or down, but <m>f(x) + a</m> stretches or compresses the graph vertically.}</member>
+            <member>\text{The transformation <m>a*f(x)</m> changes the graph vertically, but <m>f(x) + a</m> changes the graph horizontally.}</member>
+          </set>
+        </var>
+
+        <pg-code>
+          $description=RadioButtons(["The transformations \(a*f(x)\) and \(f(x) + a\) are really the same thing.","The transformation \(a*f(x)\) stretches or compresses the graph vertically, but \(f(x) + a\) shifts the graph up or down.","The transformation \(a*f(x)\) shifts the graph up or down, but \(f(x) + a\) stretches or compresses the graph vertically.","The transformation \(a*f(x)\) changes the graph vertically, but \(f(x) + a\) changes the graph horizontally."],1,labels => ["Same","af(x) stretches, f(x)+a shifts","af(x) shifts, f(x)+a stretches","af(x) vertical change, f(x)+a horizontal change"],displayLabels => 0);
+        </pg-code>
+      </setup>
+
+      <statement>
+        <p>Which statement below correctly desribes the difference between the transformations <m>a*f(x)</m> and <m>f(x) + a</m>?</p>
+        <p><var name="$description" form="buttons" /></p>
+      </statement>
+    </webwork>
+  </exercise>
 </section>
