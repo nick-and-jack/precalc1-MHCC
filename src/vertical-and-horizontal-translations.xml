@@ -15,256 +15,24 @@
 
     <title>Vertical and Horizontal Translations</title>
     <introduction>
-      <paragraphs>
-        <title>Purpose</title>
-        <p>In this activity, we will explore how to <term>transform</term> the graph of a function by making changes to its formula in the following ways:</p>
+      <p>This chapter concerns function transformations of the type:</p>
+      <ul>
+        <li><m>f(x) + a</m></li>
+        <li>and</li>
+        <li><m>f(x + a)</m></li>
+      </ul>
+      <list>
+        <title>Student Learning Outcomes</title>
         <ul>
-          <li><p><m>f(x) + k</m></p></li>
-          <li><p><m>f(x + h)</m></p></li>
+          <li><p>List the transformations required to graph equations of the form  <m>y = f(x + h) + k</m>, given the graph of <m>y = f(x)</m>, and use those transformations to sketch a graph.</p></li>
+          <li><p>Use transformations of a basic function to sketch graphs, model situations algebraically, and determine domain/range and asymptotes.</p></li>
         </ul>
-        <p>By the end of this activity, you will be able to:</p>
-        <ul>
-          <li><p>Recognize the geometric effect of these types of transformations</p></li>
-          <li><p>Write the formula for a basic function which has been changed by these transformations.</p></li>
-          <li><p>Sketch the graph of a basic function which has been changed by these transformations.</p></li>
-        </ul>
-      </paragraphs>
-
-      <exercise>
-          <title>Function Transformations 1</title>
-
-          <webwork xml:id="vertical-transformation-with-graph">
-
-              <pg-macros>
-                  <macro-file>PGchoicemacros.pl</macro-file>
-              </pg-macros>
-              <setup>
-                <var name="$choice">
-                  <set>
-                      <member>\text{The graph moves right.}</member>
-                      <member>\text{The graph moves left.}</member>
-                      <member correct="yes">\text{The graph moves up.}</member>
-                      <member>\text{The graph moves down.}</member>
-                      <member>\text{None of these}</member>
-                  </set>
-                </var>
-                <var name="$point">
-                  <set>
-                      <member correct="yes">y=f(x)-3=x^2-3</member>
-                      <member>y=f(x)+3=x^2+3</member>
-                      <member>\text{None of these}</member>
-                  </set>
-                </var>
-                <pg-code>
-                  Context('Numeric');
-                  $choice = RadioButtons(
-                    ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
-                    2, labels => ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
-                    displayLabels => 0
-                  );
-                  $point = RadioButtons(
-                    ["\(y = f(x) - 3 = x^2 - 3\)","\(y = f(x) + 3 = x^2 + 3\)","None of these"],
-                    0, labels => ["y=f(x)-3=x^2-3","\(y=f(x)+3=x^2+3\)","None of these"],
-                    displayLabels => 0
-                  );
-                </pg-code>
-              </setup>
-
-              <statement>
-                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pXUT7wZS/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                  <p>The graph starts by showing the function <m>f(x) = x^2</m>. Moving the slider will change the function by adding a number <m>k</m> outside of the function. Use the slider to change the value of <m>k</m> to the number <m>5</m>. What happened to the graph as you changed the formula to <m>f(x) + 5 = x^2 + 5</m>?</p>
-                  <p><var name="$choice" form="buttons" /></p>
-                  <p>Which equation below would graph as a parabola with a vertex at the point <m>(0,-3)</m>?</p>
-                  <p><var name="$point" form="buttons" /></p>
-              </statement>
-          </webwork>
-      </exercise>
-
-      <exercise>
-          <title>Function Transformations 2</title>
-
-          <webwork xml:id="vertical-and-horizontal-transformation-with-graph">
-            <pg-macros>
-                <macro-file>PGchoicemacros.pl</macro-file>
-            </pg-macros>
-
-            <setup>
-              <var name="$changeH">
-                <set>
-                    <member>\text{The graph moves right.}</member>
-                    <member correct="yes">\text{The graph moves left.}</member>
-                    <member>\text{The graph moves up.}</member>
-                    <member>\text{The graph moves down.}</member>
-                    <member>\text{None of these}</member>
-                </set>
-              </var>
-              <var name="$changeHandK">
-                <set>
-                    <member>y=f(x+5)+3=(x+5)^2+3</member>
-                    <member correct="yes">y=f(x-5)+3=(x-5)^2+3</member>
-                    <member>y=f(x-3)+5=(x-3)^2+5</member>
-                    <member>y=f(x+3)-5=(x+3)^2-5</member>
-                    <member>\text{None of these}</member>
-                </set>
-              </var>
-              <pg-code>
-                Context('Numeric');
-                $changeH = RadioButtons(
-                  ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
-                  1, labels => ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
-                  displayLabels => 0
-                );
-                $changeHandK = RadioButtons(
-                  ["\(y = f(x+5) + 3 = (x+5)^2 + 3\)","\(y = f(x-5) + 3 = (x-5)^2 + 3\)","\(y = f(x-3) + 5 = (x-3)^2 + 5\)","\(y = f(x+3) - 5 = (x+3)^2 - 5\)","None of these"],
-                  1, labels => ["y=f(x+5)+3=(x+5)^2+3","y=f(x-5)+3=(x-5)^2+3","y=f(x-3)+5=(x-3)^2+5","y=f(x+3)-5=(x+3)^3+5","None of these"],
-                  displayLabels => 0
-                );
-              </pg-code>
-            </setup>
-
-            <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders will change the function by adding a number <m>k</m> outside the function and a number <m>h</m> inside the function. What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
-                <p><var name="$changeH" form="buttons" /></p>
-                <p>Which equation below would graph as a parabola with a vertex at the point <m>(5,3)</m>?</p>
-                <p><var name="$changeHandK" form="buttons" /></p>
-            </statement>
-          </webwork>
-      </exercise>
-<!-- Begin last activity here... -->
-      <exercise>
-        <webwork xml:id="vertical-and-horizontal-transformation-application-projectile-motion">
-          <setup>
-
-            <var name="$afterOne">
-              <static>0</static>
-            </var>
-
-            <var name="$afterTwo">
-              <static>1</static>
-            </var>
-
-            <var name="$afterThree">
-              <static>2</static>
-            </var>
-
-            <var name="$afterT">
-              <static>t-1</static>
-            </var>
-
-            <var name="$units">
-              <set>
-                <member correct="yes">\text{Seconds}</member>
-                <member>\text{Feet}</member>
-                <member>\text{None of these}</member>
-              </set>
-            </var>
-
-            <pg-code>
-              Context('Numeric');
-              Context()->variables->are(t=>'Real');
-              $afterOne=Real(0);
-              $afterTwo=Real(1);
-              $afterThree=Real(2);
-              $afterT=Formula("t-1");
-              $units=PopUp(["?","Seconds","Feet","None of these"],"Seconds");
-            </pg-code>
-
-          </setup>
-
-          <statement>
-            <p>The function <m>h(t) = -4.9t^2 + 10t + 40</m> will approximate the height of an object which was thrown straight upward at a speed of 10 meters per second at time <m>t = 0</m> seconds from a height of 40 meters. See the graph below.</p>
-            <p>You can move the point to see how high the object will be at a certain time, or when the object will hit the ground.</p>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BmHTxqW6/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Now, we can use this function to describe other situations involving such an object. For example, suppose the person had waited until <m>t = 1</m> second before throwing the object.</p>
-            <p>If the person waited 1 second before throwing it, how long would the object be in the air when <m>t = 1</m>?</p>
-            <p><var name="$afterOne" width="15" /> <var name="$units" form="popup" /></p>
-            <p>If the person waited 1 second before throwing it, how long would the object be in the air when <m>t = 2</m>?</p>
-            <p><var name="$afterTwo" width="15" /> <var name="$units" form="popup" /></p>
-            <p>If the person waited 1 second before throwing it, how long would the object be in the air when <m>t = 3</m>?</p>
-            <p><var name="$afterThree" width="15" /> <var name="$units" form="popup" /></p>
-            <p>In general, if the person waited 1 second before throwing it, how long would the object be in the air when time = <m>t</m> seconds?</p>
-            <p><var name="$afterT" width="15" /> <var name="$units" form="popup" /></p>
-          </statement>
-
-        </webwork>
-
-      </exercise>
-
-      <exercise>
-        <webwork xml:id="vertical-and-horizontal-transformation-application-projectile-motion-graph">
-          <setup>
-
-            <var name="$whichGraph">
-              <set>
-                <member correct="yes">\text{Graph 1}</member>
-                <member>\text{Graph 2}</member>
-              </set>
-            </var>
-
-            <pg-code>
-              $whichGraph=RadioButtons(
-                ["Graph 1", "Graph 2"], 0, displaylabels => 0
-              );
-            </pg-code>
-
-          </setup>
-
-          <statement>
-            <p>Which graph below shows the height of the object if the person waited 1 second before throwing it?</p>
-            <p>Graph 1 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/kCE4de8p/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Graph 2 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PNeV26dS/width/421/height/226/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p><var name="$whichGraph" form="buttons" /></p>
-          </statement>
-        </webwork>
-      </exercise>
-
-      <exercise>
-        <webwork xml:id="vertical-and-horizontal-transformations-application-projectile-motion-time-delay-and-hight-increase">
-          <setup>
-            <var name="$input">
-              <static>t-1</static>
-            </var>
-
-            <var name="$addOrSubtract">
-              <set>
-                <member correct="yes">\text{Add}</member>
-                <member>\text{Subtract}</member>
-              </set>
-            </var>
-
-            <var name="$outputChange">
-              <static>12</static>
-            </var>
-
-            <pg-code>
-              Context()->variables->are(t=>'Real');
-              $input="t-1";
-              $addOrSubtract=PopUp(["?","Add","Subtract"],"Add");
-              $outputChange=Real(12);
-
-            </pg-code>
-
-          </setup>
-
-          <statement>
-
-            <p>Now let's put both types of transformations together in one application.</p>
-            <p>Again, we will use the same function <m>f(t) = -4.9t^2 + 10t + 40</m>, which represents the height of an object which was thrown straight upward at a speed of 10 meters per second, from an initial height of 40 meters.</p>
-            <p>Suppose now that the person waited 1 second and also took it an additional 12 meters higher in elevation before throwing it.</p>
-            <p>Waiting 1 second is a change to the input, so the input of the function will now be: <var name="$input" width="5" /></p>
-            <p>Carrying the object an additional 12 meters upward before throwing it is a change to the output, so we will <var name="$addOrSubtract" form="popup" /> the number <m>12</m> to the outside of the function.</p>
-            <p>Putting these transformations together, the formula will now be:</p>
-            <p><m>f(</m><var name="$input" width="5" /><m>) + </m><var name="$outputChange" width="2" /></p>
-            <p>= <m>-4.9(</m><var name="$input" width="5" /><m>)^2 + 10(</m><var name="$input" width="5" /><m>) + 40 + </m><var name="$outputChange" width="2" /></p>
-
-          </statement>
-        </webwork>
-      </exercise>
-
+      </list>
     </introduction>
+    <xi:include href="./activity-vertical-and-horizontal-translations.xml" />
 
     <conclusion>
+      <title>Gist of Vertical and Horizontal Translations</title>
       <paragraphs>
         <p>To <term>transform</term> a function means to change it -- either its <term>input</term> or its <term>output</term>. If the change is only in position (the graph looks the same, but is in a different location) the change is called a <term>translation</term>. [We will look at other types of transformations in another section.]</p>
         <p>In this lesson we learn how to translate a graph or a table of values. This will involve adding and subtracting values to the input and/or the output of a function's formula.</p>
@@ -428,9 +196,6 @@
             </solution>
           </webwork>
       </exercise>
-
-      <title>Gist of Vertical and Horizontal Translations</title>
-
 
     </conclusion>
 
