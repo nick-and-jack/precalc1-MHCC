@@ -41,8 +41,9 @@
         <title>Math as a Language</title>
         <p>We begin this activity by realizing math is just another language and everything you say or describe in English, you can say or describe in Math. Math is a language specifically to communicate measurements, or values and relationships.</p>
         <p>In this next exercise we learn to communicate the position of a train as time passes and develop the notation to express where the train is at different times.</p>
+        
         <exercise>
-            <webwork>
+            <webwork seed="1">
                 <setup>
                     <var name="$time">
                         <static>2</static>
@@ -59,8 +60,9 @@
                         </set>
                     </var>
                     <pg-code>
-                        $time = Real(2);
-                        $position = Real(30);
+                        $time = Real(random(2,7,1));
+                        if($envir{problemSeed}==1){$time=2;};
+                        $position = Real(40*exp(2.6*($time-2))/(1+exp(2.6*($time-2)))+10);
                         $units = PopUp(["?", "miles", "hours", "miles per hour", "hours per mile"], "miles");
                     </pg-code>
                 </setup>
@@ -425,7 +427,7 @@
 
         <exercise>
             <title>Decide if each situation is possible given the function <m>y = f(x)</m> where <m>x</m> and <m>y</m> are just generic variables.</title>
-            <webwork xml:id="one-input-one-output">
+            <webwork>
                 <setup>
                     <var name="$situation1">
                         <set>
@@ -464,7 +466,7 @@
 
         <exercise>
           <title>Determine if the graph is a function</title>
-          <webwork xml:id="vertical-line-test">
+          <webwork>
             <setup>
               <var name="$nopass">
                 <set>
@@ -497,10 +499,11 @@
             </statement>
           </webwork>
         </exercise>
+        
         <p>Tables are another way to express inputs and outputs. In a vertical table the inputs are on the left while the outputs are on the right.  In a horizontal table, the top row is the input and the bottom row is the output.</p>
         <exercise>
           <title>Determine if each table is a function or not</title>
-          <webwork xml:id="table-function-not-function">
+          <webwork>
             <setup>
               <var name="$table1">
                 <set>
@@ -636,7 +639,7 @@
         </p>
 
         <exercise>
-            <webwork xml:id="solving-graphically">
+            <webwork>
                 <title>Solving Graphically</title>
                 <setup>
                     <var name="$numIntersections">
@@ -707,41 +710,40 @@
                 </statement>
             </webwork>
         </exercise>
-                <!-- If entering into an existing WeBWork question, delete the <exercise> and <webwork> tags and leave only the <setup></setup> -->
-                <exercise>
-                    <webwork>
-                        <setup>
-                            <var name="$b">
-                                <static>0.957</static>
-                            </var>
-                            
-                            <pg-code>
-                                $b = Real(0.957);
-                                $answer = $b+0.1;
-                                $answerevaluator = $answer->cmp(checker => sub {
-                                   my ($correct,$student,$ansHash) = @_;
-                                   return (($student > $b)?1:0);
-                                 });
-                            </pg-code>
-                        </setup>
-        
-                        <statement>
-                            <todo>Insert graph of {2^x} = 0.5x + b with the number b equal to 0.956964. Also need to insert code for conditional questions below. Need to code the no solutions and one solutions parts to this question.</todo>
-                            <p>Find a value for b such that the equation</p>
-                            <p><me>{2^x} = 0.5x + b</me></p>
-                            <p>has two solutions.</p>
-                            <p>If b = <var name="$answer" evaluator="$answerevaluator" width="10" /> then the equation would have two solutions.</p>
-                            <!-- <p>Find a value for b such that the equation</p>
-                            <p><me>{2^x} = 0.5x + b</me></p>
-                            <p>has no solutions.</p>
-                            <p>If b = <var name="$answer" evaluator="$answerevaluator" width="10" /> then the equation would have no solutions.</p>
-                            <p>Find a value for b such that the equation</p>
-                            <p><me>{2^x} = 0.5x + b</me></p>
-                            <p>has one solution.</p>
-                            <p>If b = <var name="$answer" evaluator="$answerevaluator" width="10" /> then the equation would have one solution.</p> -->
-                        </statement>
-                    </webwork>
-                </exercise>
 
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$b">
+                        <static>0.957</static>
+                    </var>
+                    
+                    <pg-code>
+                        $b = Real(0.957);
+                        $answer = $b+0.1;
+                        $answerevaluator = $answer->cmp(checker => sub {
+                           my ($correct,$student,$ansHash) = @_;
+                           return (($student > $b)?1:0);
+                         });
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <todo>Insert graph of {2^x} = 0.5x + b with the number b equal to 0.956964. Also need to insert code for conditional questions below. Need to code the no solutions and one solutions parts to this question.</todo>
+                    <p>Find a value for b such that the equation</p>
+                    <p><me>{2^x} = 0.5x + b</me></p>
+                    <p>has two solutions.</p>
+                    <p>If b = <var name="$answer" evaluator="$answerevaluator" width="10" /> then the equation would have two solutions.</p>
+                    <!-- <p>Find a value for b such that the equation</p>
+                    <p><me>{2^x} = 0.5x + b</me></p>
+                    <p>has no solutions.</p>
+                    <p>If b = <var name="$answer" evaluator="$answerevaluator" width="10" /> then the equation would have no solutions.</p>
+                    <p>Find a value for b such that the equation</p>
+                    <p><me>{2^x} = 0.5x + b</me></p>
+                    <p>has one solution.</p>
+                    <p>If b = <var name="$answer" evaluator="$answerevaluator" width="10" /> then the equation would have one solution.</p> -->
+                </statement>
+            </webwork>
+        </exercise>
     </subsection>
 </section>

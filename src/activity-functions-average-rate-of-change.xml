@@ -89,7 +89,7 @@
                 <p>The interactive graph below is that of a function <m>D = f(t)</m> where <em>D</em> is the number of miles a train is from downtown at <m>t</m> hours after 8 am</p>
             </introduction>
 
-            <webwork xml:id="change-in-function">
+            <webwork>
                 <pg-macros>
                     <macro-file>parserFunction.pl</macro-file>
                 </pg-macros>
@@ -133,13 +133,13 @@
                             <p>The change in time is <var name="$Hchange" width="3" /> hour(s).</p>
                         </li>
                     </ol></p>
-                    <p>Use function notation to write an expression that represents the <em>chang in distance</em> between the 2nd and 5th hours</p>
+                    <p>Use function notation to write an expression that represents the <em>change in distance</em> between the 2nd and 5th hours</p>
                     <p>The change in distance can be expressed as <var name="$difference" width="10" /></p>
                 </statement>
             </webwork>
         </exercise>
 
-        <p>In math we use the greek letter <m>\Delta</m> to mean <q>change in</q>. In our train story where <m>D = f(t)</m> the expression <m>\Delta f</m> means <q>change in miles from downtown</q>.  A positive change means the train travels farther from downtown and a negative change means the train travels towards downtown.</p>
+        <p>In math we use the greek letter <m>\Delta</m> to mean <q>change in</q>. In our train story where <m>D = f(t)</m> the expression <m>\Delta f</m> means <q>change in miles from downtown</q>.  A positive change means the train travels away from downtown and a negative change means the train travels towards downtown.</p>
 
         <exercise>
             <webwork>
@@ -162,6 +162,7 @@
                 </setup>
 
                 <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/gWxmhsGB/width/431/height/313/border/888888" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>Use your best estimate from the graph to approximate <m>\Delta f</m> during the first 2 hours of the trip</p>
                     <p><m>\Delta f =</m> <var name="$chngDist" width="5" /> miles</p>
                     <p>What is the meaning of the expression <m>\Delta t</m> in the context of the train story? <var name="$meaning" form="popup" /></p>
@@ -221,6 +222,139 @@
                 </statement>
             </webwork>
         </exercise>
+        <p>As demonstrated in the previous exercise, the average rate of change of a function depends on what interval (section) of the input axis we use.</p>
+        <p>As a practical example, consider the hourly salary for a worker at a manufacturing plant who works during the day versus someone who works at night.</p>
+        <p>If the day worker works from 8 <init>a.m.</init> to 4 <init>p.m.</init> and earns $168 then over a span of 8 hours the worker has earned an <em>average rate</em> of <m>\frac{168}{8} = 21 \frac{\$}{hour}</m>.
+        But this is on the interval 8 <init>a.m.</init> <m>\leq time \leq</m> 4 <init>p.m.</init></p>
+        <p>However, if the night worker works in the time interval of 4 <init>p.m.</init> <m>\leq time \leq</m> 12 <init>a.m.</init> (from 4 <init>p.m.</init> to 12 <init>a.m.</init>) and earns $200, then over an 8 hour span that worker has earned an <em>average rate</em> of <m>\frac{200}{8} = 25 \frac{\$}{hour}</m>.</p>
+        <p>We see that the average rate is greater during a night interval of time versus a day interval because night workers get paid more at this plant. In each case the average rate of pay, or just average rate, is the total change in money earned (<m>\Delta</m>output) divided the total change in hours worked (<m>\Delta input</m>)</p>
+        <p>To find an average rate of change, two outputs need to be calculated and the results are subtracted.  Then that value is divided by the differce between the two input values.</p>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$deltaInput">
+                        <static>2</static>
+                    </var>
+                    <var name="$deltaF">
+                        <static>-2</static>
+                    </var>
+                    <var name="$aveRate">
+                        <static>-1</static>
+                    </var>
+                    <var name="$aveRate1">
+                        <static>-1</static>
+                    </var>
+                    <var name="$aveRate2">
+                        <static>-1</static>
+                    </var>
 
+                    <pg-code>
+                        $deltaInput = Real(2);
+                        $deltaF = Real(-2);
+                        $aveRate = Real(-1);
+                        $aveRate1 = Real(-1);
+                        $aveRate2 = Real(-1);
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>What is <m>\Delta x</m> on the interval <m>-2 \leq x \leq 0</m></p>
+                    <p><m>\Delta x = </m> <var name="$deltaInput" width="5" /></p>
+                    <p>Use the formula <m>f(x) = (x-2)(x+3)</m> to calculate <m>\Delta f</m> on the interval <m>-2 \leq x \leq 0</m> ?</p>
+                    <p><m>\Delta f = </m> <var name="$deltaF" width="5" /></p>
+                    <p>Use the two results above to calculate <m>\frac{\Delta f}{\Delta x}</m> on the interval <m>-2 \leq x \leq 0</m></p>
+                    <p><m>\frac{\Delta f}{\Delta x} = </m> <var name="$aveRate" width="5" /></p>
+                    <p>One question that comes up a lot is, <q>Does it matter what order to evaluate <m>\frac{\Delta f}{\Delta x}</m></q>?</p>
+                    <p>To answer this question recall earlier you calculated <m>f(0)</m> and <m>f(-2)</m>. Use these values to make the following calculations:</p>
+                    <p><m>\frac{f(0) - f(2)}{0 - 2} = </m> <var name="$aveRate1" width="5" /></p>
+                    <p><m>\frac{f(2) - f(0)}{2 - 0} = </m> <var name="$aveRate2" width="5" /></p>
+                    <p>The only thing that matters is that the ordered pairs are kept together.  In this example the ordere pairs are <m>(0, f(0))</m> and <m>(2,f(2))</m>, if you choose to start with <m>x = 0</m> in the denominator then you must start with <m>f(0)</m> in the numerator.</p>
+                    <p>On the other hand, if you choose to start with <m>x = 2</m> in the denominator then you must start with <m>f(2)</m> in the numerator. We say that the ordered pairs <em>must be vertically aligned</em></p>
+                </statement>
+            </webwork>
+        </exercise>
+        <p>Let's finish this activity by going back to the train example where the distance (miles) of the train from downtown is a function of the time (hours) after 8 <init>a.m.</init>.  In other words <m>D = f(t)</m></p>
+        
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$delDist">
+                        <static>10</static>
+                    </var>
+                    <var name="$delTime">
+                        <static>0.5</static>
+                    </var>
+                    <var name="$distUnits" category="set">
+                        <set>
+                             <member correct="yes">\text{miles}</member>
+                             <member>\text{units}</member>
+                             <member>\text{hours}</member>
+                             <member>\text{miles per hour}</member>
+                        </set>
+                    </var>
+                    <var name="$timeUnits" category="set">
+                        <set>
+                             <member>\text{hours per mile}</member>
+                             <member>\text{miles}</member>
+                             <member correct="yes">\text{hours}</member>
+                             <member>\text{units}</member>
+                        </set>
+                    </var>
+                    <var name="$avRate">
+                        <static>20</static>
+                    </var>
+                    <var name="$avrtUnits" category="set">
+                        <set>
+                             <member>\text{hours}</member>
+                             <member>\text{hours per mile}</member>
+                             <member correct="yes">\text{miles per hour}</member>
+                             <member>\text{miles}</member>
+                        </set>
+                    </var>
+                    <var name="$avrtMeaning" category="set">
+                        <set>
+                             <member>\text{Distance of the train from downtown}</member>
+                             <member correct="yes">\text{Speed of the train}</member>
+                             <member>\text{Time train has traveled}</member>
+                             <member>\text{triangle D over triangle t}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $delDist = Real(10);
+                        $delTime = Real(0.5);
+                        $avRate = Real(20);
+                        $distUnits = PopUp(["?", "miles", "units", "hours", "miles per hour"], "miles");
+                        $timeUnits = PopUp(["?", "hours per mile", "miles", "hours", "units"], "hours");
+                        $avrtUnits = PopUp(["?", "hours", "hours per mile", "miles per hour", "miles"], "miles per hour");
+                        $avrtMeaning = PopUp(["?", "Distance of the train from downtown", "Speed of the train", "Time train has traveled", "triangle D over triangle t"], "Speed of the train");
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>Since the train changes position over time, it means the train is moving.  So the train has <em>speed</em>.  Speed is a kind of rate of change just like an hourly salary is a kind of rate of change.</p>
+
+                    <p>In order to calculate an average speed for the train we need to determine how much distance the train covered <m>\Delta f</m> and how much time it took to cover that distance <m>\Delta t</m>. Consider the interval <m>1.5 \leq 2.0</m>.</p>
+
+                    <p>What is <m>\Delta f</m> on this interval?</p>
+                    <p><m>\Delta f = </m> <var name="$delDist" width="5" /><var name="$distUnits" form="popup" /></p>
+
+                    <p>What is <m>\Delta t</m>on this interval?</p>
+                    <p><m>\Delta t =</m> <var name="$delTime" width="5" /><var name="$timeUnits" form="popup" /></p>
+
+                    <p>Use the values you just found to calculate <m>\frac{\Delta f}{\Delta t}</m></p>
+                    <p><m>\frac{\Delta f}{\Delta t} =</m> <var name="$avRate" width="5" /><var name="$avrtUnits" form="popup" /></p>
+
+                    <p>What does <m>\frac{\Delta f}{\Delta t}</m> represent in this situation?</p>
+
+                    <p><m>\frac{\Delta f}{\Delta t}</m> represents the <var name="$avrtMeaning" form="popup" /></p>
+
+                    <p>Interpret the meaning of the mathematical expression in the context of the train story:</p>
+
+                    <p><m>\frac{\Delta f}{\Delta t} = 45</m> on the interval <m>2 \leq t \leq 5</m></p>
+                    <p>The meaning of the math expression is</p>
+                    
+                </statement>
+            </webwork>
+        </exercise>
     </subsection>
 </section>
