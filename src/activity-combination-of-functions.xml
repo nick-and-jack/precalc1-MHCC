@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+
+<section xml:id="activity-combination-of-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Combination of Functions Activity</title>
+  <exercise>
+    <webwork xml:id="combinations-of-functions-tables">
+      <setup>
+
+        <var name="$x[0]"><static>-4</static></var>
+        <var name="$x[1]"><static>-2</static></var>
+        <var name="$x[2]"><static>0</static></var>
+        <var name="$x[3]"><static>2</static></var>
+        <var name="$x[4]"><static>4</static></var>
+
+        <var name="$f[0]"><static>-9</static></var>
+        <var name="$f[1]"><static>-3</static></var>
+        <var name="$f[2]"><static>-1</static></var>
+        <var name="$f[3]"><static>-3</static></var>
+        <var name="$f[4]"><static>-9</static></var>
+
+        <var name="$g[0]"><static>4</static></var>
+        <var name="$g[1]"><static>7</static></var>
+        <var name="$g[2]"><static>10</static></var>
+        <var name="$g[3]"><static>13</static></var>
+        <var name="$g[4]"><static>16</static></var>
+
+        <var name="$M[0]"><static>-5</static></var>
+        <var name="$M[1]"><static>4</static></var>
+        <var name="$M[2]"><static>9</static></var>
+        <var name="$M[3]"><static>10</static></var>
+        <var name="$M[4]"><static>7</static></var>
+
+        <var name="$N[0]"><static>-13</static></var>
+        <var name="$N[1]"><static>-10</static></var>
+        <var name="$N[2]"><static>-11</static></var>
+        <var name="$N[3]"><static>-16</static></var>
+        <var name="$N[4]"><static>-25</static></var>
+
+        <var name="$P[0]"><static>-36</static></var>
+        <var name="$P[1]"><static>-21</static></var>
+        <var name="$P[2]"><static>-10</static></var>
+        <var name="$P[3]"><static>-39</static></var>
+        <var name="$P[4]"><static>-144</static></var>
+        
+        <pg-code>
+          @x=(-4,-2,0,2,4);
+          @f=map{-0.5*$_**2-1}@x;
+          @g=map{1.5*$_+10}@x;
+          @M=map{$f[$_]+$g[$_]}0..$#f;
+          @N=map{$f[$_]-$g[$_]}0..$#f;
+          @P=map{$f[$_]*$g[$_]}0..$#f;
+
+        </pg-code>
+
+      </setup>
+
+      <statement>
+        <p>The table below shows values of two functions, <m>f</m> and <m>g</m>.</p>
+        <table>
+          <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>f(x)</m></cell>
+                  <cell><m>g(x)</m></cell>
+                  <cell><m>M(x)</m></cell>
+                  <cell><m>N(x)</m></cell>
+                  <cell><m>P(x)</m></cell>
+                </row>
+
+                <row>
+                  <cell><m><var name="$x[0]" /></m></cell>
+                  <cell><var name="$f[0]" /></cell>
+                  <cell><var name="$g[0]" /></cell>
+                  <cell><var name="$M[0]" width="5" /></cell>
+                  <cell><var name="$N[0]" width="5" /></cell>
+                  <cell><var name="$P[0]" width="5" /></cell>
+                </row>
+
+                <row>
+                  <cell><m><var name="$x[1]" /></m></cell>
+                  <cell><var name="$f[1]" /></cell>
+                  <cell><var name="$g[1]" /></cell>
+                  <cell><var name="$M[1]" width="5" /></cell>
+                  <cell><var name="$N[1]" width="5" /></cell>
+                  <cell><var name="$P[1]" width="5" /></cell>
+                </row>
+
+                <row>
+                  <cell><m><var name="$x[2]" /></m></cell>
+                  <cell><var name="$f[2]" /></cell>
+                  <cell><var name="$g[2]" /></cell>
+                  <cell><var name="$M[2]" width="5" /></cell>
+                  <cell><var name="$N[2]" width="5" /></cell>
+                  <cell><var name="$P[2]" width="5" /></cell>
+                </row>
+
+                <row>
+                  <cell><m><var name="$x[3]" /></m></cell>
+                  <cell><var name="$f[3]" /></cell>
+                  <cell><var name="$g[3]" /></cell>
+                  <cell><var name="$M[3]" width="5" /></cell>
+                  <cell><var name="$N[3]" width="5" /></cell>
+                  <cell><var name="$P[3]" width="5" /></cell>
+                </row>
+
+                <row>
+                  <cell><m><var name="$x[4]" /></m></cell>
+                  <cell><var name="$f[4]" /></cell>
+                  <cell><var name="$g[4]" /></cell>
+                  <cell><var name="$M[4]" width="5" /></cell>
+                  <cell><var name="$N[4]" width="5" /></cell>
+                  <cell><var name="$P[4]" width="5" /></cell>
+                </row>
+          </tabular>
+        </table>
+        <p>The three other functions are defined as follows:</p>
+        <ul>
+          <li><p><m>M(x) = f(x) + g(x)</m></p></li>
+          <li><p><m>N(x) = f(x) - g(x)</m></p></li>
+          <li><p><m>P(x) = f(x)*g(x)</m></p></li>
+        </ul>
+        <p>Complete the table of values for <m>M(x)</m>, <m>N(x)</m> and <m>P(x)</m>.</p>
+
+      </statement>
+
+      <solution>
+        <todo>Finish the solution</todo>
+      </solution>
+    </webwork>
+  </exercise>
+
+</section>
