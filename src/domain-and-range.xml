@@ -19,10 +19,9 @@
         <list xml:id="outcomes-domain-and-range">
             <title>Student Learning Outcomes</title>
             <ul>
-                <li><p>insert bullet points here</p></li>
-                <li><p>insert bullet points here</p></li>
-                <li><p>insert bullet points here</p></li>
-                <li><p>insert bullet points here</p></li>
+                <li><p>Determine the domain and range of a function.</p></li>
+                <li><p>Determine from a graph or an equation whether a function is continuous or discontinuous.</p></li>
+                <li><p>Define, distinguish, and apply piecewise-defined functions.</p></li>
             </ul>
         </list>
         <list>
@@ -95,6 +94,72 @@
 
                     <p>Notice the graph only appears from <m>x = 8</m> and to the right. That's the domain of <m>f(x)</m>.</p>
                     <p>Also notice that the graph only appears at or above the <m>x</m>- axis (<m>y = 0</m> or <m>y > 0</m>).  That is the range of <m>f(x)</m> (i.e. range is <m>f(x) \geqslant 0</m>)</p>
+                            
+                    <exercise>
+                        <webwork>
+                            <pg-macros>
+                                <macro-file>parserImplicitPlane.pl</macro-file>
+                            </pg-macros>
+
+                            <setup>
+                                <var name="$lineA">
+                                   <static>y=0.5(x+3)-2</static>
+                               </var>
+
+                                <pg-code>
+                                    Context()->variables->are(x=>'Real',y=>'Real');
+                                    $lineA = ImplicitPlane("y=0.5(x+3)-2");
+                                </pg-code>
+                            </setup>
+            
+                            <statement>
+                                <todo>Exercise 2.0.4: Need to learn how to format a piecewise function and its notation.</todo>
+                                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true/sdz/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                                <p>Find a formula for the piecewise defined function shown in the graph</p>
+                                <p> <var name="$lineA" width="15" /> </p>
+                            </statement>
+                        </webwork>
+                    </exercise>
+
+                    <!-- <exercise>
+                        <webwork>
+                            <setup>
+                                <var name="$startVal">
+                                    <static>-5</static>
+                                </var>
+                                <var name="$endVal">
+                                    <static>0</static>
+                                </var>
+                                <var name="$symbol1" category="set">
+                                    <set>
+                                         <member>{&lt}</member>
+                                         <member correct="yes">{&lt}</member>
+                                         <member>{&gt}</member>
+                                         <member>{&gt}</member>
+                                    </set>
+                                </var>
+                                <var name="$symbol2" category="set">
+                                    <set>
+                                         <member>\text{less than}</member>
+                                         <member correct="yes">\text{less than}</member>
+                                         <member>\text{greater than}</member>
+                                         <member>\text{greater than}</member>
+                                    </set>
+                                </var>
+                                <pg-code>
+                                    $startVal = Real(-5);
+                                    $endVal = Real(0);
+                                    $symbol1 = PopUp(["?", "less than", "less than", "greater than", "greater than"], "less than");
+                                    $symbol2 = PopUp(["?", "less than", "less than", "greater than", "greater than"], "less than");
+                                </pg-code>
+                            </setup>
+            
+                            <statement>
+                                <p>what's the choice</p>
+                                <p><var name="$startVal" width="5" /> <var name="$symbol1" form="popup" /> x <var name="$symbol2" form="popup" /> <var name="$endVal" width="5" /></p>
+                            </statement>
+                        </webwork>
+                    </exercise> -->
         </subsection>
 
     </conclusion>

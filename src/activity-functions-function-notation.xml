@@ -582,61 +582,96 @@
         </exercise>
         <todo>Insert an exercise to determine if an equation is a function or not.</todo>
         <p>Earlier we mentioned the word <term>evaluate</term>. Again, this means to find the value of the output given an input value.</p>
-        <p>But what if the output, the result, is already known and we want to know all the inputs that give us this result?  This is called <term>solve</term>.</p>
-        <p>Solve means to work backwards from a known or given output value and determine all the inputs, if any, will give us that output.</p>
 
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$input1">
-                        <static>20</static>
+                    <var name="$output1">
+                        <static>0</static>
                     </var>
-                    <var name="$input2">
-                        <static>40</static>
+                    <var name="$output2">
+                        <static>0</static>
                     </var>
-                    <var name="$input3">
-                        <static>60</static>
+                    <var name="$output3">
+                        <static>0</static>
+                    </var>
+                    <var name="$numSolutions1">
+                        <static>3</static>
+                    </var>
+                    <var name="$numSolutions2">
+                        <static>1</static>
+                    </var>
+                    <var name="$numSolutions3">
+                        <static>2</static>
+                    </var>
+                    <var name="$solutions1">
+                        <static>-4</static>
+                    </var>
+                    <var name="$solutions2">
+                        <static>-1</static>
+                    </var>
+                    <var name="$solutions3">
+                        <static>2</static>
+                    </var>
+                    <var name="$solutions4">
+                        <static>2.6</static>
+                    </var>
+                    <var name="$solutions5">
+                        <static>-2.73</static>
+                    </var>
+                    <var name="$solutions6">
+                        <static>2.46</static>
                     </var>
                     <pg-code>
-                        $input1 = Real(20);
-                        $input2 = Real(40);
-                        $input3 = Real(60);
+                        $output1 = Real(0);
+                        $output2 = Real(0);
+                        $output3 = Real(0);
+                        $numSolutions1 = Real(3);
+                        $numSolutions1 = Real(1);
+                        $numSolutions1 = Real(2);
+                        $solutions1 = Real(-4);
+                        $solutions2 = Real(-1);
+                        $solutions3 = Real(2);
+                        $solutions4 = Real(2.6);
+                        $solutions5 = Real(-2.73);
+                        $solutions6 = Real(2.46);
                     </pg-code>
                 </setup>
 
                 <statement>
-                    <p>The graph of the function <m>f(x) = (x+4)(x+1)(x-2)*0.1875</m> is shown below.  Use the slider and the manual input box to evaluate each expression.</p>
+                    <p>The graph the the function <m>f(x) = (x+4)(x+1)(x-2)*0.1875</m> is shown below.  Use the slider or the manual input box to evaluate each expression.</p>
                     
-                    <todo>Question 1.1.10 needs to be finished.  Answers need to be updated.</todo>
+                    <todo>Question 1.1.10 needs to be finished.  Graph should show the values of x and f(x) in order to evaluate given expressions.</todo>
 
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/bnSUyhHH/width/431/height/313/border/888888" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>Evaluate <m>f(-4)</m></p>
-                    <p><m>f(-4) = </m> <var name="$input1" width="5" /></p>
+                    <p><m>f(-4) = </m> <var name="$output1" width="5" /></p>
                     <p>Evaluate <m>f(-1)</m></p>
-                    <p><m>f(-1) = </m> <var name="$input2" width="5" /></p>
+                    <p><m>f(-1) = </m> <var name="$output2" width="5" /></p>
                     <p>Evaluate <m>f(2)</m></p>
-                    <p><m>f(2) = </m> <var name="$input3" width="5" /></p>
-                    <p>Use the slider and manual input box to answer these questions about solving.</p>
-                    <p>The output on a graph is basically the height of the graph. In general, if <m>x = 2</m> is the input then <m>y = f(2)</m> is the output.  Therefore <m>x = 2</m> tells us where to move left or right along the horizontal axis and <m>f(2)</m> is the height of the graph when <m>x = 2</m>.</p>
-                    <p>When you see the sentence <q>Solve the equation <m>f(x) = 4.57</m></q> it means, <q>find all the <m>x</m> values where the graph of the function reaches <m>4.57</m> units high.</q></p>
-                    <p>First we must undertand that an equation may have one, many, or infinite or even no solutions. How many solutions does the equation <m>f(x) = 0</m> have?  In other words, how many times is the graph zero units high?</p>
-                    <p>Use the slider or the manual input box to determine how many solutions exist for the equation <m>f(x) = 0</m></p>
+                    <p><m>f(2) = </m> <var name="$output3" width="5" /></p>
                 </statement>
             </webwork>
         </exercise>
+
         <p>Notice that each input gives you only one result, so f(x)  is a function.  Also notice that each input has the same output, that's OKAY!</p>
-
-        <p>But, suppose an <q>unknown</q> input value went into the function.  Since we don't know what the input is, we can call it <q>x</q>. Furthermore, suppose we know the output is <m>y = 0</m>.</p>
-        <p>In English we could ask the question, <q>What input makes the output equal to 0?</q>  and there would be three answers: <m>x = - 4</m> , <m>- 1</m> and <m>2</m>. All of these values of <m>x</m> give us the same result of <m>y = 0</m>.</p>
-
+        <p>But what if the output, the result, is already known and we want to know all the inputs that give us this result?  This is called <term>solve</term>.</p>
+        <p>Solve means to work backwards from a known or given output value and determine all the inputs, if any, that give us the desired output.</p>
+        <p>Suppose we want the output of a function to be <m>y = 0</m>. Therefore, we must find all the input values of <m>x</m> that gives us that result. There may not be any, but there could be one, several or even infinite possible inputs that gives <m>y = 0</m> as the output.</p>
+        <p>In English we could ask the question ror the example in the previous exercise,</p>
+        <blockquote><p><q>What input makes the output equal to 0?</q></p></blockquote>
+        <p>There would be three answers:</p> 
+        <blockquote><p><m>x = - 4</m> , <m>- 1</m> and <m>2</m></p></blockquote>
+        <p>All of these values of <m>x</m> give us the same result of <m>y = 0</m>.</p>
         <p>In math we could ask the same question, but it comes out as a statement.</p>
-        <blockquote>Solve <m>f(x) = 0</m></blockquote>
+        <blockquote><p>Solve <m>f(x) = 0</m></p></blockquote>
         <p>Solve means, <q>Find the input that gives you this result</q>.  In our case the result we want is an output value of <m>0</m>. There are still three answers to the question and each answer is called a <q>solution</q>.</p>
         <p>The statement:</p>
         <blockquote>Solve <m>f(x) = 0</m></blockquote>
         <p>has three solutions:  <m>x = -4</m>, <m>-1</m> and <m>2</m></p>
         <p>On a graph, the output is the height of the graph.  Solve <m>f(x) = 0</m> on a graph means, <q>Find all the places where the graph is zero units high</q>.
         </p>
+        <p>The math sentence <q>Solve the equation <m>f(x) = 4.57</m></q> means, <q>find all the <m>x</m> values where the graph of the function reaches <m>4.57</m> units high.</q> this equation may have one, several, or infinite or even no solutions.</p>
 
         <exercise>
             <webwork>
@@ -649,16 +684,16 @@
                         <static>2</static>
                     </var>
                     <var name="$solution1">
-                        <static>-2.732</static>
+                        <static>-2.7</static>
                     </var>
                     <var name="$solution2">
-                        <static>2.464</static>
+                        <static>2.5</static>
                     </var>
                     <var name="$numSolutions2">
                         <static>1</static>
                     </var>                    
                     <var name="$solution3">
-                        <static>2.657</static>
+                        <static>2.7</static>
                     </var>
                     <var name="$maxNumSolutions">
                         <static>3</static>
@@ -671,10 +706,10 @@
                     <pg-code>
                         $numIntersections = Real(3);
                         $numSolutions1 = Real(2);
-                        $solution1 = Real(-2.732);
-                        $solution2 = Real(2.464);
+                        $solution1 = Real(-2.7);
+                        $solution2 = Real(2.5);
                         $numSolutions2 = Real(1);
-                        $solution3 = Real(2.657);
+                        $solution3 = Real(2.7);
                         $maxNumSolutions = Real(3);
                         $minNumSolutions = Real(1);
 
@@ -688,14 +723,14 @@
                     <p>To solve the equation <m>f(x) = 0</m> graphically, move the horizontal line to <m>y = 0</m></p>
                     <p>The horizontal line intersects with <m>f(x)</m> <var name="$numIntersections" width="5" /> times</p>
                     <p>You can click on the points where the line intersects with the graph and see the coordinates of the points.  Notice that all the y values are 0, but the x values are diffenent.  The x values are the <em>solutions to the equation <m>f(x) = 0</m></em>.</p>
-                    <p>Move the horizontal line to <m>y = 1.9485572</m>. Use this line to solve the equation <m>f(x) = 1.9485572</m></p>
+                    <p>Move the horizontal line to <m>y = 1.94855</m>. Use this line to solve the equation <m>f(x) = 1.94855</m></p>
                     <p>How many solutions does the equation have? If there are none, type <q>no solutions</q>.</p>
                     <p>The equation has <var name="$numSolutions1" width="5" /> solutions.</p>
                     <p>Use the coordinates of the intersection points to determine all the solutions to the equation.</p>
                     <p>The solutions are:</p>
-                        <p><m>x = </m> <var name="$solution1" width="5" /></p>
-                        <p>and</p>
-                        <p><m>x = </m> <var name="$solution2" width="5" /></p>
+                    <p><m>x = </m> <var name="$solution1" width="5" /></p>
+                    <p>and</p>
+                    <p><m>x = </m> <var name="$solution2" width="5" /></p>
                     <p>Use the slider to adjust the height of the horizontal line and find the solutions to <m>f(x) = 3</m></p>
                     <p>How many solutions does this equation have?</p>
                     <p>There are <var name="$numSolutions2" width="5" /> solutions.</p>
@@ -705,8 +740,6 @@
                     <p>The maximum number of solutions is <var name="$maxNumSolutions" width="5" /> </p>
                     <p>What is the minimum number of solutions for the equation?</p>
                     <p>The minimum number of solutions is <var name="$minNumSolutions" width="5" /> </p>
-
-
                 </statement>
             </webwork>
         </exercise>
@@ -717,14 +750,18 @@
                     <var name="$b">
                         <static>0.957</static>
                     </var>
-                    
+                    <var name="$answer1">
+                        <static>1.1</static>
+                    </var>
+        
                     <pg-code>
                         $b = Real(0.957);
-                        $answer = $b+0.1;
-                        $answerevaluator = $answer->cmp(checker => sub {
+                        $answer1 = $b+0.1;
+                        $answerevaluator = $answer1->cmp(checker => sub {
                            my ($correct,$student,$ansHash) = @_;
                            return (($student > $b)?1:0);
                          });
+                         <todo>Having issues with coding rest of this question for 1 or no solutions.</todo>
                     </pg-code>
                 </setup>
 
@@ -733,15 +770,10 @@
                     <p>Find a value for b such that the equation</p>
                     <p><me>{2^x} = 0.5x + b</me></p>
                     <p>has two solutions.</p>
-                    <p>If b = <var name="$answer" evaluator="$answerevaluator" width="10" /> then the equation would have two solutions.</p>
-                    <!-- <p>Find a value for b such that the equation</p>
-                    <p><me>{2^x} = 0.5x + b</me></p>
-                    <p>has no solutions.</p>
-                    <p>If b = <var name="$answer" evaluator="$answerevaluator" width="10" /> then the equation would have no solutions.</p>
+                    <p>If b = <var name="$answer1" evaluator="$answerevaluator" width="10" /> then the equation would have two solutions.</p>
                     <p>Find a value for b such that the equation</p>
                     <p><me>{2^x} = 0.5x + b</me></p>
-                    <p>has one solution.</p>
-                    <p>If b = <var name="$answer" evaluator="$answerevaluator" width="10" /> then the equation would have one solution.</p> -->
+                    <p>has no solutions.</p>
                 </statement>
             </webwork>
         </exercise>

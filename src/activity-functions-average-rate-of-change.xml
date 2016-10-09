@@ -34,7 +34,7 @@
         <title>Intuitive Knowledge</title>
         <p>Let's start by realizing you already understand the concept of <em>average rate of change</em> but maybe you have never hear the phrase before.</p>
         <exercise>
-            <webwork xml:id="fastest-train">
+            <webwork>
                 <pg-macros>
                     <macro-file>PGchoicemacros.pl</macro-file>
                 </pg-macros>
@@ -100,6 +100,10 @@
                     <var name="$Hchange">
                         <static>1</static>
                     </var>
+                    <var name="$difference">
+                        <static>f(5)-f(2)</static>
+                    </var>
+                    
                     <!-- Within parserFunction below the formula has nothing to do with the problem.  It's only there to be function to generate values for us -->
                     <pg-code>
                         Context('Numeric');
@@ -319,6 +323,33 @@
                              <member>\text{triangle D over triangle t}</member>
                         </set>
                     </var>
+                    <var name="$speed">
+                        <static>45</static>
+                    </var>
+                    <var name="$meaning" category="set">
+                        <set>
+                             <member>\text{distance of the train from downtown}</member>
+                             <member>\text{time the train has traveled}</member>
+                             <member correct="yes">\text{speed of the train}</member>
+                             <member>\text{triangle D divided by triangle t}</member>
+                        </set>
+                    </var>
+                    <var name="$lastUnit" category="set">
+                        <set>
+                             <member>\text{miles}</member>
+                             <member>\text{hours per mile}</member>
+                             <member>\text{hours}</member>
+                             <member correct="yes">\text{miles per hour}</member>
+                        </set>
+                    </var>
+                    <var name="$interval" category="set">
+                        <set>
+                             <member>\text{2 p.m. and 5 p.m.}</member>
+                             <member correct="yes">\text{10 a.m. and 1 p.m.}</member>
+                             <member>\text{2 and 5}</member>
+                             <member>\text{2 mph and 5 mph}</member>
+                        </set>
+                    </var>
                     <pg-code>
                         $delDist = Real(10);
                         $delTime = Real(0.5);
@@ -327,13 +358,17 @@
                         $timeUnits = PopUp(["?", "hours per mile", "miles", "hours", "units"], "hours");
                         $avrtUnits = PopUp(["?", "hours", "hours per mile", "miles per hour", "miles"], "miles per hour");
                         $avrtMeaning = PopUp(["?", "Distance of the train from downtown", "Speed of the train", "Time train has traveled", "triangle D over triangle t"], "Speed of the train");
+                        $speed= Real(45);
+                        $meaning = PopUp(["?", "distance of the train from downtown", "time the train has traveled", "speed of the train", "triangle D divided by triangle t"], "speed of the train");
+                         $lastUnit = PopUp(["?", "miles", "hours per mile", "hours", "miles per hour"], "miles per hour");
+                         $interval = PopUp(["?", "2 p.m. and 5 p.m.", "10 a.m. and 1 p.m.", "2 and 5", "2 mph and 5 mph"], "10 a.m. and 1 p.m.");
                     </pg-code>
                 </setup>
 
                 <statement>
-                    <p>Since the train changes position over time, it means the train is moving.  So the train has <em>speed</em>.  Speed is a kind of rate of change just like an hourly salary is a kind of rate of change.</p>
+                    <p>Because the train changes position over time, it means the train is moving.  So the train has <em>speed</em>.  Speed is a kind of rate of change just like an hourly salary is a kind of rate of change.</p>
 
-                    <p>In order to calculate an average speed for the train we need to determine how much distance the train covered <m>\Delta f</m> and how much time it took to cover that distance <m>\Delta t</m>. Consider the interval <m>1.5 \leq 2.0</m>.</p>
+                    <p>In order to calculate an average speed for the train we need to determine how much distance the train covered <m>\Delta f</m> and how much time it took to cover that distance <m>\Delta t</m>. Consider the interval <m>1.5 \leq t \leq 2.0</m>.</p>
 
                     <p>What is <m>\Delta f</m> on this interval?</p>
                     <p><m>\Delta f = </m> <var name="$delDist" width="5" /><var name="$distUnits" form="popup" /></p>
@@ -350,8 +385,8 @@
 
                     <p>Interpret the meaning of the mathematical expression in the context of the train story:</p>
 
-                    <p><m>\frac{\Delta f}{\Delta t} = 45</m> on the interval <m>2 \leq t \leq 5</m></p>
-                    <p>The meaning of the math expression is</p>
+                    <p><m>\frac{\Delta f}{\Delta t} = 45</m> on the interval <m>2 \leq t \leq 5</m> means that</p>
+                     <p>the average <var name="$meaning" form="popup" /> is <var name="$speed" width="5" /><var name="$lastUnit" form="popup" /><var name="$interval" form="popup" /></p>
                     
                 </statement>
             </webwork>
