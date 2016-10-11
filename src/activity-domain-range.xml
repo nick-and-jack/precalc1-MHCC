@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+<section xml:id="activity-domain-range" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Activity Domain and Range</title>
+
+  <subsection>
+      <title>Intervals</title>
+
+      <p>An interval is a section or portion of either the vertical or horizontal axis.  We use intervals to help describe the behavior of a function.  For instance the temperature T in degrees fahrenheit throughout the day depends on the time of day t hours after midnight.  In function notation would could write</p>
+      <p><me>T = f(t)</me></p>
+      <p>Starting from midnight at t = 0 the temperature is typically still dropping until about 5 hours (5 <init>a.m.</init>) when it is coldest.  Then as the sun comes up, the temperature begins to increase until it hits the hotest time of the day, maybe 17 hours (5 <init>p.m.</init>). From then on the temperature begins to drop again and the cycle repeast itself.</p>
+      <p>The rise and fall of the temperature during the day happens at certain intervals of time.  We observe the temperature increases for times between 5 hours and 17 hours after midnight.  In math this sentence is written like this</p>
+      <blockquote>T increases for <m>5 \leqslant t \leqslant 17</m></blockquote>
+      <p>Likewise, the temperature outside is decreasing for times between 0 hours and 5 hours after midnight, then again for times between 17 hours and 24 hours after midnight. In math this sentence is written like this</p>
+      <blockquote>T decreases for <m>0 \leqslant t \leqslant 5</m> and <m>17 \leqslant t \leqslant 24</m></blockquote>
+      <p>Notice in each case our observations about temperature T were based on the <em>input</em> <m>t</m> that give us the desired results. The ouputs have certain properties on different sections of the input axis.</p>
+      <p>In this course we will use intervals of the horizontal axis to describe where a defined or not, whether the funciton is positive/negative or zero, if it is concave up or down and where a function is increasing or decreasing.</p>
+
+      <todo>Insert graphical activity to highlight intervals on the horizontal axis. Include practice with writing interval notation and interpreting interval notation.</todo>
+        
+          <exercise>
+              <webwork>
+                  <setup>
+                      <var name="$variablename2">
+                          <static>20</static>
+                      </var>
+                      
+                      <pg-code>
+                          $variablename2 = Real(20);
+                      </pg-code>
+                </setup>
+      
+                <statement>
+                    <p>statement text</p>
+      
+                    <p><var name="$variablename2" width="5" /></p>
+                </statement>
+              </webwork>
+          </exercise>
+  </subsection>
+
+  <subsection>
+      <title>Domain and Range</title>
+
+      <p>What kinds of input does a function accept?  Once a function is given an input value, what are all the possible outputs you can get?  These are good questions and in math we have our own words to ask the same questions.  The kinds of inputs a function will accept is called the <em>Domain</em> of the function.  All the possible outcomes is call the <em>Range</em>.</p>
+      <p>For a simple example, consider online shopping at a t-shirt store.  Each t-shirt costs $13.00 and each time you click on the <q>add to shopping cart</q> your account adds a charge for $13.00.  In this case the cost C of shopping is a function of the number N of t-shirts you add to the cart.  Therefore, <m>C = f(N)</m>.</p>
+      <p>What kinds of values for N does our function accept?  Well, you can't choose to buy negative t-shirts so N can't be less than zero.  You can buy 0 t-shirts or 1 or 2 or more, but you can't buy 1.5 t-shirts or 2.63 t-shirts.  You can only buy whole t-shirts, not fractions of shirts.</p>
+      <p>In math we say that the domain of our function is non-negative integers.  That is the domain is all N = 0, 1, 2, 3, <init>etc.</init> these are the only numbers that make sense for our function, the only numbers our function accepts.</p>
+      <p>What are all the possible output values of our function?  Let's see, if you don't click to add t-shirts, <m>N = 0</m>, to your cart you won't pay anything, <m>f(0) = 0</m>.  If you choose <m>N = 1</m> t-shirts you will pay $13.00  At <m>N = 2</m> you pay $26.00</p>
+      <p>Notice you can't pay a negative amount.  The least cost you will ever get is $0.00 for <m>N = 0</m> t-shirts. Also notice you will never have a final checkout of $10.00 or $18.00, in fact, you will only pay in multiples of $13.00 because, again, you can't buy fractions of a t-shirt.</p>
+      <p>In math we say the <em>range</em> of our function is all non-negative integer multiples of 13</p>
+      <p>Sometimes a function can use any number, like <q>all real numbers</q> and sometimes a function may only defined for certain kinds of values. Likewise the range of a function could be <q>all real numbers</q> or maybe there are only specific values the function will ever produce.</p>
+      <p>In this activity we observe the domain and range of a fucntion graphically then in tables and finally in formulas.</p>
+
+      <p>checkout the graph of <m>f(x) shown in the exercise below.  Use the slider to adust the domain of the function and see how it affects the range</m></p>
+      <todo>Insert graph that has adjustable domain, maybe highlight interval on x-axis while the range changes and is highlighted in a different color.  User identifies the domain and range of the graph.</todo>
+          <exercise>
+              <webwork>
+                  <setup>
+                      <var name="$variablename">
+                          <static>10</static>
+                      </var>
+                      
+                      <pg-code>
+                          $variablename = Real(10);
+                      </pg-code>
+                </setup>
+      
+                <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/meHRtkrp/width/431/height/341/border/888888/sri/true/sdz/true" width="431px" height="341px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>statement text</p>
+      
+                    <p><var name="$variablename" width="5" /></p>
+                </statement>
+              </webwork>
+          </exercise>
+  </subsection>
+</section>

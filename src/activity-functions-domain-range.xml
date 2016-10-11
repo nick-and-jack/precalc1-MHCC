@@ -10,7 +10,7 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-<section xml:id="activity-functions-domain-range-piecewise" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="activity-functions-domain-range" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Activity Domain and Range</title>
 
   <subsection>
@@ -27,27 +27,7 @@
 
       <todo>Insert graphical acitivity to highlight intervals on the horizontal axis.</todo>
 
-   <exercise>
-       <webwork>
-           <pg-macros>
-             <macro-file>parserImplicitPlane.pl</macro-file>
-           </pg-macros>
-           <setup>
-               <var name="$lineA">
-                   <static>y=3x-1</static>
-               </var>
-               
-               <pg-code>
-                    Context()->variables->are(x=>'Real',y=>'Real');
-                   $lineA = ImplicitPlane("y=3x-1");
-               </pg-code>
-           </setup>
-
-           <statement>
-               <p>this is line A <var name="$lineA" width="15" /></p>
-           </statement>
-       </webwork>
-   </exercise>
+   
   </subsection>
 
   <subsection>
