@@ -101,16 +101,69 @@
                         <webwork>
                             <pg-macros>
                                 <macro-file>parserImplicitPlane.pl</macro-file>
+                                <macro-file>contextInequalities.pl</macro-file>
                             </pg-macros>
 
                             <setup>
-                                <var name="$lineA">
+                                <var name="$blueLine">
                                    <static>y=0.5(x+3)-2</static>
                                </var>
+                               <var name="$greenLine">
+                                   <static>y=0.5(x+3)-2</static>
+                               </var>
+                               <var name="$startValBlue">
+                                    <static>-5</static>
+                                </var>
+                                <var name="$endValBlue">
+                                    <static>0</static>
+                                </var>
+                                <var name="$startValGreen">
+                                    <static>1</static>
+                                </var>
+                                <var name="$endValGreen">
+                                    <static>4</static>
+                                </var>
 
+                                <todo>Find out how to write - less than or equal to - and the other one.  Correct answer for all symbols below should be \leqslant except symbol2 should be \lt.</todo>
+                                <var name="$symbol1" category="set">
+                                    <set>
+                                         <member>{&lt;}</member>
+                                         <member correct="yes">{&lt;}</member>
+                                         <member>{&gt;}</member>
+                                         <member>{&gt;}</member>
+                                    </set>
+                                </var>
+                                <var name="$symbol2" category="set">
+                                    <set>
+                                         <member>{&lt;}</member>
+                                         <member correct="yes">{&lt;}</member>
+                                         <member>{&gt;}</member>
+                                         <member>{&gt;}</member>
+                                    </set>
+                                </var>
+                                <var name="$symbol3" category="set">
+                                    <set>
+                                         <member>{&lt;}</member>
+                                         <member correct="yes">{&lt;}</member>
+                                         <member>{&gt;}</member>
+                                         <member>{&gt;}</member>
+                                    </set>
+                                </var>
+                                <var name="$symbol4" category="set">
+                                    <set>
+                                         <member>{&lt;}</member>
+                                         <member correct="yes">{&lt;}</member>
+                                         <member>{&gt;}</member>
+                                         <member>{&gt;}</member>
+                                    </set>
+                                </var>
+                            
                                 <pg-code>
                                     Context()->variables->are(x=>'Real',y=>'Real');
-                                    $lineA = ImplicitPlane("y=0.5(x+3)-2");
+                                    $blueLine = ImplicitPlane("y=0.5(x+3)-2");
+                                    $greenLine = ImplicitPlane("y=3");
+                                    Context("Inequalities");
+                                    $answer1 = Compute("-5&lt;=x&lt;0");
                                 </pg-code>
                             </setup>
             
@@ -118,50 +171,11 @@
                                 <todo>Exercise 2.0.4: Need to learn how to format a piecewise function and its notation.</todo>
                                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true/sdz/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                                 <p>Find a formula for the piecewise defined function shown in the graph</p>
-                                <p> <var name="$lineA" width="15" /> </p>
+                                <p>What is the equation of the blue line? <var name="$blueLine" width="15" /> and what is its domain? <var name="$answer1" width="5" /></p>
                             </statement>
                         </webwork>
                     </exercise>
-
-                    <!-- <exercise>
-                        <webwork>
-                            <setup>
-                                <var name="$startVal">
-                                    <static>-5</static>
-                                </var>
-                                <var name="$endVal">
-                                    <static>0</static>
-                                </var>
-                                <var name="$symbol1" category="set">
-                                    <set>
-                                         <member>{&lt}</member>
-                                         <member correct="yes">{&lt}</member>
-                                         <member>{&gt}</member>
-                                         <member>{&gt}</member>
-                                    </set>
-                                </var>
-                                <var name="$symbol2" category="set">
-                                    <set>
-                                         <member>\text{less than}</member>
-                                         <member correct="yes">\text{less than}</member>
-                                         <member>\text{greater than}</member>
-                                         <member>\text{greater than}</member>
-                                    </set>
-                                </var>
-                                <pg-code>
-                                    $startVal = Real(-5);
-                                    $endVal = Real(0);
-                                    $symbol1 = PopUp(["?", "less than", "less than", "greater than", "greater than"], "less than");
-                                    $symbol2 = PopUp(["?", "less than", "less than", "greater than", "greater than"], "less than");
-                                </pg-code>
-                            </setup>
-            
-                            <statement>
-                                <p>what's the choice</p>
-                                <p><var name="$startVal" width="5" /> <var name="$symbol1" form="popup" /> x <var name="$symbol2" form="popup" /> <var name="$endVal" width="5" /></p>
-                            </statement>
-                        </webwork>
-                    </exercise> -->
+                    <todo>Insert last interactive where student is given a piecewise formula and they have to graph it.</todo>
         </subsection>
 
     </conclusion>
