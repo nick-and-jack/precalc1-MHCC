@@ -137,8 +137,10 @@
 
             <var name="$description2">
               <set>
-                <member>\text{left}</member>
-                <member correct="yes">\text{right}</member>
+                <member>\text{up}</member>
+                <member>\text{down}</member>
+                <member>\text{to the left}</member>
+                <member correct="yes">\text{to the right}</member>
               </set>
             </var>
 
@@ -157,11 +159,11 @@
 
             <pg-code>
               $description1=PopUp(["?","horizontal axis","vertical axis"],"vertical axis");
-              $description2=PopUp(["?","left","right"],"right");
+              $description2=PopUp(["?","up","down","to the left","to the right"],"to the right");
               $description3=PopUp(["?","horizontal axis","vertical axis"],"horizontal axis");
               $a=random(2,9,1);
               do{$b=random(2,9,1)}until($a!=$b);
-              $c=random(2,9,1);
+              do{$c=random(2,9,1)}until(($a!=$c)and($b!=$c));
               Context()->variables->are(n=>'Real');
               $f=Compute("(-n)^2-$a*(-n)+$b");
               $g=Compute("-((n-$c)^2-$a*(n-$c)+$b)");
@@ -172,12 +174,21 @@
             <p>Let <m>m(n) = n^2 - <var name="$a" />n + <var name="$b" /></m>.</p>
             <ul>
               <li><p>Write a formula for the transformation <m>m(-n)</m> and geometrically describe the transformation.</p>
+              <p>To do this, we use the <em>blank</em> method, whereby we rewrite the output <m>n^2 - <var name="$a" />n + <var name="$b" /></m>, but replace all instances of the variable <m>n</m> with the new input, <m>-n</m>. Remember to use parentheses when substituting this in for <m>n</m>.</p>
               <p>Formula: <m>m(-n) = </m><var name="$f" width="15" /></p>
-              <p>Description: Reflect the graph of <m>m(n)</m> over the <var name="$description1" form="popup" /></p></li>
+              <p>For the geometric description, remember that we are taking the opposite of the input variable, so this will affect the graph's position in the horizontal direction.</p>
+              <p>Description: This will reflect the graph of <m>m(n)</m> over the <var name="$description1" form="popup" /></p></li>
 
-              <li><p>Write a formula for the transformation <m>-m(n - </m><var name="$c" /><m>)</m></p>
+              <li><p>Write a formula for the transformation <m>-m(n - </m><var name="$c" /><m>)</m>.</p>
+              <p>There are two changes here: Subtracting a number from the input, and the opposite symbol outside.</p>
+              <p>First we will take care of the inside change, by replacing all instances of the variable <m>n</m> with the new input, <m>n - <var name="$c" /></m>. Remember again to use parentheses when substituting this in for <m>n</m>.</p>
+              <p>This would leave us with:</p>
+              <p><m>(n - </m><var name="$c" width="4" /><m>)^2 - </m><var name="$a" width="4" /><m>(n - </m><var name="$c" width="4" /><m>) + </m><var name="$b" width="4" /></p>
+              <p>Last, we take care of the outside change by putting the opposite symbol outside of this whole expression by using parentheses.</p>
               <p>Formula: <m>-m(n - </m><var name="$c" /><m>) = </m><var name="$g" width="15" /></p>
-              <p>Description: Shift the graph of <m>m(n)</m> by <var name="$c" /> units to the <var name="$description2" form="popup"/> and reflect over the <var name="$description3" form="popup" /></p></li>
+              <p>For the geometric description, we must remember what each type of change to the formula will do to the graph.</p>
+              <p>The inside change of subtracting <var name="$c" /> will move the graph in the horizontal direction. The outside change of taking the opposite will affect the output (<m>y</m>) values by changing their sign.</p>
+              <p>Description: This will shift the graph of <m>m(n)</m> by <var name="$c" /> units to the <var name="$description2" form="popup"/> and reflect over the <var name="$description3" form="popup" /></p></li>
             </ul>
           </statement>
           <solution>

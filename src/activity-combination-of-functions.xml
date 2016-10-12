@@ -13,6 +13,65 @@
 
 <section xml:id="activity-combination-of-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Combination of Functions Activity</title>
+  <introduction>
+    <p>These first three exercises introduce <term>combinations of functions</term> in the context of a table of values, a graph, and a formula.</p>
+    <p>In the problems that follow, remember that <m>f(x)</m> refers to the ouput of the function <m>f</m>.</p>
+  </introduction>
+
+  <exercise>
+    <webwork xml:id="combinations-first-example">
+      <pg-macros>
+          <macro-file>PGchoicemacros.pl</macro-file>
+      </pg-macros>
+
+      <setup>
+        <var name="$x"><static>7</static></var>
+        <var name="$M"><static>3</static></var>
+        <var name="$N"><static>4</static></var>
+        <var name="$s"><static>7</static></var>
+        <var name="$d"><static>-1</static></var>
+        <var name="$p"><static>16</static></var>
+        <var name="$q"><static>4</static></var>
+
+        <pg-code>
+          $x=random(2,4,1);
+          $M=random(5,8,1);
+          $N=random(9,12,1);
+          $s=$M+$N;
+          $d=$M-$N;
+          $p=$M*$N;
+          $q=$M/$N;
+        </pg-code>
+
+      </setup>
+      <statement>
+        <p>Combining functions is just like performing regular operations with real numbers, except now we do so with function outputs.</p>
+        <p>Remember that if <m>w(4) = 9</m>, then any time you see the expression <m>w(4)</m>, you can just rewrite it as the number <m>9</m>.</p>
+        <p>Then, an expression such as <m>7 + w(4)</m> would just mean <m>7 + 9</m>, and the result would be <m>16</m>.</p>
+        <p>Now suppose we have the following facts about functions <m>M</m> and <m>N</m>:</p>
+        <p><md><mrow>M(<var name="$x" />) = <var name="$M" /></mrow><mrow>N(<var name="$x" />) = <var name="$N" /></mrow></md></p>
+        <p>If we define a new function <m>s(x) = M(x) + N(x)</m>, then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.</p>
+        <p>Answer: <m>s(<var name="$x" />)</m> = <var name="$s" width="10" /></p>
+        <p>Now, we could define many other functions which are combinations of <m>M</m> and <m>N</m>, such as:</p>
+        <p><md><mrow>d(x) = M(x) - N(x)</mrow><mrow>p(x) = M(x)*N(x)</mrow><mrow>q(x) = \frac{\displaystyle{M(x)}}{\displaystyle{N(x)}}</mrow></md></p>
+        <p>Using these definitions, evaluate each of the following:</p>
+        <ul>
+          <li><p><m>d(</m><var name="$x" /><m>) = </m><var name="$d" width="10" /></p></li>
+          <li><p><m>p(</m><var name="$x" /><m>) = </m><var name="$p" width="10" /></p></li>
+          <li><p><m>q(</m><var name="$x" /><m>) = </m><var name="$q" width="10" /></p></li>
+        </ul>
+      </statement>
+      <solution>
+        <ol>
+          <li><p><m>s(<var name="$x" />) = </m><var name="$s" /></p></li>
+          <li><p><m>d(</m><var name="$x" /><m>) = </m><var name="$d" /></p></li>
+          <li><p><m>p(</m><var name="$x" /><m>) = </m><var name="$p" /></p></li>
+          <li><p><m>q(</m><var name="$x" /><m>) = </m><var name="$q" /></p></li>
+        </ol>
+      </solution>
+    </webwork>
+  </exercise>
+
   <exercise>
     <webwork xml:id="combinations-of-functions-tables">
       <setup>
@@ -52,7 +111,7 @@
         <var name="$P[2]"><static>-10</static></var>
         <var name="$P[3]"><static>-39</static></var>
         <var name="$P[4]"><static>-144</static></var>
-        
+
         <pg-code>
           @x=(-4,-2,0,2,4);
           @f=map{-0.5*$_**2-1}@x;
@@ -142,9 +201,348 @@
       </statement>
 
       <solution>
-        <todo>Finish the solution</todo>
+        <table>
+          <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>f(x)</m></cell>
+                  <cell><m>g(x)</m></cell>
+                  <cell><m>M(x)</m></cell>
+                  <cell><m>N(x)</m></cell>
+                  <cell><m>P(x)</m></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[0]" /></cell>
+                  <cell><var name="$f[0]" /></cell>
+                  <cell><var name="$g[0]" /></cell>
+                  <cell><var name="$M[0]" /></cell>
+                  <cell><var name="$N[0]" /></cell>
+                  <cell><var name="$P[0]" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[1]" /></cell>
+                  <cell><var name="$f[1]" /></cell>
+                  <cell><var name="$g[1]" /></cell>
+                  <cell><var name="$M[1]" /></cell>
+                  <cell><var name="$N[1]" /></cell>
+                  <cell><var name="$P[1]" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[2]" /></cell>
+                  <cell><var name="$f[2]" /></cell>
+                  <cell><var name="$g[2]" /></cell>
+                  <cell><var name="$M[2]" /></cell>
+                  <cell><var name="$N[2]" /></cell>
+                  <cell><var name="$P[2]" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[3]" /></cell>
+                  <cell><var name="$f[3]" /></cell>
+                  <cell><var name="$g[3]" /></cell>
+                  <cell><var name="$M[3]" /></cell>
+                  <cell><var name="$N[3]" /></cell>
+                  <cell><var name="$P[3]" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[4]" /></cell>
+                  <cell><var name="$f[4]" /></cell>
+                  <cell><var name="$g[4]" /></cell>
+                  <cell><var name="$M[4]" /></cell>
+                  <cell><var name="$N[4]" /></cell>
+                  <cell><var name="$P[4]" /></cell>
+                </row>
+          </tabular>
+        </table>
       </solution>
     </webwork>
   </exercise>
+
+  <exercise>
+    <webwork xml:id="points-on-f-times-g">
+      <setup>
+
+        <var name="$x[0]"><static>-4</static></var>
+        <var name="$x[1]"><static>0</static></var>
+        <var name="$x[2]"><static>2</static></var>
+        <var name="$x[3]"><static>4</static></var>
+        <var name="$x[4]"><static>6</static></var>
+        <var name="$x[5]"><static>8</static></var>
+
+        <var name="$f[0]"><static>-3</static></var>
+        <var name="$f[1]"><static>-1</static></var>
+        <var name="$f[2]"><static>0</static></var>
+        <var name="$f[3]"><static>1</static></var>
+        <var name="$f[4]"><static>2</static></var>
+        <var name="$f[5]"><static>3</static></var>
+
+        <var name="$g[0]"><static>3</static></var>
+        <var name="$g[1]"><static>2</static></var>
+        <var name="$g[2]"><static>1.5</static></var>
+        <var name="$g[3]"><static>1</static></var>
+        <var name="$g[4]"><static>0.5</static></var>
+        <var name="$g[5]"><static>0</static></var>
+
+        <var name="$P[0]"><static>-9</static></var>
+        <var name="$P[1]"><static>-2</static></var>
+        <var name="$P[2]"><static>0</static></var>
+        <var name="$P[3]"><static>1</static></var>
+        <var name="$P[4]"><static>1</static></var>
+        <var name="$P[5]"><static>0</static></var>
+
+        <var name="didItGraph"><static>1</static></var>
+
+        <pg-code>
+          @x=(-4,0,2,4,6,8);
+          @f=map{-1+0.5*$_}@x;
+          @g=map{2-0.25*$_}@x;
+          @P=map{$f[$_]*$g[$_]}0..$#f;
+          $didItGraph=Real(1);
+        </pg-code>
+      </setup>
+
+      <statement>
+        <p>The graph shows two new functions <m>y = f(x)</m> and <m>y = g(x)</m>. Our goal is to create the function: <md><mrow>P(x) = f(x)*g(x)</mrow></md></p>
+        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <p>Use the graph to complete the table of values for the functions <m>f(x)</m>, <m>g(x)</m> and <m>P(x)</m></p>
+
+        <table>
+            <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <col />
+                <col />
+
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>f(x)</m></cell>
+                  <cell><m>g(x)</m></cell>
+                  <cell><m>P(x)=f(x)g(x)</m></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[0]" /></cell>
+                  <cell><var name="$f[0]" width="10" /></cell>
+                  <cell><var name="$g[0]" width="10" /></cell>
+                  <cell><var name="$P[0]" width="10" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[1]" /></cell>
+                  <cell><var name="$f[1]" width="10" /></cell>
+                  <cell><var name="$g[1]" width="10" /></cell>
+                  <cell><var name="$P[1]" width="10" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[2]" /></cell>
+                  <cell><var name="$f[2]" width="10" /></cell>
+                  <cell><var name="$g[2]" width="10" /></cell>
+                  <cell><var name="$P[2]" width="10" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[3]" /></cell>
+                  <cell><var name="$f[3]" width="10" /></cell>
+                  <cell><var name="$g[3]" width="10" /></cell>
+                  <cell><var name="$P[3]" width="10" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[4]" /></cell>
+                  <cell><var name="$f[4]" width="10" /></cell>
+                  <cell><var name="$g[4]" width="10" /></cell>
+                  <cell><var name="$P[4]" width="10" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[5]" /></cell>
+                  <cell><var name="$f[5]" width="10" /></cell>
+                  <cell><var name="$g[5]" width="10" /></cell>
+                  <cell><var name="$P[5]" width="10" /></cell>
+                </row>
+            </tabular>
+        </table>
+        <p>Use the values from your table above to plot six points on the graph of <m>y= P(x)</m>. Move the six blue points to those locations and the graph of <m>P(x)</m> will appear.</p>
+        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xE8wUtMM/width/433/height/493/border/888888/sri/true" width="433px" height="493px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <p>Enter the number <m>1</m> if you successfully made the graph of <m>P(x)</m></p>
+        <p><var name="$didItGraph" width="5" /></p>
+
+      </statement>
+      <solution>
+        <table>
+            <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <col />
+                <col />
+
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>f(x)</m></cell>
+                  <cell><m>g(x)</m></cell>
+                  <cell><m>P(x)=f(x)g(x)</m></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[0]" /></cell>
+                  <cell><var name="$f[0]" /></cell>
+                  <cell><var name="$g[0]" /></cell>
+                  <cell><var name="$P[0]" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[1]" /></cell>
+                  <cell><var name="$f[1]" /></cell>
+                  <cell><var name="$g[1]" /></cell>
+                  <cell><var name="$P[1]" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[2]" /></cell>
+                  <cell><var name="$f[2]" /></cell>
+                  <cell><var name="$g[2]" /></cell>
+                  <cell><var name="$P[2]" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[3]" /></cell>
+                  <cell><var name="$f[3]" /></cell>
+                  <cell><var name="$g[3]" /></cell>
+                  <cell><var name="$P[3]" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[4]" /></cell>
+                  <cell><var name="$f[4]" /></cell>
+                  <cell><var name="$g[4]" /></cell>
+                  <cell><var name="$P[4]" /></cell>
+                </row>
+
+                <row>
+                  <cell><var name="$x[5]" /></cell>
+                  <cell><var name="$f[5]" /></cell>
+                  <cell><var name="$g[5]" /></cell>
+                  <cell><var name="$P[5]" /></cell>
+                </row>
+            </tabular>
+        </table>
+      </solution>
+    </webwork>
+  </exercise>
+
+  <exercise>
+    <webwork xml:id="formula-for-f-times-g">
+      <setup>
+        <var name="$f"><static>-1 + 0.5x</static></var>
+        <var name="$g"><static>2 - 0.25x</static></var>
+        <var name="$P"><static>(-1 + 0.5x)(2 - 0.25x)</static></var>
+
+        <pg-code>
+          $f=Compute("-1+0.5*x");
+          $g=Compute("2-0.25*x");
+          $P=Compute("$f*$g");
+
+        </pg-code>
+
+      </setup>
+
+      <statement>
+        <p>The graph below shows the same functions <m>f</m> and <m>g</m> from the last problem.</p>
+        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <p>This time, find the formulas for each function <m>f(x)</m> and <m>g(x)</m>, and use those formulas to write a formula for the function <m>P(x)</m>.</p>
+        <ul>
+          <li><p><m>f(x) = </m><var name="$f" width="15" /></p></li>
+          <li><p><m>g(x) = </m><var name="$g" width="15" /></p></li>
+          <li><p><m>P(x) = </m><var name="$P" width="15" /></p></li>
+        </ul>
+
+      </statement>
+      <solution>
+        <ul>
+          <li><p><m>f(x) = </m><var name="$f" /></p></li>
+          <li><p><m>g(x) = </m><var name="$g" /></p></li>
+          <li><p><m>P(x) = </m><var name="$P" /></p></li>
+        </ul>
+      </solution>
+    </webwork>
+  </exercise>
+
+  <p>By now, you know that all combinations of functions are really just doing arithmetic on the the <term>outputs</term> of the functions. From a graphical standpoint, this just involves combining the <m>y</m> values of points on the graphs of <m>f</m> and <m>g</m>.</p>
+  <p>The next problem will have you explore the graph of a particular function combination: <md><mrow>f(x) - g(x)</mrow></md></p>
+  <p>Remember that this is all about combining the outputs of the <m>f</m> and <m>g</m> functions.</p>
+
+<todo> Finish this problem </todo>
+  <exercise>
+    <webwork xml:id="graph-and-formula-of-f-minus-g">
+      <setup>
+        <var name="$hZero"><static>4.4</static></var>
+        <var name="$hPositive"><static>0\text[ or ]2.1</static></var>
+        <var name="$hMinimum"><static>7</static></var>
+
+        <pg-code>
+          $hZero=Real(4.4);
+          $hPositive=OneOf(0,2.1);
+          $hMinimum=Real(7);
+        </pg-code>
+      </setup>
+
+      <statement>
+        <p>In this problem, we are considering the function <m>h</m> defined by <md><mrow>h(x) = f(x) - g(x)</mrow></md></p>
+        <p>The graphs of functions <m>f(x)</m> and <m>g(x)</m> are shown below.</p>
+        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/uSYHMfWJ/width/422/height/427/border/888888" width="422px" height="427px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <ul>
+          <li><p>The function <m>h(x)</m> is called the <em>difference</em> of <m>f</m> and <m>g</m>.</p></li>
+          <li><p>Consider the <m>x</m> values:</p>
+            <table>
+              <tabular halign="center">
+                  <col halign="left" />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+
+                  <row>
+                    <cell width="15"><m>-2</m></cell>
+                    <cell width="15"><m>0</m></cell>
+                    <cell width="15"><m>2.1</m></cell>
+                    <cell width="15"><m>4.4</m></cell>
+                    <cell width="15"><m>7</m></cell>
+                  </row>
+              </tabular>
+            </table>
+          </li>
+          <li><p>For which value is it true that <m>h(x) = 0</m>? Type your answer below.</p>
+          <p><var name="$hZero" width="10" /></p></li>
+
+          <li><p>Choose an <m>x</m> value from the list so that <m>h(x)</m> has a positive output. Type your answer below.</p>
+          <p><var name="$hPositive" width="10" /></p></li>
+
+          <li><p>Choose the <m>x</m> value from the list that gives <m>h</m> its minimum output.</p>
+          <p><var name="$hMinimum" width="10" /></p></li>
+        </ul>
+
+      </statement>
+      <solution>
+        <ol>
+          <li><p><m>h(x) = 0</m> when <m>x = 4.4</m>, because that is where <m>f(x) = g(x)</m>.</p></li>
+          <li><p>For <m>h(x)</m> to have a positive output, it must be true that <m>f(x) &gt; g(x)</m>. Among the options given, this is only true for <m>x = 0</m> and <m>x = 2.1</m>.</p></li>
+          <li><p><m>h(x)</m> will have its minimum output when <m>f(x)</m> and <m>g(x)</m> are far apart in value, and when <m>f(x) &lt; g(x)</m>. Among the options given, this happens when <m>x = 7</m></p></li>
+        </ol>
+      </solution>
+    </webwork>
+  </exercise>
+
 
 </section>
