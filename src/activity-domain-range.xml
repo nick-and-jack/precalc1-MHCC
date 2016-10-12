@@ -24,26 +24,159 @@
       <p>Likewise, the temperature outside is decreasing for times between 0 hours and 5 hours after midnight, then again for times between 17 hours and 24 hours after midnight. In math this sentence is written like this</p>
       <blockquote>T decreases for <m>0 \leqslant t \leqslant 5</m> and <m>17 \leqslant t \leqslant 24</m></blockquote>
       <p>Notice in each case our observations about temperature T were based on the <em>input</em> <m>t</m> that give us the desired results. The ouputs have certain properties on different sections of the input axis.</p>
-      <p>In this course we will use intervals of the horizontal axis to describe where a defined or not, whether the funciton is positive/negative or zero, if it is concave up or down and where a function is increasing or decreasing.</p>
-
+      <p>In the execise below, practice writing inequalites to describe the shaded intervals on each number line.</p>
       <todo>Insert graphical activity to highlight intervals on the horizontal axis. Include practice with writing interval notation and interpreting interval notation.</todo>
         
           <exercise>
               <webwork>
                   <setup>
-                      <var name="$variablename2">
-                          <static>20</static>
+                      <var name="$startValLine1">
+                          <static>-5</static>
+                      </var>
+                      <var name="$endValline1">
+                          <static>0</static>
+                      </var>
+                      <var name="$startValline2">
+                          <static>1</static>
+                      </var>
+                      <var name="$endValline2">
+                          <static>4</static>
+                      </var>
+                      <var name="$symbol1" category="set">
+                          <set>
+                               <member>{&lt;}</member>
+                               <member correct="yes">{&lt;}</member>
+                               <member>{&gt;}</member>
+                               <member>{&gt;}</member>
+                          </set>
+                      </var>
+                      <var name="$symbol2" category="set">
+                          <set>
+                               <member>{&lt;}</member>
+                               <member correct="yes">{&lt;}</member>
+                               <member>{&gt;}</member>
+                               <member>{&gt;}</member>
+                          </set>
+                      </var>
+                      <var name="$symbol3" category="set">
+                          <set>
+                               <member>{&lt;}</member>
+                               <member correct="yes">{&lt;}</member>
+                               <member>{&gt;}</member>
+                               <member>{&gt;}</member>
+                          </set>
+                      </var>
+                      <var name="$symbol4" category="set">
+                          <set>
+                               <member>{&lt;}</member>
+                               <member correct="yes">{&lt;}</member>
+                               <member>{&gt;}</member>
+                               <member>{&gt;}</member>
+                          </set>
                       </var>
                       
                       <pg-code>
-                          $variablename2 = Real(20);
+                          $startValLine1 = Real(-5);
+                          $endValline1 = Real(0);
+                          $startValline2 = Real(1);
+                          $endValline2 = Real(4);
+                          $symbol1 = PopUp(["?", "less than", "less than or equal to", "greater than", "greater than or equal to"], "less than or equal to");
+                          $symbol2 = PopUp(["?", "less than", "less than or equal to", "greater than", "greater than or equal to"], "less than");
+                          $symbol3 = PopUp(["?", "less than", "less than or equal to", "greater than", "greater than or equal to"], "less than or equal to");
+                          $symbol4 = PopUp(["?", "less than", "less than or equal to", "greater than", "greater than or equal to"], "less than or equal to");
                       </pg-code>
                 </setup>
       
                 <statement>
-                    <p>statement text</p>
+                    <p>This should be an exercise in writing the correct inequality notation given a shaded number line.</p>
       
-                    <p><var name="$variablename2" width="5" /></p>
+                    <p>Represent the shaded region with inequalities <var name="$startValLine1" width="5" /> <var name="$symbol1" form="popup" /> <m>x</m> <var name="$symbol2" form="popup" /> <var name="$endValline1" width="5" /></p>
+                    <p>Represent the shaded region with inequalities <var name="$startValline2" width="5" /> <var name="$symbol3" form="popup" /> <m>x</m> <var name="$symbol4" form="popup" /> <var name="$endValline2" width="5" /></p>
+                    <p>Now use the appropriate notation to write the equation for this piecewise defined function.  Need some way of writing this function!</p>
+                </statement>
+              </webwork>
+          </exercise>
+    </subsection>
+
+    <subsection>
+        <title>Function Characteristics</title>
+          <p>There are many possible characteristics of a function. A function may sometimes increasing (going up) or decreasing (going down) or neither.</p>
+          <p>The same function may sometimes also be concave up (curving upwards) or concave down (curving downwards) or neither.</p>
+          <p>And with all that going on, the same function may sometimes be positive (above the horizontal axis) or negative (below the horizontal axis) or zero (actually touching the horizontal axis).</p>
+          <todo>Insert exercise with graph that can be changed in inc dec concavity and above or below horiz axis.</todo>
+          <exercise>
+              <webwork>
+                  <setup>
+                      <var name="$ConcDwn">
+                          <static>10</static>
+                      </var>
+                      <var name="$Negative">
+                          <static>10</static>
+                      </var>
+                      <var name="$Decreasing">
+                          <static>10</static>
+                      </var>
+                      
+                      <pg-code>
+                          $ConcDwn = Real(10);
+                          $Negative = Real(10);
+                          $Decreasing = Real(10);
+                      </pg-code>
+                </setup>
+      
+                <statement>
+                    <p>Use the sliders on the graph of <m>f(x)</m> to</p>
+                      <p><ul>
+                            <li><p>Change the concavity.  The graph is concave down anytime <m>a \gt</m> <var name="$ConcDwn" width="5" /></p></li>
+                            <li><p>Change the interval on which the function is negative (below the horizontal axis). <m>f(x) \lt 0</m> if <m>b \gt</m> <var name="$Negative" width="5" /></p></li>
+                            <li><p>Change the interval on which the function is decreasing (going down). <m>f(x)</m> is decreasing if <m>c \gt</m> <var name="$Decreasing" width="5" /></p></li>
+                        </ul></p>
+                    
+                </statement>
+              </webwork>
+          </exercise>
+
+          <p>Now let's practice using intervals to describe specific characteristics of a function.</p>
+          <p>In the next exercise you will practice using inequalities to describe certain characteristics of the graph of a function <m>f(x)</m></p>
+
+          <exercise>
+            <todo>Insert the correct coding for inequalities</todo>
+              <webwork>
+                  <setup>
+                      <var name="$startValInc">
+                          <static>-4</static>
+                      </var>
+                      <var name="$endValInc">
+                          <static>0</static>
+                      </var>
+                      <var name="$startValConc">
+                          <static>-4</static>
+                      </var>
+                      <var name="$endValConc">
+                          <static>0</static>
+                      </var>
+                      <var name="$startValPos">
+                          <static>-4</static>
+                      </var>
+                      <var name="$endValPos">
+                          <static>0</static>
+                      </var>
+                      
+                      <pg-code>
+                          $startValInc = Real(-4);
+                          $endValInc = Real(0);
+                          $startValConc = Real(-4);
+                          $endValConc = Real(0);
+                          $startValPos = Real(-4);
+                          $endValPos = Real(0);
+                      </pg-code>
+                </setup>
+      
+                <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aww8tpND/width/431/height/313/border/888888/sri/true/sdz/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>On what interval(s) is the function increasing? <var name="$startValInc" width="5" /> <m>x</m> <var name="$endValInc" width="5" /></p>
+                    <p>On what interval(s) is the function concave down? <var name="$startValCon" width="5" /> <m>x</m> <var name="$endValConc" width="5" /></p>
+                    <p>On what interval(s) is the function <m>f(x) \ge 0</m>? <var name="$startValPos" width="5" /> <m>x</m> <var name="$endValPos" width="5" /></p>
                 </statement>
               </webwork>
           </exercise>
@@ -62,7 +195,7 @@
       <p>Sometimes a function can use any number, like <q>all real numbers</q> and sometimes a function may only defined for certain kinds of values. Likewise the range of a function could be <q>all real numbers</q> or maybe there are only specific values the function will ever produce.</p>
       <p>In this activity we observe the domain and range of a fucntion graphically then in tables and finally in formulas.</p>
 
-      <p>checkout the graph of <m>f(x) shown in the exercise below.  Use the slider to adust the domain of the function and see how it affects the range</m></p>
+      <p>checkout the graph of <m>f(x)</m> shown in the exercise below. Use the slider to adust the domain of the function and see how it affects the range.</p>
       <todo>Insert graph that has adjustable domain, maybe highlight interval on x-axis while the range changes and is highlighted in a different color.  User identifies the domain and range of the graph.</todo>
           <exercise>
               <webwork>
@@ -77,8 +210,8 @@
                 </setup>
       
                 <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/meHRtkrp/width/431/height/341/border/888888/sri/true/sdz/true" width="431px" height="341px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>statement text</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GaCY9FX2/width/458/height/313/border/888888/sri/true/sdz/true" width="458px" height="313px" style="border:0px;" width="458px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>Need to insert values on vertical and horizontal axes to properly identify the ends of the intervals.</p>
       
                     <p><var name="$variablename" width="5" /></p>
                 </statement>
