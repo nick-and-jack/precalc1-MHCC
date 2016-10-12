@@ -40,58 +40,57 @@
           <p>The ouputs of two functions are divided.</p>
         </li>
         <li>
-          <title>Etcetera</title>
+          <title><m>f(x)^{\displaystyle{g(x)}}</m></title>
+          <p>The output of one function is used as the exponent on the output of the other function.</p>
         </li>
       </dl>
 
-      <p>Note that this is different from the <term>composition</term> of functions (lesson 08), where the output of one function was used as the input of another function.</p>
-      <p>Typical combinations in this course are adding/subtracting and multiplying/dividing functions, though any operation on two or more numbers would correspond to a function combination, <m>f(x)^{\displaystyle{g(x)}}</m> being one example.</p>
+      <p>Note that this is different from the <term>composition</term> of functions (lesson 09), where the output of one function was used as the input of another function.</p>
+      <p>Typical combinations in this course are adding/subtracting and multiplying/dividing functions, though any operation on two or more numbers would correspond to a function combination.</p>
       <p>A simple example of the combination of functions is that of <em>Profit</em>, <em>Revenue</em> and <em>Cost</em>.</p>
 
       <example>
         <p>It costs money to manufacture a product, and you can make money by selling it. The <em>profit</em> is the difference between how much money you collect from selling the product, and how much it cost to manufacture it.</p>
         <p>Let <m>C(u)</m> be the cost, in thousands of dollars, of manufacturing <m>u</m> tons of a product. Let <m>R(u)</m> be the revenue, in thousands of dollars, collected through selling <m>u</m> tons of the product. Finally, <m>P(u)</m> is the profit, in thousands of dollars, from making and selling <m>u</m> tons of the product.</p>
         <p>Using function notation, we would write:<md><mrow>P(u) = R(u) - C(u)</mrow></md></p>
-        <p>Work through the following example of this concept.</p>
-      </example>
 
-      <exercise>
-        <webwork xml:id="profit-and-loss">
-          <setup>
-            <var name="$profitIsZero"><static>5</static></var>
-            <var name="$u1"><static>10</static></var>
-            <var name="$u2"><static>4</static></var>
-            <var name="$c1"><static>270</static></var>
-            <var name="$c2"><static>187.2</static></var>
-            <var name="$r1"><static>400</static></var>
-            <var name="$r2"><static>160</static></var>
-            <var name="$p1"><static>130</static></var>
-            <var name="$p2"><static>-27.2</static></var>
+        <exercise>
+          <webwork xml:id="profit-and-loss">
+            <setup>
+              <var name="$profitIsZero"><static>5</static></var>
+              <var name="$u1"><static>10</static></var>
+              <var name="$u2"><static>4</static></var>
+              <var name="$c1"><static>270</static></var>
+              <var name="$c2"><static>187.2</static></var>
+              <var name="$r1"><static>400</static></var>
+              <var name="$r2"><static>160</static></var>
+              <var name="$p1"><static>130</static></var>
+              <var name="$p2"><static>-27.2</static></var>
 
-            <pg-code>
-              $profitIsZero=Real(5);
-              $u1=random(6,12,1);
-              do{$u2=random(1,4,1)}until($u1!=$u2);
-              $c1=-0.8*$u1**2+25*$u1+100;
-              $c2=-0.8*$u2**2+25*$u2+100;
-              $r1=40*$u1;
-              $r2=40*$u2;
-              $p1=$r1-$c1;
-              $p2=$r2-$c2;
-            </pg-code>
+              <pg-code>
+                $profitIsZero=Real(5);
+                $u1=random(6,12,1);
+                do{$u2=random(1,4,1)}until($u1!=$u2);
+                $c1=-0.8*$u1**2+25*$u1+100;
+                $c2=-0.8*$u2**2+25*$u2+100;
+                $r1=40*$u1;
+                $r2=40*$u2;
+                $p1=$r1-$c1;
+                $p2=$r2-$c2;
+              </pg-code>
 
-          </setup>
-          <statement>
-            <p>In this problem, remember that Profit = Revenue - Cost, or in function notation:<md><mrow>P(u) = R(u) - C(u)</mrow></md></p>
-            <p>The graph below shows the cost function <m>C(u)</m> and the revenue function <m>R(u)</m>. Sliding the given point along the graph of <m>C(u)</m> will also move points on the graphs of <m>R(u)</m> and <m>P(u)</m>, all with the same input values.</p>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/YsPBmPHE/width/434/height/440/border/888888/sri/true" width="434px" height="440px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Notice that the height of the point <m>P(u)</m> is equal to the difference in the heights of points on the <m>R(u)</m> and <m>C(u)</m> graphs.</p>
-            <ol>
-              <li>
-                <p>Move the point along the graph of <m>C(u)</m> until the profit is zero. At approximately how many tons will the profit be zero (give your answer to the nearest whole number)? Note: This value is called the <em>break even</em> point, after which the business begins to make actual profit.</p>
-                <p><var name="$profitIsZero" width="5" /> tons</p>
-              </li>
-              <li>
+            </setup>
+            <statement>
+              <p>In this problem, remember that Profit = Revenue - Cost, or in function notation:<md><mrow>P(u) = R(u) - C(u)</mrow></md></p>
+              <p>The graph below shows the cost function <m>C(u)</m> and the revenue function <m>R(u)</m>. Sliding the given point along the graph of <m>C(u)</m> will also move a point on the graph of <m>R(u)</m> and create a point on <m>P(u)</m>, all with the same input values.</p>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/YsPBmPHE/width/434/height/440/border/888888/sri/true" width="434px" height="440px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Notice that the height of the point <m>P(u)</m> is equal to the difference in the heights of points on the <m>R(u)</m> and <m>C(u)</m> graphs.</p>
+              <ol>
+                <li>
+                  <p>Move the point along the graph of <m>C(u)</m> until the profit is zero. At approximately how many tons will the profit be zero (give your answer to the nearest whole number)? Note: This value is called the <em>break even</em> point, after which the business begins to make actual profit.</p>
+                  <p><var name="$profitIsZero" width="5" /> tons</p>
+                </li>
+                <li>
                   <p>Now click the box to show the graph of <m>P(u)</m>. Notice that it begins with negative outputs, increasing to the break even point, and becoming positive thereafter.</p>
                   <ul>
                     <li>
@@ -103,18 +102,114 @@
                       <p>Answer: <var name="$p2" width="10" /></p>
                     </li>
                   </ul>
-              </li>
-            </ol>
-          </statement>
-          <solution>
-            <ol>
-              <li><p>The profit is <m>0</m> when approximately <m>5</m> tons of the product are manufactured and sold.</p></li>
-              <li><p><m>P(</m><var name="$u1" /><m>) \approx </m> <var name="$p1" /> thousand dollars.</p></li>
-              <li><p><m>P(</m><var name="$u2" /><m>) \approx </m> <var name="$p2" /> thousand dollars. A negative profit means the company lost money.</p></li>
-            </ol>
-          </solution>
-        </webwork>
-      </exercise>
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <ol>
+                <li><p>The profit is <m>0</m> when approximately <m>5</m> tons of the product are manufactured and sold.</p></li>
+                <li><p><m>P(</m><var name="$u1" /><m>) \approx </m> <var name="$p1" /> thousand dollars.</p></li>
+                <li><p><m>P(</m><var name="$u2" /><m>) \approx </m> <var name="$p2" /> thousand dollars. A negative profit means the company lost money.</p></li>
+              </ol>
+            </solution>
+          </webwork>
+        </exercise>
+      </example>
+
+<todo>Make a better item to sell in the next problem.</todo>
+      <example>
+        <p>As a business owner, you know the value in giving your customers a good deal, especially when they buy a lot from you.</p>
+        <p>This month at your pet supply store, you decide to run the following special on your most popular item, <em>My Little Deuce Scoop</em>, a cat box shovel shaped like a 1932 Ford hotrod:</p>
+        <p>The retail price for the item is $24, but if a customer orders two of them, you will reduce the unit price by $0.25, so they would each cost only $23.75.</p>
+        <p>If a customer orderes three items, the unit cost would be reduced another $0.25, so they would each cost only $23.50</p>
+        <p>Thus, as the number of items increases, the cost of each one will decrease.</p>
+
+        <exercise>
+          <webwork xml:id="sale-cost-expression">
+            <setup>
+              <var name="$itemCost"><static>24 - 0.25(x-1)</static></var>
+              <pg-code>
+                $itemCost=Compute("24-0.25*(x-1)");
+              </pg-code>
+            </setup>
+
+            <statement>
+              <p>Write a formula for the unit cost, <m>C(x)</m>, of each item when the customer orders <m>x</m> of the items.</p>
+              <p><m>C(x) = </m><var name="$itemCost" width="15" /></p>
+            </statement>
+
+            <solution>
+              <p>The cost function is:  <m>C(x) = </m><var name="$itemCost" /></p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork xml:id="total-cost-computed">
+            <setup>
+              <var name="$x"><static>12</static></var>
+              <var name="$itemCost"><static>21.25</static></var>
+              <var name="$totalCost"><static>255</static></var>
+              <pg-code>
+                $x=random(10,20,1);
+                $itemCost=24-0.25*($x-1);
+                $totalCost=$x*$itemCost;
+              </pg-code>
+            </setup>
+            <statement>
+              <p>If a customer ordered <var name="$x" /> items, what would be the unit cost?</p>
+              <p><m>C(</m><var name="$x" /><m>) = </m><var name="$itemCost" width="15"/> $/item</p>
+              <p>How much would the customer end up paying in total for the <var name="$x" /> items?</p>
+              <p>They would pay $ <var name="$totalCost" width="15" /></p>
+              <p>We could represent the total cost for buying <m>x</m> items by the function <m>T(x)</m>.</p>
+              <p>Evaluate:  <m>T(</m><var name="$x" /><m>)</m> = <var name="$totalCost" width="15" /></p>
+            </statement>
+            <solution>
+              <ol>
+                <li><p>The cost for <var name="$x" /> items would be <var name="$itemCost" /> $/item </p></li>
+                <li><p>They would pay a total of (<var name="$x" /> items)<m> * (</m><var name="$itemCost" /> $/item) <m>= $ </m> <var name="$totalCost" /></p></li>
+              </ol>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork xml:id="total-cost-formula">
+            <setup>
+              <var name="$sold"><static>x</static></var>
+              <var name="$unitCost"><static>24 - 0.25(x - 1)</static></var>
+              <var name="$totalCost"><static>x(24 - 0.25(x - 1))</static></var>
+
+              <pg-code>
+                $sold=Compute("x");
+                $unitCost=Compute("24-0.25*(x-1)");
+                $totalCost=Compute("(24-0.25*(x-1))*x");
+              </pg-code>
+            </setup>
+
+            <statement>
+              <p>The total cost function, <m>T(x)</m>, may be thought of as a combination of two different functions, <m>C(x)</m> and <m>Q(x)</m>.</p>
+              <p>We already determined the unit cost function, <m>C(x)</m>, in the last problem. Restate it below:</p>
+              <p><m>C(x) = </m><var name="$unitCost" width="15" /></p>
+              <p>The other function is a simple, but important part of the total cost.</p>
+              <p>If we want to charge someone for a purchase, we need the unit cost and the quantity being purchased. Let our second function be the quantity, <m>Q(x)</m>, of items being purchased.</p>
+              <p>What is the quantity being purchased in general? This is easier than you think.</p>
+              <p>Answer:  <m>Q(x) = </m><var name="$sold" width="15" /></p>
+              <p>Finally, we combine these to make the total cost function, <m>T(x)</m>:</p>
+              <p><m>T(x) = C(x)*Q(x) = </m><var name="$totalCost" width="15" /></p>
+            </statement>
+
+            <solution>
+              <ol>
+                <li><p>The unit cost function is:  <m>C(x) = </m><var name="$unitCost" /></p></li>
+                <li><p>The quantity function is:  <m>Q(x) = </m><var name="$sold" /></p></li>
+                <li><p>The total cost function is:  <m>T(x) = </m><var name="$totalCost" /></p></li>
+              </ol>
+            </solution>
+          </webwork>
+        </exercise>
+
+        </example>
 
     </conclusion>
 </chapter>
