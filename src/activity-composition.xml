@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+
+<section xml:id="activity-composition" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Composition Activity</title>
+  <introduction>
+    <p>In this activity, we will explore the <term>composition of functions</term>.</p>
+    <p>You already know about <term>inputs</term> and <term>outputs</term> of a function. <term>Function composition</term> is a way to use the output of one function as the input for another function.</p>
+  </introduction>
+    <exercise>
+      <webwork xml:id="area-of-spill">
+        <setup>
+          <var name="$hoursNum"><static>4</static></var>
+          <var name="$radiusNum"><static>42</static></var>
+          <var name="$radiusRate"><static>8</static></var>
+          <var name="$areaNum"><static>\pi*42^2</static></var>
+          <var name="$radiusForm"><static>10 + 8t</static></var>
+          <var name="$areaComposed"><static>\pi*(10 + 8t)^2</static></var>
+
+          <pg-code>
+            Context()->variables->are(t=>'Real', r=>'Real');
+            $hoursNum=random(3,6,1);
+            $radiusRate=random(3,9,1);
+            $radiusNum=10+$hoursNum*$radiusRate;
+            $areaNum=Compute("pi*$radiusNum**2");
+            $radiusForm=Compute("10+$radiusRate*t");
+            $areaForm=Compute("pi*r^2");
+            $areaComposed=Compute("pi*($radiusForm)^2");
+
+          </pg-code>
+        </setup>
+        <statement>
+          <p>An oil spill begins in the shape of a circular disk, and begins with a radius of 10 meters.</p>
+          <p>The oil spreads out (maintaining a circular shape), and its radius increases by <var name="$radiusRate" /> meters per hour.</p>
+          <ul>
+
+            <li><p>After <var name="$hoursNum" /> hours, what is the radius of the circle?</p>
+            <p>r = <var name="$radiusNum" width="15"/> meters.</p></li>
+            <li><p>At that time, what will be the area of the oil spill?</p>
+            <p>A = <var name="$areaNum" width="15" /> meters<m>^2</m></p></li>
+          </ul>
+          <p>To find the area, you used one rule to find the radius, and then used that radius in the formula for the area of a circle.</p>
+          <ul>
+            <li><p>What is the function to calculate the radius of the circle after <m>t</m> hours?</p>
+            <p><m>r(t) = </m><var name="$radiusForm" width="15" /></p></li>
+            <li><p>What is the function to calculate the area of a circle of radius <m>r</m>?</p>
+            <p><m>A(r) = </m><var name="$areaForm" width="15" /></p></li>
+          </ul>
+          <p>Since the input of the area function is <m>r</m>, and <m>r</m> itself is a function of <m>t</m>, we can rewrite the area as a function of <m>t</m> by substituting the formula for <m>r(t)</m> into the area function as the input:</p>
+          <p><m>A(r) = A(r(t)) = </m><var name="$areaComposed" width="20" />.</p>
+        </statement>
+        <solution>
+          <ol>
+            <li><p>After <var name="$hoursNum" /> hours, the radius would be <md><mrow>10 + <var name="$radiusRate" />*<var name="$hoursNum" /> = <var name="$radiusNum" /> \text{ meters}</mrow></md></p></li>
+            <li><p>At that time, the area will be <md><mrow><var name="$areaNum" /> \text{ meters}^2</mrow></md></p></li>
+            <li><p>The function for the radius is linear, with initial value <m>10</m> and slope <var name="$radiusRate" />. The formula is <md><mrow>r(t) = 10 + <var name="$radiusRate" />*t</mrow></md></p></li>
+            <li><p>The area of a circle is <md><mrow>A = \pi*r^2</mrow></md></p></li>
+            <li><p>Since <m>r = 10 + </m><var name="$radiusRate" />*t, and <m>A = \pi*r^2</m>, we just substitute the formula for <m>r</m> into the area formula: </p>
+            <p><md>
+                 <mrow>A(r) \amp= A(f(t))</mrow>
+                 <mrow>\amp= A(10 + <var name="$radiusRate" />*t) </mrow>
+                 <mrow>\amp= \pi(10 + <var name="$radiusRate" />*t)^2 </mrow>
+               </md></p>
+            </li>
+          </ol>
+        </solution>
+
+      </webwork>
+    </exercise>
+
+    <p>In <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>, you studied transformations of function. In one case, you took a function f(x) and shifted its graph left or right by adding or subtracting a number from the input of the function.</p>
+    <p>For instance, <m>f(x – 3)</m> represents shifting the graph <m>y = f(x)</m> to the right by <m>3</m> units. However, this may also be thought of as the composition of two functions:  <m>f(x)</m> and <m>g(x) = x - 3</m></p>
+    <p>Thought of as a composition, this transformation occurs by substituting the function <m>g(x) = x - 3</m> into the function <m>g(x)</m>:</p>
+    <p><md><mrow>f(x - 3) = f(g(x))</mrow></md></p>
+    <p>This <em>is</em> the composition of two functions. When we write <m>f(g(x))</m>, we read it as <em><m>f</m> of <m>g</m> of <m>x</m></em></p>
+    <p>When you compose functions together, the output from one function becomes the input for the other, and you must remember to work inside of parentheses first.</p>
+    <p>You might recognize the equation <m>g(x) = x - 3</m> as a line with slope of <m>1</m> and vertical intercept of <m>-3</m>. By evaluating <m>f(x)</m> with the input being <m>g(x)</m>, you got a horizontal shift of <m>3</m> units to the right.</p>
+
+    <exercise>
+      <webwork xml:id="function-composition-table">
+        <pg-macros>
+          <macro-file>PGchoicemacros.pl</macro-file>
+        </pg-macros>
+
+        <setup>
+          <var name="$x[0]"><static>4</static></var>
+          <var name="$x[1]"><static>1</static></var>
+          <var name="$x[2]"><static>6</static></var>
+          <var name="$x[3]"><static>2</static></var>
+          <var name="$f[0]"><static>6</static></var>
+          <var name="$f[1]"><static>5</static></var>
+          <var name="$g[0]"><static>7</static></var>
+          <var name="$g[1]"><static>1</static></var>
+
+          <pg-code>
+            @x=map{$_+1}NchooseK(8,4);
+            $f[0]=$x[2];
+            $f[1]=random(10,15,1);
+            $g[0]=random(16,20,1);
+            $g[1]=$x[1];
+          </pg-code>
+
+        </setup>
+
+        <statement>
+          <p>Consider two functions, <m>f</m> and <m>g</m>, and suppose we know the following things:</p>
+          <p><md><mrow>f(<var name="$x[0]" />) \amp= <var name="$f[0]" />
+                  \amp f(<var name="$x[1]" />) \amp= <var name="$f[1]" />
+                  \amp g(<var name="$x[2]" />)\amp= <var name="$g[0]" />
+                  \amp g(<var name="$x[3]" />)\amp= <var name="$g[1]" /></mrow></md></p>
+          <ul>
+            <li><p>What is <m>f(g(<var name="$x[3]" />))</m>?</p>
+            <p>Answer:  <m>f(g(<var name="$x[3]" />)) = </m><var name="$f[1]" width="15" /></p></li>
+            <li><p>What is <m>g(f(<var name="$x[0]" />))</m>?</p>
+            <p>Answer:  <m>g(f(<var name="$x[0]" />)) = </m><var name="$g[0]" width="15" /></p></li>
+          </ul>
+
+
+        </statement>
+
+        <solution>
+
+        </solution>
+
+      </webwork>
+    </exercise>
+
+
+
+
+</section>
