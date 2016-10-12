@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+<section xml:id="activity-piecewise" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Activity Piecewise Defined Functions</title>
+
+  <subsection>
+      <title>Piecewise Defined Functions</title>
+
+   <exercise>
+       <webwork>
+           <pg-macros>
+             <macro-file>parserImplicitPlane.pl</macro-file>
+           </pg-macros>
+           <setup>
+               <var name="$lineA">
+                   <static>y=3x-1</static>
+               </var>
+               
+               <pg-code>
+                    Context()->variables->are(x=>'Real',y=>'Real');
+                   $lineA = ImplicitPlane("y=3x-1");
+               </pg-code>
+           </setup>
+
+           <statement>
+               <p>this is line A <var name="$lineA" width="15" /></p>
+           </statement>
+       </webwork>
+   </exercise>
+  </subsection>
+
+  <subsection>
+      <title>Is there a different title here?</title>
+
+      <p>Text here</p>
+  </subsection>
+</section>
