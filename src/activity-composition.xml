@@ -40,7 +40,7 @@
           </pg-code>
         </setup>
         <statement>
-          <p>An oil spill begins in the shape of a circular disk, and begins with a radius of 10 meters.</p>
+          <p>An oil spill is in the shape of a circular disk, beginning with a radius of 10 meters.</p>
           <p>The oil spreads out (maintaining a circular shape), and its radius increases by <var name="$radiusRate" /> meters per hour.</p>
           <ul>
 
@@ -50,14 +50,21 @@
             <p>A = <var name="$areaNum" width="15" /> meters<m>^2</m></p></li>
           </ul>
           <p>To find the area, you used one rule to find the radius, and then used that radius in the formula for the area of a circle.</p>
+          <p>Let's consider each of those rules as a function.</p>
           <ul>
             <li><p>What is the function to calculate the radius of the circle after <m>t</m> hours?</p>
             <p><m>r(t) = </m><var name="$radiusForm" width="15" /></p></li>
             <li><p>What is the function to calculate the area of a circle of radius <m>r</m>?</p>
             <p><m>A(r) = </m><var name="$areaForm" width="15" /></p></li>
           </ul>
-          <p>Since the input of the area function is <m>r</m>, and <m>r</m> itself is a function of <m>t</m>, we can rewrite the area as a function of <m>t</m> by substituting the formula for <m>r(t)</m> into the area function as the input:</p>
-          <p><m>A(r) = A(r(t)) = </m><var name="$areaComposed" width="20" />.</p>
+          <p>You calculated the area of the spill at <var name="$hoursNum" /> hours in two steps: Find the radius, then find the area.</p>
+          <p>However, this could be written as the single expression <md>
+            <mrow>A(r(<var name="$hoursNum" />))</mrow>
+          </md></p>
+          <p>by writing <m>r(<var name="$hoursNum" />)</m> as the input for the area function.</p>
+          <p>Since the input of the area function is <m>r</m>, and <m>r</m> itself is a function of <m>t</m>, we can rewrite the area as a function of <m>t</m> by substituting the formula for <m>r(t)</m> into the area function as the input.</p>
+          <p>Use the functions you wrote to do this. Substitute your formula for <m>r(t)</m> into the function for <m>A(r)</m>:</p>
+          <p>Area<m> = A(r(t)) = </m><var name="$areaComposed" width="20" />.</p>
         </statement>
         <solution>
           <ol>
@@ -82,12 +89,12 @@
     <p>For instance, <m>f(x – 3)</m> represents shifting the graph <m>y = f(x)</m> to the right by <m>3</m> units. However, this may also be thought of as the composition of two functions:  <m>f(x)</m> and <m>g(x) = x - 3</m></p>
     <p>Thought of as a composition, this transformation occurs by substituting the function <m>g(x) = x - 3</m> into the function <m>g(x)</m>:</p>
     <p><md><mrow>f(x - 3) = f(g(x))</mrow></md></p>
-    <p>This <em>is</em> the composition of two functions. When we write <m>f(g(x))</m>, we read it as <em><m>f</m> of <m>g</m> of <m>x</m></em></p>
-    <p>When you compose functions together, the output from one function becomes the input for the other, and you must remember to work inside of parentheses first.</p>
+    <p>This <em>is</em> the composition of two functions. When we write <m>f(g(x))</m>, we read it as <em><m>f</m> of <m>g</m> of <m>x</m></em>.</p>
+    <p>When you compose functions together, the output from one function becomes the input for the other. In the example above, we would first use a value of <m>x</m> in the function <m>g(x) = x - 3</m>. Then, we would take that result and use it as the input for the function <m>f(x)</m>.</p>
     <p>You might recognize the equation <m>g(x) = x - 3</m> as a line with slope of <m>1</m> and vertical intercept of <m>-3</m>. By evaluating <m>f(x)</m> with the input being <m>g(x)</m>, you got a horizontal shift of <m>3</m> units to the right.</p>
 
     <exercise>
-      <webwork xml:id="function-composition-table">
+      <webwork xml:id="function-composition-table1">
         <pg-macros>
           <macro-file>PGchoicemacros.pl</macro-file>
         </pg-macros>
@@ -120,9 +127,11 @@
                   \amp g(<var name="$x[3]" />)\amp= <var name="$g[1]" /></mrow></md></p>
           <ul>
             <li><p>What is <m>f(g(<var name="$x[3]" />))</m>?</p>
-            <p>Answer:  <m>f(g(<var name="$x[3]" />)) = </m><var name="$f[1]" width="15" /></p></li>
+            <p>Hint: First, work inside the parentheses and calculate <m>g(<var name="$x[3]" />)</m>.</p>
+            <p><m>f(g(<var name="$x[3]" />))</m> = <var name="$f[1]" width="15" /></p></li>
             <li><p>What is <m>g(f(<var name="$x[0]" />))</m>?</p>
-            <p>Answer:  <m>g(f(<var name="$x[0]" />)) = </m><var name="$g[0]" width="15" /></p></li>
+            <p>Remember to work inside the parentheses first.</p>
+            <p><m>g(f(<var name="$x[0]" />))</m> = <var name="$g[0]" width="15" /></p></li>
           </ul>
 
 
@@ -134,7 +143,125 @@
 
       </webwork>
     </exercise>
+<todo>  Finish this problem below   </todo>
+    <exercise>
+      <webwork xml:id="function-composition-table2">
+        <pg-macros>
+          <macro-file>PGchoicemacros.pl</macro-file>
+        </pg-macros>
+        <setup>
+          <var name="$x[0]"><static>0</static></var>
+          <var name="$x[1]"><static>1</static></var>
+          <var name="$x[2]"><static>2</static></var>
+          <var name="$x[3]"><static>3</static></var>
+          <var name="$x[4]"><static>4</static></var>
+          <var name="$x[5]"><static>5</static></var>
 
+          <var name="$P[0]"><static>1</static></var>
+          <var name="$P[1]"><static>0</static></var>
+          <var name="$P[2]"><static>5</static></var>
+          <var name="$P[3]"><static>2</static></var>
+          <var name="$P[4]"><static>3</static></var>
+          <var name="$P[5]"><static>4</static></var>
+
+          <var name="$Q[0]"><static>5</static></var>
+          <var name="$Q[1]"><static>2</static></var>
+          <var name="$Q[2]"><static>3</static></var>
+          <var name="$Q[3]"><static>1</static></var>
+          <var name="$Q[4]"><static>4</static></var>
+          <var name="$Q[5]"><static>8</static></var>
+
+          <var name="$QofP[0]"><static>2</static></var>
+          <var name="$QofP[1]"><static>5</static></var>
+          <var name="$QofP[2]"><static>8</static></var>
+          <var name="$QofP[3]"><static>3</static></var>
+          <var name="$QofP[4]"><static>1</static></var>
+          <var name="$QofP[5]"><static>4</static></var>
+
+          <pg-code>
+            @x=(0,1,2,3,4,5);
+            @P=NchooseK(6,6);
+            @Q=NchooseK(6,6);
+            $QofP[0]=$P[$Q[0]];
+            $QofP[1]=$P[$Q[1]];
+            $QofP[2]=$P[$Q[2]];
+            $QofP[3]=$P[$Q[3]];
+            $QofP[4]=$P[$Q[4]];
+            $QofP[5]=$P[$Q[5]];
+
+          </pg-code>
+
+        </setup>
+
+        <statement>
+          <p>The table below has values for functions <m>P(x)</m> and <m>Q(x)</m>. Use those values to determine the values of the composition <m>Q(P(x))</m>.</p>
+          <p>Remember to evaluate first inside the parentheses.</p>
+          <table>
+            <tabular top="major" halign="center">
+                  <col halign="left" />
+                  <col />
+                  <col />
+                  <col />
+
+                  <row bottom="medium">
+                    <cell><m>x</m></cell>
+                    <cell><m>Q(x)</m></cell>
+                    <cell><m>P(x)</m></cell>
+                    <cell><m>Q(P(x))</m></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[0]" /></cell>
+                    <cell><var name="$P[0]" /></cell>
+                    <cell><var name="$Q[0]" /></cell>
+                    <cell><var name="$QofP[0]" width="15" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[1]" /></cell>
+                    <cell><var name="$P[1]" /></cell>
+                    <cell><var name="$Q[1]" /></cell>
+                    <cell><var name="$QofP[1]" width="15" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[2]" /></cell>
+                    <cell><var name="$P[2]" /></cell>
+                    <cell><var name="$Q[2]" /></cell>
+                    <cell><var name="$QofP[2]" width="15" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[3]" /></cell>
+                    <cell><var name="$P[3]" /></cell>
+                    <cell><var name="$Q[3]" /></cell>
+                    <cell><var name="$QofP[3]" width="15" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[4]" /></cell>
+                    <cell><var name="$P[4]" /></cell>
+                    <cell><var name="$Q[4]" /></cell>
+                    <cell><var name="$QofP[4]" width="15" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[5]" /></cell>
+                    <cell><var name="$P[5]" /></cell>
+                    <cell><var name="$Q[5]" /></cell>
+                    <cell><var name="$QofP[5]" width="15" /></cell>
+                  </row>
+                </tabular>
+              </table>
+
+        </statement>
+
+        <solution>
+
+        </solution>
+
+      </webwork>
+    </exercise>
 
 
 
