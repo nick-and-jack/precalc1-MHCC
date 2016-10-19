@@ -37,6 +37,7 @@
             $areaForm=Compute("pi*r^2");
             $areaComposed=Compute("pi*($radiusForm)^2");
 
+
           </pg-code>
         </setup>
         <statement>
@@ -44,40 +45,51 @@
           <p>The oil spreads out (maintaining a circular shape), and its radius increases by <var name="$radiusRate" /> meters per hour.</p>
           <ul>
 
-            <li><p>After <var name="$hoursNum" /> hours, what is the radius of the circle?</p>
+            <li><p>After <var name="$hoursNum" /> hours, what is the radius of the circle? Remember that it began at 10 meters.</p>
             <p>r = <var name="$radiusNum" width="15"/> meters.</p></li>
             <li><p>At that time, what will be the area of the oil spill?</p>
             <p>A = <var name="$areaNum" width="15" /> meters<m>^2</m></p></li>
           </ul>
-          <p>To find the area, you used one rule to find the radius, and then used that radius in the formula for the area of a circle.</p>
+          <p>To find the area, you first used one rule to find the radius, and then you used that radius in the formula for the area of a circle.</p>
           <p>Let's consider each of those rules as a function.</p>
           <ul>
-            <li><p>What is the function to calculate the radius of the circle after <m>t</m> hours?</p>
+            <li><p>What is the function to calculate the radius of the circle after <m>t</m> hours? Remember that the radius began at 10 meters.</p>
             <p><m>r(t) = </m><var name="$radiusForm" width="15" /></p></li>
-            <li><p>What is the function to calculate the area of a circle of radius <m>r</m>?</p>
+            <li><p>What is the function to calculate the area of a circle of radius <m>r</m>? This is a basic formula that you can search for online.</p>
             <p><m>A(r) = </m><var name="$areaForm" width="15" /></p></li>
           </ul>
           <p>You calculated the area of the spill at <var name="$hoursNum" /> hours in two steps: Find the radius, then find the area.</p>
-          <p>However, this could be written as the single expression <md>
+          <p>However, this could have been written as the single expression <md>
             <mrow>A(r(<var name="$hoursNum" />))</mrow>
           </md></p>
           <p>by writing <m>r(<var name="$hoursNum" />)</m> as the input for the area function.</p>
           <p>Since the input of the area function is <m>r</m>, and <m>r</m> itself is a function of <m>t</m>, we can rewrite the area as a function of <m>t</m> by substituting the formula for <m>r(t)</m> into the area function as the input.</p>
-          <p>Use the functions you wrote to do this. Substitute your formula for <m>r(t)</m> into the function for <m>A(r)</m>:</p>
-          <p>Area<m> = A(r(t)) = </m><var name="$areaComposed" width="20" />.</p>
+          <p>This is called <em>function composition</em>, when we put the output of one function in as the input to another function.</p>
+          <p>Use the functions you wrote to do this. Substitute your formula for <m>r(t)</m> into the function for <m>A(r)</m>.</p>
+          <p>Note: Your answer should have the variable <m>t</m> in it, but it should not contain the letters <m>A</m> or <m>r</m>.</p>
+          <p>Area <m> = A(r(t)) = </m><var name="$areaComposed" width="20" />.</p>
         </statement>
+        <hint>
+          <p>For the last problem, remember the <em>blank</em> method. The area function multiplies <m>\pi</m> by the square of the input<md>
+          <mrow>A(\text{blank}) = \pi(\text{blank})^2</mrow></md>and the input is now the radius function.</p>
+          <p>So, use the expression for the radius as the input for the area function.</p>
+        </hint>
         <solution>
           <ol>
-            <li><p>After <var name="$hoursNum" /> hours, the radius would be <md><mrow>10 + <var name="$radiusRate" />*<var name="$hoursNum" /> = <var name="$radiusNum" /> \text{ meters}</mrow></md></p></li>
-            <li><p>At that time, the area will be <md><mrow><var name="$areaNum" /> \text{ meters}^2</mrow></md></p></li>
+            <li><p>After <var name="$hoursNum" /> hours, the radius would be <md><mrow>10 + <var name="$radiusRate" /> \cdot <var name="$hoursNum" /> = <var name="$radiusNum" /> \text{ meters}</mrow></md></p></li>
+            <li><p>At that time, the area will be:</p>
+              <p><md>
+                <mrow>\pi(<var name="$radiusNum" />)^2 = <var name="$areaNum" /> \text{ meters}^2</mrow>
+              </md></p>
+            </li>
             <li><p>The function for the radius is linear, with initial value <m>10</m> and slope <var name="$radiusRate" />. The formula is <md><mrow>r(t) = 10 + <var name="$radiusRate" />*t</mrow></md></p></li>
-            <li><p>The area of a circle is <md><mrow>A = \pi*r^2</mrow></md></p></li>
-            <li><p>Since <m>r = 10 + </m><var name="$radiusRate" />*t, and <m>A = \pi*r^2</m>, we just substitute the formula for <m>r</m> into the area formula: </p>
-            <p><md>
-                 <mrow>A(r) \amp= A(f(t))</mrow>
-                 <mrow>\amp= A(10 + <var name="$radiusRate" />*t) </mrow>
-                 <mrow>\amp= \pi(10 + <var name="$radiusRate" />*t)^2 </mrow>
-               </md></p>
+            <li><p>The area of a circle is <md><mrow>A(r) = \pi*r^2</mrow></md></p></li>
+            <li><p>Since <m>r(t) = 10 + <var name="$radiusRate" />*t</m>, and <m>A(r) = \pi*r^2</m>, we just substitute the formula for <m>r</m> into the area formula: </p>
+              <p><md>
+                <mrow>A(r) \amp= A(r(t))</mrow>
+                <mrow>\amp= A(10 + <var name="$radiusRate" />*t) </mrow>
+                <mrow>\amp= \pi(10 + <var name="$radiusRate" />*t)^2 </mrow>
+              </md></p>
             </li>
           </ol>
         </solution>
@@ -85,13 +97,13 @@
       </webwork>
     </exercise>
 
-    <p>In <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>, you studied transformations of function. In one case, you took a function f(x) and shifted its graph left or right by adding or subtracting a number from the input of the function.</p>
-    <p>For instance, <m>f(x – 3)</m> represents shifting the graph <m>y = f(x)</m> to the right by <m>3</m> units. However, this may also be thought of as the composition of two functions:  <m>f(x)</m> and <m>g(x) = x - 3</m></p>
-    <p>Thought of as a composition, this transformation occurs by substituting the function <m>g(x) = x - 3</m> into the function <m>g(x)</m>:</p>
+    <p>In <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>, you studied transformations of a function. There, you took a function <m>f(x)</m> and shifted its graph left or right by adding a number to the input of the function. For instance, <m>f(x – 3)</m> represented shifting the graph <m>y = f(x)</m> to the right by <m>3</m> units.</p>
+    <p>However, this may also be thought of as the <term>composition</term> of two functions:  <m>f(x)</m> and <m>g(x) = x - 3</m></p>
+    <p>Thought of as a composition, this transformation occurs by substituting the function <m>g(x) = x - 3</m> into the function <m>f(x)</m>:</p>
     <p><md><mrow>f(x - 3) = f(g(x))</mrow></md></p>
-    <p>This <em>is</em> the composition of two functions. When we write <m>f(g(x))</m>, we read it as <em><m>f</m> of <m>g</m> of <m>x</m></em>.</p>
-    <p>When you compose functions together, the output from one function becomes the input for the other. In the example above, we would first use a value of <m>x</m> in the function <m>g(x) = x - 3</m>. Then, we would take that result and use it as the input for the function <m>f(x)</m>.</p>
-    <p>You might recognize the equation <m>g(x) = x - 3</m> as a line with slope of <m>1</m> and vertical intercept of <m>-3</m>. By evaluating <m>f(x)</m> with the input being <m>g(x)</m>, you got a horizontal shift of <m>3</m> units to the right.</p>
+    <p>So, you have already been using function <term>composition</term>. When we write <m>f(g(x))</m>, we read it as "<em><m>f</m> of <m>g</m> of <m>x</m></em>".</p>
+    <p>When you compose functions together, the output from one function becomes the input for the other. In the example above, we would first use a value of <m>x</m> in the <em>inside</em> function <m>g(x) = x - 3</m> to get an ouput. Then, we would take that output and use it as the input for the function <m>f(x)</m>.</p>
+    <p>Now, practice function <term>composition</term> in the next problem. Remember to work inside the parentheses first.</p>
 
     <exercise>
       <webwork xml:id="function-composition-table1">
@@ -127,23 +139,51 @@
                   \amp g(<var name="$x[3]" />)\amp= <var name="$g[1]" /></mrow></md></p>
           <ul>
             <li><p>What is <m>f(g(<var name="$x[3]" />))</m>?</p>
-            <p>Hint: First, work inside the parentheses and calculate <m>g(<var name="$x[3]" />)</m>.</p>
             <p><m>f(g(<var name="$x[3]" />))</m> = <var name="$f[1]" width="15" /></p></li>
             <li><p>What is <m>g(f(<var name="$x[0]" />))</m>?</p>
-            <p>Remember to work inside the parentheses first.</p>
             <p><m>g(f(<var name="$x[0]" />))</m> = <var name="$g[0]" width="15" /></p></li>
           </ul>
 
 
         </statement>
 
+        <hint>
+          <p>In the first problem, start by working inside the parentheses to calculate <m>g(<var name="$x[3]" />)</m></p>
+          <p>In the second problem, start by working inside the parentheses to calculate <m>f(<var name="$x[0]" />)</m></p>
+        </hint>
+
         <solution>
+          <ol>
+            <li><p>First, we must evaluate the inside function to get <m>g(<var name="$x[3]" />) = <var name="$g[1]" /></m>, and then use this value as the input for <m>f(x)</m>.</p>
+            <p><m>f(g(<var name="$x[3]" />)) = </m><var name="$f[1]" /></p></li>
+            <li><p>First, we must evaluate the inside function to get <m>f(<var name="$x[0]" />) = <var name="$f[0]" /></m>, and then use this value as the input for <m>g(x)</m>.</p>
+            <p><m>g(f(<var name="$x[0]" />)) = </m><var name="$g[0]" /></p></li>
+          </ol>
 
         </solution>
 
       </webwork>
     </exercise>
-<todo>  Finish this problem below   </todo>
+    <p>In using <term>function composition</term>, the key is to remember to evaluate the <em>inside</em> function first. Evaluating functions is just like doing regular arithmetic &#8212; work inside the parentheses before doing anything else.</p>
+    <paragraphs>
+      <dl>
+        <title></title>
+        <li>
+          <title><m>f(g(x))</m></title>
+          <p>First, evaluate <m>g(x)</m> to get an output, then evaluate <m>f</m> of that output.</p>
+        </li>
+        <li>
+          <title><m>H(3x-12)</m></title>
+          <p>First, evaluate <m>3x-12</m> to get an output, then evaluate <m>H</m> of that output.</p>
+        </li>
+        <li>
+          <title><m>f(N(w(x)))</m></title>
+          <p>First, evaluate <m>w(x)</m>, then use that output as the input for the function <m>N</m>, and then use <em>that</em> output as the input for the function <m>f</m>.</p>
+        </li>
+      </dl>
+    </paragraphs>
+
+    <p>In the next exercise, you will get practice evaluating a composite function from a table of values. Remember to evaluate a composite function from the <em>inside</em> to the <em>outside</em>.</p>
     <exercise>
       <webwork xml:id="function-composition-table2">
         <pg-macros>
@@ -256,13 +296,171 @@
 
         </statement>
 
-        <solution>
+        <hint><p>Remember to work inside parentheses first. For instance, in order to evaluate <m>Q(P(3))</m>, you must first evaluate <m>P(3)</m> and then use that number as the input for <m>Q(x)</m>.</p></hint>
 
+        <solution>
+          <table>
+            <tabular top="major" halign="center">
+                  <col halign="left" />
+                  <col />
+                  <col />
+                  <col />
+
+                  <row bottom="medium">
+                    <cell><m>x</m></cell>
+                    <cell><m>Q(x)</m></cell>
+                    <cell><m>P(x)</m></cell>
+                    <cell><m>Q(P(x))</m></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[0]" /></cell>
+                    <cell><var name="$P[0]" /></cell>
+                    <cell><var name="$Q[0]" /></cell>
+                    <cell><var name="$QofP[0]" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[1]" /></cell>
+                    <cell><var name="$P[1]" /></cell>
+                    <cell><var name="$Q[1]" /></cell>
+                    <cell><var name="$QofP[1]" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[2]" /></cell>
+                    <cell><var name="$P[2]" /></cell>
+                    <cell><var name="$Q[2]" /></cell>
+                    <cell><var name="$QofP[2]" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[3]" /></cell>
+                    <cell><var name="$P[3]" /></cell>
+                    <cell><var name="$Q[3]" /></cell>
+                    <cell><var name="$QofP[3]" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[4]" /></cell>
+                    <cell><var name="$P[4]" /></cell>
+                    <cell><var name="$Q[4]" /></cell>
+                    <cell><var name="$QofP[4]" /></cell>
+                  </row>
+
+                  <row bottom="medium">
+                    <cell><var name="$x[5]" /></cell>
+                    <cell><var name="$P[5]" /></cell>
+                    <cell><var name="$Q[5]" /></cell>
+                    <cell><var name="$QofP[5]" /></cell>
+                  </row>
+                </tabular>
+              </table>
         </solution>
 
       </webwork>
     </exercise>
 
+<todo>Ask Alex how (or if) to link to a WeBWorK problem on the same page.</todo>
+    <p>In Exercise 8.1.1, you used <term>composition</term> to find a numerical answer for the area <em>and</em> a formula which found the area as a function of <m>t</m>.</p>
+    <p>To find a numerical answer, you evaluated the <em>radius</em> function to get a number, and then used that number to evaluate the <em>area</em> function.</p>
+    <p>To find a formula, you just used the <em>radius</em> formula as the input for the <em>area</em> function. This gave a new formula, but not a particular numerical answer.</p>
+    <p>If we compose functions together, we think of the resulting formula as a new, single function, written in the form:<md>
+      <mrow>W(J(x))</mrow></md></p>
+    <p>We call this new formula a <term>composite</term> function, because it is <em>composed</em> of two different functions.</p>
+    <p>in the next exercise, you will be composing two functions to make a new <term>composite</term> function. Pay careful attention to which function is being used as the input for the other function.</p>
+
+    <exercise>
+      <webwork xml:id="function-composition-formulas">
+
+        <setup>
+          <var name="$a"><static>3</static></var>
+          <var name="$b"><static>2</static></var>
+          <var name="$B"><static>x + 3</static></var>
+          <var name="$L"><static>x^2</static></var>
+          <var name="$BofL"><static>x^2 + 3</static></var>
+          <var name="$LofB"><static>(x + 3)^2</static></var>
+          <pg-code>
+            $a=random(4,9,1);
+            $b=random(2,3,1);
+            $B=Compute("x+$a");
+            $L=Compute("x^$b");
+            $BofL=Compute("x^$b+$a");
+            $LofB=Compute("(x+$a)^$b");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Let <m>B(x) = <var name="$B" /></m> and <m>L(x) = <var name="$L" /></m>.</p>
+          <p>Write a formula for each of the following compositions. Your answers should use the variable <m>x</m>, but they should <em>not</em> include the letters <m>B</m> or <m>L</m>.</p>
+          <p><m>B(L(x)) = B(</m><var name="$L" width="15" /><m>) = </m><var name="$BofL" width="15" /></p>
+          <p><m>L(B(x)) = L(</m><var name="$B" width="15" /><m>) = </m><var name="$LofB" width="15" /></p>
+        </statement>
+
+        <solution>
+          <p>In the first problem, <m>B(L(x)) = <var name="$BofL" /></m>. To do this, we substitute <m><var name="$L" /></m> in for <m>x</m> in the formula for <m>B(x) = <var name="$B" /></m>. Since the function <m>B(x)</m> merely adds <var name="$a" /> to its input, we get <m>B(<var name="$L" />) = <var name="$BofL" /></m>.</p>
+          <p>In the second problem, we do the same thing, but in reverse. The function <m>L(x)</m> squares its input, so <md>
+            <mrow>L(B(x)) \amp= L(<var name="$B" />)</mrow>
+            <mrow>\amp= (<var name="$B" />)^<var name="$b" /></mrow></md></p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <p>Next, use the graphs of two functions to evaluate different compositions.</p>
+    <exercise>
+      <webwork xml:id="function-composition-graph">
+        <pg-macros>
+          <macro-file>PGchoicemacros.pl</macro-file>
+        </pg-macros>
+        <setup>
+          <var name="$xg[0]"><static>2</static></var>
+          <var name="$xg[1]"><static>4</static></var>
+          <var name="$xf[0]"><static>-2</static></var>
+          <var name="$xf[1]"><static>-4</static></var>
+          <var name="$G[0]"><static>0</static></var>
+          <var name="$FofG"><static>-2</static></var>
+          <var name="$F[0]"><static>2</static></var>
+          <var name="$GofF"><static>-6</static></var>
+          <var name="$G[1]"><static>2</static></var>
+          <var name="$GofG"><static>0</static></var>
+          <var name="$F[1]"><static>6</static></var>
+          <var name="$FofF"><static>2</static></var>
+
+          <pg-code>
+            @xg=map{2*($_-3)}NchooseK(7,2);
+            @xf=map{2*($_-2)}NchooseK(7,2);
+            @G=map{$_-2}@xg;
+            @F=map{2*abs($_-2)-6}@xf;
+            $FofG=2*abs($G[0]-2)-6;
+            $GofF=$F[0]-2;
+            $FofF=2*abs($F[1]-2)-6;
+            $GofG=$G[1]-2;
+          </pg-code>
+
+        </setup>
+        <statement>
 
 
-</section>
+
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WJymUNhx/width/433/height/533/border/888888" width="433px" height="533px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Use the graph to evaluate each of the following compositions.</p>
+          <p><m>g(<var name="$xg[0]" />) = </m><var name="$G[0]" width="15" /></p>
+          <p><m>f(g(<var name="$xg[0]" />)) = f(</m><var name="$G[0]" width="10" /><m>) = </m><var name="$FofG" width="15" /></p>
+          <p><m>f(<var name="$xf[0]" />) = </m><var name="$F[0]" width="15" /></p>
+          <p><m>g(f(<var name="$xf[0]" />)) = g(</m><var name="$F[0]" width="10" /><m>) = </m><var name="$GofF" width="15" /></p>
+          <p><m>g(<var name="$xg[1]" />) = </m><var name="$G[1]" width="15" /></p>
+          <p><m>g(g(<var name="$xg[1]" />)) = g(</m><var name="$G[1]" width="10" /><m>) = </m><var name="$GofG" width="15" /></p>
+          <p><m>f(<var name="$xf[1]" />) = </m><var name="$F[1]" width="15" /></p>
+          <p><m>f(f(<var name="$xf[1]" />)) = f(</m><var name="$F[1]" width="10" /><m>) = </m><var name="$FofF" width="15" /></p>
+
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
+
+  </section>
