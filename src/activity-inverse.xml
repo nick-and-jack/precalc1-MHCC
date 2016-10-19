@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+
+<section xml:id="activity-inverse" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Inverse Activity</title>
+  <introduction>
+    <p>In this activity, we will introduce the <term>inverse</term> of a function.</p>
+    <p>A function is a rule which takes an <term>input</term> and returns an <term>output</term>. The <term>inverse</term> of a function is a rule which does the opposite of the original function &#8212; if the original function took the input <m>a</m> and returned the ouput <m>b</m>, then the inverse function would take the input <m>b</m> and return the output <m>a</m>.</p>
+  </introduction>
+  <p>In the following exercise, we introduce the notation for the <term>inverse</term> of a function.</p>
+
+  <exercise>
+    <webwork xml:id="inverse-notation">
+      <setup>
+        <var name="$increase"><static>4</static></var>
+        <var name="$f"><static>x + 4</static></var>
+        <var name="$fInverse"><static>x - 4</static></var>
+        <var name="$x"><static>15</static></var>
+        <var name="$y"><static>19</static></var>
+
+        <pg-code>
+          $increase=random(3,7,1);
+          $f=Compute("x+$increase");
+          $fInverse=Compute("x-$increase");
+          $x=random(10,20,1);
+          $y=Compute("$x+$increase");
+
+        </pg-code>
+      </setup>
+      <statement>
+        <p>The function <m>f(x) = <var name="$f" /></m> can be described as the function which <em>increases the input by</em> <var name="$increase" />.</p>
+        <p>The <term>inverse</term> of the function <m>f(x)</m>, which is written <m>f^{-1}(x)</m>, is a function which does the opposite of <m>f(x)</m>.</p>
+        <p>Write an expression for the inverse function <m>f^{-1}(x)</m>.</p>
+        <p><m>f^{-1}(x) = </m><var name="$fInverse" width="15" /></p>
+        <p>Evaluate each of the following expressions:</p>
+        <ul>
+          <li><p><m>f(<var name="$x" />) = </m><var name="$y" width="10" /></p></li>
+          <li><p><m>f^{-1}(<var name="$y" />) = </m><var name="$x" width="10" /></p></li>
+        </ul>
+      </statement>
+      <hint>
+        <p>Since <m>f(x)</m> <em>increases</em> the input by <var name="$increase" />, then the inverse function would do the opposite. It would <em>decrease</em> the input by <var name="$increase" />.</p>
+      </hint>
+      <solution>
+        <ol>
+          <li><p>The formula for the inverse is <m>f^{-1}(x) = <var name="$fInverse" /></m>.</p></li>
+          <li><p>Since <m>f^{-1}(x)</m> does the opposite of what <m>f</m> does, then <m>f^{-1}(<var name="$y" />) = <var name="$x" /></m>.</p></li>
+        </ol>
+      </solution>
+    </webwork>
+  </exercise>
+
+  <p>Important point about notation: The expression <m>f^{-1}(x)</m> does <em>not</em> mean that something is being raised to the <m>-1</m> power. Rather, this is special notation for the <term>inverse</term> of the function <m>f</m>.</p>
+
+  <exercise>
+    <webwork xml:id="inverse-evaluation">
+      <pg-macros>
+        <macro-file>PGchoicemacros.pl</macro-file>
+      </pg-macros>
+      <setup>
+        <var name="$x[0]"><static>7</static></var>
+        <var name="$x[1]"><static>3</static></var>
+        <var name="$x[2]"><static>5</static></var>
+        <var name="$x[3]"><static>4</static></var>
+        <var name="$y[0]"><static>16</static></var>
+        <var name="$y[1]"><static>18</static></var>
+        <var name="$y[2]"><static>13</static></var>
+        <var name="$y[3]"><static>19</static></var>
+
+        <pg-code>
+          @x=map{$_+2}NchooseK(8,4);
+          @y=map{$_+12}NchooseK(8,4);
+
+        </pg-code>
+      </setup>
+      <statement>
+        <p>If <m>f</m> and <m>g</m> are functions, suppose we know the following things:</p>
+        <p><md><mrow>f(<var name="$x[0]" />) \amp= <var name="$y[0]" />
+                \amp f(<var name="$x[1]" />) \amp= <var name="$y[1]" />
+                \amp g(<var name="$x[2]" />)\amp= <var name="$y[2]" />
+                \amp g(<var name="$x[3]" />)\amp= <var name="$y[3]" /></mrow></md></p>
+        <ul>
+          <li><p>What is <m>f^{-1}(<var name="$y[1]" />)</m>?</p>
+          <p><m>f^{-1}(<var name="$y[1]" />) = </m><var name="$x[1]" width="15" /></p></li>
+          <li><p>What is <m>g^{-1}(<var name="$y[2]" />)</m>?</p>
+          <p><m>g^{-1}(<var name="$y[2]" />) = </m><var name="$x[2]" width="15" /></p></li>
+        </ul>
+      </statement>
+      <hint>
+
+      </hint>
+      <solution>
+        <ol>
+          <li><p><m>f^{-1}(<var name="$y[1]" />) = <var name="$x[1]" /></m></p></li>
+          <li><p><m>g^{-1}(<var name="$y[2]" />) = <var name="$x[2]" /></m></p></li>
+        </ol>
+      </solution>
+    </webwork>
+  </exercise>
+  <p>Now for an important fact about the inverse of a function. If <m>f</m> is a function, then <m>f^{-1}</m> is also a function. However, these functions perfectly <em>undo</em> each other.</p>
+  <p>If we use the function <m>f</m> to get an output, and then use that output as the input for <m>f^{-1}</m>, we will get the very input we originally used in the function <m>f</m>.</p>
+
+<todo>Make tikzpicture for composing f with f inverse, something like the following</todo>
+  <figure xml:id="function-inverse-diagram">
+      <caption>Fuel Economy versus Speed</caption>
+      <image>
+        <latex-image-code>
+          <![CDATA[\begin{tikzpicture}[node distance=.3\textwidth]
+          \node (x)  {$a$};
+          \node (y) [right of=x] {$f(a)$};
+          \node (z) [right of=y] {$a$};
+          \draw[->,thick] (x) -- node[above] {$f$} (y);
+          \draw[->,thick] (y) -- node[above] {$f^{-1}$} (z);
+          \end{tikzpicture}]]>
+        </latex-image-code>
+      </image>
+  </figure>
+  <p>Put another way, if we <term>compose</term> the functions <m>f</m> and <m>f^{-1}</m>, it will be as though nothing happened to the input.</p>
+
+  <exercise>
+    <webwork xml:id="inverse-composition">
+      <setup>
+        <var name="$num"><static>12</static></var>
+        <var name="$letters[0]"><static>\text{a}</static></var>
+        <var name="$letters[1]"><static>\text{b}</static></var>
+        <var name="$letters[2]"><static>\text{c}</static></var>
+        <var name="$letters[3]"><static>\text{d}</static></var>
+        <var name="$total"><static>4</static></var>
+        <var name="$var"><static>\text{d}</static></var>
+
+        <pg-code>
+          Context()->variables->are(a=>'Real', b=>'Real', c=>'Real', d=>'Real');
+          $num=random(3,20,1);
+          @letters = ('a'..'d');
+          $total=@letters;
+          $var=$letters[random($total)];
+
+        </pg-code>
+      </setup>
+      <statement>
+        <p>Let <m>w</m> be a function and <m>w^{-1}</m> be its inverse.</p>
+        <p>Evaluate each of the following.</p>
+        <ul>
+          <li><p><m>w^{-1}(w(<var name="$num" />)) = </m><var name="$num" width="15" /></p></li>
+          <li><p><m>w^{-1}(w(<var name="$var" />)) = </m><var name="$var" width="15" /></p></li>
+        </ul>
+      </statement>
+      <hint>
+        <p>The function <m>w</m> does something to <var name="$num" />, and then <m>w^{-1}</m> undoes what <m>w</m> did.</p>
+      </hint>
+      <solution>
+        <p><m>w^{-1}(w(<var name="$num" />)) = <var name="$num" /></m></p>
+        <p><m>w^{-1}(w(<var name="$var" />)) = <var name="$var" /></m></p>
+      </solution>
+    </webwork>
+  </exercise>
+
+
+
+  <p>If a function is relatively simple, it isn't hard to find its inverse.</p>
+  <p>For example, if <m>f(x) = x + a</m>, then <m>f^{-1}(x) = x - a</m>.</p>
+  <p>Or if <m>g(x) = x*b</m>, then <m>g^{-1}(x) = \frac{\displaystyle{x}}{\displaystyle{b}}</m>.</p>
+  <p>But how do we determine a formula for an inverse function if the original function is complicated?</p>
+  <p>Explore this in the following exercise.</p>
+
+<!--
+  <exercise>
+    <webwork xml:id="inverse-formula">
+      <setup>
+
+        <pg-code>
+
+        </pg-code>
+      </setup>
+      <statement>
+        <p>Remember that an inverse function will <em>undo</em> the original function. Thought of in terms of inputs and outputs, we can say that a function <m>f</m> takes an <m>x</m> value and turns it into a <m>y</m> value. Then, the inverse function <m>f^{-1}(x) would take that <m>y</m> value and turn it back into an <m>x</m> value.</p>
+        <p>
+      </statement>
+      <hint>
+
+      </hint>
+      <solution>
+
+      </solution>
+    </webwork>
+  </exercise>
+-->
+
+
+</section>

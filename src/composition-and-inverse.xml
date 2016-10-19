@@ -43,17 +43,94 @@
     </introduction>
 
     <xi:include href="./activity-composition.xml" />
+    <xi:include href="./activity-inverse.xml" />
 
     <conclusion>
+      <subsection>
         <title>Gist of Composition and Inverses</title>
+<todo> Fix units </todo>
 
-        <p>The composition of functions is really about making one function the input for another. Here is a medical example of the composition of two functions. Let <m>f(t)</m> be a function that relates the amount of drug, <m>D</m> in <quantity><unit prefix="milli" base="gram" /></quantity>, in a patient's bloodstream as a function of time, <m>t</m> in hours. At time goes on, the amount of drug in the paritent's body decreases as the body eliminates it.</p>
+        <p>The composition of functions is really about making one function the input for another. The following example shows function composition in the context of a patient taking blood pressure medicine.</p>
+          <example>
+            <p>Let <m>C</m> represent the concentration, measured in mg/kg, of a blood pressure regulating drug in a patient's bloodstream as a function of time <m>t</m>, measured in hours. As time goes on, the concentration of the drug in the bloodstream decreases as the body metabolizes and/or excretes it.</p>
+            <p>At the same time, the drug is meant to help lower the patient's blood pressure <m>P</m>, measured in mm Hg. So, as the drug leaves the patient's bloodstream, the blood pressure increases.</p>
+            <p>Therefore, <m>P</m> depends on <m>C</m>, and <m>C</m> depends on <m>t</m>.</p>
+            <p>There is a function for the relationship between <m>C</m> and <m>t</m> &#8212; let's call it <m>f</m>, and write <m>C = f(t)</m>.</p>
+            <p>There is another function for the relationship between <m>P</m> and <m>C</m> &#8212; let's call it <m>g</m>, and write <m>P = g(C)</m>.</p>
+            <p>So, we would first use <m>f(t)</m> to find the concentration <m>C</m> of the drug in the bloodstream, and then use that amount in the function <m>g(C)</m> in order to find the patient's blood pressure <m>P</m>.</p>
+            <p>In function notation, this would look like:<md>
+              <mrow>P \amp= g(C)</mrow>
+              <mrow>\amp=g(f(t))</mrow></md></p>
+            <p>That last expression, <m>g(f(t))</m>, is a <term>composite</term> function, and it shows that the blood pressure is really a function of <m>t</m>.</p>
 
-        <p>On the other hand, the drug is meant to help slow the heart rate of a patient, so as the drug leaves the patient's bloodstream, the heart rate increases. Therefore, the heart rate <m>H</m>, in beats per minute, is a function of <m>D</m>, the amount of drug in the body. We can write <m>H = g(D)</m> where <m>g</m> is a function relating the Heart rate to the amount of drug in the body.</p>
 
-        <p>Therefore we have two functions: the heart rate is a function of the amount of drug in the bloodstream and the amount of drug is a function of time. Utimately, the heart rate is a function of time.</p>
+<todo>Fix this exercise</todo>
+<!--
+            <exercise>
+              <webwork xml:id="heart-rate">
 
-        <p>Using function notation the composition of these two functions looks like this:<me>H=g(D)\text{ and }D=f(t)\text{ so that }H=g(f(t))\text{.}</me> If each function had a formula then we would literally put one formula into the other.</p>
+                <setup>
+                  <var name="$hours"><static>20</static></var>
+                  <var name="$conExpression"><static>f(20)</static></var>
+                  <var name="$bpOfConExpression"><static>g(f(20))</static></var>
+                  <var name="$conAtHours"><static>5*exp(-0.058*20)</static></var>
+                  <var name="$bpAtHours"><static>-12.5*(20-1)+160</static></var>
+                  <pg-code>
+
+                    $hours = random(15,20,1);
+                    $conExpression=RadioButtons(
+                      ["f(<var name="$hours" />)","g(<var name="$hours" />)"],
+                      0, labels => ["f(<var name="$hours" />)","g(<var name="$hours" />)"],
+                      displayLabels => 0
+                      );
+                    $bpOfConExpression=RadioButtons(
+                      ["f(g(<var name="$hours" />))","g(f(<var name="$hours" />))"],
+                      1, labels => ["f(g(<var name="$hours" />))","g(f(<var name="$hours" />))"],
+                      displayLabels => 0;
+                      );
+                    $conAtHours=Compute("5*2.718282**(-0.058*$hours)");
+                    $bpAtHours=Compute("-12.5*$conAtHours+172.5");
+                  </pg-code>
+                </setup>
+
+                <statement>
+                  <p>A certain blood pressure drug works best when it is consumed at a concentration of 5 mg/kg, and its concentration decreases exponentially, with a half-life of 12 hours.</p>
+                  <p>Therefore, the concentration can be modeled by the function<md>
+                    <mrow>C = f(t) = 5e^{-0.058t}</mrow></md></p>
+                  <p>Suppose that a patient with hypertension is admitted with blood pressure at 160 mm Hg. Administering the drug at a concentration of 5 mm/kg reduces their blood pressure to 110 mm Hg. As the concentration diminishes over time, their blood pressure increases linearly, returning to 160 mm Hg when the concentration drops to 1 mg/kg.</p>
+                  <p>Therefore, the blood pressure can be modeled by the function<md>
+                    <mrow>P = g(C) = -12.5C + 172.5</mrow></md></p>
+                  <ul>
+                    <li><p>Which expression below represents the concentration of the drug after 20 hours?</p>
+                    <p><var name="$conExpression" form="buttons" /></p></li>
+                    <li><p>What is the concentration of the drug after <var name="$hours" /> hours?</p>
+                    <p><m>C = f(<var name="$hours" />) = </m><var name="$conAtHours" width="15" /></p></li>
+                    <li><p>Which expression below represents the patient's blood pressure at <var name="$hours" />?</p>
+                    <p><var name="$bpOfConExpression" form="buttons" /></p></li>
+                    <li><p>What is the expected blood pressure after <var name="$hours" /> hours?</p>
+                    <p><m>P = g(f(<var name="$hours" />)) = </m><var name="$bpAtHours" width="15" /></p></li>
+                  </ul>
+                </statement>
+                <solution>
+                  <ol>
+                    <li><p>The concentration after <var name="$hours" /> hours is <var name="$conExpression" />, and its value is <var name="$conAtHours" /> mg/kg.</p></li>
+                    <li><p>The blood pressure after <var name="$hours" /> hours is <var name="$bpOfConExpression" />, and its value is <var name="$bpAtHours" /> mm Hg.</p></li>
+                  </ol>
+                </solution>
+              </webwork>
+            </exercise>
+-->
+
+
+          </example>
+
+
+
+      </subsection>
+      <subsection>
+        <title>Inverses</title>
+
+      </subsection>
 
     </conclusion>
 
