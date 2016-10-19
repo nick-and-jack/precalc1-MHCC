@@ -13,10 +13,9 @@
 
 <chapter xml:id="chapter-domain-and-range-piecewise" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <title>Domain and Range</title>
+    <title>Domain, Range and Piecewise Defined Functions</title>
     
     <introduction>
-        <todo>Insert outcomes for piecewise functions.</todo>
         <list xml:id="outcomes-domain-and-range">
             <title>Student Learning Outcomes</title>
             <ul>
@@ -48,6 +47,17 @@
     <xi:include href="./activity-piecewise.xml" />
 
     <conclusion>
+        <subsection>
+            <title>Intervals</title>
+                <p>An interval is a section, usually of one of the axes.  If a function is rising or falling, or concave up or down we using intervals of the horizontal axis to describe where that behavior is occuring.  To define an interval we must tell the reader where the interval beings and where it ends and we must also state whether the end values are included or not.  In this course we mainly use inequalities to define intervals although brackets [ ] which mean <q>include</q> end value and parenthesis ( ) which mean <q>not include</q> end value can be used.</p>
+                <p>The intervals below and their meanings are listed below for your review:</p>
+                <p>
+                    <ul>
+                        <li><m>(2, 5]</m> is the same as <m>2 \lt x \le 5</m>.  Both describe an interval that is between 2 and 5, not including 2 and including 5</li>
+                        <li><m>[4, inf)</m> is the same as <m>x \geq 4</m>.  Both describe an interval that includes all values greater than or equal to 4.  Remember that <q>inf</q> is short for <q>infinity</q> which is not actually a number, so it is always associated with parentheses ( or ) or with an open ended inequality since infinity cannot be included in the beginning or end of an interval.</li>
+                    </ul>
+                </p>
+        </subsection>
         <subsection>
             <title>Blank Method</title>
                 <p>Function notation is a way to tell the reader information about the input and how to use it to generate an output. Again, the way it works is <m>f(input)=output</m>. Whatever is in the parenthesis is the input.</p>
@@ -107,55 +117,15 @@
                             <setup>
                                 <var name="$blueLine">
                                    <static>y=0.5(x+3)-2</static>
-                               </var>
-                               <var name="$greenLine">
+                                </var>
+                                <var name="$greenLine">
                                    <static>y=0.5(x+3)-2</static>
-                               </var>
-                               <var name="$startValBlue">
-                                    <static>-5</static>
                                 </var>
-                                <var name="$endValBlue">
-                                    <static>0</static>
+                                <var name="$answer1">
+                                    <static>-5&lt;=x&lt;0</static>
                                 </var>
-                                <var name="$startValGreen">
-                                    <static>1</static>
-                                </var>
-                                <var name="$endValGreen">
-                                    <static>4</static>
-                                </var>
-
-                                <todo>Find out how to write - less than or equal to - and the other one.  Correct answer for all symbols below should be \leqslant except symbol2 should be \lt.</todo>
-                                <var name="$symbol1" category="set">
-                                    <set>
-                                         <member>{&lt;}</member>
-                                         <member correct="yes">{&lt;}</member>
-                                         <member>{&gt;}</member>
-                                         <member>{&gt;}</member>
-                                    </set>
-                                </var>
-                                <var name="$symbol2" category="set">
-                                    <set>
-                                         <member>{&lt;}</member>
-                                         <member correct="yes">{&lt;}</member>
-                                         <member>{&gt;}</member>
-                                         <member>{&gt;}</member>
-                                    </set>
-                                </var>
-                                <var name="$symbol3" category="set">
-                                    <set>
-                                         <member>{&lt;}</member>
-                                         <member correct="yes">{&lt;}</member>
-                                         <member>{&gt;}</member>
-                                         <member>{&gt;}</member>
-                                    </set>
-                                </var>
-                                <var name="$symbol4" category="set">
-                                    <set>
-                                         <member>{&lt;}</member>
-                                         <member correct="yes">{&lt;}</member>
-                                         <member>{&gt;}</member>
-                                         <member>{&gt;}</member>
-                                    </set>
+                                <var name="$answer2">
+                                    <static>1&lt;=x&lt;=4</static>
                                 </var>
                             
                                 <pg-code>
@@ -164,17 +134,22 @@
                                     $greenLine = ImplicitPlane("y=3");
                                     Context("Inequalities");
                                     $answer1 = Compute("-5&lt;=x&lt;0");
+                                    $answer2 = Compute("1&lt;=x&lt;=4");
                                 </pg-code>
                             </setup>
             
                             <statement>
                                 <todo>Exercise 2.0.4: Need to learn how to format a piecewise function and its notation.</todo>
-                                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true/sdz/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                                <p>Exercise 2.0.4: Need to learn how to format a piecewise function and its notation.</p>
+                                
+                                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                                 <p>Find a formula for the piecewise defined function shown in the graph</p>
                                 <p>What is the equation of the blue line? <var name="$blueLine" width="15" /> and what is its domain? <var name="$answer1" width="5" /></p>
+                                <p>What is the equation of the green line? <var name="$greenLine" width="15" /> and what is its domain? <var name="$answer2" width="5" /></p>
                             </statement>
                         </webwork>
                     </exercise>
+                    
                     <todo>Insert last interactive where student is given a piecewise formula and they have to graph it.</todo>
         </subsection>
 

@@ -14,34 +14,212 @@
   <title>Activity Piecewise Defined Functions</title>
 
   <subsection>
-      <title>Piecewise Defined Functions</title>
-
+      <title>Evaluating Pieces of Different Functions</title>
+        <p>A piecewise defined function is literally a function that has been defined in pieces.  Most likely you have encountered piecewise defined functions in every day life.  Maybe you didn't know what they were called.</p>
+        <p>For instance, if you pay to park at a garage downtown you may see a sign at the entrance telling you the price of parking.  It will say somthing like $3.20 for the first hour and $1.70 for each additional hour up to $13.00 for the day.  If you stay for 1 minute or 10 minutes or 50 minutes the rate stays constant at $3.20.  But if you stay for more than one hour the rate is different, a different formula is used to calculate what you will pay for parking.  The parking rate is in <q>pieces</q></p>
+        <p>The most difficult part of piecewise functions is the notation.  In the following activity you will use a skill you already know how to do, evaluate a function graphically, and transition slowly into how to write and understand piecewise notation.</p>
    <exercise>
        <webwork>
            <pg-macros>
              <macro-file>parserImplicitPlane.pl</macro-file>
+             <macro-file>contextInequalities.pl</macro-file>
            </pg-macros>
            <setup>
+               <var name="$eval1">
+                   <static>6</static>
+               </var>
+               <var name="$eval2">
+                   <static>0</static>
+               </var>
+               <var name="$eval3">
+                   <static>-4</static>
+               </var>
+               <var name="$eval4">
+                   <static>-1</static>
+               </var>
+               <var name="$eval5">
+                   <static>1</static>
+               </var>
+               <var name="$eval6">
+                   <static>2</static>
+               </var>
+               <var name="$A">
+                  <set>
+                    <member correct="yes">\text{A}</member>
+                    <member>\text{B}</member>
+                    <member>\text{C}</member>
+                  </set>
+                </var>
+                <var name="$B">
+                  <set>
+                    <member>\text{A}</member>
+                    <member correct="yes">\text{B}</member>
+                    <member>\text{C}</member>
+                  </set>
+                </var>
+                <var name="$C">
+                  <set>
+                    <member>\text{A}</member>
+                    <member>\text{B}</member>
+                    <member correct="yes">\text{C}</member>
+                  </set>
+                </var>
                <var name="$lineA">
-                   <static>y=3x-1</static>
+                   <static>y=-2x-10</static>
+               </var>
+               <var name="$lineB">
+                   <static>y=x-1</static>
+               </var>
+               <var name="$lineC">
+                   <static>y=-0.25x+3.5</static>
+               </var>
+               <var name="$answer1">
+                 <static>-8&lt;=x&lt;=-3</static>
+               </var>
+               <var name="$answer2">
+                   <static>-3&lt;x&lt;=2</static>
+               </var>
+               <var name="$answer3">
+                   <static>2&lt;x&lt;=8</static>
                </var>
                
                <pg-code>
-                    Context()->variables->are(x=>'Real',y=>'Real');
-                   $lineA = ImplicitPlane("y=3x-1");
+                $A = RadioButtons(
+                ["A","B","C"],
+                0, labels => ["A","B","C"],displayLabels => 0
+                );
+                $B = RadioButtons(
+                ["A","B","C"],
+                1, labels => ["A","B","C"],displayLabels => 0
+                );
+                $C = RadioButtons(
+                ["A","B","C"],
+                2, labels => ["A","B","C"],displayLabels => 0
+                );
+                    $eval1 = Real(6);
+                    $eval2 = Real(0);
+                    $eval3 = Real(-4);
+                    $eval4 = Real(-1);
+                    $eval5 = Real(1);
+                    $eval6 = Real(2);
+                  Context()->variables->are(x=>'Real',y=>'Real');
+                    $lineA = ImplicitPlane("y=-2x-10");
+                    $lineB = ImplicitPlane("y=x-1");
+                    $lineC = ImplicitPlane("y=-0.25x+3.5");
+                  Context("Inequalities");
+                    $answer1 = Compute("-8&lt;=x&lt;=-3");
+                    $answer2 = Compute("-3&lt;x&lt;=2");
+                    $answer3 = Compute("2&lt;x&lt;=8");
                </pg-code>
            </setup>
 
            <statement>
-               <p>this is line A <var name="$lineA" width="15" /></p>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QeJS3ygG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Use the blue input slider point on the horizontal axis to navigate across the piecewise functions graphed above.</p>
+              <p>Evaluate each expression below.  Round your answers to the nearest integer and use <q>DNE</q> if there is no answer.</p>
+              <p><m>f(-8) = </m> <var name="$eval1" width="5" /> <m>f(-5) = </m> <var name="$eval2" width="5" /></p>
+              <p><m>f(-3) = </m> <var name="$eval3" width="5" /> <m>f(0) = </m> <var name="$eval4" width="5" /></p>
+              <p><m>f(2) = </m> <var name="$eval5" width="5" /> <m>f(6) = </m> <var name="$eval6" width="5" /></p>
+              <p>Notice that sometimes you would use line A or Line B or Line C to evaluate the function.</p>
+              <p>Which line did you use to evaluate <m>f(0)?</m> Line: <var name="$B" form="buttons" /> </p>
+              <p>Which line did you use to evaluate <m>f(6)?</m> Line: <var name="$C" form="buttons" /></p>
+              <p>Which line did you use to evaluate <m>f(-5)?</m> Line: <var name="$A" form="buttons" /></p>
+              <p>If you had an equation for each line you would use the equation to evaluate the function instead of the graph.</p>
+              <p>What is the equation for line A? <var name="$lineA" width="15" /></p>
+              <p>What is the equation for line B? <var name="$lineB" width="15" /></p>
+              <p>What is the equation for line C? <var name="$lineC" width="15" /></p>
+              <p>But just like when you used the graph to evaluate different input values, you only use the piece of the graph that corresponds to the input you were given.  It's a function afterall, so one input can only give you one output. If all you had were formulas instead of the graph, you would have to decide which formula to use depending on the input given.</p>
+              <p>Keep in mind that the boundaries of each line cannot be shared.  So if two lines intersect at <m>x = 21</m> then only one line can actually include <m>x = 21</m>.  The other line would have to show it does not include <m>x = 21</m> even though it looks like the lines share the value.  It's up to the person that defines the lines where one ends and the other begins, but usually we define from left to right. That is, the function on the left gets to use the shared value and the one on the right has to exclude it.</p>
+              <p>Under what conditions would you use Line A to evaluate the function?</p>
+              <p>Line A if x is <var name="$answer1" width="10" /></p>
+              <p>Under what conditions would you use Line B to evaluate the function?</p>
+              <p>Line B if x is <var name="$answer2" width="10" /></p>
+              <p>Under what conditions would you use Line C to evaluate the function?</p>
+              <p>Line C if x is <var name="$answer3" width="10" /></p>
            </statement>
        </webwork>
    </exercise>
   </subsection>
 
   <subsection>
-      <title>Is there a different title here?</title>
+      <title>One Function Pieced Together</title>
 
-      <p>Text here</p>
+      <p>In the previous exercise you identified the equations of three separate lines and you stated the intervals for which each line was to be used.  In fact, you stated the <em>domain</em> for each equation.  When two or more equations are put together to form one function it's called a <em>piecewise defined function</em>.  The function has to state what all the formulas are and it also has to let the reader know when to use them.  That is the notation has to let the reader know the equations and their domains.</p>
+      <p>Next we learn how to set up the notation so that a reader can easily identify each formula and it's corresponding domain.</p>
+
+    <exercise>
+        <webwork>
+          <pg-macros>
+            <macro-file>contextInequalities.pl</macro-file>
+            <macro-file>parserImplicitPlane.pl</macro-file>
+          </pg-macros>
+
+            <setup>
+                <var name="$answer1">
+                 <static>-8&lt;=x&lt;=-3</static>
+                </var>
+                <var name="$answer2">
+                   <static>-3&lt;x&lt;=2</static>
+                </var>
+                <var name="$answer3">
+                   <static>2&lt;x&lt;=8</static>
+                </var>
+                <var name="$lineA">
+                   <static>y=-2x-10</static>
+               </var>
+               <var name="$lineB">
+                   <static>y=x-1</static>
+               </var>
+               <var name="$lineC">
+                   <static>y=-0.25x+3.5</static>
+               </var>
+               <var name="$output1">
+                   <static>2</static>
+               </var>
+               <var name="$output2">
+                   <static>0</static>
+               </var>
+               <var name="$output3">
+                   <static>1.75</static>
+               </var>
+
+                <pg-code>
+                  Context()->variables->are(x=>'Real',y=>'Real');
+                    $lineA = ImplicitPlane("y=-2x-10");
+                    $lineB = ImplicitPlane("y=x-1");
+                    $lineC = ImplicitPlane("y=-0.25x+3.5");
+                    $output1 = Real(2);
+                    $output2 = Real(0);
+                    $output3 = Real(1.75);
+
+                  Context("Inequalities");
+                    $answer1 = Compute("-8&lt;=x&lt;=-3");
+                    $answer2 = Compute("-3&lt;x&lt;=2");
+                    $answer3 = Compute("2&lt;x&lt;=8");
+                </pg-code>
+          </setup>
+
+          <statement>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QeJS3ygG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Earlier you found the equations for Lines A, B and C and the domain for each line.  To evaluate this group of formulas:</p>
+              <p>Use <m>y = -2x - 10</m> if the input is in the interval <var name="$answer1" width="10" /></p>
+              <p>Use <m>y = x - 1</m> if the input is in the interval <var name="$answer2" width="10" /></p>
+              <p>Use <m>y = -0.25x + 3.5</m> if the input is in the interval <var name="$answer3" width="10" /></p>
+              <p>Already we see there is a method to evaluating a group of equations.  Notice how you linked each formula with a domain.  When evaluating this group of equations, identify the domain in which the input belongs then use the equation associated with that domain.</p>
+              <p>This notation says exactly that.</p>
+              <todo>Insert nicely formatted piecewise function notation with curly bracket etc.</todo>
+              <p>First you see that we have a function <m>f(x)</m> then the <m>=</m> symbol followed by what normally would be a formula.  But now we have three!  We use the curly brackets to show that the <q>funciton</q> is actually a group of formulas.</p>
+              <p>Grouped together are the three formulas and after each formula is its domain.</p>
+              <p>For any given input value, find the domain to which it belongs then use the formula that corresponds to that domain. For instance:</p>
+              <p>To evaluate <m>f(-6)</m> we must realize the input is <m>x = -6</m>.</p>
+              <p>To which domain does <m>x = -6</m> belong?  <var name="$answer1" width="10" /> What is the formula that corresponds to this domain? <var name="$lineA" width="15" />  Therefore <m>f(-6) = </m> <var name="$output1" width="5" /></p>
+              <p>T evaluate <m>f(1)</m> we see the input is <m>x = 1</m>.</p>
+              <p>To which domain does <m>x = 1</m> belong?  <var name="$answer2" width="10" /> What is the formula that corresponds to this domain? <var name="$lineB" width="15" />  Therefore <m>f(1) = </m> <var name="$output2" width="5" /></p>
+              <p>To evaluate <m>f(7)</m> we see the input is <m>x = 7</m>.</p>
+              <p>To which domain does <m>x = 7</m> belong?  <var name="$answer3" width="10" /> What is the formula that corresponds to this domain? <var name="$lineC" width="15" />  Therefore <m>f(1) = </m> <var name="$output3" width="5" /></p>
+              <p>In each case, you find what domain the input belongs to then use the formula that corresponds to that domain.</p>
+          </statement>
+        </webwork>
+    </exercise>
   </subsection>
 </section>
