@@ -19,83 +19,53 @@
       <p>An interval is a section or portion of either the vertical or horizontal axis.  We use intervals to help describe the behavior of a function.  For instance the temperature T in degrees fahrenheit throughout the day depends on the time of day t hours after midnight.  In function notation would could write</p>
       <p><me>T = f(t)</me></p>
       <p>Starting from midnight at t = 0 the temperature is typically still dropping until about 5 hours (5 <init>a.m.</init>) when it is coldest.  Then as the sun comes up, the temperature begins to increase until it hits the hotest time of the day, maybe 17 hours (5 <init>p.m.</init>). From then on the temperature begins to drop again and the cycle repeast itself.</p>
-      <p>The rise and fall of the temperature during the day happens at certain intervals of time.  We observe the temperature increases for times between 5 hours and 17 hours after midnight.  In math this sentence is written like this</p>
+      <p>The rise and fall of the temperature happens at certain intervals of time throughout the day.  We observe the temperature increases for times between 5 hours and 17 hours after midnight.  In math this sentence is written like this</p>
       <blockquote>T increases for <m>5 \leqslant t \leqslant 17</m></blockquote>
       <p>Likewise, the temperature outside is decreasing for times between 0 hours and 5 hours after midnight, then again for times between 17 hours and 24 hours after midnight. In math this sentence is written like this</p>
       <blockquote>T decreases for <m>0 \leqslant t \leqslant 5</m> and <m>17 \leqslant t \leqslant 24</m></blockquote>
       <p>Notice in each case our observations about temperature T were based on the <em>input</em> <m>t</m> that give us the desired results. The ouputs have certain properties on different sections of the input axis.</p>
-      <p>In the execise below, practice writing inequalites to describe the shaded intervals on each number line.</p>
-      <todo>Insert graphical activity to highlight intervals on the horizontal axis. Include practice with writing interval notation and interpreting interval notation.</todo>
-        
-          <exercise>
-              <webwork>
-                  <setup>
-                      <var name="$startValLine1">
-                          <static>-5</static>
-                      </var>
-                      <var name="$endValline1">
-                          <static>0</static>
-                      </var>
-                      <var name="$startValline2">
-                          <static>1</static>
-                      </var>
-                      <var name="$endValline2">
-                          <static>4</static>
-                      </var>
-                      <var name="$symbol1" category="set">
-                          <set>
-                               <member>{&lt;}</member>
-                               <member correct="yes">{&lt;}</member>
-                               <member>{&gt;}</member>
-                               <member>{&gt;}</member>
-                          </set>
-                      </var>
-                      <var name="$symbol2" category="set">
-                          <set>
-                               <member>{&lt;}</member>
-                               <member correct="yes">{&lt;}</member>
-                               <member>{&gt;}</member>
-                               <member>{&gt;}</member>
-                          </set>
-                      </var>
-                      <var name="$symbol3" category="set">
-                          <set>
-                               <member>{&lt;}</member>
-                               <member correct="yes">{&lt;}</member>
-                               <member>{&gt;}</member>
-                               <member>{&gt;}</member>
-                          </set>
-                      </var>
-                      <var name="$symbol4" category="set">
-                          <set>
-                               <member>{&lt;}</member>
-                               <member correct="yes">{&lt;}</member>
-                               <member>{&gt;}</member>
-                               <member>{&gt;}</member>
-                          </set>
-                      </var>
-                      
-                      <pg-code>
-                          $startValLine1 = Real(-5);
-                          $endValline1 = Real(0);
-                          $startValline2 = Real(1);
-                          $endValline2 = Real(4);
-                          $symbol1 = PopUp(["?", "less than", "less than or equal to", "greater than", "greater than or equal to"], "less than or equal to");
-                          $symbol2 = PopUp(["?", "less than", "less than or equal to", "greater than", "greater than or equal to"], "less than");
-                          $symbol3 = PopUp(["?", "less than", "less than or equal to", "greater than", "greater than or equal to"], "less than or equal to");
-                          $symbol4 = PopUp(["?", "less than", "less than or equal to", "greater than", "greater than or equal to"], "less than or equal to");
-                      </pg-code>
-                </setup>
-      
-                <statement>
-                    <p>This should be an exercise in writing the correct inequality notation given a shaded number line.</p>
-      
-                    <p>Represent the shaded region with inequalities <var name="$startValLine1" width="5" /> <var name="$symbol1" form="popup" /> <m>x</m> <var name="$symbol2" form="popup" /> <var name="$endValline1" width="5" /></p>
-                    <p>Represent the shaded region with inequalities <var name="$startValline2" width="5" /> <var name="$symbol3" form="popup" /> <m>x</m> <var name="$symbol4" form="popup" /> <var name="$endValline2" width="5" /></p>
-                    <p>Now use the appropriate notation to write the equation for this piecewise defined function.  Need some way of writing this function!</p>
-                </statement>
-              </webwork>
-          </exercise>
+  
+      <p>In the execise below, practice writing inequalites to describe the shaded intervals on each number line.</p>  
+             <exercise>
+              <title>Review of Compound Inequalities</title>
+                 <webwork>
+                   <pg-macros>
+                       <macro-file>contextInequalities.pl</macro-file>
+                   </pg-macros>
+   
+                     <setup>
+                         <var name="$answer1">
+                           <static>-2&lt;x&lt;=1</static>
+                         </var>
+                         <var name="$answer2">
+                             <static>x&lt;-2orx&gt;=1</static>
+                         </var>
+                         <var name="$answer3">
+                             <static>x&lt;=-2orx&gt;=1</static>
+                         </var>
+                         
+                         <pg-code>
+                             Context("Inequalities");
+                             $answer1 = Compute("-2&lt;x&lt;=1");
+                             $answer2 = Compute("x&lt;-2orx&gt;=1");
+                             $answer3 = Compute("x&lt;=-2orx&gt;=1");
+                         </pg-code>
+                   </setup>
+         
+                   <statement>
+                      <p>Remember that open circles mean <q>include</q> while closed circles mean <q>not include</q>.</p>
+                       <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/XT6ddYvA/width/431/height/100/border/888888" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                       <p>Represent the shaded region above with inequalities <var name="$answer1" width="10" /></p>
+                       <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xBQKE3fm/width/431/height/100/border/888888/sri/true" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                       <p>Represent the shaded region above with inequalities <var name="$answer2" width="10" /></p>
+                       <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dDq6e5G4/width/431/height/100/border/888888/sri/true" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                       <p>Represent the shaded region above with inequalities <var name="$answer3" width="10" /></p>
+
+
+                   </statement>
+                 </webwork>
+             </exercise>
+           
     </subsection>
 
     <subsection>
@@ -140,43 +110,36 @@
           <p>In the next exercise you will practice using inequalities to describe certain characteristics of the graph of a function <m>f(x)</m></p>
 
           <exercise>
-            <todo>Insert the correct coding for inequalities</todo>
               <webwork>
+
+                <pg-macros>
+                    <macro-file>contextInequalities.pl</macro-file>
+                </pg-macros>
+                
                   <setup>
-                      <var name="$startValInc">
-                          <static>-4</static>
+                      <var name="$answer1">
+                        <static>-5&lt;=x&lt;0</static>
                       </var>
-                      <var name="$endValInc">
-                          <static>0</static>
+                      <var name="$answer2">
+                          <static>1&lt;=x&lt;=4</static>
                       </var>
-                      <var name="$startValConc">
-                          <static>-4</static>
-                      </var>
-                      <var name="$endValConc">
-                          <static>0</static>
-                      </var>
-                      <var name="$startValPos">
-                          <static>-4</static>
-                      </var>
-                      <var name="$endValPos">
-                          <static>0</static>
+                      <var name="$answer3">
+                          <static>1&lt;=x&lt;=4</static>
                       </var>
                       
                       <pg-code>
-                          $startValInc = Real(-4);
-                          $endValInc = Real(0);
-                          $startValConc = Real(-4);
-                          $endValConc = Real(0);
-                          $startValPos = Real(-4);
-                          $endValPos = Real(0);
+                          Context("Inequalities");
+                          $answer1 = Compute("-5&lt;=x&lt;0");
+                          $answer2 = Compute("1&lt;=x&lt;=4");
+                          $answer3 = Compute("1&lt;=x&lt;=4");
                       </pg-code>
                 </setup>
       
                 <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aww8tpND/width/431/height/313/border/888888/sri/true/sdz/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>On what interval(s) is the function increasing? <var name="$startValInc" width="5" /> <m>x</m> <var name="$endValInc" width="5" /></p>
-                    <p>On what interval(s) is the function concave down? <var name="$startValCon" width="5" /> <m>x</m> <var name="$endValConc" width="5" /></p>
-                    <p>On what interval(s) is the function <m>f(x) \ge 0</m>? <var name="$startValPos" width="5" /> <m>x</m> <var name="$endValPos" width="5" /></p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aww8tpND/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>On what interval(s) is the function increasing? <var name="$answer1" width="5" /></p>
+                    <p>On what interval(s) is the function concave down? <var name="$answer2" width="5" /></p>
+                    <p>On what interval(s) is the function <m>f(x) \ge 0</m>? <var name="$answer3" width="5" /></p>
                 </statement>
               </webwork>
           </exercise>
@@ -196,7 +159,7 @@
       <p>In this activity we observe the domain and range of a fucntion graphically then in tables and finally in formulas.</p>
 
       <p>checkout the graph of <m>f(x)</m> shown in the exercise below. Use the slider to adust the domain of the function and see how it affects the range.</p>
-      <todo>Insert graph that has adjustable domain, maybe highlight interval on x-axis while the range changes and is highlighted in a different color.  User identifies the domain and range of the graph.</todo>
+  
           <exercise>
               <webwork>
                   <setup>
@@ -210,7 +173,9 @@
                 </setup>
       
                 <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GaCY9FX2/width/458/height/313/border/888888/sri/true/sdz/true" width="458px" height="313px" style="border:0px;" width="458px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <todo>Insert graph that has adjustable domain, maybe highlight interval on x-axis while the range changes and is highlighted in a different color.  User identifies the domain and range of the graph.</todo>
+
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GaCY9FX2/width/458/height/313/border/888888/sri/true" width="458px" height="313px" style="border:0px;" width="458px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>Need to insert values on vertical and horizontal axes to properly identify the ends of the intervals.</p>
       
                     <p><var name="$variablename" width="5" /></p>
