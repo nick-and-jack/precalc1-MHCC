@@ -16,14 +16,14 @@
     <title>Composition of Functions and Inverses of Functions</title>
 
     <introduction>
-        <list xml:id="outcomes-composition-and-inverse">
+        <objectives xml:id="outcomes-composition-and-inverse">
             <title>Student Learning Outcomes</title>
             <ul>
                 <li><p>Define composite functions and combinations of functions and apply and interpret these in appropriate situations.</p></li>
                 <li><p>Evaluate, apply, and interpret function notation, including the notation for inverse functions and composition of functions.</p></li>
                 <li><p>Demonstrate the inverse relationship between an exponential function and a logarithmic function (with the same base).</p></li>
             </ul>
-        </list>
+        </objectives>
 
         <list>
             <title>Video Lectures</title>
@@ -56,6 +56,8 @@
             <p>At the same time, the drug is meant to help lower the patient's blood pressure <m>P</m>, measured in mm Hg. So, as the drug leaves the patient's bloodstream, the blood pressure increases.</p>
             <p>Therefore, <m>P</m> depends on <m>C</m>, and <m>C</m> depends on <m>t</m>.</p>
             <p>There is a function for the relationship between <m>C</m> and <m>t</m> &#8212; let's call it <m>f</m>, and write <m>C = f(t)</m>.</p>
+<todo>Write a few teaser questions here.</todo>
+
             <p>There is another function for the relationship between <m>P</m> and <m>C</m> &#8212; let's call it <m>g</m>, and write <m>P = g(C)</m>.</p>
             <p>So, we would first use <m>f(t)</m> to find the concentration <m>C</m> of the drug in the bloodstream, and then use that amount in the function <m>g(C)</m> in order to find the patient's blood pressure <m>P</m>.</p>
             <p>In function notation, this would look like:<md>
@@ -64,11 +66,9 @@
             <p>That last expression, <m>g(f(t))</m>, is a <term>composite</term> function, and it shows that the blood pressure is really a function of <m>t</m>.</p>
 
 
-<todo>Fix this exercise</todo>
-<!--
-            <exercise>
-              <webwork xml:id="heart-rate">
 
+            <exercise>
+              <webwork xml:id="heart-rate-evaluate">
                 <setup>
                   <var name="$hours"><static>20</static></var>
                   <var name="$conExpression"><static>f(20)</static></var>
@@ -76,37 +76,23 @@
                   <var name="$conAtHours"><static>5*exp(-0.058*20)</static></var>
                   <var name="$bpAtHours"><static>-12.5*(20-1)+160</static></var>
                   <pg-code>
-
+                    Context('Numeric');
                     $hours = random(15,20,1);
-                    $conExpression=RadioButtons(
-                      ["f(<var name="$hours" />)","g(<var name="$hours" />)"],
-                      0, labels => ["f(<var name="$hours" />)","g(<var name="$hours" />)"],
-                      displayLabels => 0
-                      );
-                    $bpOfConExpression=RadioButtons(
-                      ["f(g(<var name="$hours" />))","g(f(<var name="$hours" />))"],
-                      1, labels => ["f(g(<var name="$hours" />))","g(f(<var name="$hours" />))"],
-                      displayLabels => 0;
-                      );
                     $conAtHours=Compute("5*2.718282**(-0.058*$hours)");
                     $bpAtHours=Compute("-12.5*$conAtHours+172.5");
                   </pg-code>
                 </setup>
 
                 <statement>
-                  <p>A certain blood pressure drug works best when it is consumed at a concentration of 5 mg/kg, and its concentration decreases exponentially, with a half-life of 12 hours.</p>
+                  <p>The blood pressure drug <em>lisinopril</em> works best when it is consumed at a concentration of 5 mg/kg, and its concentration decreases exponentially, with a half-life of 12 hours.</p>
                   <p>Therefore, the concentration can be modeled by the function<md>
                     <mrow>C = f(t) = 5e^{-0.058t}</mrow></md></p>
-                  <p>Suppose that a patient with hypertension is admitted with blood pressure at 160 mm Hg. Administering the drug at a concentration of 5 mm/kg reduces their blood pressure to 110 mm Hg. As the concentration diminishes over time, their blood pressure increases linearly, returning to 160 mm Hg when the concentration drops to 1 mg/kg.</p>
+                  <p>Suppose that a patient with hypertension is admitted with blood pressure at 160 mm Hg. Administering the drug at a concentration of 5 mm/kg reduces their blood pressure to 110 mm Hg. As the drug's concentration diminishes over time, their blood pressure increases linearly, returning to 160 mm Hg when the concentration drops to 1 mg/kg.</p>
                   <p>Therefore, the blood pressure can be modeled by the function<md>
                     <mrow>P = g(C) = -12.5C + 172.5</mrow></md></p>
                   <ul>
-                    <li><p>Which expression below represents the concentration of the drug after 20 hours?</p>
-                    <p><var name="$conExpression" form="buttons" /></p></li>
                     <li><p>What is the concentration of the drug after <var name="$hours" /> hours?</p>
                     <p><m>C = f(<var name="$hours" />) = </m><var name="$conAtHours" width="15" /></p></li>
-                    <li><p>Which expression below represents the patient's blood pressure at <var name="$hours" />?</p>
-                    <p><var name="$bpOfConExpression" form="buttons" /></p></li>
                     <li><p>What is the expected blood pressure after <var name="$hours" /> hours?</p>
                     <p><m>P = g(f(<var name="$hours" />)) = </m><var name="$bpAtHours" width="15" /></p></li>
                   </ul>
@@ -119,14 +105,77 @@
                 </solution>
               </webwork>
             </exercise>
--->
 
+            <exercise>
+              <webwork xml:id="heart-rate-formula">
+                <setup>
+                  <var name="$concentration"><static>5*exp(-0.058*t)</static></var>
+                  <var name="$bp"><static>-12.5*(5*exp(-0.058*t))+172.5</static></var>
 
+                  <pg-code>
+                    Context()->variables->are(t=>'Real');
+                    $concentration=Compute("5*2.718282**(-0.058*t)");
+                    $bp=Compute("-12.5*$concentration+172.5");
+                  </pg-code>
+                </setup>
+                <statement>
+                  <p>If we wanted to, we could have written the formula for <m>P</m> as a function of <m>t</m>, by just <term>composing</term> the two functions:<md>
+                    <mrow>C \amp= f(t) = 5e^{-0.058t}</mrow>
+                    <mrow>P \amp= g(C) = -12.5C + 172.5</mrow></md></p>
+                  <p>Since <m>P = g(C) = g(f(t))</m>, we first replace <m>f(t)</m> with its formula:<md>
+                    <mrow>P \amp= g(f(t))</mrow>
+                    <mrow>\amp= g(<var name="$concentration" />)</mrow></md></p>
+                  <p>Then we continue simplifying by using the formula for <m>g</m> of that input:<md>
+                    <mrow>g(5e^{-0.058t}) \amp= <var name="$bp" /></mrow></md></p>
+                </statement>
+                <hint>
+
+                </hint>
+                <solution>
+
+                </solution>
+              </webwork>
+            </exercise>
           </example>
 
 
+          <paragraphs>
+            <p>Given the formulas of two or more functions, we can write formulas for their compositions.</p>
+          </paragraphs>
 
+            <exercise>
+              <webwork xml:id="composition-formula-examples">
+                <setup>
+                  <var name="$GofF"><static>(x/(x+4))^2</static></var>
+                  <var name="$F"><static>x/(x+4)</static></var>
+                  <pg-code>
+                    $GofF=Compute("(x/(x+4))^2");
+                    $F=Compute("x/(x+4)");
+                  </pg-code>
+                </setup>
+
+                <statement>
+                  <p>Let <m>f(x) = \frac{\displaystyle{x}}{\displaystyle{x + 4}}</m> and <m>g(x) = x^2</m>.</p>
+                  <ul>
+                    <li><p>Write the formula for the composite function <m>g(f(x))</m>.</p>
+                    <p>We will start by substituting the formula for <m>g(x)</m> into the function <m>f</m>:</p>
+                    <p><m>g(f(x)) = g(</m><var name="$F" width="15" /><m>)</m></p></li>
+                    <li><p>Now simplify the expression you wrote above, by using the formula for <m>g(x)</m>.</p>
+                    <p><m>g(f(x)) = </m><var name="$GofF" width="15" /></p></li>
+                  </ul>
+                </statement>
+
+                <hint>
+
+                </hint>
+                <solution>
+
+                </solution>
+              </webwork>
+            </exercise>
       </subsection>
+
+
       <subsection>
         <title>Inverses</title>
 
