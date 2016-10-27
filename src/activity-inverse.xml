@@ -323,14 +323,16 @@
     </webwork>
   </exercise>
 
-
-  <p>If a function is relatively simple, it isn't hard to find its inverse.</p>
-  <p>For example, if <m>f(x) = x + a</m> then <me>f^{-1}(x) = x - a</me></p>
-  <p>Or if <m>g(x) = x*b</m> then <me>g^{-1}(x) = \frac{x}{b}</me></p>
-  <p>These inverses are easy to find because we know that addition and subtraction are inverse operations, and that multiplication and division are inverse operations.</p>
-  <p>But how do we determine a formula for an inverse if the original function is more complicated?</p>
-  <p>Earlier in this activity, you discovered that: <me>f(f^{-1}(x)) = x</me></p>
-  <p>In the next exercise, we will use this fact to find the formula for an inverse function.</p>
+  <paragraphs>
+    <title>Finding the formula for <m>f^{-1}</m></title>
+    <p>If a function is relatively simple, it isn't hard to find its inverse.</p>
+    <p>For example, if <m>f(x) = x + a</m> then <me>f^{-1}(x) = x - a</me></p>
+    <p>Or if <m>g(x) = x*b</m> then <me>g^{-1}(x) = \frac{x}{b}</me></p>
+    <p>These inverses are easy to find because we know that addition and subtraction are inverse operations, and that multiplication and division are inverse operations.</p>
+    <p>But how do we determine a formula for an inverse if the original function is more complicated?</p>
+    <p>Earlier in this activity, you discovered that: <me>f(f^{-1}(x)) = x</me></p>
+    <p>In the next exercise, we will use this fact to find the formula for an inverse function.</p>
+  </paragraphs>
 
   <exercise>
     <webwork xml:id="webwork-inverse-formula">
@@ -351,7 +353,7 @@
         <p>We will use function composition to simplify the following expression, just using the expression <m>f^{-1}</m> as the input of the function <m>f</m>:
           <md><mrow>f(f^{-1}(x)) \amp= x</mrow>
           <mrow><var name="$m" />f^{-1}(x) - <var name="$b" /> \amp= x</mrow></md></p>
-        <p>You are trying to find the function <m>f^{-1}(x)</m>. Treat it as a variable in the last equation and solve for it by using algebra.</p>
+        <p>We are trying to find the function <m>f^{-1}(x)</m>. We can treat <m>f^{-1}(x)</m> as a variable in the last equation and solve for it by using algebra.</p>
         <p>Answer:  <m>f^{-1}(x) = </m><var name="$fInverse" width="15" /></p>
       </statement>
       <hint>
@@ -408,7 +410,44 @@
           <p>Enter the value <m>1</m> if you successfully made the graph of <m>y = f^{-1}(x)</m>.</p>
           <p><var name="$correct" width="5" /></p>
 
+        </statement>
+        <hint>
 
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
+    <p>You may not have noticed it, but there was a nice geometric relationship between the graphs of <m>f(x)</m> and <m>f^{-1}(x)</m>. See the next problem to explore this relationship.</p>
+
+    <exercise>
+      <webwork xml:id="webwork-inverse-graph-reflection">
+        <setup>
+          <var name="$interpretation">
+            <set>
+              <member>\text{Reflect the graph of} f(x) \text{over the x-axis.}</member>
+              <member>\text{Reflect the graph of} f(x) \text{over the y-axis.}</member>
+              <member correct="yes">\text{Reflect the graph of} f(x) \text{over the line} \(y = x.\)</member>
+            </set>
+          </var>
+          <pg-code>
+            $interpretation=RadioButtons(
+                ["Reflect the graph of \(f(x)\) over the x-axis.", "Reflect the graph of \(f(x)\) over the y-axis.","Reflect the graph of \(f(x)\) over the line \(y = x\)."],
+                2, labels => ["Reflect over x-axks","Reflect over y-axis","Reflect over y = x"],
+                displayLabels => 0
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The next graph shows the dashed line <m>y = x</m>. Using the checkboxes, you can graph the function <m>y = f(x)</m> and the function <m>y = f^{-1}(x)</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rz4JeYK4/width/434/height/372/border/888888" width="434px" height="372px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Similarly, the graph below shows the line <m>y = x</m>. Click to show a different function <m>y = f(x)</m> and its inverse, <m>y = f^{-1}(x)</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ceba23wQ/width/429/height/371/border/888888" width="429px" height="371px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Do you see the connection between the graphs?</p>
+          <p>In order to graph <m>y = f^{-1}(x)</m>, how would you change the graph of <m>y = f(x)</m>?</p>
+          <p><var name="$interpretation" form="buttons" /></p>
         </statement>
         <hint>
 
