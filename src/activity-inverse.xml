@@ -16,8 +16,12 @@
   <introduction>
     <p>In this activity, we will introduce the <term>inverse</term> of a function.</p>
     <p>A function is a rule which takes an <term>input</term> and returns an <term>output</term>. The <term>inverse</term> of a function is a rule which does the opposite of the original function &#8212; if the original function took the input <m>a</m> and returned the ouput <m>b</m>, then the inverse function would take the input <m>b</m> and return the output <m>a</m>.</p>
+    <p>Since a function is a process, the inverse function is just the reverse of that process.</p>
   </introduction>
   <p>In the following exercise, we introduce the notation for the <term>inverse</term> of a function.</p>
+
+
+
 
   <exercise>
     <webwork xml:id="webwork-inverse-notation">
@@ -39,10 +43,10 @@
       </setup>
       <statement>
         <p>The function <m>f(x) = <var name="$f" /></m> can be described as the function which <em>increases the input by</em> <var name="$increase" />.</p>
-        <p>The <term>inverse</term> of the function <m>f(x)</m>, which is written <m>f^{-1}(x)</m>, is a function which does the opposite of <m>f(x)</m>.</p>
-        <p>Write an expression for the inverse function <m>f^{-1}(x)</m>. This would be a function which does the opposite of what <m>f</m> does.</p>
+        <p>The <term>inverse</term> of the function <m>f(x)</m>, which is written <m>f^{-1}(x)</m>, is a function which does the opposite of what <m>f(x)</m> does.</p>
+        <p>Write the formula for the inverse function <m>f^{-1}(x)</m>. Remember, this should be a function which does the opposite of <em>increasing the input by</em> <var name="$increase" />.</p>
         <p><m>f^{-1}(x) = </m><var name="$fInverse" width="15" /></p>
-        <p>Evaluate each of the following expressions:</p>
+        <p>Now, evaluate each of the following expressions:</p>
         <ul>
           <li><p><m>f(<var name="$x" />) = </m><var name="$y" width="10" /></p></li>
           <li><p><m>f^{-1}(<var name="$y" />) = </m><var name="$x" width="10" /></p></li>
@@ -60,7 +64,17 @@
     </webwork>
   </exercise>
 
-  <p>Important point about notation: The expression <m>f^{-1}(x)</m> does <em>not</em> mean that something is being raised to the <m>-1</m> power. Rather, this is special notation for the <term>inverse</term> of the function <m>f</m>.</p>
+  <note>
+    <title>About the notation</title>
+      <p>The expression <m>f^{-1}(x)</m> does <em>not</em> mean that something is being raised to the <m>-1</m> power. Rather, this is just special notation for the <term>inverse</term> of the function <m>f</m>.</p>
+  </note>
+  <p>Now, since a function <m>f</m> and its inverse <m>f^{-1}</m> do opposite things, we have a new way to describe certain function facts.</p>
+  <p>For example, the two statements below have the same meaning:<md>
+    <mrow>f(3) \amp= 5</mrow>
+    <mrow>f^{-1}(5) \amp= 3</mrow></md>
+  </p>
+  <p>If <m>f</m> takes the input <m>3</m> and outputs the number <m>5</m>, then <m>f^{-1}</m> will take the input <m>5</m> and output the number <m>3</m>.</p>
+  <p>Use this idea in the following exercise.</p>
 
   <exercise>
     <webwork xml:id="webwork-inverse-evaluation">
@@ -107,13 +121,12 @@
       </solution>
     </webwork>
   </exercise>
-  <p>Now for an important fact about the inverse of a function. If <m>f</m> is a function, then <m>f^{-1}</m> is also a function. However, these functions perfectly <em>undo</em> each other.</p>
-  <p>If we use the function <m>f</m> to get an output, and then use that output as the input for <m>f^{-1}</m>, we will get the very input we originally used in the function <m>f</m>.</p>
-  <p>The diagram below shows us beginning with an input value <m>a</m>, using the function <m>f</m> to get an output value <m>f(a)</m>, and then using the value <m>f(a)</m> as the input for the function <m>f^{-1}</m>, and getting the ouput <m>a</m>.</p>
+  <p>Now for an important fact about the inverse of a function. If <m>f</m> is a function, then <m>f^{-1}</m> is also a function. And we know that these functions perfectly <em>undo</em> each other.</p>
+  <p>If we use the function <m>f</m> to get an output, and then use that output as the input for <m>f^{-1}</m>, we will get back the very input we originally used in the function <m>f</m>.</p>
+  <p>The diagram below shows this: It begins with an input value <m>a</m>, then uses the function <m>f</m> to get an output value <m>f(a)</m>, then uses the value <m>f(a)</m> as the input for the function <m>f^{-1}</m>, and finally gets back the original input <m>a</m>.</p>
 
 <todo>Make tikzpicture for composing f with f inverse, something like the following</todo>
   <figure xml:id="figure-function-inverse-diagram">
-      <caption>Fuel Economy versus Speed</caption>
       <image>
         <latex-image-code>
           <![CDATA[\begin{tikzpicture}[node distance=.3\textwidth]
@@ -126,7 +139,9 @@
         </latex-image-code>
       </image>
   </figure>
-  <p>Put another way, if we <term>compose</term> the functions <m>f</m> and <m>f^{-1}</m>, it will be as though nothing happened to the input.</p>
+  <p>Put another way, if we <term>compose</term> the functions <m>f^{-1}</m> and <m>f</m>, it will be as though nothing happened to the input.</p>
+  <p>In function notation, we would write: <md><mrow>f^{-1}(f(x)) = x</mrow></md></p>
+  <p>Make sure you understand this concept in the next exercise.</p>
 
   <exercise>
     <webwork xml:id="inverse-composition">
@@ -166,8 +181,8 @@
     </webwork>
   </exercise>
 
-  <p>Now we know that an inverse function will undo the action of the original function. We would write this as:<md><mrow>f^{-1}(f(x)) = x</mrow></md></p>
-  <p>But there is another equally important fact about composing a function and its inverse.</p>
+  <p>By now, we know that the function <m>f^{-1}</m> will undo the action of <m>f</m>.</p>
+  <p>But there is another, equally important fact about composing a function and its inverse. See the next exercise.</p>
 
 <todo> Make this a scaffolded problem, google .webwork scaffold use student answer from part. for help </todo>
   <exercise>
@@ -178,32 +193,27 @@
       <setup>
         <var name="$x[0]"><static>2</static></var>
         <var name="$x[1]"><static>1</static></var>
-        <var name="$f"><static>3</static></var>
-        <var name="$fInverse"><static>10</static></var>
+        <var name="$fInverse[0]"><static>4</static></var>
+        <var name="$fInverse[1]"><static>10</static></var>
         <pg-code>
-          @x=map{$_+1}NchooseK(2,2);
-          $f=12/($x[0]+2);
-          $fInverse=(12-2*$x[1])/($x[1]);
-
+          @x=map{$_+1}NchooseK(4,2);
+          @fInverse=map{(12-2*$_)/($_)}@x;
         </pg-code>
       </setup>
       <statement>
+        <p>We already know that <m>f^{-1}</m> undoes the action of <m>f</m>: <me>f^{-1}(f(x)) = x</me></p>
+        <p>In this problem we will see what happens when we compose a function and its inverse in reverse order: <me>f(f^{-1}(x))</me></p>
         <p>Consider the function <me>f(x) = \frac{12}{x+2}</me> and its inverse <me>f^{-1}(x) = \frac{12-2x}{x}</me></p>
-        <p>In the problems that follow, give your answers as whole numbers.</p>
+        <p>and use them to answer the following.</p>
         <ol>
-          <li><p>Evaluate <m>f(<var name="$x[0]" />) = </m><var name="$f" width="10" /></p></li>
-          <li><p>Now retype your answer above in the input of <m>f^{-1}(x)</m>, then evaluate it.</p></li>
-          <li><p><m>f^{-1}(</m><var name="$f" width="10" />)<m> = </m><var name="$x[0]" width="10" /></p></li>
-          <li><p>So <m>f</m> did something, and <m>f^{-1}</m> did the opposite.</p></li>
-          <li><p>Evaluate <m>f^{-1}(<var name="$x[1]" />) = </m><var name="$fInverse" width="10" /></p></li>
-          <li><p>Now retype your answer above in the input of <m>f(x)</m>, then evaluate it.</p></li>
-          <li><p><m>f(</m><var name="$fInverse" width="10" /><m> = </m><var name="$x[1]" width="10" /></p></li>
-          <li><p>This time, <m>f^{-1}</m> did something, and <m>f</m> did the opposite.</p></li>
+          <li><p>Evaluate the expression by working from the inside out. In the first blank, you are evaluating <m>f^{-1}(<var name="$x[0]" />)</m>, where it is being entered inside parentheses as the input for <m>f</m>. In the second blank, you are evaluating to get the final answer.</p>
+          <p><m>f(f^{-1}(<var name="$x[0]" />)) = f(</m><var name="$fInverse[0]" width="5" /><m>) = </m><var name="$x[0]" width="5" /></p></li>
+
+          <li><p>Evaluate the expression by working from the inside out. In the first blank, you are evaluating <m>f^{-1}(<var name="$x[1]" />)</m>, where it is being entered inside parentheses as the input for <m>f</m>. In the second blank, you are evaluating to get the final answer.</p>
+          <p><m>f(f^{-1}(<var name="$x[1]" />)) = f(</m><var name="$fInverse[1]" width="5" /><m>) = </m><var name="$x[1]" width="5" /></p></li>
         </ol>
-        <p>Important fact:</p>
-        <p>If <m>f^{-1}</m> is the inverse of <m>f</m>, then <m>f</m> is actually the inverse of <m>f^{-1}</m></p>
-        <p>Written in function notation, we have two statements:<me>f^{-1}(f(x)) = x</me></p>
-        <p>and <me>f(f^{-1}(x)) = x</me></p>
+
+        <p>You should notice that the function <m>f</m> undid the action of <m>f^{-1}</m>. In function notation, this says: <me>f(f^{-1}(x)) = x</me></p>
       </statement>
       <hint>
 
@@ -222,21 +232,21 @@
         <var name="$interpretF">
           <set>
             <member>\text{?}</member>
-            <member correct="yes">\text{The cost will be $4600 for a 1500 square foot house.}</member>
-            <member>\text{The cost will be $1500 for a 4600 square foot house.}</member>
+            <member correct="yes">\text{If the area is 1500 square feet, then the price is $4600.}</member>
+            <member>\text{If the area is 4600 square feet, then the price is $1500.}</member>
           </set>
         </var>
         <var name="$interpretFInverse">
           <set>
             <member>\text{?}</member>
-            <member>\text{The cost will be $1000 for a 3500 square foot house.}</member>
-            <member correct="yes">\text{The cost will be $3500 for a 1000 square foot house.}</member>
+            <member>\text{If the price is $1000, then the area is 3500 square feet.}</member>
+            <member correct="yes">\text{If the price is $3500, then the area is 1000 square feet.}</member>
           </set>
         </var>
 
         <pg-code>
-          $interpretF=PopUp(["?",'The cost will be $4600 for a 1500 square foot house.','The cost will be $1500 for a 4600 square foot house.'],'The cost will be $4600 for a 1500 square foot house.');
-          $interpretFInverse=PopUp(["?",'The cost will be $3500 for a 1000 square foot house.','The cost will be $1000 for a 3500 square foot house.'],'The cost will be $3500 for a 1000 square foot house.');
+          $interpretF=PopUp(["?",'If the area is 1500 square feet, then the price is $4600.','If the area is 4600 square feet, then the price is $1500.'],'If the area is 1500 square feet, then the price is $4600.');
+          $interpretFInverse=PopUp(["?",'If the price is $3500, then the area is 1000 square feet.','If the price is $1000, then the area is 3500 square feet.'],'If the price is $3500, then the area is 1000 square feet.');
         </pg-code>
       </setup>
       <statement>
@@ -258,6 +268,8 @@
     </webwork>
   </exercise>
 
+
+
   <exercise>
     <webwork xml:id="webwork-inverse-notation-interpretation-salary">
       <setup>
@@ -277,19 +289,29 @@
         </var>
 
         <pg-code>
-          $interpretG=PopUp(["?","(G(2900) = 160","G(160) = 2900"],"G(160) = 2900");
-          $interpretGInverse=PopUp(["?","G^{-1}(1500) = 90","G^{-1}(90) = 1500"],"G^{-1}(1500) = 90");
+          Context('Numeric');
+          $interpretG=RadioButtons(
+              ["?","\(G(2900) = 160\)", "\(G(160) = 2900\)"],
+              2, labels => ["G(2900) = 160","G(160) = 2900"],
+              displayLabels => 0
+          );
+          $interpretGInverse=RadioButtons(
+              ["?","\(G^{-1}(1500) = 90\)", "\(G^{-1}(90) = 1500\)"],
+              1, labels => ["G^{-1}(1500) = 90","G^{-1}(90) = 1500"],
+              displayLabels => 0
+          );
+
         </pg-code>
       </setup>
       <statement>
         <p>Let <m>S = G(t)</m> be a function which will calculate the salary <m>S</m>, in dollars, for working <m>t</m> hours per month.</p>
         <ol>
           <li><p>Choose the correct notation for the following statement:</p></li>
-          <li><p><blockquote>The salary is $2900 for working 160 hours per month.</blockquote></p></li>
-          <li><p><var name="$interpretG" form="popup" /></p></li>
+          <li><p><em>The salary is $2900 for working 160 hours per month.</em></p></li>
+          <li><p><var name="$interpretG" form="buttons" /></p></li>
           <li><p>Choose the correct notation for the following statement:</p></li>
-          <li><p><blockquote>The salary is $1500 for working 90 hours per month.</blockquote></p></li>
-          <li><p><var name="$interpretGInverse" form="popup" /></p></li>
+          <li><p><em>If you work 90 hours per month, your salary will be $1500.</em></p></li>
+          <li><p><var name="$interpretGInverse" form="buttons" /></p></li>
         </ol>
       </statement>
       <hint>
@@ -301,27 +323,38 @@
     </webwork>
   </exercise>
 
+  <paragraphs>
+    <title>Finding the formula for <m>f^{-1}</m></title>
+    <p>If a function is relatively simple, it isn't hard to find its inverse.</p>
+    <p>For example, if <m>f(x) = x + a</m> then <me>f^{-1}(x) = x - a</me></p>
+    <p>Or if <m>g(x) = x*b</m> then <me>g^{-1}(x) = \frac{x}{b}</me></p>
+    <p>These inverses are easy to find because we know that addition and subtraction are inverse operations, and that multiplication and division are inverse operations.</p>
+    <p>But how do we determine a formula for an inverse if the original function is more complicated?</p>
+    <p>Earlier in this activity, you discovered that: <me>f(f^{-1}(x)) = x</me></p>
+    <p>In the next exercise, we will use this fact to find the formula for an inverse function.</p>
+  </paragraphs>
 
-  <p>If a function is relatively simple, it isn't hard to find its inverse.</p>
-  <p>For example, if <m>f(x) = x + a</m> then <me>f^{-1}(x) = x - a</me></p>
-  <p>Or if <m>g(x) = x*b</m> then <me>g^{-1}(x) = \frac{x}{b}</me></p>
-  <p>These inverses are easy to find, because we know that addition and subtraction are inverse operations, and that multiplication and division are inverse operations.</p>
-  <p>But how do we determine a formula for an inverse if the original function is more complicated?</p>
-  <p>Explore this in the following exercises.</p>
-
-<!--
   <exercise>
     <webwork xml:id="webwork-inverse-formula">
       <setup>
-
+        <var name="$m"><static>6</static></var>
+        <var name="$b"><static>2</static></var>
+        <var name="$fInverse"><static>(x+4)/3</static></var>
         <pg-code>
-
+          $m=random(6,10,1);
+          $b=random(1,5,1);
+          $fInverse=Compute("(x+$b)/($m)");
         </pg-code>
       </setup>
       <statement>
-        <p>Remember that an inverse function will <em>undo</em> the original function. Thought of in terms of inputs and outputs, we can say that a function <m>f</m> takes an <m>x</m> value and turns it into a <m>y</m> value.</p>
-        <p>Then, the inverse function <m>f^{-1}(x) would take that <m>y</m> value and turn it back into an <m>x</m> value.</p>
-        <p>
+        <p>In this exercise, we will find the formula for the inverse of the function: <me>f(x) = <var name="$m" />x - <var name="$b" /></me></p>
+        <p>There is an inverse to this function, called <m>f^{-1}</m>. Together with the function <m>f</m>, it must be true that: <me>f(f^{-1}(x)) = x</me></p>
+        <p>So, we will use this fact to actually solve for the function <m>f^{-1}</m>.</p>
+        <p>We will use function composition to simplify the following expression, just using the expression <m>f^{-1}</m> as the input of the function <m>f</m>:
+          <md><mrow>f(f^{-1}(x)) \amp= x</mrow>
+          <mrow><var name="$m" />f^{-1}(x) - <var name="$b" /> \amp= x</mrow></md></p>
+        <p>We are trying to find the function <m>f^{-1}(x)</m>. We can treat <m>f^{-1}(x)</m> as a variable in the last equation and solve for it by using algebra.</p>
+        <p>Answer:  <m>f^{-1}(x) = </m><var name="$fInverse" width="15" /></p>
       </statement>
       <hint>
 
@@ -331,7 +364,100 @@
       </solution>
     </webwork>
   </exercise>
--->
+
+  <paragraphs>
+    <title>The graph of <m>f^{-1}</m></title>
+    <p>Since <m>f^{-1}</m> is the reverse process of <m>f</m>, then the <em>inputs</em> and <em>outputs</em> have traded places.</p>
+    <p>In the next exercise, you will explore the the relationship between the graphs of <m>y = f(x)</m> and <m>y = f^{-1}(x)</m>.</p>
+  </paragraphs>
+
+    <exercise>
+      <webwork xml:id="webwork-inverse-graph">
+        <setup>
+          <var name="$point1">
+            <set>
+              <member>\text{?}</member>
+              <member>(0, 3)</member>
+              <member correct="yes">(3, 0)</member>
+            </set>
+          </var>
+          <var>
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">(-1, -2)</member>
+              <member>(-2, -1)</member>
+            </set>
+          </var>
+          <var name="$correct"><static>1</static></var>
+
+          <pg-code>
+            $point1=PopUp(["?",'(0, 3)','(3, 0)'],'(3, 0)');
+            $point2=PopUp(["?",'(-1, -2)','(-2, -1)'],'(-1, -2)');
+            $correct=Real(1);
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graph below shows the linear function <m>y = f(x)</m> with two points on it, along with two other points for you to move.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/hABCSSG2/width/431/height/372/border/888888" width="431px" height="372px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>The point <m>(0, 3)</m> on the graph of <m>y = f(x)</m> means that when <m>0</m> is the input, then <m>3</m> is the ouput.</p>
+          <p>The inverse function <m>f^{-1}</m> would use those same values, but the input and output would be swapped.</p>
+          <p>Which of the following points would be on the graph of <m>y = f^{-1}(x)</m>?</p>
+          <p><var name="$point1" form="popup" /></p>
+          <p>The point <m>(-2, -1)</m> on the graph of <m>y = f(x)</m> means that when <m>-2</m> is the input, then <m>-1</m> is the ouput.</p>
+          <p>Which of the following points would be on the graph of <m>y = f^{-1}(x)</m>?</p>
+          <p><var name="$point2" form="popup" /></p>
+          <p>Now, move the two points to those locations. If you have the correct points, the graph of <m>y = f^{-1}(x)</m> will appear.</p>
+          <p>Enter the value <m>1</m> if you successfully made the graph of <m>y = f^{-1}(x)</m>.</p>
+          <p><var name="$correct" width="5" /></p>
+
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
+    <p>You may not have noticed it, but there was a nice geometric relationship between the graphs of <m>f(x)</m> and <m>f^{-1}(x)</m>. See the next problem to explore this relationship.</p>
+
+    <exercise>
+      <webwork xml:id="webwork-inverse-graph-reflection">
+        <setup>
+          <var name="$interpretation">
+            <set>
+              <member>\text{Reflect the graph of} f(x) \text{over the x-axis.}</member>
+              <member>\text{Reflect the graph of} f(x) \text{over the y-axis.}</member>
+              <member correct="yes">\text{Reflect the graph of} f(x) \text{over the line} \(y = x.\)</member>
+            </set>
+          </var>
+          <pg-code>
+            $interpretation=RadioButtons(
+                ["Reflect the graph of \(f(x)\) over the x-axis.", "Reflect the graph of \(f(x)\) over the y-axis.","Reflect the graph of \(f(x)\) over the line \(y = x\)."],
+                2, labels => ["Reflect over x-axks","Reflect over y-axis","Reflect over y = x"],
+                displayLabels => 0
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The next graph shows the dashed line <m>y = x</m>. Using the checkboxes, you can graph the function <m>y = f(x)</m> and the function <m>y = f^{-1}(x)</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rz4JeYK4/width/434/height/372/border/888888" width="434px" height="372px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Similarly, the graph below shows the line <m>y = x</m>. Click to show a different function <m>y = f(x)</m> and its inverse, <m>y = f^{-1}(x)</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ceba23wQ/width/429/height/371/border/888888" width="429px" height="371px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Do you see the connection between the graphs?</p>
+          <p>In order to graph <m>y = f^{-1}(x)</m>, how would you change the graph of <m>y = f(x)</m>?</p>
+          <p><var name="$interpretation" form="buttons" /></p>
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
 
 
 </section>
