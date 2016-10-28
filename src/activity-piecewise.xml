@@ -16,8 +16,8 @@
   <subsection>
       <title>Evaluating Pieces of Different Functions</title>
         <p>A piecewise defined function is literally a function that has been defined in pieces.  Most likely you have encountered piecewise defined functions in every day life.  Maybe you didn't know what they were called.</p>
-        <p>For instance, if you pay to park at a garage downtown you may see a sign at the entrance telling you the price of parking.  It will say somthing like $3.20 for the first hour and $1.70 for each additional hour up to $13.00 for the day.  If you stay for 1 minute or 10 minutes or 50 minutes the rate stays constant at $3.20.  But if you stay for more than one hour the rate is different, a different formula is used to calculate what you will pay for parking.  The parking rate is in <q>pieces</q></p>
-        <p>The most difficult part of piecewise functions is the notation.  In the following activity you will use a skill you already know how to do, evaluate a function graphically, and transition slowly into how to write and understand piecewise notation.</p>
+        <p>For instance, the cost to park downtown will have a flat fee for the first hour, then some different hourly rate for up to some max, all day fee.  To calculate the cost of parking there are various formulas, each one is a <q>piece</q> of the whole cost function.</p>
+        <p>The most difficult part of piecewise functions is the notation.  In the following set of activities you will use a skill you already know, evaluate a function graphically, and transition slowly into how to write and understand piecewise notation.</p>
    <exercise>
        <webwork>
            <pg-macros>
@@ -77,7 +77,7 @@
                  <static>-8&lt;=x&lt;=-3</static>
                </var>
                <var name="$answer2">
-                   <static>-3&lt;x&lt;=2</static>
+                   <static>-3&lt;=x&lt;=2</static>
                </var>
                <var name="$answer3">
                    <static>2&lt;x&lt;=8</static>
@@ -108,7 +108,7 @@
                     $lineC = ImplicitPlane("y=-0.25x+3.5");
                   Context("Inequalities");
                     $answer1 = Compute("-8&lt;=x&lt;=-3");
-                    $answer2 = Compute("-3&lt;x&lt;=2");
+                    $answer2 = Compute("-3&lt;=x&lt;=2");
                     $answer3 = Compute("2&lt;x&lt;=8");
                </pg-code>
            </setup>
@@ -129,7 +129,7 @@
               <p>What is the equation for line B? <var name="$lineB" width="15" /></p>
               <p>What is the equation for line C? <var name="$lineC" width="15" /></p>
               <p>But just like when you used the graph to evaluate different input values, you only use the piece of the graph that corresponds to the input you were given.  It's a function afterall, so one input can only give you one output. If all you had were formulas instead of the graph, you would have to decide which formula to use depending on the input given.</p>
-              <p>Keep in mind that the boundaries of each line cannot be shared.  So if two lines intersect at <m>x = 21</m> then only one line can actually include <m>x = 21</m>.  The other line would have to show it does not include <m>x = 21</m> even though it looks like the lines share the value.  It's up to the person that defines the lines where one ends and the other begins, but usually we define from left to right. That is, the function on the left gets to use the shared value and the one on the right has to exclude it.</p>
+              <p>Keep in mind if two lines intersect at the same point then the input value is shared between the two formulas.  If two line are joined at <m>x = 21</m> for example, then <m>x = 21</m> belongs in the domain of each line.</p>
               <p>Under what conditions would you use Line A to evaluate the function?</p>
               <p>Line A if x is <var name="$answer1" width="10" /></p>
               <p>Under what conditions would you use Line B to evaluate the function?</p>
@@ -144,7 +144,7 @@
   <subsection>
       <title>One Function Pieced Together</title>
 
-      <p>In the previous exercise you identified the equations of three separate lines and you stated the intervals for which each line was to be used.  In fact, you stated the <em>domain</em> for each equation.  When two or more equations are put together to form one function it's called a <em>piecewise defined function</em>.  The function has to state what all the formulas are and it also has to let the reader know when to use them.  That is the notation has to let the reader know the equations and their domains.</p>
+      <p>In the previous exercise you identified the equations of three separate lines and you stated the intervals for which each line was to be used.  In fact, you stated the <term>domain</term> for each equation.  When two or more equations are put together to form one function it's called a <term>piecewise defined function</term>.  The function has to state what all the formulas are and it also has to let the reader know when to use them.  In short, the notation has to let the reader know the equations and their domains.</p>
       <p>Next we learn how to set up the notation so that a reader can easily identify each formula and it's corresponding domain.</p>
 
     <exercise>
@@ -201,25 +201,94 @@
 
           <statement>
               <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QeJS3ygG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>Earlier you found the equations for Lines A, B and C and the domain for each line.  To evaluate this group of formulas:</p>
-              <p>Use <m>y = -2x - 10</m> if the input is in the interval <var name="$answer1" width="10" /></p>
-              <p>Use <m>y = x - 1</m> if the input is in the interval <var name="$answer2" width="10" /></p>
-              <p>Use <m>y = -0.25x + 3.5</m> if the input is in the interval <var name="$answer3" width="10" /></p>
-              <p>Already we see there is a method to evaluating a group of equations.  Notice how you linked each formula with a domain.  When evaluating this group of equations, identify the domain in which the input belongs then use the equation associated with that domain.</p>
-              <p>This notation says exactly that.</p>
-              <todo>Insert nicely formatted piecewise function notation with curly bracket etc.</todo>
-              <p>First you see that we have a function <m>f(x)</m> then the <m>=</m> symbol followed by what normally would be a formula.  But now we have three!  We use the curly brackets to show that the <q>funciton</q> is actually a group of formulas.</p>
-              <p>Grouped together are the three formulas and after each formula is its domain.</p>
-              <p>For any given input value, find the domain to which it belongs then use the formula that corresponds to that domain. For instance:</p>
-              <p>To evaluate <m>f(-6)</m> we must realize the input is <m>x = -6</m>.</p>
+              <p>Earlier you found the equations for Lines A, B and C and the domain for each line.  In order to create one function from the three equations we still use function notation, but we group all the formulas to be used in a <q>curly</q> bracket.  After the bracket, all equations to be used are listed on a left column and the domain for each is listed in a right column as shown in the example below.</p>
+              
+              <p>
+                <me>f(x) = \left\{
+                    \begin{array}{ll}
+                    \text{equation 1} \amp \text{domain 1} \\
+                    \text{equation 2} \amp \text{domain 2} \\
+                    \text{equation 3} \amp \text{domain 3} \\
+              \end{array}
+              \right.
+                </me>
+              </p>
+              <p>Use the equations you found ealier</p>
+               <p><md>
+                <mrow>y \amp= -2x - 10</mrow>
+                <mrow>y \amp= x - 1</mrow> 
+                <mrow>y \amp= -0.25x + 3.5</mrow></md>
+                </p>
+              <p>and their corresponding domains</p>
+                <p><me>-8 \leq x \leq -3</me> 
+                <me>-3 \leq x \leq 2</me> 
+                <me>2 \lt x \leq 8</me></p>
+              <p>and place them in their correct positions in the piecewise function below.</p>
+              <p>
+                <todo>Make input boxes for piecewise function below.</todo>
+                <me>f(x) = \left\{
+                    \begin{array}{ll}
+                    \text{Make Input box for equation} \amp \text{make input box for domain} \\
+                    \text{Make Input box for equation} \amp \text{make input box for domain} \\
+                    \text{Make Input box for equation} \amp \text{make input box for domain} \\
+              \end{array}
+              \right.
+                </me>
+              </p>
+              <p>Using our piecewise function to evaluate <m>f(-6)</m> we see the input is <m>x = -6</m>.</p>
               <p>To which domain does <m>x = -6</m> belong?  <var name="$answer1" width="10" /> What is the formula that corresponds to this domain? <var name="$lineA" width="15" />  Therefore <m>f(-6) = </m> <var name="$output1" width="5" /></p>
               <p>T evaluate <m>f(1)</m> we see the input is <m>x = 1</m>.</p>
               <p>To which domain does <m>x = 1</m> belong?  <var name="$answer2" width="10" /> What is the formula that corresponds to this domain? <var name="$lineB" width="15" />  Therefore <m>f(1) = </m> <var name="$output2" width="5" /></p>
               <p>To evaluate <m>f(7)</m> we see the input is <m>x = 7</m>.</p>
               <p>To which domain does <m>x = 7</m> belong?  <var name="$answer3" width="10" /> What is the formula that corresponds to this domain? <var name="$lineC" width="15" />  Therefore <m>f(1) = </m> <var name="$output3" width="5" /></p>
               <p>In each case, you find what domain the input belongs to then use the formula that corresponds to that domain.</p>
+              <p>In the case where the given input belong to none of the available domains, then we say the function is <term>undefined</term> at that value.</p>
           </statement>
         </webwork>
     </exercise>
+  </subsection>
+  <subsection>
+    <title>Graphing a Piecewise Defined Function</title>
+      <p>We can now use our understanding of piecewise noation to read piecewise functions and graph them. Remember, the domain of a function is the collection of inputs for which the function exists.  On a graph, a function is visible only for inputs in its domain and it is not visible for inputs outside its domain.</p>
+
+          <exercise>
+              <webwork>
+                  <setup>
+                      <var name="$answer1">
+                          <static>1</static>
+                      </var>
+                      
+                      <pg-code>
+                          $answer1 = Real(1);
+                      </pg-code>
+                </setup>
+      
+                <statement>
+                    <p>Use the axes below to plot three points for each function on its given domain.</p>
+                    <p><m>y = x</m> for <m>-4 \leq x \leq 0</m></p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NJjzus4k/width/431/height/325/border/888888/sri/true" width="431px" height="325px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p><m>y = x^2</m> for <m>0 \leq x \leq 2</m></p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/q2YkKFP5/width/431/height/325/border/888888/sri/true" width="431px" height="325px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p><m>y = 3</m> for <m>2 \leq x \leq 5</m></p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FNk3SwS4/width/431/height/325/border/888888/sri/true" width="431px" height="325px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>When you have plotted all graphs correctly, give yourself a point by entering a <m>1</m> in the box below.</p>
+                    <p><var name="$answer1" width="5" /></p>
+                    <p>Below we see all the pieces we graphed earlier are now shown together as one function.  It is missing the boundaries that show which end values are included and which are not.  Drag the open circle to the boundary that should show as not included.  Use the domains in the piecewise function to help make your decision.</p>
+                    <p>
+                      <me>f(x) = \left\{
+                      \begin{array}{ll}
+                            x \amp -4\leq x\leq 0 \\
+                            x^2 \amp 0\leq x\leq 2 \\
+                            3 \amp 2\lt x \leq 5 \\
+                      \end{array}
+                      \right.
+                      </me>
+                    </p>
+                    <p>When you place the point correctly on the graph, the remaining boundary points will appear.</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/r4MTsAXb/width/431/height/325/border/888888/sri/true" width="431px" height="325px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <todo>Make a free form graph that let's student try to graph the piecewise graph by hand.</todo>
+                </statement>
+              </webwork>
+          </exercise>
   </subsection>
 </section>
