@@ -458,6 +458,321 @@
       </webwork>
     </exercise>
 
+    <paragraphs>
+      <title>Not all functions have an inverse</title>
+      <p>Remember an important characteristic of any function: <blockquote>One input goes to only one output.</blockquote></p>
+      <p>For example, if <m>f</m> is a function, then it would be impossible for both <m>f(4) = 7</m> <em>and</em><m>f(4) = 10</m>. The input <m>4</m> cannot correspond to two different output values.</p>
+      <p>From a graphical standpoint, this means that the graph of <m>y = f(x)</m> must pass the <term>vertical line test</term>, which says that a vertical line may only intersect the graph of a function at most once. If it intersected the graph <em>twice</em>, that would mean there was some input value for which the function gave two different output values &#8212; impossible for a function.</p>
+      <p>Now, an <term>inverse</term> function must also actually <em>be</em> a function. It, too, must pass the vertical line test. Each input value for the inverse must correspond to only one output value.</p>
+      <p>But what would cause this condition to fail? What would be true about the original function <m>f</m> in order for the inverse to <em>not</em> be a function?</p>
+    </paragraphs>
 
+    <exercise>
+      <webwork xml:id="webwork-inverse-not-a-function">
+        <setup>
+          <var name="$formula">
+            <static>4(x-3)^2-5</static>
+          </var>
+          <var name="$a">
+            <static>4</static>
+          </var>
+          <var name="$h">
+            <static>3</static>
+          </var>
+          <var name="$k">
+            <static>5</static>
+          </var>
+          <var name="$diff[0]">
+            <static>-3</static>
+          </var>
+          <var name="$diff[1]">
+            <static>-2</static>
+          </var>
+          <var name="diff[2]">
+            <static>1</static>
+          </var>
+          <var name="$x[0]">
+            <static>0</static>
+          </var>
+          <var name="$x[1]">
+            <static>1</static>
+          </var>
+          <var name="$x[2]">
+            <static>4</static>
+          </var>
+          <var name="$x[3]">
+            <static>6</static>
+          </var>
+          <var name="$f[0]">
+            <static>31</static>
+          </var>
+          <var name="$f[1]">
+            <static>11</static>
+          </var>
+          <var name="$f[2]">
+            <static>-1</static>
+          </var>
+          <var name="$f[3]">
+            <static>31</static>
+          </var>
+          <pg-code>
+            $a=random(1,6,1);
+            $h=random(1,6,1);
+            $k=random(1,6,1);
+            @diff=map{$_+1}NchooseK(6,3);
+            @x=($a-$diff[0],$a-$diff[1],$a+$diff[2],$a+$diff[0]);
+            @f=map{$a*($_-$h)**2-$k}@x;
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The following table <em>is</em> a function, but its inverse is <em>not</em> a function.</p>
+          <table>
+            <tabular top="major" halign="center">
+                  <col halign="left" />
+                  <col />
+
+                  <row bottom="medium">
+                    <cell><m>x</m></cell>
+                    <cell><m>f(x)</m></cell>
+                  </row>
+
+                  <row>
+                    <cell><m><var name="$x[0]" /></m></cell>
+                    <cell><var name="$f[0]" /></cell>
+                  </row>
+
+                  <row>
+                    <cell><m><var name="$x[1]" /></m></cell>
+                    <cell><var name="$f[1]" /></cell>
+                  </row>
+
+                  <row>
+                    <cell><m><var name="$x[2]" /></m></cell>
+                    <cell><var name="$f[2]" /></cell>
+                  </row>
+
+                  <row>
+                    <cell><m><var name="$x[3]" /></m></cell>
+                    <cell><var name="$f[3]" /></cell>
+                  </row>
+            </tabular>
+          </table>
+          <p>Why is the inverse not a function? There is an output value that is causing the inverse <m>f^{-1}</m> to <em>not</em> be a function.</p>
+          <p>Which output value is the problem?</p>
+          <p><var name="$f[0]" width="10" /></p>
+        </statement>
+        <hint>
+          <p>For <m>f^{-1}</m>, you must read the table 'backward', using the <m>f(x)</m> column as the inputs for <m>f^{-1}</m>.</p>
+          <p>Is it true that each input for <m>f^{-1}</m> corresponds to exactly one output for <m>f^{-1}</m>?</p>
+        </hint>
+        <solution>
+          <p>Because both <m>f(<var name="$x[0]" />)</m> and <m>f(<var name="$x[3]" />)</m> are equal to <var name="$f[0]" />, the inverse cannot be a function.</p>
+          <p>The output <m>0</m> is the problem.</p>
+          <p>This is because if we tried to evaluate <m>f^{-1}(<var name="$f[0]" />)</m>, there would be two different outputs: both <var name="$x[0]" /> and <var name="$x[3]" />.</p>
+        </solution>
+      </webwork>
+    </exercise>
+    <p>If a function <m>f</m> has an inverse which, itself, is not a function, we typically say that the function <m>f</m> is <term>non-invertible</term>. If the inverse for <m>f</m> <em>is</em> a function, then we say the function <m>f</m> is <term>invertible</term>.</p>
+    <p>Based on what you saw in the last problem, how could you tell from a function whether it is invertible or non-invertible?</p>
+
+    <exercise>
+      <webwork xml:id="webwork-rule-for-inverse">
+        <setup>
+          <var name="$non">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{At least one output value is repeated}</member>
+              <member>\text{No output values are repeated}</member>
+            </set>
+          </var>
+          <var name="$inv">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{At least one output value is repeated}</member>
+              <member correct="yes">\text{No output values are repeated}</member>
+            </set>
+          </var>
+          <pg-code>
+            $non=RadioButtons(
+            ['?','At least one output value is repeated','No output values are repeated'],1,
+            labels => ["?","Repeated outputs","No repeated outputs"],
+            displayLabels => 0
+            );
+            $inv=RadioButtons(
+            ['?','At least one output value is repeated','No output values are repeated'],2,
+            labels => ["?","Repeated outputs","No repeated outputs"],
+            displayLabels => 0
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Below are tables for two functions, <m>f</m> and <m>g</m>. The function <m>f</m> <em>invertible</em>, but the function <m>g</m> is <em>non-invertible</em>.</p>
+            <table>
+              <caption>Invertible function <m>f</m></caption>
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>f(x)</m></cell>
+                </row>
+
+                <row bottom="medium">
+                  <cell><m>-3</m></cell>
+                  <cell><m>6</m></cell>
+                </row>
+
+                <row bottom="medium">
+                  <cell><m>-1</m></cell>
+                  <cell><m>-3</m></cell>
+                </row>
+
+                <row bottom="medium">
+                  <cell><m>2</m></cell>
+                  <cell><m>-1</m></cell>
+                </row>
+                <row bottom="medium">
+                  <cell><m>4</m></cell>
+                  <cell><m>0</m></cell>
+                </row>
+              </tabular>
+            </table>
+            <table>
+              <caption>Non-invertible function <m>g</m></caption>
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>g(x)</m></cell>
+                </row>
+
+                <row bottom="medium">
+                  <cell><m>5</m></cell>
+                  <cell><m>-9</m></cell>
+                </row>
+
+                <row bottom="medium">
+                  <cell><m>2</m></cell>
+                  <cell><m>4</m></cell>
+                </row>
+
+                <row bottom="medium">
+                  <cell><m>-1</m></cell>
+                  <cell><m>-9</m></cell>
+                </row>
+
+                <row bottom="medium">
+                  <cell><m>3</m></cell>
+                  <cell><m>5</m></cell>
+                </row>
+              </tabular>
+            </table>
+
+          <p>In the last problem, you decided why a certain table was non-invertible.</p>
+
+          <p>In general, a function is non-invertible if:</p>
+          <p><var name="$non" form="buttons" /></p>
+          <p>In general, a function is invertible if:</p>
+          <p><var name="$inv" form="buttons" /></p>
+        </statement>
+        <hint>
+          <p>If a function is invertible, then you should be able to read the table backward as a function. Why can you <em>not</em> do this with the table for <m>g</m></p>
+        </hint>
+        <solution>
+          <p>A function is invertible if <var name="$inv" />.</p>
+          <p>A function is non-invertible if <var name="$non" />.</p>
+        </solution>
+      </webwork>
+    </exercise>
+    <sidebyside widths="48% 48%">
+      <table>
+        <caption>Invertible function <m>f</m></caption>
+        <tabular top="major" halign="center">
+          <col halign="left" />
+          <col />
+
+          <row bottom="medium">
+            <cell><m>x</m></cell>
+            <cell><m>f(x)</m></cell>
+          </row>
+
+          <row bottom="medium">
+            <cell><m>-3</m></cell>
+            <cell><m>6</m></cell>
+          </row>
+
+          <row bottom="medium">
+            <cell><m>-1</m></cell>
+            <cell><m>-3</m></cell>
+          </row>
+
+          <row bottom="medium">
+            <cell><m>2</m></cell>
+            <cell><m>-1</m></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m>4</m></cell>
+            <cell><m>0</m></cell>
+          </row>
+        </tabular>
+      </table>
+      <table>
+        <caption>Non-invertible function <m>g</m></caption>
+        <tabular top="major" halign="center">
+          <col halign="left" />
+          <col />
+
+          <row bottom="medium">
+            <cell><m>x</m></cell>
+            <cell><m>g(x)</m></cell>
+          </row>
+
+          <row bottom="medium">
+            <cell><m>5</m></cell>
+            <cell><m>-9</m></cell>
+          </row>
+
+          <row bottom="medium">
+            <cell><m>2</m></cell>
+            <cell><m>4</m></cell>
+          </row>
+
+          <row bottom="medium">
+            <cell><m>-1</m></cell>
+            <cell><m>-9</m></cell>
+          </row>
+
+          <row bottom="medium">
+            <cell><m>3</m></cell>
+            <cell><m>5</m></cell>
+          </row>
+        </tabular>
+      </table>
+    </sidebyside>
+<p>This has implications for the graph of a function <m>f</m>. Given a graph of a function, we should be able to quickly decide if it is invertible or non-invertible.</p>
+<exercise>
+  <webwork xml:id="webwork-horizontal-line-test">
+    <setup>
+
+      <pg-code>
+
+      </pg-code>
+    </setup>
+    <statement>
+      <p>The graphs of two functions, <m>y = f(x)</m> and <m>y = g(x)</m>, are shown below. The function <m>f</m> is invertible, and the function <m>g</m> is non-invertible.</p>
+
+      https://www.geogebra.org/material/iframe/id/baHXJZNh/width/432/height/373/border/888888
+    </statement>
+    <hint>
+
+    </hint>
+    <solution>
+
+    </solution>
+  </webwork>
+</exercise>
 
 </section>
