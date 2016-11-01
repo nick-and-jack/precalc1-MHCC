@@ -607,6 +607,7 @@
         </setup>
         <statement>
           <p>Below are tables for two functions, <m>f</m> and <m>g</m>. The function <m>f</m> <em>invertible</em>, but the function <m>g</m> is <em>non-invertible</em>.</p>
+          <sidebyside widths="48% 48%">
             <table>
               <caption>Invertible function <m>f</m></caption>
               <tabular top="major" halign="center">
@@ -670,6 +671,7 @@
                 </row>
               </tabular>
             </table>
+          </sidebyside>
 
           <p>In the last problem, you decided why a certain table was non-invertible.</p>
 
@@ -687,84 +689,47 @@
         </solution>
       </webwork>
     </exercise>
-    <sidebyside widths="48% 48%">
-      <table>
-        <caption>Invertible function <m>f</m></caption>
-        <tabular top="major" halign="center">
-          <col halign="left" />
-          <col />
 
-          <row bottom="medium">
-            <cell><m>x</m></cell>
-            <cell><m>f(x)</m></cell>
-          </row>
-
-          <row bottom="medium">
-            <cell><m>-3</m></cell>
-            <cell><m>6</m></cell>
-          </row>
-
-          <row bottom="medium">
-            <cell><m>-1</m></cell>
-            <cell><m>-3</m></cell>
-          </row>
-
-          <row bottom="medium">
-            <cell><m>2</m></cell>
-            <cell><m>-1</m></cell>
-          </row>
-          <row bottom="medium">
-            <cell><m>4</m></cell>
-            <cell><m>0</m></cell>
-          </row>
-        </tabular>
-      </table>
-      <table>
-        <caption>Non-invertible function <m>g</m></caption>
-        <tabular top="major" halign="center">
-          <col halign="left" />
-          <col />
-
-          <row bottom="medium">
-            <cell><m>x</m></cell>
-            <cell><m>g(x)</m></cell>
-          </row>
-
-          <row bottom="medium">
-            <cell><m>5</m></cell>
-            <cell><m>-9</m></cell>
-          </row>
-
-          <row bottom="medium">
-            <cell><m>2</m></cell>
-            <cell><m>4</m></cell>
-          </row>
-
-          <row bottom="medium">
-            <cell><m>-1</m></cell>
-            <cell><m>-9</m></cell>
-          </row>
-
-          <row bottom="medium">
-            <cell><m>3</m></cell>
-            <cell><m>5</m></cell>
-          </row>
-        </tabular>
-      </table>
-    </sidebyside>
 <p>This has implications for the graph of a function <m>f</m>. Given a graph of a function, we should be able to quickly decide if it is invertible or non-invertible.</p>
 <exercise>
   <webwork xml:id="webwork-horizontal-line-test">
     <setup>
-
+      <var name="$non">
+        <set>
+          <member>\text{?}</member>
+          <member>\text{A horizontal line only intersects the graph at one point.}</member>
+          <member correct="yes">\text{A horizontal line intersects the graph at more than one point.}</member>
+        </set>
+      </var>
+      <var name="$inv">
+        <set>
+          <member>\text{?}</member>
+          <member correct="yes">\text{A horizontal line only intersects the graph at one point.}</member>
+          <member>\text{A horizontal line intersects the graph at more than one point.}</member>
+        </set>
+      </var>
       <pg-code>
-
+        $non=RadioButtons(
+        ['?','A horizontal line only intersects the graph at one point.','A horizontal line intersects the graph at more than one point.'],2,
+        labels => ["?","Horizontal line one intersection","Horizontal line multiple intersections"],
+        displayLabels => 0
+        );
+        $inv=RadioButtons(
+        ['?','A horizontal line only intersects the graph at one point.','A horizontal line intersects the graph at more than one point.'],1,
+        labels => ["?","Horizontal line one intersection","Horizontal line multiple intersections"],
+        displayLabels => 0
+        );
       </pg-code>
     </setup>
     <statement>
-      <p>The graphs of two functions, <m>y = f(x)</m> and <m>y = g(x)</m>, are shown below. The function <m>f</m> is invertible, and the function <m>g</m> is non-invertible.</p>
+      <p>The graphs of two functions, <m>y = f(x)</m> and <m>y = g(x)</m>, are shown. The function <m>f</m> is invertible, and the function <m>g</m> is non-invertible.</p>
+      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/baHXJZNh/width/432/height/373/border/888888" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
-      https://www.geogebra.org/material/iframe/id/baHXJZNh/width/432/height/373/border/888888
+      <p>You can click a checkbox to graph either a vertical line or a horizontal line. If that line intersects the graph of the function <m>f</m> or <m>g</m>, the point of intersection will be shown.</p>
+      <p>According to these graphs, what is true about the graph of an <term>invertible</term> function?</p>
+      <p><var name="$inv" form="buttons" /></p>
+      <p>According to these graphs, what is true about the graph of a <term>non-invertible</term> function?</p>
+      <p><var name="$non" form="buttons" /></p>
     </statement>
     <hint>
 
