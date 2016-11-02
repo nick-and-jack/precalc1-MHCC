@@ -547,56 +547,80 @@
                 <var name="$f[3]"><static>428.77</static></var>
 
                 <pg-code>
-                  @x=(0,1,2,3);
-                  @f=map{350*1.07**($_)}@x;
+                  Context()->variables->are(t=>'Real');
+                  $a=random(200,400,10);
+                  $r=random(0.05,0.09,0.01);
+                  $p=$r*100;
+                  $b=1+$r;
+                  @x=(0,1,2,3,4,20,Formula("t"));
+                Context()->flags->set(formatStudentAnswers=>'parsed');
+                Context()->flags->set(reduceConstants=>0);                 
+                Context()->operators->set(
+                '*' => {class => 'bizarro::BOP::multiply', isCommand => 1},
+                ' *' => {class => 'bizarro::BOP::multiply', isCommand => 1},
+                '* ' => {class => 'bizarro::BOP::multiply', isCommand => 1},
+                '**' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+                '^' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+                );
+                  @y=($a,
+                        $a.'\cdot'.$b,
+                        $a.'\cdot'.$b.'\cdot'.$b,
+                        Formula("$a*$b*$b*$b"),
+                        Formula("$a*$b*$b*$b*$b"),
+                        Formula("$a*$b^20"),
+                        Formula("$a*$b^t"),);
+
+                        for my$i(3..6){$ev[$i]=$y[$i]->cmp(
+               checker=>sub{
+                  my ( $correct, $student, $ansHash ) = @_;
+                  return 0 if $ansHash->{isPreview} || $correct != $student;
+                  $student = $ansHash->{student_formula};
+                  $correct = $correct->{original_formula} if defined $correct->{original_formula};
+                  $student = Formula("$student"); $correct = Formula("$correct");
+                  return 0 unless ($correct == $student);
+                  Context()->flags->set(bizarroMul=>1,bizarroPow=>1);
+                  delete $correct->{test_values}, $student->{test_values};
+                  Value->Error("Your answer is correct, but write it out to see the pattern forming.") unless (($correct == $student) or ($student == $correct));
+                  Context()->flags->set(bizarroMul=>0,bizarroPow=>0);
+                  return 1;
+            });}
                 </pg-code>
 
               </setup>
 
               <statement>
                 <ul>
-                  <li><p>A population of 350 bacteria increases by <m>7 \%</m> every hour.</p>
+                  <li><p>A population of <var name="$a" /> bacteria increases by <m><var name="$p" />\,\%</m> every hour.</p>
                   <table>
                     <caption>Building a Pattern</caption>
                     <tabular top="major" halign="center">
+                      <col halign="left" />                      
                       <col halign="left" />
-                      <col />
-                      <col />
-                      <col />
 
                       <row bottom="medium">
-                        <cell>Input Comments</cell>
                         <cell><m>t</m>, Hours that pass</cell>
                         <cell><m>P(t)</m> Population at end of each hour</cell>
-                        <cell>Output Comments</cell>
                       </row>
 
+                      <row><cell colspan="2">Initially (no time has passed) <m>t = 0</m></cell></row>
                       <row>
-                        <cell></cell>
                         <cell><m><var name="$x[0]" /></m></cell>
-                        <cell><m><var name="$f[0]" /></m></cell>
-                        <cell></cell>
+                        <cell><m><var name="$y[0]" /></m></cell>
                       </row>
 
                       <row>
-                        <cell></cell>
                         <cell><m><var name="$x[1]" /></m></cell>
-                        <cell><m><var name="$f[1]" /></m></cell>
-                        <cell></cell>
+                        <cell><m><var name="$y[1]" /></m></cell>
                       </row>
 
                       <row>
-                        <cell></cell>
                         <cell><m><var name="$x[2]" /></m></cell>
-                        <cell><m><var name="$f[2]" /></m></cell>
-                        <cell></cell>
+                        <cell><m><var name="$y[2]" /></m></cell>
                       </row>
 
                       <row>
-                        <cell></cell>
-                        <cell><m><var name="$x[3]" /></m></cell>
-                        <cell><m><var name="$f[3]" /></m></cell>
-                        <cell></cell>
+                        <cell><var name="$x[3]" width="4" /></cell>
+                        <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
                       </row>
 
                     </tabular>
