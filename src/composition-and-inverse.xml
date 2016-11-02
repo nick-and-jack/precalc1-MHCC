@@ -177,12 +177,230 @@
 
 
       <subsection>
-        <title>Inverses</title>
+        <title>Gist of Inverses</title>
+        <p>Two functions are called <term>inverses</term> if they <em>undo</em> each other. If one function has a certain process, then the other function will have the opposite process.</p>
+        <p>If <m>f</m> and <m>g</m> are inverses, then both of the following must be true: <md>
+        <mrow>f(g(x)) \amp= x</mrow>
+        <mrow>g(f(x)) \amp= x</mrow></md></p>
+        <example>
+          <p>The functions <m>f(x) = 2^x + 1</m> and <m>g(x) = log_{2}(x - 1)</m> are inverses.</p>
+          <p>In order to show this, we would use function composition to show that both of the conditions above are true.</p>
+          <md>
+            <mrow>f(g(x)) \amp= f(log_{2}(x - 1))</mrow>
+            <mrow>\amp= 2^{\displaystyle{log_{2}(x - 1)}} + 1</mrow>
+            <mrow>\amp= (x - 1) + 1</mrow>
+            <mrow>\amp= x</mrow>
+          </md>
+          <p>This shows that <m>f(g(x)) = x</m>. We should also show that <m>g(f(x)) = x</m>.</p>
+
+          <exercise>
+            <webwork xml:id="webwork-verify-inverse">
+              <setup>
+                <var name="$GofF">
+                  <set>
+                    <member correct="yes"><static>log_{2}(2^x + 1) - 1</static></member>
+                    <member>log_{2}(x) - 2^x</member>
+                  </set>
+                </var>
+                <pg-code>
+                  $GofF=RadioButtons(
+                      ["\(log_{2}((2^x + 1) - 1)\)","\(log_{2}(x) - 2^x\)"],
+                      0, labels => ["log_2(2^x+1)-1","log_2(x)-2^x"],
+                      displayLabels => 0
+                  );
+                </pg-code>
+              </setup>
+              <statement>
+                <p>For the functions <me>f(x) = 2^x + 1 \text{  and  } g(x) = log_{2}(x - 1)</me> we want to show that <m>g(f(x))</m> is just equal to <m>x</m>.</p>
+                <p>Which of the following is the correct way to write the composition <m>g(f(x))</m>?</p>
+                <p><var name="$GofF" form="buttons" /></p>
+              </statement>
+              <hint>
+                <p>The function <m>g</m> is the outside function, so the answer should <em>look</em> like: <me>log_{2}(\text{something} - 1)</me></p>
+              </hint>
+              <solution>
+                <p>The correct way to write <m>g(f(x))</m> is: <me>log_{2}((2^x + 1) - 1)</me></p>
+                <p>Notice that this <em>looks</em> like the function <m>g</m>, but with <m>2^x + 1</m> in place of the input.</p>
+              </solution>
+            </webwork>
+          </exercise>
+        </example>
+
+        <paragraphs>
+          <title>Notation</title>
+          <p>If <m>h(x)</m> is a function, then its inverse is called <m>h^{-1}</m>. This notation does <em xml:id="note-about-inverse-exponent">not</em> mean that <m>h</m> is being raised to a negative exponent &#8212; rather, it is just special notation for an inverse function.</p>
+          <p>We use this special notation either when we want to talk about the inverse of some function, or when we want to find the formula for the inverse.</p>
+        </paragraphs>
+
+        <paragraphs>
+          <title>Interpreting the notation</title>
+          <p>If <m>f</m> takes an input <m>a</m> and gives an output <m>b</m>, then its inverse <m>f^{-1}</m> would take <m>b</m> as the input and give the output <m>a</m>.</p>
+        </paragraphs>
+
+          <example>
+            <p>Let <m>P(t)</m> be the function which calculates the population of a small town, where <m>t</m> is the number of years after 2000.</p>
+            <p>Since <m>P</m> takes <em>years</em> as input and gives <em>people</em> as ouput, we should also be able to describe the meaning of the inverse, <m>P^{-1}</m>.</p>
+
+            <exercise>
+              <webwork>
+                <pg-macros>
+                  <macro-file>PGchoicemacros.pl</macro-file>
+                </pg-macros>
+                <setup>
+                  <var name="$m"><static>33</static></var>
+                  <var name="$x[0]"><static>10</static></var>
+                  <var name="$x[1]"><static>15</static></var>
+                  <var name="$y[0]"><static>780</static></var>
+                  <var name="$y[1]"><static>945</static></var>
+                  <var name="$inverseInput">
+                    <set>
+                      <member>\text{?}</member>
+                      <member>\text{Years}</member>
+                      <member>\text{People}</member>
+                    </set>
+                  </var>
+
+                  <pg-code>
+                    $m=random(25,35,1);
+                    @x=map{$_+2}NchooseK(14,2);
+                    @y=map{450+$_*$m}@x;
+                    $inverseInput=PopUp(
+                    ["?","Years","People"],"People");
+                  </pg-code>
+                </setup>
+
+                <statement>
+                  <p>Since <m>P^{-1}</m> is the opposite process of <m>P</m>, what is a possible input for <m>P^{-1}</m>?</p>
+                  <p><var name="$inverseInput" form="popup" /></p>
+                  <p>Suppose <m>P(<var name="$x[0]" />) = <var name="$y[0]" /></m> and <m>P(<var name="$x[1]" />) = <var name="$y[1]" /></m></p>
+                  <p>What is <m>P^{-1}(<var name="$y[1]" />)</m>?</p>
+                  <p>Answer:  <var name="$x[1]" width="10" /></p>
+                </statement>
+                <hint>
+                  <p>A function and its inverse do opposite things: The input and ouput for one function become the output and input for the inverse function.</p>
+                </hint>
+                <solution>
+                  <ol>
+                    <li><p>For <m>P^{-1}</m>, the inputs must be <var name="$inverseInput" />, because those were the outputs from the function <m>P</m></p></li>
+                    <li><p>Since <m>P(<var name="$x[1]" />) = <var name="$y[1]" /></m>, then we swap the input and output and see that: <me>P^{-1}(<var name="$y[1]" />) = <var name="$x[1]" /></me></p></li>
+                  </ol>
+                </solution>
+              </webwork>
+            </exercise>
+          </example>
+
+          <example>
+            <p>On a cold day, when the wind blows, it <em>feels</em> colder than it actually is outside. The temperature you feel is called the <em>wind chill</em> temperature.</p>
+
+            <exercise>
+              <webwork xml:id="webwork-windchill">
+                <pg-macros>
+                  <macro-file>PGchoicemacros.pl</macro-file>
+                </pg-macros>
+                <setup>
+                  <var name="$rand[0]"><static>0</static></var>
+                  <var name="$rand[1]"><static>1</static></var>
+                  <var name="$x[0]"><static>0</static></var>
+                  <var name="$x[1]"><static>10</static></var>
+                  <var name="$x[2]"><static>20</static></var>
+                  <var name="$x[3]"><static>30</static></var>
+                  <var name="$x[4]"><static>40</static></var>
+                  <var name="$x[5]"><static>50</static></var>
+                  <var name="$x[6]"><static>60</static></var>
+                  <var name="$f[0]"><static>40</static></var>
+                  <var name="$f[1]"><static>34</static></var>
+                  <var name="$f[2]"><static>30</static></var>
+                  <var name="$f[3]"><static>28</static></var>
+                  <var name="$f[4]"><static>27</static></var>
+                  <var name="$f[5]"><static>26</static></var>
+                  <var name="$f[6]"><static>25</static></var>
+                  <var name="$statements">
+                    <set>
+                      <member>W(28) = 30\text{ and }W^{-1}(50) = 26</member>
+                      <member correct="yes">W(30) = 28\text{ and }W^{-1}(26) = 50</member>
+                    </set>
+                  </var>
+
+                  <pg-code>
+                    @rand=map{$_+1}NchooseK(6,4);
+                    @x=(0,10,20,30,40,50,60);
+                    @f=(40,34,30,28,27,26,25);
+                    $statements=RadioButtons(
+                    ["\(W($f[$rand[0]])=$x[$rand[0]]\) and \(W^{-1}($x[$rand[1]])=$f[$rand[1]]\)", "\(W($x[$rand[2]])=$f[$rand[2]]\) and \(W^{-1}($f[$rand[3]])=$x[$rand[3]]\)"],
+                    1, labels => ["no","way"],
+                    displayLabels => 0
+                );
+
+                  </pg-code>
+                </setup>
+                <statement>
+                  <p>The table below shows values of the function <m>W(S)</m>, which calculates the wind chill temperature when it is <m>40 {}^{0}F</m> outside and the wind is blowing at <m>S</m> miles per hour.</p>
+                  <table>
+                    <tabular top="major" halign="center">
+                          <col halign="left" />
+                          <col />
+
+                          <row bottom="medium">
+                            <cell><m>S</m></cell>
+                            <cell><m>W(S)</m></cell>
+                          </row>
+
+                          <row>
+                            <cell><m><var name="$x[0]" /></m></cell>
+                            <cell><var name="$f[0]" /></cell>
+                          </row>
+
+                          <row>
+                            <cell><m><var name="$x[1]" /></m></cell>
+                            <cell><var name="$f[1]" /></cell>
+                          </row>
+
+                          <row>
+                            <cell><m><var name="$x[2]" /></m></cell>
+                            <cell><var name="$f[2]" /></cell>
+                          </row>
+
+                          <row>
+                            <cell><m><var name="$x[3]" /></m></cell>
+                            <cell><var name="$f[3]" /></cell>
+                          </row>
+
+                          <row>
+                            <cell><m><var name="$x[4]" /></m></cell>
+                            <cell><var name="$f[4]" /></cell>
+                          </row>
+
+                          <row>
+                            <cell><m><var name="$x[5]" /></m></cell>
+                            <cell><var name="$f[5]" /></cell>
+                          </row>
+
+                          <row>
+                            <cell><m><var name="$x[6]" /></m></cell>
+                            <cell><var name="$f[6]" /></cell>
+                          </row>
+
+                    </tabular>
+                  </table>
+                  <p>Which pair of statements is true?</p>
+                  <p><var name="$statements" form="buttons" /></p>
+
+
+                </statement>
+                <hint>
+
+                </hint>
+                <solution>
+
+                </solution>
+              </webwork>
+            </exercise>
+          </example>
+
+
+
+
 
       </subsection>
-
     </conclusion>
-
-
-
 </chapter>
