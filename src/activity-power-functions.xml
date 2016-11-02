@@ -14,7 +14,93 @@
 <section xml:id="section-activity-power-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Power Functions Activity</title>
   <introduction>
-    <p>In this activity, we will explore <term>power functions</term>.
+    <p>In this activity, we will explore <term>power functions</term>.</p>
+    <p>A power function is a function of the form <me>f(x) = x^a</me> where <m>a</m> is a real number constant.</p>
+    <p>Our goal is to learn to predict what the graph of a power function will look like, depending on the exponent <m>a</m>.</p>
+    <p>We will begin by examining power functions with <term>integer</term> exponents.</p>
+    <exercise>
+      <webwork xml:id="webwork-power-function-intro">
+        <setup>
+          <var name="$evenExponent">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{points upward on the right and downward on the left}</member>
+              <member correct="yes">\text{points upward on the right and the left}</member>
+            </set>
+          </var>
+          <var name="$oddExponent">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{points upward on the right and downward on the left}</member>
+              <member>\text{points upward on the right and the left}</member>
+            </set>
+          </var>
+          <var name="$commonPoints">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{(-1,1)}</member>
+              <member correct="yes">\text{(0,0) and (1,1)}</member>
+              <member>\text{(-1,-1) and (0,0) and (1,1)}</member>
+            </set>
+          </var>
+
+          <pg-code>
+            $evenExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],'points upward on the right and the left');
+            $oddExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],'points upward on the right and downward on the left');
+            $commonPoints=PopUp(["?",'(-1,1)','(0,0) and (1,1)','(-1,-1) and (0,0) and (1,1)'],'(0,0) and (1,1)');
+
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graphs below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a positive integer. Use the slider to change the exponent <m>n</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ECrUf9u9/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Certain power functions have a similar overall <em>look</em>. How would you characterize the following types of power functions?</p>
+          <p>Complete each statement below with the best option.</p>
+          <ul>
+            <li>If the exponent is an <em>even</em> positive number, then its graph:
+            <p><var name="$evenExponent" form="popup" /></p></li>
+            <li>If the exponent is an <em>odd</em> positive number, then:
+            <p><var name="$oddExponent" form="popup" /></p></li>
+            <li>All of these power functions pass through the point(s):
+            <p><var name="$commonPoints" form="popup" /></p></li>
+          </ul>
+        </statement>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <webwork xml:id="webwork-name-the-power-function">
+        <setup>
+          <var name="$formula">
+            <set>
+              <member>f(x) = x^4</member>
+              <member correct="yes">f(x) = x^5</member>
+              <member>\text{None of these}</member>
+            </set>
+          </var>
+          <pg-code>
+            $formula=RadioButtons(
+                ["\(f(x) = x^4\)", "\(f(x) = x^5\)","None of these."],
+                1, labels => ["x^4","x^5","None of these"],
+                displayLabels => 0
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graph below shows a power function.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zKadUZzt/width/424/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>What is a possible formula for this function?</p>
+          <p><var name="$formula" form="buttons" /></p>
+        </statement>
+        <hint>
+          <p>Remember that the graphs of <em>all</em> power functions with positive whole number exponents look similar, depending on whether the exponent is <em>odd</em> or <em>even</em>. Think about a function whose graph you know, such as <m>x^1</m> or <m>x^2</m>. How does that compare to the graph shown above?</p>
+
+        </hint>
+        <solution>
+          <p>The only possibility given is <m>f(x) = x^5</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
   </introduction>
 
 </section>
