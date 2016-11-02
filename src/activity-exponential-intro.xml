@@ -40,26 +40,26 @@
         r = \frac{\displaystyle{\text{Pecent Value}}}{\displaystyle{100}}
     </me>
     <p>A percent increase means to multiply the original value by <m>1 + r</m> where <m>r</m> is the decimal equivalent of the given percent. In our salary example <m>r = 0.1</m> so we multiplied by <m>1 + 0.1 = 1.1</m> to get the <m>10 \%</m> increase.</p>
-    <p>The factor <m>1.1</m> is called the <term>growth factor</term> and is usually denoted as <m>b</m></p>
-    <p>For exponential growth the <term>growth factor</term>is defined as</p>
+    <p>In the expression <m>1.1s</m> the factor <m>1.1</m> is called the <term>growth factor</term> and is usually denoted with letter <m>b</m>.</p>
+    <p>For exponential growth the <term>growth factor</term> is defined as</p>
     <me>b = 1 + r</me>
     <p>Notice that the growth factor is greater than 1 for exponential growth.</p>
         <exercise>
             <webwork>
                 <setup>
                     <var name="$growth1">
-                        <static>0.0237</static>
+                        <static>1.0237</static>
                     </var>
                     <var name="$growth2">
-                        <static>0.00104</static>
+                        <static>1.00104</static>
                     </var>
                     <var name="$growth3">
-                        <static>0.8206</static>
+                        <static>1.8206</static>
                     </var>
                     <pg-code>
-                        $growth1 = Real(0.0237);
-                        $growth2 = Real(0.00104);
-                        $growth3 = Real(0.8206);
+                        $growth1 = Real(1.0237);
+                        $growth2 = Real(1.00104);
+                        $growth3 = Real(1.8206);
                     </pg-code>
                 </setup>
 
@@ -73,7 +73,7 @@
                 </statement>
             </webwork>
         </exercise>
-    <p>Consider a the following examples of percent increases.  We should be able to use the growth factor to increase a value by a percent and we should be able to determine the percent growth between two values.</p>
+    <p>Consider the following examples of percent increases.  We should be able to use the growth factor to increase a value by a percent and we should be able to determine the percent growth between two values.</p>
         <exercise>
             <webwork>
                 <setup>
@@ -97,7 +97,7 @@
                 </statement>
             </webwork>
         </exercise>
-    <p>Just like something can increase by a percent, it is possible to have a percent decrease.</p>
+    <p>Just like something can increase by a percent, it is possible to decrease by a percent.</p>
     <p>Consider a pair of shorts on sale where the original price of the shorts has been reduced by 15%.  This means the price of the shorts is divided into pieces and one of those pieces is subtracted from the original price of the shorts.</p>  
     <p>To reduce the price by <m>15 \%</m> we must turn the percent value into its decimal equivalent.  The decimal equivalent of <m>15 \%</m> is <m>\frac{\displaystyle{15}}{\displaystyle{100}} = 0.15</m>.</p>
     <p>Therefore the sale price of the shorts is</p>
@@ -176,6 +176,14 @@
                     <md>
                         <mrow>658 - <var name="$remain" /> \amp=  <var name="$helped" /></mrow>
                     </md>
+                    <p>Finally, a percent increase from <m>400</m> to <m>4,000</m> means to multiply by a number bigger than 1, as in</p>
+                    <me>400(1 + r) = 4,000</me>
+                    <p>Where <m>r</m> is the decimal equivalent of the percent we are looking for.  Solving this equation for <m>r</m> we get</p>
+                    <md>
+                        <mrow>r \amp= \frac{\displaystyle{4,000}}{\displaystyle{400}} - 1</mrow>
+                        <mrow>r \amp= 9</mrow>
+                    </md>
+                    <p>This represents a <m>900 \%</m> increase.</p>
                 </solution>
             </webwork>
         </exercise>
@@ -221,7 +229,9 @@
                     </var>
 
                     <pg-code>
-                        $thirtyNine= Real(39);
+                        $thirtyNine = Real(39);
+                        $OneFortyOne = Real(141);
+                        $FortyFour = Real(44);
                         $Increase = PopUp(["?", "Increase", "Decrease", "None of the above", "All of the above"], "Increase");
                         $Decrease = PopUp(["?", "Increase", "Decrease", "None of the above", "All of the above"], "Decrease");
                     </pg-code>
@@ -243,7 +253,8 @@
             </webwork>
         </exercise>
         <p>Using the fact that a percent change is a multiplication we can take any two values and find the percent change between them.</p>
-        <p>To decrease a value by a pecent we multiply by a growth factor <m>b = 1 - r</m>.  To increase a value by a percent we multiply by a growth factor <m>b = 1 + r</m>.</p>
+        <p>To decrease a value by a pecent we multiply by a growth factor <m>b = 1 - r</m>.</p>
+        <p>To increase a value by a percent we multiply by a growth factor <m>b = 1 + r</m>.</p>
         <exercise>
             <webwork>
                 <setup>
@@ -313,7 +324,7 @@
         </exercise>
   </subsection>
   <subsection>
-    <title>Discrete Percent Compounding</title>
+    <title>Discrete Percent Compounding (Repeated Multiplication)</title>
         <p>Consider an initial value, a number we start with that could be anything.  Let's call it <m>A</m> for <q>anything</q>.</p>
         <p>To increase <m>A</m> by <m>30 \%</m> we need to multiply by a growth factor greater than <m>1</m>.</p>
         <exercise>
@@ -334,11 +345,12 @@
                 </statement>
                 
                 <solution>
-                    <p>Since we have a percent increase we multiply by <m>b = 1 + 0.30 =</m> <var name="$b" /></p>
+                    <p>Since we have a percent increase we multiply by</p>
+                    <me>b = 1 + 0.30 = <var name="$b" /></me> 
                 </solution>
             </webwork>
         </exercise>
-        <p>Every time we want to increase by a percent we find the growth factor <m>b</m> and multipy by <m>b</m> for each percent increase.</p>
+        <p>Every time we want to increase by a percent we need find the corresponding growth factor <m>b</m> then multipy by <m>b</m> over and over for each percent increase.</p>
         <p>Is one <m>30 \%</m> increase the same as three <m>10 \%</m> increases?  Let's find out.</p>
         <exercise>
             <webwork>
@@ -367,22 +379,16 @@
                     <p><m>b^{3} =</m> <var name="$bCubed" width="5" /></p> 
                     <p>Round your answer to <m>3</m> decimal places.</p>
                     <p>What percent increase does this value represent over all? <var name="$OverAll" width="5" /></p>
-                    <p>As you can see, a growth factor of  <m>1.30</m> represents a <m>30 \%</m> increase while a growth factor of <m><var name="$bCubed" /></m> represents a <m><var name="$OverAll" /> \%</m> increase.</p>
+                    <p>As you can see, a growth factor of  <m><var name="$bCubed" /></m> represents a <m><var name="$OverAll" /> \%</m> increase. Moreover, we already know that a growth factor of <m>1.30</m> represents a <m>30 \%</m> increase.</p>
                     <p>Three <m>10 \%</m> increases is not the same as a <m>30 \%</m> increase! Why?  Because each <m>10 \%</m> increase is based on a value that is already greater than the original. Where as one increase of <m>30 \%</m> is based on the original value once.</p>
                 </statement>
                 
                 <solution>
-                    <p>Each increase of <m>10 \%</m> is a multiple of <var name="$b" />.  Using a calculator <m>b^{3} = <var name="$bCubed" /></m> which is the over all growth factor and it represents a total of <m><var name="$OverAll" /> \%</m></p>
+                    <p>Each increase of <m>10 \%</m> is a multiple of <m>b = </m><var name="$b" /></p>
+                    <p>Using a calculator <m>b^{3} = <var name="$b" />^{3} = <var name="$bCubed" /></m> which is the over all growth factor and it represents a total of <m><var name="$OverAll" /> \%</m></p>
                 </solution>
             </webwork>
         </exercise>
-        
-        <p>Consecutive multiplication is essentially consecutive percent change. When there are countable changes in percent (multiplying by some number over and over) it is called <term>discrete compounding</term>.</p>
-        <p>At the moment, <q>countable</q> may seem strange.  It means <q>A number you can count or put on a number line</q> like <m>12</m> or <m>205</m> or
-         or <m>5235</m>
-         or <m>168,463</m>
-         or <m>2,056,056,381,492</m>.</p>
-         <p>You must be wondering <q>what's not countable?</q> Well, how about infinity?  Infinity is not countable, it's not a number you can put on a number line. We'll talk more about infinite compounding later.</p>
         <p>Is one <m>35 \%</m> decrease the same as five consecutive <m>7 \%</m> decreases?  Let's find out.</p>
         <exercise>
             <webwork>
@@ -415,15 +421,193 @@
                 </statement>
                 
                 <solution>
-                    <p>Each decrease of <m>7 \%</m> is a multiple of <var name="$b" />.  Using a calculator <m>b^{3} = <var name="$bCubed" /></m> which is the over all growth factor and it represents a total of <m><var name="$OverAll" /> \%</m></p>
+                    <p>Each decrease of <m>7 \%</m> is a multiple of <m>b = </m><var name="$b" /></p>
+                    <p>Using a calculator <m>b^{5} = <var name="$b" />^{5} = <var name="$bCubed" /></m> which is the over all growth factor.</p>
+                    <p>But remember, this is the amount kept. To find the percent loss we need to subtract from 1 as in</p>
+                    <me>1 - <var name="$bCubed" /></me> 
+                    <p>Rounding to <m>2</m> decimal places, this represents a percent total loss of <m><var name="$OverAll" /> \%</m></p>
                 </solution>
             </webwork>
         </exercise>
+        <p>Consecutive multiplication is essentially consecutive percent change. When there are countable changes in percent (multiplying by some number over and over) it is called <term>discrete compounding</term>.</p>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$b">
+                        <static>1.056</static>
+                    </var>
+                    <var name="$r">
+                        <static>0.056</static>
+                    </var>
+                    <var name="$bOverAll">
+                        <static>1.7244</static>
+                    </var>
+                    <var name="$rOverAll">
+                        <static>72.44</static>
+                    </var>
+
+                    <pg-code>
+                        $b = Real(1.056);
+                        $r = Real(0.056);
+                        $bOverAll = Real(1.7244);
+                        $rOverAll = Real(72.44);
+                    </pg-code>
+                </setup>
+        
+                <statement>
+                    <p>The value of a particluar investment is expected to grow by about <m>5.6 \%</m> each year.  What overall percent increase should we expect for this investment after a period of 10 years?</p>
+
+                    <p>Start by finding the decimal equivalent of <m>5.6 \%</m></p>
+
+                    <p><m>r = </m> <var name="$r" width="5" /></p>
+
+                    <p>Now we can find the corresponding growth factor</p>
+
+                    <p><m>b = </m> <var name="$b" width="5" /></p>
+
+                    <p>The investment is expected to growth each year by the same percent.  This means we multiply by the same growth factor for each year that passes.</p>
+
+                    <p>At the end of the 10 year period the value of the stock has been compounded 10 times. What is the overall growth factor after 10 years? <var name="$bOverAll" width="5" /> (round your answer to 4 decimal places)</p>
+
+                    <p>What percent increase does this overall growth factor represent? <var name="$rOverAll" width="5" /><m>\%</m> (round your answer to <m>2</m> decimal places)</p>
+                    <p>This has been another example of how consecutive percent increases translate into repeated multiplication. We end up with exponents where the exponents <q>count</q> how many times the growth factor has been used.</p>
+                    <p>Since our investment is compounded for 10 years, we end up with a growth factor multiplied by itself 10 times, as in</p>
+                    <me>b^{10} = <var name="$b" />^{10} = <var name="$bOverAll" /></me>
+                </statement>
+                
+                <solution>
+                    
+                </solution>
+            </webwork>
+        </exercise>
+        <p>At this moment the word <q>countable</q> may seem strange.  It means, <q>A quantity you can count or put on a number line</q>, like <m>12</m> or <m>205</m> or
+         or <m>50,235,678</m>
+         or even <m>3</m> billion.</p>
+         <p>You must be wondering, <q>What's not countable?</q> Well, how about infinity?  Infinity is not countable. You cannot count to infinity and it's not something you can put on a number line. We'll talk more about infinite compounding later.</p>
   </subsection>
 
 
   <subsection>
-    <title>The Graphs of Exponential Functions</title>
+    <title>Exponential Formulas</title>
+        <p>Just like linear formulas have a particular <q>shape</q> or format like <m>y = mx + b</m>, for instance, so do exponential formulas. In this next part of the activity we will use a table of values to see patterns that emerge from constant percent growth or decay.</p>
+        <p>To find a pattern within numerical data, it is best to record how we get our results instead of the results themselves.</p>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$Next1">
+                        <static>165</static>
+                    </var>
+                    
+                    <pg-code>
+                        $Next1 = Real(165);
+                    </pg-code>
+                </setup>
+        
+                <statement>
+                    <p>Can you guess the next entry into the pattern?</p>
+                    <md>
+                        <mrow>11</mrow>
+                        <mrow>22</mrow>
+                        <mrow>43</mrow>
+                        <mrow>84</mrow>
+                    </md>
+                    <p>Next is <var name="$Next1" width="3" /></p>
+                    <p>What is the next entry in the pattern?</p>
+                    <md>
+                        <mrow>\amp5*2 + 1</mrow>
+                        <mrow>\amp5*2*2 + 2</mrow>
+                        <mrow>\amp5*2*2*2 + 3</mrow>
+                        <mrow>\amp5*2*2*2*2 + 4</mrow>
+                    </md>
+                    <p>Next is <var name="$Next1" width="10" /></p>
+                </statement>
+                
+                <solution>
+                    <p>Both patterns are exactly the same.  One shows the results and the other shows how to get the results.</p>
+                    <p>Most likely you found the second pattern to be the easiest to predict.  Because you can see <em>how</em> you got the answers.</p>
+                    <p>The first pattern shows only the results themselves, so all you see is numbers without any clue how they were found.</p>
+                    <p>In each case the next value is <var name="$Next1" />, but in the second pattern you can predict the calculation to be <m>5*2*2*2*2* + 5 = 165 </m></p>
+                </solution>
+            </webwork>
+        </exercise>
+        
+        <p>In the exercises that follow, use the tables to record <em>how</em> you get each result.  Don't write the actual result, you'll just be wasting your time.</p>
+
+        <exercise>
+            <webwork>
+              <setup>
+                <var name="$x[0]"><static>0</static></var>
+                <var name="$x[1]"><static>1</static></var>
+                <var name="$x[2]"><static>2</static></var>
+                <var name="$x[3]"><static>3</static></var>
+                
+                <var name="$f[0]"><static>350</static></var>
+                <var name="$f[1]"><static>374.50</static></var>
+                <var name="$f[2]"><static>400.72</static></var>
+                <var name="$f[3]"><static>428.77</static></var>
+
+                <pg-code>
+                  @x=(0,1,2,3);
+                  @f=map{350*1.07**($_)}@x;
+                </pg-code>
+
+              </setup>
+
+              <statement>
+                <ul>
+                  <li><p>A population of 350 bacteria increases by <m>7 \%</m> every hour.</p>
+                  <table>
+                    <caption>Building a Pattern</caption>
+                    <tabular top="major" halign="center">
+                      <col halign="left" />
+                      <col />
+                      <col />
+                      <col />
+
+                      <row bottom="medium">
+                        <cell>Input Comments</cell>
+                        <cell><m>t</m>, Hours that pass</cell>
+                        <cell><m>P(t)</m> Population at end of each hour</cell>
+                        <cell>Output Comments</cell>
+                      </row>
+
+                      <row>
+                        <cell></cell>
+                        <cell><m><var name="$x[0]" /></m></cell>
+                        <cell><m><var name="$f[0]" /></m></cell>
+                        <cell></cell>
+                      </row>
+
+                      <row>
+                        <cell></cell>
+                        <cell><m><var name="$x[1]" /></m></cell>
+                        <cell><m><var name="$f[1]" /></m></cell>
+                        <cell></cell>
+                      </row>
+
+                      <row>
+                        <cell></cell>
+                        <cell><m><var name="$x[2]" /></m></cell>
+                        <cell><m><var name="$f[2]" /></m></cell>
+                        <cell></cell>
+                      </row>
+
+                      <row>
+                        <cell></cell>
+                        <cell><m><var name="$x[3]" /></m></cell>
+                        <cell><m><var name="$f[3]" /></m></cell>
+                        <cell></cell>
+                      </row>
+
+                    </tabular>
+                  </table></li>
+                  <li><p>Show the table now</p></li>
+                </ul>
+              </statement>
+            </webwork>
+      </exercise>
+
+
   </subsection>
 
 </section>
