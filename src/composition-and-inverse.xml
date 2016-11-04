@@ -87,7 +87,7 @@
                   <p>The blood pressure drug <em>lisinopril</em> works best when it is consumed at a concentration of 5 mg/kg, and its concentration decreases exponentially, with a half-life of 12 hours.</p>
                   <p>Therefore, the concentration can be modeled by the function<md>
                     <mrow>C = f(t) = 5e^{-0.058t}</mrow></md></p>
-                  <p>Suppose that a patient with hypertension is admitted with blood pressure at 160 mm Hg. Administering the drug at a concentration of 5 mm/kg reduces their blood pressure to 110 mm Hg. As the drug's concentration diminishes over time, their blood pressure increases linearly, returning to 160 mm Hg when the concentration drops to 1 mg/kg.</p>
+                  <p>Suppose that a patient with hypertension is admitted with blood pressure at 160 mm Hg. Administering the drug at a concentration of 5 mg/kg reduces their blood pressure to 110 mm Hg. As the drug's concentration diminishes over time, their blood pressure increases linearly, returning to 160 mm Hg when the concentration drops to 1 mg/kg.</p>
                   <p>Therefore, the blood pressure can be modeled by the function<md>
                     <mrow>P = g(C) = -12.5C + 172.5</mrow></md></p>
                   <ul>
@@ -99,8 +99,8 @@
                 </statement>
                 <solution>
                   <ol>
-                    <li><p>The concentration after <var name="$hours" /> hours is <var name="$conExpression" />, and its value is <var name="$conAtHours" /> mg/kg.</p></li>
-                    <li><p>The blood pressure after <var name="$hours" /> hours is <var name="$bpOfConExpression" />, and its value is <var name="$bpAtHours" /> mm Hg.</p></li>
+                    <li><p>The concentration after <var name="$hours" /> hours is <var name="$conAtHours" />, and its value is <var name="$conAtHours" /> mg/kg.</p></li>
+                    <li><p>The blood pressure after <var name="$hours" /> hours is <var name="$bpAtHours" />, and its value is <var name="$bpAtHours" /> mm Hg.</p></li>
                   </ol>
                 </solution>
               </webwork>
@@ -110,11 +110,11 @@
               <webwork xml:id="heart-rate-formula">
                 <setup>
                   <var name="$concentration"><static>5*exp(-0.058*t)</static></var>
-                  <var name="$bp"><static>-12.5*(5*exp(-0.058*t))+172.5</static></var>
+                  <var name="$bp"><static>-12.5*(5*e^{-0.058*t})+172.5</static></var>
 
                   <pg-code>
                     Context()->variables->are(t=>'Real');
-                    $concentration=Compute("5*2.718282**(-0.058*t)");
+                    $concentration=Compute("5*e^{-0.058*t}");
                     $bp=Compute("-12.5*$concentration+172.5");
                   </pg-code>
                 </setup>
@@ -124,7 +124,7 @@
                     <mrow>P \amp= g(C) = -12.5C + 172.5</mrow></md></p>
                   <p>Since <m>P = g(C) = g(f(t))</m>, we first replace <m>f(t)</m> with its formula:<md>
                     <mrow>P \amp= g(f(t))</mrow>
-                    <mrow>\amp= g(<var name="$concentration" />)</mrow></md></p>
+                    <mrow>\amp= g(5*e^{-0.058*t})</mrow></md></p>
                   <p>Then we continue simplifying by using the formula for <m>g</m> of that input:<md>
                     <mrow>g(5e^{-0.058t}) \amp= <var name="$bp" /></mrow></md></p>
                 </statement>
@@ -243,9 +243,6 @@
 
             <exercise>
               <webwork>
-                <pg-macros>
-                  <macro-file>PGchoicemacros.pl</macro-file>
-                </pg-macros>
                 <setup>
                   <var name="$m"><static>33</static></var>
                   <var name="$x[0]"><static>10</static></var>
@@ -294,9 +291,6 @@
 
             <exercise>
               <webwork xml:id="webwork-windchill">
-                <pg-macros>
-                  <macro-file>PGchoicemacros.pl</macro-file>
-                </pg-macros>
                 <setup>
                   <var name="$rand[0]"><static>0</static></var>
                   <var name="$rand[1]"><static>1</static></var>

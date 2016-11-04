@@ -256,7 +256,7 @@
 <!--    Note: This could be the case if the car was driven in different gears, or if it was driven up-hill vs. down-hill. Is this important to point out?
 -->
             <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of <quantity><mag>25</mag><unit base="milepergallon" /></quantity> can be attained by traveling at a speed of about <quantity><mag>20</mag><unit base="mileperhour"/></quantity> and also at about <quantity><mag>70</mag><unit base="mileperhour"/></quantity>.</p>
-        
+
 
         <exercise>
             <title>Well-Defined</title>
@@ -291,7 +291,7 @@
         <subsection>
             <title>Describing functions with intervals</title>
             <p>A function may have many different characteristics: Its output values may increase or decrease, its graph may curve up or curve down, it may have positive outputs or negative outputs. When describing these characteristics for a function, we typically refer to an <term>interval</term> (connected part) of the input axis, or a particular value of the input where something interesting occurs.</p>
-            
+
             <todo>Insert interactive feature so student can practice shading in sections of the vertical and horizontal axes to practice writing or understanding intervals and inequality notation.</todo>
 
             <p>Using our efficiency example, the fuel efficiency increases (goes up) between <quantity><mag>5</mag></quantity> and <quantity><mag>55</mag><unit base="mileperhour"/></quantity> then decreases (goes down) for speeds between <quantity><mag>55</mag></quantity> and <quantity><mag>75</mag><unit base="mileperhour"/></quantity>. Also, the efficiency is lowest at about <quantity><mag>5</mag><unit base="mileperhour"/></quantity> and highest at about <quantity><mag>55</mag><unit base="mileperhour"/></quantity>. </p>
@@ -301,9 +301,9 @@
             <p>We could use an <term>inequality</term> to describe the interval where the efficiency function is increasing: <m>5\lt s\lt55</m>.  This means that as the car's speed changes from <quantity><mag>5</mag></quantity> to <quantity><mag>55</mag><unit base="mileperhour"/></quantity>, the efficiency is increasing.</p>
 
             <p>Another characteristic we can describe with inequalities is the <term>concavity</term> of a function. We say a function is <term>concave up</term> if its graph curves upward from left to right, and that it is <term>concave down</term> if it curves downward from left to right. We can see that the efficiency graph is:</p>
-            
+
             <todo>Insert interactive that changes a graph from concave up to concave down with a slider</todo>
-            
+
             <ul>
                 <li>
                     <p>concave down for <m>5\lt s\lt60</m>.</p>
@@ -337,7 +337,7 @@ Add a webwork problem for these key terms:
                     <image>
                         <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[ymin=-80, ymax=100, xlabel={Temperature ($^{\circ}$F)}, ylabel={Temperature ($^{\circ}$C)}, xtick={-100,-50,...,200}, minor xtick={-110,-100,...,220}, ytick={-50,0,...,100}, minor ytick={-80,-70,...,100}, xmin=-112, xmax=212,] 
+                            \begin{axis}[ymin=-80, ymax=100, xlabel={Temperature ($^{\circ}$F)}, ylabel={Temperature ($^{\circ}$C)}, xtick={-100,-50,...,200}, minor xtick={-110,-100,...,220}, ytick={-50,0,...,100}, minor ytick={-80,-70,...,100}, xmin=-112, xmax=212,]
                             \addplot+[domain=-100:212] {5/9*(x-32)};
                             \end{axis}
                             \end{tikzpicture}]]>
@@ -374,13 +374,10 @@ Add a webwork problem for these key terms:
                 <p>In this example the units of efficiency are <q>mpg (miles per gallon)</q> and the units of speed are <q>mph (miles per hour)</q>.  Therefore the average rate of change for this example will have units of <quantity><unit base="milepergallon" /><per base="mileperhour" /></quantity>.</p>
 
                 <p>As you see, because slope is just <q>rise over run</q> the units of the average rate of change are <q>miles per gallon</q> over <q>miles per hour</q>.</p>
-        
+
             <exercise>
                 <title>Fuel Efficiency</title>
                 <webwork xml:id="webwork-fuel-efficiency">
-                    <pg-macros>
-                        <macro-file>PGchoicemacros.pl</macro-file>
-                    </pg-macros>
                     <setup>
                         <var name="$a">
                             <static>0.12</static>
@@ -463,9 +460,6 @@ Add a webwork problem for these key terms:
         <exercise>
             <title>Equation for a Secant Line</title>
             <webwork xml:id="webwork-secant-line">
-                <pg-macros>
-                    <macro-file>parserImplicitPlane.pl</macro-file>
-                </pg-macros>
                 <setup>
                     <var name="$a">
                         <static>10</static>

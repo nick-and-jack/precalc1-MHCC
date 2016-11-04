@@ -41,7 +41,7 @@
         <title>Math as a Language</title>
         <p>We begin this activity by realizing math is just another language and everything you say or describe in English, you can say or describe in Math. Math is a language specifically to communicate measurements, or values and relationships.</p>
         <p>In this next exercise we learn to communicate the position of a train as time passes and develop the notation to express where the train is at different times.</p>
-        
+
         <exercise>
             <webwork seed="1">
                 <setup>
@@ -304,7 +304,7 @@
         <title>Evaluate vs Solve</title>
         <p>Its one thing to talk about, <q>The train's distance from downtown 2 hours after 8 a.m.</q> and a completely different thing to say what that distance actually is.</p>
 
-        <p>In our train story <m>f(2)</m> represents the train's distance 2 hours after 8 a.m. To find the value (number) for the distance we must <term>evaluate</term> the funtion. Earlier we used a graph, but can use a table or a formula if there is one avaible. The important thing is we need an input of time to determine the output which is the actual distance.</p>  
+        <p>In our train story <m>f(2)</m> represents the train's distance 2 hours after 8 a.m. To find the value (number) for the distance we must <term>evaluate</term> the funtion. Earlier we used a graph, but can use a table or a formula if there is one avaible. The important thing is we need an input of time to determine the output which is the actual distance.</p>
 
         <p><term>Evaluate</term> a function means to <em>find the value of the output given an input value.</em>  Therefore, evaluate <m>f(2)</m> in our example means <q>Find the train's distance from downtown 2 hours after 8 a.m.</q></p>
 
@@ -409,13 +409,13 @@
                 </statement>
             </webwork>
         </exercise>
-        
+
         <p>According to <url href="https://en.wikipedia.org/wiki/Function_(mathematics)">Wikipedia</url>, a function has the following definition:</p>
-                
+
         <blockquote><q>In mathematics, a function is a relation between a set of inputs and a set of permissible outputs with the property that each input is related to exactly one output.</q></blockquote>
 
         <p>If you actually read the entire Wikipedia entry you will find the definition of a function can be quite lengthy in order to cover all the universe of mathematics.  In this activity we are going to keep the language simple, informal and we will use some analogies from our train story as examples.</p>
-        
+
         <p>Remebmer this: One input, one output.</p>
 
         <p>A function is a rule that takes a piece of <q>usable</q> information that you pick and gives you some kind of result.  By <q>usable</q> we mean information that has meaning for the function.  In our train story the only usable information we can choose are times between <m>0</m> and <m>7</m> hours after 8 <abbr>a.m.</abbr> (inclusive).  We have no information about times less than <m>0</m> or greater than <m>7</m> hours after 8 <int>a.m.</int>.</p>
@@ -499,7 +499,7 @@
             </statement>
           </webwork>
         </exercise>
-        
+
         <p>Tables are another way to express inputs and outputs. In a vertical table the inputs are on the left while the outputs are on the right.  In a horizontal table, the top row is the input and the bottom row is the output.</p>
         <exercise>
           <title>Determine if each table is a function or not</title>
@@ -640,7 +640,7 @@
 
                 <statement>
                     <p>The graph the the function <m>f(x) = (x+4)(x+1)(x-2)*0.1875</m> is shown below.  Use the slider or the manual input box to evaluate each expression.</p>
-                    
+
                     <todo>Question 1.1.10 needs to be finished.  Graph should show the values of x and f(x) in order to evaluate given expressions.</todo>
 
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/bnSUyhHH/width/431/height/313/border/888888" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
@@ -660,7 +660,7 @@
         <p>Suppose we want the output of a function to be <m>y = 0</m>. Therefore, we must find all the input values of <m>x</m> that gives us that result. There may not be any, but there could be one, several or even infinite possible inputs that gives <m>y = 0</m> as the output.</p>
         <p>In English we could ask the question ror the example in the previous exercise,</p>
         <blockquote><p><q>What input makes the output equal to 0?</q></p></blockquote>
-        <p>There would be three answers:</p> 
+        <p>There would be three answers:</p>
         <blockquote><p><m>x = - 4</m> , <m>- 1</m> and <m>2</m></p></blockquote>
         <p>All of these values of <m>x</m> give us the same result of <m>y = 0</m>.</p>
         <p>In math we could ask the same question, but it comes out as a statement.</p>
@@ -691,7 +691,7 @@
                     </var>
                     <var name="$numSolutions2">
                         <static>1</static>
-                    </var>                    
+                    </var>
                     <var name="$solution3">
                         <static>2.7</static>
                     </var>
@@ -744,6 +744,7 @@
             </webwork>
         </exercise>
 
+<todo>Having issues with coding rest of this next question for 1 or no solutions.</todo>
         <exercise>
             <webwork>
                 <setup>
@@ -753,7 +754,7 @@
                     <var name="$answer1">
                         <static>1.1</static>
                     </var>
-        
+
                     <pg-code>
                         $b = Real(0.957);
                         $answer1 = $b+0.1;
@@ -761,13 +762,12 @@
                            my ($correct,$student,$ansHash) = @_;
                            return (($student > $b)?1:0);
                          });
-                         <todo>Having issues with coding rest of this question for 1 or no solutions.</todo>
                     </pg-code>
                 </setup>
 
                 <statement>
                     <todo>Insert graph of {2^x} = 0.5x + b with the number b equal to 0.956964. Also need to insert code for conditional questions below. Need to code the no solutions and one solutions parts to this question.</todo>
-                    
+
                     <p>Find a value for b such that the equation</p>
                     <p><me>{2^x} = 0.5x + b</me></p>
                     <p>has two solutions.</p>

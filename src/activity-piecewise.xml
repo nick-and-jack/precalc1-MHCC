@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- 
+<!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
 ## Jack Green, Nick Chura                                                ##
@@ -20,10 +20,6 @@
         <p>The most difficult part of piecewise functions is the notation.  In the following set of activities you will use a skill you already know, evaluate a function graphically, and transition slowly into how to write and understand piecewise notation.</p>
    <exercise>
        <webwork>
-           <pg-macros>
-             <macro-file>parserImplicitPlane.pl</macro-file>
-             <macro-file>contextInequalities.pl</macro-file>
-           </pg-macros>
            <setup>
                <var name="$eval1">
                    <static>6</static>
@@ -82,7 +78,7 @@
                <var name="$answer3">
                    <static>2&lt;x&lt;=8</static>
                </var>
-               
+
                <pg-code>
                 $A = RadioButtons(
                 ["A","B","C"],
@@ -149,10 +145,6 @@
 
     <exercise>
         <webwork>
-          <pg-macros>
-            <macro-file>contextInequalities.pl</macro-file>
-            <macro-file>parserImplicitPlane.pl</macro-file>
-          </pg-macros>
 
             <setup>
                 <var name="$answer1">
@@ -202,7 +194,7 @@
           <statement>
               <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QeJS3ygG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
               <p>Earlier you found the equations for Lines A, B and C and the domain for each line.  In order to create one function from the three equations we still use function notation, but we group all the formulas to be used in a <q>curly</q> bracket.  After the bracket, all equations to be used are listed on a left column and the domain for each is listed in a right column as shown in the example below.</p>
-              
+
               <p>
                 <me>f(x) = \left\{
                     \begin{array}{ll}
@@ -216,12 +208,12 @@
               <p>Use the equations you found ealier</p>
                <p><md>
                 <mrow>y \amp= -2x - 10</mrow>
-                <mrow>y \amp= x - 1</mrow> 
+                <mrow>y \amp= x - 1</mrow>
                 <mrow>y \amp= -0.25x + 3.5</mrow></md>
                 </p>
               <p>and their corresponding domains</p>
-                <p><me>-8 \leq x \leq -3</me> 
-                <me>-3 \leq x \leq 2</me> 
+                <p><me>-8 \leq x \leq -3</me>
+                <me>-3 \leq x \leq 2</me>
                 <me>2 \lt x \leq 8</me></p>
               <p>and place them in their correct positions in the piecewise function below.</p>
               <p>
@@ -257,12 +249,12 @@
                       <var name="$answer1">
                           <static>1</static>
                       </var>
-                      
+
                       <pg-code>
                           $answer1 = Real(1);
                       </pg-code>
                 </setup>
-      
+
                 <statement>
                     <p>Use the axes below to plot three points for each function on its given domain.</p>
                     <p><m>y = x</m> for <m>-4 \leq x \leq 0</m></p>

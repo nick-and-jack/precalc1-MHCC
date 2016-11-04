@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- 
+<!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
 ## Jack Green, Nick Chura                                                ##
@@ -19,7 +19,7 @@
   </introduction>
 
   <subsection>
-    <title>Review of Percent Change</title> 
+    <title>Review of Percent Change</title>
     <p>A <term>percent change</term> on a value means to change it by a fraction of itself.  When someone gets a <m>10 \%</m> raise in salary it means that their salary was divided into pieces <me>\frac{\displaystyle{10}}{\displaystyle{100}} = \frac{\displaystyle{1}}{\displaystyle{10}}</me> and one of those pieces was added onto their original salary.  Think of it like this</p>
     <blockquote>
         <p>New Salary = Old Salary + <m>1/10</m> of Old Salary</p>
@@ -98,7 +98,7 @@
             </webwork>
         </exercise>
     <p>Just like something can increase by a percent, it is possible to decrease by a percent.</p>
-    <p>Consider a pair of shorts on sale where the original price of the shorts has been reduced by 15%.  This means the price of the shorts is divided into pieces and one of those pieces is subtracted from the original price of the shorts.</p>  
+    <p>Consider a pair of shorts on sale where the original price of the shorts has been reduced by 15%.  This means the price of the shorts is divided into pieces and one of those pieces is subtracted from the original price of the shorts.</p>
     <p>To reduce the price by <m>15 \%</m> we must turn the percent value into its decimal equivalent.  The decimal equivalent of <m>15 \%</m> is <m>\frac{\displaystyle{15}}{\displaystyle{100}} = 0.15</m>.</p>
     <p>Therefore the sale price of the shorts is</p>
     <blockquote>
@@ -162,11 +162,11 @@
                 <solution>
                     <p>To get the decimal equivalent of the percent we take the given percent value and divide by 100.</p>
                     <p><m>37 \%</m> is the same as <m>r = \frac{\displaystyle{37}}{\displaystyle{100}} = 0.37</m></p>
-                    <p>The growth factor in this case is less than 1, so it is actually a decrease.</p>   
+                    <p>The growth factor in this case is less than 1, so it is actually a decrease.</p>
                     <md>
                         <mrow>b \amp= 1 - r</mrow>
                         <mrow>b \amp= 1 - <var name="$rVal1" /></mrow>
-                        <mrow>b \amp= <var name="$bVal1" /></mrow> 
+                        <mrow>b \amp= <var name="$bVal1" /></mrow>
                     </md>
                     <p>Out of the 658 adults, only some were helped by the use of vitamin D.  Those that remained having risk of asthma attacks were</p>
                     <md>
@@ -269,10 +269,10 @@
                         $rPercent = Real(233);
                     </pg-code>
                 </setup>
-        
+
                 <statement>
                     <p>A population increases from 3,000 to 10,000. What is the percent increase in the population?</p>
-                    <p>First we should write the English sentence as a <q>math</q> sentence.</p>  
+                    <p>First we should write the English sentence as a <q>math</q> sentence.</p>
                     <me>3,000 * b = 10,000</me>
                     <p>We know we start with <m>3,000</m> and we must multiply by something because it's a percent change. What do we multiply by to get our answer? Round your answer to <m>2</m> decimal places.</p>
                     <p><m>b = </m><var name="$b" width="5" /></p>
@@ -281,7 +281,7 @@
                     <p>What percent increase does this represent? Round your answer to <m>2</m> decimal places.</p>
                     <p><var name="$rPercent" width="5" /><m>\%</m></p>
                 </statement>
-                
+
                 <solution>
                     <p><m>b = \frac{\displaystyle{10,000}}{\displaystyle{3,000}} = </m> <var name="$b" /></p>
                     <p><m>r = ( <var name="$b" /> - 1 ) * 100 \% = <var name="$rPercent" /> \%</m></p>
@@ -303,10 +303,10 @@
                         $rPercent = Real(70);
                     </pg-code>
                 </setup>
-        
+
                 <statement>
                     <p>A population decreases from 10,000 to 3,000. What is the percent decrease in the population?</p>
-                    <p>First we should write the English sentence as a <q>math</q> sentence.</p>  
+                    <p>First we should write the English sentence as a <q>math</q> sentence.</p>
                     <me>10,000 * b = 3,000</me>
                     <p>We know we start with <m>10,000</m> and we must multiply by something because it's a percent change. What do we multiply by to get our answer? Round your answer to <m>2</m> decimal places.</p>
                     <p><m>b = </m><var name="$b" width="5" /></p>
@@ -315,7 +315,7 @@
                     <p>What percent increase does this represent? Round your answer to <m>2</m> decimal places.</p>
                     <p><var name="$rPercent" width="5" /><m>\%</m></p>
                 </statement>
-                
+
                 <solution>
                     <p><m>b = \frac{\displaystyle{3,000}}{\displaystyle{10,000}} = </m> <var name="$b" /></p>
                     <p><m>r = ( 1 - <var name="$b" /> ) * 100 \% = <var name="$rPercent" /> \%</m></p>
@@ -333,20 +333,20 @@
                     <var name="$b">
                         <static>1.30</static>
                     </var>
-                    
+
                     <pg-code>
                         $b = Real(1.30);
                     </pg-code>
                 </setup>
-        
+
                 <statement>
                     <p>Write the growth factor in the box that corresponds to a <m>30 \%</m> increase on the value <m>A</m>.</p>
                     <p><m>b =</m> <var name="$b" width="5" /></p>
                 </statement>
-                
+
                 <solution>
                     <p>Since we have a percent increase we multiply by</p>
-                    <me>b = 1 + 0.30 = <var name="$b" /></me> 
+                    <me>b = 1 + 0.30 = <var name="$b" /></me>
                 </solution>
             </webwork>
         </exercise>
@@ -370,19 +370,19 @@
                         $OverAll = Real(33.1);
                     </pg-code>
                 </setup>
-        
+
                 <statement>
                     <p>Three <m>10 \%</m> increases in a row means</p>
                     <p><m>A</m><m>*</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /></p>
                     <p>Use your calculator to find the final result of multiplying the growth factor by itself three times in a row.</p>
                     <p>Three consecutive <m>10 \%</m> increases is a total growth factor of</p>
-                    <p><m>b^{3} =</m> <var name="$bCubed" width="5" /></p> 
+                    <p><m>b^{3} =</m> <var name="$bCubed" width="5" /></p>
                     <p>Round your answer to <m>3</m> decimal places.</p>
                     <p>What percent increase does this value represent over all? <var name="$OverAll" width="5" /></p>
                     <p>As you can see, a growth factor of  <m><var name="$bCubed" /></m> represents a <m><var name="$OverAll" /> \%</m> increase. Moreover, we already know that a growth factor of <m>1.30</m> represents a <m>30 \%</m> increase.</p>
                     <p>Three <m>10 \%</m> increases is not the same as a <m>30 \%</m> increase! Why?  Because each <m>10 \%</m> increase is based on a value that is already greater than the original. Where as one increase of <m>30 \%</m> is based on the original value once.</p>
                 </statement>
-                
+
                 <solution>
                     <p>Each increase of <m>10 \%</m> is a multiple of <m>b = </m><var name="$b" /></p>
                     <p>Using a calculator <m>b^{3} = <var name="$b" />^{3} = <var name="$bCubed" /></m> which is the over all growth factor and it represents a total of <m><var name="$OverAll" /> \%</m></p>
@@ -408,7 +408,7 @@
                         $OverAll = Real(30.43);
                     </pg-code>
                 </setup>
-        
+
                 <statement>
                     <p>Five <m>7 \%</m> decreases in a row means</p>
                     <p><m>A *</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /></p>
@@ -419,12 +419,12 @@
                     <p>As you can see, a growth factor of  <m>0.65</m> represents a <m>35 \%</m> decrease while a growth factor of <var name="$bCubed" /> represents a <var name="$OverAll" /><m>\%</m> decrease.</p>
                     <p>Five<m>7 \%</m> decreases is not the same as a <m>35 \%</m> decrease! Why?  Because each <m>7 \%</m> decrease is based on a value that is already lesser than the original. Where as one decrease of <m>35 \%</m> is based on the original value once.</p>
                 </statement>
-                
+
                 <solution>
                     <p>Each decrease of <m>7 \%</m> is a multiple of <m>b = </m><var name="$b" /></p>
                     <p>Using a calculator <m>b^{5} = <var name="$b" />^{5} = <var name="$bCubed" /></m> which is the over all growth factor.</p>
                     <p>But remember, this is the amount kept. To find the percent loss we need to subtract from 1 as in</p>
-                    <me>1 - <var name="$bCubed" /></me> 
+                    <me>1 - <var name="$bCubed" /></me>
                     <p>Rounding to <m>2</m> decimal places, this represents a percent total loss of <m><var name="$OverAll" /> \%</m></p>
                 </solution>
             </webwork>
@@ -453,7 +453,7 @@
                         $rOverAll = Real(72.44);
                     </pg-code>
                 </setup>
-        
+
                 <statement>
                     <p>The value of a particluar investment is expected to grow by about <m>5.6 \%</m> each year.  What overall percent increase should we expect for this investment after a period of 10 years?</p>
 
@@ -474,9 +474,9 @@
                     <p>Since our investment is compounded for 10 years, we end up with a growth factor multiplied by itself 10 times, as in</p>
                     <me>b^{10} = <var name="$b" />^{10} = <var name="$bOverAll" /></me>
                 </statement>
-                
+
                 <solution>
-                    
+
                 </solution>
             </webwork>
         </exercise>
@@ -497,12 +497,12 @@
                     <var name="$Next1">
                         <static>165</static>
                     </var>
-                    
+
                     <pg-code>
                         $Next1 = Real(165);
                     </pg-code>
                 </setup>
-        
+
                 <statement>
                     <p>Can you guess the next entry into the pattern?</p>
                     <md>
@@ -521,7 +521,7 @@
                     </md>
                     <p>Next is <var name="$Next1" width="10" /></p>
                 </statement>
-                
+
                 <solution>
                     <p>Both patterns are exactly the same.  One shows the results and the other shows how to get the results.</p>
                     <p>Most likely you found the second pattern to be the easiest to predict.  Because you can see <em>how</em> you got the answers.</p>
@@ -530,12 +530,17 @@
                 </solution>
             </webwork>
         </exercise>
-        
+
         <p>In the exercises that follow, use the tables to record <em>how</em> you get each result.  Don't write the actual result, you'll just be wasting your time.</p>
 
         <exercise>
             <webwork>
               <setup>
+                <var name="$a"><static>350</static></var>
+                <var name="$r"><static>0.07</static></var>
+                <var name="$p"><static>7</static></var>
+                <var name="$b"><static>1.07</static></var>
+
                 <var name="$x[0]"><static>0</static></var>
                 <var name="$x[1]"><static>1</static></var>
                 <var name="$x[2]"><static>2</static></var>
@@ -543,7 +548,7 @@
                 <var name="$x[5]"><static>4</static></var>
                 <var name="$x[6]"><static>20</static></var>
                 <var name="$x[6]"><static>7</static></var>
-                
+
                 <var name="$y[0]"><static>350</static></var>
                 <var name="$y[1]"><static>374.50</static></var>
                 <var name="$y[2]"><static>400.72</static></var>
@@ -552,6 +557,15 @@
                 <var name="$y[5]"><static>1355.4</static></var>
                 <var name="$y[6]"><static>7</static></var>
 
+                <var name="$f[0]"><static>350</static></var>
+                <var name="$f[1]"><static>374.50</static></var>
+                <var name="$f[2]"><static>400.72</static></var>
+                <var name="$f[3]"><static>428.77</static></var>
+
+                <var name="$y[0]"><static>\text{350}</static></var>
+                <var name="$y[1]"><static>\text{350}\cdot\text{1.07}</static></var>
+                <var name="$y[2]"><static>\text{350}\cdot\text{1.07}\cdot\text{1.07}</static></var>
+                <var name="$y[3]"><static>\text{350}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}</static></var>
                 <pg-code>
                   Context()->variables->are(t=>'Real');
                   $a=random(200,400,10);
@@ -560,7 +574,7 @@
                   $b=1+$r;
                   @x=(0,1,2,3,4,20,Formula("t"));
                 Context()->flags->set(formatStudentAnswers=>'parsed');
-                Context()->flags->set(reduceConstants=>0);                 
+                Context()->flags->set(reduceConstants=>0);
                 Context()->operators->set(
                 '*' => {class => 'bizarro::BOP::multiply', isCommand => 1},
                 ' *' => {class => 'bizarro::BOP::multiply', isCommand => 1},
@@ -602,24 +616,24 @@
                   <table>
                     <caption>Building a Pattern</caption>
                         <tabular top="major" halign="center">
-                          <col halign="left" />                      
+                          <col halign="left" />
                           <col halign="left" />
 
                           <row bottom="medium">
                             <cell><m>t</m>, Hours that pass</cell>
                             <cell><m>P(t)</m> Population at end of each hour</cell>
                           </row>
-                          
+
                           <row><cell colspan="2">Initially (no time has passed) <m>t = 0</m></cell></row>
-                          
+
                           <row>
                             <cell colspan="2">But for each hour that passes, we multiply by the the growth factor.</cell>
                           </row>
-                          
+
                           <row>
                             <cell colspan="2">This gives us the percent change at the end of each hour <m>t = 1, 2</m> etc.</cell>
                           </row>
-                          
+
                           <row>
                             <cell><m><var name="$x[0]" /></m></cell>
                             <cell><m><var name="$y[0]" /></m></cell>
@@ -696,6 +710,37 @@
                             <cell colspan="2">This is your formula to calculate the population at any time!</cell>
                           </row>
                         </tabular>
+                    <tabular top="major" halign="center">
+                      <col halign="left" />
+                      <col halign="left" />
+
+                      <row bottom="medium">
+                        <cell><m>t</m>, Hours that pass</cell>
+                        <cell><m>P(t)</m> Population at end of each hour</cell>
+                      </row>
+
+                      <row><cell colspan="2">Initially (no time has passed) <m>t = 0</m></cell></row>
+                      <row>
+                        <cell><m><var name="$x[0]" /></m></cell>
+                        <cell><m><var name="$y[0]" /></m></cell>
+                      </row>
+
+                      <row>
+                        <cell><m><var name="$x[1]" /></m></cell>
+                        <cell><m><var name="$y[1]" /></m></cell>
+                      </row>
+
+                      <row>
+                        <cell><m><var name="$x[2]" /></m></cell>
+                        <cell><m><var name="$y[2]" /></m></cell>
+                      </row>
+
+                      <row>
+                        <cell><var name="$x[3]" width="4" /></cell>
+                        <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
+                      </row>
+
+                    </tabular>
                   </table></li>
                 </ul>
               </statement>
@@ -723,7 +768,7 @@
                     <var name="$bRoot">
                         <static>1.0260</static>
                     </var>
-                    
+
                     <pg-code>
                     Context()->variables->are(t=>'Real');
                       $a=random(200,400,10);
@@ -733,7 +778,7 @@
                       $bRoot=$b**(1/3);
                     </pg-code>
                 </setup>
-        
+
                 <statement>
                     <p>Derive a formula for a population of <m><var name="$a" /></m> bacteria that increases by <m><var name="$p" />\,\%</m> every 3 hours.</p>
                     <p>What is the initial size of the population?  This is the result we should get if <m>t = 0</m> (no time goes by).</p>
@@ -748,9 +793,9 @@
 
 
                 </statement>
-                
+
                 <solution>
-                    
+
                 </solution>
             </webwork>
         </exercise>

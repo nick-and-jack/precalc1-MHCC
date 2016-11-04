@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- 
+<!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
 ## Jack Green, Nick Chura                                                ##
@@ -29,14 +29,11 @@
 
    <exercise>
        <webwork>
-           <pg-macros>
-             <macro-file>parserImplicitPlane.pl</macro-file>
-           </pg-macros>
            <setup>
                <var name="$lineA">
                    <static>y=3x-1</static>
                </var>
-               
+
                <pg-code>
                     Context()->variables->are(x=>'Real',y=>'Real');
                    $lineA = ImplicitPlane("y=3x-1");

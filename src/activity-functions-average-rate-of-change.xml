@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- 
+<!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
 ## Jack Green, Nick Chura                                                ##
@@ -29,16 +29,13 @@
 
         <p>The prerequisites for this lesson are knowing how to calculate the slope of a line and understanding the meaning of slope.</p>
     </introduction>
-    
+
     <subsection>
         <title>Intuitive Knowledge</title>
         <p>Let's start by realizing you already understand the concept of <em>average rate of change</em> but maybe you have never hear the phrase before.</p>
         <exercise>
             <webwork>
-                <pg-macros>
-                    <macro-file>PGchoicemacros.pl</macro-file>
-                </pg-macros>
-            
+
                 <setup>
                     <var name="$train">
                         <set>
@@ -90,9 +87,6 @@
             </introduction>
 
             <webwork>
-                <pg-macros>
-                    <macro-file>parserFunction.pl</macro-file>
-                </pg-macros>
                 <setup>
                     <var name="$Vchange">
                         <static>16</static>
@@ -103,7 +97,7 @@
                     <var name="$difference">
                         <static>f(5)-f(2)</static>
                     </var>
-                    
+
                     <!-- Within parserFunction below the formula has nothing to do with the problem.  It's only there to be function to generate values for us -->
                     <pg-code>
                         Context('Numeric');
@@ -116,7 +110,7 @@
                         $difference=Formula("f(5)-f(2)");
                     </pg-code>
                 </setup>
-          
+
                 <statement>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/gWxmhsGB/width/431/height/313/border/888888" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
@@ -184,9 +178,6 @@
 
         <exercise>
             <webwork>
-                <pg-macros>
-                     <macro-file>parserImplicitPlane.pl</macro-file>
-                </pg-macros>
                 <setup>
                     <var name="$slope1">
                         <static>-4</static>
@@ -278,7 +269,7 @@
             </webwork>
         </exercise>
         <p>Let's finish this activity by going back to the train example where the distance (miles) of the train from downtown is a function of the time (hours) after 8 <init>a.m.</init>.  In other words <m>D = f(t)</m></p>
-        
+
         <exercise>
             <webwork>
                 <setup>
@@ -387,7 +378,7 @@
 
                     <p><m>\frac{\Delta f}{\Delta t} = 45</m> on the interval <m>2 \leq t \leq 5</m> means that</p>
                      <p>the average <var name="$meaning" form="popup" /> is <var name="$speed" width="5" /><var name="$lastUnit" form="popup" /><var name="$interval" form="popup" /></p>
-                    
+
                 </statement>
             </webwork>
         </exercise>
