@@ -15,7 +15,7 @@
   <title>Power Functions Activity</title>
   <introduction>
     <p>In this activity, we will explore <term>power functions</term>.</p>
-    <p>A power function is a function of the form <me>f(x) = x^a</me> where <m>a</m> is a real number constant.</p>
+    <p>A power function is a function of the form <me>f(x) = x^a</me> where <m>a</m> is a constant real number.</p>
     <p>Our goal is to learn to predict what the graph of a power function will look like, depending on the exponent <m>a</m>.</p>
     <p>We will begin by examining power functions with <term>integer</term> exponents.</p>
     <exercise>
@@ -40,7 +40,6 @@
               <member>\text{?}</member>
               <member>\text{(-1,1)}</member>
               <member correct="yes">\text{(0,0) and (1,1)}</member>
-              <member>\text{(-1,-1) and (0,0) and (1,1)}</member>
             </set>
           </var>
 
@@ -52,14 +51,13 @@
           </pg-code>
         </setup>
         <statement>
-          <p>The graphs below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a positive integer. Use the slider to change the exponent <m>n</m>.</p>
+          <p>The graph below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a positive integer. Use the slider to change the exponent <m>n</m>.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ECrUf9u9/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Certain power functions have a similar overall <em>look</em>. How would you characterize the following types of power functions?</p>
-          <p>Complete each statement below with the best option.</p>
+          <p>Power functions have a similar overall <em>shapes</em>, depending on their exponents. Complete the following statements about the shapes of the power functions in this exercise.</p>
           <ul>
             <li>If the exponent is an <em>even</em> positive number, then its graph:
             <p><var name="$evenExponent" form="popup" /></p></li>
-            <li>If the exponent is an <em>odd</em> positive number, then:
+            <li>If the exponent is an <em>odd</em> positive number, then its graph:
             <p><var name="$oddExponent" form="popup" /></p></li>
             <li>All of these power functions pass through the point(s):
             <p><var name="$commonPoints" form="popup" /></p></li>
@@ -67,6 +65,8 @@
         </statement>
       </webwork>
     </exercise>
+
+    <p>Use your observations to identify the function in the next exercise.</p>
 
     <exercise>
       <webwork xml:id="webwork-name-the-power-function">
@@ -101,6 +101,308 @@
         </solution>
       </webwork>
     </exercise>
+
+    <p>Now, recall what you know about function transformations from <xref ref="chapter-reflections-and-vertical-stretches">chapter</xref> &#8212; in particular, that the transformation <me>y = -f(x)</me> will reflect the graph of <m>f(x)</m> over the <m>x</m>-axis. Use this in the next exercise.</p>
+    <exercise>
+      <webwork xml:id="webwork-power-function-flipped">
+        <setup>
+          <var name="$posEven">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{A}</member>
+              <member>\text{B}</member>
+              <member>\text{C}</member>
+              <member correct="yes">\text{D}</member>
+            </set>
+          </var>
+          <var name="$posOdd">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{A}</member>
+              <member correct="yes">\text{B}</member>
+              <member>\text{C}</member>
+              <member>\text{D}</member>
+            </set>
+          </var>
+          <var name="$negEven">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{A}</member>
+              <member>\text{B}</member>
+              <member correct="yes">\text{C}</member>
+              <member>\text{D}</member>
+            </set>
+          </var>
+          <var name="$negOdd">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{A}</member>
+              <member>\text{B}</member>
+              <member>\text{C}</member>
+              <member>\text{D}</member>
+            </set>
+          </var>
+
+          <pg-code>
+            $posEven=PopUp(["?","A","B","C","D"],"D");
+            $posOdd=PopUp(["?","A","B","C","D"],"B");
+            $negEven=PopUp(["?","A","B","C","D"],"C");
+            $negOdd=PopUp(["?","A","B","C","D"],"A");
+          </pg-code>
+        </setup>
+
+        <statement>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/hU6c22WZ/width/229/height/230/border/888888" width="229px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jUTFkbFb/width/229/height/230/border/888888" width="229px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jHt9DjNU/width/229/height/230/border/888888" width="229px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GgFu8R9Y/width/229/height/230/border/888888" width="229px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+          <p>The graphs show the following functions:<md>
+            <mrow>y = -x^2</mrow>
+            <mrow>y = -x^3</mrow>
+            <mrow>y = x^4</mrow>
+            <mrow>y = x^5</mrow>
+          </md></p>
+          <p>Use the letters <em>A</em> through <em>D</em> to answer the following questions.</p>
+          <p>Which graph shows <m>y = x^4</m>?</p>
+          <p>Answer:  Graph <var name="$posEven" form="popup" /></p>
+          <p>Which graph shows <m>y = x^5</m>?</p>
+          <p>Answer:  Graph <var name="$posOdd" form="popup" /></p>
+          <p>Which graph shows <m>y = -x^2</m>?</p>
+          <p>Answer:  Graph <var name="$negEven" form="popup" /></p>
+          <p>Which graph shows <m>y = -x^3</m>?</p>
+          <p>Answer:  Graph <var name="$negOdd" form="popup" /></p>
+        </statement>
+
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+    <p>Next, we will expand our set of power functions to include <em>negative</em> integer exponents.</p>
+    <exercise>
+      <webwork xml:id="webwork-power-function-negative-exponents">
+        <setup>
+          <var name="$evenExponent">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{points upward on both sides}</member>
+              <member>\text{points in opposite directions}</member>
+            </set>
+          </var>
+          <var name="$oddExponent">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{points upward on both sides}</member>
+              <member correct="yes">\text{points in opposite directions}</member>
+            </set>
+          </var>
+          <var name="$commonPoints">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{(1,1)}</member>
+              <member>\text{(1,1) and (-1,1)}</member>
+            </set>
+          </var>
+          <pg-code>
+            $evenExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],'points upward on both sides');
+            $oddExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],'points in opposite directions');
+            $commonPoints=PopUp(["?",'(1,1)','(1,1) and (-1,1)'],'(1,1)');
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graph below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a negative integer. Use the slider to change the exponent <m>n</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PAjZ6WxB/width/417/height/349/border/888888" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Notice that the <em>x</em>-axis is a horizontal <term>asymptote</term>, and the <em>y</em>-axis is a vertical <term>asymptote</term>.</p>
+          <p>Observe the general <em>shapes</em> of these functions. How would you describe the following types of power functions?</p>
+          <p>Complete each statement below with the best option.</p>
+          <ul>
+            <li>If the exponent is an <em>even</em> negative number, then near the vertical asymptote, the graph:
+            <p><var name="$evenExponent" form="popup" /></p></li>
+            <li>If the exponent is an <em>odd</em> negative number, then near the verical asymptote, the graph:
+            <p><var name="$oddExponent" form="popup" /></p></li>
+            <li>All of these power functions pass through the point(s):
+            <p><var name="$commonPoints" form="popup" /></p></li>
+          </ul>
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+          <p>If <m>n</m> is an even negative integer, then the graph of <m>y = x^n</m> will point upward on both sides of the vertical asymptote.</p>
+          <p>If <m>n</m> is an odd negative integer, then the graph of <m>y = x^n</m> will point in opposite directions (up/down) on the sides of the vertical asymptote.</p>
+          <p>All of these functions will contain the point <m>(1,1)</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
+    <p>Use your observations to identify the function in the next exercise.</p>
+    <exercise>
+      <webwork xml:id="webwork-power-function-with-even-negative-exponent">
+        <setup>
+          <var name="$formula">
+            <set>
+              <member>f(x) = x^4</member>
+              <member>f(x) = x^3</member>
+              <member correct="yes">f(x) = x^{-4}</member>
+              <member>f(x) = x^{-3}</member>
+              <member>\text{None of these}</member>
+            </set>
+          </var>
+          <pg-code>
+            $formula=RadioButtons(
+                ["\(f(x) = x^4\)","\(f(x) = x^3\)","\(f(x) = x^{-4}\)", "\(f(x) = x^{-3}\)","None of these."],
+                2, labels => ["x^4","x^3","x^{-4}","x^{-3}","None of these"],
+                displayLabels => 0
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graph below shows a power function.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QZC79zzV/width/417/height/349/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>What is a possible formula for this function?</p>
+          <p><var name="$formula" form="buttons" /></p>
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+          <p>The only possibility given is <var name="$formula" />.</p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <p>Again, remember the function transformation for reflecting over the <em>x</em>-axis. Use this in the next exercise.</p>
+
+    <exercise>
+      <webwork xml:id="webwork-power-function-flipped-negexp">
+        <setup>
+          <var name="$posEven">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{A}</member>
+              <member correct="yes">\text{B}</member>
+              <member>\text{C}</member>
+              <member>\text{D}</member>
+            </set>
+          </var>
+          <var name="$posOdd">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{A}</member>
+              <member>\text{B}</member>
+              <member correct="yes">\text{C}</member>
+              <member>\text{D}</member>
+            </set>
+          </var>
+          <var name="$negEven">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{A}</member>
+              <member>\text{B}</member>
+              <member>\text{C}</member>
+              <member>\text{D}</member>
+            </set>
+          </var>
+          <var name="$negOdd">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{A}</member>
+              <member>\text{B}</member>
+              <member>\text{C}</member>
+              <member correct="yes">\text{D}</member>
+            </set>
+          </var>
+
+          <pg-code>
+            $posEven=PopUp(["?","A","B","C","D"],"B");
+            $posOdd=PopUp(["?","A","B","C","D"],"C");
+            $negEven=PopUp(["?","A","B","C","D"],"A");
+            $negOdd=PopUp(["?","A","B","C","D"],"D");
+          </pg-code>
+        </setup>
+
+        <statement>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/B5uBvHQg/width/231/height/184/border/888888" width="231px" height="184px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/HmeJbAbg/width/231/height/184/border/888888" width="231px" height="184px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/k7vnqkZd/width/231/height/184/border/888888" width="231px" height="184px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/c6kSw98S/width/231/height/184/border/888888" width="231px" height="184px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+          <p>The graphs show the following functions:<md>
+            <mrow>y = -x^{-2}</mrow>
+            <mrow>y = x^{-4}</mrow>
+            <mrow>y = x^{-1}</mrow>
+            <mrow>y = -x^{-3}</mrow>
+          </md></p>
+          <p>Use the letters <em>A</em> through <em>D</em> to answer the following questions.</p>
+          <p>Which graph shows <m>y = -x^{-2}</m>?</p>
+          <p>Answer:  Graph <var name="$posEven" form="popup" /></p>
+          <p>Which graph shows <m>y = x^{-4}</m>?</p>
+          <p>Answer:  Graph <var name="$posOdd" form="popup" /></p>
+          <p>Which graph shows <m>y = x^{-1}</m>?</p>
+          <p>Answer:  Graph <var name="$negEven" form="popup" /></p>
+          <p>Which graph shows <m>y = -x^{-3}</m>?</p>
+          <p>Answer:  Graph <var name="$negOdd" form="popup" /></p>
+        </statement>
+
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
+    <p>We now explore the graphs of power functions which have fractional exponents of the form <m>\frac{1}{n}</m>.</p>
+    <p>In this case we will look first at the case where the exponent is positive.</p>
+
+    <exercise>
+      <webwork xml:id="webwork-power-function-positive-fraction">
+        <setup>
+          <var name="$evenExponent">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{all real numbers}</member>
+              <member correct="yes">\text{x greater than or equal to 0}</member>
+            </set>
+          </var>
+          <var name="$oddExponent">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{all real numbers}</member>
+              <member>\text{x greater than or equal to 0}</member>
+            </set>
+          </var>
+          <var name="$commonPoints">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{(-1,-1) and (0,0)}</member>
+              <member correct="yes">\text{(0,0) and (1,1)}</member>
+            </set>
+          </var>
+
+          <pg-code>
+            $evenExponent=PopUp(["?",'all real numbers',"x greater than or equal to 0"],"x greater than or equal to 0");
+            $oddExponent=PopUp(["?",'all real numbers',"x greater than or equal to 0"],'all real numbers');
+            $commonPoints=PopUp(["?",'(-1,-1) and (0,0)','(0,0) and (1,1)'],'(0,0) and (1,1)');
+
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graph below shows a power function of the form <m>f(x) = x^{1/n}</m>, where <m>n</m> is a positive integer. Use the slider to change the value of <m>n</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PGyGRyHg/width/417/height/349/border/888888" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Power functions of this type also have similar overall <em>shapes</em>, depending on the denominator in the exponent. Complete the following statements about the shapes of the power functions in this exercise.</p>
+          <ul>
+            <li>If the exponent is <m>1</m> over an <em>even</em> positive number, then the domain is:
+            <p><var name="$evenExponent" form="popup" /></p></li>
+            <li>If the exponent is <m>1</m> over an <em>odd</em> positive number, then the domain is:
+            <p><var name="$oddExponent" form="popup" /></p></li>
+            <li>All of these power functions pass through the point(s):
+            <p><var name="$commonPoints" form="popup" /></p></li>
+          </ul>
+        </statement>
+      </webwork>
+    </exercise>
+
   </introduction>
 
 </section>
