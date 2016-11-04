@@ -78,9 +78,6 @@
 
   <exercise>
     <webwork xml:id="webwork-inverse-evaluation">
-      <pg-macros>
-        <macro-file>PGchoicemacros.pl</macro-file>
-      </pg-macros>
       <setup>
         <var name="$x[0]"><static>7</static></var>
         <var name="$x[1]"><static>3</static></var>
@@ -187,9 +184,6 @@
 <todo> Make this a scaffolded problem, google .webwork scaffold use student answer from part. for help </todo>
   <exercise>
     <webwork xml:id="webwork-inverse-composition">
-      <pg-macros>
-        <macro-file>PGchoicemacros.pl</macro-file>
-      </pg-macros>
       <setup>
         <var name="$x[0]"><static>2</static></var>
         <var name="$x[1]"><static>1</static></var>
@@ -275,14 +269,12 @@
       <setup>
         <var name="$interpretG">
           <set>
-            <member>\text{?}</member>
             <member correct="yes">G(160) = 2900</member>
             <member>G(2900) = 160</member>
           </set>
         </var>
         <var>
           <set>
-            <member>\text{?}</member>
             <member>G^{-1}(90) = 1500</member>
             <member correct="yes">G^{-1}(1500) = 90</member>
           </set>
@@ -291,13 +283,13 @@
         <pg-code>
           Context('Numeric');
           $interpretG=RadioButtons(
-              ["?","\(G(2900) = 160\)", "\(G(160) = 2900\)"],
-              2, labels => ["G(2900) = 160","G(160) = 2900"],
+              ["\(G(2900) = 160\)", "\(G(160) = 2900\)"],
+              1, labels => ["G(2900) = 160","G(160) = 2900"],
               displayLabels => 0
           );
           $interpretGInverse=RadioButtons(
-              ["?","\(G^{-1}(1500) = 90\)", "\(G^{-1}(90) = 1500\)"],
-              1, labels => ["G^{-1}(1500) = 90","G^{-1}(90) = 1500"],
+              ["\(G^{-1}(1500) = 90\)", "\(G^{-1}(90) = 1500\)"],
+              0, labels => ["G^{-1}(1500) = 90","G^{-1}(90) = 1500"],
               displayLabels => 0
           );
 
@@ -691,6 +683,7 @@
     </exercise>
 
 <p>This has implications for the graph of a function <m>f</m>. Given a graph of a function, we should be able to quickly decide if it is invertible or non-invertible.</p>
+<todo>Need to make non-invertible graph in the next exercise</todo>
 <exercise>
   <webwork xml:id="webwork-horizontal-line-test">
     <setup>

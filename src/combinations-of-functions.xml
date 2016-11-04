@@ -137,7 +137,9 @@
               <p>Write a formula for the unit cost, <m>C(x)</m>, of each item when the customer orders <m>x</m> of the items.</p>
               <p><m>C(x) = </m><var name="$itemCost" width="15" /></p>
             </statement>
-
+            <hint>
+              <p>This is a linear function. When the input is <m>1</m>, the cost is <m>24</m>, and when the input increases by <m>1</m>, the output decreases by <m>0.25</m>.</p>
+            </hint>
             <solution>
               <p>The cost function is:  <m>C(x) = </m><var name="$itemCost" /></p>
             </solution>
@@ -168,6 +170,7 @@
               <ol>
                 <li><p>The cost for <var name="$x" /> items would be <var name="$itemCost" /> $/item </p></li>
                 <li><p>They would pay a total of (<var name="$x" /> items)<m> * (</m><var name="$itemCost" /> $/item) <m>= $ </m> <var name="$totalCost" /></p></li>
+                <li><p>This is exactly the value: <m>T(<var name="$x" />) = <var name="$totalCost" /></m></p></li>
               </ol>
             </solution>
           </webwork>
@@ -198,7 +201,10 @@
               <p>Finally, we combine these to make the total cost function, <m>T(x)</m>:</p>
               <p><m>T(x) = C(x)*Q(x) = </m><var name="$totalCost" width="15" /></p>
             </statement>
-
+            <hint>
+              <p>The function <m>Q(x)</m> is supposed to find the quantity being purchased. However, you should remember that the input for the function, <m>x</m>, is also the quantity being purchased.</p>
+              <p>So, the input and output for the function are both equal.</p>
+            </hint>
             <solution>
               <ol>
                 <li><p>The unit cost function is:  <m>C(x) = </m><var name="$unitCost" /></p></li>

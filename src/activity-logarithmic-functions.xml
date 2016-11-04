@@ -265,7 +265,7 @@
             </webwork>
         </exercise>
 
-        <p>Notice that for each ordered pair, we could say <q><m>10</m> raised to the (input) power is (output)</q>. For instance, <m>10</m> raised to the <m>-1</m> power is <m>0.1</m>.</p> 
+        <p>Notice that for each ordered pair, we could say <q><m>10</m> raised to the (input) power is (output)</q>. For instance, <m>10</m> raised to the <m>-1</m> power is <m>0.1</m>.</p>
 
         <p>In the following, our goal is to find the power of <m>10</m> that equals <m>36</m>. In other words, to solve the equation <m>10^x=36</m>. First we'll try a table-based approach.</p>
 
@@ -349,8 +349,8 @@
                         </tabular>
                     </table>
                     <p><m>y=<var name="$b"/></m> is between what two outputs in the table?</p>
-                    <p><m><var name="$b"/></m> is between <var name="$low" width="15"/> and <var name="$high" width="15" />.</p> 
-                    <p>Therefore, <m>x</m> must be between <var name="$lowx" width="15"/> and <var name="$highx" width="15" />.</p> 
+                    <p><m><var name="$b"/></m> is between <var name="$low" width="15"/> and <var name="$high" width="15" />.</p>
+                    <p>Therefore, <m>x</m> must be between <var name="$lowx" width="15"/> and <var name="$highx" width="15" />.</p>
                 </statement>
             </webwork>
         </exercise>
@@ -452,9 +452,6 @@
 
         <exercise>
             <webwork seed="1">
-                <pg-macros>
-                    <macro-file>PGchoicemacros.pl</macro-file>
-                </pg-macros>
                 <setup>
                     <var name="$b[0]">
                         <static>2</static>
@@ -511,9 +508,6 @@
 
         <exercise>
             <webwork seed="1">
-                <pg-macros>
-                    <macro-file>PGchoicemacros.pl</macro-file>
-                </pg-macros>
                 <setup>
                     <var name="$c[0]">
                         <static>23</static>
@@ -568,9 +562,6 @@
 
         <exercise>
             <webwork seed="1">
-                <pg-macros>
-                    <macro-file>PGchoicemacros.pl</macro-file>
-                </pg-macros>
                 <setup>
                     <var name="$b[0]">
                         <static>3</static>
@@ -611,9 +602,6 @@
         <p>In this portion of the activity we learn to estimate the value of a given logarithm expression.</p>
         <exercise>
             <webwork seed="1">
-                <pg-macros>
-                    <macro-file>PGchoicemacros.pl</macro-file>
-                </pg-macros>
                 <setup>
                     <var name="$c[0]">
                         <static>120</static>
@@ -769,9 +757,6 @@
 
         <exercise>
             <webwork seed="1">
-                <pg-macros>
-                    <macro-file>contextInequalitySetBuilder.pl</macro-file>
-                </pg-macros>
                 <setup>
                     <var name="$domain">
                         <static>(0,\infty)</static>
@@ -800,9 +785,6 @@
 
             <exercise>
                 <webwork seed="1">
-                    <pg-macros>
-                        <macro-file>bizarroArithmetic.pl</macro-file>
-                    </pg-macros>
                     <setup>
                         <var name="$b">
                             <static>2</static>
@@ -853,7 +835,7 @@
                                 Context()->flags->set(bizarroPow=>0);
                                 Value::Error("This is the right number, but right now you are being asked to write it in a certain exponential form.") unless $OK;
                                 return $OK;
-                            }); 
+                            });
                             Context("LimitedNumeric");
                             $bx=Real($b**$x);
                             $by=Real($b**$y);
@@ -867,8 +849,8 @@
                         <p><m><var name="$b" />^<var name="$x" />=</m><var name="$bx" width="10" /></p>
                         <p><m><var name="$b" />^<var name="$y" />=</m><var name="$by" width="10" /></p>
                         <p><m><var name="$b" />^<var name="$z" />=</m><var name="$bz" width="10" /></p>
-                        <p>and checking that the first two multiply to the third.</p> 
-                        
+                        <p>and checking that the first two multiply to the third.</p>
+
                     </statement>
                 </webwork>
             </exercise>
@@ -936,9 +918,6 @@
 
             <exercise>
                 <webwork>
-                    <pg-macros>
-                        <macro-file>contextLimitedRadical.pl</macro-file>
-                    </pg-macros>
                     <setup>
                         <var name="$answer">
                             <static>4\log(8)</static>

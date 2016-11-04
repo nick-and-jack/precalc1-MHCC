@@ -20,9 +20,6 @@
 
   <exercise>
     <webwork xml:id="combinations-first-example">
-      <pg-macros>
-          <macro-file>PGchoicemacros.pl</macro-file>
-      </pg-macros>
 
       <setup>
         <var name="$x"><static>7</static></var>
@@ -49,11 +46,11 @@
         <p>Remember that if <m>w(4) = 9</m>, then any time you see the expression <m>w(4)</m>, you can just rewrite it as the number <m>9</m>.</p>
         <p>Then, an expression such as <m>7 + w(4)</m> would just mean <m>7 + 9</m>, and the result would be <m>16</m>.</p>
         <p>Now suppose we have the following facts about functions <m>M</m> and <m>N</m>:</p>
-        <p><md><mrow>M(<var name="$x" />) = <var name="$M" /></mrow><mrow>N(<var name="$x" />) = <var name="$N" /></mrow></md></p>
+        <p><md><mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow><mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow></md></p>
         <p>If we define a new function <m>s(x) = M(x) + N(x)</m>, then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.</p>
         <p>Answer: <m>s(<var name="$x" />)</m> = <var name="$s" width="10" /></p>
         <p>Now, we could define many other functions which are combinations of <m>M</m> and <m>N</m>, such as:</p>
-        <p><md><mrow>d(x) = M(x) - N(x)</mrow><mrow>p(x) = M(x)*N(x)</mrow><mrow>q(x) = \frac{\displaystyle{M(x)}}{\displaystyle{N(x)}}</mrow></md></p>
+        <p><md><mrow>d(x) \amp= M(x) - N(x)</mrow><mrow>p(x) \amp= M(x)*N(x)</mrow><mrow>q(x) \amp= \frac{\displaystyle{M(x)}}{\displaystyle{N(x)}}</mrow></md></p>
         <p>Using these definitions, evaluate each of the following:</p>
         <ul>
           <li><p><m>d(</m><var name="$x" /><m>) = </m><var name="$d" width="10" /></p></li>
@@ -469,6 +466,9 @@
         </ul>
 
       </statement>
+      <hint>
+        <p>Remember that the functions <m>f(x)</m> and <m>g(x)</m> are linear, so begin by finding the slope and vertical intercept for each graph.</p>
+      </hint>
       <solution>
         <ul>
           <li><p><m>f(x) = </m><var name="$f" /></p></li>
@@ -488,13 +488,13 @@
     <webwork xml:id="graph-and-formula-of-f-minus-g">
       <setup>
         <var name="$hZero"><static>4.4</static></var>
-        <var name="$hPositive"><static>0\text[ or ]2.1</static></var>
-        <var name="$hMinimum"><static>7</static></var>
+        <var name="$hPositive"><static>0\text{ or }2.1</static></var>
+        <var name="$hNegative"><static>-2\text{ or }7</static></var>
 
         <pg-code>
           $hZero=Real(4.4);
           $hPositive=OneOf(0,2.1);
-          $hMinimum=Real(7);
+          $hNegative=OneOf(-2,7);
         </pg-code>
       </setup>
 
@@ -529,8 +529,8 @@
           <li><p>Choose an <m>x</m> value from the list so that <m>h(x)</m> has a positive output. Type your answer below.</p>
           <p><var name="$hPositive" width="10" /></p></li>
 
-          <li><p>Choose the <m>x</m> value from the list that gives <m>h</m> its minimum output.</p>
-          <p><var name="$hMinimum" width="10" /></p></li>
+          <li><p>Choose an <m>x</m> value from the list so that <m>h(x)</m> has a negative output. Type your answer below.</p>
+          <p><var name="$hNegative" width="10" /></p></li>
         </ul>
 
       </statement>
@@ -538,7 +538,7 @@
         <ol>
           <li><p><m>h(x) = 0</m> when <m>x = 4.4</m>, because that is where <m>f(x) = g(x)</m>.</p></li>
           <li><p>For <m>h(x)</m> to have a positive output, it must be true that <m>f(x) &gt; g(x)</m>. Among the options given, this is only true for <m>x = 0</m> and <m>x = 2.1</m>.</p></li>
-          <li><p><m>h(x)</m> will have its minimum output when <m>f(x)</m> and <m>g(x)</m> are far apart in value, and when <m>f(x) &lt; g(x)</m>. Among the options given, this happens when <m>x = 7</m></p></li>
+          <li><p><m>h(x)</m> will have negative outputs when <m>f(x) &lt; g(x)</m>. Among the options given, this happens when <m>x = -2</m> or <m>x = 7</m>.</p></li>
         </ol>
       </solution>
     </webwork>

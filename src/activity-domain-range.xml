@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- 
+<!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
 ## Jack Green, Nick Chura                                                ##
@@ -24,15 +24,12 @@
       <p>Likewise, the temperature outside is decreasing for times between 0 hours and 5 hours after midnight, then again for times between 17 hours and 24 hours after midnight. In math this sentence is written like this</p>
       <blockquote>T decreases for <m>0 \leqslant t \leqslant 5</m> and <m>17 \leqslant t \leqslant 24</m></blockquote>
       <p>Notice in each case our observations about temperature T were based on the <em>input</em> <m>t</m> that give us the desired results. The ouputs have certain properties on different sections of the input axis.</p>
-  
-      <p>In the execise below, practice writing inequalites to describe the shaded intervals on each number line.</p>  
+
+      <p>In the execise below, practice writing inequalites to describe the shaded intervals on each number line.</p>
              <exercise>
               <title>Review of Compound Inequalities</title>
                  <webwork>
-                   <pg-macros>
-                       <macro-file>contextInequalities.pl</macro-file>
-                   </pg-macros>
-   
+
                      <setup>
                          <var name="$answer1">
                            <static>-2&lt;x&lt;=1</static>
@@ -43,7 +40,7 @@
                          <var name="$answer3">
                              <static>x&lt;=-2orx&gt;=1</static>
                          </var>
-                         
+
                          <pg-code>
                              Context("Inequalities");
                              $answer1 = Compute("-2&lt;x&lt;=1");
@@ -51,7 +48,7 @@
                              $answer3 = Compute("x&lt;=-2orx&gt;=1");
                          </pg-code>
                    </setup>
-         
+
                    <statement>
                       <p>Remember that open circles mean <q>include</q> while closed circles mean <q>not include</q>.</p>
                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/XT6ddYvA/width/431/height/100/border/888888" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
@@ -65,14 +62,14 @@
                    </statement>
                  </webwork>
              </exercise>
-           
+
     </subsection>
 
     <subsection>
         <title>Function Characteristics</title>
           <p>There are many possible characteristics of a function. A function may be:</p>
            <p>
-             <ul> 
+             <ul>
               <p><li>Increasing (going up) or decreasing (going down) or neither.</li></p>
               <p><li>Concave up (curving upwards) or concave down (curving downwards) or neither.</li></p>
               <p><li>Positive (output values are greater than zero) or negative (output values are less than zero) or zero (output value is exactly zero).</li></p>
@@ -91,14 +88,14 @@
                       <var name="$Decreasing">
                           <static>10</static>
                       </var>
-                      
+
                       <pg-code>
                           $ConcDwn = Real(10);
                           $Negative = Real(10);
                           $Decreasing = Real(10);
                       </pg-code>
                 </setup>
-      
+
                 <statement>
                     <p>Use the sliders on the graph of <m>f(x)</m> to</p>
                       <p><ul>
@@ -106,7 +103,7 @@
                             <li><p>Change the interval on which the function is negative (below the horizontal axis). <m>f(x) \lt 0</m> if <m>b \gt</m> <var name="$Negative" width="5" /></p></li>
                             <li><p>Change the interval on which the function is decreasing (going down). <m>f(x)</m> is decreasing if <m>c \gt</m> <var name="$Decreasing" width="5" /></p></li>
                         </ul></p>
-                    
+
                 </statement>
               </webwork>
           </exercise>
@@ -116,10 +113,6 @@
           <exercise>
               <webwork>
 
-                <pg-macros>
-                    <macro-file>contextInequalities.pl</macro-file>
-                </pg-macros>
-                
                   <setup>
                       <var name="$answer1">
                         <static>-5&lt;=x&lt;0</static>
@@ -130,7 +123,7 @@
                       <var name="$answer3">
                           <static>1&lt;=x&lt;=4</static>
                       </var>
-                      
+
                       <pg-code>
                           Context("Inequalities");
                           $answer1 = Compute("-5&lt;=x&lt;0");
@@ -138,7 +131,7 @@
                           $answer3 = Compute("1&lt;=x&lt;=4");
                       </pg-code>
                 </setup>
-      
+
                 <statement>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aww8tpND/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>On what interval(s) is the function increasing? <var name="$answer1" width="5" /></p>
@@ -163,25 +156,25 @@
       <p>In this activity we observe the domain and range of a fucntion graphically then in tables and finally in formulas.</p>
 
       <p>checkout the graph of <m>f(x)</m> shown in the exercise below. Use the slider to adust the domain of the function and see how it affects the range.</p>
-  
+
           <exercise>
               <webwork>
                   <setup>
                       <var name="$variablename">
                           <static>10</static>
                       </var>
-                      
+
                       <pg-code>
                           $variablename = Real(10);
                       </pg-code>
                 </setup>
-      
+
                 <statement>
                     <todo>Insert graph that has adjustable domain, maybe highlight interval on x-axis while the range changes and is highlighted in a different color.  User identifies the domain and range of the graph.</todo>
 
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GaCY9FX2/width/458/height/313/border/888888/sri/true" width="458px" height="313px" style="border:0px;" width="458px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>Need to insert values on vertical and horizontal axes to properly identify the ends of the intervals.</p>
-      
+
                     <p><var name="$variablename" width="5" /></p>
                 </statement>
               </webwork>
