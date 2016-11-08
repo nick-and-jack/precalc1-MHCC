@@ -20,7 +20,7 @@
 
   <subsection>
     <title>Review of Percent Change</title>
-    <p>A <term>percent change</term> on a value means to change it by a fraction of itself.  When someone gets a <m>10 \%</m> raise in salary it means that their salary was divided into pieces <me>\frac{\displaystyle{10}}{\displaystyle{100}} = \frac{\displaystyle{1}}{\displaystyle{10}}</me> and one of those pieces was added onto their original salary.  Think of it like this</p>
+    <p>A <term>percent change</term> on a value means to change it by a fraction of itself.  When someone gets a <m>10 \%</m> raise in salary it means that their salary was divided into pieces. <m>10 \% means</m> <me>\frac{\displaystyle{10}}{\displaystyle{100}} = \frac{\displaystyle{1}}{\displaystyle{10}}</me> The increase means one of those pieces was added onto their original salary.  Think of it like this</p>
     <blockquote>
         <p>New Salary = Old Salary + <m>1/10</m> of Old Salary</p>
         <p>New Salary = Old Salary + <m>0.10</m> of Old Salary</p>
@@ -35,9 +35,17 @@
             <mrow>N \amp= 1.1s</mrow>
         </md>
     <p>We are now able to think of a <m>10 \%</m> increase as a multiple of <m>1.1</m>  where the <m>1</m> represents the <m>100 \%</m> you already had and the <m>0.1</m> represents the <m>10 \%</m> increase.</p>
-    <p>In the equation <m>N = 1.1s</m> the number <m>1.1</m> is called the <term>growth factor</term> and is usually denoted with letter <m>b</m>.</p>
-    <p>In this example multiplying s by growth factor of 1.1 makes s bigger by <m>10 \%</m></p>
-    <p>Whenever a percent value is given we must turn that value into its <term>decimal equivlent</term> so we can use it.  The value <m>10 \%</m> has a decimal equivalent of <m>\frac{\displaystyle{10}}{\displaystyle{100}} = 0.1</m>.</p>
+    <p>In the equation <me>N = 1.1s</me> the number <m>1.1</m> is called the <term>growth factor</term> and is usually denoted with letter <m>b</m>.</p>
+    <p>In this example multiplying <m>s</m> by the growth factor of 1.1 makes <m>s</m> bigger by <m>10 \%</m></p>
+    <p>Whenever a percent value is given we must turn that value into its <term>decimal equivlent</term> so we can use it.</p>
+    <p>For example the percent values <m>0.05 \%, 0.5 \%, 5 \%</m> and <m>50 \%</m> have decimal equivalents of</p>
+    <md>
+        <mrow>\frac{\displaystyle{0.05}}{\displaystyle{100}} \amp= 0.0005</mrow>
+        <mrow>\frac{\displaystyle{0.5}}{\displaystyle{100}} \amp= 0.005</mrow>
+        <mrow>\frac{\displaystyle{5}}{\displaystyle{100}} \amp= 0.05</mrow>
+        <mrow>\frac{\displaystyle{50}}{\displaystyle{100}} \amp= 0.5</mrow>
+    </md>
+    <p>respectively.</p>
     <p>In fact, the decimal equivalent of any percent value is that value divided by 100.</p>
     <me>
         r = \frac{\displaystyle{\text{Pecent Value}}}{\displaystyle{100}}
@@ -45,9 +53,9 @@
     <p>A percent increase means to multiply the original value by <m>b = 1 + r</m> where <m>r</m> is the decimal equivalent of the given percent.</p>
     <p>In our salary example <m>r = 0.1</m> so we multiplied by <m>b = 1 + 0.1 = 1.1</m> to get the <m>10 \%</m> increase.</p>
     
-    <p>In general, for exponential growth the <term>growth factor</term> is defined as</p>
+    <p>In general, for percent growth the <term>growth factor</term> is defined as</p>
     <me>b = 1 + r</me>
-    <p>Notice that the growth factor is greater than 1 for exponential growth.</p>
+    <p>Notice that the growth factor is greater than 1 for percent growth to occur.</p>
         <exercise>
             <webwork>
                 <setup>
@@ -102,7 +110,7 @@
                 </setup>
 
                 <statement>
-                    <p>Price of milk last year at a local grocery store was <m>\$</m>3.43 per gallon.  Today the price of milk is higher by <m>7.5 \%</m>, what is the price of milk today? Round your answer to the nearest penny.</p>
+                    <p>Price of milk last year at a local grocery store was <m>\$</m>3.43 per gallon.  Today the price of milk is <m>7.5 \%</m> higher. What is the new price of milk? Round your answer to the nearest penny.</p>
                     <p>Here's how:</p>
                     <p>In order to get a percent increase on the price of milk we must multiply by a growth factor greater than one.  In math we say, <m>b \gt 1</m>.</p>
                     <p>What is the growth factor for a <m>7.5 \%</m> increase?</p>
@@ -211,15 +219,14 @@
     <p>Something to consider about a percent decrease is, <q>How much can we decrease?</q> Let's think about that for a moment.</p>
     <p>If you have 10 apples, you can eat <m>50 \%</m> of them, that's half the apples.  You can eat <m>75 \%</m> of them, that's <m>7 \frac{1}{2}</m> apples.  You can even eat all the apples, that's <m>100 \%</m> of the apples!</p>
     <p>But, can you eat more than all the apples you have?  If you only have <m>10</m> apples, you cannot eat more than <m>10</m> apples, you cannot decrease by more than <m>100 \%</m> of what you have.</p>
-    <p>Therefore when it comes to a percent loss, the growth factor is less than <m>1</m> for sure, but it cannot be less than <m>0</m>. Furthermore, since muliplying by zero is zero, it makes the <q>growth</q> very uninetesting.  From now on a growth factor is always strictly greater than zero.  The only choices are to be greater than <m>1</m> or between <m>0</m> and <m>1</m></p>
+    <p>Therefore when it comes to a percent loss, the growth factor is less than <m>1</m> for sure, but it cannot be less than <m>0</m>.</p><p>Furthermore, since muliplying by zero is zero, it makes the <q>growth</q> very uninetesting.  From now on a growth factor is always strictly greater than zero.  The only choices are to be greater than <m>1</m> or between <m>0</m> and <m>1</m></p>
     <p>In math we say percent growth means <m>b \gt 1</m> and percent decay is <m>0 \lt b \lt 1</m></p>
   </subsection>
 
   <subsection>
     <title>Constant Percent Change</title>
-    <p>We now know in order to change a value by a percent, we need to multiply.</p>
-    <p>If we multiply by a factor between <m>0</m> and <m>1</m> we get a percent decrease while if we multiply by a factor greater than 1 we get a percent increase.</p>
-    <p>By the way, what happens when you multiply by a factor of <m>1</m>? [Hint: nothing which is also uninteresting, so we don't include it as a possible growth factor.]</p>
+    <p>We now know in order to change a value by a percent, we need to multiply that value by a growth factor <m>b \gt 1</m> (increase by a percent) or <m>0 \lt b \lt 1</m> (decrease by a percent).</p>
+    <p>By the way, what happens when you multiply by a factor of <m>1</m>? [Hint: Nothing happens, which is also very uninteresting. So we don't include <m>b = 1</m> as a possible growth factor.]</p>
     <p>In the exercises below, find the percent change in the given expression.</p>
         <exercise>
             <webwork>
@@ -277,6 +284,7 @@
         <p>Using the fact that a percent change is a multiplication we can take any two values and find the percent change between them.</p>
         <p>To decrease a value by a pecent we multiply by a growth factor <m>b = 1 - r</m>.</p>
         <p>To increase a value by a percent we multiply by a growth factor <m>b = 1 + r</m>.</p>
+        <p>In each case <m>r</m> is the decimal equivalent of some percent value.</p>
         <exercise>
             <webwork>
                 <setup>
@@ -294,9 +302,10 @@
 
                 <statement>
                     <p>A population increases from 3,000 to 10,000. What is the percent increase in the population?</p>
-                    <p>First we should write the English sentence as a <q>math</q> sentence.</p>
+                    <p>Notice we are seeking a percent change, therefore we the question is actually <q>What do you multiply by to get from <m>3,000</m> to <m>10,000</m>?</q></p>
+                    <p>In other words, we set it up as an algebra problem in which we need to solve for the growth factor.</p>
                     <me>3,000 * b = 10,000</me>
-                    <p>We know we start with <m>3,000</m> and we must multiply by something because it's a percent change. What do we multiply by to get our answer? Round your answer to <m>2</m> decimal places.</p>
+                    <p>What is the growth factor? Round your answer to <m>2</m> decimal places.</p>
                     <p><m>b = </m><var name="$b" width="5" /></p>
                     <p>Since <m>b</m> is a value greater than <m>1</m> we have</p>
                     <me>b = 1 + r</me>
@@ -328,9 +337,10 @@
 
                 <statement>
                     <p>A population decreases from 10,000 to 3,000. What is the percent decrease in the population?</p>
-                    <p>First we should write the English sentence as a <q>math</q> sentence.</p>
+                    <p>Notice we are seeking a percent change, therefore we the question is actually <q>What do you multiply by to get from <m>10,000</m> to <m>3,000</m>?</q></p>
+                    <p>In other words, we set it up as an algebra problem in which we need to solve for the growth factor.</p>
                     <me>10,000 * b = 3,000</me>
-                    <p>We know we start with <m>10,000</m> and we must multiply by something because it's a percent change. What do we multiply by to get our answer? Round your answer to <m>2</m> decimal places.</p>
+                    <p>What is the growth factor? Round your answer to <m>2</m> decimal places.</p>
                     <p><m>b = </m><var name="$b" width="5" /></p>
                     <p>Since <m>b</m> is a value less than <m>1</m> we have</p>
                     <me>b = 1 - r</me>
@@ -346,7 +356,91 @@
         </exercise>
   </subsection>
   <subsection>
-    <title>Discrete Percent Compounding (Repeated Multiplication)</title>
+    <title>Discrete Exponential Growth (Repeated Multiplication)</title>
+        <p>In the following exercises we explore two different patterns, one of which should be extremely familiar.</p>
+        <todo>Make an exercise in which student makes two tables of values: one linear the other exponential. Then plots the ordered pairs on a graph.  When the points are plotted a linear graph and an exponential graph appear.  Student is asked when each ant will reach the wall to bring up the topic of horizontal asymptotes for exponential functions.</todo>
+        <!-- <exercise>
+            <webwork>
+                <setup>
+                <var name="$a"><static>400</static></var>
+
+                <var name="$x[0]"><static>0</static></var>
+                <var name="$x[1]"><static>1</static></var>
+                <var name="$x[2]"><static>2</static></var>
+                <var name="$x[3]"><static>3</static></var>
+                <var name="$x[4]"><static>5</static></var>
+                <var name="$x[5]"><static>8</static></var>
+                
+
+                <var name="$y[0]"><static>400</static></var>
+                <var name="$y[1]"><static>350</static></var>
+                <var name="$y[2]"><static>300</static></var>
+                <var name="$y[3]"><static>250</static></var>
+                <var name="$y[4]"><static>150</static></var>
+                <var name="$y[5]"><static>0</static></var>
+
+                <var name="$f[0]"><static>350</static></var>
+                <var name="$f[1]"><static>374.50</static></var>
+                <var name="$f[2]"><static>400.72</static></var>
+                <var name="$f[3]"><static>428.77</static></var>
+                <var name="$f[4]"><static>458.78</static></var>
+                <var name="$f[5]"><static>1354.4</static></var>
+                <var name="$f[6]"><static>\text{t}</static></var>
+
+                <pg-code>
+                  Context()->variables->are(t=>'Real');
+                  $a=Real(400);
+                  @x=(0,1,2,3,5,8,Formula("t"));
+                
+                </pg-code>
+                </setup>
+        
+                <statement>
+                    <p>Two ants are standing next to each other, facing a wall that is <m>400</m> inches away.  Ant1 agrees to walk towards the wall at a pace of <m>50</m> inches per hour.  Ant2 agrees to walk towards the wall at a pace of <m>50 \%</m> of his distance each hour.</p>
+                    <p>Complete the tables for Ant1 and Ant2 to track the distance each ant covers each hour.  Then plot your points on the given graph.</p>
+                    <p>Ant1</p>
+                    <table>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row>
+                                <cell>Time (hours)</cell>
+                                <cell>Distance from Wall (inches)</cell>
+                            </row>
+                            <row>
+                                <cell><m>0</m></cell>
+                                <cell><m>400</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>1</m></cell>
+                                <cell><m>350</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>2</m></cell>
+                                <cell><m>200</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>3</m></cell>
+                                <cell><m>100</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>50</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>8</m></cell>
+                                <cell><m>0</m></cell>
+                            </row>
+                        </tabular>
+                    </table>
+                    <var name="$dist1" width="5" />
+                </statement>
+                
+                <solution>
+                    <var name="$dist1" />
+                </solution>
+            </webwork>
+        </exercise> -->
         <p>Consider an initial value, a number we start with that could be anything.  Let's call it <m>A</m> for <q>anything</q>.</p>
         <p>To increase <m>A</m> by <m>30 \%</m> we need to multiply by a growth factor greater than <m>1</m>.</p>
         <exercise>
@@ -554,6 +648,12 @@
         </exercise>
 
         <p>In the exercises that follow, use the tables to record <em>how</em> you get each result.  Don't write the actual result, you'll just be wasting your time.</p>
+        
+        <todo>The following exercise has to be fixed.  Getting message Unable to decode problem text
+        Error message for command: renderProblem
+        faultcode: Server
+        faultstring: Can't locate object method "context" via package "390*1.08*1.08*1.08" (perhaps you forgot to load "390*1.08*1.08*1.08"?) at /opt/webwork/pg/lib/AnswerHash.pm line 259.
+        End error message</todo>
 
         <exercise>
             <webwork>
@@ -567,27 +667,26 @@
                 <var name="$x[1]"><static>1</static></var>
                 <var name="$x[2]"><static>2</static></var>
                 <var name="$x[3]"><static>3</static></var>
-                <var name="$x[5]"><static>4</static></var>
-                <var name="$x[6]"><static>20</static></var>
+                <var name="$x[4]"><static>4</static></var>
+                <var name="$x[5]"><static>20</static></var>
                 <var name="$x[6]"><static>7</static></var>
-
-                <var name="$y[0]"><static>350</static></var>
-                <var name="$y[1]"><static>374.50</static></var>
-                <var name="$y[2]"><static>400.72</static></var>
-                <var name="$y[3]"><static>428.77</static></var>
-                <var name="$y[4]"><static>458.78</static></var>
-                <var name="$y[5]"><static>1355.4</static></var>
-                <var name="$y[6]"><static>7</static></var>
-
-                <var name="$f[0]"><static>350</static></var>
-                <var name="$f[1]"><static>374.50</static></var>
-                <var name="$f[2]"><static>400.72</static></var>
-                <var name="$f[3]"><static>428.77</static></var>
 
                 <var name="$y[0]"><static>\text{350}</static></var>
                 <var name="$y[1]"><static>\text{350}\cdot\text{1.07}</static></var>
                 <var name="$y[2]"><static>\text{350}\cdot\text{1.07}\cdot\text{1.07}</static></var>
                 <var name="$y[3]"><static>\text{350}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}</static></var>
+                <var name="$y[4]"><static>\text{350}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}</static></var>
+                <var name="$y[5]"><static>\text{350}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}</static></var>
+                <var name="$y[6]"><static>\text{350}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}\cdot\text{1.07}</static></var>
+
+                <var name="$f[0]"><static>350</static></var>
+                <var name="$f[1]"><static>374.50</static></var>
+                <var name="$f[2]"><static>400.72</static></var>
+                <var name="$f[3]"><static>428.77</static></var>
+                <var name="$f[4]"><static>458.78</static></var>
+                <var name="$f[5]"><static>1354.4</static></var>
+                <var name="$f[6]"><static>\text{t}</static></var>
+
                 <pg-code>
                   Context()->variables->are(t=>'Real');
                   $a=random(200,400,10);
@@ -616,15 +715,15 @@
 
                         for my$i(3..6){$ev[$i]=$y[$i]->cmp(
                checker=>sub{
-                  my ( $correct, $student, $ansHash ) = @_;
-                  return 0 if $ansHash->{isPreview} || $correct != $student;
-                  $student = $ansHash->{student_formula};
-                  $correct = $correct->{original_formula} if defined $correct->{original_formula};
-                  $student = Formula("$student"); $correct = Formula("$correct");
-                  return 0 unless ($correct == $student);
+                  my ( $c, $s, $ansHash ) = @_;
+                  return 0 if $ansHash->{isPreview} || $c != $s;
+                  $s = $ansHash->{student_formula};
+                  $c = $c->{original_formula} if defined $c->{original_formula};
+                  $s = Formula("$s"); $c = Formula("$c");
+                  return 0 unless ($c == $s);
                   Context()->flags->set(bizarroMul=>1,bizarroPow=>1);
-                  delete $correct->{test_values}, $student->{test_values};
-                  Value->Error("Your answer is correct, but write it out to see the pattern forming.") unless (($correct == $student) or ($student == $correct));
+                  delete $c->{test_values}, $s->{test_values};
+                  Value->Error("Your answer is correct, but write it out to see the pattern forming.") unless (($c == $s) or ($s == $c));
                   Context()->flags->set(bizarroMul=>0,bizarroPow=>0);
                   return 1;
             });}
@@ -640,128 +739,88 @@
                         <tabular top="major" halign="center">
                           <col halign="left" />
                           <col halign="left" />
-
                           <row bottom="medium">
                             <cell><m>t</m>, Hours that pass</cell>
                             <cell><m>P(t)</m> Population at end of each hour</cell>
                           </row>
-
-                          <row><cell colspan="2">Initially (no time has passed) <m>t = 0</m></cell></row>
-
-                          <row>
-                            <cell colspan="2">But for each hour that passes, we multiply by the the growth factor.</cell>
-                          </row>
-
-                          <row>
-                            <cell colspan="2">This gives us the percent change at the end of each hour <m>t = 1, 2</m> etc.</cell>
-                          </row>
-
+                          <cell>
+                              <line>For each hour that passes, we multiply by the growth factor.</line>
+                              <line>This gives us the percent change at the end of each hour <m>t = 1, 2</m> etc.</line>
+                          </cell>
                           <row>
                             <cell><m><var name="$x[0]" /></m></cell>
                             <cell><m><var name="$y[0]" /></m></cell>
                           </row>
-
                           <row>
                             <cell><m><var name="$x[1]" /></m></cell>
                             <cell><m><var name="$y[1]" /></m></cell>
                           </row>
-
                           <row>
                             <cell><m><var name="$x[2]" /></m></cell>
                             <cell><m><var name="$y[2]" /></m></cell>
                           </row>
-
-                          <row>
-                            <cell colspan="2">Write out, in detail, the results of the next two hours.</cell>
-                          </row>
-
+                          <cell>
+                              <line>Write out, in expanded form, the results of the next two hours.</line>
+                          </cell>
                           <row>
                             <cell><var name="$x[3]" width="2" /></cell>
                             <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
                           </row>
-
                           <row>
                             <cell><var name="$x[4]" width="2" /></cell>
                             <cell><var name="$y[4]" width="20" evaluator="$ev[4]"/></cell>
                           </row>
-
-                          <row>
-                            <cell colspan="2">Notice there is a pattern emerging.</cell>
-                          </row>
-                          <row>
-                            <cell colspan="2">Every time an hour passes there is another multple of <m><var name="$b" /></m></cell>
-                          </row>
-                          <row>
-                            <cell colspan="2">but the value <m><var name="$a" /></m> is always the same.</cell>
-                          </row>
-                          <row>
-                            <cell colspan="2">Instead of writing <m><var name="$b" /></m> over and over</cell>
-                          </row>
-                          <row>
-                            <cell colspan="2">use exponents to <q>count</q> how many times the percent has been increased.</cell>
-                          </row>
-
-
-                          <row>
-                            <cell colspan="2">What is the input on the left after 20 hours?</cell>
-                          </row>
-
-                          <row>
-                            <cell colspan="2">What would the calculation be on the right?</cell>
-                          </row>
-
+                          <cell>
+                              <line>Notice there is a pattern emerging.</line>
+                              <line>Every time an hour passes there is another multiple of </line>
+                              <line>but the value <m><var name="$a" /></m> is always the same.</line>
+                              <line>Instead of writing <m><var name="$b" /></m> over and over</line>
+                              <line>use exponents to <q>count</q> how many times the percent has been compounded.</line>
+                              <line>What is the input on the left after 20 hours?</line>
+                              <line>What is the calculation on the right?</line>
+                          </cell>
                           <row>
                             <cell><var name="$x[5]" width="2" /></cell>
                             <cell><var name="$y[5]" width="20" evaluator="$ev[5]"/></cell>
                           </row>
-
-                          <row>
-                            <cell colspan="2">Assume the time input is <m>t</m> on the left.</cell>
-                          </row>
-
-                          <row>
-                            <cell colspan="2">What is would the calculation be on the right?</cell>
-                          </row>
-
+                          <cell>
+                              <line>Assume the time input is <m>t</m> on the left.</line>
+                              <line>What is the calculation on the right?</line>
+                          </cell>
                           <row>
                             <cell><var name="$x[6]" width="2" /></cell>
                             <cell><var name="$y[6]" width="20" evaluator="$ev[6]"/></cell>
                           </row>
-
-                          <row>
-                            <cell colspan="2">This is your formula to calculate the population at any time!</cell>
-                          </row>
+                          <cell>
+                              <line>This is your formula to calculate the population at any time!</line>
+                          </cell>
                         </tabular>
                     <tabular top="major" halign="center">
                       <col halign="left" />
                       <col halign="left" />
-
                       <row bottom="medium">
                         <cell><m>t</m>, Hours that pass</cell>
                         <cell><m>P(t)</m> Population at end of each hour</cell>
                       </row>
-
-                      <row><cell colspan="2">Initially (no time has passed) <m>t = 0</m></cell></row>
+                      <cell>
+                          <line>Initially <m>t = 0</m> (no time has passed.</line>
+                      </cell>
                       <row>
                         <cell><m><var name="$x[0]" /></m></cell>
                         <cell><m><var name="$y[0]" /></m></cell>
                       </row>
-
                       <row>
                         <cell><m><var name="$x[1]" /></m></cell>
                         <cell><m><var name="$y[1]" /></m></cell>
                       </row>
-
                       <row>
                         <cell><m><var name="$x[2]" /></m></cell>
                         <cell><m><var name="$y[2]" /></m></cell>
                       </row>
-
                       <row>
                         <cell><var name="$x[3]" width="4" /></cell>
                         <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
                       </row>
-
                     </tabular>
                   </table></li>
                 </ul>
