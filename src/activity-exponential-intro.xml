@@ -35,13 +35,17 @@
             <mrow>N \amp= 1.1s</mrow>
         </md>
     <p>We are now able to think of a <m>10 \%</m> increase as a multiple of <m>1.1</m>  where the <m>1</m> represents the <m>100 \%</m> you already had and the <m>0.1</m> represents the <m>10 \%</m> increase.</p>
-    <p>When a percent value is given we must turn that value into its <term>decimal equivlent</term> so we can use it.  The value <m>10 \%</m> has a decimal equivalent of <m>\frac{\displaystyle{10}}{\displaystyle{100}} = 0.1</m>.  In fact, the decimal equivalent of any percent value is that value divided by 100.</p>
+    <p>In the equation <m>N = 1.1s</m> the number <m>1.1</m> is called the <term>growth factor</term> and is usually denoted with letter <m>b</m>.</p>
+    <p>In this example multiplying s by growth factor of 1.1 makes s bigger by <m>10 \%</m></p>
+    <p>Whenever a percent value is given we must turn that value into its <term>decimal equivlent</term> so we can use it.  The value <m>10 \%</m> has a decimal equivalent of <m>\frac{\displaystyle{10}}{\displaystyle{100}} = 0.1</m>.</p>
+    <p>In fact, the decimal equivalent of any percent value is that value divided by 100.</p>
     <me>
         r = \frac{\displaystyle{\text{Pecent Value}}}{\displaystyle{100}}
     </me>
-    <p>A percent increase means to multiply the original value by <m>1 + r</m> where <m>r</m> is the decimal equivalent of the given percent. In our salary example <m>r = 0.1</m> so we multiplied by <m>1 + 0.1 = 1.1</m> to get the <m>10 \%</m> increase.</p>
-    <p>In the expression <m>1.1s</m> the factor <m>1.1</m> is called the <term>growth factor</term> and is usually denoted with letter <m>b</m>.</p>
-    <p>For exponential growth the <term>growth factor</term> is defined as</p>
+    <p>A percent increase means to multiply the original value by <m>b = 1 + r</m> where <m>r</m> is the decimal equivalent of the given percent.</p>
+    <p>In our salary example <m>r = 0.1</m> so we multiplied by <m>b = 1 + 0.1 = 1.1</m> to get the <m>10 \%</m> increase.</p>
+    
+    <p>In general, for exponential growth the <term>growth factor</term> is defined as</p>
     <me>b = 1 + r</me>
     <p>Notice that the growth factor is greater than 1 for exponential growth.</p>
         <exercise>
@@ -67,7 +71,7 @@
                     <p>What is the growth factor that represents a <m>2.37 \%</m>increase?</p>
                     <p><m>b =</m><var name="$growth1" width="5" /></p>
                     <p>What is the growth factor that represents a <m>0.104 \%</m>increase?</p>
-                    <p><m>b =</m><var name="$growth1" width="5" /></p>
+                    <p><m>b =</m><var name="$growth2" width="5" /></p>
                     <p>What is the growth factor that represents a <m>82.06 \%</m>increase?</p>
                     <p><m>b =</m><var name="$growth3" width="5" /></p>
                 </statement>
@@ -83,16 +87,33 @@
                     <var name="$increase2">
                         <static>12.9</static>
                     </var>
+                    <var name="$b1">
+                        <static>1.075</static>
+                    </var>
+                    <var name="$b2">
+                        <static>1.290</static>
+                    </var>
                     <pg-code>
-                        $increase1 = Real(3.69);
-                        $increase2 = Real(12.9);
+                        $increase1=Real(3.69);
+                        $increase2=Real(12.9);
+                        $b1=Real(1.075);
+                        $b2=Real(1.290);
                     </pg-code>
                 </setup>
 
                 <statement>
                     <p>Price of milk last year at a local grocery store was <m>\$</m>3.43 per gallon.  Today the price of milk is higher by <m>7.5 \%</m>, what is the price of milk today? Round your answer to the nearest penny.</p>
+                    <p>Here's how:</p>
+                    <p>In order to get a percent increase on the price of milk we must multiply by a growth factor greater than one.  In math we say, <m>b \gt 1</m>.</p>
+                    <p>What is the growth factor for a <m>7.5 \%</m> increase?</p>
+                    <p><m>b = </m> <var name="$b1" width="5" /></p>
+                    <p>We multiply our growth factor by the original price of milk to get the new price of the milk.</p>
                     <p>The price of milk today is <m>\$</m><var name="$increase1" width="5" />.</p>
-                    <p>The value of a stock was at <m>\$ 21.32</m> per share yesterday. Today that same stock is valued at <m>\$ 24.07</m> per share. What is the percent increase in the value of the stock? Round your answer to 1 decimal place.</p>
+                    <p>The value of a stock was at <m>\$ 21.32</m> per share yesterday. Today that same stock is valued at <m>\$ 24.07</m> per share. What is the percent increase in the value of the stock? Round your answer to 2 decimal places.</p>
+                    <p>We know the value of the stock has increaseed, therefore we must have multiplied by a number <m>b \gt 1</m>.  We need to find <m>b</m> and we can use what we know about the beginning and ending stock values to find it.</p>
+                    <p><m>21.32 * b = 24.07</m> Now solve for <m>b</m></p>
+                    <p><m>b = </m> <var name="$b2" width="5" /></p>
+                    <p>We can get the percent increase from the growth factor since <m>b = 1 + r</m>. Find <m>r</m> and turn it into a percent</p>
                     <p>The stock value increase by <var name="$increase2" width="5" /> <m>\%</m>.</p>
                 </statement>
             </webwork>
@@ -113,8 +134,8 @@
         <mrow>N \amp= (1 - 0.15)p</mrow>
         <mrow>N \amp= 0.85p</mrow>
     </md>
-    <p>Look at what we end up with.  A <m>15 \%</m> reduction in price means to multiply the original price by <m>0.85</m>.  What we are seeing in the calculation is the price we actually pay, that is <m>85 \%</m> of the original price.  We have to think a little bit to realize the decrease is <m>15 \%</m></p>
-    <p>A percent decrease means to multiply the original value by <m>1 - r</m> where <m>r</m> is the decimal equivalent of the given percent.</p>
+    <p>Look at what we end up with.  A <m>15 \%</m> reduction in price means to multiply the original price by <m>0.85</m>. This is the growth factor again.  However, in this calculation we observe the price we actually pay, that is <m>85 \%</m> of the original price.  We have to think a little bit to realize the decrease is <m>100 \% - 85 \% = 15 \%</m></p>
+    <p>A percent decrease means to multiply the original value by <m>b = 1 - r</m> where <m>r</m> is the decimal equivalent of the given percent. Notice that a decrease by a percent means to multiply by a number less than 1. In math we say <m>b \lt 1</m></p>
     <p>Consider a study on the reduction of asthma.</p>
     <blockquote>
         <p><em>New York Times, Vitamin D May Reduce Asthma Attacks, Nicholas Bakalar, Sept. 8 2016</em></p>
@@ -191,13 +212,14 @@
     <p>If you have 10 apples, you can eat <m>50 \%</m> of them, that's half the apples.  You can eat <m>75 \%</m> of them, that's <m>7 \frac{1}{2}</m> apples.  You can even eat all the apples, that's <m>100 \%</m> of the apples!</p>
     <p>But, can you eat more than all the apples you have?  If you only have <m>10</m> apples, you cannot eat more than <m>10</m> apples, you cannot decrease by more than <m>100 \%</m> of what you have.</p>
     <p>Therefore when it comes to a percent loss, the growth factor is less than <m>1</m> for sure, but it cannot be less than <m>0</m>. Furthermore, since muliplying by zero is zero, it makes the <q>growth</q> very uninetesting.  From now on a growth factor is always strictly greater than zero.  The only choices are to be greater than <m>1</m> or between <m>0</m> and <m>1</m></p>
+    <p>In math we say percent growth means <m>b \gt 1</m> and percent decay is <m>0 \lt b \lt 1</m></p>
   </subsection>
 
   <subsection>
     <title>Constant Percent Change</title>
     <p>We now know in order to change a value by a percent, we need to multiply.</p>
     <p>If we multiply by a factor between <m>0</m> and <m>1</m> we get a percent decrease while if we multiply by a factor greater than 1 we get a percent increase.</p>
-    <p>By the way, what happens when you multiply by a factor of <m>1</m>? [Hint: nothing]</p>
+    <p>By the way, what happens when you multiply by a factor of <m>1</m>? [Hint: nothing which is also uninteresting, so we don't include it as a possible growth factor.]</p>
     <p>In the exercises below, find the percent change in the given expression.</p>
         <exercise>
             <webwork>
@@ -414,7 +436,7 @@
                     <p><m>A *</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /><m>*</m><var name="$b" width="3" /></p>
                     <p>Use your calculator to find the final result of multiplying the growth factor by itself five times in a row.</p>
                     <p>Five consecutive <m>7 \%</m> decreases is a total growth factor of</p>
-                    <p><m>b^{3} = </m> <var name="$bCubed" width="5" />. Round your answer to <m>4</m> decimal places.</p>
+                    <p><m>b^{5} = </m> <var name="$bCubed" width="5" />. Round your answer to <m>4</m> decimal places.</p>
                     <p>What percent increase does this value represent over all? <var name="$OverAll" width="5" /> Round your answer to 2 decimal places.</p>
                     <p>As you can see, a growth factor of  <m>0.65</m> represents a <m>35 \%</m> decrease while a growth factor of <var name="$bCubed" /> represents a <var name="$OverAll" /><m>\%</m> decrease.</p>
                     <p>Five<m>7 \%</m> decreases is not the same as a <m>35 \%</m> decrease! Why?  Because each <m>7 \%</m> decrease is based on a value that is already lesser than the original. Where as one decrease of <m>35 \%</m> is based on the original value once.</p>
@@ -746,7 +768,7 @@
               </statement>
             </webwork>
         </exercise>
-        <p>In fact, the general form of an exponential formula is <m>y = ab^{x}</m> where <q>az</q> is referred to as the <term>initial value</term> and <q>b</q> is still the <term>growth factor</term> (even though sometimes function may actually be decreasing).</p>
+        <p>In fact, the general form of an exponential formula is <m>y = ab^{x}</m> where <q>a</q> is referred to as the <term>initial value</term> and <q>b</q> is still the <term>growth factor</term> (even though sometimes function may actually be decreasing).</p>
         <p>When creating an exponential formula, we must find the values <em>a</em> and <em>b</em> for the specific problem, then you're done!</p>
         <p>In this next set of questions, you will solve for <em>a</em> and <em>b</em> to write an exponential formula.</p>
 
@@ -780,22 +802,195 @@
                 </setup>
 
                 <statement>
-                    <p>Derive a formula for a population of <m><var name="$a" /></m> bacteria that increases by <m><var name="$p" />\,\%</m> every 3 hours.</p>
+                    <p>Derive a formula for a population <m>P(t)</m> of <m><var name="$a" /></m> bacteria that increases by <m><var name="$p" />\,\%</m> every 3 hours. Let t be time in hours.</p>
+                    <p>Here's how:</p>
+                    <p>The formula is going to look something like <m>P(t) = ab^{t}</m>.  Our goal is to find values for <m>a</m> and <m>b</m> then we're done!</p>
                     <p>What is the initial size of the population?  This is the result we should get if <m>t = 0</m> (no time goes by).</p>
                     <p><m>a = </m> <var name="$a" width="5" /></p>
                     <p>Now we need to find the growth factor <m>b</m>.</p>
-                    <p>We know three hours have gone by, so what ever <m>b</m> is, it has been compounded three times (multiplied by itself three times).</p>
-                    <p>We also know that after those 3 hours the overall growth is <m><var name="$p" />\,\%</m>.  What is the overall growth factor after 3 hours?</p>
-                    <p><m>b^{3} = </m> <var name="$b" width="5" /></p>
-                    <p>But we want <m>b</m> not <m>b^{3}</m>.  So we must solve for <m>b</m>.</p>
-                    <p>Round your answer to 4 decimal places.</p>
-                    <p><m>b = </m> <var name="$bRoot" width="5" /></p>
-
-
+                    <p>After three hours, the growth factor <m>b</m> has been compounded three times (multiplied by itself three times). That gives us <m>b^{3}</m></p>
+                    <p>We also know that after those 3 hours the overall percent increase is <m><var name="$p" />\,\%</m>.  This increase is the same as multiplying by <var name="$b" width="5" /> (think <m>b = 1 + r</m>).</p>
+                    <p>To calculate the hourly growth factor, we must solve this equation: <m>b^{3} = </m> <var name="$b" width="5" /> </p>
+                    <p>Therefore, <m>b = </m> <var name="$bRoot" width="5" /> Round your answer to 4 decimal places.</p>
+                    <p>The formula to model the population is ready.</p>
+                    <p><m>P(t) = </m> <var name="$a" width="5" /><m>*</m> <var name="$bRoot" width="5"/><m>^t</m></p>
                 </statement>
 
                 <solution>
+                    <p>In order to increase by <m><var name="$p" />\,\%</m> we must multiply by <m>b = 1 + <var name="$r" /></m></p>
+                </solution>
+            </webwork>
+        </exercise>
 
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$a">
+                        <static>450</static>
+                    </var>
+                    <var name="$finalTemp">
+                        <static>98</static>
+                    </var>
+                    <var name="$b">
+                        <static>0.2178</static>
+                    </var>
+                    <var name="$r">
+                        <static>0.7822</static>
+                    </var>
+                    <var name="$p">
+                        <static>78.22</static>
+                    </var>
+                    <var name="$bRoot">
+                        <static>0.6831</static>
+                    </var>
+                    <var name="$rRoot">
+                        <static>0.3169</static>
+                    </var>
+                    <var name="$pRoot">
+                        <static>31.69</static>
+                    </var>
+
+                    <pg-code>
+                    Context()->variables->are(t=>'Real');
+                      $a=random(400,475,5);
+                      $finalTemp=random(95,110,1);
+                      $b=$finalTemp/$a;
+                      $bRoot=$b**(0.25);
+                      $r=1-$b;
+                      $rRoot=1-$bRoot;
+                      $p=$r*100;
+                      $pRoot=$rRoot*100;
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in hours. The pie temperature is <m><var name="$a" /></m> degrees fahrenheit when it is first removed from the oven.  After 4 hours the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</p>
+                    <p>Round all your calculations to 4 decimal places if needed.</p>
+                    <p>Here's how:</p>
+                    <p>The formula is going to look something like <m>f(t) = ab^{t}</m></p>
+                    <p>We know the temperature of the pie at two different times including the initial temperature.</p>
+                    <p>We want a formula that tells us the temperature of the pie at any time.</p>
+                    <p>Since we are given the initial temperature, all we need is to find the overall growth factor during the four hours. With this we can find the hourly growth factor for our temperature formula.</p>
+                    <p>What is the initial temperature of the pie? <var name="$a" width="5" /> degrees fahrenheit. This is the result we should get if <m>t = 0</m> (no time goes by).</p>
+                    <p>What is the temperature of the pie after 4 hours? <var name="$finalTemp" width="5" /> degrees fahrenheit.</p>
+                    <p>What is the overall growth factor after 4 hours? <m>b^{4} = </m> <var name="$b" width="5" /></p>
+                    <p>In the four hours that pass, what ever <m>b</m> is, it has been compounded four times (once after each hour).</p>
+                    <p>We can calculate the hourly growth factor <m>b</m>. Using the above equation to solve for <m>b</m></p>
+                    <p><m>b = </m> <var name="$bRoot" width="5" /></p>
+                    <p>We have everthing we need to write our formula: the initial temperature and the hourly growth factor.</p>
+                    <p>The exponential formula for temperature as a function of time is <m>f(t) = </m> <var name="$a" width="5" /><m>*</m>( <var name="$bRoot" width="5" /> )<m>^t</m></p>
+                    <p>Since we're here, can you determine the overall percent loss in temperature during the given 4 hours?</p>
+                    <p>Overall percent loss in 4 hours is <var name="$p" width="5" /><m>\,\%</m></p>
+                    <p>Use this information to find the hourly percent loss in temperature? <var name="$pRoot" width="5" /><m>\,\%</m></p>
+                </statement>
+
+                <solution>
+                    <p>The initial temperature is given as <m><var name="$a" /></m>.  The final temperature is given as <m><var name="$finalTemp" /></m>.</p>
+                    <p>Therefore after 4 hours, the overall growth factor is <m>b^{4} = \frac{\displaystyle{<var name="$finalTemp" />}}{\displaystyle{<var name="$a" />}} = <var name="$b" /></m></p>
+                    <p>Solving for <m>b</m> we get the hourly growth factor</p>
+                    <p><m>b = (<var name="$b" />)^\frac{1}{4} = <var name="$bRoot" /></m></p>
+                    <p>The percent losses are calculated using the relation <m>b = 1 - r</m> (since we have decreasing temperatures) and solving for r .</p>
+                    <p>Overall percent loss is <m>(1 - <var name="$b" />)*100 \% = <var name="$p" />\,\%</m></p>
+                    <p>Hourly perecent loss is <m>(1 - (<var name="$b" />)^\frac{1}{4})*100 \% = <var name="$pRoot" />\,\%</m></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+        <p>What if the initial value is not known?  Can we still find and exponential formula?</p>
+
+                <exercise>
+            <webwork>
+                <setup>
+                    <var name="$a">
+                        <static>450</static>
+                    </var>
+                    <var name="$finalTemp">
+                        <static>98</static>
+                    </var>
+                    <var name="$b">
+                        <static>0.2178</static>
+                    </var>
+                    <var name="$r">
+                        <static>0.7822</static>
+                    </var>
+                    <var name="$p">
+                        <static>78.22</static>
+                    </var>
+                    <var name="$bRoot">
+                        <static>0.6831</static>
+                    </var>
+                    <var name="$rRoot">
+                        <static>0.3169</static>
+                    </var>
+                    <var name="$pRoot">
+                        <static>31.69</static>
+                    </var>
+                    <var name="$compounded">
+                        <static>5</static>
+                    </var>
+
+                    <pg-code>
+                    Context()->variables->are(t=>'Real');
+                      $a=random(300,375,5);
+                      $finalTemp=random(95,110,1);
+                      $b=$finalTemp/$a;
+                      $bRoot=$b**(0.2);
+                      $r=1-$b;
+                      $rRoot=1-$bRoot;
+                      $p=$r*100;
+                      $pRoot=$rRoot*100;
+                      $compounded=Real(5);
+                      $initialTemp=$a/($bRoot**3);
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in hours. The pie temperature is <m><var name="$a" /></m> degrees fahrenheit 3 hours after being removed from the oven.  After 8 hours out of the oven the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</p>
+                    <p>Round all your calculations to 4 decimal places if needed.</p>
+                    <p>Here's how:</p>
+                    <p>The formula is going to look something like <m>f(t) = ab^{t}</m>.  Since we assume exponential decay, we know there is a growth factor <m>0 \lt b \lt 1</m></p>
+                    <p>How many times will the growth factor be compounded between the times <m>t = 3</m> and <m>t = 8</m>?</p>
+                    <p><m>b</m> is compounded <var name="$compounded" width="5" /> times.</p>
+                    <p>We also know the temperature of the pie at two different times. The pie went from <m><var name="$a" /></m> to <m><var name="$finalTemp" /></m> in the span of <m>8 - 3 = 5</m> hours.</p>
+                    <p>In math we say, <m><var name="$a" /> * b^5 = <var name="$finalTemp" /></m></p>
+                    <p>We just need to solve for <m>b</m>.</p>
+                    <p><m>b = </m> <var name="$bRoot" width="5" /></p>
+
+                    <p>To finish we need to find the initial temperature of the pie at <m>t = 0</m> when it first came out of the oven.  We'll use what we know so far about our formula to find the initial temperature of the pie.</p>
+                    <p>The exponential formula so far is <m>f(t) = a *</m>( <var name="$bRoot" width="5" /> )<m>^t</m> where <m>a</m> is the initial temperature of the pie.</p>
+                    <p>Since the our formula has to work for all the given values, pick one ordered pair and use it to solve for <m>a</m>.</p>
+                    <p>What are the two ordered pairs (time, temperature) given to us in the problem?</p>
+                    <p>Ordered pair 1: (<m>3</m>, <var name="$a" width="5" />)</p>
+                    <p>Ordered pair 2: (<m>8</m>, <var name="$finalTemp" width="5" /></p>
+                    <p>Using any ordered pair with input = time and output = temperature.  Insert what you know into the equation and solve for <m>a</m>.</p>
+                    <p>Using oredered pair 1 we solve for <m>a</m> using the equation</p>
+                    <p><var name="$a" width="5" /> <m> = a(<var name="$bRoot" />)^{3}</m>. Store your answer in the memory of your calculator, do not round yet!</p>
+                    <p>Using oredered pair 2 we solve for <m>a</m> using the equation</p>
+                    <p><var name="$finalTemp" width="5" /> <m> = a(<var name="$bRoot" />)^{8}</m>. Store your answer in the memory of your calculator, do not round yet!</p>
+                    <p>In either case, what the initial temperature?</p>
+                    <p><m>a = </m> <var name="$initialTemp" width="5" />. Round your answer to 4 decimal places.</p>
+                    <p>Now we can write the final formula as</p>
+                    <p><m>f(t) = </m> <var name="$initialTemp" width="5" /><m>*</m>(<var name="$bRoot" width="5" />)<m>^t</m></p>
+                </statement>
+
+                <solution>
+                    <p>The key in every exponential formula is to find the growth factor.  In this problem we went from a temperature of <m><var name="$a" /></m> deg fahrenheit to a temperature of <m><var name="$finalTemp" /></m> deg fahrenheit in the span of 5 hours.</p>
+                    <p>So our growth factor <m>b</m> is compounded 5 times, once for each hour between <m>t = 3</m> and <m>t = 8</m>.</p>
+                    <p>This allows us to write an equation</p>
+                    <me><var name="$a" />b^{5} = <var name="$finalTemp" /> </me>
+                    <p>Which we use to solve for the hourly growth factor.</p>
+                    <me>b^{5} = \frac{\displaystyle{<var name="$finalTemp" />}}{\displaystyle{<var name="$a" />}}</me>
+                    <me>b = (\frac{\displaystyle{<var name="$finalTemp" />}}{\displaystyle{<var name="$a" />}})^\frac{1}{5}</me>
+                    <p><m>b = </m> <var name="$bRoot" /></p>
+                    <p>Then using our new growth factor (keeping the exact value on our calculator with no rounding) we can find the initial temp of the pie at <m>t = 0</m> by entering any orderd pair into the equation we have so far and solving for the initial temp.</p>
+                    <md>
+                        <mrow>f(t) \amp= a(<var name="$bRoot" />)^t</mrow>
+                        <mrow><var name="$a" /> \amp= a(<var name="$bRoot" />)^3</mrow>
+                        <mrow>or</mrow>
+                        <mrow><var name="$finalTemp" /> \amp= a(<var name="$bRoot" />)^8</mrow>
+                        <mrow>a \amp= <var name="$initialTemp" /></mrow>
+                    </md>
+                    <p>So the final formula is <m>f(t) = <var name="$initialTemp" />(<var name="$bRoot" />)^t</m></p>
                 </solution>
             </webwork>
         </exercise>
