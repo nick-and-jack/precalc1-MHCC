@@ -55,16 +55,285 @@
 
     <p>A <term>root</term> of a polynomial is a value of the input which gives an output of <em>zero</em>.</p>
     <example>
-      <p>The value <m>x = -2.5</m> is a root for the function <m>f(x) = 6x^2 + 7x - 20</m> because: <me>f(-2.5) = 0</me></p>
-
-    <proof>
-      <p><md>
+      <p>The value <m>x = -2.5</m> is a root for the function <m>f(x) = 6x^2 + 7x - 20</m> because: <md>
         <mrow>f(-2.5) \amp= 6(-2.5)^2 + 7(-2.5) - 20</mrow>
         <mrow>\amp= 37.5 - 17.5 - 20</mrow>
         <mrow>\amp= 0</mrow>
       </md></p>
-    </proof>
     </example>
+
+    <exercise>
+      <webwork xml:id="webwork-polynomial-roots">
+        <setup>
+          <var name="$m"><static>5</static></var>
+          <var name="$b"><static>8</static></var>
+          <var name="$variable"><static>\text{x}</static></var>
+          <var name="$root"><static>-8/5</static></var>
+          <var name="$degree"><static>1</static></var>
+          <pg-code>
+            $m=random(1,9,1);
+            $b=random(1,9,1);
+            $variable=PopUp(
+            ["?","x","y"],"x");
+            $root=-$b/$m;
+            $degree=Real(1);
+          </pg-code>
+        </setup>
+        <statement>
+          <p>What is the <term>degree</term> of the polynomial <m>f(x) = <var name="$m" />x + <var name="$b" /></m>?</p>
+          <p>Answer:  <var name="$degree" width="10" /></p>
+          <p>Find the <term>root</term> of the function <m>f(x) = <var name="$m" />x + <var name="$b" /></m>.</p>
+          <p>Answer:  <var name="$variable" form="popup" /> = <var name="$root" width="10" /></p>
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
+    <p>Now, we will see how our knowledge of first degree polynomials ("<em>lines</em>") will help us to understand polynomials of higher and higher degrees.</p>
+    <exercise>
+      <webwork xml:id="webwork-roots-linear-to-quadratic">
+        <setup>
+          <var name="$degree1"><static>1</static></var>
+          <var name="$degree2"><static>2</static></var>
+          <var name="$formula"><static>x^2-x-2</static></var>
+          <pg-code>
+            $degree1=Real(1);
+            $degree2=Real(2);
+            $formula=Formula("x^2-x-2");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Use the checkboxes to graph the functions: <md>
+          <mrow>y \amp= x - 2</mrow>
+          <mrow>y \amp= x + 1</mrow>
+          <mrow>y \amp= (x - 2)(x + 1)</mrow></md></p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>What is the degree of the function <m>y = x - 2</m>?</p>
+          <p>Answer:  <var name="$degree1" width="10" /></p>
+          <p>How many roots does it have?</p>
+          <p>Answer:  <var name="$degree1" width="10" /></p>
+          <p>What is the degree of the function <m>y = x + 1</m>?</p>
+          <p>Answer:  <var name="$degree1" width="10" /></p>
+          <p>How many roots does it have?</p>
+          <p>Answer:  <var name="$degree1" width="10" /></p>
+          <p>Expand the function <m>y = (x - 2)(x + 1)</m> by writing it in the form <m>ax^2 + bx + c</m>.</p>
+          <p>Answer:  <var name="$formula" width="15" /></p>
+          <p>What is the degree of the function <m>y = (x - 2)(x + 1)</m>?</p>
+          <p>Answer:  <var name="$degree2" width="10" /></p>
+          <p>How many roots does it have?</p>
+          <p>Answer:  <var name="$degree2" width="10" /></p>
+
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <webwork xml:id="webwork-roots-linear-to-quadratic1">
+        <setup>
+          <var name="$rootsWhere">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{It has both roots of the linear functions.}</member>
+              <member>\text{It has different roots than the linear functions.}</member>
+              <member>\text{Roots? There are no roots.}</member>
+            </set>
+          </var>
+          <pg-code>
+            $rootsWhere=PopUp(["?","It has both roots of the linear functions.","It has different roots than the linear functions.","Roots? There are no roots."],"It has both roots of the linear functions.");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>The <m>2^{nd}</m> degree polynomial <me>y = (x - 2)(x + 1)</me> is the product of two linear functions: <me>y = x - 2 \text{ and } y = x + 1</me></p>
+          <p>The <m>1^{st}</m> degree polynomials each had one root. Where are the roots of the <m>2^{nd}</m> degree polynomial?</p>
+          <p>Answer:  <var name="$rootsWhere" form="popup" /></p>
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+          <p>If a function <m>p</m> is the product of two linear functions <m>f</m> and <m>g</m>, then <m>p</m> will have both the roots of the <m>f</m> and <m>g</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <webwork xml:id="webwork-roots-linear-to-cubic">
+        <setup>
+          <var name="$variable">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{x}</member>
+              <member>\text{y}</member>
+            </set>
+          </var>
+          <var name="$root3"><static>3</static></var>
+          <var name="$root1"><static>1</static></var>
+          <var name="$root0"><static>0</static></var>
+          <var name="$rootsAll">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{All the roots of f, g and h}</member>
+              <member>\text{None of the roots of f, g or h}</member>
+              <member>\text{Roots? There are no roots!}</member>
+            </set>
+          </var>
+
+          <pg-code>
+            $variable=PopUp(["?","x","y"],"x");
+            $root3=Real(3);
+            $root1=Real(1);
+            $root0=Real(0);
+            $rootsAll=PopUp(["?","All the roots of f, g and h","None of the roots of f, g or h","Roots? There are no roots!"],"All the roots of f, g and h");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Use the checkboxes to graph the functions: <md>
+          <mrow>f(x) \amp= x - 3</mrow>
+          <mrow>g(x) \amp= x - 1</mrow>
+          <mrow>h(x) \amp= x</mrow></md></p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aBfjCKXg/width/433/height/373/border/888888" width="433px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>What is the root of each function?</p>
+          <p>Root of <m>f(x) = x - 3</m>:  <var name="$variable" form="popup" /> = <var name="$root3" width="10" /></p>
+          <p>Root of <m>g(x) = x - 1</m>:  <var name="$variable" form="popup" /> = <var name="$root1" width="10" /></p>
+          <p>Root of <m>h(x) = x</m>:  <var name="$variable" form="popup" /> = <var name="$root0" width="10" /></p>
+          <p>What are the roots of <m>p(x) = (x-3)(x-1)x</m>?</p>
+          <p>Answer:  <var name="$rootsAll" form="popup" /></p>
+
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
+    <p>Now, use your observation from the last problem to make predictions in the next exercise.</p>
+
+    <exercise>
+      <webwork xml:id="webwork-roots-graph-guess">
+        <setup>
+          <var name="$graph">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{Graph A}</member>
+              <member>\text{Graph B}</member>
+              <member>\text{Graph C}</member>
+              <member correct="yes">\text{Graph D}</member>
+            </set>
+          </var>
+          <pg-code>
+            $graph=PopUp(["?","Graph A","Graph B","Graph C","Graph D"],"Graph D");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Let <m>p(x) = (x-2)(x+1)(2x-6)</m>.</p>
+          <p>Thinking about the linear factors of <m>p</m> as lines, each with its own root, choose which option below could be the graph of <m>p(x)</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xg57B7uk/width/223/height/177/border/888888" width="223px" height="177px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NZM3U4KZ/width/223/height/177/border/888888" width="223px" height="177px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xWMsFA5p/width/223/height/177/border/888888" width="223px" height="177px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/x4jEU8nX/width/223/height/177/border/888888" width="223px" height="177px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Answer:  <var name="$graph" form="popup" /></p>
+        </statement>
+        <hint>
+          <p>If you take each of the factors as a linear function <md>
+            <mrow>y = x - 2</mrow>
+            <mrow>y = x + 1</mrow>
+            <mrow>y = 2x - 6</mrow>
+          </md>and find the <term>root</term> of each one, this will tell you where the function <m>p(x)</m> should cross the <m>x</m>-axis.</p>
+        </hint>
+        <solution>
+          <p>The graph of <m>p(x) = (x-2)(x+1))2x-6)</m> is graph <var name="$graph" /> because it has the roots <md>
+          <mrow>x = 2</mrow>
+          <mrow>x = -1</mrow>
+          <mrow>x = 3</mrow></md></p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <p>In the next problem, you'll guess the number of roots of a polynomial, and where those roots are.</p>
+
+    <exercise>
+      <webwork xml:id="webwork-guess-the-number-of-roots">
+        <setup>
+          <var name="$c"><static>4</static></var>
+          <var name="$a[0]"><static>5</static></var>
+          <var name="$a[1]"><static>3</static></var>
+          <var name="$a[2]"><static>10</static></var>
+          <var name="$howManyRoots"><static>3</static></var>
+          <var name="$b[0]"><static>5/4</static></var>
+          <var name="$b[1]"><static>-3</static></var>
+          <var name="$b[2]"><static>10</static></var>
+          <var name="$c[0]"><static>-5/4</static></var>
+          <var name="$c[1]"><static>3</static></var>
+          <var name="$c[2]"><static>-10</static></var>
+          <var name="$roots">
+            <set>
+              <member>\text{?}</member>
+              <member>5/4\text{, }3\text{ and }10</member>
+              <member correct="yes">5/4\text{, }-3\text{ and }10</member>
+              <member>-5/4\text{, }3\text{ and }-10</member>
+            </set>
+          </var>
+          <pg-code>
+            $c=4;
+            @a=map{$_+5}NchooseK(14,4);
+            $howManyRoots=Real(3);
+            @b=($a[0]/$c,-$a[1],$a[2]);
+            @c=map{-1*$_}@b;
+            $roots=PopUp(["?","$b[0], $c[1] and $b[2]","$b[0], $b[1] and $b[2]","$c[0], $b[1] and $c[2]"],"$b[0], $b[1] and $b[2]");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Let <m>m(x) = (<var name="$c" />x - <var name="$a[0]" />)(x + <var name="$a[1]" />)(x - <var name="$a[2]" />).</m></p>
+          <p>How many roots do you think <m>m(x)</m> has?</p>
+          <p>Answer:  <var name="$howManyRoots" width="10" /></p>
+          <p>What are the roots of <m>m(x)</m>?</p>
+          <p>Answer:  <var name="$roots" form="popup" /></p>
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <webwork xml:id="webwork-roots-linear-to-quartic">
+        <setup>
+
+          <pg-code>
+
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Below is the graph of: <me>f(x) = (x+3)(x+1)(x-2)(2x-8)</me></p>
+          <p>Put the points on the x-intercepts.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VkKRBCpF/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+        </statement>
+        <hint>
+
+        </hint>
+        <solution>
+
+        </solution>
+      </webwork>
+    </exercise>
+
   </introduction>
 
 </section>
