@@ -16,10 +16,113 @@
     <title>Exponential Functions</title>
 
     <introduction>
+        <list xml:id="outcomes-exponential-functions">
+            <title>Student Learning Outcomes</title>
+            <ul>
+                <li>
+                    <p>Define, distinguish and apply exponential functions.</p>
+                </li>
+                <li>
+                    <p>Sketch the graph of an exponential function.</p>
+                </li>
+                <li>
+                    <p>Identify a horizontal asymptote from a graph, numerical model, verbal description or equation.</p>
+                </li>
+                <li>
+                    <p>Distinguish growht vs. decay given any model (verbal, numberical, graphical, equation).</p>
+                </li>
+                <li>
+                    <p>Determine percent change of an exponential function.</p>
+                </li>
+                <li>
+                    <p>Model real-world situations algebraically using exponential functions.</p>
+                </li>
+                <li>
+                    <p>Identify the meaning of the parameters of an exponential function.</p>
+                </li>
+            </ul>
+        </list>
+
+        <list>
+        <title>Video Lectures</title>
+            <dl>
+                <li>
+                    <title>Percent and the Decimal Equivalent</title>
+                </li>
+                <li>
+                    <title>Growth/Decay Factor</title>
+                </li>
+                <li>
+                    <title>Finding Exponential Formulas (Tables, Graphs and Language)</title>
+                </li>
+                <li>
+                    <title>Graphs of Exponential Functions.</title>
+                </li>
+            </dl>
+        </list>
 
     </introduction>
 
     <xi:include href="./activity-exponential-intro.xml" />
     <xi:include href="./activity-discrete-continuous-compounding.xml" />
+
+    <conclusion>
+        <p>In this lesson we learn about a family of functions called "exponential". Just like linear functions, exponentials have their or own general shapes and basic formulas and numerical patterns.</p> 
+        <p>For instance, linear functions look like lines on a graph.</p>
+
+        <todo>Graph of a line with negative slope.</todo>
+
+        <p>While exponential functions bend in a smooth curve. In the figure below the curve is <q>concave up</q>.</p>
+        
+        <todo>Graph of an increasing exponential function.
+        </todo>
+        
+        <p>Linear formulas have a format that looks like this 
+        </p><me>f(x) = mx + b</me>
+        <p>But the formula for an exponential function may look like this</p><me>f(x) = ab^{x}</me>
+        <p>The formula can be written in various ways but we begin this lesson with what is called the discrete form.</p>
+        <p>Finally, when we look at a table of values, linear functions will always have a pattern of adding the same number repeatedly (a positive or negative constant) for constant changes in input.</p> 
+        <p>This leads to the fact that linear functions have constant rate of change (slope).</p>
+        <p>In turn, exponentials will have a pattern of repeated multiplication by the same number called a <term>growth factor</term> usually denoted by the variable <m>b</m>.  If <m>b \gt 1</m> we have exponential growth while if <m>0 \lt b \lt 1</m> we have exponential decay.</p>
+        <p>This leads to the fact that exponential functions have constant percent change where mutliplying is interpreted as a percent change.</p>
+        <p>For example, there is a big difference between adding <m>1.25</m> repeatedly versus multiplying by <m>1.25</m> repeatedly.</p>
+        <p>Click on the link of the graph below to explore some differences between linear and exponential functions.</p>
+
+        <todo>Graph of exponential and linear function differences.</todo>
+
+        <p>Consider the interactive graph you made of the exponential function. Notice that as you move to the left along the x-axis, the graph tends to drop closer and closer to the x-axis.</p>
+        <p>In fact, the farther you go to the left, the closer the graph gets to the x-axis. In truth the graph will never reach the x-axis.</p> 
+        <p>The x-axis is the horizontal line <m>y = 0</m> and the graph is <q>tending towards <m>y = 0</m></q> as the inputs move to the left.</p>
+        <p>We say that the x-axis is a horizontal asymptote with equation <m>y = 0</m>. It means that the graph is getting closer and closer to the x-axis in at least one direction.</p>
+
+        <example>
+            <title>Example Problem 3:  solution video</title>
+                <p>A biologist measures the amount of chemical spilled into a lake 6 hours after the spill has occurred to be about 350 <initial>ppm</initial> (parts per million).</p>
+                <p>She tests the water from the lake again 8 hours later and measures the chemical to be about 256 <initial>ppm</initial></p>
+                <p>Assuming a linear model, L(t), what is the average rate of change of the decay of the chemical in the lake?</p>
+                <p>Assuming an exponential model, E(t), what is the hourly percent decrease of the chemical in the lake?</p>
+                <p>What does each model predict as the initial size of the spill?</p>
+        </example>
+
+        <example>
+            <title>Example Problem 4:  solution video</title>   
+                <p>Find an exponential formula for the graph. Given the vertical intercept (initial value)</p>
+        </example>
+
+        <example>
+            <title>Example Problem 5:  solution video</title>
+                <p>Find an exponential formula for the graph shown in the figure below. Given any two points.</p>
+       </example>
+
+        <example>
+            <title>Example Problem 6:  solution video</title>
+                <p>The amount <m>A(t)</m> in milligrams, of drug in the body <m>t</m> hours after taking a pill is modeled by the formula  <m>A(t) = 22(0.89)^{t}</m></p>
+                <p>What is the amount of the initial dose?</p>
+                <p>What percent of the drug leaves the body each hour?</p>
+                <p>What is the amount of drug left after 10 hours?</p>
+                <p>How many hours will it take for there to be 1 milligram of drug in the body?</p>
+            </example>
+
+    </conclusion>
 
 </chapter>
