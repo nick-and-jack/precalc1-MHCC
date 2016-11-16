@@ -483,6 +483,117 @@
       </webwork>
     </exercise>
 
+    <p>There are a few additional things we will encounter with the graph of a polynomial.</p>
+    <p>The first issue concerns using vertical shifting and stretches to the graph of a polynomial (see <xref ref="chapter-reflections-and-vertical-stretches">chapter</xref>).</p>
+    <example>
+      <p>Imagine trying to determine the formulas for the <m>3^{\rm{rd}}</m> polynomials graphed below.</p>
+      <sidebyside widths="32% 32% 32%">
+          <figure>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-1:5]{(x-1)*(x-3)*(x-4)};
+                                  \fill (1,0)  circle[radius=4pt];
+                                  \fill (3,0)  circle[radius=4pt];
+                                  \fill (4,0)  circle[radius=4pt];
+                                  \fill (2,1)  circle[red radius=4pt];
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+          <figure>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-1:5]{2*(x-1)*(x-3)*(x-4)};
+                                  \fill (1,0)  circle[radius=4pt];
+                                  \fill (3,0)  circle[radius=4pt];
+                                  \fill (4,0)  circle[radius=4pt];
+                                  \fill (2,4)  circle[red radius=4pt];
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+          <figure>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-1:5]{1.5*(x-1)*(x-3)*(x-4)};
+                                  \fill (1,0)  circle[radius=4pt];
+                                  \fill (3,0)  circle[radius=4pt];
+                                  \fill (4,0)  circle[radius=4pt];
+                                  \fill (2,1)  circle[red radius=4pt];
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+      </sidebyside>
+
+      <p>They each appear to have the same end-behavior as <m>x^3</m>, and they all have the same <m>x</m>-intercepts:<md>
+      <mrow>(1, 0)</mrow>
+      <mrow>(3, 0)</mrow>
+      <mrow>(4, 0)</mrow></md></p>
+      <p>So, we would begin by writing the formula: <me>y = (x-1)(x-3)(x-4)</me></p>
+      <p>But the graphs are all different, so this formula cannot work for all of them.</p>
+      <p>Since these graphs all have the same roots of <m>1</m>, <m>3</m> and <m>4</m>, we might consider a different input value.</p>
+      <p>Fix your attention on the value <m>x = 2</m> for each graph.</p>
+      <aside>
+      <exercise>
+        <statement>
+          <p>Our guess for the formula, <m>f(x) = (x-1)(x-3)(x-4)</m>, actually matches one of the graphs. Use the input value <m>x = 2</m> to decide which of the graphs matches our formula.</p>
+        </statement>
+        <answer>
+          <p>Our formula matches the first graph, because <md>
+            <mrow>f(2) \amp= (2-1)(2-3)(2-4)</mrow>
+            <mrow>\amp= 2</mrow></md></p>
+        </answer>
+      </exercise>
+      </aside>
+      <p>But what about the formula for the <m>2^{\rm{nd}}</m> graph? Its output when <m>x = 2</m> is <m>4</m>, which is two times as large as the first graph.</p>
+      <p>This is, in fact, a <term>vertical stretch</term> of the first graph.</p>
+      <aside>
+        <exercise>
+          <statement>
+            <p>The <m>2^{\rm{nd}}</m> graph is a vertical stretch of the function <m>f(x) = (x-1)(x-3)(x-4)</m>.</p>
+            <p>What is the formula for the <m>2^{\rm{nd}}</m> graph?</p>
+          </statement>
+          <answer>
+            <p>With a vertical stretch of <m>2</m>, the formula for the <m>2^{\rm{nd}}</m> graph is: <me>2(x-1)(x-3)(x-4)</me></p>
+          </answer>
+        </exercise>
+      </aside>
+      <p>For the <m>3^{\rm{rd}}</m> graph, we see the output is <m>3</m> when the input is <m>x = 2</m>.</p>
+      <p>It may be easy to tell by what factor the graph of <m>f(x)</m> has been vertically stretched to make this graph, but there is an algebraic method for determining the factor.</p>
+      <aside>
+        <exercise>
+          <statement>
+            <p>Recall that a vertical stretch of a function occurs by multiplying the outside of the function by a constant value <m>k</m>: <me>k\cdot f(x)</me></p>
+            <p>So, the formula for the <m>3^{\rm{rd}}</m> graph should be <me>k(x-1)(x-3)(x-4)</me> for some value <m>k</m>.</p>
+            <p>Since that graph passes through the point <m>(2, 3)</m>, we can use that information to solve for the value <m>k</m>:<md>
+            <mrow>k(2-1)(2-3)(2-4) \amp= 3</mrow>
+            <mrow>k(2) \amp= 3</mrow>
+            <mrow>k \amp= \frac{3}{2}</mrow></md></p>
+            <p>What is the formula for the <m>3^{\rm{rd}}</m> graph?</p>
+          </statement>
+          <answer>
+            <p>The formula is: <me>y = \frac{3}{2}(x-1)(x-3)(x-4)</me></p>
+          </answer>
+        </exercise>
+      </aside>
+
+
+
+
+    </example>
 
 
 
