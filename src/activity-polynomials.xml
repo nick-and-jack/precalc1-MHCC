@@ -220,8 +220,8 @@
         </solution>
       </webwork>
     </exercise>
-
-    <p>Now, use your observation from the last problem to make predictions in the next exercise.</p>
+    <p>By now, you are already seeing a relationship between the <term>roots</term> of a polynomial, and the <term>roots</term> of its linear factors.</p>
+    <p>Use this observation to make predictions about the graph of a polynomial in the next exercise.</p>
 
     <exercise>
       <webwork xml:id="webwork-roots-graph-guess">
@@ -262,7 +262,7 @@
       </webwork>
     </exercise>
 
-    <p>In the next problem, you'll guess the number of roots of a polynomial, and where those roots are.</p>
+    <p>In the next two problems, you'll guess the number of roots of a polynomial and where those roots are located.</p>
 
     <exercise>
       <webwork xml:id="webwork-guess-the-number-of-roots">
@@ -314,25 +314,178 @@
     <exercise>
       <webwork xml:id="webwork-roots-linear-to-quartic">
         <setup>
-
+          <var name="$didItGraph">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{yes}</member>
+              <member>\text{no}</member>
+            </set>
+          </var>
           <pg-code>
-
+            $didItGraph=PopUp(["?","yes","no"],"yes");
           </pg-code>
         </setup>
         <statement>
           <p>Below is the graph of: <me>f(x) = (x+3)(x+1)(x-2)(2x-8)</me></p>
-          <p>Put the points on the x-intercepts.</p>
+          <p>Put the points on the x-intercepts of the graph.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VkKRBCpF/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-
+          <p>If you placed the points in the correct locations, the graph of <m>f(x)</m> would be shown.</p>
+          <p>Did you correctly place the points?</p>
+          <p><var name="$didItGraph" form="popup" /></p>
         </statement>
         <hint>
-
+          <p>Did you set each of the linear factors, such as <m>(x+1)</m>, equal to zero and solve for <m>x</m>? Remember that the <term>roots</term> are the same as the <m>x</m>-intercetps.</p>
         </hint>
         <solution>
-
+          <p>The <m>x</m>-intercepts are <m>(-3,0)</m>, <m>(-1,0)</m>, <m>(2,0)</m> and <m>(4,0)</m>.</p>
+          <p>These were found by setting the four linear factors each equal to zero:</p>
+          <p><md>
+            <mrow>x + 3 = 0 \amp\implies x = -3</mrow>
+            <mrow>x + 1 = 0 \amp\implies x = -1</mrow>
+            <mrow>x - 2 = 0 \amp\implies x = 2</mrow>
+            <mrow>2x - 8 = 0 \amp\implies x = 4</mrow>
+          </md></p>
         </solution>
       </webwork>
     </exercise>
+
+    <p>Now, let's summarize what we've seen up to this point in the next exercise.</p>
+
+    <exercise>
+      <webwork xml:id="webwork-polynomial-roots-summary-statements">
+        <setup>
+
+          <pg-code>
+            $rootsN=PopUp(["?","2","N"],"N");
+            $linearFactors=PopUp(["?","variables","linear factors","terms"],"linear factors");
+            $intercepts=PopUp(["?","(a,0)","(0,a)","(-a,0)","(0,-a)"],"(a,0)");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Complete each statement below:</p>
+          <p>If a polynomial is the product of <m>N</m> different linear factors, then its graph will have <var name="$rootsN" form="popup" /> different <m>x</m>-intercepts.</p>
+          <p>The <term>degree</term> of such a polynomial is equal to the number of its <var name="$linearFactors" form="popup" /></p>
+          <p>For each linear factor <m>x - a</m>, the polynomial will have an <m>x</m>-intercept at the point <var name="$intercepts" form="popup" /></p>
+
+        </statement>
+        <solution>
+          <p>If a polynomial has a factor of <m>(x - a)</m>, then evaluating that polynomial the value <m>x = a</m> will give it a factor of zero. This will make zero the output of the polynomial, so its graph will contain the point <m>(a,0)</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <p>One important note should be made here: Not every polynomial can be written as just a product of linear factors (the function <m>f(x) = x^2 + 1</m> is an easy example, as it has <em>no</em> <m>x</m>-intercepts).</p>
+    <p>But in this section, we will focus primarily on polynomials which <em>can</em> be written as a product of linear factors.</p>
+    <p>One skill we will develop here is being able to determine a formula for a polynomial if we have its graph. However, before we can do that, we need to discuss the <term>end-behavior</term> of a polynomial &#8212; that is, the function's behavior as <m>x</m> gets far from zero. This is one thing we <em>can</em> tell about the graph of a polynomial, even if it is <em>not</em> written as a product of linear factors, such as: <md>
+    <mrow>y = 3x - 5x^2 + 17</mrow>
+    <mrow>\text{or}</mrow>
+    <mrow>y = -950x + x^3</mrow>
+    </md></p>
+    <p>Pause here for an activity which concerns the <term>end-behavior</term> of a polynomial.</p>
+    <xi:include href="./activity-end-behavior-and-asymptotes.xml" />
+
+    <p>We have now learned the two important things we need in order to write the formula for a polynomial:</p>
+    <blockquote>the relationship between the <term>roots</term> of a polynomial and its linear factors</blockquote>
+    <p>and</p>
+    <blockquote>the relationship between the <term>end-behavior</term> of a polynomial and its leading term</blockquote>
+    <p>Let's put these together in order to write the formula for a polynomial.</p>
+    <p>In the next two exercises, you will be given the graph of a polynomial. Use what you know about the roots and end-behavior in order to write the formula.</p>
+
+    <exercise>
+      <webwork xml:id="webwork-polynomial-write-formula">
+        <setup>
+          <var name="$num"><static>3</static></var>
+          <var name="$formula"><static>(x+1)(x-2)(x-3)</static></var>
+          <pg-code>
+            $num=Real(3);
+            $formula=Compute("(x+1)(x-2)(x-3)");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>A polynomial <m>y = f(x)</m> is graphed below. Your goal is to write its formula.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/f2vXupVA/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Complete the statement with a number:</p>
+          <p>The polynomial will have <var name="$num" width="10" /> different linear factors.</p>
+          <p>Now write the formula for the polynomial:</p>
+          <p><m>f(x) = </m><var name="$formula" width="15" /></p>
+        </statement>
+        <hint>
+          <p>Remember that if a polynomial has an <m>x</m>-intercept at the point <m>(b, 0)</m>, then it will have a linear factor of <m>(x - b)</m>.</p>
+          <p>Apply this idea to each of the linear factors.</p>
+        </hint>
+        <solution>
+          <p>The <m>x</m>-intercepts are at the points: <md>
+          <mrow>(-1, 0)</mrow>
+          <mrow>(2, 0)</mrow>
+          <mrow>(3, 0)</mrow></md></p>
+          <p>So, the formula will have the linear factors: <md>
+            <mrow>(x + 1)</mrow>
+            <mrow>(x - 2)</mrow>
+            <mrow>(x - 3)</mrow></md></p>
+          <p>The formula is:  <m>f(x) = (x + 1)(x - 2)(x - 3)</m></p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <webwork xml:id="webwork-polynomial-write-formula-1">
+        <setup>
+          <var name="$choice[0]"><static>(x+4)</static></var>
+          <var name="$choice[1]"><static>(x+1)</static></var>
+          <var name="$choice[2]"><static>(x-2)</static></var>
+          <var name="$nchoice[0]"><static>-(x+4)</static></var>
+          <var name="$nchoice[1]"><static>-(x+1)</static></var>
+          <var name="$nchoice[2]"><static>-(x-2)</static></var>
+          <var name="$factor0"><static>(x+4)\text{ or }-(x+4)</static></var>
+          <var name="$factor1"><static>(x+1)\text{ or }-(x+1)</static></var>
+          <var name="$factor2"><static>(x-2)\text{ or }-(x-2)</static></var>
+          <var name="$power"><static>x^3</static></var>
+          <var name="$formula"><static>-(x+4)(x+1)(x-2)</static></var>
+          <pg-code>
+
+            @choice=(Compute("(x+4)"),Compute("(x+1)"),Compute("(x-2)"));
+            @nchoice=map{-1*$_}@choice;
+            $factor0=OneOf($choice[0],$nchoice[0]);
+            $factor1=OneOf($choice[1],$nchoice[1]);
+            $factor2=OneOf($choice[2],$nchoice[2]);
+            $power=PopUp(["?","x^2","x^3","-x^2","-x^3"],"-x^3");
+            $formula=Compute("-(x+4)(x+1)(x-2)");
+
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graph below shows a polynomial <m>y = f(x)</m>. Answer the following questions in order to write the formula for <m>f(x)</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/y8BaH6kM/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>The <m>x</m>-intercept <m>(-4, 0)</m> means the formula will have a linear factor of:</p>
+          <p><var name="$factor0" width="10" /></p>
+          <p>The <m>x</m>-intercept <m>(-1, 0)</m> means the formula will have a linear factor of:</p>
+          <p><var name="$factor1" width="10" /></p>
+          <p>The <m>x</m>-intercept <m>(2, 0)</m> means the formula will have a linear factor of:</p>
+          <p><var name="$factor2" width="10" /></p>
+          <p>The end-behavior of the polynomial is the same as <var name="$power" form="popup" /></p>
+          <p>Now put all of these together in order to write the formula for the polynomial:</p>
+          <p><m>f(x) = </m><var name="$formula" width="15" /></p>
+        </statement>
+        <hint>
+          <p>Notice the end-behavior looks like <m>-x^3</m>. Remember to incorporate that into your final formula. One idea is to just put a negative symbol outside of the parentheses (like multiplying it all by <m>-1</m>).</p>
+        </hint>
+        <solution>
+          <p>Each <m>x</m>-intercept corresponds to a linear factor in the formula:<md>
+          <mrow>(-4, 0) \amp\implies (x + 4)</mrow>
+          <mrow>(-1, 0) \amp\implies (x + 1)</mrow>
+          <mrow>(2, 0) \amp\implies (x - 2)</mrow></md></p>
+          <p>Also, the end-behavior is the same as <m>-x^3</m>, so our graph needs to be flipped over the <m>x</m>-axis.</p>
+          <p>The formula is then: <me>f(x) = -(x+4)(x+1)(x-2)</me></p>
+          <p>We can test that our formula works by using the point <m>(0, 8)</m> shown:<md>
+          <mrow>f(0) \amp= -(0 + 4)(0 + 1)(0 - 2)</mrow>
+          <mrow>\amp=8</mrow></md></p>
+        </solution>
+      </webwork>
+    </exercise>
+
+
+
+
 
   </introduction>
 
