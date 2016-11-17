@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+<!--
+<section xml:id="section-activity-end-behavior-and-asymptotes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>End Behavior Activity</title>
+  <introduction>
+    <p>Recall that a horizontal <term>asymptote</term>, <m>y = a</m>, is a horizontal line which seems to <em>resemble</em> a function <m>f(x)</m> as either <m>x \to \infty</m> or <m>x \to -\infty</m>.</p>
+    <p>Put another way, if the function <m>f</m> has a horizontal asymptote <m>y = a</m>, then as we evaluate <m>f(x)</m> at <m>x</m> values which are farther and farther from zero, the ouputs will eventually get very close to the number <m>a</m>.</p>
+    <p>In calculus language, we would write <me>\lim_{x\to\pm\infty}f(x)=a</me> and in words, we would say <blockquote><em>the limit as <m>x</m> goes to positive or negative infinity, of <m>f(x)</m>, is <m>a</m>.</em></blockquote></p>
+    <p>In the next exercise, you will see how a horizontal <term>asymptote</term> of a function can be seen by a table of values.</p>
+    <exercise>
+      <webwork xml:id="webwork-horizontal-asymptote-numerical">
+        <setup>
+          <var name="$a"><static>18</static></var>
+          <var name="$b"><static>13</static></var>
+          <var name="$c"><static>6</static></var>
+          <var name="$variable">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{x}</member>
+              <member correct="yes">\text{y}</member>
+            </set>
+          </var>
+          <var name="$value"><static>3</static></var>
+          <var name="$x[0]"><static>1</static></var>
+          <var name="$x[1]"><static>10</static></var>
+          <var name="$x[2]"><static>10</static></var>
+          <var name="$x[3]"><static>10</static></var>
+          <var name="$x[4]"><static>10</static></var>
+          <var name="$y[0]"><static>10</static></var>
+          <var name="$y[1]"><static>10</static></var>
+          <var name="$y[2]"><static>10</static></var>
+          <var name="$y[3]"><static>10</static></var>
+          <var name="$y[4]"><static>10</static></var>
+          <pg-code>
+            @x=(1, 10, 100, 1000, 10000);
+            $a=12*random(2, 5, 1);
+            $b=random(2, 20, 1);
+            $c=random(2,4,1);
+            @y=map{($a*$_+$b)/($c*$_)}@x;
+            $variable=PopUp(["?","x","y"],"y");
+            $value=$a/$c;
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The table below shows values of the function: <me>f(x) = \frac{<var name="$a" />x + <var name="$b" />}{<var name="$c" />x}</me></p>
+          <table>
+            <tabular top="major" halign="center">
+              <col halign="left" />
+              <col halign="left" />
+
+              <row bottom="medium">
+                <cell><m>x</m></cell>
+                <cell><m>f(x)</m></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[0]" /></m></cell>
+                <cell><m><var name="$y[0]" /></m></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[1]" /></m></cell>
+                <cell><m><var name="$y[1]" /></m></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[2]" /></m></cell>
+                <cell><m><var name="$y[2]" /></m></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[3]" /></m></cell>
+                <cell><m><var name="$y[3]" /></m></cell>
+              </row>
+
+              <row>
+                <cell><m><var name="$x[4]" /></m></cell>
+                <cell><m><var name="$y[4]" /></m></cell>
+              </row>
+            </tabular>
+          </table>
+          <p>What appears to be the horizontal asymptote of <m>f(x)</m>?</p>
+          <p>Answer:  <var name="$variable" form="popup" /> = <var name="$value" width="10" /></p>
+
+        </statement>
+
+        <solution>
+          <p>The horizontal asymptote of the function is:  <m>y = <var name="$value" /></m></p>
+        </solution>
+      </webwork>
+    </exercise>
+    <p>Now, this behavior shows up in the graph by the function <m>f(x)</m> "flattening out" to the left or the right. This is an example of what is called <term>end-behavior</term> (or <term>long-run behavior</term>). From a graphical perspective, <term>end-behavior</term> is about what the graph tends to do as the input <m>x</m> gets far from zero.</p>
+<todo>Make tikz pictures for y = 8*2^(-x^2) - 11 and y = (10x - 7)/(2x), sidebyside, with the labels "horizontal asymptote y = -3" and "horizontal asymptote y = 5" </todo>
+<todo>This will take the place of these GeoGebra graphs</todo>
+
+    <p>As you know, not every function has a horizontal asymptote. For example, power functions do not "flatten out", but rather they either increase toward <m>\infty</m> (point upward) or decrease toward <m>-\infty</m> (point downward). So, <term>end-behavior</term> may be just that &#8212; the graph increasing or decreasing forever.</p>
+    <p>In the next four exercises, you will examine the end-behavior of a polynomial and learn to predict this end-behavior by observing its formula.</p>
+    <exercise>
+      <webwork xml:id="webwork-polynomial-end-behavior">
+        <setup>
+          <var name="$compare">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{very different}</member>
+              <member correct="yes">\text{very similar}</member>
+            </set>
+          </var>
+          <var name="$endBehavior">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{end behavior}</member>
+            </set>
+          </var>
+          <var name="$power">
+            <set>
+              <member>\text{?}</member>
+              <member>x^2</member>
+              <member correct="yes">x^3</member>
+            </set>
+          </var>
+          <var name="$term"><static>x^3</static></var>
+
+          <pg-code>
+            $compare=PopUp(["?","very different","very similar"],"very similar");
+            $endBehavior=PopUp(["?","end behavior"],"end behavior");
+            $power=PopUp(["?","x^2","x^3"],"x^3");
+            $term=Compute("x^3");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graph below shows: <me>f(x) = x(x+3)(x-4)</me></p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Abx2UAXB/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Use the checkbox to graph the power function <m>y = x^3</m>.</p>
+          <p>Now use the slider to zoom out, and observe the shape of the graph.</p>
+          <p>After zooming out, how do the graphs of <m>y = x(x+3)(x-4)</m> and <m>y = x^3</m> compare to each other?</p>
+          <p>Answer:  The graphs are <var name="$compare" form="popup" /></p>
+          <p>Complete the following statment:</p>
+          <p>The <var name="$endBehavior" form="popup" /> of the function <m>x(x+3)(x-4)</m> is like <var name="$power" form="popup" /></p>
+          <p>Use algebra to expand the formula <m>x(x+3)(x-4)</m>. What is the leading term (the one with the highest power on <m>x</m>)?</p>
+          <p>Answer:  <var name="$term" width="10" /></p>
+        </statement>
+        <solution>
+          <p>Expanding the polynomial <m>f(x) = x(x+3)(x-4)</m> gives <me>x^3 - x^2 - 12x</me> and we see the leading term <m>x^3</m>. This is what the graph of <m>f(x)</m> resembles when we zoom out, so we would say that the end behavior of <m>f(x)</m> is like <m>x^3</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <webwork xml:id="webwork-polynomial-end-behavior-2">
+        <setup>
+          <var name="$function">
+            <set>
+              <member>\text{?}</member>
+              <member>x^2</member>
+              <member>x^3</member>
+              <member correct="yes">x^4</member>
+              <member>x^5</member>
+            </set>
+          </var>
+
+          <pg-code>
+            $function=PopUp(["?","x^2","x^3","x^4","x^5"],"x^4");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>There is a lot going on in the following graph.</p>
+          <p>The two "vertical" lines are actually just part of the graph of: <me>g(x) = (x-1)(x+4)(x-5)(x+2)</me></p>
+          <p>Your objective is to predict the <term>end-behavior</term> of <m>g(x)</m>, and you have four options:<md>
+          <mrow>y \amp= x^2</mrow>
+          <mrow>y \amp= x^3</mrow>
+          <mrow>y \amp= x^4</mrow>
+          <mrow>y \amp= x^5</mrow></md></p>
+          <p>Before maniuplating the graph, make a guess:  Which of these power functions will the function <m>g(x)</m> resemble if we zoom out?</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Swe8tMPk/width/416/height/373/border/888888" width="416px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Make your choice from among the power functions by selecting its checkbox. Then, use the slider to zoom out.</p>
+          <p>If you guessed correctly, the graph of <m>g(x)</m> will begin to look more and more like your power function.</p>
+          <p>Which power function has the same end behavior as <m>g(x)</m>?</p>
+          <p>Answer:  <var name="$function" form="popup" /></p>
+        </statement>
+        <hint>
+          <p>Imagine using algebra to expand this polynomial. What would be the leading term?</p>
+        </hint>
+        <solution>
+          <p>Expanding the function <m>g(x) = (x-1)(x+4)(x-5)(x+2)</m> gives: <me>x^4 - 22x^2 - 18x + 40</me></p>
+          <p>The leading term, <m>x^4</m>, will have the same end-behavior as <m>g(x)</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
+    <p>The rule for the <term>end-behavior</term> of a polynomial is a simple one:</p>
+    <p><blockquote>A polynomial and its leading term have the same end-behavior.</blockquote></p>
+    <p>And, since you already know the graphs of power functions, you should be able to predict the end-behavior of a polynomial if you know its leading term.</p>
+    <p>So, in the next exercise, you will get practice finding the leading term of a polynomial.</p>
+    <exercise>
+      <webwork xml:id="polynomial-end-behavior-leading-term">
+        <setup>
+          <var name="$a[0]"><static>3</static></var>
+          <var name="$a[1]"><static>7</static></var>
+          <var name="$a[2]"><static>11</static></var>
+          <var name="$a[3]"><static>4</static></var>
+          <var name="$a[4]"><static>5</static></var>
+          <var name="$a[5]"><static>14</static></var>
+          <var name="$a[6]"><static>16</static></var>
+          <var name="$a[7]"><static>10</static></var>
+          <var name="$a[8]"><static>9</static></var>
+          <var name="$mina8"><static>-9</static></var>
+          <var name="$a4a5"><static>70</static></var>
+          <var name="$vars2">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">x^2</member>
+              <member>x^3</member>
+              <member>x^4</member>
+            </set>
+          </var>
+          <var name="$vars4">
+            <set>
+              <member>\text{?}</member>
+              <member>x^2</member>
+              <member>x^3</member>
+              <member correct="yes">x^4</member>
+            </set>
+          </var>
+          <var name="$vars3">
+            <set>
+              <member>\text{?}</member>
+              <member>x^2</member>
+              <member correct="yes">x^3</member>
+              <member>x^4</member>
+            </set>
+          </var>
+
+          <pg-code>
+            @a=map{2+$_}NchooseK(15,9);
+            $a4a5=$a[4]*$a[5];
+            $mina8=-1*$a[8];
+            $vars2=PopUp(["?","x^2","x^3","x^4"],"x^2");
+            $vars4=PopUp(["?","x^2","x^3","x^4"],"x^4");
+            $vars3=PopUp(["?","x^2","x^3","x^4"],"x^3");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>For each polynomial below, determine its leading term.</p>
+          <p>Enter the coefficient in the blank, and then choose the correct power of <m>x</m> with the drop-down.</p>
+          <p><me>f(x) = <var name="$a[0]" />x + <var name="$a[1]" />x^2 + <var name="$a[2]" /></me></p>
+          <p>The leading term of <m>f(x)</m> is:  <var name="$a[1]" width="10" /> <var name="$vars2" form="popup" /></p>
+          <p><me>g(x) = x(x - <var name="$a[3]" />)(<var name="$a[4]" />x + 1)(<var name="$a[5]" />x - 1)</me></p>
+          <p>The leading term of <m>g(x)</m> is:  <var name="$a4a5" width="10" /> <var name="$vars4" form="popup" /></p>
+          <p><me>h(x) = (<var name="$a[6]" /> - x)(x + <var name="$a[7]" />)(<var name="$a[8]" />x - 1)</me></p>
+          <p>The leading term of <m>h(x)</m> is:  <var name="$mina8" width="$10" /> <var name="$vars3" form="popup" /></p>
+        </statement>
+        <hint>
+          <p>You don't need to completely expand the polynomials <m>g(x)</m> and <m>h(x)</m>. Just ask yourself which parts of each linear factor you would multiply to give the highest power of <m>x</m>.</p>
+          <p>For instance, in <m>h(x)</m>, it should be clear that the degree is <m>3</m>. From the formula given, the only way to get a factor of <m>x^3</m> is by multiplying the <m>-x</m> in the first factor, by the <m>x</m> in the second factor, and finally by the <m><var name="$a[8]" />x</m> in the third factor.</p>
+          <p>The leading term for <m>h(x)</m> is just that product:<me>(-x)*(x)*(<var name="$a[8]" />x)</me></p>
+        </hint>
+        <solution>
+          <p>The leading term of <m>f(x)</m> is:  <m><var name="$a[1]" />x^2</m></p>
+          <p>The leading term of <m>g(x)</m> is:  <m><var name="$a4a5" />x^4</m></p>
+          <p>The leading term of <m>h(x)</m> is:  <m><var name="$mina8" />x^3</m></p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <webwork xml:id="polynomial-end-behavior-arrows">
+        <setup>
+          <var name="$left">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{Up}</member>
+              <member correct="yes">\text{Down}</member>
+            </set>
+          </var>
+          <var name="$right">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{Up}</member>
+              <member>\text{Down}</member>
+            </set>
+          </var>
+          <var name="$end">
+            <set>
+              <member>\text{?}</member>
+              <member>x</member>
+              <member>x^2</member>
+              <member correct="yes">x^3</member>
+            </set>
+          </var>
+
+          <pg-code>
+            $left=PopUp(["?","Up","Down"],"Down");
+            $right=PopUp(["?","Up","Down"],"Up");
+            $end=PopUp(["?","x","x^2","x^3"],"x^3");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>This problem concerns the polynomial <me>f(x) = x(x - 2)(x + 3)</me>and your goal is to predict the end-behavior. Think about the power function which has the same end-behavior as <m>f(x)</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NcwafvMp/width/427/height/392/border/888888" width="427px" height="392px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Use the checkboxes to choose whether the graph will point upward or downward as <m>x</m> gets far from zero on the left and right.</p>
+          <p>On the left-hand side, the graph points <var name="$left" form="popup" /></p>
+          <p>On the right-hand side, the graph points <var name="$right" form="popup" /></p>
+          <p>The end-behavior of <m>f(x)</m> is the same as <var name="$end" form="popup" /></p>
+
+        </statement>
+        <solution>
+          <p>The degree of <m>f(x)</m> is <m>3</m>, as that is the number of linear factors. So, its end-behavior is the same as <m>x^3</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
+
+  </introduction>
+</section>
+-->
