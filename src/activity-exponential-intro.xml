@@ -13,22 +13,28 @@
 <section xml:id="activity-exponential-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Introduction to Exponential Functions</title>
   <introduction>
-    <p>You may have heard, <q>The world is constantly changing</q>.  But the big question is <q>How?</q> Is there a pattern?  In math patterns have names.</p>
+    <p>You may have heard, <q>The world is constantly changing</q>.  But the big question is <q>How?</q> Is there a pattern?  In math, patterns have names.</p>
     <p><term>Linear</term> is the name of a pattern.  If you graph a linear formula, it looks like a straight line.  If you look at the data of a linear pattern you will notice the data has a constant <term>rate of change</term> in other words constant slope.</p>
-    <p>In this section we study a pattern in which something else remains constant, but it's not the rate of change, it is the percent.</p>
+    <p>In this section we study a pattern in which something remains constant, but it's not the rate of change, it is the percent change.</p>
+    <p>One way to distiguish between linear and exponential patterns is <term>linear</term> means <q>repeated addition.</q> Where as <term>exponential</term> means <q>repeated multiplication.</q></p>
+    <p>We can pick out patterns from language too.  For instance the statement, <q>A worker makes <m>\$ 15</m> per hour</q> is giving us information about a linear pattern. The statement indicates that for each hour that passes the worker adds <m>\$ 15</m> to their earnings.</p>
+    <p>On the other hand if the worker has a salary increase of <m>15 \%</m> each hour it means their earnings are multiplied by <m>1.15</m> for each hour they work.</p>
+    <p>We must realize that multiplication and percent change are related. To change a value by a percent we multiply that value by something.</p>
   </introduction>
 
   <subsection>
     <title>Review of Percent Change</title>
-    <p>A <term>percent change</term> on a value means to change it by a fraction of itself.  When someone gets a <m>10 \%</m> raise in salary it means that their salary was divided into pieces. <m>10 \% means</m> <me>\frac{\displaystyle{10}}{\displaystyle{100}} = \frac{\displaystyle{1}}{\displaystyle{10}}</me> The increase means one of those pieces was added onto their original salary.  Think of it like this</p>
+    <p>A <term>percent change</term> on a value means to change it by a fraction of itself.</p>
+    <p>When someone gets a <m>10 \%</m> raise in salary it means that their salary was divided into pieces and one of those pieces is added onto the original salary. The percent value <m>10 \% </m> means <me>\frac{\displaystyle{10}}{\displaystyle{100}} = \frac{\displaystyle{1}}{\displaystyle{10}}</me> The increase means <m>0.10</m> of their salary is added back onto their original salary.</p>
+    <p>Think of it like this</p>
     <blockquote>
         <p>New Salary = Old Salary + <m>1/10</m> of Old Salary</p>
         <p>New Salary = Old Salary + <m>0.10</m> of Old Salary</p>
     </blockquote>
-        <p>If we let <m>N</m> represent the new salary and <m>s</m> represent the old salary we can write</p>
-        <md>
-            <mrow>N \amp= s + 0.1s</mrow>
-        </md>
+    <p>If we let <m>N</m> represent the new salary and <m>s</m> represent the old salary we can write</p>
+    <md>
+        <mrow>N \amp= s + 0.1s</mrow>
+    </md>
     <p>Notice when we look at the statement as an equation, the variable <m>s</m> is factor of both terms on the right.  Therefore <m>s</m> can be factored out and the equation can be rewritten as</p>
         <md>
             <mrow>N \amp= (1 + 0.1)s</mrow>
@@ -36,8 +42,8 @@
         </md>
     <p>We are now able to think of a <m>10 \%</m> increase as a multiple of <m>1.1</m>  where the <m>1</m> represents the <m>100 \%</m> you already had and the <m>0.1</m> represents the <m>10 \%</m> increase.</p>
     <p>In the equation <me>N = 1.1s</me> the number <m>1.1</m> is called the <term>growth factor</term> and is usually denoted with letter <m>b</m>.</p>
-    <p>In this example multiplying <m>s</m> by the growth factor of 1.1 makes <m>s</m> bigger by <m>10 \%</m></p>
-    <p>Whenever a percent value is given we must turn that value into its <term>decimal equivlent</term> so we can use it.</p>
+    <p>In this example multiplying by the growth factor of 1.1 makes <m>s</m> bigger by <m>10 \%</m></p>
+    <p>In order to make calculations with a percent value we must turn that value into its <term>decimal equivlent</term> so we can use it.</p>
     <p>For example the percent values <m>0.05 \%, 0.5 \%, 5 \%</m> and <m>50 \%</m> have decimal equivalents of</p>
     <md>
         <mrow>\frac{\displaystyle{0.05}}{\displaystyle{100}} \amp= 0.0005</mrow>
@@ -46,13 +52,12 @@
         <mrow>\frac{\displaystyle{50}}{\displaystyle{100}} \amp= 0.5</mrow>
     </md>
     <p>respectively.</p>
-    <p>In fact, the decimal equivalent of any percent value is that value divided by 100.</p>
+    <p>In fact, the <term>decimal equivalent</term> of any percent value is that value divided by 100.</p>
     <me>
         r = \frac{\displaystyle{\text{Pecent Value}}}{\displaystyle{100}}
     </me>
-    <p>A percent increase means to multiply the original value by <m>b = 1 + r</m> where <m>r</m> is the decimal equivalent of the given percent.</p>
-    <p>In our salary example <m>r = 0.1</m> so we multiplied by <m>b = 1 + 0.1 = 1.1</m> to get the <m>10 \%</m> increase.</p>
-    
+    <p>A percent increase means to multiply the original value by <m>b = 1 + r</m> where <m>r</m> is the <term>decimal equivalent</term> of the given percent.</p>
+    <p>In our salary example the raise of <m>10 \%</m> has a <term>decimal equivalent</term> <m>r = 0.1</m> so we multiplied by <m>b = 1 + 0.1 = 1.1</m> to get the <m>10 \%</m> increase.</p>
     <p>In general, for percent growth the <term>growth factor</term> is defined as</p>
     <me>b = 1 + r</me>
     <p>Notice that the growth factor is greater than 1 for percent growth to occur.</p>
@@ -110,13 +115,15 @@
                 </setup>
 
                 <statement>
+                    <p>Example:</p>
                     <p>Price of milk last year at a local grocery store was <m>\$</m>3.43 per gallon.  Today the price of milk is <m>7.5 \%</m> higher. What is the new price of milk? Round your answer to the nearest penny.</p>
                     <p>Here's how:</p>
                     <p>In order to get a percent increase on the price of milk we must multiply by a growth factor greater than one.  In math we say, <m>b \gt 1</m>.</p>
                     <p>What is the growth factor for a <m>7.5 \%</m> increase?</p>
                     <p><m>b = </m> <var name="$b1" width="5" /></p>
-                    <p>We multiply our growth factor by the original price of milk to get the new price of the milk.</p>
+                    <p>We multiply the original price of milk by our growth factor to get the new price of milk.</p>
                     <p>The price of milk today is <m>\$</m><var name="$increase1" width="5" />.</p>
+                    <p>Example:</p>
                     <p>The value of a stock was at <m>\$ 21.32</m> per share yesterday. Today that same stock is valued at <m>\$ 24.07</m> per share. What is the percent increase in the value of the stock? Round your answer to 2 decimal places.</p>
                     <p>We know the value of the stock has increaseed, therefore we must have multiplied by a number <m>b \gt 1</m>.  We need to find <m>b</m> and we can use what we know about the beginning and ending stock values to find it.</p>
                     <p><m>21.32 * b = 24.07</m> Now solve for <m>b</m></p>
@@ -128,7 +135,7 @@
         </exercise>
     <p>Just like something can increase by a percent, it is possible to decrease by a percent.</p>
     <p>Consider a pair of shorts on sale where the original price of the shorts has been reduced by 15%.  This means the price of the shorts is divided into pieces and one of those pieces is subtracted from the original price of the shorts.</p>
-    <p>To reduce the price by <m>15 \%</m> we must turn the percent value into its decimal equivalent.  The decimal equivalent of <m>15 \%</m> is <m>\frac{\displaystyle{15}}{\displaystyle{100}} = 0.15</m>.</p>
+    <p>To reduce the price by <m>15 \%</m> we must turn the percent value into its <term>decimal equivalent</term>.  The <term>decimal equivalent</term> of <m>15 \%</m> is <m>r = \frac{\displaystyle{15}}{\displaystyle{100}} = 0.15</m>.</p>
     <p>Therefore the sale price of the shorts is</p>
     <blockquote>
         <p>New Price = Old Price <m>-</m> <m>0.15</m> * Old Price</p>
@@ -143,7 +150,7 @@
         <mrow>N \amp= 0.85p</mrow>
     </md>
     <p>Look at what we end up with.  A <m>15 \%</m> reduction in price means to multiply the original price by <m>0.85</m>. This is the growth factor again.  However, in this calculation we observe the price we actually pay, that is <m>85 \%</m> of the original price.  We have to think a little bit to realize the decrease is <m>100 \% - 85 \% = 15 \%</m></p>
-    <p>A percent decrease means to multiply the original value by <m>b = 1 - r</m> where <m>r</m> is the decimal equivalent of the given percent. Notice that a decrease by a percent means to multiply by a number less than 1. In math we say <m>b \lt 1</m></p>
+    <p>A percent decrease means to multiply the original value by <m>b = 1 - r</m> where <m>r</m> is the <term>decimal equivalent</term> of the given percent. Notice that a decrease by a percent means to multiply by a number less than 1. In math we say <m>b \lt 1</m></p>
     <p>Consider a study on the reduction of asthma.</p>
     <blockquote>
         <p><em>New York Times, Vitamin D May Reduce Asthma Attacks, Nicholas Bakalar, Sept. 8 2016</em></p>
@@ -648,13 +655,6 @@
         </exercise>
 
         <p>In the exercises that follow, use the tables to record <em>how</em> you get each result.  Don't write the actual result, you'll just be wasting your time.</p>
-        
-        <todo>The following exercise has to be fixed.  Getting message Unable to decode problem text
-        Error message for command: renderProblem
-        faultcode: Server
-        faultstring: Can't locate object method "context" via package "390*1.08*1.08*1.08" (perhaps you forgot to load "390*1.08*1.08*1.08"?) at /opt/webwork/pg/lib/AnswerHash.pm line 259.
-        End error message</todo>
-
         <exercise>
             <webwork>
               <setup>
@@ -728,102 +728,78 @@
                   return 1;
             });}
                 </pg-code>
-
               </setup>
-
               <statement>
-                <ul>
-                  <li><p>A population of <var name="$a" /> bacteria increases by <m><var name="$p" />\,\%</m> every hour.</p>
-                  <table>
-                    <caption>Building a Pattern</caption>
-                        <tabular top="major" halign="center">
-                          <col halign="left" />
-                          <col halign="left" />
-                          <row bottom="medium">
+                <p>A population of <var name="$a" /> bacteria increases by <m><var name="$p" />\,\%</m> every hour.</p>
+                <p>For each hour that passes, we multiply by the growth factor. This gives us the percent change at the end of each hour <m>t = 1, 2 </m> etc.</p>
+                <p>Can you identify the growth factor <m>b</m> from the values entered for you in the table?</p>
+                <p><m>b = </m> <var name="$b" width="4" /></p>
+                <p>Continue the pattern shown to complete the table.</p>
+                <table>
+                    <tabular top="major" halign="center">
+                        <col halign="left" />
+                        <col halign="left" />
+                        <row bottom="medium">
                             <cell><m>t</m>, Hours that pass</cell>
                             <cell><m>P(t)</m> Population at end of each hour</cell>
-                          </row>
-                          <cell>
-                              <line>For each hour that passes, we multiply by the growth factor.</line>
-                              <line>This gives us the percent change at the end of each hour <m>t = 1, 2</m> etc.</line>
-                          </cell>
-                          <row>
+                        </row>
+                        <row>
                             <cell><m><var name="$x[0]" /></m></cell>
                             <cell><m><var name="$y[0]" /></m></cell>
-                          </row>
-                          <row>
+                        </row>
+                        <row>
                             <cell><m><var name="$x[1]" /></m></cell>
                             <cell><m><var name="$y[1]" /></m></cell>
-                          </row>
-                          <row>
+                        </row>
+                        <row>
                             <cell><m><var name="$x[2]" /></m></cell>
                             <cell><m><var name="$y[2]" /></m></cell>
-                          </row>
-                          <cell>
-                              <line>Write out, in expanded form, the results of the next two hours.</line>
-                          </cell>
-                          <row>
+                        </row>
+                        <row>
                             <cell><var name="$x[3]" width="2" /></cell>
                             <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
-                          </row>
-                          <row>
+                        </row>
+                        <row>
                             <cell><var name="$x[4]" width="2" /></cell>
                             <cell><var name="$y[4]" width="20" evaluator="$ev[4]"/></cell>
-                          </row>
-                          <cell>
-                              <line>Notice there is a pattern emerging.</line>
-                              <line>Every time an hour passes there is another multiple of </line>
-                              <line>but the value <m><var name="$a" /></m> is always the same.</line>
-                              <line>Instead of writing <m><var name="$b" /></m> over and over</line>
-                              <line>use exponents to <q>count</q> how many times the percent has been compounded.</line>
-                              <line>What is the input on the left after 20 hours?</line>
-                              <line>What is the calculation on the right?</line>
-                          </cell>
-                          <row>
+                        </row>
+                    </tabular>
+                </table>
+                <p>Notice there is a pattern emerging. For every hour that passes there is another multiple of the growth factor, and it's always the same value.</p>
+                <p>Instead of writing the growth factor over and over, we can use exponents to clean up the notation.  The exponent <q>counts</q> how many times the percent has been compounded.</p>
+                <p>In the next cells, let <m>t = 20</m> hours. Then enter the calculation you would make on the right.</p>
+                <table>
+                    <tabular top="major" halign="center">
+                        <col halign="left" />
+                        <col halign="left" />
+                        <row bottom="medium">
+                            <cell><m>t</m>, Hours that pass</cell>
+                            <cell><m>P(t)</m> Population at end of each hour</cell>
+                        </row>
+                        <row>
                             <cell><var name="$x[5]" width="2" /></cell>
                             <cell><var name="$y[5]" width="20" evaluator="$ev[5]"/></cell>
-                          </row>
-                          <cell>
-                              <line>Assume the time input is <m>t</m> on the left.</line>
-                              <line>What is the calculation on the right?</line>
-                          </cell>
-                          <row>
+                        </row>
+                    </tabular>
+                </table>
+                <p>Finally, at any time <m>t</m>, what is the resulting formula?</p>
+                <table>
+                    <tabular top="major" halign="center">
+                        <col halign="left" />
+                        <col halign="left" />
+                        <row bottom="medium">
+                            <cell><m>t</m>, Hours that pass</cell>
+                            <cell><m>P(t)</m> Population at end of each hour</cell>
+                        </row>
+                        <row>
                             <cell><var name="$x[6]" width="2" /></cell>
                             <cell><var name="$y[6]" width="20" evaluator="$ev[6]"/></cell>
-                          </row>
-                          <cell>
-                              <line>This is your formula to calculate the population at any time!</line>
-                          </cell>
-                        </tabular>
-                    <tabular top="major" halign="center">
-                      <col halign="left" />
-                      <col halign="left" />
-                      <row bottom="medium">
-                        <cell><m>t</m>, Hours that pass</cell>
-                        <cell><m>P(t)</m> Population at end of each hour</cell>
-                      </row>
-                      <cell>
-                          <line>Initially <m>t = 0</m> (no time has passed.</line>
-                      </cell>
-                      <row>
-                        <cell><m><var name="$x[0]" /></m></cell>
-                        <cell><m><var name="$y[0]" /></m></cell>
-                      </row>
-                      <row>
-                        <cell><m><var name="$x[1]" /></m></cell>
-                        <cell><m><var name="$y[1]" /></m></cell>
-                      </row>
-                      <row>
-                        <cell><m><var name="$x[2]" /></m></cell>
-                        <cell><m><var name="$y[2]" /></m></cell>
-                      </row>
-                      <row>
-                        <cell><var name="$x[3]" width="4" /></cell>
-                        <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
-                      </row>
+                        </row>
                     </tabular>
-                  </table></li>
-                </ul>
+                </table>
+
+                <p>This is your formula to calculate the population at any time!</p>
+
               </statement>
             </webwork>
         </exercise>
@@ -923,8 +899,8 @@
                 </setup>
 
                 <statement>
-                    <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in hours. The pie temperature is <m><var name="$a" /></m> degrees fahrenheit when it is first removed from the oven.  After 4 hours the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</p>
-                    <p>Round all your calculations to 4 decimal places if needed.</p>
+                    <p>The temperature of a pie is <m><var name="$a" /></m> degrees fahrenheit when it is first removed from the oven.  After 4 hours the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</p>
+                    <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in hours. Round all your calculations to 4 decimal places if needed.</p>
                     <p>Here's how:</p>
                     <p>The formula is going to look something like <m>f(t) = ab^{t}</m></p>
                     <p>We know the temperature of the pie at two different times including the initial temperature.</p>
@@ -993,7 +969,7 @@
                       $a=random(300,375,5);
                       $finalTemp=random(95,110,1);
                       $b=$finalTemp/$a;
-                      $bRoot=$b**(0.2);
+                      $bRoot=Real($b**(0.2));
                       $r=1-$b;
                       $rRoot=1-$bRoot;
                       $p=$r*100;
@@ -1004,8 +980,8 @@
                 </setup>
 
                 <statement>
-                    <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in hours. The pie temperature is <m><var name="$a" /></m> degrees fahrenheit 3 hours after being removed from the oven.  After 8 hours out of the oven the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</p>
-                    <p>Round all your calculations to 4 decimal places if needed.</p>
+                    <p>The temperature of a pie is <m><var name="$a" /></m> degrees fahrenheit 3 hours after being removed from the oven.  After 8 hours out of the oven the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</p>
+                    <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in hours. Round all your calculations to 4 decimal places if needed.</p>
                     <p>Here's how:</p>
                     <p>The formula is going to look something like <m>f(t) = ab^{t}</m>.  Since we assume exponential decay, we know there is a growth factor <m>0 \lt b \lt 1</m></p>
                     <p>How many times will the growth factor be compounded between the times <m>t = 3</m> and <m>t = 8</m>?</p>
@@ -1041,7 +1017,7 @@
                     <me>b^{5} = \frac{\displaystyle{<var name="$finalTemp" />}}{\displaystyle{<var name="$a" />}}</me>
                     <me>b = (\frac{\displaystyle{<var name="$finalTemp" />}}{\displaystyle{<var name="$a" />}})^\frac{1}{5}</me>
                     <p><m>b = </m> <var name="$bRoot" /></p>
-                    <p>Then using our new growth factor (keeping the exact value on our calculator with no rounding) we can find the initial temp of the pie at <m>t = 0</m> by entering any orderd pair into the equation we have so far and solving for the initial temp.</p>
+                    <p>Using our new growth factor (keeping the exact value on our calculator with no rounding) we can find the initial temp of the pie at <m>t = 0</m> by entering any orderd pair into the equation we have so far and solving for the initial temp.</p>
                     <md>
                         <mrow>f(t) \amp= a(<var name="$bRoot" />)^t</mrow>
                         <mrow><var name="$a" /> \amp= a(<var name="$bRoot" />)^3</mrow>
@@ -1053,7 +1029,262 @@
                 </solution>
             </webwork>
         </exercise>
+  </subsection>
+  <subsection>
+    <title>Graphs of Exponential Functions</title>
+    <p>We now take a moment to examine graphs of exponetial functions. It helps to compare them to linear functions since we have some experience with them.</p>
+    <p>In the following examples we track the position of an ant using both a linear model and an exponential model.</p>
+    <p>Repeated Addition (adding positive or negative values)</p>
+    <exercise>
+        <webwork>
+            <setup>
+                <var name="$dInit">
+                    <static>150</static>
+                </var>
+                <var name="$lin">
+                    <set>
+                      <member correct="yes">\text{linear}</member>
+                      <member>\text{exponential}</member>
+                    </set>
+                </var>
+                <var name="$exp">
+                    <set>
+                      <member>\text{linear}</member>
+                      <member correct="yes">\text{exponential}</member>
+                    </set>
+                </var>
+                <var name="$a">
+                    <static>-25</static>
+                </var>
+                <var name="$tabout[0]">
+                    <static>150</static>
+                </var>
+                <var name="$tabout[1]">
+                    <static>125</static>
+                </var>
+                <var name="$tabout[2]">
+                    <static>100</static>
+                </var>
+                <var name="$tabout[3]">
+                    <static>75</static>
+                </var>
+                <var name="$tabout[4]">
+                    <static>50</static>
+                </var>
+                <var name="$tabout[5]">
+                    <static>25</static>
+                </var>
+                <var name="$tabout[6]">
+                    <static>0</static>
+                </var>
+                
+                <pg-code>
+                    $dInit = Real(150);
+                    $lin = RadioButtons(
+                    ["linear","exponential"],
+                    0, labels => ["linear","exponential"],displayLabels => 0
+                    );
+                    $exp = RadioButtons(
+                    ["linear","exponential"],
+                    1, labels => ["linear","exponential"],displayLabels => 0
+                    );
+                    $a=Real(25);
+                    @time=map{$dInit-$a*$_}(0..6);
+                </pg-code>
+            </setup>
+    
+            <statement>
+                <p>An ant is intially 150 inches from a wall.  Each minute the ant walks 25 inches towards the wall.</p>
+                <p>Is this model linear or is it exponential?</p>
+                <p><var name="$lin" form="buttons" /></p>
+                <p>Complete the table. What is the ant's distance to the wall at each minute? Assume <m>t = 0</m> corresponds to the initial positon of the ant.</p>
+                <p>Initial distance is <var name="$dInit" width="5" /></p>
+                <table>
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <row>
+                            <cell>Time <m>t</m> (hours)</cell>
+                            <cell>Position <m>f(t)</m> (inches)</cell>
+                        </row>
+                        <row>
+                            <cell><m>0</m></cell>
+                            <cell><var name="$time[0]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>1</m></cell>
+                            <cell><var name="$time[1]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>2</m></cell>
+                            <cell><var name="$time[2]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>3</m></cell>
+                            <cell><var name="$time[3]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>4</m></cell>
+                            <cell><var name="$time[4]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>5</m></cell>
+                            <cell><var name="$time[5]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>6</m></cell>
+                            <cell><var name="$time[6]" width="10"/></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/CuwW9nkK/width/427/height/332/border/888888/sri/true/sdz/true" width="427px" height="332px" style="border:0px;" width="431px" height="332px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            </statement>
+            
+            <solution>
+                <var name="$dInit" />
+            </solution>
+        </webwork>
+    </exercise>
 
+    <p>Repeated Multiplication</p>
+    <exercise>
+        <webwork>
+            <setup>
+                <var name="$dInit">
+                    <static>150</static>
+                </var>
+                <var name="$lin">
+                    <set>
+                      <member correct="yes">\text{linear}</member>
+                      <member>\text{exponential}</member>
+                    </set>
+                </var>
+                <var name="$exp">
+                    <set>
+                      <member>\text{linear}</member>
+                      <member correct="yes">\text{exponential}</member>
+                    </set>
+                </var>
+                <var name="$r">
+                    <static>0.25</static>
+                </var>
+                <var name="$b">
+                    <static>0.75</static>
+                </var>
+                <var name="$t2[0]">
+                    <static>150</static>
+                </var>
+                <var name="$t2[1]">
+                    <static>112.50</static>
+                </var>
+                <var name="$t2[2]">
+                    <static>84.38</static>
+                </var>
+                <var name="$t2[3]">
+                    <static>63.28</static>
+                </var>
+                <var name="$t2[4]">
+                    <static>47.46</static>
+                </var>
+                <var name="$t2[5]">
+                    <static>35.60</static>
+                </var>
+                <var name="$t2[6]">
+                    <static>26.70</static>
+                </var>
+                
+                <pg-code>
+                    $dInit = Real(150);
+                    $lin = RadioButtons(
+                    ["linear","exponential"],
+                    0, labels => ["linear","exponential"],displayLabels => 0
+                    );
+                    $exp = RadioButtons(
+                    ["linear","exponential"],
+                    1, labels => ["linear","exponential"],displayLabels => 0
+                    );
+                    $r=Real(0.25);
+                    $b=1-$r;
+                    @t2=map{$dInit*$b**$_}(0..6);
+                </pg-code>
+            </setup>
+    
+            <statement>
+                <p>Suppose the ant is intially 150 inches from a wall, but each minute the ant walks 25% of the distance to the wall.</p><p>Is this model linear or is it exponential?</p>
+                <p><var name="$exp" form="buttons" /></p>
+                <p>Where is the ant at each minute? Assume <m>t = 0</m> corresponds to the initial positon of the ant.</p>
+                 <p>Initial distance is <var name="$dInit" width="5" /></p>
+                <table>
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <row>
+                            <cell>Time <m>t</m> (hours)</cell>
+                            <cell>Position <m>f(t)</m> (inches)</cell>
+                        </row>
+                        <row>
+                            <cell><m>0</m></cell>
+                            <cell><var name="$t2[0]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>1</m></cell>
+                            <cell><var name="$t2[1]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>2</m></cell>
+                            <cell><var name="$t2[2]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>3</m></cell>
+                            <cell><var name="$t2[3]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>4</m></cell>
+                            <cell><var name="$t2[4]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>5</m></cell>
+                            <cell><var name="$t2[5]" width="10"/></cell>
+                        </row>
+                        <row>
+                            <cell><m>6</m></cell>
+                            <cell><var name="$t2[6]" width="10"/></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/C4ZTpKTF/width/431/height/332/border/888888/sri/true" width="431px" height="332px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p> 
+            </statement>
+            
+            <solution>
+                <var name="$dInit" />
+            </solution>
+        </webwork>
+    </exercise>
+    <p>Comparing the linear and the exponential graphs there are some clear differences.  The linear function graphs as a staight line while the exponential function graphs as a curve.</p>
+    <p>In our example both functions have the same initial value. This value shows up as the vertical intercept on each graph.  But the exponential function decreases faster than the linear function.  Then again, the linear function has a horizontal intercept (it touches the horizontal axis).  Does the exponential ever touch the horiontal axis?</p>
+    <p>Let's explore the graph of the exponential function more closely. Keep in mind the example of the ant moving towards a wall by reducing the distance by <m>25 \%</m> each minute.</p>
+    <exercise>
+        <webwork>
+            <setup>
+                <var name="$t">
+                    <static>10</static>
+                </var>
+                
+                <pg-code>
+                    $t = Real(10);
+                </pg-code>
+            </setup>
+    
+            <statement>
+                <p>Notice that the graph seems to touch the x-axis at t = 16, but if you zoom in around that point we realize the graph does not actually touch the horizontal axis.  How far to the right should you move the point in order to touch the horizontal axis.  Try zooming in again, does it touch the horizontal axis?  In fact, the graph will never touch the horizontal axis.  In this case, the time, t axis is called a horizontal asymptote.  A horizontal asymptote is a horizontal line that the function approaches as we move to the right or to the left. <var name="$t" width="5" /></p>
+            </statement>
+            
+            <solution>
+                <var name="$t" />
+            </solution>
+        </webwork>
+    </exercise>
+    <p>All exponential funcitons have horizontal asymptotes.  The equation for a horizontal asymptote is the equation of the horizontal line the function approaches.</p>
   </subsection>
 
 </section>
