@@ -28,10 +28,14 @@
       </ul>
     </paragraphs>
 
-    <exercise>
-        <title>Function Transformations 1</title>
+    <p>First, we will see the effect of making a change to the <em>output</em> of a function. You will be able to describe what happens to the graph of a function after it has been changed from: <md>
+    <mrow>y = f(x)</mrow>
+    <mrow>\text{to}</mrow>
+    <mrow>y = f(x) + k</mrow></md></p>
 
-        <webwork xml:id="vertical-transformation-with-graph">
+    <exercise>
+
+        <webwork xml:id="webwork-vertical-transformation-with-graph">
 
             <setup>
               <var name="$choice">
@@ -67,18 +71,24 @@
 
             <statement>
                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pXUT7wZS/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>The graph starts by showing the function <m>f(x) = x^2</m>. Moving the slider will change the function by adding a number <m>k</m> outside of the function. Use the slider to change the value of <m>k</m> to the number <m>5</m>. What happened to the graph as you changed the formula to <m>f(x) + 5 = x^2 + 5</m>?</p>
-                <p><var name="$choice" form="buttons" /></p>
-                <p>Which equation below would graph as a parabola with a vertex at the point <m>(0,-3)</m>?</p>
-                <p><var name="$point" form="buttons" /></p>
+                <ol>
+                  <li><p>The graph starts by showing the parabola <m>f(x) = x^2</m>. Moving the slider will change the function by adding a number <m>k</m> outside of the function. Use the slider to change the value of <m>k</m> to the number <m>5</m>. What happened to the graph as you changed the formula to <m>f(x) + 5 = x^2 + 5</m>?</p>
+                  <p><var name="$choice" form="buttons" /></p></li>
+                  <li><p>Notice that the graph shows the coordinates of the lowest point (the <em>vertex</em>). Which equation below would graph as a parabola with a vertex at the point <m>(0,-3)</m>?</p>
+                  <p><var name="$point" form="buttons" /></p></li>
+                </ol>
             </statement>
         </webwork>
     </exercise>
 
-    <exercise>
-        <title>Function Transformations 2</title>
+    <p>Next, you will see what happens when we change the <em>input</em> of a function. You will be able to describe what happens to the graph as you change the formula from: <md>
+    <mrow>y = f(x)</mrow>
+    <mrow>\text{to}</mrow>
+    <mrow>y = f(x+h)</mrow></md></p>
 
-        <webwork xml:id="vertical-and-horizontal-transformation-with-graph">
+    <exercise>
+
+        <webwork xml:id="webwork-vertical-and-horizontal-transformation-with-graph">
 
           <setup>
             <var name="$changeH">
@@ -116,50 +126,51 @@
 
           <statement>
               <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders will change the function by adding a number <m>k</m> outside the function and a number <m>h</m> inside the function. What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
-              <p><var name="$changeH" form="buttons" /></p>
-              <p>Which equation below would graph as a parabola with a vertex at the point <m>(5,3)</m>?</p>
-              <p><var name="$changeHandK" form="buttons" /></p>
+              <ol>
+                <li><p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders will change the function by adding a number <m>k</m> outside the function and a number <m>h</m> inside the function. What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
+                <p><var name="$changeH" form="buttons" /></p></li>
+                <li><p>Which equation below would graph as a parabola with a vertex at the point <m>(5,3)</m>?</p>
+                <p><var name="$changeHandK" form="buttons" /></p></li>
+              </ol>
           </statement>
         </webwork>
     </exercise>
-<!-- Begin last activity here... -->
+
+    <p>Now, let's apply the idea of shifting a graph to a physical example in the next two exercises.</p>
+
     <exercise>
       <webwork xml:id="vertical-and-horizontal-transformation-application-projectile-motion">
         <setup>
-
-          <var name="$afterOne">
-            <static>0</static>
-          </var>
-
-          <var name="$afterTwo">
-            <static>1</static>
-          </var>
-
-          <var name="$afterThree">
-            <static>2</static>
-          </var>
 
           <var name="$afterT">
             <static>t-1</static>
           </var>
 
-          <var name="$units">
+          <var name="$whichGraph">
             <set>
-              <member correct="yes">\text{Seconds}</member>
-              <member>\text{Feet}</member>
-              <member>\text{None of these}</member>
+              <member correct="yes">\text{Graph 1}</member>
+              <member>\text{Graph 2}</member>
+            </set>
+          </var>
+
+          <var name="$inOut">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{Input}</member>
+              <member>\text{Output}</member>
             </set>
           </var>
 
           <pg-code>
             Context('Numeric');
             Context()->variables->are(t=>'Real');
-            $afterOne=Real(0);
-            $afterTwo=Real(1);
-            $afterThree=Real(2);
             $afterT=Formula("t-1");
-            $units=PopUp(["?","Seconds","Feet","None of these"],"Seconds");
+            $whichGraph=PopUp(
+              ["?","Graph 1", "Graph 2"], "Graph 1"
+            );
+            $inOut=PopUp(
+              ["?","Input","Output"],"Input"
+            );
           </pg-code>
 
         </setup>
@@ -169,47 +180,24 @@
           <p>You can move the point to see how high the object will be at a certain time, or when the object will hit the ground.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BmHTxqW6/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Now, we can use this function to describe other situations involving such an object. For example, suppose the person had waited until <m>t = 1</m> second before throwing the object.</p>
-          <p>If the person waited 1 second before throwing it, how long would the object be in the air when <m>t = 1</m>?</p>
-          <p><var name="$afterOne" width="15" /> <var name="$units" form="popup" /></p>
-          <p>If the person waited 1 second before throwing it, how long would the object be in the air when <m>t = 2</m>?</p>
-          <p><var name="$afterTwo" width="15" /> <var name="$units" form="popup" /></p>
-          <p>If the person waited 1 second before throwing it, how long would the object be in the air when <m>t = 3</m>?</p>
-          <p><var name="$afterThree" width="15" /> <var name="$units" form="popup" /></p>
-          <p>In general, if the person waited 1 second before throwing it, how long would the object be in the air when time = <m>t</m> seconds?</p>
-          <p><var name="$afterT" width="15" /> <var name="$units" form="popup" /></p>
+          <ol>
+            <li><p>Which graph below shows the height of the object if the person waited 1 second before throwing it?</p>
+            <p>Graph 1 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/kCE4de8p/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Graph 2 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PNeV26dS/width/421/height/226/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Answer:  <var name="$whichGraph" form="popup" /></p></li>
+            <li><p>Since this is a <em>horizontal</em> translation of the original graph <m>h(t)</m>, are we changing the <em>input</em> or the <em>output</em>?</p>
+            <p><var name="$inOut" form="popup" /></p></li>
+            <li><p>In order to correctly shift the graph of <m>h(t)</m>, what will we use for the <em>input</em> in the formula for the function <m>h</m>? Type your expression below.</p>
+            <p><var name="$afterT" width="10" /></p></li>
+          </ol>
         </statement>
+        <hint><p>For the input which will correctly shift the graph, recall that adding a positive number to <m>t</m> will move the graph to the left, and subtracting a positive number from <m>t</m> will move the graph to the right.</p></hint>
+        <solution><p>The correct graph is the one beginning at the point <m>(1,40)</m>. This is a horizontal shift to the right by <m>1</m> second, so the input must be changed from <m>t</m> to <m>t-1</m>.</p></solution>
 
       </webwork>
 
     </exercise>
 
-    <exercise>
-      <webwork xml:id="vertical-and-horizontal-transformation-application-projectile-motion-graph">
-        <setup>
-
-          <var name="$whichGraph">
-            <set>
-              <member correct="yes">\text{Graph 1}</member>
-              <member>\text{Graph 2}</member>
-            </set>
-          </var>
-
-          <pg-code>
-            $whichGraph=RadioButtons(
-              ["Graph 1", "Graph 2"], 0, displaylabels => 0
-            );
-          </pg-code>
-
-        </setup>
-
-        <statement>
-          <p>Which graph below shows the height of the object if the person waited 1 second before throwing it?</p>
-          <p>Graph 1 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/kCE4de8p/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Graph 2 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PNeV26dS/width/421/height/226/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p><var name="$whichGraph" form="buttons" /></p>
-        </statement>
-      </webwork>
-    </exercise>
 
     <exercise>
       <webwork xml:id="vertical-and-horizontal-transformations-application-projectile-motion-time-delay-and-hight-increase">
@@ -253,4 +241,59 @@
         </statement>
       </webwork>
     </exercise>
+
+    <example>
+      <p>The linear function <me>f(x) = 4x</me> will graph as a line with slope <m>4</m>, passing through the origin <m>(0,0)</m>.</p>
+      <p>Now, using translations, it would be easy to write the equations of similar lines. For example:</p>
+      <p>The line with slope <m>4</m>, passing through the point <m>(3,5)</m>, would be the result of shifting <m>f(x)</m> to the <em>right</em> by <m>3</m> units, and <em>up</em> by <m>5</m> units.</p>
+      <p>What would be the equation of this new line?</p>
+
+      <hint>
+        <p>Since <m>f(x)</m> has the point <m>(0,0)</m>, think about shifting that point to <m>(3,5)</m>. Begin by shifting the function to the right by <m>3</m> units, so the input will be <m>x-3</m>.</p>
+        <p>Next, apply the translation which moves the graph up by <m>5</m> units.</p>
+      </hint>
+      <answer><p>Without doing any simplification to the formula, the line would be: <md>
+        <mrow>y \amp= f(x-3) + 5</mrow>
+        <mrow>\amp= 4(x-3) + 5</mrow></md></p>
+      </answer>
+    </example>
+
+    <exercise>
+      <webwork xml:id="webwork-point-slope">
+        <setup>
+          <var name="$whichLine">
+            <set>
+              <member>y = -7x-5</member>
+              <member>y = -7(x-8)</member>
+              <member correct="yes">y = -7(x-8)-5</member>
+              <member>y = -7(x+8)-5</member>
+            </set>
+          </var>
+
+          <var name="$a[0]"><static>8</static></var>
+          <var name="$a[1]"><static>5</static></var>
+
+          <pg-code>
+            @a=map{1+$_}NchooseK(8,2);
+            $whichLine=PopUp(
+            ["?","y = 12x - $a[1]","y = 12(x - $a[0])","y = 12(x - $a[0]) - $a[1]","y = 12(x + $a[0]) - $a[1]"],
+            "y = 12(x - $a[0]) - $a[1]"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The line with slope <m>12</m>, passing through the origin <m>(0,0)</m>, has the equation: <me>f(x) = 12x</me></p>
+          <p>Using translations, choose which equation below will graph as the line with slope <m>12</m>, passing through the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
+          <p><var name="$whichLine" form="popup" /></p>
+        </statement>
+        <solution>
+          <p>The e</p>
+        </solution>
+      </webwork>
+    </exercise>
+
+
+
+
+
   </section>

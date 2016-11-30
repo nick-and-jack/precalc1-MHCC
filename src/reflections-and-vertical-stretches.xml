@@ -41,7 +41,7 @@
         </list>
 
         <paragraphs>
-          <p>Function notation is all about describing inputs and outputs. So far we have seen inputs and outputs in these contexts:</p>
+          <p>Function notation is all about describing inputs and outputs. So far, we have seen inputs and outputs in these contexts:</p>
             <dl>
               <title></title>
               <li>
@@ -82,7 +82,7 @@
                 </table>
               </li>
             </dl>
-            <p>In this section, we explore changes to the input and output of a function.</p>
+            <p>In this section, we will continue to explore changes to the input and output of a function.</p>
 
         </paragraphs>
 
@@ -91,12 +91,12 @@
       <xi:include href="./activity-vertical-stretches.xml" />
 
     <conclusion>
-      <title>Gist of Reflections and Vertical Stretches</title>
+      <title>Summary of Reflections and Vertical Stretches</title>
       <paragraphs>
 
-        <p>In this section we study transformations that stretch a function or reflect the function across one of the axes.</p>
-        <p>Thinking once again of function notation as language, we know that the notation <m>f(x)</m> indicates an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are referring to the <term>opposite</term> of the input. That is, the function assumes the same output values but at the opposite input values.</p>
-        <p>Likewise, if we replace <m>f(x)</m> with <m>-f(x)</m>, we are referring to the <term>opposite</term> of the output. The function has opposite results for the same input values.</p>
+        <p>In this section we study transformations that stretch a function vertically, or reflect the function across one of the axes.</p>
+        <p>Thinking once again of function notation as language, we know that the notation <m>f(x)</m> indicates an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are referring to the <term>opposite</term> of the <em>input</em>.</p>
+        <p>Likewise, if we replace <m>f(x)</m> with <m>-f(x)</m>, we are referring to the <term>opposite</term> of the <em>output</em>.</p>
         <p>In each case, <m>-f(x)</m> and <m>f(-x)</m> represent reflections:</p>
         <dl>
           <title></title>
@@ -109,20 +109,79 @@
             <p>Reflection of <m>f(x)</m> over the vertical-axis</p>
           </li>
         </dl>
-        <p>In addition to reflecting a function, we can also stretch or compress a function vertically by multiplying outside by a constant <m>a</m></p>
+
+        <example>
+            <p>The function <m>g(x) = x^3 - 5x^2 + 2</m> is graphed below.</p>
+
+            <sidebyside widths="48% 48%">
+              <paragraphs>
+                <p>To reflect <m>g(x)</m> over the <m>x</m>-axis, we would take the opposite of the output by multiplying the formula by <m>-1</m>.</p>
+                  <p>The formula for this reflection is <md>
+                    <mrow>y \amp= -g(x)</mrow>
+                    <mrow>\amp= -x^3 + 5x^2 - 2</mrow></md>
+                    and it is graphed below:
+                  </p>
+              </paragraphs>
+
+              <paragraphs>
+                  <p>To reflect <m>g(x)</m> over the <m>y</m>-axis, we would use the opposite of the input by evaluating <m>g(-x)</m>.</p>
+                  <p>The formula for this reflection is <md>
+                    <mrow>y \amp= g(-x)</mrow>
+                    <mrow>\amp= (-x)^3 - 5(-x)^2 + 2</mrow>
+                    <mrow>\amp= -x^3 - x^2 + 2</mrow></md>
+                    and it is graphed below:
+                  </p>
+              </paragraphs>
+            </sidebyside>
+
+            <sidebyside widths="48% 48%">
+                  <figure>
+                    <caption>The reflection <m>y = -g(x)</m></caption>
+                      <image>
+                          <latex-image-code>
+                          <![CDATA[\begin{tikzpicture}
+                                      \begin{axis}[]
+                                          \addplot+[domain=-6:6]{-x^3+5*x^2-2};
+                                       \end{axis}
+                                  \end{tikzpicture}
+                          ]]>
+                          </latex-image-code>
+                      </image>
+                  </figure>
+
+                  <figure>
+                    <caption>The reflection <m>y = g(-x)</m></caption>
+                      <image>
+                          <latex-image-code>
+                          <![CDATA[\begin{tikzpicture}
+                                      \begin{axis}[]
+                                          \addplot+[domain=-6:6]{-x^3-5*x^2+2};
+                                       \end{axis}
+                                  \end{tikzpicture}
+                          ]]>
+                          </latex-image-code>
+                      </image>
+                  </figure>
+            </sidebyside>
+        </example>
+      </paragraphs>
+
+      <paragraphs>
+        <title>Vertical Stretch/Compress</title>
+        <p>In addition to reflecting a function, we can also <term>stretch</term> or <term>compress</term> a function vertically by multiplying the output a constant <m>a</m>.</p>
         <dl>
           <title></title>
           <li>
             <title><m>af(x)</m> if <m>a &gt; 1</m></title>
-            <p>Vertically stretch the graph of <m>f(x)</m> by a factor of <m>a</m></p>
+            <p>Vertically <term>stretch</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
           </li>
           <li>
             <title><m>af(x)</m> if <m>0 &lt; a &lt; 1</m></title>
-            <p>Vertically compress the graph of <m>f(x)</m> by a factor of <m>a</m></p>
+            <p>Vertically <term>compress</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
           </li>
         </dl>
-        <p>Note: We have not touched on the transformation <m>f(a*x)</m> which represents a horizontal stretch or compression. This is used primarily in the next course.</p>
-        <p>Work through the following examples for practice in applying these transformations.</p>
+        <note><p>In this section, we will not be exploring the transformation <m>f(a*x)</m> which represents a horizontal stretch or compression.</p></note>
+        <p>Now work through the following exercises for practice in applying these transformations.</p>
       </paragraphs>
 
       <exercise>
@@ -156,6 +215,7 @@
             <var name="$c"><static>2</static></var>
             <var name="$f"><static>(-n)^2-3(-n)+8</static></var>
             <var name="$g"><static>-((n-2)^2-3(n-2)+8)</static></var>
+            <var name="$nMinusC"><static>n-2</static></var>
 
             <pg-code>
               $description1=PopUp(["?","horizontal axis","vertical axis"],"vertical axis");
@@ -167,12 +227,14 @@
               Context()->variables->are(n=>'Real');
               $f=Compute("(-n)^2-$a*(-n)+$b");
               $g=Compute("-((n-$c)^2-$a*(n-$c)+$b)");
+
+              $nMinusC=Compute("n-$c");
             </pg-code>
 
           </setup>
           <statement>
             <p>Let <m>m(n) = n^2 - <var name="$a" />n + <var name="$b" /></m>.</p>
-            <ul>
+            <ol>
               <li><p>Write a formula for the transformation <m>m(-n)</m> and geometrically describe the transformation.</p>
               <p>To do this, we use the <em>blank</em> method, whereby we rewrite the output <m>n^2 - <var name="$a" />n + <var name="$b" /></m>, but replace all instances of the variable <m>n</m> with the new input, <m>-n</m>. Remember to use parentheses when substituting this in for <m>n</m>.</p>
               <p>Formula: <m>m(-n) = </m><var name="$f" width="15" /></p>
@@ -180,25 +242,25 @@
               <p>Description: This will reflect the graph of <m>m(n)</m> over the <var name="$description1" form="popup" /></p></li>
 
               <li><p>Write a formula for the transformation <m>-m(n - </m><var name="$c" /><m>)</m>.</p>
-              <p>There are two changes here: Subtracting a number from the input, and the opposite symbol outside.</p>
+              <p>Notice that there are two changes here: Subtracting a number from the input, and the opposite symbol outside.</p>
               <p>First we will take care of the inside change, by replacing all instances of the variable <m>n</m> with the new input, <m>n - <var name="$c" /></m>. Remember again to use parentheses when substituting this in for <m>n</m>.</p>
               <p>This would leave us with:</p>
-              <p><m>(n - </m><var name="$c" width="4" /><m>)^2 - </m><var name="$a" width="4" /><m>(n - </m><var name="$c" width="4" /><m>) + </m><var name="$b" width="4" /></p>
+              <p>(<var name="$nMinusC" width="6" /><m>)^2 - </m><var name="$a" />(<var name="$nMinusC" width="6" /><m>) + </m><var name="$b" /></p>
               <p>Last, we take care of the outside change by putting the opposite symbol outside of this whole expression by using parentheses.</p>
               <p>Formula: <m>-m(n - </m><var name="$c" /><m>) = </m><var name="$g" width="15" /></p>
               <p>For the geometric description, we must remember what each type of change to the formula will do to the graph.</p>
               <p>The inside change of subtracting <var name="$c" /> will move the graph in the horizontal direction. The outside change of taking the opposite will affect the output (<m>y</m>) values by changing their sign.</p>
-              <p>Description: This will shift the graph of <m>m(n)</m> by <var name="$c" /> units to the <var name="$description2" form="popup"/> and reflect over the <var name="$description3" form="popup" /></p></li>
-            </ul>
+              <p>Description: This will shift the graph of <m>m(n)</m> by <var name="$c" /> units <var name="$description2" form="popup"/> and reflect over the <var name="$description3" form="popup" /></p></li>
+            </ol>
           </statement>
           <solution>
-            <ul>
+            <ol>
               <li><p>The formula for <m>m(-n)</m> is found by substituting <m>-n</m> into the formula of <m>m(n)</m>. The original formula was <m>n^2 - </m><var name="$a" /><m>n + </m><var name="$b" />.</p>
-              <p>The result is:  <var name="$f" /></p></li>
+              <p>The result is:  <m><var name="$f" /></m></p></li>
 
               <li><p>The formula for <m>-m(n-</m><var name="$c" /><m>)</m> is found by substituting <m>n-</m><var name="$c" /><m>)</m> and then taking the opposite of that whole expression.</p>
-              <p>The result is:  <var name="$g" /></p></li>
-            </ul>
+              <p>The result is:  <m><var name="$g" /></m></p></li>
+            </ol>
           </solution>
         </webwork>
       </exercise>
