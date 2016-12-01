@@ -39,18 +39,14 @@
       <paragraphs>
         <p>Now what does changing the input do to the <em>graph</em> of <m>f(x)</m>? It turns out that subtracting 3 from the input just moves the graph of the function to the right. This is called a horizontal <term>translation</term> (or horizontal <term>shift</term>).</p>
         <p>In short:
-          <ul>
-            <li>Adding a number to the input will shift the graph to the <em>left</em>.</li>
-            <li>Subtracting a number from the input will shift the graph to the <em>right</em>.</li>
-          </ul>
+            <blockquote>Adding a number to the input will shift the graph to the <em>left</em>.</blockquote>
+            <blockquote>Subtracting a number from the input will shift the graph to the <em>right</em>.</blockquote>
         </p>
         <p>In fact, whenever you do anything to the input of a function, the result is some kind of horizontal change to the graph. In this section, we see that adding to the input will produce a horizontal translation of the graph to the left or the right.</p>
         <p>On the other hand, if you make changes to the outside of the function, it will affect the graph <em>vertically</em>. In this section, we see that adding or subtracting from the output will produce a vertical translation of the graph up or down.</p>
         <p>In short:
-          <ul>
-            <li>Adding a number to the ouput will shift the graph <em>up</em>.</li>
-            <li>Subtracting a number from the output will shift the graph <em>down</em>.</li>
-          </ul>
+            <blockquote>Adding a number to the ouput will shift the graph <em>up</em>.</blockquote>
+            <blockquote>Subtracting a number from the output will shift the graph <em>down</em>.</blockquote>
         </p>
       </paragraphs>
 
@@ -69,7 +65,7 @@
       </list>
 
 
-      <p>Now let's put this information to work to determine the equation of a function which has undergone a translation.</p>
+      <p>In the next three exercises, you will use a verbal description of a transformation in order to write a formula, and then use the formula for a transformation to provide a verbal description.</p>
       <exercise>
         <statement>
           <p>The function <m>f(x) = x^2 + 2x</m> is graphed below.</p>
@@ -127,6 +123,8 @@
         </hint>
         <answer>
             <p>Using <m>(x+1)</m> in place of <m>x</m> will shift the graph to the <em>left</em> by <m>1</m> unit, and adding <m>2</m> to the outside of the function will shift the graph <em>up</em> by <m>2</m> units.</p>
+        </answer>
+        <answer>
             <p>Here is the graph:</p>
             <figure>
               <caption><m>h(x) = (x+1) - (x+1)^3 + 2</m></caption>
@@ -140,76 +138,9 @@
                     ]]>
                     </latex-image-code>
                 </image>
+                <p>A straightforward way to sketch the transformed function is to take a known point from <m>g(x)</m>, such as <m>(0,0)</m>, and move it left <m>1</m> and up <m>2</m>. Then sketch the rest of the graph around that new point.</p>
             </figure>
         </answer>
-      </exercise>
-
-      <exercise>
-
-        <webwork xml:id="webwork-match-formula-to-graph-horizontal-and-vertical-shifts">
-          <setup>
-            <var name="$formula1">
-              <set>
-                  <member>y = (x+3)^2 - \sqrt{x}</member>
-                  <member>y = x^2 - \sqrt{x+3}</member>
-                  <member correct="yes">y = (x+3)^2 - \sqrt{x+3}</member>
-                  <member>y = x^2 - \sqrt{x} - 3</member>
-                  <member>\text{None of these}</member>
-              </set>
-            </var>
-            <var name="$formula2">
-              <set>
-                  <member>y = 5\left|x-1\right| - (x-1)^2</member>
-                  <member>y = 5\left|x-2\right| - (x-2)^2</member>
-                  <member>y = 5\left|x-1\right| - (x-1)^2 - 2</member>
-                  <member correct="yes">y = 5\left|x-2\right| - (x-2)^2 - 1</member>
-                  <member>\text{None of these}</member>
-              </set>
-            </var>
-
-            <pg-code>
-              Context('Numeric');
-              $formula1 = RadioButtons(
-                ["\(y = (x+3)^2 - \sqrt{x}\)","\(y = x^2 - \sqrt{x+3}\)","\(y = (x+3)^2 - \sqrt{x+3}\)","\(y = x^2 - \sqrt{x} - 3\)","None of these"],
-                2, labels => ["y = (x+3)^2 - sqrt(x)","y = x^2 - sqrt(x+3)","y = (x+3)^2 - (x+3)","y = x^2 - sqrt(x) - 3","None of these"],
-                displayLabels => 0
-              );
-              $formula2 = RadioButtons(
-                ["\(y = 5\left|x-1\right| - (x-1)^2\)","\(y = 5\left|x-2\right| - (x-2)^2\)","\(y = 5\left|x-1\right| - (x-1)^2 - 2\)","\(y = 5\left|x-2\right| - (x-2)^2 - 1\)","None of these"],
-                3, labels => ["y = 5|x-1| - (x-1)^2","y = 5|x-2| - (x-2)^2","y = 5|x-1| - (x-1)^2 - 2","y = 5|x-2| - (x-2)^2 - 1","None of these"],
-                displayLabels => 0
-              );
-
-            </pg-code>
-          </setup>
-          <statement>
-              <p>In each graph below, think of the dashed green graph as the starting function <m>f(x)</m>. The solid red graph is <m>f(x)</m> after it has been transformed in some way.</p>
-
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VdWn6se7/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>The dashed green graph shows <m>y = f(x) = x^2 - \sqrt{x}</m>. Use what you know about transformations to choose the correct formula for the solid red graph shown.</p>
-              <p><var name="$formula1" form="buttons" /></p>
-
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tunQVvGS/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>The dashed green graph shows <m>y = f(x) = 5\left|x\right| - x^2</m>. Use what you know about transformations to choose the correct formula for the solid red graph shown.</p>
-              <p><var name="$formula2" form="buttons" /></p>
-
-          </statement>
-          <hint>
-            <p>First, you should be able to describe how far the graph of <m>f(x)</m> was moved <em>left</em> or <em>right</em>. This will correspond to adding a number to the <em>input</em> of the function.</p>
-            <p>Then, describe how far <em>up</em> or <em>down</em> the graph of <m>f(x)</m> was moved. This will correspond to adding a number to the output of the function.</p>
-            <p>Then, you should be able to use function notation of the form <me>f(x + h) + k</me> to write the transformation.</p>
-          </hint>
-          <solution>
-              <ol>
-                <li><p>The graph shows the result of shifting <m>f(x)</m> to the left by <m>3</m> units, so we just add <m>3</m> to the input of <m>f(x)</m>, giving us: <md>
-                <mrow>y \amp= f(x+3)</mrow>
-                <mrow>\amp= (x+3)^2 - \sqrt{x+3}</mrow></md></p></li>
-                <li><p>This time, <m>f(x)</m> was shifted to the <em>right</em> by <m>2</m>, and <em>down</em> by <m>1</m>. Subtracting <m>2</m> from the input and <m>1</m> from the output gives us: <md>
-                <mrow>y \amp= f(x-2) - 1</mrow>
-                <mrow>\amp= 5\left|x-2\right| - (x-2)^2 - 1</mrow></md></p></li>
-              </ol>
-          </solution>
-        </webwork>
       </exercise>
 
       <exercise>
@@ -258,6 +189,95 @@
             </solution>
           </webwork>
       </exercise>
+
+      <p>Similarly, we should also be able to take the graph of a transformation and write its formula. In the next two exercises, you will be given the formula and graph of a function <m>f(x)</m>, and you will be shown a transformation of that graph. Observe the changes made to the graph of <m>f(x)</m> in order to write the formula for the function transformation.</p>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$formula1">
+              <set>
+                  <member>y = (x+3)^2 - \sqrt{x}</member>
+                  <member>y = x^2 - \sqrt{x+3}</member>
+                  <member correct="yes">y = (x+3)^2 - \sqrt{x+3}</member>
+                  <member>y = x^2 - \sqrt{x} - 3</member>
+                  <member>\text{None of these}</member>
+              </set>
+            </var>
+
+            <pg-code>
+              Context('Numeric');
+              $formula1 = RadioButtons(
+                ["\(g(x) = (x+3)^2 - \sqrt{x}\)","\(g(x) = x^2 - \sqrt{x+3}\)","\(g(x) = (x+3)^2 - \sqrt{x+3}\)","\(g(x) = x^2 - \sqrt{x} - 3\)","None of these"],
+                2, labels => ["g(x) = (x+3)^2 - sqrt(x)","g(x) = x^2 - sqrt(x+3)","g(x) = (x+3)^2 - (x+3)","g(x) = x^2 - sqrt(x) - 3","None of these"],
+                displayLabels => 0
+              );
+
+            </pg-code>
+          </setup>
+          <statement>
+              <p>The dashed green graph below shows <m>f(x) = x^2 - \sqrt{x}</m>. The solid red graph shows <m>g(x)</m>, which is some transformation of <m>f(x)</m>.</p>
+
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VdWn6se7/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Decide how <m>f(x) = x^2 - \sqrt{x}</m> was transformed to make <m>g(x)</m>. Then, choose the correct formula for <m>g(x)</m> below.</p>
+              <p><var name="$formula1" form="buttons" /></p>
+
+          </statement>
+          <hint>
+            <p>Focus your attention on one point on the graph of <m>y = f(x)</m>, and find its corresponding point on the transformed graph.</p>
+            <p>First, you should be able to describe how far the graph of <m>f(x)</m> was moved <em>left</em> or <em>right</em>. This will correspond to adding a number to the <em>input</em> of the function.</p>
+            <p>Then, describe how far <em>up</em> or <em>down</em> the graph of <m>f(x)</m> was moved. This will correspond to adding a number to the output of the function.</p>
+            <p>Then, you should be able to use function notation of the form <me>f(x + h) + k</me> to write the transformation.</p>
+          </hint>
+          <solution>
+              <p>The graph shows the result of shifting <m>f(x)</m> to the left by <m>3</m> units, so we just add <m>3</m> to the input of <m>f(x)</m>, giving us: <md>
+                <mrow>y \amp= f(x+3)</mrow>
+                <mrow>\amp= (x+3)^2 - \sqrt{x+3}</mrow></md></p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$formula2">
+              <set>
+                  <member correct="yes">g(x) = 5\left|x-2\right| - (x-2)^2 - 1</member>
+                  <member>g(x) = 5\left|x-1\right| - (x-1)^2 - 2</member>
+                  <member>g(x) = 5\left|x-1\right| - (x-1)^2</member>
+                  <member>g(x) = 5\left|x-2\right| - (x-2)^2</member>
+                  <member>\text{None of these}</member>
+              </set>
+            </var>
+            <pg-code>
+              $formula2 = RadioButtons(
+                ["\(g(x) = 5\left|x-2\right| - (x-2)^2 - 1\)","\(g(x) = 5\left|x-1\right| - (x-1)^2 - 2\)","\(g(x) = 5\left|x-2\right| - (x-2)^2\)","\(g(x) = 5\left|x-2\right| - (x-2)^2 - 1\)","None of these"],
+                0, labels => ["g(x) = 5\left|x-1\right| - (x-1)^2 - 2","g(x) = 5\left|x-2\right| - (x-2)^2 - 1","g(x) = 5\left|x-2\right| - (x-2)^2","g(x) = 5\left|x-1\right| - (x-1)^2","None of these"],
+                displayLabels => 0
+              );
+            </pg-code>
+          </setup>
+          <statement>
+            <p>The dashed green graph below shows <m>f(x) = 5\left|x\right| - x^2</m>. The solid red graph shows <m>g(x)</m>, which is a transformation of <m>f(x)</m>.</p>
+
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tunQVvGS/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Decide how <m>f(x) = 5\left|x\right| - x^2</m> was transformed to make <m>g(x)</m>. Then, choose the correct formula for <m>g(x)</m> below.</p>
+            <p><var name="$formula2" form="buttons" /></p>
+          </statement>
+          <hint>
+            <p>Focus your attention on one point on the graph of <m>y = f(x)</m>, and find its corresponding point on the transformed graph.</p>
+            <p>With this, you should be able to describe how far the graph of <m>f(x)</m> was moved <em>left</em> or <em>right</em>. This will correspond to adding a number to the <em>input</em> of the function.</p>
+            <p>Then, describe how far <em>up</em> or <em>down</em> the graph of <m>f(x)</m> was moved. This will correspond to adding a number to the output of the function.</p>
+            <p>Then, you should be able to use function notation of the form <me>f(x + h) + k</me> to write the transformation.</p>
+          </hint>
+          <solution>
+            <p>The graph of <m>f(x)</m> was shifted to the <em>right</em> by <m>2</m> units, and <em>down</em> by <m>1</m>. Subtracting <m>2</m> from the input and <m>1</m> from the output gives us: <md>
+              <mrow>y \amp= f(x-2) - 1</mrow>
+              <mrow>\amp= 5\left|x-2\right| - (x-2)^2 - 1</mrow></md></p>
+          </solution>
+        </webwork>
+      </exercise>
+
 
     </conclusion>
 
