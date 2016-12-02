@@ -72,7 +72,8 @@
             <statement>
                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pXUT7wZS/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                 <ol>
-                  <li><p>The graph starts by showing the parabola <m>f(x) = x^2</m>. Moving the slider will change the function by adding a number <m>k</m> outside of the function. Use the slider to change the value of <m>k</m> to the number <m>5</m>. What happened to the graph as you changed the formula to <m>f(x) + 5 = x^2 + 5</m>?</p>
+                  <li><p>The graph starts by showing the parabola <m>f(x) = x^2</m>. Moving the slider will change the function by adding a number <m>k</m> outside of the function.</p>
+                  <p>Use the slider to change the value of <m>k</m> to the number <m>5</m>. What happened to the graph as you changed the formula to <m>f(x) + 5 = x^2 + 5</m>?</p>
                   <p><var name="$choice" form="buttons" /></p></li>
                   <li><p>Notice that the graph shows the coordinates of the lowest point (the <em>vertex</em>). Which equation below would graph as a parabola with a vertex at the point <m>(0,-3)</m>?</p>
                   <p><var name="$point" form="buttons" /></p></li>
@@ -127,7 +128,8 @@
           <statement>
               <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
               <ol>
-                <li><p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders will change the function by adding a number <m>k</m> outside the function and a number <m>h</m> inside the function. What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
+                <li><p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders will change the function by adding a number <m>k</m> outside the function and a number <m>h</m> inside the function.</p>
+                <p>What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
                 <p><var name="$changeH" form="buttons" /></p></li>
                 <li><p>Which equation below would graph as a parabola with a vertex at the point <m>(5,3)</m>?</p>
                 <p><var name="$changeHandK" form="buttons" /></p></li>
@@ -198,18 +200,19 @@
 
     </exercise>
 
+    <p>Let's build on the previous exercise by using both vertical <em>and</em> horizontal translations.</p>
 
     <exercise>
       <webwork xml:id="vertical-and-horizontal-transformations-application-projectile-motion-time-delay-and-hight-increase">
         <setup>
           <var name="$input">
-            <static>t-1</static>
+            <static>t-3</static>
           </var>
 
           <var name="$addOrSubtract">
             <set>
-              <member correct="yes">\text{Add}</member>
-              <member>\text{Subtract}</member>
+              <member correct="yes">\text{add}</member>
+              <member>\text{subtract}</member>
             </set>
           </var>
 
@@ -219,8 +222,8 @@
 
           <pg-code>
             Context()->variables->are(t=>'Real');
-            $input="t-1";
-            $addOrSubtract=PopUp(["?","Add","Subtract"],"Add");
+            $input=Compute("t-3");
+            $addOrSubtract=PopUp(["?","add","subtract"],"add");
             $outputChange=Real(12);
 
           </pg-code>
@@ -229,10 +232,9 @@
 
         <statement>
 
-          <p>Now let's put both types of transformations together in one application.</p>
-          <p>Again, we will use the same function <m>f(t) = -4.9t^2 + 10t + 40</m>, which represents the height of an object which was thrown straight upward at a speed of 10 meters per second, from an initial height of 40 meters.</p>
-          <p>Suppose now that the person waited 1 second and also took it an additional 12 meters higher in elevation before throwing it.</p>
-          <p>Waiting 1 second is a change to the input, so the input of the function will now be: <var name="$input" width="5" /></p>
+          <p>Again, the function <m>f(t) = -4.9t^2 + 10t + 40</m> represents the height of an object which was thrown straight upward at a speed of 10 meters per second, from an initial height of 40 meters.</p>
+          <p>Suppose now that the person waited <m>3</m> seconds and also carried it an additional 12 meters higher in elevation before throwing it.</p>
+          <p>Waiting 3 seconds is a change to the input <m>t</m>, so the input of the function will now be: <var name="$input" width="5" /></p>
           <p>Carrying the object an additional 12 meters upward before throwing it is a change to the output, so we will <var name="$addOrSubtract" form="popup" /> the number <m>12</m> to the outside of the function.</p>
           <p>Putting these transformations together, the formula will now be:</p>
           <p><m>f(</m><var name="$input" width="5" /><m>) + </m><var name="$outputChange" width="2" /></p>
@@ -242,10 +244,14 @@
       </webwork>
     </exercise>
 
+    <p>Finally, we'll see an application of using vertical and horizontal <term>translations</term> to quickly perform a familiar task: Finding the equation of a line</p>
+
     <example>
       <p>The linear function <me>f(x) = 4x</me> will graph as a line with slope <m>4</m>, passing through the origin <m>(0,0)</m>.</p>
-      <p>Now, using translations, it would be easy to write the equations of similar lines. For example:</p>
-      <p>The line with slope <m>4</m>, passing through the point <m>(3,5)</m>, would be the result of shifting <m>f(x)</m> to the <em>right</em> by <m>3</m> units, and <em>up</em> by <m>5</m> units.</p>
+      <p>Now, using translations, it would be easy to write the equations of similar lines.</p>
+      <p>For example:</p>
+      <p>The line with slope <m>4</m>, passing through the point <m>(3,5)</m>, may be thought of as the result of shifting <m>f(x)</m> to the <em>right</em> by <m>3</m> units, and <em>up</em> by <m>5</m> units.</p>
+      <p>[In this case, we are focusing our attention on moving the old point <m>(0,0)</m> to the new point <m>(3,5)</m>.]</p>
       <p>What would be the equation of this new line?</p>
 
       <hint>
@@ -287,11 +293,41 @@
           <p><var name="$whichLine" form="popup" /></p>
         </statement>
         <solution>
-          <p>The e</p>
+          <p>Think of moving the point <m>(0,0)</m> to the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
+          <p>We would shift the graph to the right by <var name="$a[0]" /> units and down by <var name="$a[1]" /> units, and the equation would be: <m>y = 12(x - <var name="$a[0]" />) - <var name="$a[1]" /></m></p>
         </solution>
       </webwork>
     </exercise>
 
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$equation">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">y = m(x-a)+b</member>
+              <member>y = mx-a+b</member>
+              <member>y = m(x-b)+a</member>
+            </set>
+          </var>
+          <pg-code>
+            $equation=PopUp(
+            ["?","y = m(x - a) + b","y = mx - a + b","y = m(x - b) + a"],
+            "y = m(x - a) + b"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The equation of a line with slope <m>m</m>, passing through the origin, is just: <me>y = mx</me></p>
+          <p>If we wanted this line to pass through the point <m>(a,b)</m>, what would be the equation?</p>
+          <p>Answer:  <var name="$equation" form="popup" /></p>
+          <p>This is a very useful formula for writing the equation of a line if you know the slope and any single point on its graph. This formula is called the <term>Point-Slope</term> formula for a line.</p>
+        </statement>
+        <solution>
+          <p>The equation is <me>y = m(x-a) + b</me> no matter the sign (+ or -) on the values <m>a</m> and <m>b</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
 
 
 
