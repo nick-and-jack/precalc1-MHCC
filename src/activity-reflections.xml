@@ -15,9 +15,8 @@
     <title>Reflections Activity</title>
 
 
-
+    <p>To begin this activity, first an exercise about function notation.</p>
     <exercise>
-        <title>Interpreting a Transformation</title>
         <webwork xml:id="webwork-interpreting-a-transformation-1">
           <setup>
             <var name="$withSymbols">
@@ -42,12 +41,12 @@
             </pg-code>
           </setup>
           <statement>
-            <ol>
-              <li><p>If <m>f(3)</m> means "the output when the input is <m>3</m>", what does <m>6*f(3)</m> mean?</p>
-              <p><var name="$withSymbols" form="buttons" /></p></li>
-              <li><p>If <m>f(3) = 7</m>, then what is <m>6*f(3)</m>?</p>
-              <p><var name="$withNumbers" width="3" /></p></li>
-            </ol>
+            <ul>
+              <li>If <m>f(3)</m> means "the output when the input is <m>3</m>", what does <m>6*f(3)</m> mean?
+              <var name="$withSymbols" form="buttons" /></li>
+              <li>If <m>f(3) = 7</m>, then what is <m>6*f(3)</m>?
+              <var name="$withNumbers" width="3" /></li>
+            </ul>
           </statement>
           <solution>
             <p>The correct answer is <var name="$withSymbols" />. The number <m>6</m> is being multiplied by the value <m>f(3)</m>. So, whatever <m>f(3)</m> equals, this is just <m>6</m> times that amount.</p>
@@ -56,18 +55,15 @@
         </webwork>
       </exercise>
 
-      <paragraphs>
-        <p><term>The Opposite</term>. The symbol "&#8211;" is commonly referred to as a “negative sign”, but it often helps to read it as “the opposite of”.</p>
-        <p>For instance, we can interpret the expression <m>-3</m> as the opposite of 3. If <m>a</m> is an input value, then <m>-a</m> is the opposite of <m>a</m>.</p>
-        <p>This is particularly useful when we don't know if a variable is positive or negative. We refer to <m>-x</m> as the opposite of <m>x</m>, and we avoid saying "negative" <m>x</m>.</p>
-        <p>
-          <geogebra materialID="rsSg5fd3" width="368" height="261" />
-          <!-- https://www.geogebra.org/m/egCAt7db -->
-        </p>
+      <paragraphs><title>The Opposite</title>
+        <p>The symbol "&#8211;" is commonly referred to as a “negative sign”, but it often helps to read it as “the opposite of”.</p>
+        <p>For instance, we can interpret the expression <m>-3</m> as the opposite of <m>3</m>, and we can interpret <m>13</m> as the opposite of <m>-13</m>. If <m>a</m> is any number, then <m>-a</m> is the opposite of <m>a</m>, regardless of whether <m>a</m> itself is actually positive or negative.</p>
+        <p>This is particularly useful when we don't know if a variable is positive or negative.</p>
+        <p>We refer to <m>-x</m> as the opposite of <m>x</m>, and we avoid saying "negative" <m>x</m>.</p>
       </paragraphs>
 
+      <p>Check your understanding in the next exercise, where you will locate the opposite of a number.</p>
       <exercise>
-          <title>The Opposite</title>
           <webwork xml:id="webwork-opposite-of-with-function-notation">
             <setup>
               <var name="$isNegative">
@@ -99,8 +95,8 @@
         </exercise>
 <!--      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rsSg5fd3/width/368/height/261/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 -->
+        <p>Next, practice writing expressions using function notation, incorporating the <term>opposite</term>.</p>
         <exercise>
-          <title>Writing an Expression for the Output</title>
           <webwork xml:id="writing-algebraic-expressions-for-outputs">
 
             <setup>
@@ -143,21 +139,97 @@
             </setup>
 
             <statement>
-              <p>Use the function <m>f(x)</m> to write an expression to match each description below.</p>
+              <p>Use the function <m>f(x)</m> to write an expression to answer each question below.</p>
               <ul>
-                <li><p>Three times the output when the input is <m><var name="$input1" /></m>: <var name="$output1" width="10" /></p></li>
-                <li><p>The opposite of the output when the input is <m><var name="$input2" /></m>: <var name="$output2" width="10" /></p></li>
-                <li><p>The output, when the function is evaluated at the opposite of the input: <var name="$output3" width="10" /></p></li>
-                <li><p>The opposite of the output: <var name="$output4" width="10" /></p></li>
+                <li><p>What is <m>3</m> times the output when the input is <m><var name="$input1" /></m>: <var name="$output1" width="10" /></p></li>
+                <li><p>What is the opposite of the output when the input is <m><var name="$input2" /></m>: <var name="$output2" width="10" /></p></li>
+                <li><p>What is the output, when we evaluate the function at the opposite of <m>x</m>: <var name="$output3" width="10" /></p></li>
+                <li><p>The opposite of the output, when we evaluate the function at <m>x</m>: <var name="$output4" width="10" /></p></li>
               </ul>
             </statement>
           </webwork>
         </exercise>
 
+        <p>For a function <m>f(x)</m>, if <m>f(-5)</m> is a positive number, then <m>-f(-5)</m> will negative, and if <m>f(2)</m> is a negative number, then <m>-f(2)</m> will be positive.</p>
+        <p>The same input was used, but the outputs are opposites.</p>
+        <p>However, <m>f(4)</m> and <m>f(-4)</m> are not related, because the inputs are different. The only relationship is that <m>4</m> and <m>-4</m> are on opposite sides of the <m>y</m>-axis.</p>
+        <p>In the next exercise, you will see these two scenarios from a graphical standpoint.</p>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="fof1"><static>2</static></var>
+              <var name="$negfof1"><static>-2</static></var>
+              <var name="$fof4"><static>1</static></var>
+              <var name="$fofneg4"><static>3</static></var>
+              <var name="$x-axis">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{x-axis}</member>
+                  <member>\text{y-axis}</member>
+                </set>
+              </var>
+              <var name="$y-axis">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{x-axis}</member>
+                  <member correct="yes">\text{y-axis}</member>
+                </set>
+              </var>
+
+              <pg-code>
+                $fof1=Real(2);
+                $negfof1=-$fof2;
+                $fof4=Real(1);
+                $fofneg4=Real(3);
+                $xaxis=PopUp(
+                ["?","x-axis","y-axis"],"x-axis"
+                );
+                $yaxis=PopUp(
+                ["?","x-axis","y-axis"],"y-axis"
+                );
+              </pg-code>
+            </setup>
+            <statement>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/gGZwgNcU/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>The graph shows a function <m>y = f(x)</m>. You can click to also graph <m>y = -f(x)</m> or <m>y = f(-x)</m>.</p>
+              <ol>
+                <li><p>What is <m>f(1)</m>?</p>
+                <p>Answer:  <var name="$fof2" width="10" /></p></li>
+                <li><p>What is <m>-f(1)</m>?</p>
+                <p>Answer:  <var name="$negfof2" width="10" /></p>
+                <p>Now click to graph <m>y = -f(x)</m>. Can you see the location of <m>-f(1)</m> on that graph?</p></li>
+                <li><p>What is <m>f(4)</m>?</p>
+                <p>Answer:  <var name="$fof4" width="10" /></p></li>
+                <li><p>What is <m>f(-4)</m>?</p>
+                <p>Answer:  <var name="$fofneg4" width="10" /></p>
+                <p>Now click to graph <m>y = f(-x)</m>. Can you see the location of <m>f(-4)</m> on that graph?</p></li>
+              </ol>
+              <p>Complete the following statements.</p>
+              <ul>
+                <li><p>The graphs of <m>y = -f(x)</m> and <m>y = f(x)</m> are reflections of each other over the <var name="$xaxis" form="popup" /></p></li>
+                <li><p>The graphs of <m>y = f(-x)</m> and <m>y = f(x)</m> are reflections of each other over the <var name="$yaxis" form="popup" /></p></li>
+              </ul>
+            </statement>
+            <hint>
+
+            </hint>
+            <solution>
+
+            </solution>
+          </webwork>
+        </exercise>
+
+
+
+
+
+
+        <p>Our main goals in this activity are to explore evaluating a function at the opposite of the input, and taking the opposite of the output of a function.</p>
+        <p>In the next exercise, you will evaluate <m>f(-x)</m> and <m>-f(x)</m> in a table of values. Remember that the <term>opposite</term> just changes the sign on a number, whether it is an <term>input</term> or an <term>output</term>.</p>
 
 
         <exercise>
-          <title>Table of <m>f(x)</m>, <m>-f(x)</m> and <m>f(-x)</m></title>
           <webwork xml:id="table-example-test">
 
             <setup>
@@ -298,7 +370,7 @@
             </setup>
 
             <statement>
-              <p>Complete the table below, using <m>f(x) = \sqrt{x}</m>.</p>
+              <p>Complete the table below, using <m>f(x) = \sqrt{x}</m>. If an expression cannot be evaluated, write <em>DNE</em> ("does not exist") in that space.</p>
 
               <table>
                 <caption>Table of <m>f(x)</m>, <m>-f(x)</m> and <m>f(-x)</m></caption>
@@ -372,7 +444,6 @@
         </exercise>
 <todo>Fix GeoGebra graphs in next two problems so they don't use the distance function</todo>
         <exercise>
-          <title>The Transformation <m>-f(x)</m></title>
           <webwork xml:id="points-on-opposite-f-of-x">
             <setup>
 
