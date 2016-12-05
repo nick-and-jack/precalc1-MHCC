@@ -87,7 +87,7 @@
 
 
         <p>In this section we study transformations that stretch a function vertically, or reflect the function across one of the axes.</p>
-      <paragraphs><title>The Opposite</title>
+      <paragraphs><title>Reflections</title>
         <p>Thinking again of function notation as language, we know that the notation <m>f(x)</m> indicates an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are referring to the <term>opposite</term> of the <em>input</em>.</p>
         <p>Likewise, if we replace <m>f(x)</m> with <m>-f(x)</m>, we are referring to the <term>opposite</term> of the <em>output</em>.</p>
         <p>In each case, <m>-f(x)</m> and <m>f(-x)</m> represent reflections:</p>
@@ -273,3 +273,46 @@
 
     </conclusion>
 </chapter>
+
+<!-- Extra problem
+
+<exercise>
+  <webwork xml:id="reflection-graphs-square-root-function">
+    <setup>
+      <var name="$reflectXAxis">
+        <set>
+          <member correct="yes">\text{To make the graph of }-f(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the x-axis.}</member>
+          <member>\text{To make the graph of }-f(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the y-axis.}</member>
+        </set>
+      </var>
+      <var name="$reflectYAxis">
+        <set>
+          <member>\text{To make the graph of }f(-x)\text{, you reflect (flip) the graph of }f(x)\text{ over the x-axis.}</member>
+          <member correct="yes">\text{To make the graph of }f-(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the y-axis.}</member>
+        </set>
+      </var>
+      <pg-code>
+        Context('Numeric');
+        $reflectXAxis = RadioButtons(
+        ["To make the graph of \(-f(x)\), you reflect (flip) the graph of \(f(x)\) over the x-axis.","To make the graph of \(-f(x)\), you reflect (flip) the graph of \(f(x)\) over the y-axis.","None of these"],0,labels => ["Flip over x-axis","Flip over y-axis","None of these"],displayLabels => 0
+        );
+        $reflectYAxis = RadioButtons(
+        ["To make the graph of \(f(-x)\), you reflect (flip) the graph of \(f(x)\) over the x-axis.","To make the graph of \(f(-x)\), you reflect (flip) the graph of \(f(x)\) over the y-axis.","None of these"],1,labels => ["Flip over x-axis","Flip over y-axis","None of these"],displayLabels => 0
+        );
+      </pg-code>
+    </setup>
+
+    <statement>
+      <p>The graph below shows <m>f(x) = \sqrt{x}</m>. Use the radio buttons to change the graph to either <m>-f(x)</m> or <m>f(-x)</m>.</p>
+      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/wrQyy2mH/width/438/height/367/border/888888/sri/true" width="438px" height="367px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+      <p>The next graph shows <m>f(x) = 2^x</m>. Use the radio buttons to change the graph to either <m>-f(x)</m> or <m>f(-x)</m>.</p>
+      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zW5SrRKw/width/438/height/429/border/888888/sri/true" width="438px" height="429px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+      <p>Choose the correct statement below about the graph of <m>y = -f(x)</m>.</p>
+      <p><var name="$reflectXAxis" form="buttons" /></p>
+      <p>Choose the correct statement below about the graph of <m>y = f(-x)</m>.</p>
+      <p><var name="$reflectYAxis" form="buttons" /></p>
+    </statement>
+  </webwork>
+</exercise>
+
+-->
