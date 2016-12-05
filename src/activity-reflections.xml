@@ -15,9 +15,8 @@
     <title>Reflections Activity</title>
 
 
-
+    <p>To begin this activity, first an exercise about function notation.</p>
     <exercise>
-        <title>Interpreting a Transformation</title>
         <webwork xml:id="webwork-interpreting-a-transformation-1">
           <setup>
             <var name="$withSymbols">
@@ -42,12 +41,12 @@
             </pg-code>
           </setup>
           <statement>
-            <ol>
-              <li><p>If <m>f(3)</m> means "the output when the input is <m>3</m>", what does <m>6*f(3)</m> mean?</p>
-              <p><var name="$withSymbols" form="buttons" /></p></li>
-              <li><p>If <m>f(3) = 7</m>, then what is <m>6*f(3)</m>?</p>
-              <p><var name="$withNumbers" width="3" /></p></li>
-            </ol>
+            <ul>
+              <li>If <m>f(3)</m> means "the output when the input is <m>3</m>", what does <m>6*f(3)</m> mean?
+              <var name="$withSymbols" form="buttons" /></li>
+              <li>If <m>f(3) = 7</m>, then what is <m>6*f(3)</m>?
+              <var name="$withNumbers" width="3" /></li>
+            </ul>
           </statement>
           <solution>
             <p>The correct answer is <var name="$withSymbols" />. The number <m>6</m> is being multiplied by the value <m>f(3)</m>. So, whatever <m>f(3)</m> equals, this is just <m>6</m> times that amount.</p>
@@ -56,18 +55,15 @@
         </webwork>
       </exercise>
 
-      <paragraphs>
-        <p><term>The Opposite</term>. The symbol "&#8211;" is commonly referred to as a “negative sign”, but it often helps to read it as “the opposite of”.</p>
-        <p>For instance, we can interpret the expression <m>-3</m> as the opposite of 3. If <m>a</m> is an input value, then <m>-a</m> is the opposite of <m>a</m>.</p>
-        <p>This is particularly useful when we don't know if a variable is positive or negative. We refer to <m>-x</m> as the opposite of <m>x</m>, and we avoid saying "negative" <m>x</m>.</p>
-        <p>
-          <geogebra materialID="rsSg5fd3" width="368" height="261" />
-          <!-- https://www.geogebra.org/m/egCAt7db -->
-        </p>
+      <paragraphs><title>The Opposite</title>
+        <p>The symbol "&#8211;" is commonly referred to as a “negative sign”, but it often helps to read it as “the opposite of”.</p>
+        <p>For instance, we can interpret the expression <m>-3</m> as the opposite of <m>3</m>, and we can interpret <m>13</m> as the opposite of <m>-13</m>. If <m>a</m> is any number, then <m>-a</m> is the opposite of <m>a</m>, regardless of whether <m>a</m> itself is actually positive or negative.</p>
+        <p>This is particularly useful when we don't know if a variable is positive or negative.</p>
+        <p>We refer to <m>-x</m> as the opposite of <m>x</m>, and we avoid saying "negative" <m>x</m>.</p>
       </paragraphs>
 
+      <p>Check your understanding in the next exercise, where you will locate the opposite of a number.</p>
       <exercise>
-          <title>The Opposite</title>
           <webwork xml:id="webwork-opposite-of-with-function-notation">
             <setup>
               <var name="$isNegative">
@@ -97,10 +93,9 @@
             </solution>
           </webwork>
         </exercise>
-<!--      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rsSg5fd3/width/368/height/261/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
--->
+
+        <p>Next, practice writing expressions using function notation, incorporating the <term>opposite</term>.</p>
         <exercise>
-          <title>Writing an Expression for the Output</title>
           <webwork xml:id="writing-algebraic-expressions-for-outputs">
 
             <setup>
@@ -143,163 +138,278 @@
             </setup>
 
             <statement>
-              <p>Use the function <m>f(x)</m> to write an expression to match each description below.</p>
+              <p>Use the function <m>f(x)</m> to write an expression to answer each question below.</p>
               <ul>
-                <li><p>Three times the output when the input is <m><var name="$input1" /></m>: <var name="$output1" width="10" /></p></li>
-                <li><p>The opposite of the output when the input is <m><var name="$input2" /></m>: <var name="$output2" width="10" /></p></li>
-                <li><p>The output, when the function is evaluated at the opposite of the input: <var name="$output3" width="10" /></p></li>
-                <li><p>The opposite of the output: <var name="$output4" width="10" /></p></li>
+                <li><p>What is <m>3</m> times the output, when the input is <m><var name="$input1" /></m>?</p>
+                <p>Answer:  <var name="$output1" width="10" /></p></li>
+                <li><p>What is the opposite of the output, when the input is <m><var name="$input2" /></m>?</p>
+                <p>Answer:  <var name="$output2" width="10" /></p></li>
+                <li><p>What is the output, when we evaluate the function at the opposite of <m>x</m>?</p>
+                <p>Answer:  <var name="$output3" width="10" /></p></li>
+                <li><p>What is the opposite of the output, when we evaluate the function at <m>x</m>?</p>
+                <p>Answer:  <var name="$output4" width="10" /></p></li>
               </ul>
             </statement>
           </webwork>
         </exercise>
 
+        <paragraphs><title>The transformation <m>-f(x)</m></title></paragraphs>
+        <p>For a function <m>f(x)</m>, if <m>f(-5)</m> is a positive number, then <m>-f(-5)</m> will negative, and if <m>f(2)</m> is a negative number, then <m>-f(2)</m> will be positive.</p>
+        <p>The same input is used, but the outputs are <term>opposites</term>.</p>
+        <p>In general, whatever output values <m>f(x)</m> has, the <term>transformation</term> <m>-f(x)</m> will have the opposite outputs.</p>
+        <p>See the following exercise for the graph of the transformation <m>y = -f(x)</m>.</p>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="fof1"><static>2</static></var>
+              <var name="$negfof1"><static>-2</static></var>
+              <var name="$x-axis">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{x-axis}</member>
+                  <member>\text{y-axis}</member>
+                </set>
+              </var>
+
+              <pg-code>
+                $fof1=Real(2);
+                $negfof1=-$fof2;
+                $xaxis=PopUp(
+                ["?","x-axis","y-axis"],"x-axis"
+                );
+              </pg-code>
+            </setup>
+            <statement>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/gGZwgNcU/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>The graph shows a function <m>y = f(x)</m>.</p>
+              <ol>
+                <li><p>What is <m>f(1)</m>?</p>
+                <p>Answer:  <var name="$fof2" width="10" /></p></li>
+                <li><p>What is <m>-f(1)</m>?</p>
+                <p>Answer:  <var name="$negfof2" width="10" /></p>
+                <p>Now click to graph <m>y = -f(x)</m>. Can you see the value of <m>-f(1)</m> on that graph?</p></li>
+              </ol>
+              <p>Complete the following statement:</p>
+              <p>The graphs of <m>y = -f(x)</m> and <m>y = f(x)</m> are reflections of each other over the <var name="$xaxis" form="popup" /></p>
+              <p>Notice that for any point on the graph of <m>y = f(x)</m>, reflecting that point over the <m>x</m>-axis will make a point which is on the graph of <m>y = -f(x)</m>.</p>
+            </statement>
+            <solution>
+              <p>The transformation <m>y = -f(x)</m> is a reflection of <m>y = f(x)</m> over the <m>x</m>-axis.</p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <p>Now use what you just saw in order to create the graph of <m>y = -f(x)</m>.</p>
+
+        <exercise>
+          <webwork xml:id="points-on-opposite-f-of-x">
+            <setup>
+              <var name="$didItGraph">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{no}</member>
+                  <member>\text{yes}</member>
+                </set>
+              </var>
+              <pg-code>
+                $didItGraph=PopUp(
+                ["?","No","Yes"],"Yes"
+                );
+              </pg-code>
+            </setup>
+            <statement>
+              <p>The graph below shows <m>f(x) = \sqrt{x}</m>. Plot three points on the graph of <m>-f(x)</m> by moving the three blue points to appropriate locations.</p>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/daN858tY/width/429/height/334/border/888888/sri/true" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Did you successfully create the graph of <m>y = -f(x)</m>.</p>
+              <p><var name="$didItGraph" form="popup" /></p>
+            </statement>
+          </webwork>
+        </exercise>
+
+        <paragraphs><title>The transformation <m>f(-x)</m></title></paragraphs>
+
+        <p>For a function <m>g(x)</m>, the transformation <m>g(-x)</m> does something else.</p>
+        <p>If you wanted to evaluate <m>g(-x)</m> when <m>x = 4</m>, you would really be evaluating <m>g(-4)</m>. Or, if you wanted to evaluate <m>g(-x)</m> when <m>x = -9</m>, you would really be evaluating <m>g(9)</m>.</p>
+        <p>This is just what <m>g(-x)</m> looks like &#8212; evaluating the function <m>g</m> at the opposite input.</p>
+        <p>See the next exercise to explore the transformation <m>y = g(-x)</m> graphically.</p>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="$gofneg2notation">
+                <set>
+                  <member>\text{?}</member>
+                  <member>g(2)</member>
+                  <member correct="yes">g(-2)</member>
+                </set>
+              </var>
+              <var name="$gofneg2value"><static>0</static></var>
+              <var name="$gof1notation">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">g(1)</member>
+                  <member>g(-1)</member>
+                </set>
+              </var>
+              <var name="$gof1value"><static>3</static></var>
+              <var name="$y-axis">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{x-axis}</member>
+                  <member correct="yes">\text{y-axis}</member>
+                </set>
+              </var>
+              <pg-code>
+                $gofneg2notation=PopUp(
+                ["?","g(2)","g(-2)"],"g(-2)"
+                );
+                $gofneg2value=Real(0);
+                $gof1notation=PopUp(
+                ["?","g(1)","g(-1)"],"g(1)"
+                );
+                $gof1value=Real(3);
+                $yaxis=PopUp(
+                ["?","x-axis","y-axis"],"y-axis"
+                );
+              </pg-code>
+            </setup>
+            <statement>
+              <p>The function <m>y = g(x)</m> is shown below.</p>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/n3pVCbS7/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+              <p>Click to graph the transformation <m>y = g(-x)</m>. Use it to complete each statement below.</p>
+              <ol>
+                <li><p>To evaluate <m>g(-x)</m> when <m>x = 2</m>, we are really evaluating: <var name="$gofneg2notation" form="popup" /></p></li>
+                <li><p>What is the value of <m>g(-x)</m> when <m>x = 2</m>?</p>
+                <p>Answer:  <var name="$gofneg2value" width="10" /></p></li>
+                <li><p>To evaluate <m>g(-x)</m> when <m>x = -1</m>, we are really evaluating: <var name="$gof1notation" form="popup" /></p></li>
+                <li><p>What is the value of <m>g(-x)</m> when <m>x = -1</m>?</p>
+                <p>Answer:  <var name="$gof1value" width="10" /></p></li>
+                <li><p>The graphs of <m>y = g(-x)</m> and <m>y = g(x)</m> are reflections of each other over the <var name="$yaxis" form="popup" /></p></li>
+              </ol>
+            </statement>
+            <solution>
+              <p>The transformation <m>y = g(-x)</m> is a reflection of <m>y = g(x)</m> over the <m>y</m>-axis.</p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <p>Now use what you just saw in order to create the graph of <m>y = g(-x)</m>.</p>
+
+        <exercise>
+          <webwork xml:id="points-on-f-of-opposite-x">
+            <setup>
+              <var name="$didItGraph">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{no}</member>
+                  <member>\text{yes}</member>
+                </set>
+              </var>
+              <pg-code>
+                $didItGraph=PopUp(
+                ["?","No","Yes"],"Yes"
+                );
+              </pg-code>
+            </setup>
+            <statement>
+              <p>The graph below shows <m>g(x) = \sqrt{x}</m>. Plot two points on the graph of <m>g(-x)</m> by moving the two blue points to appropriate locations.</p>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dBskeXZe/width/422/height/257/border/888888/sri/true" width="422px" height="257px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Did you successfully create the graph of <m>y = g(-x)</m>.</p>
+              <p><var name="$didItGraph" form="popup" /></p>
+            </statement>
+          </webwork>
+        </exercise>
+
+        <p>In the next exercise, you will evaluate <m>f(-x)</m> and <m>-f(x)</m> in a table of values. Remember that the <term>opposite</term> just changes the sign on a number, whether it is an <term>input</term> or an <term>output</term>.</p>
 
 
         <exercise>
-          <title>Table of <m>f(x)</m>, <m>-f(x)</m> and <m>f(-x)</m></title>
           <webwork xml:id="table-example-test">
 
             <setup>
-
               <var name="$x[0]"><static>-9</static></var>
-
               <var name="$x[1]"><static>-4</static></var>
-
               <var name="$x[2]"><static>-1</static></var>
-
               <var name="$x[3]"><static>0</static></var>
-
               <var name="$x[4]"><static>1</static></var>
-
               <var name="$x[5]"><static>4</static></var>
-
               <var name="$x[6]"><static>9</static></var>
-
-
-
               <var name="$a[0]">
                 <static>\text{DNE}</static>
               </var>
-
               <var name="$a[1]">
                 <static>\text{DNE}</static>
               </var>
-
               <var name="$a[2]">
                 <static>\text{DNE}</static>
               </var>
-
               <var name="$a[3]">
                 <static>0</static>
               </var>
-
               <var name="$a[4]">
                 <static>1</static>
               </var>
-
               <var name="$a[5]">
                 <static>2</static>
               </var>
-
               <var name="$a[6]">
                 <static>3</static>
               </var>
-
               <var name="$b[0]">
                 <static>\text{DNE}</static>
               </var>
-
               <var name="$b[1]">
                 <static>\text{DNE}</static>
               </var>
-
               <var name="$b[2]">
                 <static>\text{DNE}</static>
               </var>
-
               <var name="$b[3]">
                 <static>0</static>
               </var>
-
               <var name="$b[4]">
                 <static>-1</static>
               </var>
-
               <var name="$b[5]">
                 <static>-2</static>
               </var>
-
               <var name="$b[6]">
                 <static>-3</static>
               </var>
-
               <var name="$c[0]">
                 <static>3</static>
               </var>
-
               <var name="$c[1]">
                 <static>2</static>
               </var>
-
               <var name="$c[2]">
                 <static>1</static>
               </var>
-
               <var name="$c[3]">
                 <static>0</static>
               </var>
-
               <var name="$c[4]">
                 <static>\text{DNE}</static>
               </var>
-
               <var name="$c[5]">
                 <static>\text{DNE}</static>
               </var>
-
               <var name="$c[6]">
                 <static>\text{DNE}</static>
               </var>
-
 
               <pg-code>
                 @x=(-9,-4,-1,0,1,4,9);
                 @a=map{($_&lt;0)?Compute("DNE"):sqrt($_)}@x;
                 @b=map{($_&lt;0)?Compute("DNE"):-sqrt($_)}@x;
                 @c=map{($_&gt;0)?Compute("DNE"):sqrt(-$_)}@x;
-
-
               </pg-code>
 
-            <!--  The code above is a short way to write the following:
-              $a1=Compute("DNE");
-              $a2=Compute("DNE");
-              $a3=Compute("DNE");
-              $a4=Real(0);
-              $a5=Real(1);
-              $a6=Real(2);
-              $a7=Real(3);
-              $b1=Compute("DNE");
-              $b2=Compute("DNE");
-              $b3=Compute("DNE");
-              $b4=Real(0);
-              $b5=Real(-1);
-              $b6=Real(-2);
-              $b7=Real(-3);
-              $c1=Real(3);
-              $c2=Real(2);
-              $c3=Real(1);
-              $c4=Real(0);
-              $c5=Compute("DNE");
-              $c6=Compute("DNE");
-              $c7=Compute("DNE");  -->
-
             </setup>
-
             <statement>
-              <p>Complete the table below, using <m>f(x) = \sqrt{x}</m>.</p>
-
+              <p>Complete the table below, using <m>f(x) = \sqrt{x}</m>. If an expression cannot be evaluated, write <em>DNE</em> ("does not exist") in that space.</p>
               <table>
                 <caption>Table of <m>f(x)</m>, <m>-f(x)</m> and <m>f(-x)</m></caption>
                 <tabular top="major" halign="center">
@@ -307,160 +417,135 @@
                   <col />
                   <col />
                   <col />
-
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m>f(x)</m></cell>
                     <cell><m>-f(x)</m></cell>
                     <cell><m>f(-x)</m></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[0]" /></m></cell>
                     <cell><var name="$a[0]" width="10" /></cell>
                     <cell><var name="$b[0]" width="10" /></cell>
                     <cell><var name="$c[0]" width="10" /></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[1]" /></m></cell>
                     <cell><var name="$a[1]" width="10" /></cell>
                     <cell><var name="$b[1]" width="10" /></cell>
-                    <cell><var name="$c[1]" width="10" /></cell>
+                    <cell><var name="$c[1]" /></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[2]" /></m></cell>
                     <cell><var name="$a[2]" width="10" /></cell>
                     <cell><var name="$b[2]" width="10" /></cell>
                     <cell><var name="$c[2]" width="10" /></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[3]" /></m></cell>
                     <cell><var name="$a[3]" width="10" /></cell>
                     <cell><var name="$b[3]" width="10" /></cell>
                     <cell><var name="$c[3]" width="10" /></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[4]" /></m></cell>
                     <cell><var name="$a[4]" width="10" /></cell>
-                    <cell><var name="$b[4]" width="10" /></cell>
+                    <cell><var name="$b[4]"/></cell>
                     <cell><var name="$c[4]" width="10" /></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[5]" /></m></cell>
                     <cell><var name="$a[5]" width="10" /></cell>
                     <cell><var name="$b[5]" width="10" /></cell>
                     <cell><var name="$c[5]" width="10" /></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[6]" /></m></cell>
-                    <cell><var name="$a[6]" width="10" /></cell>
+                    <cell><var name="$a[6]" /></cell>
                     <cell><var name="$b[6]" width="10" /></cell>
-                    <cell><var name="$c[6]" width="10" /></cell>
+                    <cell><var name="$c[6]" /></cell>
                   </row>
-
                 </tabular>
               </table>
             </statement>
-
-          </webwork>
-        </exercise>
-<todo>Fix GeoGebra graphs in next two problems so they don't use the distance function</todo>
-        <exercise>
-          <title>The Transformation <m>-f(x)</m></title>
-          <webwork xml:id="points-on-opposite-f-of-x">
-            <setup>
-
-              <var name="$didItGraph">
-                <static>1</static>
-              </var>
-
-              <pg-code>
-                $didItGraph=Real(1);
-              </pg-code>
-
-            </setup>
-
-            <statement>
-              <p>The graph below shows <m>f(x) = \sqrt{x}</m>. Plot three points on the graph of <m>-f(x)</m> by moving the three blue points to appropriate locations.</p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/daN858tY/width/429/height/334/border/888888/sri/true" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>Enter the value <m>1</m> if you successfully made the graph of <m>y = -f(x)</m>.</p>
-              <p><var name="$didItGraph" width="5" /></p>
-            </statement>
           </webwork>
         </exercise>
 
-        <exercise>
-          <title>The Transformation <m>f(-x)</m></title>
-          <webwork xml:id="points-on-f-of-opposite-x">
-            <setup>
-
-              <var name="$didItGraph">
-                <static>1</static>
-              </var>
-
-              <pg-code>
-                $didItGraph=Real(1);
-              </pg-code>
-
-            </setup>
-
-            <statement>
-              <p>The graph below shows <m>f(x) = \sqrt{x}</m>. Plot two points on the graph of <m>f(-x)</m> by moving the two blue points to appropriate locations.</p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dBskeXZe/width/422/height/257/border/888888/sri/true" width="422px" height="257px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>Enter the value <m>1</m> if you successfully made the graph of <m>y = f(-x)</m>.</p>
-              <p><var name="$didItGraph" width="5" /></p>
-            </statement>
-
-          </webwork>
-        </exercise>
+        <p>In the final two exercises, use function notation to describe how a graph was reflected, and then write the formula for a reflected function.</p>
 
         <exercise>
-          <title>Graphs of <m>f(x)</m>, <m>-f(x)</m> and <m>f(-x)</m></title>
-          <webwork xml:id="reflection-graphs-square-root-function">
+          <webwork>
             <setup>
-
-              <var name="$reflectXAxis">
+              <var name="$g">
                 <set>
-                  <member correct="yes">\text{To make the graph of }-f(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the x-axis.}</member>
-                  <member>\text{To make the graph of }-f(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the y-axis.}</member>
+                  <member>\text{?}</member>
+                  <member correct="yes">-f(x)</member>
+                  <member>f(-x)</member>
                 </set>
               </var>
-
-              <var name="$reflectYAxis">
+              <var name="$h">
                 <set>
-                  <member>\text{To make the graph of }f(-x)\text{, you reflect (flip) the graph of }f(x)\text{ over the x-axis.}</member>
-                  <member correct="yes">\text{To make the graph of }f-(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the y-axis.}</member>
+                  <member>\text{?}</member>
+                  <member>-f(x)</member>
+                  <member correct="yes">f(-x)</member>
                 </set>
               </var>
-
               <pg-code>
-                Context('Numeric');
-                $reflectXAxis = RadioButtons(
-                ["To make the graph of \(-f(x)\), you reflect (flip) the graph of \(f(x)\) over the x-axis.","To make the graph of \(-f(x)\), you reflect (flip) the graph of \(f(x)\) over the y-axis.","None of these"],0,labels => ["Flip over x-axis","Flip over y-axis","None of these"],displayLabels => 0
+                $g=PopUp(
+                ["?","-f(x)","f(-x)"],"-f(x)"
                 );
-                $reflectYAxis = RadioButtons(
-                ["To make the graph of \(f(-x)\), you reflect (flip) the graph of \(f(x)\) over the x-axis.","To make the graph of \(f(-x)\), you reflect (flip) the graph of \(f(x)\) over the y-axis.","None of these"],1,labels => ["Flip over x-axis","Flip over y-axis","None of these"],displayLabels => 0
+                $h=PopUp(
+                ["?","-f(x)","f(-x)"],"f(-x)"
                 );
               </pg-code>
-
             </setup>
-
             <statement>
-              <p>The graph below shows <m>f(x) = \sqrt{x}</m>. Use the radio buttons to change the graph to either <m>-f(x)</m> or <m>f(-x)</m>.</p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/wrQyy2mH/width/438/height/367/border/888888/sri/true" width="438px" height="367px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>The next graph shows <m>f(x) = 2^x</m>. Use the radio buttons to change the graph to either <m>-f(x)</m> or <m>f(-x)</m>.</p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zW5SrRKw/width/438/height/429/border/888888/sri/true" width="438px" height="429px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>Choose the correct statement below about the graph of <m>y = -f(x)</m>.</p>
-              <p><var name="$reflectXAxis" form="buttons" /></p>
-              <p>Choose the correct statement below about the graph of <m>y = f(-x)</m>.</p>
-              <p><var name="$reflectYAxis" form="buttons" /></p>
+              <p>The graph below shows <m>y = f(x)</m>.</p>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/bScMTEdX/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Use the checkboxes to graph <m>y = g(x)</m> or <m>y = h(x)</m> which are reflections of <m>f(x)</m>.</p>
+              <p>Complete the statements about <m>g(x)</m> and <m>h(x)</m>:</p>
+              <ul>
+                <li><p><m>g(x) = </m><var name="$g" form="popup" /></p></li>
+                <li><p><m>h(x) = </m><var name="$h" form="popup" /></p></li>
+              </ul>
             </statement>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="$a"><static>5</static></var>
+              <var name="$g"><static>-(x+5)^4></static></var>
+              <var name="$h"><static>(-x+5)^4</static></var>
+              <pg-code>
+                $a=random(3,12,1);
+                $g=Compute("-(x+$a)^4");
+                $h=Compute("(-x+$a)^4");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>The graph below shows <m>f(x) = (x + <var name="$a" />)^4</m>.</p>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/bScMTEdX/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Use the checkboxes to graph <m>y = g(x)</m> or <m>y = h(x)</m> which are reflections of <m>f(x)</m>.</p>
+              <p>Use the fact that we know the formula for <m>f(x)</m> in order to write the formulas for the functions <m>g(x)</m> and <m>h(x)</m>:</p>
+              <p><m>g(x) = </m><var name="$g" width="15" /></p>
+              <p><m>h(x) = </m><var name="$h" width="15" /></p>
+            </statement>
+            <solution>
+              <ol>
+                <li><p>The function <m>g(x)</m> is a reflection of <m>f(x)</m> over the <m>x</m>-axis, making all of the outputs of those functions opposites of each other.</p>
+                <p>Therefore, <md>
+                  <mrow>g(x) \amp= -f(x)</mrow>
+                  <mrow>\amp= -(x+<var name="$a" />)^4</mrow></md></p>
+                </li>
+                <li><p>Similarly, the function <m>h(x)</m> is a reflection of <m>f(x)</m> over the <m>y</m>-axis, making the output values the same at oppostite inputs.</p>
+                <p>Therefore, <md>
+                  <mrow>h(x) \amp= f(-x)</mrow>
+                  <mrow>\amp= (-x+<var name="$a" />)^4</mrow></md></p>
+                </li>
+              </ol>
+            </solution>
           </webwork>
         </exercise>
 

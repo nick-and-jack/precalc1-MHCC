@@ -16,31 +16,23 @@
     <title>Reflections and Vertical Stretches</title>
     <introduction>
 
-        <list>
+        <objectives>
           <title>Student Learning Outcomes</title>
           <ul>
             <li><p>Describe the effect of the transformation of the form y = a*f(x) given the graph of y = f(x) and sketch a graph.</p></li>
             <li><p>Describe the effects on the graph of a function f(x) when comparing f(x) to f(-x) or -f(x).</p></li>
             <li><p>Use transformations to model situations algebraically (from verbal descriptions, graphs, tables, and data points). Recognize functions as transformations of basic functions.</p></li>
           </ul>
-        </list>
+        </objectives>
 
-        <list>
-          <title>Video Lectures</title>
-          <dl>
-            <li>
-              <title>Graphing <m>k \cdot f(x)</m></title>
               <todo>Maybe fix video below. A mistake at 5min 20sec</todo>
                 <!-- <video source="http://stream.mhcc.edu/videos/greenja/captioned/m06-lec-stretch-factor-captioned_-_20150120_200703_26.html" />
             </li>
             <li>
               <title>Opposite of Input vs. Opposite of Output</title>
                 <video source="http://stream.mhcc.edu/videos/greenja/captioned/m06-cyu-transformation-equations-captioned_-_20150120_183648_26.html" /> -->
-            </li>
-          </dl>
-        </list>
 
-        <paragraphs>
+          <!-- what is the point of the following list?
           <p>Function notation is all about describing inputs and outputs. So far, we have seen inputs and outputs in these contexts:</p>
             <dl>
               <title></title>
@@ -82,9 +74,9 @@
                 </table>
               </li>
             </dl>
-            <p>In this section, we will continue to explore changes to the input and output of a function.</p>
 
-        </paragraphs>
+            <p>In this section, we will continue to explore changes to the input and output of a function.</p>
+        -->
 
       </introduction>
       <xi:include href="./activity-reflections.xml" />
@@ -92,10 +84,11 @@
 
     <conclusion>
       <title>Summary of Reflections and Vertical Stretches</title>
-      <paragraphs>
+
 
         <p>In this section we study transformations that stretch a function vertically, or reflect the function across one of the axes.</p>
-        <p>Thinking once again of function notation as language, we know that the notation <m>f(x)</m> indicates an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are referring to the <term>opposite</term> of the <em>input</em>.</p>
+      <paragraphs><title>Reflections</title>
+        <p>Thinking again of function notation as language, we know that the notation <m>f(x)</m> indicates an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are referring to the <term>opposite</term> of the <em>input</em>.</p>
         <p>Likewise, if we replace <m>f(x)</m> with <m>-f(x)</m>, we are referring to the <term>opposite</term> of the <em>output</em>.</p>
         <p>In each case, <m>-f(x)</m> and <m>f(-x)</m> represent reflections:</p>
         <dl>
@@ -113,6 +106,19 @@
         <example>
             <p>The function <m>g(x) = x^3 - 5x^2 + 2</m> is graphed below.</p>
 
+            <figure>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[]
+                                    \addplot+[domain=-6:6]{x^3-5*x^2+2};
+                                 \end{axis}
+                            \end{tikzpicture}
+                    ]]>
+                    </latex-image-code>
+                </image>
+            </figure>
+
             <sidebyside widths="48% 48%">
               <paragraphs>
                 <p>To reflect <m>g(x)</m> over the <m>x</m>-axis, we would take the opposite of the output by multiplying the formula by <m>-1</m>.</p>
@@ -128,7 +134,7 @@
                   <p>The formula for this reflection is <md>
                     <mrow>y \amp= g(-x)</mrow>
                     <mrow>\amp= (-x)^3 - 5(-x)^2 + 2</mrow>
-                    <mrow>\amp= -x^3 - x^2 + 2</mrow></md>
+                    <mrow>\amp= -x^3 - 5x^2 + 2</mrow></md>
                     and it is graphed below:
                   </p>
               </paragraphs>
@@ -168,7 +174,7 @@
 
       <paragraphs>
         <title>Vertical Stretch/Compress</title>
-        <p>In addition to reflecting a function, we can also <term>stretch</term> or <term>compress</term> a function vertically by multiplying the output a constant <m>a</m>.</p>
+        <p>In addition to reflecting a function, we can also <term>stretch</term> or <term>compress</term> a function vertically by multiplying the output a constant number <m>a</m>.</p>
         <dl>
           <title></title>
           <li>
@@ -236,21 +242,20 @@
             <p>Let <m>m(n) = n^2 - <var name="$a" />n + <var name="$b" /></m>.</p>
             <ol>
               <li><p>Write a formula for the transformation <m>m(-n)</m> and geometrically describe the transformation.</p>
-              <p>To do this, we use the <em>blank</em> method, whereby we rewrite the output <m>n^2 - <var name="$a" />n + <var name="$b" /></m>, but replace all instances of the variable <m>n</m> with the new input, <m>-n</m>. Remember to use parentheses when substituting this in for <m>n</m>.</p>
+              <p>To do this, use the <em>blank</em> method: write the output <m>n^2 - <var name="$a" />n + <var name="$b" /></m>, but replace all instances of the variable <m>n</m> with the new input, <m>-n</m>. Remember to use parentheses when substituting this in for <m>n</m>.</p>
               <p>Formula: <m>m(-n) = </m><var name="$f" width="15" /></p>
               <p>For the geometric description, remember that we are taking the opposite of the input variable, so this will affect the graph's position in the horizontal direction.</p>
-              <p>Description: This will reflect the graph of <m>m(n)</m> over the <var name="$description1" form="popup" /></p></li>
+              <p>Description: <m>m(-n)</m> will reflect the graph of <m>m(n)</m> over the <var name="$description1" form="popup" /></p></li>
 
               <li><p>Write a formula for the transformation <m>-m(n - </m><var name="$c" /><m>)</m>.</p>
-              <p>Notice that there are two changes here: Subtracting a number from the input, and the opposite symbol outside.</p>
-              <p>First we will take care of the inside change, by replacing all instances of the variable <m>n</m> with the new input, <m>n - <var name="$c" /></m>. Remember again to use parentheses when substituting this in for <m>n</m>.</p>
+              <p>Notice that there are two changes here: Subtracting <var name="$c" /> from the input, and the opposite symbol outside.</p>
+              <p>First take care of the inside change by replacing all instances of the variable <m>n</m> with the new input, <m>n - <var name="$c" /></m>. Remember again to use parentheses when substituting this in for <m>n</m>.</p>
               <p>This would leave us with:</p>
               <p>(<var name="$nMinusC" width="6" /><m>)^2 - </m><var name="$a" />(<var name="$nMinusC" width="6" /><m>) + </m><var name="$b" /></p>
-              <p>Last, we take care of the outside change by putting the opposite symbol outside of this whole expression by using parentheses.</p>
+              <p>Next, take care of the outside change by putting the opposite symbol outside of this whole expression, remembering to use parentheses.</p>
               <p>Formula: <m>-m(n - </m><var name="$c" /><m>) = </m><var name="$g" width="15" /></p>
-              <p>For the geometric description, we must remember what each type of change to the formula will do to the graph.</p>
-              <p>The inside change of subtracting <var name="$c" /> will move the graph in the horizontal direction. The outside change of taking the opposite will affect the output (<m>y</m>) values by changing their sign.</p>
-              <p>Description: This will shift the graph of <m>m(n)</m> by <var name="$c" /> units <var name="$description2" form="popup"/> and reflect over the <var name="$description3" form="popup" /></p></li>
+              <p>The inside change of subtracting <var name="$c" /> will move the graph in the horizontal direction. The outside change of taking the opposite will affect the output values by changing their sign.</p>
+              <p>Description: <m>-m(n - <var name="$c" />)</m> will shift the graph of <m>m(n)</m> by <var name="$c" /> units <var name="$description2" form="popup"/> and reflect over the <var name="$description3" form="popup" /></p></li>
             </ol>
           </statement>
           <solution>
@@ -268,3 +273,46 @@
 
     </conclusion>
 </chapter>
+
+<!-- Extra problem
+
+<exercise>
+  <webwork xml:id="reflection-graphs-square-root-function">
+    <setup>
+      <var name="$reflectXAxis">
+        <set>
+          <member correct="yes">\text{To make the graph of }-f(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the x-axis.}</member>
+          <member>\text{To make the graph of }-f(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the y-axis.}</member>
+        </set>
+      </var>
+      <var name="$reflectYAxis">
+        <set>
+          <member>\text{To make the graph of }f(-x)\text{, you reflect (flip) the graph of }f(x)\text{ over the x-axis.}</member>
+          <member correct="yes">\text{To make the graph of }f-(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the y-axis.}</member>
+        </set>
+      </var>
+      <pg-code>
+        Context('Numeric');
+        $reflectXAxis = RadioButtons(
+        ["To make the graph of \(-f(x)\), you reflect (flip) the graph of \(f(x)\) over the x-axis.","To make the graph of \(-f(x)\), you reflect (flip) the graph of \(f(x)\) over the y-axis.","None of these"],0,labels => ["Flip over x-axis","Flip over y-axis","None of these"],displayLabels => 0
+        );
+        $reflectYAxis = RadioButtons(
+        ["To make the graph of \(f(-x)\), you reflect (flip) the graph of \(f(x)\) over the x-axis.","To make the graph of \(f(-x)\), you reflect (flip) the graph of \(f(x)\) over the y-axis.","None of these"],1,labels => ["Flip over x-axis","Flip over y-axis","None of these"],displayLabels => 0
+        );
+      </pg-code>
+    </setup>
+
+    <statement>
+      <p>The graph below shows <m>f(x) = \sqrt{x}</m>. Use the radio buttons to change the graph to either <m>-f(x)</m> or <m>f(-x)</m>.</p>
+      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/wrQyy2mH/width/438/height/367/border/888888/sri/true" width="438px" height="367px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+      <p>The next graph shows <m>f(x) = 2^x</m>. Use the radio buttons to change the graph to either <m>-f(x)</m> or <m>f(-x)</m>.</p>
+      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zW5SrRKw/width/438/height/429/border/888888/sri/true" width="438px" height="429px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+      <p>Choose the correct statement below about the graph of <m>y = -f(x)</m>.</p>
+      <p><var name="$reflectXAxis" form="buttons" /></p>
+      <p>Choose the correct statement below about the graph of <m>y = f(-x)</m>.</p>
+      <p><var name="$reflectYAxis" form="buttons" /></p>
+    </statement>
+  </webwork>
+</exercise>
+
+-->
