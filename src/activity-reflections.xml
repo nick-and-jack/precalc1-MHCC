@@ -139,7 +139,10 @@
 
             <statement>
               <p>Use the function <m>f(x)</m> to write an expression to answer each question below.</p>
+              <p>The first question has been answered already as an example.</p>
               <ul>
+                <li><p>What is the output, when the input is <m>20</m>?</p>
+                <p>Answer:  <m>f(20)</m></p></li>
                 <li><p>What is <m>3</m> times the output, when the input is <m><var name="$input1" /></m>?</p>
                 <p>Answer:  <var name="$output1" width="10" /></p></li>
                 <li><p>What is the opposite of the output, when the input is <m><var name="$input2" /></m>?</p>
@@ -174,7 +177,7 @@
 
               <pg-code>
                 $fof1=Real(2);
-                $negfof1=-$fof2;
+                $negfof1=-$fof1;
                 $xaxis=PopUp(
                 ["?","x-axis","y-axis"],"x-axis"
                 );
@@ -185,9 +188,9 @@
               <p>The graph shows a function <m>y = f(x)</m>.</p>
               <ol>
                 <li><p>What is <m>f(1)</m>?</p>
-                <p>Answer:  <var name="$fof2" width="10" /></p></li>
+                <p>Answer:  <var name="$fof1" width="10" /></p></li>
                 <li><p>What is <m>-f(1)</m>?</p>
-                <p>Answer:  <var name="$negfof2" width="10" /></p>
+                <p>Answer:  <var name="$negfof1" width="10" /></p>
                 <p>Now click to graph <m>y = -f(x)</m>. Can you see the value of <m>-f(1)</m> on that graph?</p></li>
               </ol>
               <p>Complete the following statement:</p>
