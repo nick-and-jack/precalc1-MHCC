@@ -33,7 +33,7 @@
     </answer>
   </example>
 
-  <p>In the next exercise, you will practice interpreting an expression which somehow alters either the input or the output.</p>
+  <p>In the next exercise, you will practice interpreting function notation where the input or the output has been altered.</p>
 
   <exercise>
     <webwork>
@@ -43,7 +43,6 @@
             <member>\text{?}</member>
             <member>\text{the input divided by 2}</member>
             <member correct="yes">\text{the output, when the input is divided by 2}</member>
-            <member>x^2</member>
           </set>
         </var>
         <var name="$interpret2">
@@ -56,7 +55,7 @@
         </var>
         <pg-code>
           $interpret1=PopUp(
-          ["?","the input divided by 2","the output, when the input is divided by 2","x^2"],"the output, when the input is divided by 2"
+          ["?","the input divided by 2","the output, when the input is divided by 2"],"the output, when the input is divided by 2"
           );
           $interpret2=PopUp(
           ["?","3 times the output, when the input is 5","an input of 3 and an output of 5","15"],"3 times the output, when the input is 5"
@@ -79,7 +78,7 @@
       </hint>
       <solution>
         <ol>
-          <li><p>The expression <m>f\left(\frac{x}{2}\right)</m> is the output of the function, when the input <m>x</m> has been divided by <m>2</m>.</p></li>
+          <li><p>While it is certainly true that the input <m>x</m> has been divided by <m>2</m>, the expression <m>f\left(\frac{x}{2}\right)</m> is the <em>output</em> of the function, when the input <m>x</m> has been divided by <m>2</m>.</p></li>
           <li><p>Since <m>g(5)</m> represents the output of the function, when the input is <m>5</m>, then <m>3*g(5)</m> is just <m>3</m> times the output, when the input is <m>5</m>.</p></li>
         </ol>
       </solution>
@@ -88,7 +87,9 @@
 
 <todo>Change problem to allow for answers in a range</todo>
 
-  <p>In the next three exercises, you will apply these concepts to the graph of a function.</p>
+  <paragraphs><title>Effects on the graph</title>
+  <p>Now let's see how to apply these concepts to the graph of a function.</p>
+  </paragraphs>
   <p>First, you will use the graph of a function to complete a table of values by altering the output.</p>
 
   <exercise>
@@ -187,7 +188,7 @@
     </webwork>
   </exercise>
 
-  <p>Next, you will</p>
+  <p>Next, you will plot points on the graphs of functions where the output has been multiplied by a number.</p>
 
   <exercise>
     <webwork xml:id="points-on-a-times-f-of-x">
@@ -223,7 +224,7 @@
   </exercise>
 
   <p>In the previous exercise, you plotted points for the functions <m>y = 2f(x)</m> and <m>\frac{1}{2}f(x)</m>. This created graphs which were similar to the original function <m>y = f(x)</m>, but whose outputs were either twice as large, or half as large as those of <m>f(x)</m>.</p>
-  <p>This makes sense, because multiplying outside of the function <m>f(x)</m> by a number like <m>2</m> or <m>\frac{1}{2}</m>, just changes the <em>output</em> values &#8212; and the output values are the heights of the points.</p>
+  <p>This makes sense, because multiplying <em>outside</em> of the function <m>f(x)</m> by a number like <m>2</m> or <m>\frac{1}{2}</m>, just changes the <em>output</em> values &#8212; and the output values are the heights of the points.</p>
   <p>In the next two exercises, you will explore how multiplying the output of a function by a number will change the graph.</p>
 
   <exercise>
@@ -231,23 +232,25 @@
       <setup>
         <var name="$verticalStretch">
           <set>
-            <member>\text{To make the graph of <m>a*f(x)</m> when <m>a &gt; 1</m>, you compress the graph of <m>f(x)</m> toward the x-axis.}</member>
-            <member correct="yes">\text{To make the graph of <m>a*f(x)</m> when <m>a &gt; 1</m>, you stretch the graph of <m>f(x)</m> away from the x-axis.}</member>
+            <member>\text{?}</member>
+            <member correct="yes">\text{stretch it away from}</member>
+            <member>\text{compress it toward}</member>
           </set>
         </var>
         <var name="$verticalCompression">
           <set>
-            <member correct="yes">\text{To make the graph of <m>a*f(x)</m> when <m>0 &lt; a &lt; 1</m>, you compress the graph of <m>f(x)</m> toward the x-axis.}</member>
-            <member>\text{To make the graph of <m>a*f(x)</m> when <m>0 &lt; a &lt; 1</m>, you stretch the graph of <m>f(x)</m> away from the x-axis.}</member>
+            <member>\text{?}</member>
+            <member>\text{stretch it away from}</member>
+            <member correct="yes">\text{compress it toward}</member>
           </set>
         </var>
 
         <pg-code>
-          $verticalStretch = RadioButtons(
-          ["To make the graph of \(a*f(x)\) when \(a &gt; 1\), you compress the graph of \(f(x)\) toward the x-axis.","To make the graph of \(a*f(x)\) when \(a &gt; 1\), you stretch the graph of \(f(x)\) away from the x-axis.","None of these"],1,labels => ["Vertical Compression","Vertical Stretch","None of these"],displayLabels => 0
+          $verticalStretch = PopUp(
+          ["?","stretch it away from","compress it toward"],"stretch it away from"
           );
-          $verticalCompression = RadioButtons(
-          ["To make the graph of \(a*f(x)\) when \(0 &lt; a &lt; 1\), you compress the graph of \(f(x)\) toward the x-axis.","To make the graph of \(a*f(x)\) when \(0 &lt; a &lt; 1\), you stretch the graph of \(f(x)\) away from the x-axis.","None of these"],0,labels => ["Vertical Compression","Vertical Stretch","None of these"],displayLabels => 0
+          $verticalCompression = PopUp(
+          ["?","stretch it away from","compress it toward"],"compress it toward"
           );
         </pg-code>
       </setup>
@@ -258,13 +261,11 @@
             <p>Moving the slider allows you to also graph <m>y = a*f(x)</m>, where you can change the value of <m>a</m> between <m>0</m> and <m>3</m>.</p>
         <ul>
           <li>
-            <p>The slider begins at <m>a = 1</m>, so the graphs are identical. Move the slider so <m>a &gt; 1</m> and observe the changes to the graph.</p>
-            <p>Choose the correct statement below about the graph of <m>y = af(x)</m> when <m>a &gt; 1</m>.</p>
-            <p><var name="$verticalStretch" form="buttons" /></p></li>
+            <p>Move the slider so <m>a &gt; 1</m>, and use what you observe to complete the statement below:</p>
+            <p>To graph <m>y = af(x)</m> when <m>a &gt; 1</m>, you would begin with <m>y = f(x)</m> and <var name="$verticalStretch" form="popup" /> the <m>x</m>-axis.</p></li>
           <li>
-            <p>Now, change the slider so that <m>0 &lt; a &lt; 1</m> and observe the changes to the graph.</p>
-            <p>Choose the correct statement below about the graph of <m>y = af(x)</m> when <m>0 &lt; a &lt; 1</m>.</p>
-            <p><var name="$verticalCompression" form="buttons" /></p></li>
+            <p>Now, move the slider so that <m>0 &lt; a &lt; 1</m>, and use what you observe to complete the statement below:</p>
+            <p>To graph <m>y = af(x)</m> when <m>0 &lt; a &lt; 1</m>, you would begin with <m>y = f(x)</m> and <var name="$verticalCompression" form="popup" /> the <m>x</m>-axis.</p></li>
         </ul>
       </statement>
     </webwork>
@@ -299,8 +300,7 @@
         <p>The graph below shows a function <m>y = f(x)</m>.</p>
         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/b2KYhMZS/width/433/height/518/border/888888/sri/true" width="433px" height="518px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
         <p>Moving the slider allows you to also graph <m>y = a*f(x)</m>, where you can change the value of <m>a</m> between <m>-2</m> and <m>3</m>.</p>
-        <p>The slider begins at <m>a = 1</m>, so the graphs are identical. Move the slider so <m>a = -2</m> and observe the changes to the graph.</p>
-        <p>Make the statement below true by using the drop-down menus:</p>
+        <p>Move the slider so <m>a = -2</m>, and use what you observe to complete the statement below:</p>
         <p>The graph of <m>y = -2*f(x)</m> is like the graph of <m>y = f(x)</m>, after it has been <var name="$reflection" form="popup" /> and <var name="$stretch" form="popup" />.</p>
       </statement>
 

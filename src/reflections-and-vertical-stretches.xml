@@ -19,8 +19,8 @@
         <objectives>
           <title>Student Learning Outcomes</title>
           <ul>
-            <li><p>Describe the effect of the transformation of the form y = a*f(x) given the graph of y = f(x) and sketch a graph.</p></li>
-            <li><p>Describe the effects on the graph of a function f(x) when comparing f(x) to f(-x) or -f(x).</p></li>
+            <li><p>Describe the effect of the transformation of the form <m>y = a*f(x)</m> given the graph of <m>y = f(x)</m>, and sketch a graph.</p></li>
+            <li><p>Describe the effects on the graph of a function <m>f(x)</m> when comparing <m>f(x)</m> to <m>f(-x)</m> or <m>-f(x)</m>.</p></li>
             <li><p>Use transformations to model situations algebraically (from verbal descriptions, graphs, tables, and data points). Recognize functions as transformations of basic functions.</p></li>
           </ul>
         </objectives>
@@ -88,18 +88,18 @@
 
         <p>In this section we study transformations that stretch a function vertically, or reflect the function across one of the axes.</p>
       <paragraphs><title>Reflections</title>
-        <p>Thinking again of function notation as language, we know that the notation <m>f(x)</m> indicates an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are referring to the <term>opposite</term> of the <em>input</em>.</p>
+        <p>Thinking again of function notation as language, we know that the notation <m>f(x)</m> indicates that there is an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are using the <term>opposite</term> of the <em>input</em>.</p>
         <p>Likewise, if we replace <m>f(x)</m> with <m>-f(x)</m>, we are referring to the <term>opposite</term> of the <em>output</em>.</p>
-        <p>In each case, <m>-f(x)</m> and <m>f(-x)</m> represent reflections:</p>
+        <p>From a graphical standpoint, both of the transformations <m>-f(x)</m> and <m>f(-x)</m> represent reflections of a graph:</p>
         <dl>
           <title></title>
           <li>
             <title><m>-f(x)</m></title>
-            <p>Reflection of <m>f(x)</m> over the horizontal-axis</p>
+            <p>reflects of <m>f(x)</m> over the horizontal-axis</p>
           </li>
           <li>
             <title><m>f(-x)</m></title>
-            <p>Reflection of <m>f(x)</m> over the vertical-axis</p>
+            <p>reflects <m>f(x)</m> over the vertical-axis</p>
           </li>
         </dl>
 
@@ -124,6 +124,7 @@
                 <p>To reflect <m>g(x)</m> over the <m>x</m>-axis, we would take the opposite of the output by multiplying the formula by <m>-1</m>.</p>
                   <p>The formula for this reflection is <md>
                     <mrow>y \amp= -g(x)</mrow>
+                    <mrow>\amp= -1(x^3 - 5x^2 + 2)</mrow>
                     <mrow>\amp= -x^3 + 5x^2 - 2</mrow></md>
                     and it is graphed below:
                   </p>
@@ -172,23 +173,39 @@
         </example>
       </paragraphs>
 
-      <paragraphs>
-        <title>Vertical Stretch/Compress</title>
-        <p>In addition to reflecting a function, we can also <term>stretch</term> or <term>compress</term> a function vertically by multiplying the output by a constant number <m>a</m>.</p>
-        <dl>
-          <title></title>
-          <li>
-            <title>If <m>a &gt; 1</m></title>
-            <p><m>a*f(x)</m> will vertically <term>stretch</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
-          </li>
-          <li>
-            <title>If <m>0 &lt; a &lt; 1</m></title>
-            <p><m>a*f(x)</m> will vertically <term>compress</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
-          </li>
-        </dl>
-        <note><p>In this section, we will not be exploring the transformation <m>f(a*x)</m> which represents a horizontal stretch or compression.</p></note>
-        <p>Now work through the following exercises for practice in applying these transformations.</p>
-      </paragraphs>
+      <exercise>
+        <statement>
+          <p>Let <m>f(x) = 5^x + 3x^2</m>, and use it to answer the following questions.</p>
+          <ol>
+            <li>
+              <ul>
+                <li><p>Compare the graphs of <m>y = f(x)</m> and <m>y = -f(x)</m>.</p></li>
+                <li><p>What is the formula for <m>y = -f(x)</m>?</p></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><p>Compare the graphs of <m>y = f(x)</m> and <m>y = f(-x)</m>.</p></li>
+                <li><p>What is the formula for <m>y = f(-x)</m>?</p></li>
+              </ul>
+            </li>
+          </ol>
+        </statement>
+        <answer>
+          <p>The formula for <m>-f(x)</m> is <md>
+          <mrow>-f(x) \amp= -(5^x + 3x^2)</mrow>
+          <mrow>\amp= -5^x - 3x^2</mrow></md>
+          and it is a reflection of <m>y = f(x)</m> over the <m>x</m>-axis.</p>
+        </answer>
+        <answer>
+          <p>The formula for <m>f(-x)</m> is <md>
+          <mrow>f(-x) \amp= 5^{-x} + 3(-x)^2</mrow>
+          <mrow>\amp= \frac{1}{5^x} + 3x^2</mrow></md>
+          and it is a reflection of <m>y = f(x)</m> over the <m>y</m>-axis.</p>
+        </answer>
+      </exercise>
+
+      <p>Now practice writing the formula for a function which has been transformed.</p>
 
       <exercise>
         <webwork xml:id="transformation-formulas">
@@ -270,7 +287,175 @@
         </webwork>
       </exercise>
 
+      <paragraphs>
+        <title>Vertical Stretch/Compress</title>
+        <p>In addition to reflecting a function, we can also <term>stretch</term> or <term>compress</term> a function vertically by multiplying the output by a constant number <m>a</m>.</p>
+        <dl>
+          <title></title>
+          <li>
+            <title>If <m>a &gt; 1</m></title>
+            <p><m>a*f(x)</m> will vertically <term>stretch</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
+          </li>
+          <li>
+            <title>If <m>0 &lt; a &lt; 1</m></title>
+            <p><m>a*f(x)</m> will vertically <term>compress</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
+          </li>
+        </dl>
+      </paragraphs>
 
+      <example>
+        <p>If we began with the function <me>f(x) = x^2 - 1</me> then the transformation <md>
+        <mrow>3f(x) \amp= 3(x^2 - 1)</mrow>
+        <mrow>\amp= 3x^2 - 3</mrow></md>
+        would be just like <m>f(x) = x^2 - 1</m>, but all of its output values would be multiplied by <m>3</m>.</p>
+            <table>
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <col />
+
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>f(x)</m></cell>
+                  <cell><m>3f(x)</m></cell>
+                </row>
+                <row bottom="medium">
+                  <cell>-3</cell>
+                  <cell>8</cell>
+                  <cell>24</cell>
+                </row>
+                <row bottom="medium">
+                  <cell>-2</cell>
+                  <cell>3</cell>
+                  <cell>9</cell>
+                </row>
+                <row bottom="medium">
+                  <cell>-1</cell>
+                  <cell>0</cell>
+                  <cell>0</cell>
+                </row>
+                <row bottom="medium">
+                  <cell>0</cell>
+                  <cell>-1</cell>
+                  <cell>-3</cell>
+                </row>
+                <row bottom="medium">
+                  <cell>1</cell>
+                  <cell>0</cell>
+                  <cell>0</cell>
+                </row>
+                <row bottom="medium">
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>9</cell>
+                </row>
+                <row bottom="medium">
+                  <cell>3</cell>
+                  <cell>8</cell>
+                  <cell>24</cell>
+                </row>
+              </tabular>
+            </table>
+        <p>Since the output values were all multiplied by <m>3</m>, this would make all of the <m>y</m> values of the points <m>3</m> times as far from zero (either positive or negative).</p>
+        <p>Similarly, if we began with <m>f(x) = x^2 - 1</m>, then the transformation <md>
+        <mrow>\frac{1}{2}f(x) \amp= \frac{1}{2}(x^2 - 1)</mrow>
+        <mrow>\amp= \frac{1}{2}x^2 - \frac{1}{2}</mrow></md>
+        would be just like <m>f(x)</m>, but all of its output values would be multiplied by <m>\frac{1}{2}</m>.</p>
+        <table>
+          <tabular top="major" halign="center">
+            <col halign="left" />
+            <col />
+            <col />
+
+            <row bottom="medium">
+              <cell><m>x</m></cell>
+              <cell><m>f(x)</m></cell>
+              <cell><m>\frac{1}{2}f(x)</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell>-3</cell>
+              <cell>8</cell>
+              <cell>4</cell>
+            </row>
+            <row bottom="medium">
+              <cell>-2</cell>
+              <cell>3</cell>
+              <cell>1.5</cell>
+            </row>
+            <row bottom="medium">
+              <cell>-1</cell>
+              <cell>0</cell>
+              <cell>0</cell>
+            </row>
+            <row bottom="medium">
+              <cell>0</cell>
+              <cell>-1</cell>
+              <cell>-0.5</cell>
+            </row>
+            <row bottom="medium">
+              <cell>1</cell>
+              <cell>0</cell>
+              <cell>0</cell>
+            </row>
+            <row bottom="medium">
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>1.5</cell>
+            </row>
+            <row bottom="medium">
+              <cell>3</cell>
+              <cell>8</cell>
+              <cell>4</cell>
+            </row>
+          </tabular>
+        </table>
+        <p>Since the output values were all multiplied by <m>\frac{1}{2}</m>, this would make all of the <m>y</m> values of the points only half as far from zero (either positive or negative).</p>
+
+        <sidebyside widths="32% 32% 32%">
+          <figure>
+            <caption><m>f(x) = x^2 - 1</m></caption>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-5:5]{x^2-1};
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+          <figure>
+            <caption><m>3f(x) = 3x^2 - 3</m></caption>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-5:5]{3*x^2-3};
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+          <figure>
+            <caption><m>\frac{1}{2}f(x) = \frac{1}{2}x^2 - \frac{1}{2}</m></caption>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-5:5]{0.5*x^2-0.5};
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+        </sidebyside>
+
+      </example>
+
+      <note><p>In this section, we will not be exploring the transformation <m>f(a*x)</m> which represents a horizontal stretch or compression.</p></note>
     </conclusion>
 </chapter>
 
