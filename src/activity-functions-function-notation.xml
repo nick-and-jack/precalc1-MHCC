@@ -15,7 +15,7 @@
     <title>Function Notation (Input, Output)</title>
 
     <introduction>
-        <p>In this activity we develop an understanding of function notation by comparing statements we already understand in English to equivalent statements written in <q>math</q> language.   We interpret our statements about functions using graphs, tables and formulas.</p>
+        <p>In this activity we define a function and develop an understanding of function notation by comparing statements we already understand in English to equivalent statements written in <q>math</q> language.</p>
 
     <todo>
     <p>There are <m>34</m> questions in this activity.  All questions need to be answered correctly in order for the activity to be complete.  Each question is numbered and is written in bold.  A correct answer will show <q>correct</q> while an incorrect answer will show <q>Try again</q>.</p>
@@ -30,7 +30,7 @@
                     <p>Use function notation to describe an event.</p>
                 </li>
                 <li>
-                    <p>Evaluate a function.</p>
+                    <p>Evaluate a function and solve an equation using function notation.</p>
                 </li>
             </ul>
         </p>
@@ -38,10 +38,21 @@
     </introduction>
 
     <subsection>
+        <title>What is a Function?</title>
+        
+        <p>According to <url href="https://en.wikipedia.org/wiki/Function_(mathematics)">Wikipedia</url>, a function has the following definition:</p>
+        <blockquote><q>In mathematics, a function is a relation between a set of inputs and a set of permissible outputs with the property that each input is related to exactly one output.</q></blockquote>
+        <p>If you actually read the entire Wikipedia entry you will find the definition of a function can be quite lengthy in order to cover all the universe of mathematics.  In this activity we are going to keep the language simple, informal and we will use some analogies and examples to arrive at a working definition of functions.</p>
+        <p>Start by remebmering this: one input, one output.</p>
+        <p>A <term>function</term> is a rule that takes a piece of <q>usable</q> information that you pick (input) and gives you some kind of result (output).  By <q>usable</q> we mean information that has meaning for the function.</p>
+        <p>A simple example is that of the outside temperature throughout the day in your neighborhood. You pick a time to walk outside, like <m>10</m> <initial>a.m.</initial> That is an input. The result of making that choice may be an outside temperature of <m>42</m> degress fahrenheit. That is an output.</p>
+        <p>But no matter what time you pick to go outside, there is only one temperature. It's not like it can be <m>42</m> degrees and <m>75</m> degrees at the same time.  Also, using 24 hour time, you can choose to go outside at <m>10</m> hours or <m>15</m> hours. But you can't go outside at <m>37</m> hours because it makes no sense.  There are only <m>24</m> hours in a day.  The input of <m>37</m> hours is not usable.</p>
+        <p>Before we go further in defining a function, we need a short to write and talk about functions.  We need some notation so we don't have to keep writing all those letters, F U N C T I O N, that's just way too many letters.</p>
+    </subsection>
+    <subsection>
         <title>Math as a Language</title>
-        <p>We begin this activity by realizing math is just another language and everything you say or describe in English, you can say or describe in Math. Math is a language specifically to communicate measurements, or values and relationships.</p>
+        <p>Math is just another language and everything you say or describe in English, you can say or describe in Math. Math is a language specifically to communicate measurements, or values and relationships.</p>
         <p>In this next exercise we learn to communicate the position of a train as time passes and develop the notation to express where the train is at different times.</p>
-
         <exercise>
             <webwork seed="1">
                 <setup>
@@ -135,10 +146,10 @@
         <p>Finally we want to tell the reader the punch line.  We want to tell them that the distance is <m>30</m> miles from downtown at the specified time. Hence, <m>f(2) = 30</m> is the entire senctence.</p>
     </subsection>
     <subsection>
-        <title>The Grammar of Functioin Notation</title>
-        <p>The math <q>sentence</q> above is actually an equation and it uses <term>function notation</term> to express the information about the train. Of course, the equation is meaningless unless the reader knows how the notation is defined.  If you know Spanish or <q>math</q> you can <em>interpret</em> the meaning of something you read in those languages into English.  There will be much interpretation in this class.</p>
+        <title>The Grammar of Function Notation</title>
+        <p>The math <q>sentence</q> above is actually an equation and it uses <term>function notation</term> to express the information about the train. Of course, the equation is meaningless unless the reader knows how the variables and the function is defined.  If you know Spanish or <q>math</q> you can <em>interpret</em> the meaning of something you read in those languages into English.  Likewise, if you know <q>math language</q> you can interpret function notation its meaning into English too. There will be much interpretation in this class.</p>
 
-        <p>In math we use variables and symbols to replace entire words or even entire sentences. For instance, instead of <q>Train's distance in miles from downtown</q> we can use the variable <m>D</m>. Instead of the <q>number of hours after 8 <init>a.m.</init></q>, we can use the variable <m>t</m>.</p>
+        <p>In math we use variables and symbols to replace entire words or even entire sentences. Instead of <q>Train's distance in miles from downtown</q> we can use the variable <m>D</m>. Instead of the <q>number of hours after 8 <init>a.m.</init></q>, we can use the variable <m>t</m>.</p>
 
         <p>We call the letters <m>D</m> and <m>t</m> variables because they represent values that can change.  Typically we use variables that have something to do with the context of the problem, but sometimes we generalize an expression or equation with <m>x</m>'s and <m>y</m>'s when we have nothing specific in mind.</p>
 
@@ -301,10 +312,10 @@
         </subsection>
 
         <subsection>
-        <title>Evaluate vs Solve</title>
+        <title>Evaluate</title>
         <p>Its one thing to talk about, <q>The train's distance from downtown 2 hours after 8 a.m.</q> and a completely different thing to say what that distance actually is.</p>
 
-        <p>In our train story <m>f(2)</m> represents the train's distance 2 hours after 8 a.m. To find the value (number) for the distance we must <term>evaluate</term> the funtion. Earlier we used a graph, but can use a table or a formula if there is one avaible. The important thing is we need an input of time to determine the output which is the actual distance.</p>
+        <p>In our train story <m>f(2)</m> represents the train's distance 2 hours after 8 a.m. To find the value (number) for the distance we must <term>evaluate</term> the funtion. Earlier we used a graph, but can use a table or a formula if there is one avaible. The important thing is we need an input of time to determine the output which is the actual distance of the train from downtown.</p>
 
         <p><term>Evaluate</term> a function means to <em>find the value of the output given an input value.</em>  Therefore, evaluate <m>f(2)</m> in our example means <q>Find the train's distance from downtown 2 hours after 8 a.m.</q></p>
 
@@ -410,20 +421,10 @@
             </webwork>
         </exercise>
 
-        <p>According to <url href="https://en.wikipedia.org/wiki/Function_(mathematics)">Wikipedia</url>, a function has the following definition:</p>
-
-        <blockquote><q>In mathematics, a function is a relation between a set of inputs and a set of permissible outputs with the property that each input is related to exactly one output.</q></blockquote>
-
-        <p>If you actually read the entire Wikipedia entry you will find the definition of a function can be quite lengthy in order to cover all the universe of mathematics.  In this activity we are going to keep the language simple, informal and we will use some analogies from our train story as examples.</p>
-
-        <p>Remebmer this: One input, one output.</p>
-
-        <p>A function is a rule that takes a piece of <q>usable</q> information that you pick and gives you some kind of result.  By <q>usable</q> we mean information that has meaning for the function.  In our train story the only usable information we can choose are times between <m>0</m> and <m>7</m> hours after 8 <abbr>a.m.</abbr> (inclusive).  We have no information about times less than <m>0</m> or greater than <m>7</m> hours after 8 <int>a.m.</int>.</p>
-
-        <p>The most important part is that for each input the function gives you only one result, and each individual input always gives the same single result. This sound terribly confusing, but it makes more sense if we just think about the train.</p>
+        <p>The most important part is that for each input the function yields only one result, and each individual input always gives the same single result. This sound terribly confusing, but it makes more sense if we just think about the train.</p>
 
         <p>For instance, for the train fuction <m>D = f(t)</m> at any given time like <m>t = 2</m> the train can only be in one place.  That's the only result.  It's not possible for the train to be in two or more places (results) at the same time.  Also, every time you put 2 into the function, the train is always in the same place.</p>
-        <p>On the other hand it's possible that the train is 30 miles away from downtown at 10 <int>a.m.</int>, let's say on the way out of town.  But then the train is 30 miles away from downtown later in the day (different time) on the back towards downtown.</p>
+        <p>Here is the tricky part. It is possible that the train is 30 miles away from downtown at 10 <int>a.m.</int>, on the way out of town.  But then the train is 30 miles away from downtown later in the day (different time) on the way back towards downtown. Still the train is only at one place at any one time.</p>
 
         <exercise>
             <title>Decide if each situation is possible given the function <m>y = f(x)</m> where <m>x</m> and <m>y</m> are just generic variables.</title>
@@ -653,9 +654,28 @@
                 </statement>
             </webwork>
         </exercise>
-
-        <p>Notice that each input gives you only one result, so f(x)  is a function.  Also notice that each input has the same output, that's OKAY!</p>
-        <p>But what if the output, the result, is already known and we want to know all the inputs that give us this result?  This is called <term>solve</term>.</p>
+    </subsection>
+        
+    <subsection>
+        <title>The Secret to Evaluating Anything (The <q>Blank</q> Method)</title>
+            <p>Function notation is a way to tell the reader information about the input and how to use it to generate an output. Again, the way it works is <m>f(input)=output</m>. Whatever is in the parenthesis is the input.</p>
+            <p>The input can be a simple number like <m>2</m> or <m>-4</m> or the input can be a complicated expression like <m>{x^2} - x</m>.</p>
+            <p>Your success in this course is almost entirely dependent on your understanding of this simple concept: <em>The <q>blank</q> method.</em></p>
+            <p>When you see a formula like <m>f(x) = {x^2} - x</m>. It means this</p>
+            <p><me>f(blank) = {\left( {blank} \right)^2} - \left( {blank} \right)</me></p>
+            <p>At least that's the way formulas really work.</p>
+            <p>Using this function as an example, <m>f(5)</m> means <q>The formula with a <m>5</m>in it</q>. Literally it means place the number <m>5</m> in all the blanks. As in</p>
+            <p><m>f(5) = {\left( 5 \right)^2} - \left( 5 \right) = 20</m></p>
+            <p>The beauty of this is it does NOT matter what you put into the formula (as long as the formula can handle it which we will get into later), the formula does the same thing every time.</p>
+            <p>You can put <m>5</m> into the formula or you can put something complicated into the formula like <m>\frac{{{x^2}}}{{{x^2} + 1}}</m> which would look like this</p>
+            <p><m>f\left( {\frac{{{x^2}}}{{{x^2} + 1}}} \right) = {\left( {\frac{{{x^2}}}{{{x^2} + 1}}} \right)^2} - \left( {\frac{{{x^2}}}{{{x^2} + 1}}} \right)</m></p>
+            <p>Simplifying this equation is another matter.</p>
+            <todo>insert problem to review complex evaluation.</todo>
+    </subsection>
+        
+    <subsection>
+        <title>Solve</title>
+        <p>What if the output, the result, is already known and we want to know all the inputs that give us this result?  This is called <term>solve</term>.</p>
         <p>Solve means to work backwards from a known or given output value and determine all the inputs, if any, that give us the desired output.</p>
         <p>Suppose we want the output of a function to be <m>y = 0</m>. Therefore, we must find all the input values of <m>x</m> that gives us that result. There may not be any, but there could be one, several or even infinite possible inputs that gives <m>y = 0</m> as the output.</p>
         <p>In English we could ask the question ror the example in the previous exercise,</p>
@@ -672,7 +692,6 @@
         <p>On a graph, the output is the height of the graph.  Solve <m>f(x) = 0</m> on a graph means, <q>Find all the places where the graph is zero units high</q>.
         </p>
         <p>The math sentence <q>Solve the equation <m>f(x) = 4.57</m></q> means, <q>find all the <m>x</m> values where the graph of the function reaches <m>4.57</m> units high.</q> this equation may have one, several, or infinite or even no solutions.</p>
-
         <exercise>
             <webwork>
                 <title>Solving Graphically</title>

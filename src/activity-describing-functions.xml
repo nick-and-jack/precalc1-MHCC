@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+
+<section xml:id="activity-describing-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<title>Describing Function Behavior</title>
+<introduction>
+      <p>In this activity we use function notation to describe the characteristics and behavior of a function.</p>
+
+      <p>After completing this lesson you will be able to:
+          <ul>
+              <li>
+                <p>Define an interval and use inequalities to describe it.</p>
+              </li>
+              <li>
+                <p>Identify intervals on which a function is increasing or decreasing, positive or negative, concave up or concave down.</p>
+              </li>
+          </ul>
+      </p>
+      <p>The prerequisites for this lesson are knowing how to read and write inequalities.</p>
+  </introduction>
+  <subsection>
+      <title>Intervals</title>
+      <todo>Insert graph of sine function to model changing temperature throughout the day.  The words increasing temp or decreasing temp appear as the user changes the time of day.</todo>
+      <p>An interval is a section or portion of either the vertical or horizontal axis. In this course we will use inequalities to describe intervals, although you may have already experienced other notations such as brackets [ ] or parenthesis ( ).</p>
+      <p>In the execise below, practice writing inequalites to describe the shaded intervals on each number line.</p>
+         <exercise>
+          <title>Review of Compound Inequalities</title>
+             <webwork>
+               <setup>
+                   <var name="$answer1">
+                     <static>-2&lt;x&lt;=1</static>
+                   </var>
+                   <var name="$answer2">
+                       <static>x&lt;-2orx&gt;=1</static>
+                   </var>
+                   <var name="$answer3">
+                       <static>x&lt;=-2orx&gt;=1</static>
+                   </var>
+
+                   <pg-code>
+                       Context("Inequalities");
+                       $answer1 = Compute("-2&lt;x&lt;=1");
+                       $answer2 = Compute("x&lt;-2orx&gt;=1");
+                       $answer3 = Compute("x&lt;=-2orx&gt;=1");
+                   </pg-code>
+             </setup>
+             <statement>
+                <p>Remember that open circles mean <q>include</q> while closed circles mean <q>not include</q>.</p>
+                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/XT6ddYvA/width/431/height/100/border/888888" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                 <p>Represent the shaded region above with inequalities <var name="$answer1" width="10" /></p>
+                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xBQKE3fm/width/431/height/100/border/888888/sri/true" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                 <p>Represent the shaded region above with inequalities <var name="$answer2" width="10" /></p>
+                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dDq6e5G4/width/431/height/100/border/888888/sri/true" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                 <p>Represent the shaded region above with inequalities <var name="$answer3" width="10" /></p>
+               </statement>
+             </webwork>
+         </exercise>
+    </subsection>
+
+    <subsection>
+        <title>Function Characteristics</title>
+          <term>Positive</term> or <term>Negative</term>
+          <p>If the output values of a function are above the horizontal axis, we say the function is positive.  If the output values of a function are below the horizontal axis, we say the function is negative.</p>
+          <term>Increasing</term> or <term>Decreasing</term>
+          <p>If the values of the function (output) increase as the input increases, we say the funciton is increasing.  If the values of the function decrease as the input increases, we say the function is decreasing.</p>
+          <term>Concave Up</term> or <term>Concave Down</term>
+          <p>If a function bends upwards (like a cup that holds water), we say the function is concave up.  If a function bends downwards (like an inverted cup that does not hold water), we say the function is concave down.</p>
+          <p>Another way to think about concavity is to imagine a straight metal wire. While one end of the wire is fixed, if the other end is pushed up, the wire is now concave up. If that other end is pushed down the wire is concave down.</p>
+          <p>Intervals are often used to describe the behavior or characteristics of a function.  For instance the temperature T in degrees fahrenheit throughout the day is a function of the time of day t in hours.  In function notation would could write</p>
+          <p><me>T = f(t)</me></p>
+          <p>Using 24 hour time with midnight at t = 0, the graph shows temperature variation in a small northern town. Sometimes the temperature rises (increasing) and sometimes is falls (decreasing). Sometimes the temperatures are above zero (positive) and sometimes the temperatures are below zero (negative). Finally the temperature changes are speeding up (concave up) and sometimes the changes in temperature are slowing down (concave down).</p>
+          <exercise>
+            <title>Concavity</title>
+            <webwork>
+              <setup>
+                <var name="$cUp">
+                  <set>
+                    <member>\text{Concave Up}</member>
+                    <member correct="yes">\text{Concave Down}</member>
+                  </set>
+                </var>
+                <var name="$cDwn">
+                  <set>
+                    <member>\text{Concaved Up}</member>
+                    <member correct="yes">\text{Concave Down}</member>
+                  </set>
+                </var>
+                <pg-code>
+                  $cUp = RadioButtons(
+                  ["Concave Up","Concave Down"],
+                  0, labels => ["Concave Up","Concave Down"],displayLabels => 0
+                  );
+                  $cDwn = RadioButtons(
+                  ["Concaved Up","Concave Down"],
+                  1, labels => ["Concaved Up","Concave Down"],displayLabels => 0
+                  );
+                </pg-code>
+              </setup>
+              <statement>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NrncRJR3/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                <p>Use the slider on the graph to change the concavity of the function.</p>
+                <p>Bending upwards is <var name="$cUp" form="buttons" /></p>
+                <p>Bending downwards is <var name="$cDwn" form="buttons" /></p>
+              </statement>
+            </webwork>
+          </exercise>
+          <p>In the next exercise you will practice using inequalities to describe certain characteristics of the graph of a function <m>f(x)</m></p>
+
+          <exercise>
+              <webwork>
+                  <setup>
+                      <var name="$pos">
+                          <static>10</static>
+                      </var>
+                      <var name="$neg">
+                          <static>10</static>
+                      </var>
+                      <var name="$inc">
+                          <static>10</static>
+                      </var>
+                      <var name="$dec">
+                          <static>10</static>
+                      </var>
+                      <var name="$cUp">
+                          <static>10</static>
+                      </var>
+                      <var name="$cDwn">
+                          <static>10</static>
+                      </var>
+                      
+                      <pg-code>
+                          $pos = Real(10);
+                      </pg-code>
+                </setup>
+          
+                <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tmanmNPG/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>On what intervals is the function positive? <var name="$pos" width="5" /></p>
+                    <p>Negative? <var name="$neg" width="5" /></p>
+                    <p>On what intervals is the function increasing? <var name="$inc" width="5" /></p>
+                    <p>Decreasing? <var name="$dec" width="5" /></p>
+                    <p>On what intervals is the function concave up? <var name="$cUp" width="5" /></p>
+                    <p>Concave down? <var name="$cDwn" width="5" /></p>
+                </statement>
+                
+                <solution>
+                
+                </solution>
+              </webwork>
+          </exercise>
+          
+          <exercise>
+              <webwork>
+                  <setup>
+                      <var name="$answer1">
+                        <static>-5&lt;=x&lt;0</static>
+                      </var>
+                      <var name="$answer2">
+                          <static>1&lt;=x&lt;=4</static>
+                      </var>
+                      <var name="$answer3">
+                          <static>1&lt;=x&lt;=4</static>
+                      </var>
+
+                      <pg-code>
+                          Context("Inequalities");
+                          $answer1 = Compute("-5&lt;=x&lt;0");
+                          $answer2 = Compute("1&lt;=x&lt;=4");
+                          $answer3 = Compute("1&lt;=x&lt;=4");
+                      </pg-code>
+                </setup>
+
+                <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aww8tpND/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>On what interval(s) is the function increasing? <var name="$answer1" width="5" /></p>
+                    <p>On what interval(s) is the function concave down? <var name="$answer2" width="5" /></p>
+                    <p>On what interval(s) is the function <m>f(x) \ge 0</m>? <var name="$answer3" width="5" /></p>
+                </statement>
+              </webwork>
+          </exercise>
+  </subsection>
+
+
+</section>
