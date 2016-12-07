@@ -139,7 +139,10 @@
 
             <statement>
               <p>Use the function <m>f(x)</m> to write an expression to answer each question below.</p>
+              <p>The first question has been answered already as an example.</p>
               <ul>
+                <li><p>What is the output, when the input is <m>20</m>?</p>
+                <p>Answer:  <m>f(20)</m></p></li>
                 <li><p>What is <m>3</m> times the output, when the input is <m><var name="$input1" /></m>?</p>
                 <p>Answer:  <var name="$output1" width="10" /></p></li>
                 <li><p>What is the opposite of the output, when the input is <m><var name="$input2" /></m>?</p>
@@ -174,7 +177,7 @@
 
               <pg-code>
                 $fof1=Real(2);
-                $negfof1=-$fof2;
+                $negfof1=-$fof1;
                 $xaxis=PopUp(
                 ["?","x-axis","y-axis"],"x-axis"
                 );
@@ -185,9 +188,9 @@
               <p>The graph shows a function <m>y = f(x)</m>.</p>
               <ol>
                 <li><p>What is <m>f(1)</m>?</p>
-                <p>Answer:  <var name="$fof2" width="10" /></p></li>
+                <p>Answer:  <var name="$fof1" width="10" /></p></li>
                 <li><p>What is <m>-f(1)</m>?</p>
-                <p>Answer:  <var name="$negfof2" width="10" /></p>
+                <p>Answer:  <var name="$negfof1" width="10" /></p>
                 <p>Now click to graph <m>y = -f(x)</m>. Can you see the value of <m>-f(1)</m> on that graph?</p></li>
               </ol>
               <p>Complete the following statement:</p>
@@ -471,7 +474,7 @@
           </webwork>
         </exercise>
 
-        <p>In the final two exercises, use function notation to describe how a graph was reflected, and then write the formula for a reflected function.</p>
+        <p>In the next two exercises, use function notation to describe how a graph was reflected, and then write the formula for a reflected function.</p>
 
         <exercise>
           <webwork>
@@ -546,6 +549,42 @@
                 </li>
               </ol>
             </solution>
+          </webwork>
+        </exercise>
+
+        <p>Finally, we discuss a method for how to graph the transformations <m>y = -f(x)</m> and <m>y = f(-x)</m>.</p>
+
+        <exercise>
+          <webwork>
+            <setup>
+
+              <pg-code>
+
+              </pg-code>
+            </setup>
+            <statement>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/gJr9rA92/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>To graph the transformation <m>y = -f(x)</m>, it is helpful to begin with the graph of <m>y = f(x)</m> and select a few points on it. Then, reflect those points over the <m>x</m>-axis, and complete the sketch of the reflected function <m>y = -f(x)</m>.</p>
+              <p>Move the slider on the graph above, and the graph will be reflected over the <m>x</m>-axis to make <m>y = -f(x)</m>.</p>
+            </statement>
+
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+            <setup>
+
+              <pg-code>
+
+              </pg-code>
+            </setup>
+            <statement>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/F9sGuwEz/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>To graph the transformation <m>y = f(-x)</m>, it is helpful to begin with the graph of <m>y = f(x)</m> and select a few points on it. Then, reflect those points over the <m>y</m>-axis, and complete the sketch of the reflected function <m>y = f(-x)</m>.</p>
+              <p>Move the slider on the graph above, and the graph will be reflected over the <m>y</m>-axis to make <m>y = f(-x)</m>.</p>
+            </statement>
+
           </webwork>
         </exercise>
 

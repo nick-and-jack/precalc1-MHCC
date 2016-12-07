@@ -14,6 +14,84 @@
 <section xml:id="activity-vertical-stretches" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vertical Stretches Activity</title>
 
+  <p>In this activity, remember that <m>f(a)</m> is the output of the function <m>f</m> when the input is <m>a</m>.</p>
+  <p>So, if you perform some calculation with the <em>output</em> of the function, you will be performing that calculation with an expression like <m>f(a)</m>.</p>
+  <example>
+    <p>For a function <m>g(x)</m>, write an expression which means the same thing as:</p>
+    <p><blockquote><em>ten times the output of the function, when the input is six</em></blockquote></p>
+    <answer>
+      <p>The expression would be: <me>10*g(6)</me></p>
+    </answer>
+  </example>
+  <p>Similarly, remember that the number (or expression) inside parentheses, such as the variable <m>a</m> in the expression <m>f(a)</m>, always represents the input of the function.</p>
+  <p>So, if you perform some calculation with the <em>input</em> of a function, you will be performing that calculation on the expression inside the parentheses.</p>
+  <example>
+    <p>For a function <m>g(x)</m>, write an expression which means the same thing as:</p>
+    <p><blockquote><em>the output of the function, when the input is twice the size of <m>a</m></em></blockquote></p>
+    <answer>
+      <p>The expression would be: <me>g(2*a)</me></p>
+    </answer>
+  </example>
+
+  <p>In the next exercise, you will practice interpreting function notation where the input or the output has been altered.</p>
+
+  <exercise>
+    <webwork>
+      <setup>
+        <var name="$interpret1">
+          <set>
+            <member>\text{?}</member>
+            <member>\text{the input divided by 2}</member>
+            <member correct="yes">\text{the output, when the input is divided by 2}</member>
+          </set>
+        </var>
+        <var name="$interpret2">
+          <set>
+            <member>\text{?}</member>
+            <member correct="yes">\text{3 times the output, when the input is 5}</member>
+            <member>\text{an input of 3 and an output of 5}</member>
+            <member>\text{15}</member>
+          </set>
+        </var>
+        <pg-code>
+          $interpret1=PopUp(
+          ["?","the input divided by 2","the output, when the input is divided by 2"],"the output, when the input is divided by 2"
+          );
+          $interpret2=PopUp(
+          ["?","3 times the output, when the input is 5","an input of 3 and an output of 5","15"],"3 times the output, when the input is 5"
+          );
+        </pg-code>
+      </setup>
+      <statement>
+        <ol>
+          <li><p>For a function <m>f(x)</m>, what does <m>f\left(\frac{x}{2}\right)</m> calculate?</p>
+          <p>Answer:  <var name="$interpret1" form="popup" /></p></li>
+          <li><p>For a function <m>g(x)</m>, what does <m>3*g(5)</m> calculate?</p>
+          <p>Answer:  <var name="$interpret2" form="popup" /></p></li>
+        </ol>
+      </statement>
+      <hint>
+        <ol>
+          <li><p>Remember that having <m>f(\text{something})</m> means we are talking about an output.</p></li>
+          <li><p>Remember that <m>g(5)</m> represents the output, when the input is <m>5</m>.</p></li>
+        </ol>
+      </hint>
+      <solution>
+        <ol>
+          <li><p>While it is certainly true that the input <m>x</m> has been divided by <m>2</m>, the expression <m>f\left(\frac{x}{2}\right)</m> is the <em>output</em> of the function, when the input <m>x</m> has been divided by <m>2</m>.</p></li>
+          <li><p>Since <m>g(5)</m> represents the output of the function, when the input is <m>5</m>, then <m>3*g(5)</m> is just <m>3</m> times the output, when the input is <m>5</m>.</p></li>
+        </ol>
+      </solution>
+    </webwork>
+  </exercise>
+
+<todo>Change problem to allow for answers in a range</todo>
+
+  <paragraphs><title>Effects on the graph</title>
+  <p>Now let's see how to apply these concepts to the graph of a function.</p>
+  </paragraphs>
+  <p>First, you will use the graph of a function to complete a table of values by altering the output.</p>
+
   <exercise>
     <webwork xml:id="vertical-stretch-and-compress-table">
       <setup>
@@ -48,14 +126,11 @@
           @b=map{2*$_}@a;
           @c=map{0.5*$_}@a;
         </pg-code>
-
       </setup>
-
       <statement>
-        <ul>
-          <li><p>The graph of <m>y = f(x)</m> is shown below. Use it to answer the questions that follow.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dAA6utJV/width/433/height/376/border/888888/sri/true" width="433px" height="376px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Approximate the values in the first column of the table to the nearest <em>whole number</em>. These will be the function values you can read directly off of the graph.</p>
+          <p>The graph shows a function <m>y = f(x)</m>.</p>
+          <p>In the first column of the table below, approximate the function values to the nearest <em>whole number</em>. These will be the function values you can read directly from the graph.</p>
           <table>
             <caption>Table of <m>f(x)</m>, <m>2f(x)</m> and <m>1/2*f(x)</m></caption>
             <tabular top="major" halign="center">
@@ -80,9 +155,9 @@
 
               <row>
                 <cell><m><var name="$x[1]" /></m></cell>
-                <cell><var name="$a[1]" width="10" /></cell>
-                <cell><var name="$b[1]" width="10" /></cell>
-                <cell><var name="$c[1]" width="10" /></cell>
+                <cell><var name="$a[1]"  /></cell>
+                <cell><var name="$b[1]"  /></cell>
+                <cell><var name="$c[1]"  /></cell>
               </row>
 
               <row>
@@ -107,76 +182,90 @@
               </row>
 
             </tabular>
-          </table></li>
-          <li><p>Then use your values from the first column to determine the values in the next two colums for <m>2*f(x)</m> and <m>\frac{1}{2}*f(x)</m>. Remember that multiplying outside of a function by a number will change its output values.</p></li>
-        </ul>
+          </table>
+          <p>Then use those values to determine the values in the next two colums for <m>2*f(x)</m> and <m>\frac{1}{2}*f(x)</m>. Remember that multiplying <em>outside</em> of a function by a number will change its <em>output</em> values.</p>
       </statement>
     </webwork>
   </exercise>
 
+  <p>Next, you will plot points on the graphs of functions where the output has been multiplied by a number.</p>
+
   <exercise>
-    <title>The Transformation <m>af(x)</m></title>
     <webwork xml:id="points-on-a-times-f-of-x">
       <setup>
-        <var name="$didItGraph"><static>1</static></var>
+        <var name="$didItGraph">
+          <set>
+            <member>\text{?}</member>
+            <member>\text{no}</member>
+            <member correct="yes">\text{yes}</member>
+          </set>
+        </var>
 
         <pg-code>
-          $didItGraph=Real(1);
+          $didItGraph=PopUp(
+          ["?","no","yes"],"yes"
+          );
         </pg-code>
 
       </setup>
       <statement>
-        <p>The graph below shows <m>f(x) = 4xe^{-0.246x}</m>. Plot five points on the graph of <m>2f(x)</m> by moving the five blue points to appropriate locations.</p>
-        <p>Note: This is the same function from the last problem.</p>
-        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FNyrMUGq/width/433/height/406/border/888888/sri/true" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-        <p>Enter the value <m>1</m> if you successfully made the graph of <m>y = 2f(x)</m>.</p>
-        <p><var name="$didItGraph" width="5" /></p>
-        <p>Again, we have the graph of <m>f(x) = 4xe^{-0.246x}</m>. Plot five points on the graph of <m>\frac{1}{2}f(x)</m> by moving the five blue points to appropriate locations.</p>
-        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PFcvTbgD/width/433/height/406/border/888888/sri/true" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-        <p>Enter the value <m>1</m> if you successfully made the graph of <m>y = \frac{1}{2}f(x)</m>.</p>
-        <p><var name="$didItGraph" width="5" /></p>
+        <ol>
+          <li><p>The graph below shows the function <m>y = f(x)</m>. Plot five points on the graph of <m>y = 2f(x)</m> by moving the five blue points to appropriate locations.</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FNyrMUGq/width/433/height/406/border/888888/sri/true" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Did you successfully make the graph of <m>y = 2f(x)</m>.</p>
+            <p><var name="$didItGraph" form="popup" /></p></li>
+          <li><p>Again, we have the graph of <m>y = f(x)</m>. Plot five points on the graph of <m>\frac{1}{2}f(x)</m> by moving the five blue points to appropriate locations.</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PFcvTbgD/width/433/height/406/border/888888/sri/true" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Did you successfully make the graph of <m>y = \frac{1}{2}f(x)</m>.</p>
+            <p><var name="$didItGraph" form="popup" /></p></li>
+        </ol>
       </statement>
     </webwork>
   </exercise>
+
+  <p>In the previous exercise, you plotted points for the functions <m>y = 2f(x)</m> and <m>\frac{1}{2}f(x)</m>. This created graphs which were similar to the original function <m>y = f(x)</m>, but whose outputs were either twice as large, or half as large as those of <m>f(x)</m>.</p>
+  <p>This makes sense, because multiplying <em>outside</em> of the function <m>f(x)</m> by a number like <m>2</m> or <m>\frac{1}{2}</m>, just changes the <em>output</em> values &#8212; and the output values are the heights of the points.</p>
+  <p>In the next two exercises, you will explore how multiplying the output of a function by a number will change the graph.</p>
 
   <exercise>
     <webwork xml:id="formulas-for-a-times-f-of-x">
       <setup>
         <var name="$verticalStretch">
           <set>
-            <member>\text{To make the graph of <m>a*f(x)</m> when <m>a &gt; 1</m>, you compress the graph of <m>f(x)</m> toward the x-axis.}</member>
-            <member correct="yes">\text{To make the graph of <m>a*f(x)</m> when <m>a &gt; 1</m>, you stretch the graph of <m>f(x)</m> away from the x-axis.}</member>
+            <member>\text{?}</member>
+            <member correct="yes">\text{stretch it away from}</member>
+            <member>\text{compress it toward}</member>
           </set>
         </var>
         <var name="$verticalCompression">
           <set>
-            <member correct="yes">\text{To make the graph of <m>a*f(x)</m> when <m>0 &lt; a &lt; 1</m>, you compress the graph of <m>f(x)</m> toward the x-axis.}</member>
-            <member>\text{To make the graph of <m>a*f(x)</m> when <m>0 &lt; a &lt; 1</m>, you stretch the graph of <m>f(x)</m> away from the x-axis.}</member>
+            <member>\text{?}</member>
+            <member>\text{stretch it away from}</member>
+            <member correct="yes">\text{compress it toward}</member>
           </set>
         </var>
 
         <pg-code>
-          $verticalStretch = RadioButtons(
-          ["To make the graph of \(a*f(x)\) when \(a &gt; 1\), you compress the graph of \(f(x)\) toward the x-axis.","To make the graph of \(a*f(x)\) when \(a &gt; 1\), you stretch the graph of \(f(x)\) away from the x-axis.","None of these"],1,labels => ["Vertical Compression","Vertical Stretch","None of these"],displayLabels => 0
+          $verticalStretch = PopUp(
+          ["?","stretch it away from","compress it toward"],"stretch it away from"
           );
-          $verticalCompression = RadioButtons(
-          ["To make the graph of \(a*f(x)\) when \(0 &lt; a &lt; 1\), you compress the graph of \(f(x)\) toward the x-axis.","To make the graph of \(a*f(x)\) when \(0 &lt; a &lt; 1\), you stretch the graph of \(f(x)\) away from the x-axis.","None of these"],0,labels => ["Vertical Compression","Vertical Stretch","None of these"],displayLabels => 0
+          $verticalCompression = PopUp(
+          ["?","stretch it away from","compress it toward"],"compress it toward"
           );
         </pg-code>
       </setup>
 
       <statement>
-            <p>The graph below shows a function <m>y = f(x)</m>. Also shown is the graph of <m>y = a*f(x)</m>, and a slider allows you to change the value of <m>a</m> between <m>0</m> and <m>3</m>.</p>
+            <p>The graph below shows a function <m>y = f(x)</m>.</p>
             <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aSr3RBYV/width/432/height/438/border/888888/sri/true" width="432px" height="438px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Moving the slider allows you to also graph <m>y = a*f(x)</m>, where you can change the value of <m>a</m> between <m>0</m> and <m>3</m>.</p>
         <ul>
           <li>
-            <p>The slider begins at <m>a = 1</m>, so the graphs are identical. Move the slider so <m>a &gt; 1</m> and observe the changes to the graph.</p>
-            <p>Choose the correct statement below about the graph of <m>y = af(x)</m> when <m>a &gt; 1</m>.</p>
-            <p><var name="$verticalStretch" form="buttons" /></p></li>
+            <p>Move the slider so <m>a &gt; 1</m>, and use what you observe to complete the statement below:</p>
+            <p>To graph <m>y = af(x)</m> when <m>a &gt; 1</m>, you would begin with <m>y = f(x)</m> and <var name="$verticalStretch" form="popup" /> the <m>x</m>-axis.</p></li>
           <li>
-            <p>Now, change the slider so that <m>0 &lt; a &lt; 1</m> and observe the changes to the graph.</p>
-            <p>Choose the correct statement below about the graph of <m>y = af(x)</m> when <m>0 &lt; a &lt; 1</m>.</p>
-            <p><var name="$verticalCompression" form="buttons" /></p></li>
+            <p>Now, move the slider so that <m>0 &lt; a &lt; 1</m>, and use what you observe to complete the statement below:</p>
+            <p>To graph <m>y = af(x)</m> when <m>0 &lt; a &lt; 1</m>, you would begin with <m>y = f(x)</m> and <var name="$verticalCompression" form="popup" /> the <m>x</m>-axis.</p></li>
         </ul>
       </statement>
     </webwork>
@@ -208,15 +297,17 @@
       </setup>
 
       <statement>
-        <p>The graph below shows a function <m>y = f(x)</m>. Also shown is the graph of <m>y = a*f(x)</m>, and a slider allows you to change the value of <m>a</m> between <m>-2</m> and <m>3</m>.</p>
+        <p>The graph below shows a function <m>y = f(x)</m>.</p>
         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/b2KYhMZS/width/433/height/518/border/888888/sri/true" width="433px" height="518px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-        <p>The slider begins at <m>a = 1</m>, so the graphs are identical. Move the slider so <m>a = -2</m> and observe the changes to the graph.</p>
-        <p>Make the statement below true by using the drop-down menus:</p>
+        <p>Moving the slider allows you to also graph <m>y = a*f(x)</m>, where you can change the value of <m>a</m> between <m>-2</m> and <m>3</m>.</p>
+        <p>Move the slider so <m>a = -2</m>, and use what you observe to complete the statement below:</p>
         <p>The graph of <m>y = -2*f(x)</m> is like the graph of <m>y = f(x)</m>, after it has been <var name="$reflection" form="popup" /> and <var name="$stretch" form="popup" />.</p>
       </statement>
 
     </webwork>
   </exercise>
+
+  <p>Finally, compare the transformation <m>a*f(x)</m> with the transformation <m>f(x) + a</m> which we studied in <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>.</p>
 
   <exercise>
     <webwork xml:id="contrast-a-times-f-and-a-plus-f">

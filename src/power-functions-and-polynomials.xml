@@ -20,7 +20,7 @@
             <title>Student Learning Outcomes</title>
             <ul>
                 <li><p>Use the relationship between the zeros of a polynomial and the factored form to find a graphing window or to write an equation.</p></li>
-                <li><p>Sketch or describe the possible shape of a polynomial function of degree n including: the number of turning points, number of possible real roots, and end behavior.</p></li>
+                <li><p>Sketch or describe the possible shape of a polynomial function of degree <m>n</m> including: the number of turning points, number of possible real roots, and end behavior.</p></li>
             </ul>
         </objectives>
 
@@ -330,7 +330,7 @@
             </image>
         </figure></p>
 
-        <p>Notice that the <term>root</term> <m>x = -3</m> has multiplicity <m>2</m>, and the graph resembles a parabola near that point, bouncing off of the <m>x</m>-axis. It also has the <term>root</term> <m>x = 1</m>, and the graph crosses over the <m>x</m>-axis there.</p>
+        <p>Notice that the <term>root</term> <m>x = -3</m> has multiplicity <m>2</m>, and the graph resembles a parabola near that point, bouncing off of the <m>x</m>-axis. It also has the <term>root</term> <m>x = 1</m>, which has <term>multiplicity</term> <m>1</m>, and the graph crosses over the <m>x</m>-axis there.</p>
         <p>The polynomials below both have <m>(x+3)^2</m> as a factor, but they have other linear factors with either <em>odd</em> or <em>even</em> multiplicity:
           <sidebyside widths="48% 48%">
             <figure>
@@ -472,11 +472,11 @@
 
           <p>The function initially was decreasing very quickly, but eventually began to increase (even faster). In fact, this function will eventually increase <em>forever</em> as <m>x \rightarrow \infty</m>.</p>
           <p>We can make sense of this by considering the formula for <m>f(x)</m> and imagining substituting a very large value of <m>x</m>.</p>
-          <p>If <m>x</m> was large, say <m>1,000,000</m>, evaluating the function would look like:<md>
-            <mrow>f(1,000,000) \amp= (1,000,000)^3 - 45(1,000,000)^2 + 12(1,000,000) - 20</mrow>
+          <p>If <m>x</m> was large, say <em>one million</em>, evaluating the function would look like:<md>
+            <mrow>f(1000000) \amp= (1000000)^3 - 45(1000000)^2 + 12(1000000) - 20</mrow>
             <mrow>\amp= \text{ENORMOUS NUMBER} - \text{ HUGE Number } + \text{ Fairly Big Number } - \text{ small number }</mrow>
             <mrow>\amp= \text{Still an ENORMOUS NUMBER}</mrow></md></p>
-          <p>(In fact, it is <m>999,955,000,011,999,980</m>.)</p>
+          <p>(In fact, the output is <m>999,955,000,011,999,980</m>.)</p>
 
           <p>The point is that raising a large value to the power of <m>3</m> is much more significant than raising it to the power of <m>2</m> (or any smaller power). As another piece of math terminology, we would say that the term <m>x^3</m> <term>dominates</term> the other terms. The highest power of <m>x</m> is most significant in the end, so we can just focus our attention on the <term>leading term</term> of a polynomial to determine the <term>end-behavior</term>.</p>
           <p>Written more succinctly: <blockquote>A polynomial has the same <term>end-behavior</term> as its leading term.</blockquote></p>
@@ -487,9 +487,9 @@
           <p>Make a rough sketch of the graph of the polynomial <m>f(x) = (x-4)(x-1)^2(x+3)^2(x+5)</m>.</p>
           <p>We must use what we know about the <term>roots</term> and their <term>multiplicities</term>, and also the <term>end-behavior</term> of the function.</p>
           <ol>
-            <li><p>First, add the <m>x</m>-intercepts to your graph. Remember that these are determined by finding the <term>roots</term> of the function.</p></li>
+            <li><p>First, plot the <m>x</m>-intercepts on your graph. Remember that these are determined by finding the <term>roots</term> of the function.</p></li>
             <li><p>Next, consider the <term>end-behavior</term> of the polynomial. Do this by deciding what the <term>leading term</term> would be if it was completely expanded. On the far left and far right side of the graph, draw arrows to show what the graph will eventually do (increasing or decreasing).</p></li>
-            <li><p>Finally, use what you know about the <term>multiplicity</term> of each <term>root</term>. From your arrow on the far left side of the graph, draw a smooth curve which contains all of the <m>x</m>-intercepts you drew in the first step. When you get to an <m>x</m>-intercept, if its <term>multiplicity</term> is <em>odd</em>, the graph will cross over the <m>x</m>-axis, and if the <term>multiplicity</term> is <em>even</em>, the graph will bounce off of the <m>x</m>-axis.</p></li>
+            <li><p>Finally, use what you know about the <term>multiplicity</term> of each <term>root</term>. Beginning at your arrow on the far left side of the graph, draw a smooth curve which contains all of the <m>x</m>-intercepts you drew in the first step. When you get to an <m>x</m>-intercept, if its <term>multiplicity</term> is <em>odd</em>, the graph will cross over the <m>x</m>-axis, and if the <term>multiplicity</term> is <em>even</em>, the graph will bounce off of the <m>x</m>-axis. Your smooth curve should end at the arrow you drew on the far right hand side.</p></li>
           </ol>
           <p>Check the graph. If drawn correctly, you should have been able to draw from your arrow on the left side to the arrow on the right side without picking up your pencil.</p>
           <hint>
