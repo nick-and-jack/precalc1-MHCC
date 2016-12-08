@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+<section xml:id="activity-compounding-number-e" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Compounding, Continous and the number e</title>
+  <subsection>
+    <title>Review of Discrete Compouding</title>
+      <exercise>
+        <title>Interpretation of the Exponential Form</title>
+        <webwork>
+          <setup>
+            <var name="$init">
+                <static>1350</static>
+            </var>
+
+            <var name="$m1" category="set">
+                <set>
+                  <member>\text{the growth factor}</member>
+                  <member>\text{the initial value}</member>
+                  <member>\text{the percent change}</member>
+                  <member>\text{the time for investment to mature}</member>
+                </set>
+            </var>
+
+            <var name="$b">
+                <static>1.082</static>
+            </var>
+
+            <var name="$m2" category="set">
+              <set>
+                <member>\text{the growth factor}</member>
+                <member>\text{the initial value}</member>
+                <member>\text{the percent change}</member>
+                <member>\text{the time for investment to mature}</member>
+              </set>
+            </var>
+
+            <var name="$per">
+              <static>8.02</static>
+            </var>
+
+            <var name="$m3" category="set">
+              <set>
+                <member>\text{An 8.2 percent increase occurs every five years}</member>
+                <member>\text{An 8.2 percent increase occurs five times each year}</member>
+                <member>\text{An 8.2 percent increase is divided into five equal parts}</member>
+                <member>\text{An 8.2 percent increase is multiplied by 5}</member>
+              </set>
+            </var>
+
+            <pg-code>
+                $init= Real(1350);
+                $m1 = PopUp(["?", "the growth factor", "the initial value", "the percent change", "the time for investment to mature"], "the initial value");
+                $b= Real(1.082);
+                $m2 = PopUp(["?", "the growth factor", "the initial value", "the percent change", "the time for investment to mature"], "the growth factor");
+                $per=Real(8.20);
+                $m3 = PopUp(["?", "An 8.2 percent increase occurs every five years", "An 8.2 percent increase occurs five times each year", "An 8.2 percent increase is divided into five equal parts", "An 8.2 percent increase is multiplied by 5"], "An 8.2 percent increase occurs every five years");
+            </pg-code>
+          </setup>
+
+          <statement>
+            <p>Let <m>f(t) = 1350(1.082)^\frac{t}{5}</m> be the value of an investment, in dollars, over time, t in years. What does the number <m>1350</m> represent?</p>
+            <p>The number <m><var name="$init" /></m> represents <var name="$m1" form="popup" /></p>
+            <p>What does the number <m><var name="$b" /></m> represent?</p>
+            <p>The number represents <var name="$m2" form="popup" /></p>
+            <p>What percent increase does the growth factor represent?</p>
+            <p>The growth factor represents an increase of <var name="$per" width="5" /><m>\%</m></p>
+            <p>What information does the exponent give us (what is the significance of dividing by 5) in the context fo the problem?</p>
+            <p>It means <var name="$m3" form="popup" /></p>
+          </statement>
+
+          <solution>
+          </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <title>Review of Fractional Exponents</title>
+      <webwork xml:id="fractional-exponent-review">
+        <setup>
+          <var name="$fifth">
+            <set>
+              <member>\text{False}</member>
+              <member correct="yes">\text{True}</member>
+            </set>
+          </var>
+          <var name="$cinco">
+            <set>
+              <member>\text{False}</member>
+              <member correct="yes">\text{True}</member>
+            </set>
+          </var>
+          <var name="$quinto">
+            <set>
+              <member>\text{False}</member>
+              <member correct="yes">\text{True}</member>
+            </set>
+          </var>
+          <pg-code>
+            $fifth = RadioButtons(
+            ["False","True"],
+            1, labels => ["False","True"],displayLabels => 0
+            );
+            $cinco = RadioButtons(
+            ["False","True"],
+            1, labels => ["False","True"],displayLabels => 0
+            );
+            $quinto = RadioButtons(
+            ["False","True"],
+            1, labels => ["False","True"],displayLabels => 0
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p><m>\frac{t}{1/5} = 5t</m></p>
+          <p><var name="$fifth" form="buttons" /></p>
+          <p>Every <m>\frac{1}{5}</m> of a year is the same as 5 times a year.</p>
+          <p><var name="$cinco" form="buttons" /></p>
+          <p><m>1350(1.082)^\frac{t}{1/5} = 1350(1.082)^{5t}</m></p>
+          <p><var name="$quinto" form="buttons" /></p>
+        </statement>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <todo>The string of words in the drop down menu is too long so it gets chopped off on the screen.  Need to fix the window of shorten the phrase.</todo>
+        <webwork>
+            <setup>
+                <var name="$num">
+                    <static>12</static>
+                </var>
+                <var name="$times" category="set">
+                    <set>
+                         <member>\text{Counts how often the interest is compounded}</member>
+                         <member>\text{Multiplies the interest}</member>
+                         <member>\text{Counts how often interest is compounded each year}</member>
+                         <member>\text{It is the new percent value}</member>
+                    </set>
+                </var>
+                <var name="$comp" category="set">
+                  <set>
+                    <member>\text{hourly}</member>
+                    <member>\text{daily}</member>
+                    <member>\text{monthly}</member>
+                    <member>\text{yearly}</member>
+                  </set>
+                </var>
+                <pg-code>
+                    $num= Real(12);
+                    $times = PopUp(["?", "Counts how often the interest is compounded", "Multiplies the interest", "Counts how often the interest is compounded each year", "It is the new interest value"], "Counts how often the interest is compounded each year");
+                    $comp = PopUp(["?", "hourly", "daily", "monthly", "yearly"], "monthly");
+                </pg-code>
+          </setup>
+    
+            <statement>
+                <p>The value of an investment is modeled by the equation</p>
+                <p><m>v(t) = 4280(1.0401)^{12t}</m></p>
+                <p>Where <m>v(t)</m> is the value of the investment in dollars and <m>t</m> is the number of years since the investment was made. The growth factor <m>1.0401</m> represents a percent increase on the investment which is sometimes called the <q>interest</q> or <q>return</q> on the investment.</p>
+                <p>In one year how often is the interest compounded?</p>
+                <p><var name="$num" width="5" /> times each year.</p>
+                <p>Since <m>t</m> represents the number of years the investment has been growing. What does the value <var name="$num" /> do in our exponential equation?</p>
+                <p><var name="$times" form="popup" /></p>
+                <p>How often is the interest being compounded?</p>
+                <p>It is compounded <var name="$comp" form="popup" />. This is the same as compounding the interest every <m>\frac{1}{<var name="$num" />}</m> of a year.</p>
+                <p>Therefore another way to write the same equation would be</p>
+                <p><m>v(t) = 4280(1.0401)^{\frac{t}{1/<var name="$num" />}}</m></p>
+                <p>but no one would do this because it is silly looking.</p>
+            </statement>
+            <solution>
+                <!-- <p><var name="$num" />  <var name="$times" /></p> -->
+            </solution>
+        </webwork>
+    </exercise>
+  </subsection>
+</section>
