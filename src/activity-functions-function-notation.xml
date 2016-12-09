@@ -17,10 +17,10 @@
     <introduction>
         <p>In this activity we define a function and develop an understanding of function notation by comparing statements we already understand in English to equivalent statements written in <q>math</q> language.</p>
 
-    <todo>
+    <!--
     <p>There are <m>34</m> questions in this activity.  All questions need to be answered correctly in order for the activity to be complete.  Each question is numbered and is written in bold.  A correct answer will show <q>correct</q> while an incorrect answer will show <q>Try again</q>.</p>
     <p>At the end of the activity you will see how many questions you answered correctly.</p>
-    </todo>
+    -->
         <p>After completing this lesson you will be able to:
             <ul>
                 <li>
@@ -41,11 +41,13 @@
         <title>What is a Function?</title>
         
         <p>According to <url href="https://en.wikipedia.org/wiki/Function_(mathematics)">Wikipedia</url>, a function has the following definition:</p>
-        <blockquote><q>In mathematics, a function is a relation between a set of inputs and a set of permissible outputs with the property that each input is related to exactly one output.</q></blockquote>
+        <blockquote>
+            <p><q>In mathematics, a function is a relation between a set of inputs and a set of permissible outputs with the property that each input is related to exactly one output.</q></p>
+        </blockquote>
         <p>If you actually read the entire Wikipedia entry you will find the definition of a function can be quite lengthy in order to cover all the universe of mathematics.  In this activity we are going to keep the language simple, informal and we will use some analogies and examples to arrive at a working definition of functions.</p>
         <p>Start by remebmering this: one input, one output.</p>
         <p>A <term>function</term> is a rule that takes a piece of <q>usable</q> information that you pick (input) and gives you some kind of result (output).  By <q>usable</q> we mean information that has meaning for the function.</p>
-        <p>A simple example is that of the outside temperature throughout the day in your neighborhood. You pick a time to walk outside, like <m>10</m> <initial>a.m.</initial> That is an input. The result of making that choice may be an outside temperature of <m>42</m> degress fahrenheit. That is an output.</p>
+        <p>A simple example is that of the outside temperature throughout the day in your neighborhood. You pick a time to walk outside, like <m>10</m> a.m. That is an input. The result of making that choice may be an outside temperature of <m>42</m> degress fahrenheit. That is an output.</p>
         <p>But no matter what time you pick to go outside, there is only one temperature. It's not like it can be <m>42</m> degrees and <m>75</m> degrees at the same time.  Also, using 24 hour time, you can choose to go outside at <m>10</m> hours or <m>15</m> hours. But you can't go outside at <m>37</m> hours because it makes no sense.  There are only <m>24</m> hours in a day.  The input of <m>37</m> hours is not usable.</p>
         <p>Before we go further in defining a function, we need a short to write and talk about functions.  We need some notation so we don't have to keep writing all those letters, F U N C T I O N, that's just way too many letters.</p>
     </subsection>
@@ -131,17 +133,17 @@
 
         <p>In English you can communicate information about time and position in a simple sentence like</p>
 
-        <blockquote>English:  <q>2 hours after 8 <init>a.m.</init> the train is 30 miles from downtown</q>.</blockquote>
+        <blockquote><p>English:  <q>2 hours after 8 <init>a.m.</init> the train is 30 miles from downtown</q>.</p></blockquote>
 
         <p>Here is what that same sentence looks like in Spanish.</p>
 
-        <blockquote>Spanish:  <q>2 horas despues de las 8 del la mañana el tren esta 30 millas lejos del centro</q>.</blockquote>
+        <blockquote><p>Spanish:  <q>2 horas despues de las 8 del la mañana el tren esta 30 millas lejos del centro</q>.</p></blockquote>
 
         <p>Here is what that same sentence could look like in <q>math</q>.</p>
 
-        <blockquote>Math:  <m>f(2) = 30</m></blockquote>
+        <blockquote><p>Math:  <m>f(2) = 30</m></p></blockquote>
 
-        <p>Let's piece apart the English sentence so you can see the structure as it compares to math. In Enlgish we tell the reader what we are talking about. This is the subject, <q>The position of the train 2 hours after 8 <int>a.m.</int></q> and in math we can simply say, <m>f(2)</m>.</p>
+        <p>Let's piece apart the English sentence so you can see the structure as it compares to math. In Enlgish we tell the reader what we are talking about. This is the subject, <q>The position of the train 2 hours after 8 <init>a.m.</init></q> and in math we can simply say, <m>f(2)</m>.</p>
         <p>Now the reader is wondering, so what about this train's position?  Is it more than something, less than something, is growing, shrinking, what? In our example we just want to say what the distance is. In math <q>is</q> means <q>equals</q> but we use the symbol, <m>=</m>.</p>
         <p>Finally we want to tell the reader the punch line.  We want to tell them that the distance is <m>30</m> miles from downtown at the specified time. Hence, <m>f(2) = 30</m> is the entire senctence.</p>
     </subsection>
@@ -155,9 +157,9 @@
 
         <p>If the variables represent actual things or events we must define the varialbles to include the units we used to measure the event.</p>
 
-        <blockquote>If <m>D</m> is distance you must define the units in which the distance is measured: miles, inches, centimeters, light years<ellipsis />what?</blockquote>
+        <blockquote><p>If <m>D</m> is distance you must define the units in which the distance is measured: miles, inches, centimeters, light years<ellipsis />what?</p></blockquote>
 
-        <blockquote>If <m>t</m> is time, will it be measured with units of seconds, hours<ellipsis />years?</blockquote>
+        <blockquote><p>If <m>t</m> is time, will it be measured with units of seconds, hours<ellipsis />years?</p></blockquote>
 
         <p>Since the position of the train depends on the amount of time that has passed, we say <q>the distance depends on time</q>.  In fact, the distance of the train from downtown is a <term>function of time</term>.</p>
 
@@ -197,8 +199,7 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>How would you say the function notation in each statement below?</p>
-                        <ol>
+                    <p>How would you say the function notation in each statement below?<ol>
                             <li>
                                 <p>Tarzan(the jungle) <var name="$tarzan" form="popup" /></p>
                             </li>
@@ -208,7 +209,7 @@
                             <li>
                                 <p><m>f(x)</m> <var name="$f" form="popup" /></p>
                             </li>
-                        </ol>
+                    </ol></p>
                 </statement>
             </webwork>
         </exercise>
@@ -242,7 +243,7 @@
                 <statement>
                     <p>The graph below is a function that illustrates a train's distance from downtown, in miles,  as a function of time in hours after 8 a.m.  When using a graph the best you can do is estimate. Since <m>f(0)</m> represents a distance at 8 <init>a.m.</init>, we can use the graph to find what the distance is.</p>
 
-                    <todo>It would be nice to ask the student to enter more points in function notation form.  If a point is place correctly</todo>
+                    <!--It would be nice to ask the student to enter more points in function notation form.  If a point is place correctly-->
 
                     <p>Move the point onto <m>(0,f(0))</m>.</p>
 
@@ -251,8 +252,8 @@
                     <p><m>f(0)\approx</m> <var name="$distance" width="5" /> <var name="$units" form="popup" /></p>
                 </statement>
             </webwork>
-            <todo>The questions 6,7,8 from Maple activity act01_function.mw need to be inserted here.  Need to know how to write a question that accepts math text as an input.</todo>
         </exercise>
+            <todo>The questions 6,7,8 from Maple activity act01_function.mw need to be inserted here.  Need to know how to write a question that accepts math text as an input.</todo>
 
         <p>Here is another example to further explore the use function notation.</p>
 
@@ -424,7 +425,7 @@
         <p>The most important part is that for each input the function yields only one result, and each individual input always gives the same single result. This sound terribly confusing, but it makes more sense if we just think about the train.</p>
 
         <p>For instance, for the train fuction <m>D = f(t)</m> at any given time like <m>t = 2</m> the train can only be in one place.  That's the only result.  It's not possible for the train to be in two or more places (results) at the same time.  Also, every time you put 2 into the function, the train is always in the same place.</p>
-        <p>Here is the tricky part. It is possible that the train is 30 miles away from downtown at 10 <int>a.m.</int>, on the way out of town.  But then the train is 30 miles away from downtown later in the day (different time) on the way back towards downtown. Still the train is only at one place at any one time.</p>
+        <p>Here is the tricky part. It is possible that the train is 30 miles away from downtown at 10 a.m., on the way out of town.  But then the train is 30 miles away from downtown later in the day (different time) on the way back towards downtown. Still the train is only at one place at any one time.</p>
 
         <exercise>
             <title>Decide if each situation is possible given the function <m>y = f(x)</m> where <m>x</m> and <m>y</m> are just generic variables.</title>
@@ -642,7 +643,7 @@
                 <statement>
                     <p>The graph the the function <m>f(x) = (x+4)(x+1)(x-2)*0.1875</m> is shown below.  Use the slider or the manual input box to evaluate each expression.</p>
 
-                    <todo>Question 1.1.10 needs to be finished.  Graph should show the values of x and f(x) in order to evaluate given expressions.</todo>
+                    <!--Question 1.1.10 needs to be finished.  Graph should show the values of x and f(x) in order to evaluate given expressions.-->
 
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/bnSUyhHH/width/431/height/313/border/888888" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>Evaluate <m>f(-4)</m></p>
@@ -687,7 +688,7 @@
         <blockquote><p>Solve <m>f(x) = 0</m></p></blockquote>
         <p>Solve means, <q>Find the input that gives you this result</q>.  In our case the result we want is an output value of <m>0</m>. There are still three answers to the question and each answer is called a <q>solution</q>.</p>
         <p>The statement:</p>
-        <blockquote>Solve <m>f(x) = 0</m></blockquote>
+        <blockquote><p>Solve <m>f(x) = 0</m></p></blockquote>
         <p>has three solutions:  <m>x = -4</m>, <m>-1</m> and <m>2</m></p>
         <p>On a graph, the output is the height of the graph.  Solve <m>f(x) = 0</m> on a graph means, <q>Find all the places where the graph is zero units high</q>.
         </p>
@@ -785,7 +786,7 @@
                 </setup>
 
                 <statement>
-                    <todo>Insert graph of {2^x} = 0.5x + b with the number b equal to 0.956964. Also need to insert code for conditional questions below. Need to code the no solutions and one solutions parts to this question.</todo>
+                    <!--Insert graph of {2^x} = 0.5x + b with the number b equal to 0.956964. Also need to insert code for conditional questions below. Need to code the no solutions and one solutions parts to this question.-->
 
                     <p>Find a value for b such that the equation</p>
                     <p><me>{2^x} = 0.5x + b</me></p>
