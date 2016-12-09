@@ -71,7 +71,7 @@
     <subsection>
         <title>Function Characteristics</title>
           <p>A function can be <term>Positive</term> or <term>Negative</term></p>
-          <p>If the output values of a function are above the horizontal axis, we say the function is positive.  If the output values of a function are below the horizontal axis, we say the function is negative.</p>   
+          <p>If the output values of a function are above the horizontal axis, we say the function is positive.  If the output values of a function are below the horizontal axis, we say the function is negative.</p>
             <exercise>
                 <title>Positive or Negative</title>
                 <webwork xml:id="pos-neg">
@@ -212,7 +212,7 @@
                       <var name="$cDwn">
                           <static>9&lt;t&lt;24</static>
                       </var>
-                      
+
                       <pg-code>
                         Context("Inequalities");
                         Context()->variables->are(t => "Real");
@@ -226,7 +226,7 @@
                         $cDwn = Compute("9&lt;t&lt;24");
                       </pg-code>
                 </setup>
-          
+
                 <statement>
                   <p>Sometimes the temperature rises (increasing) and sometimes is falls (decreasing). Sometimes the temperatures are above zero (positive) and sometimes the temperatures are below zero (negative).</p>
                   <p>Finally the temperature changes are speeding up (concave up) and sometimes the changes in temperature are slowing down (concave down).</p>
@@ -248,7 +248,7 @@
                   <p>On what intervals is the function concave down?</p>
                   <p><var name="$cDwn" width="10" /></p>
                 </statement>
-                
+
                 <solution>
                   <p>Remember, the input variable is t!</p>
                   <p>Notice we do not include the end values of the intervals.</p>
