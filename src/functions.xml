@@ -29,9 +29,7 @@
         </list>
 
         <list>
-            <title>
-                <p>Typically students need some reivew on the topics below.</p>
-            </title>
+            <title>Typically students need some reivew on the topics below.</title>
             <dl>
                 <li>
                     <p><url href="https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-slope-intercept-form/e/slope-intercept-equation-from-graph">Equation of a line.</url></p>
@@ -56,7 +54,8 @@
     <xi:include href="./activity-describing-functions.xml" />
     <xi:include href="./activity-functions-average-rate-of-change.xml" />
 
-    <conclusion>
+    <section>
+        <title>Gist of <xref ref="chapter-functions" autoname="title" /></title>
         <subsection>
         <title>Defining a Function</title>
         <p>A <term>function</term> is a rule that may be in the form of a graph, or a table of values or a formula.  It may even be a sentence or a set of instructions.  A function takes an input value and uses the rule to create an output value.</p>
@@ -67,7 +66,7 @@
 
         <p>Inside the parentheses is the <term>Independent Variable</term>, like <m>x</m>, and outside the parentheses, on the other side of the equals sign, is the <term>Dependent Variable</term>, like <m>y</m>.</p>
 
-        <todo>
+        <!--
             Add a few webwork problems here for the terms "function", "independent variable" and "dependent variable".
             1.  Suppose <m>f</m> is the rule that takes the area of a circle as its input and then outputs the radius of the circle.
                 (a) What is the correct way to write this rule in function notation?
@@ -80,7 +79,7 @@
                 (a) What is the value of <m>h(3)</m>, including the correct units?
                 (b) For the equation <m>h(2) = 60</m>, choose the correct interpretation below:
                     Options: The tree has been growing for 2 years and is now 60 feet tall, The tree has been growing for 60 months and is now 2 feet tall, The tree has been growing for 2 years and is now 60 inches tall, The tree has been growing for 2 months and is now 60 inches tall.
-        </todo>
+        -->
 
         <exercise>
             <title>Using Function Notation</title>
@@ -127,8 +126,7 @@
                     </pg-code>
                 </setup>
                 <statement>
-                <p>Suppose <m>f</m> is the rule that takes the area of a circle as its input and then outputs the radius of the circle.</p>
-                    <ol>
+                <p>Suppose <m>f</m> is the rule that takes the area of a circle as its input and then outputs the radius of the circle.<ol>
                         <li>
                             <p>What is the correct way to write this rule in function notation? <var name="$notation" form="buttons"/></p>
                         </li>
@@ -138,10 +136,10 @@
                         <li>
                             <p>In the equation <m>f(100) \approx 5.64</m>, what is a possible meaning for the number <m>5.64</m>?<var name="$interpretation" form="buttons"/></p>
                         </li>
-                    </ol>
+                </ol></p>
                 </statement>
                 <solution>
-                    <ol>
+                    <p><ol>
                         <li>
                             <p>The correct answer is <var name="$notation" />. We were told that the function takes the area as the input, so the area must be in the parentheses.</p>
                         </li>
@@ -151,7 +149,7 @@
                         <li>
                             <p>The correct answer is <var name="$interpretation" />. The number <m>5.64</m> was the output of the function which is the radius of the circle. The radius of a circle must have a length unit.</p>
                         </li>
-                    </ol>
+                    </ol></p>
                 </solution>
             </webwork>
         </exercise>
@@ -200,8 +198,7 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>The function <m>h(y) = 24 + 18y</m> would find the height (in inches) of a Paper Birch tree which is <m>24</m> inches tall when it is planted, and grows by <m>18</m> inches per year. The independent variable <m>y</m> is the number of years after it is planted.</p>
-                    <ol>
+                    <p>The function <m>h(y) = 24 + 18y</m> would find the height (in inches) of a Paper Birch tree which is <m>24</m> inches tall when it is planted, and grows by <m>18</m> inches per year. The independent variable <m>y</m> is the number of years after it is planted.<ol>
                         <li>
                             <p>What is the value of <m>h(3)</m>, including the correct units?</p>
                             <p>h(3) = <var name="$height" width="3" /> <var name="$units" form="popup" /></p>
@@ -210,17 +207,17 @@
                             <p>For the equation <m>h(2) = 60</m>, choose the correct interpretation.</p>
                             <p>The tree was planted <var name="$age" width="5" /> <var name="$timeunits" form="popup" /> ago and is now <var name="$height2" width="5" /> <var name="$heightunits" form="popup" /> tall.</p>
                         </li>
-                    </ol>
+                    </ol></p>
                 </statement>
                 <solution>
-                    <ol>
+                    <p><ol>
                         <li>
                             <p>The correct answer is: h(3) = <var name="$height" /> <var name="$units"/>.</p>
                         </li>
                         <li>
                             <p>The tree was planted <var name="$age" /> <var name="$timeunits" /> ago and is now <var name="$height2" /> <var name="$heightunits" /> tall.</p>
                         </li>
-                    </ol>
+                    </ol></p>
                 </solution>
             </webwork>
         </exercise>
@@ -287,7 +284,7 @@
             </webwork>
         </exercise>
         </subsection>
-            
+
         <subsection>
             <title>Describing functions with intervals</title>
             <p>A function may have many different characteristics: Its output values may increase or decrease, its graph may curve up or curve down, it may have positive outputs or negative outputs. When describing these characteristics for a function, we typically refer to an <term>interval</term> (connected part) of the input axis, or a particular value of the input where something interesting occurs.</p>
@@ -304,14 +301,14 @@
 
             <todo>Insert interactive that changes a graph from concave up to concave down with a slider</todo>
 
-            <ul>
+            <p><ul>
                 <li>
                     <p>concave down for <m>5\lt s\lt60</m>.</p>
                 </li>
                 <li>
                     <p>concave up for <m>60\lt s\lt75</m>.</p>
                 </li>
-            </ul>
+            </ul></p>
         </subsection>
 
         <subsection>
@@ -351,11 +348,11 @@ Add a webwork problem for these key terms:
             <title>Average Rate of Change</title>
             <p>This a <em>very</em> important topic of this course. You will see it over and over again in various forms. Basically it means slope, but it's more than that. It's also a notation and a concept that sets the stage for calculus.</p>
 
-            <p>From the car's efficiency function we know <m>f(5)=10</m> which means at <quantity><mag>5</mag><unit base="mileperhour"/></quantity> the efficiency is <quantity><mag>10</mag><unit base="mile-per-gallon"/></quantity>.</p>
+            <p>From the car's efficiency function we know <m>f(5)=10</m> which means at <quantity><mag>5</mag><unit base="mileperhour"/></quantity> the efficiency is <quantity><mag>10</mag><unit base="milepergallon"/></quantity>.</p>
 
-            <p>We also know that <m>f(25)=27</m> which means at <quantity><mag>25</mag><unit base="mileperhour"/></quantity> the efficiency is <quantity><mag>27</mag><unit base="mile-per-gallon"/></quantity>.</p>
+            <p>We also know that <m>f(25)=27</m> which means at <quantity><mag>25</mag><unit base="mileperhour"/></quantity> the efficiency is <quantity><mag>27</mag><unit base="milepergallon"/></quantity>.</p>
 
-            <p>Therefore, as the speed increased from <quantity><mag>5</mag><unit base="mileperhour"/></quantity> to <quantity><mag>25</mag><unit base="mileperhour"/></quantity>, the car's efficiency increased from <quantity><mag>10</mag><unit base="mile-per-gallon"/></quantity> to <quantity><mag>27</mag><unit base="mile-per-gallon"/></quantity>. On average the efficiency changed by <quantity><mag>17</mag><unit base="mile-per-gallon"/></quantity> while the speed changed by <quantity><mag>20</mag><unit base="mileperhour"/></quantity>.</p>
+            <p>Therefore, as the speed increased from <quantity><mag>5</mag><unit base="mileperhour"/></quantity> to <quantity><mag>25</mag><unit base="mileperhour"/></quantity>, the car's efficiency increased from <quantity><mag>10</mag><unit base="milepergallon"/></quantity> to <quantity><mag>27</mag><unit base="milepergallon"/></quantity>. On average the efficiency changed by <quantity><mag>17</mag><unit base="milepergallon"/></quantity> while the speed changed by <quantity><mag>20</mag><unit base="mileperhour"/></quantity>.</p>
 
             <p>We can use this information to calculate the average increase in efficiency over the increase in speed.</p>
 
@@ -391,7 +388,7 @@ Add a webwork problem for these key terms:
                         </pg-code>
                     </setup>
                     <statement>
-                        <todo>Fix paragraph where it says, if the car travels at.</todo>
+                        <!--Fix paragraph where it says, if the car travels at.-->
                         <p>Below is a table of data and corresponding graph of the fuel efficiency of a midsize car (<quantity><unit base="milepergallon"/></quantity>) as a function of the speed of the car (<quantity><unit base="mileperhour"/></quantity>). Each point on the graph is an ordered pair (speed vs. fuel efficiency). If the car travels at <quantity><mag>15</mag><unit base="mileperhour"/></quantity>, the fuel efficiency is about <quantity><mag>15.3</mag><unit base="milepergallon"/></quantity>. If the car changes speed, then the fuel efficiency changes.</p>
 
                         <p>Place one dot at the ordered pair <m>(15, 15.3)</m>. Place the other dot at the ordered pair <m>(25, 29)</m>. Notice as the input changes from <m>15</m> to <m>25</m> (from one dot to the other), the output changes from <m>15.3</m> to <m>29</m>.</p>
@@ -456,62 +453,61 @@ Add a webwork problem for these key terms:
                     </statement>
                 </webwork>
             </exercise>
+            <exercise>
+                <title>Equation for a Secant Line</title>
+                <webwork xml:id="webwork-secant-line">
+                    <setup>
+                        <var name="$a">
+                            <static>10</static>
+                        </var>
+                        <var name="$b">
+                            <static>1</static>
+                       </var>
+                       <var name="$f">
+                           <static>\frac{10}{x^2+1}</static>
+                       </var>
+                       <var name="$x1">
+                           <static>1</static>
+                       </var>
+                       <var name="$x2">
+                           <static>3</static>
+                       </var>
+                       <var name="$y1">
+                           <static>5</static>
+                       </var>
+                       <var name="$y2">
+                           <static>1</static>
+                       </var>
+                       <var name="$slope">
+                           <static>2</static>
+                       </var>
+                       <var name="$line">
+                           <static>y=2(x-1)+5</static>
+                       </var>
+                       <pg-code>
+                           Context("ImplicitPlane")->flags->set(reduceConstants=>0);
+                           $x1 = Real(1);
+                           $x2 = Real(random(3, 5, 1));
+                           $b = Real(random(1,3,1));
+                           $a = Real(lcm($x1**2+$b,$x2**2+$b))*random(1,3,1);
+                           $f = Formula("$a/(x^2+$b)");
+                           $y1 = $f->eval(x=>$x1);
+                           $y2 = $f->eval(x=>$x2);
+                           $Dy = $y2 - $y1;
+                           $Dx = $x2 - $x1;
+                           $slope = Formula("$Dy/$Dx");
+                           $line = Compute("y = $slope*(x - $x1) + $y1");
+                       </pg-code>
+                   </setup>
+                   <statement>
+                       <p>Find a formula for the line passing through the function <m>f(x) = <var name="$f"/></m>  at <m>x = <var name="$x1"/></m> and <m>x = <var name="$x2"/></m>.</p>
+                       <p><var name="$line" width="20" /></p>
+                   </statement>
+                   <solution>
+                       <p>Since <m>f(<var name="$x1"/>) = <var name="$y1"/></m>, and <m>f(<var name="$x2"/>) = <var name="$y2"/></m>, then the slope of this line is <m>\frac{<var name="$y2"/> - <var name="$y1"/>}{<var name="$x2"/> - <var name="$x1"/>}=<var name="$slope"/></m>. Using the point-slope form, we can write the line's equation as <m>y=<var name="$slope"/>(x-<var name="$x1"/>)+<var name="$y1"/></m>.</p>
+                   </solution>
+               </webwork>
+            </exercise>
         </subsection>
-
-        <exercise>
-            <title>Equation for a Secant Line</title>
-            <webwork xml:id="webwork-secant-line">
-                <setup>
-                    <var name="$a">
-                        <static>10</static>
-                    </var>
-                    <var name="$b">
-                        <static>1</static>
-                    </var>
-                    <var name="$f">
-                        <static>\frac{10}{x^2+1}</static>
-                    </var>
-                    <var name="$x1">
-                        <static>1</static>
-                    </var>
-                    <var name="$x2">
-                        <static>3</static>
-                    </var>
-                    <var name="$y1">
-                        <static>5</static>
-                    </var>
-                    <var name="$y2">
-                        <static>1</static>
-                    </var>
-                    <var name="$slope">
-                        <static>2</static>
-                    </var>
-                    <var name="$line">
-                        <static>y=2(x-1)+5</static>
-                    </var>
-                    <pg-code>
-                        Context("ImplicitPlane")->flags->set(reduceConstants=>0);
-                        $x1 = Real(1);
-                        $x2 = Real(random(3, 5, 1));
-                        $b = Real(random(1,3,1));
-                        $a = Real(lcm($x1**2+$b,$x2**2+$b))*random(1,3,1);
-                        $f = Formula("$a/(x^2+$b)");
-                        $y1 = $f->eval(x=>$x1);
-                        $y2 = $f->eval(x=>$x2);
-                        $Dy = $y2 - $y1;
-                        $Dx = $x2 - $x1;
-                        $slope = Formula("$Dy/$Dx");
-                        $line = Compute("y = $slope*(x - $x1) + $y1");
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Find a formula for the line passing through the function <m>f(x) = <var name="$f"/></m>  at <m>x = <var name="$x1"/></m> and <m>x = <var name="$x2"/></m>.</p>
-                    <p><var name="$line" width="20" /></p>
-                </statement>
-                <solution>
-                    <p>Since <m>f(<var name="$x1"/>) = <var name="$y1"/></m>, and <m>f(<var name="$x2"/>) = <var name="$y2"/></m>, then the slope of this line is <m>\frac{<var name="$y2"/> - <var name="$y1"/>}{<var name="$x2"/> - <var name="$x1"/>}=<var name="$slope"/></m>. Using the point-slope form, we can write the line's equation as <m>y=<var name="$slope"/>(x-<var name="$x1"/>)+<var name="$y1"/></m>.</p>
-                </solution>
-            </webwork>
-        </exercise>
-    </conclusion>
+    </section>
 </chapter>
