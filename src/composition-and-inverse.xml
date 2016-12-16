@@ -48,7 +48,6 @@
     <conclusion>
       <subsection>
         <title>Summary of Composition</title>
-<todo> Fix units </todo>
 
         <p>The <term>composition</term> of functions is really about using the <em>output</em> of one function as the <em>input</em> for another.</p>
         <p>The notation we will use for composing two functions is <me>f(g(x))</me> which we read as "<m>f</m> of <m>g</m> of <m>x</m>".</p>
@@ -85,10 +84,10 @@
         <exercise xml:id="exercise-composition-formulas">
           <statement>
             <p>Again, let <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>. This time, find the composite functions by using <m>x</m> as the input.</p>
-            <ol>
+            <ul>
               <li><m>f(g(x))</m></li>
               <li><m>g(f(x))</m></li>
-            </ol>
+            </ul>
           </statement>
           <hint><p>Remember to simplify the expression inside the parentheses first.</p></hint>
           <answer>
@@ -128,7 +127,6 @@
             <p>At the same time, the drug is meant to help lower the patient's blood pressure <m>P</m>, measured in mm Hg. So, as the drug leaves the patient's bloodstream, the blood pressure increases.</p>
             <p>Therefore, <m>P</m> depends on <m>C</m>, and <m>C</m> depends on <m>t</m>.</p>
             <p>There is a function which represents how <m>C</m> depends on <m>t</m>. We will call this function <m>f</m>, and write <m>C = f(t)</m>.</p>
-<todo>Write a few teaser questions here.</todo>
 
             <p>There is another function which represents how <m>P</m> depends on <m>C</m>. We will call this function <m>g</m>, and write <m>P = g(C)</m>.</p>
             <p>So, we would first use <m>f(t)</m> to find the concentration <m>C</m> of the drug in the bloodstream, and then use that concentration as the input for the function <m>g(C)</m> in order to find the patient's blood pressure <m>P</m>.</p>
@@ -352,7 +350,7 @@
               </solution>
             </webwork>
           </exercise>
-<todo>In the next problem, the solution shows an answer of B1, instead of giving the correct statements.</todo>
+<todo>In the next problem, the solution link shows an answer of B1, instead of giving the correct statements.</todo>
           <exercise>
             <webwork xml:id="webwork-windchill">
               <setup>
@@ -439,7 +437,7 @@
             </webwork>
           </exercise>
           <paragraphs><title>Graphing the Inverse</title></paragraphs>
-          <p>We can describe the inverse of a function <m>f</m> in a few ways, depending on what information we need.</p>
+          <p>We can describe the inverse of a function <m>f</m> in different ways, depending on what information we need.</p>
           <p>For instance, we can certainly take a table of values from <m>f(x)</m>, switch the inputs and outputs, and we will have a table of values for <m>f^{-1}(x)</m>:</p>
             <sidebyside widths="48% 48%">
             <table>
@@ -624,10 +622,10 @@
           <paragraphs><title>What makes a function invertible</title></paragraphs>
           <p>Remember the defining characteristic of a function:</p>
           <blockquote>For each input, there is only one output.</blockquote>
-          <p>From a graphical standpoint, this means that there can be only one point with any given <m>x</m>-coordinate. No two points on the graph of a function can be directly above or below each other.</p>
+          <p>From a graphical standpoint, this means that there can be only one point with any given <m>x</m>-coordinate. That is, no two points on the graph of a function can be directly above or below each other.</p>
           <p>Now, if an inverse <m>f^{-1}</m> is <em>really</em> a function, then it must also obey this rule. No two points on the graph of <m>y = f^{-1}(x)</m> can sit directly above or below each other.</p>
           <p>So if <m>f^{-1}</m> is a function, this has an implication for the original function <m>f</m>.</p>
-          <p>To see this, let's use our rule about reflecting over the line <m>y = x</m>. If no two points on the graph of an inverse function can sit <em>above</em> or <em>below</em> each other, then reflecting these points over <m>y = x</m> means that no two points on the graph of <m>f(x)</m> can sit directly <em>left</em> or <em>right</em> of each other.</p>
+          <p>To see this, remember that the graphs of a function and its inverse are reflections of each other over the line <m>y = x</m>. If no two points on the graph of an inverse function can sit <em>above</em> or <em>below</em> each other, then reflecting these points over <m>y = x</m> means that no two points on the graph of <m>f(x)</m> can sit directly <em>left</em> or <em>right</em> of each other.</p>
           <exercise>
             <webwork>
               <setup>
@@ -647,7 +645,7 @@
               </setup>
               <statement>
                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/fTMWxxhS/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>The graph shows a function <m>y = f(x)</m>, together with two points. Click the button to reflect the two points over the line <m>y = x</m>.</p>
+                <p>The graph shows a function <m>y = f(x)</m>, together with two points which also happen to sit on the same horizontal line. Click the button to reflect the two points over the line <m>y = x</m>, showing where two points would be on the inverse.</p>
                 <p>Why is the function <m>f</m> <em>not</em> invertible?</p>
                 <p>Answer:  <var name="$reason" form="popup" /></p>
               </statement>
@@ -699,6 +697,70 @@
               </figure>
             </sidebyside>
           </example>
+          <paragraphs><title>Restricting the Domain</title></paragraphs>
+          <p>You may object to the notion that <m>f(x) = x^2</m> is non-invertible, because surely the function <m>g(x) = \sqrt{x}</m> performs the opposite action.</p>
+          <p>However, this is only true if we remember that <m>\sqrt{x}</m> never gives negative outputs.</p>
+          <p>For example, we have two inputs which give the same output:</p><md>
+            <mrow>f(5) = 5^2 = 25</mrow>
+            <mrow>f(-5) = (-5)^2 = 25</mrow></md>
+          <p>Since an inverse function would reverse the input and the output, it would need to somehow use <m>25</m> as the input, and then output <em>both</em> <m>5</m> and <m>-5</m>.</p>
+          <p>But because <m>g(x) = \sqrt{x}</m> is a function, it can only give the single output <m>5</m>.</p>
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$interval">
+                  <set>
+                    <member>\text{?}</member>
+                    <member correct="yes">x &gt; 0</member>
+                    <member>x &gt; -2</member>
+                  </set>
+                </var>
+                <pg-code>
+                  $interval=PopUp(
+                  ["?","x &gt; 0","x &gt; -2"],"x &gt; 0"
+                  );
+                </pg-code>
+              </setup>
+              <statement>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jGC9Xk8r/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                <p>The graph shows part of <m>f(x) = x^2</m> and its inverse function. The domain used for <m>f</m> is shown as an interval on the <m>x</m>-axis.</p>
+                <ul>
+                  <li><p>Make the interval larger by sliding the point to a negative value on the <m>x</m>-axis, and notice that the inverse is <em>no longer</em> a function for that domain. A vertical line would intersect the inverse twice, and a horizontal line would intersect <m>f(x)</m> twice.</p></li>
+                  <li><p>Now shrink the interval until the inverse <em>is</em> a function. What interval would make the inverse a function?</p>
+                  <p><var name="$interval" form="popup" /></p></li>
+                </ul>
+              </statement>
+              <solution>
+                <p>If we restrict the domain of <m>f(x) = x^2</m> to <m>x &gt; 0</m>, then it is invertible. The inverse function is <m>f^{-1}(x) = \sqrt{x}</m>.</p>
+              </solution>
+            </webwork>
+          </exercise>
+          <p>We <term>restrict</term> the domain of a function in order to make it <term>invertible</term>. We choose an interval for the input, so that the output never has repeated values &#8212; this ensures that the inverse will pass the vertical line test.</p>
+          <exercise>
+            <statement><p>An important use of restricting the domain is in finding the inverse of a <em>periodic</em> function (one which repeats itself over-and-over). For example, consider the function <m>f</m> below.</p>
+            <figure>
+              <caption>A periodic function <m>f</m></caption>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[]
+                                    \addplot+[domain=-6:6, smooth]{4*sin(90*x)};
+                                 \end{axis}
+                            \end{tikzpicture}
+                    ]]>
+                    </latex-image-code>
+                </image>
+            </figure>
+            <p>How could we restrict the domain so this function is invertible?</p>
+            <p>Choose an interval for <m>x</m> so <m>f^{-1}</m> is a function.</p></statement>
+            <hint><p>There are several intervals which will work here. Remember that the function <m>f</m> cannot have repeated values on the interval you choose.</p>
+            <p>Also, remember that if the endpoints of your interval give the same outputs, then you can only include one of the endpoints in the interval.</p></hint>
+            <solution><p>Correct options include:<md>
+              <mrow>-1 \leqslant x \lt 1</mrow>
+              <mrow>-1 \lt x \leqslant 1</mrow>
+              <mrow>1 \leqslant x \lt 3</mrow></md></p>
+            </solution>
+          </exercise>
 
       </subsection>
     </conclusion>
