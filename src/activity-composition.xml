@@ -403,7 +403,6 @@
     <p>Next, use the graphs of two functions to evaluate different compositions.</p>
     <exercise>
       <webwork xml:id="function-composition-graph">
-
         <setup>
           <var name="$xg[0]"><static>2</static></var>
           <var name="$xg[1]"><static>4</static></var>
@@ -417,7 +416,6 @@
           <var name="$GofG"><static>0</static></var>
           <var name="$F[1]"><static>6</static></var>
           <var name="$FofF"><static>2</static></var>
-
           <pg-code>
             @xg=map{2*($_-3)}NchooseK(7,2);
             @xf=map{2*($_-2)}NchooseK(7,2);
@@ -428,12 +426,8 @@
             $FofF=2*abs($F[1]-2)-6;
             $GofG=$G[1]-2;
           </pg-code>
-
         </setup>
         <statement>
-
-
-
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WJymUNhx/width/433/height/533/border/888888" width="433px" height="533px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Use the graph to evaluate each of the following compositions.</p>
           <p><m>g(<var name="$xg[0]" />) = </m><var name="$G[0]" width="15" /></p>
@@ -444,13 +438,15 @@
           <p><m>g(g(<var name="$xg[1]" />)) = g(</m><var name="$G[1]" width="10" /><m>) = </m><var name="$GofG" width="15" /></p>
           <p><m>f(<var name="$xf[1]" />) = </m><var name="$F[1]" width="15" /></p>
           <p><m>f(f(<var name="$xf[1]" />)) = f(</m><var name="$F[1]" width="10" /><m>) = </m><var name="$FofF" width="15" /></p>
-
         </statement>
         <hint>
-
+          <p>Remember to work inside the parentheses first. For example, the first problem has you find the value of <m>g(<var name="$xg[0]" />)</m>, because you will then use it as the input for <m>f</m> when evaluating <m>f(g(<var name="$xg[0]" />))</m>.</p>
         </hint>
         <solution>
-
+          <p><m>f(g(<var name="$xg[0]" />)) = </m><var name="$FofG" /></p>
+          <p><m>g(f(<var name="$xf[0]" />)) = </m><var name="$GofF" /></p>
+          <p><m>g(g(<var name="$xg[1]" />)) = </m><var name="$GofG" /></p>
+          <p><m>f(f(<var name="$xf[1]" />)) = </m><var name="$FofF" /></p>
         </solution>
       </webwork>
     </exercise>

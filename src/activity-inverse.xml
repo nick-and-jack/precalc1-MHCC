@@ -107,9 +107,6 @@
           <p><m>g^{-1}(<var name="$y[2]" />) = </m><var name="$x[2]" width="15" /></p></li>
         </ul>
       </statement>
-      <hint>
-
-      </hint>
       <solution>
         <ol>
           <li><p><m>f^{-1}(<var name="$y[1]" />) = <var name="$x[1]" /></m></p></li>
@@ -209,17 +206,17 @@
 
         <p>You should notice that the function <m>f</m> undid the action of <m>f^{-1}</m>. In function notation, this says: <me>f(f^{-1}(x)) = x</me></p>
       </statement>
-      <hint>
-
-      </hint>
       <solution>
-
+        <ol>
+          <li><p><m>f(f^{-1}(<var name="$x[0]" />)) = f(</m><var name="$fInverse[0]" /><m>) = </m><var name="$x[0]" /></p></li>
+          <li><p><m>f(f^{-1}(<var name="$x[1]" />)) = f(</m><var name="$fInverse[1]" /><m>) = </m><var name="$x[1]" /></p></li>
+        </ol>
       </solution>
     </webwork>
   </exercise>
 
   <p>Now let's use our understanding of inverse functions to interpret statements which use function notation.</p>
-
+<todo>Fix the numbering in the ordered list in the next problem.</todo>
   <exercise>
     <webwork xml:id="webwork-inverse-notation-interpretation-paint">
       <setup>
@@ -247,17 +244,19 @@
         <p>Let <m>f(A)</m> be the function which will find the cost <m>C</m>, in dollars, of painting a house of <m>A</m> square feet.</p>
         <p>This function can be expressed by: <me>C = f(A)</me></p>
         <ol>
-          <li><p>Choose the correct interpretation of the statement:  <me>f(1500) = 4600</me></p></li>
-          <li><p><var name="$interpretF" form="popup" /></p></li>
-          <li><p>Choose the correct interpretation of the statement:  <me>f^{-1}(3500) = 1000</me></p></li>
-          <li><p><var name="$interpretFInverse" form="popup" /></p></li>
+          <li><p>Choose the correct interpretation of the statement:  <me>f(1500) = 4600</me></p>
+          <p><var name="$interpretF" form="popup" /></p></li>
+          <li><p>Choose the correct interpretation of the statement:  <me>f^{-1}(3500) = 1000</me></p>
+          <p><var name="$interpretFInverse" form="popup" /></p></li>
         </ol>
       </statement>
-      <hint>
-
-      </hint>
       <solution>
-
+        <ol>
+          <li><p><m>f(1500) = 4600</m> means:</p>
+          <p><var name="$interpretF" /></p></li>
+          <li><p><m>f^{-1}(3500) = 1000</m> means:</p>
+          <p><var name="$interpretFInverse" /></p></li>
+        </ol>
       </solution>
     </webwork>
   </exercise>
@@ -279,6 +278,12 @@
             <member correct="yes">G^{-1}(1500) = 90</member>
           </set>
         </var>
+        <var name="$interpretGInverse">
+          <set>
+            <member>G^{-1}(1500) = 90</member>
+            <member correct="yes">G^{-1}(90) = 1500</member>
+          </set>
+        </var>
 
         <pg-code>
           Context('Numeric');
@@ -298,19 +303,21 @@
       <statement>
         <p>Let <m>S = G(t)</m> be a function which will calculate the salary <m>S</m>, in dollars, for working <m>t</m> hours per month.</p>
         <ol>
-          <li><p>Choose the correct notation for the following statement:</p></li>
-          <li><p><em>The salary is $2900 for working 160 hours per month.</em></p></li>
-          <li><p><var name="$interpretG" form="buttons" /></p></li>
-          <li><p>Choose the correct notation for the following statement:</p></li>
-          <li><p><em>If you work 90 hours per month, your salary will be $1500.</em></p></li>
-          <li><p><var name="$interpretGInverse" form="buttons" /></p></li>
+          <li><p>Choose the correct notation for the following statement:</p>
+          <p><em>The salary is $2900 for working 160 hours per month.</em></p>
+          <p><var name="$interpretG" form="buttons" /></p></li>
+          <li><p>Choose the correct notation for the following statement:</p>
+          <p><em>If you work 90 hours per month, your salary will be $1500.</em></p>
+          <p><var name="$interpretGInverse" form="buttons" /></p></li>
         </ol>
       </statement>
-      <hint>
-
-      </hint>
       <solution>
-
+        <ol>
+          <li><p><em>"The salary is $2900 for working 160 hours per month"</em> means:</p>
+          <p><var name="$interpretG" /></p></li>
+          <li><p><em>"If you work 90 hours per month, your salary will be $1500"</em> means:</p>
+          <p><var name="$interpretGInverse" /></p></li>
+        </ol>
       </solution>
     </webwork>
   </exercise>
@@ -349,10 +356,10 @@
         <p>Answer:  <m>f^{-1}(x) = </m><var name="$fInverse" width="15" /></p>
       </statement>
       <hint>
-
+        <p>Solve for the expression <m>f^{-1}(x)</m> in the equation, just as you would solve for any variable in an algebra problem.</p>
       </hint>
       <solution>
-
+        <p><m>f^{-1}(x) = <var name="$fInverse" /></m></p>
       </solution>
     </webwork>
   </exercise>
@@ -380,34 +387,43 @@
               <member>(-2, -1)</member>
             </set>
           </var>
-          <var name="$correct"><static>1</static></var>
+          <var name="$correct">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{Yes}</member>
+              <member>\text{No}</member>
+            </set>
+          </var>
 
           <pg-code>
             $point1=PopUp(["?",'(0, 3)','(3, 0)'],'(3, 0)');
             $point2=PopUp(["?",'(-1, -2)','(-2, -1)'],'(-1, -2)');
-            $correct=Real(1);
+            $correct=PopUp(
+            ["?","Yes","No"],"Yes"
+            );
           </pg-code>
         </setup>
         <statement>
           <p>The graph below shows the linear function <m>y = f(x)</m> with two points on it, along with two other points for you to move.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/hABCSSG2/width/431/height/372/border/888888" width="431px" height="372px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>The point <m>(0, 3)</m> on the graph of <m>y = f(x)</m> means that when <m>0</m> is the input, then <m>3</m> is the ouput.</p>
-          <p>The inverse function <m>f^{-1}</m> would use those same values, but the input and output would be swapped.</p>
-          <p>Which of the following points would be on the graph of <m>y = f^{-1}(x)</m>?</p>
-          <p><var name="$point1" form="popup" /></p>
-          <p>The point <m>(-2, -1)</m> on the graph of <m>y = f(x)</m> means that when <m>-2</m> is the input, then <m>-1</m> is the ouput.</p>
-          <p>Which of the following points would be on the graph of <m>y = f^{-1}(x)</m>?</p>
-          <p><var name="$point2" form="popup" /></p>
-          <p>Now, move the two points to those locations. If you have the correct points, the graph of <m>y = f^{-1}(x)</m> will appear.</p>
-          <p>Enter the value <m>1</m> if you successfully made the graph of <m>y = f^{-1}(x)</m>.</p>
-          <p><var name="$correct" width="5" /></p>
-
+          <ol>
+            <li><p>The point <m>(0, 3)</m> on the graph of <m>y = f(x)</m> means that when <m>0</m> is the input, then <m>3</m> is the ouput.</p>
+              <p>The inverse function <m>f^{-1}</m> would use those same values, but the input and output would be switched.</p>
+              <p>Which of the following points would be on the graph of <m>y = f^{-1}(x)</m>?</p>
+              <p><var name="$point1" form="popup" /></p></li>
+            <li><p>The point <m>(-2, -1)</m> on the graph of <m>y = f(x)</m> means that when <m>-2</m> is the input, then <m>-1</m> is the ouput.</p>
+              <p>Which of the following points would be on the graph of <m>y = f^{-1}(x)</m>?</p>
+              <p><var name="$point2" form="popup" /></p></li>
+            <li><p>Now, move the two points to those locations. If you have the correct points, the graph of <m>y = f^{-1}(x)</m> will appear.</p>
+              <p>Did you successfully make the graph of <m>y = f^{-1}(x)</m>?</p>
+              <p><var name="$correct" form="popup"/></p></li>
+          </ol>
         </statement>
-        <hint>
-
-        </hint>
         <solution>
-
+          <ol>
+            <li><p><var name="$point1" /> would be on the graph of <m>y = f^{-1}(x)</m>.</p></li>
+            <li><p><var name="$point2" /> would be on the graph of <m>y = f^{-1}(x)</m>.</p></li>
+          </ol>
         </solution>
       </webwork>
     </exercise>
@@ -441,20 +457,17 @@
           <p>In order to graph <m>y = f^{-1}(x)</m>, how would you change the graph of <m>y = f(x)</m>?</p>
           <p><var name="$interpretation" form="buttons" /></p>
         </statement>
-        <hint>
-
-        </hint>
         <solution>
-
+          <p>If you have the graph of a function <m>f</m>, you can reflect it over the line <m>y = x</m> in order to make the graph of <m>f^{-1}</m>.</p>
         </solution>
       </webwork>
     </exercise>
 
     <paragraphs>
       <title>Not all functions have an inverse</title>
-      <p>Remember an important characteristic of any function: <blockquote>One input goes to only one output.</blockquote></p>
+      <p>Remember an important characteristic of any function: <blockquote>Each input goes to only one output.</blockquote></p>
       <p>For example, if <m>f</m> is a function, then it would be impossible for both <m>f(4) = 7</m> <em>and</em><m>f(4) = 10</m>. The input <m>4</m> cannot correspond to two different output values.</p>
-      <p>From a graphical standpoint, this means that the graph of <m>y = f(x)</m> must pass the <term>vertical line test</term>, which says that a vertical line may only intersect the graph of a function at most once. If it intersected the graph <em>twice</em>, that would mean there was some input value for which the function gave two different output values &#8212; impossible for a function.</p>
+      <p>Thinking about the graph, this means that the graph of <m>y = f(x)</m> must pass the <term>vertical line test</term>, which says that a vertical line may only intersect the graph of a function at most once. If it intersected the graph <em>twice</em>, that would mean there was some input value for which the function gave two different output values &#8212; impossible for a function.</p>
       <p>Now, an <term>inverse</term> function must also actually <em>be</em> a function. It, too, must pass the vertical line test. Each input value for the inverse must correspond to only one output value.</p>
       <p>But what would cause this condition to fail? What would be true about the original function <m>f</m> in order for the inverse to <em>not</em> be a function?</p>
     </paragraphs>
@@ -585,21 +598,16 @@
             </set>
           </var>
           <pg-code>
-            $non=RadioButtons(
-            ['?','At least one output value is repeated','No output values are repeated'],1,
-            labels => ["?","Repeated outputs","No repeated outputs"],
-            displayLabels => 0
+            $non=PopUp(
+            ["?","At least one output value is repeated","No output values are repeated"],"At least one output value is repeated"
             );
-            $inv=RadioButtons(
-            ['?','At least one output value is repeated','No output values are repeated'],2,
-            labels => ["?","Repeated outputs","No repeated outputs"],
-            displayLabels => 0
+            $inv=PopUp(
+            ["?","At least one output value is repeated","No output values are repeated"],"No output values are repeated"
             );
           </pg-code>
         </setup>
         <statement>
-          <p>Below are tables for two functions, <m>f</m> and <m>g</m>. The function <m>f</m> <em>invertible</em>, but the function <m>g</m> is <em>non-invertible</em>.</p>
-          <sidebyside widths="48% 48%">
+          <p>Below are tables for two functions, <m>f</m> and <m>g</m>. The function <m>f</m> is <em>invertible</em>, but the function <m>g</m> is <em>non-invertible</em>.</p>
             <table>
               <caption>Invertible function <m>f</m></caption>
               <tabular top="major" halign="center">
@@ -663,14 +671,11 @@
                 </row>
               </tabular>
             </table>
-          </sidebyside>
-
           <p>In the last problem, you decided why a certain table was non-invertible.</p>
-
           <p>In general, a function is non-invertible if:</p>
-          <p><var name="$non" form="buttons" /></p>
+          <p><var name="$non" form="popup" /></p>
           <p>In general, a function is invertible if:</p>
-          <p><var name="$inv" form="buttons" /></p>
+          <p><var name="$inv" form="popup" /></p>
         </statement>
         <hint>
           <p>If a function is invertible, then you should be able to read the table backward as a function. Why can you <em>not</em> do this with the table for <m>g</m></p>
@@ -684,6 +689,7 @@
 
 <p>This has implications for the graph of a function <m>f</m>. Given a graph of a function, we should be able to quickly decide if it is invertible or non-invertible.</p>
 <todo>Need to make non-invertible graph in the next exercise</todo>
+<!--
 <exercise>
   <webwork xml:id="webwork-horizontal-line-test">
     <setup>
@@ -732,5 +738,5 @@
     </solution>
   </webwork>
 </exercise>
-
+-->
 </section>
