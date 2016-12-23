@@ -19,10 +19,6 @@
     <p>Since a function is a process, the inverse function is just the reverse of that process.</p>
   </introduction>
   <p>In the following exercise, we introduce the notation for the <term>inverse</term> of a function.</p>
-
-
-
-
   <exercise>
     <webwork xml:id="webwork-inverse-notation">
       <setup>
@@ -31,14 +27,12 @@
         <var name="$fInverse"><static>x - 4</static></var>
         <var name="$x"><static>15</static></var>
         <var name="$y"><static>19</static></var>
-
         <pg-code>
           $increase=random(3,7,1);
           $f=Compute("x+$increase");
           $fInverse=Compute("x-$increase");
           $x=random(10,20,1);
           $y=Compute("$x+$increase");
-
         </pg-code>
       </setup>
       <statement>
@@ -47,10 +41,8 @@
         <p>Write the formula for the inverse function <m>f^{-1}(x)</m>. Remember, this should be a function which does the opposite of <em>increasing the input by</em> <var name="$increase" />.</p>
         <p><m>f^{-1}(x) = </m><var name="$fInverse" width="15" /></p>
         <p>Now, evaluate each of the following expressions:</p>
-        <ul>
-          <li><p><m>f(<var name="$x" />) = </m><var name="$y" width="10" /></p></li>
-          <li><p><m>f^{-1}(<var name="$y" />) = </m><var name="$x" width="10" /></p></li>
-        </ul>
+        <p><m>f(<var name="$x" />) = </m><var name="$y" width="10" /></p>
+        <p><m>f^{-1}(<var name="$y" />) = </m><var name="$x" width="10" /></p>
       </statement>
       <hint>
         <p>Since <m>f(x)</m> <em>increases</em> the input by <var name="$increase" />, then the inverse function would do the opposite. It would <em>decrease</em> the input by <var name="$increase" />.</p>
@@ -63,7 +55,6 @@
       </solution>
     </webwork>
   </exercise>
-
   <note>
     <title>About the notation</title>
       <p>The expression <m>f^{-1}(x)</m> does <em>not</em> mean that something is being raised to the <m>-1</m> power. Rather, this is just special notation for the <term>inverse</term> of the function <m>f</m>.</p>
@@ -75,7 +66,6 @@
   </p>
   <p>If <m>f</m> takes the input <m>3</m> and outputs the number <m>5</m>, then <m>f^{-1}</m> will take the input <m>5</m> and output the number <m>3</m>.</p>
   <p>Use this idea in the following exercise.</p>
-
   <exercise>
     <webwork xml:id="webwork-inverse-evaluation">
       <setup>
@@ -87,11 +77,9 @@
         <var name="$y[1]"><static>18</static></var>
         <var name="$y[2]"><static>13</static></var>
         <var name="$y[3]"><static>19</static></var>
-
         <pg-code>
           @x=map{$_+2}NchooseK(8,4);
           @y=map{$_+12}NchooseK(8,4);
-
         </pg-code>
       </setup>
       <statement>
@@ -115,11 +103,11 @@
       </solution>
     </webwork>
   </exercise>
-  <p>Now for an important fact about the inverse of a function. If <m>f</m> is a function, then <m>f^{-1}</m> is also a function. And we know that these functions perfectly <em>undo</em> each other.</p>
+<todo>Add an in-line note in the next paragraph, linking to the paragraph with xml id = "invertibility".</todo>
+  <p>Now for an important fact about the inverse of a function. If <m>f</m> is a function, then <m>f^{-1}</m> should also be a function. <fn>The inverse <em>should</em> be a function, but that is not always the case. We will see more about this later in the activity.</fn> And we know that these functions perfectly <em>undo</em> each other.</p>
   <p>If we use the function <m>f</m> to get an output, and then use that output as the input for <m>f^{-1}</m>, we will get back the very input we originally used in the function <m>f</m>.</p>
   <p>The diagram below shows this: It begins with an input value <m>a</m>, then uses the function <m>f</m> to get an output value <m>f(a)</m>, then uses the value <m>f(a)</m> as the input for the function <m>f^{-1}</m>, and finally gets back the original input <m>a</m>.</p>
-
-<todo>Make tikzpicture for composing f with f inverse, something like the following</todo>
+<todo>Maybe change the following figure to LaTeX</todo>
   <figure xml:id="figure-function-inverse-diagram">
       <image>
         <latex-image-code>
@@ -136,7 +124,6 @@
   <p>Put another way, if we <term>compose</term> the functions <m>f^{-1}</m> and <m>f</m>, it will be as though nothing happened to the input.</p>
   <p>In function notation, we would write: <md><mrow>f^{-1}(f(x)) = x</mrow></md></p>
   <p>Make sure you understand this concept in the next exercise.</p>
-
   <exercise>
     <webwork xml:id="inverse-composition">
       <setup>
@@ -147,14 +134,12 @@
         <var name="$letters[3]"><static>\text{d}</static></var>
         <var name="$total"><static>4</static></var>
         <var name="$var"><static>\text{d}</static></var>
-
         <pg-code>
           Context()->variables->are(a=>'Real', b=>'Real', c=>'Real', d=>'Real');
           $num=random(3,20,1);
           @letters = ('a'..'d');
           $total=@letters;
           $var=$letters[random($total)];
-
         </pg-code>
       </setup>
       <statement>
@@ -174,10 +159,8 @@
       </solution>
     </webwork>
   </exercise>
-
   <p>By now, we know that the function <m>f^{-1}</m> will undo the action of <m>f</m>.</p>
   <p>But there is another, equally important fact about composing a function and its inverse. See the next exercise.</p>
-
 <todo> Make this a scaffolded problem, google .webwork scaffold use student answer from part. for help </todo>
   <exercise>
     <webwork xml:id="webwork-inverse-composition">
@@ -199,11 +182,9 @@
         <ol>
           <li><p>Evaluate the expression by working from the inside out. In the first blank, you are evaluating <m>f^{-1}(<var name="$x[0]" />)</m>, where it is being entered inside parentheses as the input for <m>f</m>. In the second blank, you are evaluating to get the final answer.</p>
           <p><m>f(f^{-1}(<var name="$x[0]" />)) = f(</m><var name="$fInverse[0]" width="5" /><m>) = </m><var name="$x[0]" width="5" /></p></li>
-
           <li><p>Evaluate the expression by working from the inside out. In the first blank, you are evaluating <m>f^{-1}(<var name="$x[1]" />)</m>, where it is being entered inside parentheses as the input for <m>f</m>. In the second blank, you are evaluating to get the final answer.</p>
           <p><m>f(f^{-1}(<var name="$x[1]" />)) = f(</m><var name="$fInverse[1]" width="5" /><m>) = </m><var name="$x[1]" width="5" /></p></li>
         </ol>
-
         <p>You should notice that the function <m>f</m> undid the action of <m>f^{-1}</m>. In function notation, this says: <me>f(f^{-1}(x)) = x</me></p>
       </statement>
       <solution>
@@ -214,7 +195,6 @@
       </solution>
     </webwork>
   </exercise>
-
   <p>Now let's use our understanding of inverse functions to interpret statements which use function notation.</p>
 <todo>Fix the numbering in the ordered list in the next problem.</todo>
   <exercise>
@@ -234,21 +214,20 @@
             <member correct="yes">\text{If the price is $3500, then the area is 1000 square feet.}</member>
           </set>
         </var>
-
         <pg-code>
           $interpretF=PopUp(["?",'If the area is 1500 square feet, then the price is $4600.','If the area is 4600 square feet, then the price is $1500.'],'If the area is 1500 square feet, then the price is $4600.');
           $interpretFInverse=PopUp(["?",'If the price is $3500, then the area is 1000 square feet.','If the price is $1000, then the area is 3500 square feet.'],'If the price is $3500, then the area is 1000 square feet.');
         </pg-code>
       </setup>
       <statement>
-        <p>Let <m>f(A)</m> be the function which will find the cost <m>C</m>, in dollars, of painting a house of <m>A</m> square feet.</p>
+        <p>Let <m>f</m> be the function which will find the cost <m>C</m>, in dollars, of painting a house of <m>A</m> square feet.</p>
         <p>This function can be expressed by: <me>C = f(A)</me></p>
-        <ol>
+        <ul>
           <li><p>Choose the correct interpretation of the statement:  <me>f(1500) = 4600</me></p>
           <p><var name="$interpretF" form="popup" /></p></li>
           <li><p>Choose the correct interpretation of the statement:  <me>f^{-1}(3500) = 1000</me></p>
           <p><var name="$interpretFInverse" form="popup" /></p></li>
-        </ol>
+        </ul>
       </statement>
       <solution>
         <ol>
@@ -260,9 +239,6 @@
       </solution>
     </webwork>
   </exercise>
-
-
-
   <exercise>
     <webwork xml:id="webwork-inverse-notation-interpretation-salary">
       <setup>
@@ -284,7 +260,6 @@
             <member correct="yes">G^{-1}(90) = 1500</member>
           </set>
         </var>
-
         <pg-code>
           Context('Numeric');
           $interpretG=RadioButtons(
@@ -297,7 +272,6 @@
               0, labels => ["G^{-1}(1500) = 90","G^{-1}(90) = 1500"],
               displayLabels => 0
           );
-
         </pg-code>
       </setup>
       <statement>
@@ -316,12 +290,11 @@
           <li><p><em>"The salary is $2900 for working 160 hours per month"</em> means:</p>
           <p><var name="$interpretG" /></p></li>
           <li><p><em>"If you work 90 hours per month, your salary will be $1500"</em> means:</p>
-          <p><var name="$interpretGInverse" /></p></li>
+          <p><m>G^{-1}(1500) = 90</m></p></li>
         </ol>
       </solution>
     </webwork>
   </exercise>
-
   <paragraphs>
     <title>Finding the formula for <m>f^{-1}</m></title>
     <p>If a function is relatively simple, it isn't hard to find its inverse.</p>
@@ -332,7 +305,6 @@
     <p>Earlier in this activity, you discovered that: <me>f(f^{-1}(x)) = x</me></p>
     <p>In the next exercise, we will use this fact to find the formula for an inverse function.</p>
   </paragraphs>
-
   <exercise>
     <webwork xml:id="webwork-inverse-formula">
       <setup>
@@ -349,7 +321,7 @@
         <p>In this exercise, we will find the formula for the inverse of the function: <me>f(x) = <var name="$m" />x - <var name="$b" /></me></p>
         <p>For this function <m>f</m> and its inverse <m>f^{-1}</m>, it must be true that: <me>f(f^{-1}(x)) = x</me></p>
         <p>We can use this fact to actually solve for the function <m>f^{-1}</m>.</p>
-        <p>We will use function composition to simplify the following expression, just writing the expression <m>f^{-1}</m> as the input of the function <m>f</m>:
+        <p>We will use function composition to simplify the following equation, just writing the expression <m>f^{-1}(x)</m> as the input of the function <m>f</m>:
           <md><mrow>f(f^{-1}(x)) \amp= x</mrow>
           <mrow><var name="$m" />f^{-1}(x) - <var name="$b" /> \amp= x</mrow></md></p>
         <p>We are trying to find the function <m>f^{-1}(x)</m>. We can treat <m>f^{-1}(x)</m> as a variable in the last equation and solve for it by using algebra.</p>
@@ -363,13 +335,37 @@
       </solution>
     </webwork>
   </exercise>
-
+  <p>Use the technique from the last problem to find the formula for an inverse function.</p>
+  <exercise>
+    <webwork>
+      <setup>
+        <var name="$hInverse"><static>\frac{5x}{7}-3</static></var>
+        <pg-code>
+          $hInverse=Compute("5*x/7-3");
+        </pg-code>
+      </setup>
+      <statement>
+        <p>Let <me>h(x) = \frac{7(x+3)}{5}</me> and use the fact that <m>h(h^{-1}(x))=x</m> in order to solve for <m>h^{-1}(x)</m>.</p>
+        <p>Answer:  <m>h^{-1}(x) = </m><var name="$hInverse" width="15" /></p>
+      </statement>
+      <hint>
+        <p>Use function composition, substituting the expression <m>h^{-1}(x)</m> into the function <m>h</m>, in the equation <m>h(h^{-1}(x))=x</m>. Then solve for <m>h^{-1}(x)</m>.</p>
+      </hint>
+      <solution>
+        <p><md>
+          <mrow>h(h^{-1}(x)) \amp= x</mrow>
+          <mrow>\frac{7(h^{-1}(x)+3)}{5} \amp= x</mrow>
+          <mrow>h^{-1}(x)+3 \amp= \frac{5x}{7}</mrow>
+          <mrow>h^{-1}(x) \amp= \frac{5x}{7}-3</mrow></md>
+        </p>
+      </solution>
+    </webwork>
+  </exercise>
   <paragraphs>
     <title>The graph of <m>f^{-1}</m></title>
     <p>Since <m>f^{-1}</m> is the reverse process of <m>f</m>, then the <em>inputs</em> and <em>outputs</em> have traded places.</p>
     <p>In the next exercise, you will explore the the relationship between the graphs of <m>y = f(x)</m> and <m>y = f^{-1}(x)</m>.</p>
   </paragraphs>
-
     <exercise>
       <webwork xml:id="webwork-inverse-graph">
         <setup>
@@ -394,7 +390,6 @@
               <member>\text{No}</member>
             </set>
           </var>
-
           <pg-code>
             $point1=PopUp(["?",'(0, 3)','(3, 0)'],'(3, 0)');
             $point2=PopUp(["?",'(-1, -2)','(-2, -1)'],'(-1, -2)');
@@ -427,9 +422,7 @@
         </solution>
       </webwork>
     </exercise>
-
     <p>You may not have noticed it, but there was a nice geometric relationship between the graphs of <m>f(x)</m> and <m>f^{-1}(x)</m>. See the next problem to explore this relationship.</p>
-
     <exercise>
       <webwork xml:id="webwork-inverse-graph-reflection">
         <setup>
@@ -462,16 +455,14 @@
         </solution>
       </webwork>
     </exercise>
-
     <paragraphs>
-      <title>Not all functions have an inverse</title>
+      <title xml:id="invertibility">Not all functions have an inverse</title>
       <p>Remember an important characteristic of any function: <blockquote>Each input goes to only one output.</blockquote></p>
-      <p>For example, if <m>f</m> is a function, then it would be impossible for both <m>f(4) = 7</m> <em>and</em><m>f(4) = 10</m>. The input <m>4</m> cannot correspond to two different output values.</p>
-      <p>Thinking about the graph, this means that the graph of <m>y = f(x)</m> must pass the <term>vertical line test</term>, which says that a vertical line may only intersect the graph of a function at most once. If it intersected the graph <em>twice</em>, that would mean there was some input value for which the function gave two different output values &#8212; impossible for a function.</p>
+      <p>For example, if <m>f</m> is a function, then it would be <em>impossible</em> for both <m>f(4) = 7</m> <em>and</em> <m>f(4) = 10</m>. The input <m>4</m> cannot correspond to two different output values.</p>
+      <p>Thinking about the graph, this means that the graph of <m>y = f(x)</m> must pass the <term>vertical line test</term>, which says that a vertical line may only intersect the graph of a function at most once. If a vertical line intersected the graph of <m>f(x)</m> <em>twice</em>, that would mean there was some input value for which <m>f</m> gave <em>two</em> different output values &#8212; impossible for a function!</p>
       <p>Now, an <term>inverse</term> function must also actually <em>be</em> a function. It, too, must pass the vertical line test. Each input value for the inverse must correspond to only one output value.</p>
-      <p>But what would cause this condition to fail? What would be true about the original function <m>f</m> in order for the inverse to <em>not</em> be a function?</p>
+      <p>But what would cause this condition to fail for the inverse? Could we tell from the original function <m>f</m> whether the inverse was a function or not?</p>
     </paragraphs>
-
     <exercise>
       <webwork xml:id="webwork-inverse-not-a-function">
         <setup>
@@ -520,6 +511,13 @@
           <var name="$f[3]">
             <static>31</static>
           </var>
+          <var name="$why">
+            <set>
+              <member>\text{?}</member>
+              <member>f\text{ should never have that output}</member>
+              <member correct="yes">f\text{ had that output twice}</member>
+            </set>
+          </var>
           <pg-code>
             $a=random(1,6,1);
             $h=random(1,6,1);
@@ -527,6 +525,9 @@
             @diff=map{$_+1}NchooseK(6,3);
             @x=($a-$diff[0],$a-$diff[1],$a+$diff[2],$a+$diff[0]);
             @f=map{$a*($_-$h)**2-$k}@x;
+            $why=PopUp(
+            ["?","f should never have that output","f had that output twice"],"f had that output twice"
+            );
           </pg-code>
         </setup>
         <statement>
@@ -535,36 +536,33 @@
             <tabular top="major" halign="center">
                   <col halign="left" />
                   <col />
-
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m>f(x)</m></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[0]" /></m></cell>
                     <cell><var name="$f[0]" /></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[1]" /></m></cell>
                     <cell><var name="$f[1]" /></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[2]" /></m></cell>
                     <cell><var name="$f[2]" /></cell>
                   </row>
-
                   <row>
                     <cell><m><var name="$x[3]" /></m></cell>
                     <cell><var name="$f[3]" /></cell>
                   </row>
             </tabular>
           </table>
-          <p>Why is the inverse not a function? There is an output value that is causing the inverse <m>f^{-1}</m> to <em>not</em> be a function.</p>
+          <p>There is an output value of <m>f</m> that is causing the inverse <m>f^{-1}</m> to <em>not</em> be a function.</p>
           <p>Which output value is the problem?</p>
           <p><var name="$f[0]" width="10" /></p>
+          <p>How is that output value of <m>f</m> causing the inverse to not be a function?</p>
+          <p><var name="$why" form="popup" /></p>
         </statement>
         <hint>
           <p>For <m>f^{-1}</m>, you must read the table 'backward', using the <m>f(x)</m> column as the inputs for <m>f^{-1}</m>.</p>
@@ -681,15 +679,15 @@
           <p>If a function is invertible, then you should be able to read the table backward as a function. Why can you <em>not</em> do this with the table for <m>g</m></p>
         </hint>
         <solution>
-          <p>A function is invertible if <var name="$inv" />.</p>
-          <p>A function is non-invertible if <var name="$non" />.</p>
+          <p>A function is invertible if:  <var name="$inv" />.</p>
+          <p>A function is non-invertible if:  <var name="$non" />.</p>
         </solution>
       </webwork>
     </exercise>
 
-<p>This has implications for the graph of a function <m>f</m>. Given a graph of a function, we should be able to quickly decide if it is invertible or non-invertible.</p>
+<p>This has implications for the graph of a function <m>f</m>. Given a graph of <m>y = f(x)</m>, we should be able to quickly decide if it is invertible or non-invertible.</p>
 <todo>Need to make non-invertible graph in the next exercise</todo>
-<!--
+
 <exercise>
   <webwork xml:id="webwork-horizontal-line-test">
     <setup>
@@ -697,38 +695,35 @@
         <set>
           <member>\text{?}</member>
           <member>\text{A horizontal line only intersects the graph at one point.}</member>
-          <member correct="yes">\text{A horizontal line intersects the graph at more than one point.}</member>
+          <member correct="yes">\text{A horizontal line may intersect the graph at more than one point.}</member>
         </set>
       </var>
       <var name="$inv">
         <set>
           <member>\text{?}</member>
           <member correct="yes">\text{A horizontal line only intersects the graph at one point.}</member>
-          <member>\text{A horizontal line intersects the graph at more than one point.}</member>
+          <member>\text{A horizontal line may intersect the graph at more than one point.}</member>
         </set>
       </var>
       <pg-code>
-        $non=RadioButtons(
-        ['?','A horizontal line only intersects the graph at one point.','A horizontal line intersects the graph at more than one point.'],2,
-        labels => ["?","Horizontal line one intersection","Horizontal line multiple intersections"],
-        displayLabels => 0
+        $non=PopUp(
+        ['?','A horizontal line never intersects the graph more than once.','A horizontal line may intersect the graph more than once.'],"A horizontal line may intersect the graph more than once."
         );
-        $inv=RadioButtons(
-        ['?','A horizontal line only intersects the graph at one point.','A horizontal line intersects the graph at more than one point.'],1,
-        labels => ["?","Horizontal line one intersection","Horizontal line multiple intersections"],
-        displayLabels => 0
+        $inv=PopUp(
+        ['?','A horizontal line never intersects the graph more than once.','A horizontal line may intersect the graph more than once.'],"A horizontal line never intersects the graph more than once."
         );
       </pg-code>
     </setup>
     <statement>
-      <p>The graphs of two functions, <m>y = f(x)</m> and <m>y = g(x)</m>, are shown. The function <m>f</m> is invertible, and the function <m>g</m> is non-invertible.</p>
-      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/baHXJZNh/width/432/height/373/border/888888" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-
-      <p>You can click a checkbox to graph either a vertical line or a horizontal line. If that line intersects the graph of the function <m>f</m> or <m>g</m>, the point of intersection will be shown.</p>
+      <p>The graph of a non-invertible function <m>f</m> is shown below.</p>
+      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/baHXJZNh/width/432/height/373/border/888888" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+      <p>Also shown is a horizontal line which you can click and drag to different heights. If that line intersects the graph of the function <m>f</m>, the point(s) of intersection will be shown.</p>
+      <p>Next, the graph of an invertible function <m>g</m> is shown.</p>
+      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/sfMbwrsn/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
       <p>According to these graphs, what is true about the graph of an <term>invertible</term> function?</p>
-      <p><var name="$inv" form="buttons" /></p>
+      <p><var name="$inv" form="popup" /></p>
       <p>According to these graphs, what is true about the graph of a <term>non-invertible</term> function?</p>
-      <p><var name="$non" form="buttons" /></p>
+      <p><var name="$non" form="popup" /></p>
     </statement>
     <hint>
 
@@ -738,5 +733,7 @@
     </solution>
   </webwork>
 </exercise>
--->
+<p>In the last exercise, you saw that a function is invertible if no horizontal lines cross its graph more than once.</p>
+<p>This is commonly refered to as the <term>horizontal line test</term>:
+<blockquote>A function <m>f</m> is invertible if and only if no horizontal line intersects <m>y = f(x)</m> more than once.</blockquote></p>
 </section>
