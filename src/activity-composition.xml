@@ -96,7 +96,7 @@
           <p>by writing <m>r(7)</m> as the input for the area function.</p>
           <p>Since the input of the area function is <m>r</m>, and <m>r</m> itself is a function of <m>t</m>, we can rewrite the area as a function of just <m>t</m> by substituting the formula for <m>r(t)</m> into the area function as the input.</p>
           <p>This is called <em>function composition</em>, when we put the output of one function in as the input to another function.</p>
-          <p>Now, use the functions above to do this. Substitute the formula for <m>r(t)</m> into the function for <m>A(r)</m>.</p>
+          <p>Now, use the functions above to do this. Substitute the expression for <m>r(t)</m> into the function for <m>A(r)</m>, and then evaluate the function <m>A</m> with <m>r(t)</m> as the input.</p>
           <p>Area <m> = A(r(t)) = A \big(</m><var name="$radiusForm" width="15" /><m>\big) = </m><var name="$areaComposed" width="20" />.</p>
           <p>Note: Your answers should both have the variable <m>t</m>, but they should not contain the letters <m>r</m> or <m>A</m>.</p>
         </statement>
@@ -119,10 +119,11 @@
 
     <p>In <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>, you studied transformations of a function. There, you took a function <m>f(x)</m> and shifted its graph left or right by adding a number to the input of the function. For instance, <m>f(x – 3)</m> represented shifting the graph <m>y = f(x)</m> to the right by <m>3</m> units.</p>
     <p>However, this may also be thought of as the <term>composition</term> of two functions:  <m>f(x)</m> and <m>g(x) = x - 3</m></p>
-    <p>Thought of as a composition, this transformation occurs by substituting the function <m>g(x) = x - 3</m> into the function <m>f(x)</m>:</p>
+    <p>As a composition, this transformation occurs by substituting the function <m>g(x) = x - 3</m> into the function <m>f(x)</m>:</p>
     <p><md><mrow>f(x - 3) = f(g(x))</mrow></md></p>
-    <p>So, you have already been using function <term>composition</term>. When we write <m>f(g(x))</m>, we read it as "<em><m>f</m> of <m>g</m> of <m>x</m></em>".</p>
+    <p>So, we have already been using function composition, though we have waited until now to give it that name.</p>
     <p>When you compose functions together, the output from one function becomes the input for the other. In the example above, we would first use a value of <m>x</m> in the <em>inside</em> function <m>g(x) = x - 3</m> to get an ouput. Then, we would take that output and use it as the input for the function <m>f(x)</m>.</p>
+    <p>When we write <m>f(g(x))</m>, we read it as "<em><m>f</m> of <m>g</m> of <m>x</m></em>".</p>
     <p>In the next exercise, you will see an animation of composing two functions.</p>
     <exercise>
       <webwork>
@@ -140,12 +141,12 @@
           <p>Below, you will compose <m>f(g(x))</m> where <m>g(x) = 3x</m> and <m>f(x) = x^2 - x</m>.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vZUDWFjJ/width/425/height/420/border/888888" width="425px" height="420px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Type an input value <m>x</m> into the text box, and press "Enter".</p>
-          <p>Then use the slider below to show what happens to your input <m>x</m>.</p>
+          <p>Then use the slider to show what happens to your input <m>x</m>.</p>
           <p><ol>
             <li><p>What is <m>g(<var name="$input" />)</m>?</p>
-            <p>Answer:  <m>g(<var name="$input" />) = </m><var name="$g" width="10" /></p></li>
+            <p>Answer:  <var name="$g" width="10" /></p></li>
             <li><p>What is <m>f\big(g\big(<var name="$input" />\big)\big)</m>?</p>
-            <p>Answer:  <m>f\big(g\big(<var name="$input" />\big)\big) = </m><var name="$fofg" width="10" /></p></li>
+            <p>Answer:  <var name="$fofg" width="10" /></p></li>
           </ol></p>
         </statement>
         <solution>
@@ -186,9 +187,9 @@
                   \amp g(<var name="$x[3]" />)\amp= <var name="$g[1]" /></mrow></md></p>
           <ul>
             <li><p>What is <m>f(g(<var name="$x[3]" />))</m>?</p>
-            <p><m>f(g(<var name="$x[3]" />))</m> = <var name="$f[1]" width="15" /></p></li>
+            <p>Answer:  <var name="$f[1]" width="15" /></p></li>
             <li><p>What is <m>g(f(<var name="$x[0]" />))</m>?</p>
-            <p><m>g(f(<var name="$x[0]" />))</m> = <var name="$g[0]" width="15" /></p></li>
+            <p>Answer:  <var name="$g[0]" width="15" /></p></li>
           </ul>
         </statement>
         <hint>
