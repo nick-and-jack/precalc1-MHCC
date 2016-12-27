@@ -15,16 +15,22 @@
 
     <title>Composition of Functions and Inverses of Functions</title>
 
-    <introduction>
-        <objectives xml:id="outcomes-composition-and-inverse">
-            <title>Student Learning Outcomes</title>
-            <ul>
-                <li><p>Define composite functions and combinations of functions and apply and interpret these in appropriate situations.</p></li>
-                <li><p>Evaluate, apply, and interpret function notation, including the notation for inverse functions and composition of functions.</p></li>
-                <li><p>Demonstrate the inverse relationship between an exponential function and a logarithmic function (with the same base).</p></li>
-            </ul>
-        </objectives>
+    <objectives xml:id="outcomes-composition-and-inverse">
+        <title>Student Learning Outcomes</title>
+        <ul>
+            <li>
+              <p>Define composite functions and combinations of functions and apply and interpret these in appropriate situations.</p>
+            </li>
+            <li>
+              <p>Evaluate, apply, and interpret function notation, including the notation for inverse functions and composition of functions.</p>
+            </li>
+            <li>
+              <p>Demonstrate the inverse relationship between an exponential function and a logarithmic function (with the same base).</p>
+            </li>
+        </ul>
+    </objectives>
 
+    <introduction>
         <list>
             <title>Video Lectures</title>
             <!-- If we can get these videos up onto YouTube, much easier to embed -->
@@ -39,743 +45,886 @@
                 </li>
             </dl>
         </list>
-
     </introduction>
 
     <xi:include href="./activity-composition.xml" />
     <xi:include href="./activity-inverse.xml" />
 
-    <conclusion>
+    <section>
+      <title>Gist of Composition and Inverses of Functions</title>
       <subsection>
         <title>Summary of Composition</title>
 
         <p>The <term>composition</term> of functions is all about using the <em>output</em> of one function as the <em>input</em> for another.</p>
+
         <p>The notation we will use for composing two functions is <me>f(g(x))</me> which we read as "<m>f</m> of <m>g</m> of <m>x</m>".</p>
+
         <p>Working from the inside-out, this means that the function <m>g</m> is used first to get an output, and then that output is used as the <em>input</em> for the function <m>f</m>.</p>
 
         <exercise xml:id="exercise-composition-numbers">
           <statement>
             <p>Suppose <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>. Compute each of the following compositions:</p>
-            <p><ul>
-              <li><p><m>f(g(5))</m></p></li>
-              <li><p><m>g(f(5))</m></p></li>
-            </ul></p>
+            <p><ol label="a" cols="2">
+              <li>
+                <p><m>f(g(5))</m></p>
+              </li>
+              <li>
+                <p><m>g(f(5))</m></p>
+              </li>
+            </ol></p>
           </statement>
-          <hint><p>Remember to work inside the parentheses first.</p></hint>
+
+          <hint>
+            <p>Remember to work inside the parentheses first.</p>
+          </hint>
+
           <answer>
-            <p>We must first work inside the parentheses to find the value of <m>g(5)</m>, and then use that value as the input for <m>f</m>.<md>
-            <mrow>f(g(5)) \amp= f(5^2 + 5)</mrow>
-            <mrow>\amp= f(30)</mrow>
-            <mrow>\amp= 3\cdot30 + 4</mrow>
-            <mrow>\amp= 94</mrow></md></p>
-          </answer>
-          <answer>
-            <p>We must first work inside the parentheses to find the value of <m>f(5)</m>, and then use that value as the input for <m>g</m>.<md>
-            <mrow>g(f(5)) \amp= g(3\cdot5 + 4)</mrow>
-            <mrow>\amp= g(19)</mrow>
-            <mrow>\amp= 19^2 + 19</mrow>
-            <mrow>\amp= 380</mrow></md></p>
+            <p><ol label="a">
+              <li>
+                <p>We can first work inside the parentheses to find the value of <m>g(5)</m>, and then use that value as the input for <m>f</m>.<md>
+                  <mrow>f(g(5)) \amp= f\mathopen{}\left(5^2 + 5\right)\mathclose{}</mrow>
+                  <mrow>\amp= f(30)</mrow>
+                  <mrow>\amp= 3\cdot30 + 4</mrow>
+                  <mrow>\amp= 94</mrow>
+                </md></p>
+              </li>
+              <li>
+                <p>We can first work inside the parentheses to find the value of <m>f(5)</m>, and then use that value as the input for <m>g</m>.<md>
+                  <mrow>g(f(5)) \amp= g(3\cdot5 + 4)</mrow>
+                  <mrow>\amp= g(19)</mrow>
+                  <mrow>\amp= 19^2 + 19</mrow>
+                  <mrow>\amp= 380</mrow>
+                </md></p>
+              </li>
+            </ol></p>
           </answer>
         </exercise>
 
         <p>If we use function composition with a numerical input, we will get a numerical answer. However, if we just use <m>x</m> as the input and compose functions, the result will be an expression involving <m>x</m>, which is a brand new function representing the composition.</p>
+
         <p>This new function is called a <term>composite</term> function.</p>
 
         <exercise xml:id="exercise-composition-formulas">
           <statement>
             <p>Again, let <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>. This time, find the composite functions by using <m>x</m> as the input.</p>
-            <p><ul>
-              <li><m>f(g(x))</m></li>
-              <li><m>g(f(x))</m></li>
-            </ul></p>
+            <p><ol label="a" cols="2">
+              <li>
+                <m>f(g(x))</m>
+              </li>
+              <li>
+                <m>g(f(x))</m>
+              </li>
+            </ol></p>
           </statement>
-          <hint><p>Remember to simplify the expression inside the parentheses first.</p></hint>
+
+          <hint>
+            <p>Remember to simplify the expression inside the parentheses first.</p>
+          </hint>
+
           <answer>
-            <p>We must first substitute the expression for <m>g(x)</m> inside the parentheses, and then use that expression as the input for <m>f</m>.<md>
-            <mrow>f(g(x)) \amp= f(x^2 + x)</mrow>
-            <mrow>\amp= 3(x^2 + x) + 4</mrow>
-            <mrow>\amp= 3x^2 + 3x + 4</mrow></md></p>
-          </answer>
-          <answer>
-            <p>We must first substitute the expression for <m>f(x)</m> inside the parentheses, and then use that expression as the input for <m>g</m>.<md>
-            <mrow>g(f(x)) \amp= g(3x + 4)</mrow>
-            <mrow>\amp= (3x + 4)^2 + (3x + 4)</mrow>
-            <mrow>\amp= 9x^2 + 24x + 16 + 3x + 4</mrow>
-            <mrow>\amp= 9x^2 + 27x + 20</mrow></md></p>
+            <p><ol label="a">
+              <li>
+                <p>We can first substitute the expression for <m>g(x)</m> inside the parentheses, and then use that expression as the input for <m>f</m>.<md>
+                  <mrow>f(g(x)) \amp= f\mathopen{}\left(x^2 + x\right)\mathclose{}</mrow>
+                  <mrow>\amp= 3\left(x^2 + x\right) + 4</mrow>
+                  <mrow>\amp= 3x^2 + 3x + 4</mrow>
+                </md></p>
+              </li>
+              <li>
+                <p>We can first substitute the expression for <m>f(x)</m> inside the parentheses, and then use that expression as the input for <m>g</m>.<md>
+                  <mrow>g(f(x)) \amp= g(3x + 4)</mrow>
+                  <mrow>\amp= (3x + 4)^2 + (3x + 4)</mrow>
+                  <mrow>\amp= 9x^2 + 24x + 16 + 3x + 4</mrow>
+                  <mrow>\amp= 9x^2 + 27x + 20</mrow>
+                </md></p>
+              </li>
+            </ol></p>
           </answer>
         </exercise>
 
-          <p>Notice something important about the composite formula you found for <m>g(f(x))</m> in example <xref ref="exercise-composition-formulas" /> above: Using <m>x</m> as the input, you found that <m>g(f(x)) = 9x^2 + 27x + 20</m>. Evaluating this new formula at the input <m>x = 5</m> gives: <md>
+        <p>Notice something important about the composite formula you found for <m>g(f(x))</m> in <xref ref="exercise-composition-formulas" >Example</xref>: Using <m>x</m> as the input, you found that <m>g(f(x)) = 9x^2 + 27x + 20</m>. Evaluating this new formula at the input <m>x = 5</m> gives:<md>
           <mrow>9(5)^2 + 27(5) + 20 \amp= 9\cdot25 + 27\cdot5 + 20</mrow>
           <mrow>\amp= 225 + 135 + 20</mrow>
-          <mrow>\amp= 380</mrow></md></p>
-          <p>This is <em>exactly</em> the same result you got when you evaluated <m>g(f(5))</m> in example <xref ref="exercise-composition-numbers" />.</p>
-          <p>The formula <m>g(f(x)) = 9x^2 + 27x + 20</m> is really a new, single function that represents the composition <m>f(g(x))</m>. Once you've found this formula, you could quickly evaluate many numerical compositions, such as <m>g(f(7))</m> or <m>g(f(-3.6))</m>, without having to think about <m>g</m> and <m>f</m> separately.</p>
-          <p>Turning two or more functions into one function by composition is really a common idea <mdash /> think about any complex machine, such as an automobile. Many internal processes depend on each other, and you may think of the following simplifications:</p>
-          <p><ul>
-            <li><p>Applying pressure to the accelerator pedal allows air into the fuel system.</p></li>
-            <li><p>The air in the system is monitored, and fuel is added to the system accordingly.</p></li>
-            <li><p>Spark plugs ignite the fuel mixture.</p></li>
-            <li>Etc.</li>
-          </ul></p>
-          <p>Now, few people would look at a car and see it as a composition of its dozens of connected systems and processes. We just simplify this by assigning a single word to refer to this complex composite function: "car"</p>
-          <p>If everything is working properly, from the driver's perspective, there is just one input <mdash /> depressing the accelerator <mdash /> that sets everything else in motion.</p>
-          <p>This is true for any composition of functions in mathematics. Even if we have something complicated like <me>f(g(h(x)))</me> there is just one input value, <m>x</m>, that is needed in order to evaluate.</p>
-          <p>The next example uses function composition in the context of a patient taking blood pressure medicine.</p>
-          <example xml:id="example-composition-blood-pressure">
-            <p>Let <m>C</m> represent the concentration, measured in mg/kg, of a blood pressure regulating drug in a patient's bloodstream as a function of time <m>t</m>, measured in hours. As time goes on, the concentration of the drug in the bloodstream decreases as the body metabolizes and/or excretes it.</p>
-            <p>At the same time, the drug is meant to help lower the patient's blood pressure <m>P</m>, measured in mm Hg. So, as the drug leaves the patient's bloodstream, the blood pressure increases.</p>
-            <p>Therefore, <m>P</m> depends on <m>C</m>, and <m>C</m> depends on <m>t</m>.</p>
-            <p>There is a function which represents how <m>C</m> depends on <m>t</m>. We will call this function <m>f</m>, and write: <me>C = f(t)</me></p>
+          <mrow>\amp= 380</mrow>
+        </md></p>
 
-            <p>There is another function which represents how <m>P</m> depends on <m>C</m>. We will call this function <m>g</m>, and write: <me>P = g(C)</me></p>
-            <p>So, we would first use <m>f(t)</m> to find the concentration <m>C</m> of the drug in the bloodstream, and then use that concentration as the input for the function <m>g(C)</m> in order to find the patient's blood pressure <m>P</m>.</p>
-            <p>In function notation, this would look like:<md>
-              <mrow>P \amp= g(C)</mrow>
-              <mrow>\amp=g(f(t))</mrow></md></p>
-            <p>That last expression, <m>g(f(t))</m>, is a <term>composite function</term>, and it shows that the blood pressure is really a function of <m>t</m>.</p>
-          </example>
-          <p>Continue example <xref ref="example-composition-blood-pressure" /> in the next exercise, evaluating the composition with a numerical input.</p>
-            <exercise>
-              <webwork xml:id="heart-rate-evaluate">
-                <setup>
-                  <var name="$hours"><static>20</static></var>
-                  <var name="$conExpression"><static>f(20)</static></var>
-                  <var name="$bpOfConExpression"><static>g(f(20))</static></var>
-                  <var name="$conAtHours"><static>5*exp(-0.058*20)</static></var>
-                  <var name="$bpAtHours"><static>-12.5*(20-1)+160</static></var>
-                  <pg-code>
-                    Context('Numeric');
-                    $hours = random(15,20,1);
-                    $conAtHours=Compute("5*2.718282**(-0.058*$hours)");
-                    $bpAtHours=Compute("-12.5*$conAtHours+172.5");
-                  </pg-code>
-                </setup>
-                <statement>
-                  <p>The blood pressure drug <em>lisinopril</em> works best when it is consumed at an initial concentration of <m>5</m> mg/kg, and its concentration decreases exponentially, with a half-life of 12 hours.</p>
-                  <p>Therefore, the concentration can be modeled by the function <me>C = f(t) = 5e^{-0.058t}</me> where <m>t</m> represents the number of hours after it was consumed.</p>
-                  <p>Suppose that a patient with hypertension is admitted with blood pressure at 160 mm Hg. Administering the drug at a concentration of 5 mg/kg reduces their blood pressure to 110 mm Hg. As the drug's concentration decreases over time, their blood pressure increases linearly, returning to 160 mm Hg when the concentration drops to 1 mg/kg.</p>
-                  <p>Therefore, the expected blood pressure can be modeled by the function:<me>P = g(C) = -12.5C + 172.5</me></p>
-                  <p><ul>
-                    <li><p>What is the concentration of the drug after <var name="$hours" /> hours?</p>
-                    <p><m>C = f(<var name="$hours" />) = </m><var name="$conAtHours" width="15" /></p></li>
-                    <li><p>What is the expected blood pressure after <var name="$hours" /> hours?</p>
-                    <p><m>P = g(f(<var name="$hours" />)) = </m><var name="$bpAtHours" width="15" /></p></li>
-                  </ul></p>
-                </statement>
-                <solution>
-                  <p><ol>
-                    <li><p>The concentration after <var name="$hours" /> hours is <var name="$conAtHours" />, and its value is <var name="$conAtHours" /> mg/kg.</p></li>
-                    <li><p>The blood pressure after <var name="$hours" /> hours is <var name="$bpAtHours" />, and its value is <var name="$bpAtHours" /> mm Hg.</p></li>
-                  </ol></p>
-                </solution>
-              </webwork>
-            </exercise>
-            <p>Finally, we conclude example <xref ref="example-composition-blood-pressure" /> by finding the formula for a <term>composite function</term>.</p>
-            <exercise>
-              <webwork xml:id="heart-rate-formula">
-                <setup>
-                  <var name="$answer">
-                    <set>
-                      <member>\text{?}</member>
-                      <member correct="yes">-12.5*(5*exp{-0.058*t})+172.5</member>
-                      <member>5*e^{-0.058(-12.5C+172.5)}</member>
-                      <member>\left(5*e^{-0.058*t}\right)\left(-12.5C+172.5\right)</member>
-                    </set>
-                  </var>
-                  <pg-code>
-                    Context()->variables->are(t=>'Real', C=>'Real');
-                    $answer=RadioButtons(
-                    ["\(-12.5\left(5e^{-0.058t}\right)+172.5\)","\(5e^{-0.058(-12.5C+172.5)}\)","\(\left(-12.5C+172\right)\left(5e^{-0.058t}\right)\)"], 0, labels => ["option 1","option 2","option 3"],
-                    displayLabels => 0
-                    );
-                  </pg-code>
-                </setup>
-                <statement>
-                  <p>If we wanted to, we could have written the formula for <m>P</m> as a function of <m>t</m> by composing the two functions:<md>
-                    <mrow>C \amp= f(t) = 5e^{-0.058t}</mrow>
-                    <mrow>P \amp= g(C) = -12.5C + 172.5</mrow></md></p>
-                  <p>What is the correct formula for the composite function <m>g(f(t))</m>?</p>
-                  <p><var name="$answer" form="buttons" /></p>
-                </statement>
-                <hint>
-                  <p>Try writing the function <m>g(C)</m>, but use the formula for <m>f(t)</m> in the place of <m>C</m>.</p>
-                </hint>
-                <solution>
-                  <p>The correct formula for <m>g(f(t))</m> is: <me>-12.5\left(5e^{-0.058t}\right)+172.5</me></p>
-                  <p>Note that the second option <me>5e^{-0.058(-12.5C+172.5)}</me> is actually the composite function <m>f(g(C))</m>, which really makes no sense in context. The output for <m>g(C)</m> is the blood pressure, and that is not the correct input for the function <m>f(t)</m>.</p>
-                  <p>The last option <me>\left(-12.5C+172\right)\left(5e^{-0.058t}\right)</me> is actually the product <m>f(t)\cdot g(C)</m>, which again does not make sense in context. This would result in multiplying the outputs of <m>f(t)</m> and <m>g(C)</m>, so the output would be <em>concentration</em> multiplied by <em>blood pressure</em>.</p>
-                  <p>It is almost always helpful to think about the units when evaluating functions in an applied context.</p>
-                </solution>
-              </webwork>
-            </exercise>
-          <paragraphs>
-            <p>Even outside of a context, knowing how to write a formula for a composite function is an important skill.</p>
-            <p>In the next problem, practice writing formulas for <m>f(g(x))</m> and <m>g(f(x))</m>.</p>
-          </paragraphs>
-            <exercise>
-              <webwork xml:id="composition-formula-examples">
-                <setup>
-                  <var name="$GofF"><static>\left(\frac{x}{x+4}\right)^2</static></var>
-                  <var name="$F"><static>\frac{x}{x+4}</static></var>
-                  <var name="$G"><static>x^2</static></var>
-                  <var name="$FofG"><static>\frac{x^2}{x^2+4}</static></var>
-                  <pg-code>
-                    $GofF=Compute("(x/(x+4))^2");
-                    $F=Compute("x/(x+4)");
-                    $G=Compute("x^2");
-                    $FofG=Compute("x^2/(x^2+4)");
-                  </pg-code>
-                </setup>
-                <statement>
-                  <p>Let <m>f(x) = \frac{x}{x+4}</m> and <m>g(x) = x^2</m>.</p>
-                  <p><ol>
-                    <li><p>Write the formula for the composite function <m>g(f(x))</m>.</p>
-                    <p>Start by substituting the formula for <m>f(x)</m> into the function <m>g</m>:</p>
-                    <p><m>g(f(x)) = g\big(</m><var name="$F" width="15" /><m>\big)</m></p>
-                    <p>Then simplify the expression you wrote above, by using the formula for <m>f(x)</m> as the input in the formula for the function <m>g</m>.</p>
-                    <p><m>g(f(x)) = </m><var name="$GofF" width="15" /></p></li>
-                    <li><p>Write the formula for the composite function <m>f(g(x))</m>.</p>
-                    <p>Start by substituting the formula for <m>g(x)</m> into the function <m>f</m>:</p>
-                    <p><m>f(g(x)) = f\big(</m><var name="$G" width="15" /><m>\big)</m></p>
-                    <p>Then simplify the expression you wrote above, by using the formula for <m>g(x)</m> as the input in the formula for the function <m>f</m>.</p>
-                    <p><m>f(g(x)) = </m><var name="$FofG" width="15" /></p></li>
-                  </ol></p>
-                </statement>
-                <solution>
-                  <p><ol>
-                    <li><p>The formula for <m>g(f(x))</m> is:<md>
+        <p>This is <em>exactly</em> the same result you got when you evaluated <m>g(f(5))</m> in <xref ref="exercise-composition-numbers">Example</xref>.</p>
+
+        <p>The formula <m>g(f(x)) = 9x^2 + 27x + 20</m> is really a new, single function that represents the composition <m>f(g(x))</m>. Once you've found this formula, you could quickly evaluate many numerical compositions, such as <m>g(f(7))</m> or <m>g(f(-3.6))</m>, without having to think about <m>g</m> and <m>f</m> separately.</p>
+
+        <p>Turning two or more functions into one function by composition is really a common idea <mdash /> think about any complex machine, such as an automobile. Many internal processes depend on each other, and you may think of the following simplifications:</p>
+
+        <p><ul>
+          <li>
+            <p>Applying pressure to the accelerator pedal allows air into the fuel system.</p>
+          </li>
+          <li>
+            <p>The air in the system is monitored, and fuel is added to the system accordingly.</p>
+          </li>
+          <li>
+            <p>Spark plugs ignite the fuel mixture.</p>
+          </li>
+          <li>
+            <p>Etc.</p>
+          </li>
+        </ul></p>
+
+        <p>Now, few people would look at a car and see it as a composition of its dozens of connected systems and processes. We just simplify this by assigning a single word to refer to this complex composite function: <q>car</q>.</p>
+
+        <p>If everything is working properly, from the driver's perspective, there is just one input <mdash /> depressing the accelerator <mdash /> that sets everything else in motion.</p>
+
+        <p>This is true for any composition of functions in mathematics. Even if we have something complicated like <me>f(g(h(x)))</me> there is just one input value, <m>x</m>, that is needed in order to evaluate.</p>
+
+        <p>The next example uses function composition in the context of a patient taking blood pressure medicine.</p>
+
+        <example xml:id="example-composition-blood-pressure">
+          <p>Let <m>C</m> represent the concentration, measured in <quantity><unit prefix="milli" base="gram" /><per prefix="kilo" base="gram" /></quantity>, of a blood pressure regulating drug in a patient's bloodstream as a function of time <m>t</m>, measured in hours. As time goes on, the concentration of the drug in the bloodstream decreases as the body metabolizes and/or excretes it.</p>
+
+          <p>At the same time, the drug is meant to help lower the patient's blood pressure <m>P</m>, measured in <quantity><unit prefix="milli" base="meter" /></quantity> Hg. So, as the drug leaves the patient's bloodstream, the blood pressure increases.</p>
+
+          <p>Therefore, <m>P</m> depends on <m>C</m>, and <m>C</m> depends on <m>t</m>.</p>
+
+          <p>There is a function which represents how <m>C</m> depends on <m>t</m>. We will call this function <m>f</m>, and write: <me>C = f(t)</me></p>
+
+          <p>There is another function which represents how <m>P</m> depends on <m>C</m>. We will call this function <m>g</m>, and write: <me>P = g(C)</me></p>
+
+          <p>So, we would first use <m>f(t)</m> to find the concentration <m>C</m> of the drug in the bloodstream, and then use that concentration as the input for the function <m>g(C)</m> in order to find the patient's blood pressure <m>P</m>.</p>
+
+          <p>In function notation, this would look like:<md>
+            <mrow>P \amp= g(C)</mrow>
+            <mrow>\amp=g(f(t))</mrow></md></p>
+          <p>That last expression, <m>g(f(t))</m>, is a <term>composite function</term>, and it shows that the blood pressure is really a function of <m>t</m>.</p>
+
+        </example>
+
+        <p>Continue <xref ref="example-composition-blood-pressure">Example</xref> in the next exercise, evaluating the composition with a numerical input.</p>
+
+        <exercise>
+          <webwork xml:id="heart-rate-evaluate">
+            <setup>
+              <var name="$hours"><static>20</static></var>
+              <var name="$conExpression"><static>f(20)</static></var>
+              <var name="$bpOfConExpression"><static>g(f(20))</static></var>
+              <var name="$conAtHours"><static>5\cdot \exp(-0.058\cdot20)</static></var>
+              <var name="$bpAtHours"><static>-12.5\cdot(20-1)+160</static></var>
+              <pg-code>
+                Context('Numeric');
+                $hours = random(15,20,1);
+                $conAtHours=Compute("5*2.718282**(-0.058*$hours)");
+                $bpAtHours=Compute("-12.5*$conAtHours+172.5");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>The blood pressure drug <em>lisinopril</em> works best when it is consumed at an initial concentration of <quantity><mag>5</mag><unit prefix="milli" base="gram" /><per prefix="kilo" base="gram" /></quantity>, and its concentration decreases exponentially, with a half-life of <m>12</m> hours.</p>
+
+              <p>Therefore, the concentration can be modeled by the function <me>C = f(t) = 5e^{-0.058t}</me> where <m>t</m> represents the number of hours after it was consumed.</p>
+
+              <p>Suppose that a patient with hypertension is admitted with blood pressure at <quantity><mag>160</mag><unit prefix="milli" base="meter" /></quantity> Hg. Administering the drug at a concentration of <quantity><mag>5</mag><unit prefix="milli" base="gram" /><per prefix="kilo" base="gram" /></quantity> reduces their blood pressure to <quantity><mag>110</mag><unit prefix="milli" base="meter" /></quantity> Hg. As the drug's concentration decreases over time, their blood pressure increases linearly, returning to <quantity><mag>160</mag><unit prefix="milli" base="meter" /></quantity> Hg when the concentration drops to <quantity><mag>1</mag><unit prefix="milli" base="gram" /><per prefix="kilo" base="gram" /></quantity>.</p>
+
+              <p>Therefore, the expected blood pressure can be modeled by the function:<me>P = g(C) = -12.5C + 172.5</me></p>
+
+              <p><ol label="a">
+                <li>
+                  <p>What is the concentration of the drug after <m><var name="$hours" /></m> hours?</p>
+                  <p><m>C = f(<var name="$hours" />) = </m><var name="$conAtHours" width="15" /></p>
+                </li>
+                <li>
+                  <p>What is the expected blood pressure after <m><var name="$hours" /></m> hours?</p>
+                  <p><m>P = g(f(<var name="$hours" />)) = </m><var name="$bpAtHours" width="15" /></p>
+                </li>
+              </ol></p>
+            </statement>
+
+            <solution>
+              <p><ol label="a">
+                <li><p>The concentration after <m><var name="$hours" /></m> hours is <m><var name="$conAtHours" /></m>, and its value is <m><var name="$conAtHours" /></m> <quantity><unit prefix="milli" base="gram" /><per prefix="kilo" base="gram" /></quantity>.</p></li>
+                <li><p>The blood pressure after <m><var name="$hours" /></m> hours is <m><var name="$bpAtHours" /></m>, and its value is <m><var name="$bpAtHours" /></m> <quantity><unit prefix="milli" base="meter" /></quantity> Hg.</p></li>
+              </ol></p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <p>Finally, we conclude <xref ref="example-composition-blood-pressure">Example</xref> by finding the formula for a <term>composite function</term>.</p>
+
+        <exercise>
+          <webwork xml:id="heart-rate-formula">
+            <setup>
+              <var name="$answer">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">-12.5\cdot(5\cdotexp{-0.058\cdot t})+172.5</member>
+                  <member>5\cdot e^{-0.058(-12.5C+172.5)}</member>
+                  <member>\left(5\cdot e^{-0.058\cdot t}\right)\left(-12.5C+172.5\right)</member>
+                </set>
+              </var>
+              <pg-code>
+                Context()->variables->are(t=>'Real', C=>'Real');
+                $answer=RadioButtons(
+                  ["\(-12.5\left(5e^{-0.058t}\right)+172.5\)",
+                   "\(5e^{-0.058(-12.5C+172.5)}\)",
+                   "\(\left(-12.5C+172\right)\left(5e^{-0.058t}\right)\)"],0);
+              </pg-code>
+            </setup>
+            <statement>
+              <p>If we wanted to, we could have written the formula for <m>P</m> as a function of <m>t</m> by composing the two functions:<md>
+                <mrow>C \amp= f(t) = 5e^{-0.058t}</mrow>
+                <mrow>P \amp= g(C) = -12.5C + 172.5</mrow></md></p>
+              <p>What is the correct formula for the composite function <m>g(f(t))</m>?</p>
+              <p><var name="$answer" form="buttons" /></p>
+            </statement>
+            <hint>
+              <p>Try writing the function <m>g(C)</m>, but use the formula for <m>f(t)</m> in the place of <m>C</m>.</p>
+            </hint>
+            <solution>
+              <p>The correct formula for <m>g(f(t))</m> is: <me>-12.5\left(5e^{-0.058t}\right)+172.5\text{.}</me></p>
+              <p>Note that the second option <me>5e^{-0.058(-12.5C+172.5)}</me> is actually the composite function <m>f(g(C))</m>, which really makes no sense in context. The output for <m>g(C)</m> is the blood pressure, and that is not the correct input for the function <m>f(t)</m>.</p>
+              <p>The last option <me>\left(-12.5C+172\right)\left(5e^{-0.058t}\right)</me> is actually the product <m>f(t)\cdot g(C)</m>, which again does not make sense in context. This would result in multiplying the outputs of <m>f(t)</m> and <m>g(C)</m>, so the output would be <em>concentration</em> multiplied by <em>blood pressure</em>.</p>
+              <p>It is almost always helpful to think about the units when evaluating functions in an applied context.</p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <p>Even outside of a context, knowing how to write a formula for a composite function is an important skill.</p>
+
+        <p>In the next problem, practice writing formulas for <m>f(g(x))</m> and <m>g(f(x))</m>.</p>
+
+        <exercise>
+          <webwork xml:id="composition-formula-examples">
+            <setup>
+              <var name="$GofF"><static>\left(\frac{x}{x+4}\right)^2</static></var>
+              <var name="$F"><static>\frac{x}{x+4}</static></var>
+              <var name="$G"><static>x^2</static></var>
+              <var name="$FofG"><static>\frac{x^2}{x^2+4}</static></var>
+              <pg-code>
+                $GofF=Compute("(x/(x+4))^2");
+                $F=Compute("x/(x+4)");
+                $G=Compute("x^2");
+                $FofG=Compute("x^2/(x^2+4)");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>Let <m>f(x) = \frac{x}{x+4}</m> and <m>g(x) = x^2</m>.</p>
+              <p><ol label="a">
+                <li>
+                  <p>Write the formula for the composite function <m>g(f(x))</m>.</p>
+                  <p>Start by substituting the formula for <m>f(x)</m> into the function <m>g</m>:</p>
+                  <p><m>g(f(x)) = g\big(</m><var name="$F" width="15" /><m>\big)</m></p>
+                  <p>Then simplify the expression you wrote above, by using the formula for <m>f(x)</m> as the input in the formula for the function <m>g</m>.</p>
+                  <p><m>g(f(x)) = </m><var name="$GofF" width="15" /></p>
+                </li>
+                <li>
+                  <p>Write the formula for the composite function <m>f(g(x))</m>.</p>
+                  <p>Start by substituting the formula for <m>g(x)</m> into the function <m>f</m>:</p>
+                  <p><m>f(g(x)) = f\big(</m><var name="$G" width="15" /><m>\big)</m></p>
+                  <p>Then simplify the expression you wrote above, by using the formula for <m>g(x)</m> as the input in the formula for the function <m>f</m>.</p>
+                  <p><m>f(g(x)) = </m><var name="$FofG" width="15" /></p>
+                </li>
+              </ol></p>
+            </statement>
+            <solution>
+              <p><ol label="a">
+                <li>
+                  <p>The formula for <m>g(f(x))</m> is:<md>
                     <mrow>g(f(x)) \amp= g\left(\frac{x}{x+4}\right)</mrow>
-                    <mrow>\amp= \left(\frac{x}{x+4}\right)^2</mrow></md></p></li>
-                    <li><p>The formula for <m>f(g(x))</m> is:<md>
+                    <mrow>\amp= \left(\frac{x}{x+4}\right)^2</mrow>
+                  </md></p>
+                </li>
+                <li>
+                  <p>The formula for <m>f(g(x))</m> is:<md>
                     <mrow>f(g(x)) \amp= f\left(x^2\right)</mrow>
-                    <mrow>\amp= \frac{x^2}{x^2+4}</mrow></md></p></li>
-                  </ol></p>
-                </solution>
-              </webwork>
-            </exercise>
+                    <mrow>\amp= \frac{x^2}{x^2+4}</mrow>
+                  </md></p>
+                </li>
+              </ol></p>
+            </solution>
+          </webwork>
+        </exercise>
       </subsection>
+
       <subsection>
         <title>Summary of Inverses</title>
+
         <p>Two functions are called <term>inverses</term> if they <em>undo</em> each other. If one function has a certain process, then the other function will have the reverse process.</p>
-        <p>This means that if <m>f</m> and <m>g</m> are inverses, then both of the following will be true: <md>
-        <mrow>f(g(x)) \amp= x</mrow>
-        <mrow>g(f(x)) \amp= x</mrow></md></p>
+
+        <p>This means that if <m>f</m> and <m>g</m> are inverses, then both of the following will be true:<md>
+          <mrow>f(g(x)) \amp= x</mrow>
+          <mrow>g(f(x)) \amp= x</mrow>
+        </md></p>
+
         <p>This is because whatever the inside function did with the input <m>x</m>, the outside function <em>undid</em> that action.</p>
+
         <p>If a function <m>f</m> has an inverse function <m>f^{-1}</m>, then we say that the function <m>f</m> is <term>invertible</term>.</p>
+
         <example>
-          <p>The functions <m>f(x) = 2^x + 1</m> and <m>g(x) = log_{2}(x - 1)</m> are inverses.</p>
-          <p>In order to show this, we would use function composition to show that both of the conditions above are true.
-          <md><mrow>f(g(x)) \amp= f(log_{2}(x - 1))</mrow>
-            <mrow>\amp= 2^{\displaystyle{log_{2}(x - 1)}} + 1</mrow>
+          <p>The functions <m>f(x) = 2^x + 1</m> and <m>g(x) = \log_{2}(x - 1)</m> are inverses.</p>
+          <p>In order to show this, we would use function composition to show that both of the conditions above are true.<md>
+            <mrow>f(g(x)) \amp= f(\log_{2}(x - 1))</mrow>
+            <mrow>\amp= 2^{\log_{2}(x - 1)} + 1</mrow>
             <mrow>\amp= (x - 1) + 1</mrow>
-            <mrow>\amp= x</mrow></md></p>
+            <mrow>\amp= x</mrow>
+          </md></p>
           <p>This shows that <m>f(g(x)) = x</m>. Similarly, we have:<md>
             <mrow>g(f(x)) \amp= g(2^x+1)</mrow>
-            <mrow>\amp= log_{2}\left((2^x+1)-1\right)</mrow>
-            <mrow>\amp= log_{2}\left(2^x\right)</mrow>
-            <mrow>\amp= x</mrow></md></p>
+            <mrow>\amp= \log_{2}\left((2^x+1)-1\right)</mrow>
+            <mrow>\amp= \log_{2}\left(2^x\right)</mrow>
+            <mrow>\amp= x</mrow>
+          </md></p>
           <p>This shows that <m>g(f(x)) = x</m>.</p>
         </example>
+
         <paragraphs>
           <title>Notation</title>
-          <p>If <m>h(x)</m> is a function, then its inverse is called <m>h^{-1}</m>. This notation does <em xml:id="note-about-inverse-exponent">not</em> mean that <m>h</m> is being raised to a negative exponent <mdash /> rather, it is just special notation for an inverse function.</p>
+          <p>If <m>h(x)</m> is a function, then its inverse is called <m>h^{-1}</m>. This notation does <em>not</em> mean that <m>h</m> is being raised to a negative exponent <mdash /> rather, it is just special notation for an inverse function.</p>
+
           <p>We use this special notation either when we want to talk about the inverse of some function, or when we want to find the formula for the inverse.</p>
         </paragraphs>
+
         <paragraphs>
           <title>Interpreting the notation</title>
           <p>If <m>f</m> takes an input <m>a</m> and gives an output <m>b</m>, then its inverse <m>f^{-1}</m> would take <m>b</m> as the input and give the output <m>a</m>.</p>
+
           <p>Since a function and its inverse represent reverse processes, the input and output are similarly reversed.</p>
         </paragraphs>
-        <p>In the next two exercises, practice interpreting the meaning of an inverse function.</p>
-<todo>Fix numbering in next exercise's solution.</todo>
-          <exercise>
-            <webwork>
-              <setup>
-                <var name="$m"><static>33</static></var>
-                <var name="$x[0]"><static>10</static></var>
-                <var name="$x[1]"><static>15</static></var>
-                <var name="$y[0]"><static>780</static></var>
-                <var name="$y[1]"><static>945</static></var>
-                <var name="$year"><static>10</static></var>
-                <var name="$interpret">
-                  <set>
-                    <member>\text{?}</member>
-                    <member correct="yes">\text{The population was 780 in the year 2010.}</member>
-                    <member>\text{In the year 780, the population was 10.}</member>
-                  </set>
-                </var>
-                <var name="$inverseInput">
-                  <set>
-                    <member>\text{?}</member>
-                    <member>\text{Years}</member>
-                    <member correct="yes">\text{People}</member>
-                  </set>
-                </var>
-                <var name="$inverseOutput">
-                  <set>
-                    <member>\text{?}</member>
-                    <member correct="yes">\text{Years}</member>
-                    <member>\text{People}</member>
-                  </set>
-                </var>
-                <pg-code>
-                  $m=random(25,35,1);
-                  @x=map{$_+2}NchooseK(14,2);
-                  @y=map{450+$_*$m}@x;
-                  $inverseInput=PopUp(
-                  ["?","Years","People"],"People");
-                  $inverseOutput=PopUp(
-                  ["?","Years","People"],"Years");
-                  $year=2000+$x[0];
-                  $interpret=PopUp(
-                  ["?","The population was $y[0] in the year $year","In the year $y[0], the population was $x[0]"],"The population was $y[0] in the year $year"
-                  );
-                </pg-code>
-              </setup>
-              <statement>
-                <p>Let <m>P(t)</m> be the function which calculates the population of a small town, where <m>t</m> is the number of years after 2000.</p>
-                <p>Since <m>P</m> takes <em>years</em> as input and gives <em>people</em> as ouput, we should also be able to describe the meaning of the inverse, <m>P^{-1}</m>.</p>
-                <p><ul>
-                  <li><p>The function <m>P^{-1}</m> takes <var name="$inverseInput" form="popup" /> as its input, and gives an output of <var name="$inverseOutput" form="popup" /></p>
-                    <p>Suppose <m>P(<var name="$x[0]" />) = <var name="$y[0]" /></m> and <m>P(<var name="$x[1]" />) = <var name="$y[1]" /></m></p></li>
-                  <li><p>What is <m>P^{-1}(<var name="$y[1]" />)</m>?</p>
-                    <p>Answer:  <var name="$x[1]" width="10" /></p></li>
-                  <li><p>Which statement is the same as <m>P^{-1}(<var name="$y[0]" />) = <var name="$x[0]" /></m></p>
-                    <p>Answer:  <var name="$interpret" form="popup" /></p></li>
-                </ul></p>
-              </statement>
-              <hint>
-                <p>A function and its inverse do opposite things: The input and ouput for one function become the output and input for the inverse function.</p>
-              </hint>
-              <solution>
-                <p><ol>
-                  <li><p>For <m>P^{-1}</m>, the inputs must be <var name="$inverseInput" />, because those were the outputs from the function <m>P</m></p></li>
-                  <li><p>Since <m>P(<var name="$x[1]" />) = <var name="$y[1]" /></m>, then we swap the input and output and see that: <me>P^{-1}(<var name="$y[1]" />) = <var name="$x[1]" /></me></p></li>
-                  <li><p>The statement <m>P^{-1}(<var name="$y[0]" />) = <var name="$x[0]" /></m> means:</p>
-                  <p><var name="$interpret" /></p></li>
-                </ol></p>
-              </solution>
-            </webwork>
-          </exercise>
-<todo>In the next problem, the solution link shows an answer of B1, instead of giving the correct statements.</todo>
-          <exercise>
-            <webwork xml:id="webwork-windchill">
-              <setup>
-                <var name="$rand[0]"><static>0</static></var>
-                <var name="$rand[1]"><static>1</static></var>
-                <var name="$x[0]"><static>0</static></var>
-                <var name="$x[1]"><static>10</static></var>
-                <var name="$x[2]"><static>20</static></var>
-                <var name="$x[3]"><static>30</static></var>
-                <var name="$x[4]"><static>40</static></var>
-                <var name="$x[5]"><static>50</static></var>
-                <var name="$x[6]"><static>60</static></var>
-                <var name="$f[0]"><static>40</static></var>
-                <var name="$f[1]"><static>34</static></var>
-                <var name="$f[2]"><static>30</static></var>
-                <var name="$f[3]"><static>28</static></var>
-                <var name="$f[4]"><static>27</static></var>
-                <var name="$f[5]"><static>26</static></var>
-                <var name="$f[6]"><static>25</static></var>
-                <var name="$statements">
-                  <set>
-                    <member>W(28) = 30\text{ and }W^{-1}(50) = 26</member>
-                    <member correct="yes">W(30) = 28\text{ and }W^{-1}(26) = 50</member>
-                  </set>
-                </var>
-                  <pg-code>
-                    @rand=map{$_+1}NchooseK(6,4);
-                    @x=(0,10,20,30,40,50,60);
-                    @f=(40,34,30,28,27,26,25);
-                    $statements=RadioButtons(
-                    ["\(W($f[$rand[0]])=$x[$rand[0]]\) and \(W^{-1}($x[$rand[1]])=$f[$rand[1]]\)", "\(W($x[$rand[2]])=$f[$rand[2]]\) and \(W^{-1}($f[$rand[3]])=$x[$rand[3]]\)"],
-                    1, labels => ["option 1","option 2"],
-                    displayLabels => 0
-                    );
-                </pg-code>
-              </setup>
-              <statement>
-                <p>On a cold day, when the wind blows, it <em>feels</em> colder than it actually is outside. The temperature you feel is called the <em>wind chill</em> temperature.</p>
-                <p>The table below shows values of the function <m>W(S)</m>, which calculates the wind chill temperature when it is <m>40^{\circ}F</m> outside and the wind is blowing at <m>S</m> miles per hour.</p>
-                <table>
-                  <tabular top="major" halign="center">
-                        <col halign="left" />
-                        <col />
-                        <row bottom="medium">
-                          <cell><m>S</m></cell>
-                          <cell><m>W(S)</m></cell>
-                        </row>
-                        <row>
-                          <cell><m><var name="$x[0]" /></m></cell>
-                          <cell><var name="$f[0]" /></cell>
-                        </row>
-                        <row>
-                          <cell><m><var name="$x[1]" /></m></cell>
-                          <cell><var name="$f[1]" /></cell>
-                        </row>
-                        <row>
-                          <cell><m><var name="$x[2]" /></m></cell>
-                          <cell><var name="$f[2]" /></cell>
-                        </row>
-                        <row>
-                          <cell><m><var name="$x[3]" /></m></cell>
-                          <cell><var name="$f[3]" /></cell>
-                        </row>
-                        <row>
-                          <cell><m><var name="$x[4]" /></m></cell>
-                          <cell><var name="$f[4]" /></cell>
-                        </row>
-                        <row>
-                          <cell><m><var name="$x[5]" /></m></cell>
-                          <cell><var name="$f[5]" /></cell>
-                        </row>
-                        <row>
-                          <cell><m><var name="$x[6]" /></m></cell>
-                          <cell><var name="$f[6]" /></cell>
-                        </row>
-                  </tabular>
-                </table>
-                <p>Which pair of statements is true?</p>
-                <p><var name="$statements" form="buttons" /></p>
-              </statement>
-              <solution>
-                <p>The true statements are: <m><var name="$statements" /></m></p>
-              </solution>
-            </webwork>
-          </exercise>
-          <paragraphs><title>Graphing the Inverse</title>
-            <p>We can describe the inverse of a function <m>f</m> in different ways, depending on what information we need.</p>
-            <p>For instance, we can certainly take a table of values from <m>f(x)</m>, switch the inputs and outputs, and we will have a table of values for <m>f^{-1}(x)</m>:</p>
-          </paragraphs>
-            <sidebyside widths="48% 48%">
-            <table>
-              <tabular top="major" halign="center">
-                  <col halign="left" />
-                  <col />
-                  <row bottom="medium">
-                    <cell><m>x</m></cell>
-                    <cell><m>f(x)</m></cell>
-                  </row>
-                  <row>
-                    <cell>1</cell>
-                    <cell>12</cell>
-                  </row>
-                  <row>
-                    <cell>3</cell>
-                    <cell>10</cell>
-                  </row>
-                  <row>
-                    <cell>4</cell>
-                    <cell>8</cell>
-                  </row>
-                  <row>
-                    <cell>6</cell>
-                    <cell>1</cell>
-                  </row>
-                  <row>
-                    <cell>10</cell>
-                    <cell>-4</cell>
-                  </row>
-              </tabular>
-            </table>
-            <table>
-              <tabular top="major" halign="center">
-                  <col halign="left" />
-                  <col />
-                  <row bottom="medium">
-                    <cell><m>x</m></cell>
-                    <cell><m>f^{-1}(x)</m></cell>
-                  </row>
-                  <row>
-                    <cell>12</cell>
-                    <cell>1</cell>
-                  </row>
-                  <row>
-                    <cell>10</cell>
-                    <cell>3</cell>
-                  </row>
-                  <row>
-                    <cell>8</cell>
-                    <cell>4</cell>
-                  </row>
-                  <row>
-                    <cell>1</cell>
-                    <cell>6</cell>
-                  </row>
-                  <row>
-                    <cell>-4</cell>
-                    <cell>10</cell>
-                  </row>
-              </tabular>
-            </table>
-          </sidebyside>
-          <p>From a graphical standpoint, taking a set of points from the table of <m>y = f(x)</m>, and switching the <m>x</m>- and <m>y</m>-coordinates, will give us points on the graph of <m>y = f^{-1}(x)</m>.</p>
-          <exercise>
-            <webwork>
-              <setup>
-                <var name="$didItGraph">
-                  <set>
-                    <member>\text{?}</member>
-                    <member>\text{No}</member>
-                    <member correct="yes">\text{Yes}</member>
-                  </set>
-                </var>
-                <var name="$reflection">
-                  <set>
-                    <member>\text{?}</member>
-                    <member correct="yes">\text{line y = x}</member>
-                    <member>\text{x-axis}</member>
-                    <member>\text{y-axis}</member>
-                  </set>
-                </var>
-                <pg-code>
-                  $didItGraph=PopUp(
-                  ["?","No","Yes"],"Yes"
-                  );
-                  $reflection=PopUp(
-                  ["?","line y = x","x-axis","y-axis"],"line y = x"
-                  );
-                </pg-code>
-              </setup>
-              <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ssqjr6pZ/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>Three points are shown on <m>y = f(x)</m>. For each point, switch the <m>x</m>- and <m>y</m>-coordinates, and graph those points by moving the three free points.</p>
-                <p>If the points are correctly placed, the graph of <m>y = f^{-1}(x)</m> will appear, together with the dashed line <m>y = x</m>.</p>
-                <p><ul>
-                  <li><p>Did you correctly place the points?</p>
-                  <p>Answer:  <var name="$didItGraph" form="popup" /></p></li>
-                  <li><p>How are the graphs of <m>y = f(x)</m> and <m>y = f^{-1}(x)</m> related?</p>
-                  <p>Answer:  They are reflections over the <var name="$reflection" form="popup" /></p></li>
-                </ul></p>
-              </statement>
-              <hint>
-                <p>The given points on <m>y = f(x)</m> are: <md>
-                <mrow>(-3, -4)</mrow>
-                <mrow>(0, -2)</mrow>
-                <mrow>(4, -1)</mrow></md></p>
-                <p>Swapping <m>x</m>- and <m>y</m>-coordinates gives: <md>
-                <mrow>(-4, -3)</mrow>
-                <mrow>(-2, 0)</mrow>
-                <mrow>(-1, 4)</mrow></md></p>
-                <p>Move the free points to these locations.</p>
-              </hint>
-              <solution>
-                <p>The graphs of a function and its inverse are reflections of each other, over the line <m>y = x</m>.</p>
-              </solution>
-            </webwork>
-          </exercise>
 
-          <p>If you have the graph of a function <m>y = f(x)</m>, you can sketch a graph of its inverse <m>y = f^{-1}(x)</m> by selecting points on <m>y = f(x)</m> and reflecting them over the line <m>y = x</m>. This is actually the effect of switching the <m>x</m>- and <m>y</m>-coordinates of a point: it reflects the point over the line <m>y = x</m>.</p>
-          <paragraphs><title>The Inverse Formula</title>
-            <p>If we have the formula for a function <m>f(x)</m>, we may want to use the formula for the inverse <m>f^{-1}(x)</m>.</p>
-            <p>But how can we find the formula?</p>
-          </paragraphs>
-          <example xml:id="example-inverse-balance-number">
+        <p>In the next two exercises, practice interpreting the meaning of an inverse function.</p>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="$m"><static>33</static></var>
+              <var name="$x[0]"><static>10</static></var>
+              <var name="$x[1]"><static>15</static></var>
+              <var name="$y[0]"><static>780</static></var>
+              <var name="$y[1]"><static>945</static></var>
+              <var name="$year"><static>10</static></var>
+              <var name="$interpret">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{The population was 780 in the year 2010.}</member>
+                  <member>\text{In the year 780, the population was 10.}</member>
+                </set>
+              </var>
+              <var name="$inverseInput">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{Years}</member>
+                  <member correct="yes">\text{People}</member>
+                </set>
+              </var>
+              <var name="$inverseOutput">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{Years}</member>
+                  <member>\text{People}</member>
+                </set>
+              </var>
+              <pg-code>
+                $m=random(25,35,1);
+                @x=map{$_+2}NchooseK(14,2);
+                @y=map{450+$_*$m}@x;
+                $inverseInput=PopUp(["?","Years","People"],"People");
+                $inverseOutput=PopUp(["?","Years","People"],"Years");
+                $year=2000+$x[0];
+                $interpret=PopUp(["?","The population was $y[0] in the year $year","In the year $y[0], the population was $x[0]"],"The population was $y[0] in the year $year");
+              </pg-code>
+            </setup>
             <statement>
-              <p>If you deposit &#36;<m>500</m> into a savings account that earns <m>3</m>&#37; interest per year, and you make no additional deposits or withdrawals, then your account balance can be found by the function <me>B(t) = 500\left(1.03\right)^t</me> where <m>t</m> represents the number of years after making the original deposit of &#36;<m>500</m>, and <m>B(t)</m> represents the balance in the account after <m>t</m> years.</p>
-              <p>For this function, the input is <em>years</em> and the output is <em>dollars</em>. You would use a number of years, say <m>12</m>, and <m>B(12)</m> would calculate how many dollars are in the account.</p>
-              <p>The inverse function <m>B^{-1}</m> would switch these, using <em>dollars</em> for the input and <em>years</em> for the output. Here, you would use an amount of money, say &#36;<m>925</m>, and <m>B^{-1}(925)</m> would calculate how many years it would take to have that much in the account.</p>
-              <p>In order to find the value of <m>B^{-1}(925)</m>, we could solve for <m>t</m> in the equation: <me>500*1.03^t = 925</me></p>
-              <p>Solve this equation to find the value of <m>B^{-1}(925)</m>.</p>
-            </statement>
-            <solution>
-              <p>Solving for <m>t</m>:<md>
-              <mrow>500\left(1.03\right)^t \amp= 925</mrow>
-              <mrow>1.03^t \amp= \frac{925}{500}</mrow>
-              <mrow>\ln\left(1.03^t\right) \amp= \ln\left(\frac{925}{500}\right)</mrow>
-              <mrow>t\cdot \ln\left(1.03\right) \amp= \ln\left(\frac{925}{500}\right)</mrow>
-              <mrow>t \amp= \frac{\ln\left(\frac{925}{500}\right)}{\ln\left(1.03\right)}</mrow>
-              <mrow>\amp\approx 20.81 \text{ years}</mrow></md></p>
-              <p>It would take about <m>20.81</m> years for the account to grow to &#36;<m>925</m>.</p>
-            </solution>
-          </example>
-          <example>
-            <statement>
-              <p>If you had to repeatedly answer questions like those in <xref ref="example-inverse-balance-number">Example</xref>, you would find yourself solving the same equation each time.</p>
-              <p>Instead, you could just find the formula for the inverse function <m>B^{-1}</m> and use it to directly calculate the number of years required.</p>
-              <p>To do this, use the fact that <m>B</m> and <m>B^{-1}</m> undo each other. In particular: <me>B(B^{-1}(x)) = x</me></p>
-              <p>Here, we treat <m>B^{-1}(x)</m> as the unknown, and solve for it, using the same algebraic steps as we used in <xref ref="example-inverse-balance-number">Example</xref>:<md>
-              <mrow>B(B^{-1}(x)) \amp= x</mrow>
-              <mrow>500\left(1.03\right)^{B^{-1}(x)} \amp= x</mrow>
-              <mrow>1.03^{B^{-1}(x)} \amp= \frac{x}{500}</mrow>
-              <mrow>\ln \left(1.03^{B^{-1}(x)}\right) \amp= \ln\left(\frac{x}{500}\right)</mrow>
-              <mrow>B^{-1}(x)\cdot \ln (1.03) \amp= \ln\left(\frac{x}{500}\right)</mrow>
-              <mrow>B^{-1}(x) \amp= \frac{\ln\left(\frac{x}{500}\right)}{\ln (1.03)}</mrow></md></p>
-              <p>Now, use this inverse function to determine how long it would take for there to be &#36;<m>1200</m> in the account.</p>
-            </statement>
-            <solution>
-              <p>The input for the inverse function is <em>dollars</em>, so we just evaluate:<md>
-              <mrow>B^{-1}(1200) \amp= \frac{\ln\left(\frac{1200}{500}\right)}{\ln (1.03)}</mrow>
-              <mrow>\amp\approx 29.62 \text{ years}</mrow></md></p>
-              <p>It would take about <m>29.62</m> years for the account to grow to &#36;<m>1200</m>.</p>
-            </solution>
-          </example>
-          <exercise>
-            <statement>
-              <p>For the function <m>g(x) = \frac{3}{5x+2}</m>, use the technique from the last example to find the formula for the inverse <m>g^{-1}(x)</m>.</p>
+              <p>Let <m>P(t)</m> be the function which calculates the population of a small town, where <m>t</m> is the number of years after 2000.</p>
+
+              <p>Since <m>P</m> takes <em>years</em> as input and gives <em>people</em> as ouput, we should also be able to describe the meaning of the inverse, <m>P^{-1}</m>.</p>
+
+              <p><ol label="a">
+                <li>
+                  <p>The function <m>P^{-1}</m> takes <var name="$inverseInput" form="popup" /> as its input, and gives an output of <var name="$inverseOutput" form="popup" /></p>
+                  <p>Suppose <m>P(<var name="$x[0]" />) = <var name="$y[0]" /></m> and <m>P(<var name="$x[1]" />) = <var name="$y[1]" /></m></p>
+                </li>
+                <li>
+                  <p>What is <m>P^{-1}(<var name="$y[1]" />)</m>?</p>
+                  <p>Answer:  <var name="$x[1]" width="10" /></p>
+                </li>
+                <li>
+                  <p>Which statement is the same as <m>P^{-1}(<var name="$y[0]" />) = <var name="$x[0]" /></m></p>
+                  <p>Answer:  <var name="$interpret" form="popup" /></p>
+                </li>
+              </ol></p>
             </statement>
             <hint>
-              <p>Use the fact that <me>g(g^{-1}(x))=x</me> to solve for <m>g^{-1}(x)</m>. Expanding this is the first step:<md>
-              <mrow>g(g^{-1}(x)) \amp= x</mrow>
-              <mrow>\frac{3}{5g^{-1}(x)+2} \amp= x</mrow></md></p>
-              <p>Now, solve this equation for <m>g^{-1}(x)</m>.</p>
+              <p>A function and its inverse do opposite things: The input and ouput for one function become the output and input for the inverse function.</p>
             </hint>
             <solution>
-              <p><md><mrow>g(g^{-1}(x)) \amp= x</mrow>
-              <mrow>\frac{3}{5g^{-1}(x)+2} \amp= x</mrow>
-              <mrow>3 \amp= \left(5g^{-1}(x)+2\right)x</mrow>
-              <mrow>\frac{3}{x} \amp= 5g^{-1}(x)+2</mrow>
-              <mrow>\frac{\frac{3}{x}-2}{5} \amp= g^{-1}(x)</mrow></md></p>
+              <p><ol label="a">
+                <li>
+                  <p>For <m>P^{-1}</m>, the inputs must be <var name="$inverseInput" />, because those were the outputs from the function <m>P</m>.</p>
+                </li>
+                <li>
+                  <p>Since <m>P(<var name="$x[1]" />) = <var name="$y[1]" /></m>, then we swap the input and output and see that <m>P^{-1}(<var name="$y[1]" />) = <var name="$x[1]" /></m>.</p>
+                </li>
+                <li>
+                  <p>The statement <m>P^{-1}(<var name="$y[0]" />) = <var name="$x[0]" /></m> means:</p>
+                  <p><var name="$interpret" /></p>
+                </li>
+              </ol></p>
             </solution>
-          </exercise>
-          <paragraphs><title>What makes a function invertible</title>
-            <p>Remember the defining characteristic of a function:</p>
-            <blockquote>For each input, there is only one output.</blockquote>
-            <p>Thinking about the graph, this means that there can be only <em>one</em> point with any given <m>x</m>-coordinate. That is, no two points on the graph of a function can be directly above or below each other.</p>
-            <p>Now, if an inverse <m>f^{-1}</m> is <em>really</em> a function, then it must also obey this rule. No two points on the graph of <m>y = f^{-1}(x)</m> can sit directly above or below each other.</p>
-            <p>So if <m>f^{-1}</m> is a function, this has an implication for the original function <m>f</m>.</p>
-            <p>To see this, remember that the graphs of a function and its inverse are reflections of each other over the line <m>y = x</m>. If no two points on the graph of an inverse function can sit <em>above</em> or <em>below</em> each other, then reflecting these points over <m>y = x</m> means that no two points on the graph of <m>f(x)</m> can sit directly <em>left</em> or <em>right</em> of each other.</p>
-          </paragraphs>
-          <p>Explore this in the following exercise.</p>
-          <exercise>
-            <webwork>
-              <setup>
-                <var name="$reason">
-                  <set>
-                    <member>\text{?}</member>
-                    <member>\text{A horizontal line would cross the graph of y=f(x) twice.}</member>
-                    <member>\text{A vertical line would cross the graph of the inverse twice.}</member>
-                    <member correct="yes">\text{All of the above.}</member>
-                  </set>
-                </var>
+          </webwork>
+        </exercise>
+
+<todo>In the next problem, the solution link shows an answer of B1, instead of giving the correct statements.</todo>
+        <exercise>
+          <webwork xml:id="webwork-windchill">
+            <setup>
+              <var name="$rand[0]"><static>0</static></var>
+              <var name="$rand[1]"><static>1</static></var>
+              <var name="$x[0]"><static>0</static></var>
+              <var name="$x[1]"><static>10</static></var>
+              <var name="$x[2]"><static>20</static></var>
+              <var name="$x[3]"><static>30</static></var>
+              <var name="$x[4]"><static>40</static></var>
+              <var name="$x[5]"><static>50</static></var>
+              <var name="$x[6]"><static>60</static></var>
+              <var name="$f[0]"><static>40</static></var>
+              <var name="$f[1]"><static>34</static></var>
+              <var name="$f[2]"><static>30</static></var>
+              <var name="$f[3]"><static>28</static></var>
+              <var name="$f[4]"><static>27</static></var>
+              <var name="$f[5]"><static>26</static></var>
+              <var name="$f[6]"><static>25</static></var>
+              <var name="$statements">
+                <set>
+                  <member>W(28) = 30\text{ and }W^{-1}(50) = 26</member>
+                  <member correct="yes">W(30) = 28\text{ and }W^{-1}(26) = 50</member>
+                </set>
+              </var>
                 <pg-code>
-                  $reason=PopUp(
-                  ["?","A horizontal line would cross the graph of y=f(x) twice.","A vertical line would cross the graph of the inverse twice.","All of the above."],"All of the above."
-                  );
-                </pg-code>
-              </setup>
-              <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/fTMWxxhS/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>The graph shows a function <m>y = f(x)</m>, together with two points on the graph that have the same <m>y</m>-values. Click the button to reflect the two points over the line <m>y = x</m>, showing where two points would be on the inverse.</p>
-                <p>Why is the function <m>f</m> <em>not</em> invertible?</p>
-                <p>Answer:  <var name="$reason" form="popup" /></p>
-              </statement>
-            </webwork>
-          </exercise>
-          <p>Graphically, we have these two rules:
-          <dl>
-            <title></title>
-            <li>
-              <title>Vertical Line Test</title>
-              <p>A vertical line may only intersect the graph of a function at most once. If some vertical line could intersect the graph more than once, then the graph is not a function.</p>
-            </li>
-            <li>
-              <title>Horizontal Line Test</title>
-              <p>If a function is invertible, then its graph may only intersect a horizontal line at most once. If a horizontal line could intersect the graph more than once, then the graph is not invertible.</p>
-            </li>
-          </dl></p>
-          <example>
-            <p>As an example of using the <em>Horizontal Line Test</em>, the function <m>f(x) = x^2</m> does <em>not</em> have an inverse function, since the horizontal line <m>y = 4</m> intersects the graph of <m>f(x)</m> twice, at the points <m>(2, 4)</m> and <m>(-2, 4)</m>. See <xref ref="figure-noninvertible-function">Figure</xref>.</p>
-            <p>Conversely, the function <m>g(x) = x^3</m> <em>does</em> have an inverse function, since no horizontal line can intersect the graph more than once. See <xref ref="figure-invertible-function">Figure</xref>.</p>
-            <sidebyside widths="48% 48%">
-              <figure xml:id="figure-noninvertible-function">
-                <caption><m>f(x) = x^2</m>: A non-invertible function</caption>
-                  <image>
-                      <latex-image-code>
-                      <![CDATA[\begin{tikzpicture}
-                                  \begin{axis}[]
-                                      \addplot+[domain=-2.5:2.5]{x^2};
-                                      \addplot[asymptote] coordinates {(-6,4) (6,4)};
-                                   \end{axis}
-                              \end{tikzpicture}
-                      ]]>
-                      </latex-image-code>
-                  </image>
-              </figure>
-              <figure xml:id="figure-invertible-function">
-                <caption><m>g(x) = x^3</m>: An invertible function</caption>
-                  <image>
-                      <latex-image-code>
-                      <![CDATA[\begin{tikzpicture}
-                                  \begin{axis}[]
-                                      \addplot+[domain=-2:2]{x^3};
-                                      \addplot[asymptote] coordinates {(-6,2) (6,2)};
-                                   \end{axis}
-                              \end{tikzpicture}
-                      ]]>
-                      </latex-image-code>
-                  </image>
-              </figure>
-            </sidebyside>
-          </example>
-          <paragraphs><title>Restricting the Domain</title>
-            <p>You may object to the notion that <m>f(x) = x^2</m> is non-invertible, because surely the function <m>g(x) = \sqrt{x}</m> performs the opposite action.</p>
-            <p>However, this is only true because we define <m>\sqrt{x}</m> so that it never gives negative outputs. [Check this on your calculator!]</p>
-            <p>For example, we have two inputs which give the same output for the function <m>f(x)=x^2</m>:<md>
-              <mrow>f(5) = 5^2 = 25</mrow>
-              <mrow>f(-5) = (-5)^2 = 25</mrow></md></p>
-            <p>Since an inverse function would reverse the input and the output, it would need to somehow use <m>25</m> as the input, and then output <em>both</em> <m>5</m> and <m>-5</m>.</p>
-            <p>But because <m>g(x) = \sqrt{x}</m> is a function, it can only give the single output <m>5</m>.</p>
-            <p>Therefore, when we use <m>g(x)=\sqrt{x}</m> as the inverse for <m>f(x)=x^2</m>, we have decided to use only part of the domain of <m>f</m> so that its inverse, <m>g</m>, is really a function. This is called <term>restricting the domain</term>.</p>
-          </paragraphs>
-<todo>Fix intervals so they include greater-than-or-equal symbols.</todo>
-          <exercise>
-            <webwork>
-              <setup>
-                <var name="$interval">
-                  <set>
-                    <member>\text{?}</member>
-                    <member correct="yes">x &gt; 0</member>
-                    <member>x &gt; -2</member>
-                  </set>
-                </var>
-                <pg-code>
-                  $interval=PopUp(
-                  ["?","x &gt; 0","x &gt; -2"],"x &gt; 0"
-                  );
-                </pg-code>
-              </setup>
-              <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jGC9Xk8r/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>The graph shows part of <m>f(x) = x^2</m> and its inverse function. The domain used for <m>f</m> is shown as an interval on the <m>x</m>-axis.</p>
-                <p><ul>
-                  <li><p>Make the interval larger by sliding the point to a negative value on the <m>x</m>-axis, and notice that the inverse is <em>no longer</em> a function for that domain. A vertical line would intersect the inverse twice, and a horizontal line would intersect <m>f(x)</m> twice.</p></li>
-                  <li><p>Now shrink the interval until the inverse <em>is</em> a function. What interval would make the inverse a function?</p>
-                  <p><var name="$interval" form="popup" /></p></li>
-                </ul></p>
-              </statement>
-              <solution>
-                <p>If we restrict the domain of <m>f(x) = x^2</m> to <m>x &gt; 0</m>, then it is invertible. The inverse function is <m>f^{-1}(x) = \sqrt{x}</m>.</p>
-              </solution>
-            </webwork>
-          </exercise>
-          <p>We <term>restrict</term> the domain of a function in order to make it <term>invertible</term>. We choose an interval for the input, so that the output never has repeated values <mdash /> this ensures that the inverse will pass the vertical line test.</p>
-          <exercise>
-            <statement><p>An important use of restricting the domain is in finding the inverse of a <em>periodic</em> function (one which repeats itself over-and-over). For example, consider the function <m>f</m> below.</p>
-            <figure>
-              <caption>A periodic function <m>f</m></caption>
-                <image>
-                    <latex-image-code>
-                    <![CDATA[\begin{tikzpicture}
-                                \begin{axis}[]
-                                    \addplot+[domain=-6:6, smooth]{4*sin(90*x)};
-                                 \end{axis}
-                            \end{tikzpicture}
-                    ]]>
-                    </latex-image-code>
-                </image>
-            </figure>
-            <p>How could we restrict the domain so this function is invertible?</p>
-            <p>Choose an interval for <m>x</m> so <m>f^{-1}</m> is a function.</p></statement>
-            <hint><p>There are several intervals which will work here. Remember that the function <m>f</m> cannot have repeated values on the interval you choose.</p>
-            <p>Also, remember that if the endpoints of your interval give the same outputs, then you can only include one of the endpoints in the interval.</p></hint>
-            <solution><p>Correct options include:<md>
-              <mrow>-1 \leqslant x \lt 1</mrow>
-              <mrow>-1 \lt x \leqslant 1</mrow>
-              <mrow>1 \leqslant x \lt 3</mrow></md></p>
+                  @rand=map{$_+1}NchooseK(6,4);
+                  @x=(0,10,20,30,40,50,60);
+                  @f=(40,34,30,28,27,26,25);
+                  $statements=RadioButtons(["\(W($f[$rand[0]])=$x[$rand[0]]\) and \(W^{-1}($x[$rand[1]])=$f[$rand[1]]\)", "\(W($x[$rand[2]])=$f[$rand[2]]\) and \(W^{-1}($f[$rand[3]])=$x[$rand[3]]\)"],1);
+              </pg-code>
+            </setup>
+            <statement>
+              <p>On a cold day, when the wind blows, it <em>feels</em> colder than it actually is outside. The temperature you feel is called the <em>wind chill</em> temperature.</p>
+
+              <p>The table below shows values of the function <m>W(S)</m>, which calculates the wind chill temperature when it is <quantity><mag>40</mag><unit base="degreeFahrenheit" /></quantity> outside and the wind is blowing at <m>S</m> miles per hour.</p>
+              <table>
+                <tabular top="major" halign="center">
+                      <col halign="left" />
+                      <col />
+                      <row bottom="medium">
+                        <cell><m>S</m></cell>
+                        <cell><m>W(S)</m></cell>
+                      </row>
+                      <row>
+                        <cell><m><var name="$x[0]" /></m></cell>
+                        <cell><m><var name="$f[0]" /></m></cell>
+                      </row>
+                      <row>
+                        <cell><m><var name="$x[1]" /></m></cell>
+                        <cell><m><var name="$f[1]" /></m></cell>
+                      </row>
+                      <row>
+                        <cell><m><var name="$x[2]" /></m></cell>
+                        <cell><m><var name="$f[2]" /></m></cell>
+                      </row>
+                      <row>
+                        <cell><m><var name="$x[3]" /></m></cell>
+                        <cell><m><var name="$f[3]" /></m></cell>
+                      </row>
+                      <row>
+                        <cell><m><var name="$x[4]" /></m></cell>
+                        <cell><m><var name="$f[4]" /></m></cell>
+                      </row>
+                      <row>
+                        <cell><m><var name="$x[5]" /></m></cell>
+                        <cell><m><var name="$f[5]" /></m></cell>
+                      </row>
+                      <row>
+                        <cell><m><var name="$x[6]" /></m></cell>
+                        <cell><m><var name="$f[6]" /></m></cell>
+                      </row>
+                </tabular>
+              </table>
+              <p>Which pair of statements is true?</p>
+              <p><var name="$statements" form="buttons" /></p>
+            </statement>
+            <solution>
+              <p>The true statements are: <m><var name="$statements" /></m></p>
             </solution>
-          </exercise>
-      </subsection>
-    </conclusion>
+          </webwork>
+        </exercise>
+
+        <paragraphs><title>Graphing the Inverse</title>
+          <p>We can describe the inverse of a function <m>f</m> in different ways, depending on what information we need.</p>
+          <p>For instance, we can certainly take a table of values from <m>f(x)</m>, switch the inputs and outputs, and we will have a table of values for <m>f^{-1}(x)</m>:</p>
+        </paragraphs>
+
+        <sidebyside widths="47% 47%">
+        <table>
+          <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <row bottom="medium">
+                <cell><m>x</m></cell>
+                <cell><m>f(x)</m></cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>12</m></cell>
+              </row>
+              <row>
+                <cell><m>3</m></cell>
+                <cell><m>10</m></cell>
+              </row>
+              <row>
+                <cell><m>4</m></cell>
+                <cell><m>8</m></cell>
+              </row>
+              <row>
+                <cell><m>6</m></cell>
+                <cell><m>1</m></cell>
+              </row>
+              <row>
+                <cell><m>10</m></cell>
+                <cell><m>-4</m></cell>
+              </row>
+          </tabular>
+        </table>
+        <table>
+          <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <row bottom="medium">
+                <cell><m>x</m></cell>
+                <cell><m>f^{-1}(x)</m></cell>
+              </row>
+              <row>
+                <cell><m>12</m></cell>
+                <cell><m>1</m></cell>
+              </row>
+              <row>
+                <cell><m>10</m></cell>
+                <cell><m>3</m></cell>
+              </row>
+              <row>
+                <cell><m>8</m></cell>
+                <cell><m>4</m></cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>6</m></cell>
+              </row>
+              <row>
+                <cell><m>-4</m></cell>
+                <cell><m>10</m></cell>
+              </row>
+          </tabular>
+        </table>
+      </sidebyside>
+
+      <p>From a graphical standpoint, taking a set of points from the table of <m>y = f(x)</m>, and switching the <m>x</m>- and <m>y</m>-coordinates, will give us points on the graph of <m>y = f^{-1}(x)</m>.</p>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$didItGraph">
+              <set>
+                <member>\text{?}</member>
+                <member>\text{No}</member>
+                <member correct="yes">\text{Yes}</member>
+              </set>
+            </var>
+            <var name="$reflection">
+              <set>
+                <member>\text{?}</member>
+                <member correct="yes">\text{line }y = x</member>
+                <member>x\text{-axis}</member>
+                <member>y\text{-axis}</member>
+              </set>
+            </var>
+            <pg-code>
+              $didItGraph=PopUp(["?","No","Yes"],2);
+              $reflection=PopUp(["?","line y = x","x-axis","y-axis"],1);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ssqjr6pZ/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+            <p>Three points are shown on <m>y = f(x)</m>. For each point, switch the <m>x</m>- and <m>y</m>-coordinates, and graph those points by moving the three free points.</p>
+
+            <p>If the points are correctly placed, the graph of <m>y = f^{-1}(x)</m> will appear, together with the dashed line <m>y = x</m>.</p>
+
+            <p><ul>
+              <li>
+                <p>Did you correctly place the points?</p>
+                <p>Answer:  <var name="$didItGraph" form="popup" /></p>
+              </li>
+              <li>
+                <p>How are the graphs of <m>y = f(x)</m> and <m>y = f^{-1}(x)</m> related?</p>
+                <p>Answer:  They are reflections over the <var name="$reflection" form="popup" /></p>
+              </li>
+            </ul></p>
+          </statement>
+          <hint>
+            <p>The given points on <m>y = f(x)</m> are:<md>
+              <mrow>(-3, -4)</mrow>
+              <mrow>(0, -2)</mrow>
+              <mrow>(4, -1)</mrow>
+            </md></p>
+            <p>Swapping <m>x</m>- and <m>y</m>-coordinates gives:<md>
+              <mrow>(-4, -3)</mrow>
+              <mrow>(-2, 0)</mrow>
+              <mrow>(-1, 4)</mrow>
+            </md></p>
+            <p>Move the free points to these locations.</p>
+          </hint>
+          <solution>
+            <p>The graphs of a function and its inverse are reflections of each other, over the line <m>y = x</m>.</p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>If you have the graph of a function <m>y = f(x)</m>, you can sketch a graph of its inverse <m>y = f^{-1}(x)</m> by selecting points on <m>y = f(x)</m> and reflecting them over the line <m>y = x</m>. This is actually the effect of switching the <m>x</m>- and <m>y</m>-coordinates of a point: it reflects the point over the line <m>y = x</m>.</p>
+
+      <paragraphs>
+        <title>The Inverse Formula</title>
+        <p>If we have the formula for a function <m>f(x)</m>, we may want to use the formula for the inverse <m>f^{-1}(x)</m>.</p>
+        <p>But how can we find the formula?</p>
+      </paragraphs>
+
+      <example xml:id="example-inverse-balance-number">
+        <statement>
+          <p>If you deposit <m>\$500</m> into a savings account that earns <m>3\%</m> interest per year, and you make no additional deposits or withdrawals, then your account balance can be found by the function <me>B(t) = 500(1.03)^t</me> where <m>t</m> represents the number of years after making the original deposit of <m>\$500</m>, and <m>B(t)</m> represents the balance in the account after <m>t</m> years.</p>
+
+          <p>For this function, the input is <em>years</em> and the output is <em>dollars</em>. You would use a number of years, say <m>12</m>, and <m>B(12)</m> would calculate how many dollars are in the account.</p>
+
+          <p>The inverse function <m>B^{-1}</m> would switch these, using <em>dollars</em> for the input and <em>years</em> for the output. Here, you would use an amount of money, say <m>\$925</m>, and <m>B^{-1}(925)</m> would calculate how many years it would take to have that much in the account.</p>
+
+          <p>In order to find the value of <m>B^{-1}(925)</m>, we could solve for <m>t</m> in the equation: <me>500\cdot1.03^t = 925</me></p>
+
+          <p>Solve this equation to find the value of <m>B^{-1}(925)</m>.</p>
+        </statement>
+
+        <solution>
+          <p>Solving for <m>t</m>:<md>
+            <mrow>500(1.03)^t \amp= 925</mrow>
+            <mrow>1.03^t \amp= \frac{925}{500}</mrow>
+            <mrow>\ln\mathopen{}\left(1.03^t\right)\mathclose{} \amp= \ln\mathopen{}\left(\frac{925}{500}\right)\mathclose{}</mrow>
+            <mrow>t\cdot \ln(1.03) \amp= \ln\mathopen{}\left(\frac{925}{500}\right)\mathclose{}</mrow>
+            <mrow>t \amp= \frac{\ln\mathopen{}\left(\frac{925}{500}\right)\mathclose{}}{\ln\left(1.03\right)}</mrow>
+            <mrow>\amp\approx 20.81 \text{ years}</mrow>
+          </md></p>
+          <p>It would take about <m>20.81</m> years for the account to grow to <m>\$925</m>.</p>
+        </solution>
+      </example>
+
+      <example>
+        <statement>
+          <p>If you had to repeatedly answer questions like those in <xref ref="example-inverse-balance-number">Example</xref>, you would find yourself solving the same equation each time.</p>
+
+          <p>Instead, you could just find the formula for the inverse function <m>B^{-1}</m> and use it to directly calculate the number of years required.</p>
+
+          <p>To do this, use the fact that <m>B</m> and <m>B^{-1}</m> undo each other. In particular: <me>B\mathopen{}\left(B^{-1}(x)\right)\mathclose{} = x</me></p>
+
+          <p>Here, we treat <m>B^{-1}(x)</m> as the unknown, and solve for it, using the same algebraic steps as we used in <xref ref="example-inverse-balance-number">Example</xref>:<md>
+            <mrow>B\mathopen{}\left(B^{-1}(x)\right)\mathclose{} \amp= x</mrow>
+            <mrow>500(1.03)^{B^{-1}(x)} \amp= x</mrow>
+            <mrow>1.03^{B^{-1}(x)} \amp= \frac{x}{500}</mrow>
+            <mrow>\ln\mathopen{}\left(1.03^{B^{-1}(x)}\right)\mathclose{} \amp= \ln\mathopen{}\left(\frac{x}{500}\right)\mathclose{}</mrow>
+            <mrow>B^{-1}(x)\cdot \ln (1.03) \amp= \ln\mathopen{}\left(\frac{x}{500}\right)\mathclose{}</mrow>
+            <mrow>B^{-1}(x) \amp= \frac{\ln\mathopen{}\left(\frac{x}{500}\right)\mathclose{}}{\ln (1.03)}</mrow>
+          </md></p>
+          <p>Now, use this inverse function to determine how long it would take for there to be <m>\$1200</m> in the account.</p>
+        </statement>
+
+        <solution>
+          <p>The input for the inverse function is <em>dollars</em>, so we just evaluate:<md>
+          <mrow>B^{-1}(1200) \amp= \frac{\ln\mathopen{}\left(\frac{1200}{500}\right)\mathclose{}}{\ln (1.03)}</mrow>
+          <mrow>\amp\approx 29.62 \text{ years}</mrow></md></p>
+          <p>It would take about <m>29.62</m> years for the account to grow to <m>\$1200</m>.</p>
+        </solution>
+      </example>
+
+      <exercise>
+        <statement>
+          <p>For the function <m>g(x) = \frac{3}{5x+2}</m>, use the technique from the last example to find the formula for the inverse <m>g^{-1}(x)</m>.</p>
+        </statement>
+        <hint>
+          <p>Use the fact that <me>g\mathopen{}\left(g^{-1}(x)\right)\mathclose{}=x</me> to solve for <m>g^{-1}(x)</m>. Expanding this is the first step:<md>
+            <mrow>g\mathopen{}\left(g^{-1}(x)\right)\mathclose{} \amp= x</mrow>
+            <mrow>\frac{3}{5g^{-1}(x)+2} \amp= x</mrow>
+          </md></p>
+          <p>Now, solve this equation for <m>g^{-1}(x)</m>.</p>
+        </hint>
+        <solution>
+          <p><md>
+            <mrow>g\mathopen{}\left(g^{-1}(x)\right)\mathclose{} \amp= x</mrow>
+            <mrow>\frac{3}{5g^{-1}(x)+2} \amp= x</mrow>
+            <mrow>3 \amp= \left(5g^{-1}(x)+2\right)x</mrow>
+            <mrow>\frac{3}{x} \amp= 5g^{-1}(x)+2</mrow>
+            <mrow>\frac{\frac{3}{x}-2}{5} \amp= g^{-1}(x)</mrow>
+          </md></p>
+        </solution>
+      </exercise>
+
+      <paragraphs>
+        <title>What makes a function invertible</title>
+        <p>Remember the defining characteristic of a function:</p>
+        <blockquote><p>For each input, there is only one output.</p></blockquote>
+        <p>Thinking about the graph, this means that there can be only <em>one</em> point with any given <m>x</m>-coordinate. That is, no two points on the graph of a function can be directly above or below each other.</p>
+        <p>Now, if an inverse <m>f^{-1}</m> is <em>really</em> a function, then it must also obey this rule. No two points on the graph of <m>y = f^{-1}(x)</m> can sit directly above or below each other.</p>
+        <p>So if <m>f^{-1}</m> is a function, this has an implication for the original function <m>f</m>.</p>
+        <p>To see this, remember that the graphs of a function and its inverse are reflections of each other over the line <m>y = x</m>. If no two points on the graph of an inverse function can sit <em>above</em> or <em>below</em> each other, then reflecting these points over <m>y = x</m> means that no two points on the graph of <m>f(x)</m> can sit directly <em>left</em> or <em>right</em> of each other.</p>
+      </paragraphs>
+      <p>Explore this in the following exercise.</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$reason">
+              <set>
+                <member>\text{?}</member>
+                <member>\text{A horizontal line would cross the graph of }y=f(x)\text{ twice.}</member>
+                <member>\text{A vertical line would cross the graph of the inverse twice.}</member>
+                <member correct="yes">\text{All of the above.}</member>
+              </set>
+            </var>
+            <pg-code>
+              $reason=PopUp(["?","A horizontal line would cross the graph of y=f(x) twice.","A vertical line would cross the graph of the inverse twice.","All of the above."],3);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/fTMWxxhS/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>The graph shows a function <m>y = f(x)</m>, together with two points on the graph that have the same <m>y</m>-values. Click the button to reflect the two points over the line <m>y = x</m>, showing where two points would be on the inverse.</p>
+            <p>Why is the function <m>f</m> <em>not</em> invertible?</p>
+            <p>Answer:  <var name="$reason" form="popup" /></p>
+          </statement>
+        </webwork>
+      </exercise>
+
+      <p>Graphically, we have these two rules:<dl>
+        <li>
+          <title>Vertical Line Test</title>
+          <p>A vertical line may only intersect the graph of a function at most once. If some vertical line could intersect the graph more than once, then the graph is not a function.</p>
+        </li>
+        <li>
+          <title>Horizontal Line Test</title>
+          <p>If a function is invertible, then its graph may only intersect a horizontal line at most once. If a horizontal line could intersect the graph more than once, then the graph is not invertible.</p>
+        </li>
+      </dl></p>
+      <example>
+        <p>As an example of using the <em>Horizontal Line Test</em>, the function <m>f(x) = x^2</m> does <em>not</em> have an inverse function, since the horizontal line <m>y = 4</m> intersects the graph of <m>f(x)</m> twice, at the points <m>(2, 4)</m> and <m>(-2, 4)</m>. See <xref ref="figure-noninvertible-function">Figure</xref>.</p>
+
+        <p>Conversely, the function <m>g(x) = x^3</m> <em>does</em> have an inverse function, since no horizontal line can intersect the graph more than once. See <xref ref="figure-invertible-function">Figure</xref>.</p>
+        <sidebyside widths="47% 47%">
+          <figure xml:id="figure-noninvertible-function">
+            <caption><m>f(x) = x^2</m>: A non-invertible function</caption>
+            <image>
+              <latex-image-code>
+              <![CDATA[\begin{tikzpicture}
+                          \begin{axis}[]
+                              \addplot+[domain=-2.64:2.64]{x^2};
+                              \addplot[secantline] coordinates {(-6,4) (6,4)};
+                           \end{axis}
+                      \end{tikzpicture}
+              ]]>
+                </latex-image-code>
+            </image>
+          </figure>
+          <figure xml:id="figure-invertible-function">
+            <caption><m>g(x) = x^3</m>: An invertible function</caption>
+            <image>
+              <latex-image-code>
+              <![CDATA[\begin{tikzpicture}
+                          \begin{axis}[]
+                              \addplot+[domain=-1.9:1.9]{x^3};
+                              \addplot[secantline] coordinates {(-6,2) (6,2)};
+                           \end{axis}
+                      \end{tikzpicture}
+              ]]>
+              </latex-image-code>
+            </image>
+          </figure>
+        </sidebyside>
+      </example>
+
+      <paragraphs>
+        <title>Restricting the Domain</title>
+        <p>You may object to the notion that <m>f(x) = x^2</m> is non-invertible, because surely the function <m>g(x) = \sqrt{x}</m> performs the opposite action.</p>
+
+        <p>However, this is only true because we define <m>\sqrt{x}</m> so that it never gives negative outputs. [Check this on your calculator!]</p>
+
+        <p>For example, we have two inputs which give the same output for the function <m>f(x)=x^2</m>:<md>
+          <mrow>f(5) = 5^2 = 25</mrow>
+          <mrow>f(-5) = (-5)^2 = 25</mrow>
+        </md></p>
+
+        <p>Since an inverse function would reverse the input and the output, it would need to somehow use <m>25</m> as the input, and then output <em>both</em> <m>5</m> and <m>-5</m>.</p>
+
+        <p>But because <m>g(x) = \sqrt{x}</m> is a function, it can only give the single output <m>5</m>.</p>
+
+        <p>Therefore, when we use <m>g(x)=\sqrt{x}</m> as the inverse for <m>f(x)=x^2</m>, we have decided to use only part of the domain of <m>f</m> so that its inverse, <m>g</m>, is really a function. This is called <term>restricting the domain</term>.</p>
+      </paragraphs>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$interval">
+              <set>
+                <member>\text{?}</member>
+                <member correct="yes">x \geq 0</member>
+                <member>x \geq -2</member>
+              </set>
+            </var>
+            <pg-code>
+              $interval=PopUp(["?","x >= 0","x >= -2"],1);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jGC9Xk8r/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+            <p>The graph shows part of <m>f(x) = x^2</m> and its inverse function. The domain used for <m>f</m> is shown as an interval on the <m>x</m>-axis.</p>
+
+            <p><ul>
+              <li>
+                <p>Make the interval larger by sliding the point to a negative value on the <m>x</m>-axis, and notice that the inverse is <em>no longer</em> a function for that domain. A vertical line would intersect the inverse twice, and a horizontal line would intersect <m>f(x)</m> twice.</p>
+              </li>
+              <li>
+                <p>Now shrink the interval until the inverse <em>is</em> a function. What interval would make the inverse a function?</p>
+                <p><var name="$interval" form="popup" /></p>
+              </li>
+            </ul></p>
+          </statement>
+          <solution>
+            <p>If we restrict the domain of <m>f(x) = x^2</m> to <m>x \geq 0</m>, then it is invertible. The inverse function is <m>f^{-1}(x) = \sqrt{x}</m>.</p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>We <term>restrict</term> the domain of a function in order to make it <term>invertible</term>. We choose an interval for the input, so that the output never has repeated values <mdash /> this ensures that the inverse will pass the vertical line test.</p>
+      <exercise>
+        <statement><p>An important use of restricting the domain is in finding the inverse of a <em>periodic</em> function (one which repeats itself over-and-over). For example, consider the function <m>f</m> below.</p>
+        <figure>
+          <caption>A periodic function <m>f</m></caption>
+            <image width="47%">
+                <latex-image-code>
+                <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot+[domain=-6:6, smooth]{4*sin(90*x)};
+                             \end{axis}
+                        \end{tikzpicture}
+                ]]>
+                </latex-image-code>
+            </image>
+        </figure>
+        <p>How could we restrict the domain so this function is invertible?</p>
+        <p>Choose an interval for <m>x</m> so <m>f^{-1}</m> is a function.</p></statement>
+        <hint><p>There are several intervals which will work here. Remember that the function <m>f</m> cannot have repeated values on the interval you choose.</p>
+        <p>Also, remember that if the endpoints of your interval give the same outputs, then you can only include one of the endpoints in the interval.</p></hint>
+        <solution>
+          <p>Correct options include:<md>
+            <mrow>-1 \leqslant x \lt 1</mrow>
+            <mrow>-1 \lt x \leqslant 1</mrow>
+            <mrow>1 \leqslant x \lt 3</mrow>
+          </md></p>
+        </solution>
+      </exercise>
+    </subsection>
+  </section>
 </chapter>
