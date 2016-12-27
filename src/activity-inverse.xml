@@ -15,7 +15,7 @@
   <title>Inverse Activity</title>
   <introduction>
     <p>In this activity, we will introduce the <term>inverse</term> of a function.</p>
-    <p>A function is a rule which takes an <term>input</term> and returns an <term>output</term>. The <term>inverse</term> of a function is a rule which does the opposite of the original function &#8212; if the original function took the input <m>a</m> and returned the ouput <m>b</m>, then the inverse function would take the input <m>b</m> and return the output <m>a</m>.</p>
+    <p>A function is a rule which takes an <term>input</term> and returns an <term>output</term>. The <term>inverse</term> of a function is a rule which does the opposite of the original function <mdash /> if the original function took the input <m>a</m> and returned the ouput <m>b</m>, then the inverse function would take the input <m>b</m> and return the output <m>a</m>.</p>
     <p>Since a function is a process, the inverse function is just the reverse of that process.</p>
   </introduction>
   <p>In the following exercise, we introduce the notation for the <term>inverse</term> of a function.</p>
@@ -102,7 +102,6 @@
       </solution>
     </webwork>
   </exercise>
-<todo>Add an in-line note in the next paragraph, linking to the paragraph with xml id = "invertibility".</todo>
   <p>Now for an important fact about the inverse of a function. If <m>f</m> is a function, then <m>f^{-1}</m> should also be a function. <fn>The inverse <em>should</em> be a function, but that is not always the case. We will see more about this later in the activity.</fn> And we know that these functions perfectly <em>undo</em> each other.</p>
   <p>If we use the function <m>f</m> to get an output, and then use that output as the input for <m>f^{-1}</m>, we will get back the very input we originally used in the function <m>f</m>.</p>
   <p>The diagram below shows this: It begins with an input value <m>a</m>, then uses the function <m>f</m> to get an output value <m>f(a)</m>, then uses the value <m>f(a)</m> as the input for the function <m>f^{-1}</m>, and finally gets back the original input <m>a</m>.</p>
@@ -160,7 +159,7 @@
   </exercise>
   <p>By now, we know that the function <m>f^{-1}</m> will undo the action of <m>f</m>.</p>
   <p>But there is another, equally important fact about composing a function and its inverse. See the next exercise.</p>
-<todo> Make this a scaffolded problem, google .webwork scaffold use student answer from part. for help </todo>
+<todo>Should we make this a scaffolded problem?</todo>
   <exercise>
     <webwork xml:id="webwork-inverse-composition">
       <setup>
@@ -457,7 +456,7 @@
       <title xml:id="invertibility">Not every function has an inverse</title>
       <p>Remember an important characteristic of any function: <blockquote>Each input goes to only one output.</blockquote></p>
       <p>For example, if <m>f</m> is a function, then it would be <em>impossible</em> for both <m>f(4) = 7</m> <em>and</em> <m>f(4) = 10</m>. The input <m>4</m> cannot correspond to two different output values.</p>
-      <p>Thinking about the graph, this means that the graph of <m>y = f(x)</m> must pass the <term>vertical line test</term>, which says that a vertical line may only intersect the graph of a function at most once. If a vertical line intersected the graph of <m>f(x)</m> <em>twice</em>, that would mean there was some input value for which <m>f</m> gave <em>two</em> different output values &#8212; impossible for a function!</p>
+      <p>Thinking about the graph, this means that the graph of <m>y = f(x)</m> must pass the <term>vertical line test</term>, which says that a vertical line may only intersect the graph of a function at most once. If a vertical line intersected the graph of <m>f(x)</m> <em>twice</em>, that would mean there was some input value for which <m>f</m> gave <em>two</em> different output values <mdash /> impossible for a function!</p>
       <p>Now, an <term>inverse</term> function must also actually <em>be</em> a function. It, too, must pass the vertical line test. Each input value for the inverse must correspond to only one output value.</p>
       <p>But what would cause this condition to fail for the inverse? Could we tell from the original function <m>f</m> whether the inverse was a function or not?</p>
     </paragraphs>
@@ -673,7 +672,6 @@
       </webwork>
     </exercise>
 <p>This has implications for the graph of a function <m>f</m>. Given a graph of <m>y = f(x)</m>, we should be able to quickly decide if it is invertible or non-invertible.</p>
-<todo>Need to make non-invertible graph in the next exercise</todo>
 <exercise>
   <webwork xml:id="webwork-horizontal-line-test">
     <setup>
