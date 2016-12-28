@@ -37,8 +37,6 @@
     <subsection>
         <title>Intervals</title>
 
-        <todo>Insert graph of sine function to model changing temperature throughout the day.  The words increasing temp or decreasing temp appear as the user changes the time of day.</todo>
-
         <p>An interval<index><main>interval</main></index> is a section or portion of either the vertical or horizontal axis. In this course we will use inequalities to describe intervals, although you may have already experienced other notations such as brackets <m>[a,b]</m> or parentheses <m>(a,b)</m>.</p>
 
         <p>In the execise below, practice writing inequalites to describe the shaded intervals on each number line.</p>
@@ -237,19 +235,19 @@
                         <static>19&lt;t&lt;24</static>
                     </var>
                     <var name="$inc">
-                        <static>3&lt;t&lt;15</static>
+                        <static>3&lt;=t&lt;=15</static>
                     </var>
                     <var name="$dec1">
-                        <static>0&lt;t&lt;3</static>
+                        <static>0&lt;=t&lt;=3</static>
                     </var>
                     <var name="$dec2">
-                        <static>15&lt;t&lt;24</static>
+                        <static>15&lt;=t&lt;=24</static>
                     </var>
                     <var name="$cUp">
-                        <static>0&lt;t&lt;9</static>
+                        <static>0&lt;=t&lt;=9</static>
                     </var>
                     <var name="$cDwn">
-                        <static>9&lt;t&lt;24</static>
+                        <static>9&lt;=t&lt;=24</static>
                     </var>
                     <pg-code>
                         Context("Inequalities");
@@ -257,11 +255,11 @@
                         $pos = Compute("11&lt;t&lt;19");
                         $neg1 = Compute("0&lt;t&lt;11");
                         $neg2 = Compute("19&lt;t&lt;24");
-                        $inc = Compute("3&lt;t&lt;15");
-                        $dec1 = Compute("0&lt;t&lt;3");
-                        $dec2 = Compute("15&lt;t&lt;24");
-                        $cUp = Compute("0&lt;t&lt;9");
-                        $cDwn = Compute("9&lt;t&lt;24");
+                        $inc = Compute("3&lt;=t&lt;=15");
+                        $dec1 = Compute("0&lt;=t&lt;=3");
+                        $dec2 = Compute("15&lt;=t&lt;=24");
+                        $cUp = Compute("0&lt;=t&lt;=9");
+                        $cDwn = Compute("9&lt;=t&lt;=24");
                     </pg-code>
                 </setup>
 
@@ -292,7 +290,7 @@
                             <p><var name="$neg1" width="10" /> and <var name="$neg2" width="10" /></p>
                         </li>
                         <li>
-                            <p>On what intervals is the function increasing?</p>
+                            <p>On what intervals is the function increasing? For increasing or decreasing we always include the ends of the intervals (unless the interval is unbounded <init>i.e.</init> is at infinity).</p>
                             <p><var name="$inc" width="10" /></p>
                         </li>
                         <li>
@@ -300,7 +298,7 @@
                             <p><var name="$dec1" width="10" /> and <var name="$dec2" width="10" /></p>
                         </li>
                         <li>
-                            <p>On what intervals is the function concave up?</p>
+                            <p>On what intervals is the function concave up? For concave up or down we always include the ends of the intervals (unless the interval is unbounded <init>i.e.</init> is at infinity).</p>
                             <p><var name="$cUp" width="10" /></p>
                         </li>
                         <li>
