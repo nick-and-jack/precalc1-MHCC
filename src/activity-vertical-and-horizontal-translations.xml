@@ -16,27 +16,25 @@
     <paragraphs>
       <title>Purpose</title>
       <p>In this activity, we will explore how to <term>transform</term> the graph of a function by making changes to its formula in the following ways:</p>
-      <ul>
+      <p><ul>
         <li><p><m>f(x) + k</m></p></li>
         <li><p><m>f(x + h)</m></p></li>
-      </ul>
+      </ul></p>
       <p>By the end of this activity, you will be able to:</p>
-      <ul>
+      <p><ul>
         <li><p>Recognize the geometric effect of these types of transformations</p></li>
         <li><p>Write the formula for a basic function which has been changed by these transformations.</p></li>
         <li><p>Sketch the graph of a basic function which has been changed by these transformations.</p></li>
-      </ul>
+      </ul></p>
     </paragraphs>
 
     <p>First, we will see the effect of making a change to the <em>output</em> of a function. You will be able to describe what happens to the graph of a function after it has been changed from: <md>
-    <mrow>y = f(x)</mrow>
-    <mrow>\text{to}</mrow>
-    <mrow>y = f(x) + k</mrow></md></p>
+      <mrow>y = f(x)</mrow>
+      <mrow>\text{to}</mrow>
+      <mrow>y = f(x) + k</mrow></md></p>
 
     <exercise>
-
         <webwork xml:id="webwork-vertical-transformation-with-graph">
-
             <setup>
               <var name="$choice">
                 <set>
@@ -81,16 +79,14 @@
             </statement>
         </webwork>
     </exercise>
-
+<todo>This is not the best way to code this for formatting.</todo>
     <p>Next, you will see what happens when we change the <em>input</em> of a function. You will be able to describe what happens to the graph as you change the formula from: <md>
-    <mrow>y = f(x)</mrow>
-    <mrow>\text{to}</mrow>
-    <mrow>y = f(x+h)</mrow></md></p>
+      <mrow>y = f(x)</mrow>
+      <mrow>\text{to}</mrow>
+      <mrow>y = f(x+h)</mrow></md></p>
 
     <exercise>
-
         <webwork xml:id="webwork-vertical-and-horizontal-transformation-with-graph">
-
           <setup>
             <var name="$changeH">
               <set>
@@ -127,19 +123,19 @@
 
           <statement>
               <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <ol>
+              <p><ol>
                 <li><p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders will change the function by adding a number <m>k</m> outside the function and a number <m>h</m> inside the function.</p>
                 <p>What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
                 <p><var name="$changeH" form="buttons" /></p></li>
                 <li><p>Which equation below would graph as a parabola with a vertex at the point <m>(5,3)</m>?</p>
                 <p><var name="$changeHandK" form="buttons" /></p></li>
-              </ol>
+              </ol></p>
           </statement>
         </webwork>
     </exercise>
 
     <p>Now, let's apply the idea of shifting a graph to a physical example in the next two exercises.</p>
-
+<todo>Make Tikz graphs for the options in the next problem. Maybe make four graphs in random order, options including:  h(t+1) = -4.9(t+1)^2 + 10(t+1) + 40, h(t-1) = -4.9(t-1)^2 + 10(t-1) + 40, h(t)+1 = -4.9t^2 + 10t + 41, and h(t)-1 = -4.9t^2 + 10t + 39</todo>
     <exercise>
       <webwork xml:id="vertical-and-horizontal-transformation-application-projectile-motion">
         <setup>
@@ -182,7 +178,7 @@
           <p>You can move the point to see how high the object will be at a certain time, or when the object will hit the ground.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BmHTxqW6/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Now, we can use this function to describe other situations involving such an object. For example, suppose the person had waited until <m>t = 1</m> second before throwing the object.</p>
-          <ol>
+          <p><ol>
             <li><p>Which graph below shows the height of the object if the person waited 1 second before throwing it?</p>
             <p>Graph 1 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/kCE4de8p/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
             <p>Graph 2 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PNeV26dS/width/421/height/226/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
@@ -191,13 +187,12 @@
             <p><var name="$inOut" form="popup" /></p></li>
             <li><p>In order to correctly shift the graph of <m>h(t)</m>, what will we use for the <em>input</em> in the formula for the function <m>h</m>? Type your expression below.</p>
             <p><var name="$afterT" width="10" /></p></li>
-          </ol>
+          </ol></p>
         </statement>
         <hint><p>For the input which will correctly shift the graph, recall that adding a positive number to <m>t</m> will move the graph to the left, and subtracting a positive number from <m>t</m> will move the graph to the right.</p></hint>
         <solution><p>The correct graph is the one beginning at the point <m>(1,40)</m>. This is a horizontal shift to the right by <m>1</m> second, so the input must be changed from <m>t</m> to <m>t-1</m>.</p></solution>
 
       </webwork>
-
     </exercise>
 
     <p>Let's build on the previous exercise by using both vertical <em>and</em> horizontal translations.</p>
@@ -225,20 +220,18 @@
             $input=Compute("t-3");
             $addOrSubtract=PopUp(["?","add","subtract"],"add");
             $outputChange=Real(12);
-
           </pg-code>
 
         </setup>
 
         <statement>
-
           <p>Again, the function <m>f(t) = -4.9t^2 + 10t + 40</m> represents the height of an object which was thrown straight upward at a speed of 10 meters per second, from an initial height of 40 meters.</p>
           <p>Suppose now that the person waited <m>3</m> seconds and also carried it an additional 12 meters higher in elevation before throwing it.</p>
           <p>Waiting 3 seconds is a change to the input <m>t</m>, so the input of the function will now be: <var name="$input" width="5" /></p>
           <p>Carrying the object an additional 12 meters upward before throwing it is a change to the output, so we will <var name="$addOrSubtract" form="popup" /> the number <m>12</m> to the outside of the function.</p>
           <p>Putting these transformations together, the formula will now be:</p>
-          <p><m>f(</m><var name="$input" width="5" /><m>) + </m><var name="$outputChange" width="2" /></p>
-          <p>= <m>-4.9(</m><var name="$input" width="5" /><m>)^2 + 10(</m><var name="$input" width="5" /><m>) + 40 + </m><var name="$outputChange" width="2" /></p>
+          <p><m>f\big(</m><var name="$input" width="5" /><m>\big) + </m><var name="$outputChange" width="2" /></p>
+          <p>= <m>-4.9\big(</m><var name="$input" width="5" /><m>\big)^2 + 10\big(</m><var name="$input" width="5" /><m>\big) + 40 + </m><var name="$outputChange" width="2" /></p>
 
         </statement>
       </webwork>
@@ -246,55 +239,64 @@
 
     <p>Finally, we'll see an application of using vertical and horizontal <term>translations</term> to quickly perform a familiar task: Finding the equation of a line</p>
 
-    <example>
-      <p>The linear function <me>f(x) = 4x</me> will graph as a line with slope <m>4</m>, passing through the origin <m>(0,0)</m>.</p>
-      <p>Now, using translations, it would be easy to write the equations of similar lines.</p>
-      <p>For example:</p>
-      <p>The line with slope <m>4</m>, passing through the point <m>(3,5)</m>, may be thought of as the result of shifting <m>f(x)</m> to the <em>right</em> by <m>3</m> units, and <em>up</em> by <m>5</m> units.</p>
-      <p>[In this case, we are focusing our attention on moving the old point <m>(0,0)</m> to the new point <m>(3,5)</m>.]</p>
-      <p>What would be the equation of this new line?</p>
-
-      <hint>
-        <p>Since <m>f(x)</m> has the point <m>(0,0)</m>, think about shifting that point to <m>(3,5)</m>. Begin by shifting the function to the right by <m>3</m> units, so the input will be <m>x-3</m>.</p>
-        <p>Next, apply the translation which moves the graph up by <m>5</m> units.</p>
-      </hint>
-      <answer><p>Without doing any simplification to the formula, the line would be: <md>
-        <mrow>y \amp= f(x-3) + 5</mrow>
-        <mrow>\amp= 4(x-3) + 5</mrow></md></p>
-      </answer>
-    </example>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$formulas">
+            <set>
+              <member>\text{?}</member>
+              <member>y=4(x+7)+15</member>
+              <member>y=4(x+7)-15</member>
+              <member correct="yes">y=4(x-7)+15</member>
+              <member>y=4(x-7)-15</member>
+            </set>
+          </var>
+          <pg-code>
+            $formulas=PopUp(
+            ["?","y=4(x+7)+15","y=4(x+7)-15","y=4(x-7)+15","y=4(x-7)-15"],"y=4(x-7)+15"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The linear function <me>f(x) = 4x</me> will graph as a line with slope <m>4</m>, passing through the origin <m>(0,0)</m>.</p>
+          <p>Now, using translations, it would be easy to write the equations of similar lines.</p>
+          <p>For example:</p>
+          <p>The line with slope <m>4</m>, passing through the point <m>(7,15)</m>, may be thought of as the result of shifting <m>f(x)</m> to the <em>right</em> by <m>7</m> units, and <em>up</em> by <m>15</m> units.</p>
+          <p>[In this case, we are focusing our attention on moving the old point <m>(0,0)</m> to the new point <m>(7,15)</m>.]</p>
+          <p>What would be the equation of this new line?</p>
+          <p>Answer:  <var name="$formulas" form="popup" /></p>
+        </statement>
+        <hint>
+          <p>Since <m>f(x)</m> has the point <m>(0,0)</m>, think about shifting that point to <m>(7,15)</m>. Remember that adding to the <em>input</em> will move the graph to the left, and subtracting from the input will move the graph to the right.</p>
+        </hint>
+        <solution>
+          <p>Without doing any simplification to the formula, the line would be: <md>
+            <mrow>y \amp= f(x-7) + 15</mrow>
+            <mrow>\amp= 4(x-7) + 15</mrow></md></p>
+        </solution>
+      </webwork>
+    </exercise>
 
     <exercise>
       <webwork xml:id="webwork-point-slope">
         <setup>
-          <var name="$whichLine">
-            <set>
-              <member>y = -7x-5</member>
-              <member>y = -7(x-8)</member>
-              <member correct="yes">y = -7(x-8)-5</member>
-              <member>y = -7(x+8)-5</member>
-            </set>
-          </var>
-
+          <var name="$whichLine"><static>11(x-8)-5</static></var>
           <var name="$a[0]"><static>8</static></var>
           <var name="$a[1]"><static>5</static></var>
 
           <pg-code>
             @a=map{1+$_}NchooseK(8,2);
-            $whichLine=PopUp(
-            ["?","y = 12x - $a[1]","y = 12(x - $a[0])","y = 12(x - $a[0]) - $a[1]","y = 12(x + $a[0]) - $a[1]"],
-            "y = 12(x - $a[0]) - $a[1]"
-            );
+            $whichLine=Compute("11*(x-$a[0])-$a[1]");
           </pg-code>
         </setup>
         <statement>
-          <p>The line with slope <m>12</m>, passing through the origin <m>(0,0)</m>, has the equation: <me>f(x) = 12x</me></p>
-          <p>Using translations, choose which equation below will graph as the line with slope <m>12</m>, passing through the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
-          <p><var name="$whichLine" form="popup" /></p>
+          <p>The line with slope <m>11</m>, passing through the origin <m>(0,0)</m>, has the equation: <me>f(x) = 11x</me></p>
+          <p>Using translations, write the equation for the line with slope <m>11</m>, passing through the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
+          <p>Answer:  <m>y = </m><var name="$whichLine" width="15" /></p>
         </statement>
         <solution>
           <p>Think of moving the point <m>(0,0)</m> to the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
-          <p>We would shift the graph to the right by <var name="$a[0]" /> units and down by <var name="$a[1]" /> units, and the equation would be: <m>y = 12(x - <var name="$a[0]" />) - <var name="$a[1]" /></m></p>
+          <p>We would shift the graph to the right by <var name="$a[0]" /> units and down by <var name="$a[1]" /> units, and the equation would be: <m>y = 11(x - <var name="$a[0]" />) - <var name="$a[1]" /></m></p>
         </solution>
       </webwork>
     </exercise>
@@ -328,8 +330,5 @@
         </solution>
       </webwork>
     </exercise>
-
-
-
 
   </section>
