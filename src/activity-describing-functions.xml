@@ -222,32 +222,32 @@
         <p>Now let's put all these function characteristics on the same graph. Using 24 hour time with midnight at <m>t = 0</m>, the graph in the next exercise shows the temperature variation in a small northern town during one day.</p>
 
 
-        <exercise>
+        <exercise xml:id="exercise-increasing-decreasing">
             <webwork>
                 <setup>
                     <var name="$pos">
-                        <static>11&lt;t&lt;19</static>
+                        <static>11\lt t\lt 19</static>
                     </var>
                     <var name="$neg1">
-                        <static>0&lt;t&lt;11</static>
+                        <static>0\lt t\lt 11</static>
                     </var>
                     <var name="$neg2">
-                        <static>19&lt;t&lt;24</static>
+                        <static>19\lt t\lt 24</static>
                     </var>
                     <var name="$inc">
-                        <static>3&lt;=t&lt;=15</static>
+                        <static>3\leq t\leq 15</static>
                     </var>
                     <var name="$dec1">
-                        <static>0&lt;=t&lt;=3</static>
+                        <static>0\leq t\leq 3</static>
                     </var>
                     <var name="$dec2">
-                        <static>15&lt;=t&lt;=24</static>
+                        <static>15\leq t\leq 24</static>
                     </var>
                     <var name="$cUp">
-                        <static>0&lt;=t&lt;=9</static>
+                        <static>0\leq t\leq 9</static>
                     </var>
                     <var name="$cDwn">
-                        <static>9&lt;=t&lt;=24</static>
+                        <static>9\leq t\leq 24</static>
                     </var>
                     <pg-code>
                         Context("Inequalities");
@@ -290,7 +290,7 @@
                             <p><var name="$neg1" width="10" /> and <var name="$neg2" width="10" /></p>
                         </li>
                         <li>
-                            <p>On what intervals is the function increasing? For increasing or decreasing we always include the ends of the intervals (unless the interval is unbounded <init>i.e.</init> is at infinity).</p>
+                            <p>On what intervals is the function increasing? For increasing or decreasing intervals of continuous functions, we always include the ends of the intervals (unless the interval is unbounded <init>i.e.</init> is at infinity).</p>
                             <p><var name="$inc" width="10" /></p>
                         </li>
                         <li>
@@ -298,7 +298,7 @@
                             <p><var name="$dec1" width="10" /> and <var name="$dec2" width="10" /></p>
                         </li>
                         <li>
-                            <p>On what intervals is the function concave up? For concave up or down we always include the ends of the intervals (unless the interval is unbounded <init>i.e.</init> is at infinity).</p>
+                            <p>On what intervals is the function concave up? For concave up or down intervals of continuous functions, we always include the ends of the intervals (unless the interval is unbounded <init>i.e.</init> is at infinity).</p>
                             <p><var name="$cUp" width="10" /></p>
                         </li>
                         <li>

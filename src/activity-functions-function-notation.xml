@@ -107,8 +107,7 @@
 
                     <p>Without knowing anything about function notation, you can still use a language you already know, English, to describe information about the train.</p>
 
-                    <p>For instance:
-                    <ul>
+                    <p>For instance:<ul>
                         <li>
                             <p>The train can only be in one place at any particular time.</p>
                         </li>
@@ -118,11 +117,9 @@
                         <li>
                             <p>The speed of the train changes during its trip.</p>
                         </li>
-                    </ul>
-                    </p>
+                    </ul></p>
 
-                    <p>There are also some characteristics of the graph itself you can also describe in English:
-                    <ul>
+                    <p>There are also some characteristics of the graph itself you can also describe in English:<ul>
                         <li>
                             <p>The graph rises as we read it from left to right.</p>
                         </li>
@@ -135,8 +132,7 @@
                         <li>
                             <p>Some parts of the graph are steeper than others.</p>
                         </li>
-                    </ul>
-                    </p>
+                    </ul></p>
 
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/D4s2v4ft/width/450/height/459/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="450px" height="459px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
@@ -229,8 +225,7 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>How would you say the function notation in each statement below?
-                    <ol>
+                    <p>How would you say the function notation in each statement below?<ol>
                         <li>
                             <p>Tarzan(the jungle) <var name="$tarzan" form="popup" /></p>
                         </li>
@@ -240,13 +235,12 @@
                         <li>
                             <p><m>f(x)</m> <var name="$f" form="popup" /></p>
                         </li>
-                    </ol>
-                    </p>
+                    </ol></p>
                 </statement>
             </webwork>
         </exercise>
 
-        <p>Function notation like <m>f(t)</m> or <m>f(x)</m> or <m>f(</m>\text{anything}<m>)</m> implies there is some kind of relation, some kind of rule, that takes a piece of information and returns a response or result. The format of function notation works on the basic principle of input and output and we often use the notation when we refer to things we don't yet know.</p>
+        <p>Function notation like <m>f(t)</m> or <m>f(x)</m> or <m>f(\text{anything})</m> implies there is some kind of relation, some kind of rule, that takes a piece of information and returns a response or result. The format of function notation works on the basic principle of input and output and we often use the notation when we refer to things we don't yet know.</p>
 
         <p>For instance, if you work as a health assistant, you probably earn some hourly salary and you probably work some number of hours each week.  I have no idea how many hours a week you work and no idea how much you earn.  But I do know your weekly salary is related to the number of hours you work. In fact, your weekly salary is a function of the number of hours you work.</p>
         <p>If <m>t</m> is the number of hours you work and <m>S</m> is your weekly salary, I can use function notation to say, <m>S = f(t)</m> where <m>f(t)</m> is the function, the instructions, that calculates your weekly salary.  If you work <m>12</m> hours, then <m>t = 12</m> so <m>f(12)</m> is your weekly salary for working <m>12</m> hours.</p>
@@ -295,7 +289,7 @@
                         $distance = Real(10);
                         $units = PopUp(["?", "miles", "hours", "miles per hour", "hours per mile"], "miles");
                         $start = 8;
-                        $ampm = PopUp(["?", "a.m.", "p.m."], "a.m.");                        
+                        $ampm = PopUp(["?", "a.m.", "p.m."], "a.m.");
                         $meanings = PopUp(["?", "the initial position of the train", "the final position of the train", "the distance is zero", "the distance times zero"], 1);
                         parserFunction("f(x)"=>"(sin(x)+2)/pi");
                         Context()->flags->set(reduceConstantFunctions=>0);
@@ -430,7 +424,7 @@
             </webwork>
         </exercise>
         <p>Tables are one way to express inputs and outputs of a relation. In a vertical table the inputs are on the left while the outputs are on the right.  In a horizontal table, the top row is the input and the bottom row is the output.</p>
-        
+
         <table>
           <caption>Vertical Table</caption>
             <tabular>
@@ -454,7 +448,7 @@
                 </row>
             </tabular>
         </table>
-        
+
         <table>
           <caption>Horizontal Table</caption>
             <tabular>
@@ -497,7 +491,7 @@
             </setup>
             <statement>
               <p>Is table A a function or not?</p>
-              
+
               <table>
                 <caption>Table A</caption>
                   <tabular top="medium" bottom="medium" left="medium" right="medium">
@@ -634,10 +628,11 @@
           </webwork>
         </exercise>
 
-        <p>The previous example leads us to a simple test we can use to determine if a graph is a fucntion or not.  It's called the <term>vertical line test</term><index><main>vertical line test</main></index>.</p>
+        <p>The previous example leads us to a simple test we can use to determine if a graph is a function or not.  It's called the <term>vertical line test</term><index><main>vertical line test</main></index>.</p>
+
         <p>Given a graph, draw a vertical line through any place on the graph. If the vertical line crosses the graph at most one time (no matter where you draw the line), then the graph is a funciton. If the vertical line crosses the graph anywhere at more than one point, then the graph is not a function.</p>
-            
-        <exercise>
+
+        <exercise xml:id="exercise-vertical-line-test">
             <webwork>
                 <setup>
                     <var name="$none">
@@ -645,27 +640,21 @@
                     </var>
                     <var name="$no">
                       <set>
-                        <member>\text{Pass Vertical Line Test}</member>
+                        <member>\text{Passes Vertical Line Test}</member>
                         <member correct="yes">\text{Does not pass Vertical Line Test}</member>
                       </set>
                     </var>
                     <var name="$yes">
                       <set>
-                        <member>\text{Pass Vertical Line Test}</member>
+                        <member>\text{Passes Vertical Line Test}</member>
                         <member correct="yes">\text{Does not pass Vertical Line Test}</member>
                       </set>
                     </var>
-                    
+
                     <pg-code>
                         $none = Real(1);
-                        $no = RadioButtons(
-                          ["Pass Vertical Line Test","Does not pass Vertical Line Test"],
-                          1, labels => ["Pass Vertical Line Test","Does not pass Vertical Line Test"],displayLabels => 0
-                          );
-                          $yes = RadioButtons(
-                          ["Pass Vertical Line Test","Does not pass Vertical Line Test"],
-                          0, labels => ["Pass Vertical Line Test","Does not pass Vertical Line Test"],displayLabels => 0
-                          );
+                        $no = RadioButtons(["Passes Vertical Line Test","Does not pass Vertical Line Test"],1);
+                        $yes = RadioButtons(["Passes Vertical Line Test","Does not pass Vertical Line Test"],0);
                     </pg-code>
                 </setup>
 
@@ -803,7 +792,7 @@
                     <var name="$output4">
                         <static>-1.54</static>
                     </var>
-                    
+
                     <pg-code>
                         $output1 = Real(0);
                         $output2 = Real(0);
@@ -885,34 +874,54 @@
                 </setup>
                 <statement>
                     <p>Use the function <m>f(x) = x^2 - x</m> to evaluate <m>f(5)</m>.</p>
-                    <p>
-                      <ol>
-                        <li><p>Replace all the x's in the formula with parentheses to create blank spaces. As in</p>
-                        <p><m>f(\text{blank}) = (\text{blank})^2 - (\text{blank})</m>.</p></li>
-                        <li><p>Identify the intput.</p>
-                        <p>In this case the given input is <var name="$five" width="2" /></p></li>
-                        <li><p>Place the input into all the blank spaces.</p>
-                        <p><m>f(5) = \big(</m> <var name="$five" width="2" /><m>\big)^2 - \big(</m> <var name="$five" width="2" /><m>\big)</m></p></li>
-                        <li><p>Evaluate the function.</p>
-                        <p><m>f(5) = </m><var name="$out" width="2" /></p></li>
-                      </ol>
-                    </p>
+                    <p><ol label="a">
+                        <li>
+                            <p>Replace all the <m>x</m>'s in the formula with parentheses to create blank spaces. As in</p>
+                            <p><m>f(\text{blank}) = (\text{blank})^2 - (\text{blank})</m>.</p>
+                        </li>
+                        <li>
+                            <p>Identify the intput.</p>
+                            <p>In this case the given input is <var name="$five" width="2" /></p>
+                        </li>
+                        <li>
+                        <p>Place the input into all the blank spaces.</p>
+                            <p><m>f(5) = \big(</m> <var name="$five" width="2" /><m>\big)^2 - \big(</m> <var name="$five" width="2" /><m>\big)</m></p>
+                        </li>
+                        <li>
+                           <p>Evaluate the function.</p>
+                            <p><m>f(5) = </m><var name="$out" width="2" /></p>
+                        </li>
+                    </ol></p>
                     <p>Using the same method, evaluate each of the following expressions (do not simplify):</p>
                     <p>Keep in mind in Math the variable <m>M</m> is completely different thant <m>m</m>. Be careful to distinguish between lower case and capital variables!</p>
-                    <p><m>f(M) = \big(</m> <var name="$M" width="2" /><m>\big)^2 - \big(</m> <var name="$M" width="2" /><m>\big)</m></p>
-                    <p><m>f(M) = </m> <var name="$Mexp" width="5" /></p>
-                    <p><m>f(Q) = \big(</m> <var name="$Q" width="2" /><m>\big)^2 - \big(</m> <var name="$Q" width="2" /><m>\big)</m></p>
-                    <p><m>f(Q) = </m> <var name="$Qexp" width="5" /></p>
-                    <p><m>f(x-12) = \big(</m> <var name="$P" width="2" /><m>\big)^2 - \big(</m> <var name="$P" width="2" /><m>\big)</m></p>
-                    <p><m>f(x-12) = </m> <var name="$expression" width="5" /></p>
+                    <p><ol label="a">
+                        <li>
+                            <p><m>f(M) = \big(</m> <var name="$M" width="2" /><m>\big)^2 - \big(</m> <var name="$M" width="2" /><m>\big)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(M) = </m> <var name="$Mexp" width="5" /></p>
+                        </li>
+                        <li>
+                            <p><m>f(Q) = \big(</m> <var name="$Q" width="2" /><m>\big)^2 - \big(</m> <var name="$Q" width="2" /><m>\big)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(Q) = </m> <var name="$Qexp" width="5" /></p>
+                        </li>
+                        <li>
+                            <p><m>f(x-12) = \big(</m> <var name="$P" width="2" /><m>\big)^2 - \big(</m> <var name="$P" width="2" /><m>\big)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(x-12) = </m> <var name="$expression" width="20" /></p>
+                        </li>
+                    </ol></p>
                 </statement>
             </webwork>
-        </exercise>     
+        </exercise>
 
         <p>The beauty of this is it does <em>not</em> matter what you put into the formula (as long as the formula can handle it which we will get into later), the formula does the same thing every time.</p>
 
         <p>You can put <m>5</m> into the formula or you can put something complicated into the formula like <m>\frac{x^2}{x^2 + 1}</m> which would look like this<me>f\mathopen{}\left(\frac{x^2}{x^2 + 1}\right)\mathclose{} = \mathopen{}\left(\frac{x^2}{x^2 + 1}\right)^2\mathclose{} - \mathopen{}\left(\frac{x^2}{x^2 + 1}\right)\mathclose{}</me></p>
-        
+
         <p>Simplifying this equation is another matter.</p>
     </subsection>
 
@@ -982,7 +991,7 @@
 
                       <p>The solutions to <m>f(x) = 0</m> are <m>x=</m><var name="$zeros" width="15" />. (Use commas.)</p>
 
-                      <p>Notice that all the <m>y</m> values are 0, but the <m>x</m> values are diffenent.  The <m>x</m> values are the <em>solutions to the equation <m>f(x) = 0</m></em>.</p>
+                      <p>Notice that all the <m>y</m>-values are <m>0</m>, but the <m>x</m>-values are different.  The <m>x</m>-values are the <em>solutions to the equation <m>f(x) = 0</m></em>.</p>
                   </statement>
               </stage>
 
@@ -995,7 +1004,7 @@
                   <p>How many solutions does the equation have? If there are none, type <q>none</q>.</p>
                   <p>The equation has <var name="$numSolutions1" width="5" /> solution(s).</p>
 
-                  <p>Use the <m>x</m> coordinates of the points on the horizontal axis to determine all the solutions to the equation.</p>
+                  <p>Use the <m>x</m>-coordinates of the points on the horizontal axis to determine all the solutions to the equation.</p>
                   <p>The solution(s) to <m>f(x) = 2</m> is/are: <m>x=</m><var name="$solutions" width="15" />. (Use commas to separate multiple answers if necessary.)</p>
                 </statement>
               </stage>
@@ -1098,14 +1107,22 @@
                     <me>2^x + 0.025 = 0.55x + b</me>
                     <p>where <q>b</q> is any number, would not be possible using our current algebra techniques. But in English, sloving the equation means to find where the functions intersect. That we can do quite easily using graphs.</p>
 
-                    <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025 = 0.55x + b</me>has two solutions.</p>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rZySMTyJ/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>If <m>b = </m><var name="$answer1" evaluator="$evaluator1" width="3" /> then the equation would have two solutions.</p>
 
-                    <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025= 0.55x + b</me>has no solutions.</p>
-                    <p>If <m>b = </m><var name="$answer2" evaluator="$evaluator2" width="3" /> then the equation would have no solutions.</p>
-                    <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025= 0.55x + b</me>has only one solution.</p>
-                    <p>If <m>b = </m><var name="$answer3" evaluator="$evaluator3" width="3" /> then the equation would have no solutions.</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025 = 0.55x + b</me>has two solutions.</p>
+                            <p>If <m>b = </m><var name="$answer1" evaluator="$evaluator1" width="3" /> then the equation would have two solutions.</p>
+                        </li>
+                        <li>
+                            <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025= 0.55x + b</me>has no solutions.</p>
+                            <p>If <m>b = </m><var name="$answer2" evaluator="$evaluator2" width="3" /> then the equation would have no solutions.</p>
+                        </li>
+                        <li>
+                            <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025= 0.55x + b</me>has only one solution.</p>
+                            <p>If <m>b = </m><var name="$answer3" evaluator="$evaluator3" width="3" /> then the equation would have no solutions.</p>
+                        </li>
+                    </ol></p>
                 </statement>
             </webwork>
         </exercise>
