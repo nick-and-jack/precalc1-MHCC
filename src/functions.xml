@@ -238,12 +238,11 @@
                         </latex-image-code>
                     </image>
                 </figure>
-              <p>The input is the speed, <m>s</m>, and the output is the efficiency, <m>E</m> so we can write an ordered pair <m>(s, E)</m> or <m>(s, f(s))</m>.</p>
-              <p>It should make sense that a car can only have one efficiency at any given speed since it cannot get <quantity><mag>10</mag><unit base="milepergallon" /></quantity> and <quantity><mag>20</mag><unit base="milepergallon" /></quantity> at the same time.</p>
-              <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of <quantity><mag>25</mag><unit base="milepergallon" /></quantity> can be attained by traveling at a speed of about <quantity><mag>20</mag><unit base="mileperhour"/></quantity> and also at about <quantity><mag>70</mag><unit base="mileperhour"/></quantity>.</p></example>
+            <p>The input is the speed, <m>s</m>, and the output is the efficiency, <m>E</m> so we can write an ordered pair <m>(s, E)</m> or <m>(s, f(s))</m>.</p>
+            <p>It should make sense that a car can only have one efficiency at any given speed since it cannot get <quantity><mag>10</mag><unit base="milepergallon" /></quantity> and <quantity><mag>20</mag><unit base="milepergallon" /></quantity> at the same time.</p>
+            <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of <quantity><mag>25</mag><unit base="milepergallon" /></quantity> can be attained by traveling at a speed of about <quantity><mag>20</mag><unit base="mileperhour"/></quantity> and also at about <quantity><mag>70</mag><unit base="mileperhour"/></quantity>.</p></example>
 
-              <todo>Link the words "vertical line test" to the exercise on that subject in act_functions_notation.</todo>
-              <p>Graphically, a function always passes the <term>vertical line test</term></p>
+            <p>Graphically, a function always passes the <xref ref="exercise-vertical-line-test">vertical line test</xref>.</p>
 
             <exercise>
                 <title>Well-Defined</title>
@@ -287,12 +286,11 @@
             </p>
             <p>When describing these characteristics for a function, we typically refer to an <term>interval</term><index><main>interval</main></index> (connected section) of the input axis, or to a particular value of the input where something interesting occurs.</p>
 
-            <p>We can use <term>inequality</term><index><main>inequality</main></index> symbols to describe an interval where a function has a particular property, like increasing for <m>5\lt s\lt55</m>.  This means the function values are getting bigger as the inputs change from <m>5</m> to <m>55</m>.</p>
-            <todo>link to increasing/decreasing activity in act_function_notation</todo>
+            <p>We can use <term>inequality</term><index><main>inequality</main></index> symbols to describe an interval where a function has a particular property, like <xref ref="exercise-increasing-decreasing">increasing</xref> for <m>5\lt s\lt55</m>.  This means the function values are getting bigger as the inputs change from <m>5</m> to <m>55</m>.</p>
 
             <p>Another characteristic we can describe with inequalities <term>concavity</term><index><main>concavity</main></index>. We say a function is <term>concave up</term> if its graph curves upward from left to right, and that it is <term>concave down</term> if it curves downward from left to right.</p>
             <example>
-              <p>The efficiency graph has varying concavity depending on what section of inputs we use:<ul>
+              <p>The efficiency <xref ref="speed-vs-efficiency">graph</xref> has varying <xref ref="exercise-increasing-decreasing">concavity</xref> depending on what section of inputs we use:<ul>
                   <li>
                       <p>concave down for <m>5\lt s\lt60</m>.</p>
                   </li>
@@ -300,10 +298,6 @@
                       <p>concave up for <m>60\lt s\lt75</m>.</p>
                   </li>
                 </ul></p>
-
-                <todo>please fix this reference to the graph</todo>
-                <figure><xref ref="speed-vs-efficiency" /></figure>
-                <todo>link to concavity activity in act_function_notation.</todo>
             </example>
         </subsection>
 
@@ -317,12 +311,12 @@
                         <var name="$f35">
                             <static>37</static>
                         </var>
-                        
+
                         <pg-code>
                             $f35 = Real(37);
                         </pg-code>
                     </setup>
-    
+
                     <statement>
                         <p>Drag the point on the <q>speed</q> axis to the desired input. Read the output values on the vertical axis to help you evaluate the function.</p>
                         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KuW5Vbqz/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
@@ -344,13 +338,13 @@
                         <var name="$sol2">
                             <static>70</static>
                         </var>
-                        
+
                         <pg-code>
                             $sol1 = Real(45);
                             $sol2 = Real(70);
                         </pg-code>
                   </setup>
-        
+
                   <statement>
                     <p>Drag the horizontal (dotted) line to the desired height for the output. The solutions (if any) are shown on the horizontal axis.</p>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/shNZ7dsh/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
@@ -362,7 +356,7 @@
             <p>Using the graph of the efficiency function we see that the equation <m>f(s)=35</m> has two solutions. There are two speeds at which the car has an efficiency of <quantity><mag>35</mag><unit base="milepergallon"/></quantity>.</p>
 
             <p>In fact, solving graphically is often a preferred method of solving equations becuase the output is essetially the height of the graph.  So when we solve <m>f(s) = 35</m> graphically, we are asking <q>What values of <m>s</m> make the graph <m>35</m> units high?</q></p>
-<todo>I did not delete the exercise below because it looked like it had a lot of cool coding in it and I didn't want to lose it. On the other hand, I made an interactive graph to replace it.</todo>
+<!--I did not delete the exercise below because it looked like it had a lot of cool coding in it and I didn't want to lose it. On the other hand, I made an interactive graph to replace it.-->
 <!--             <exercise>
                 <webwork>
                     <setup>
@@ -449,21 +443,27 @@
                         <var name="$avrt2">
                             <static>-0.8</static>
                         </var>
-                        
+
                         <pg-code>
                             $avrt1 = Real(1.1);
                             $avrt2 = Real(-0.8);
                         </pg-code>
-                  </setup>
-        
-                  <statement>
-                      <p>You can see how the average rate of change of the efficiency of the vehicle is affected by different intervals of the speed of the vehicle.</p>
-                      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dGpvT5eC/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                      <p>What is the average rate of change of the efficiency on the interval <m>10 \leq s \leq 20</m>?</p>
-                      <p><m>\frac{\Delta f}{\Delta s} = </m><var name="$avrt1" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
-                      <p>What is the average rate of change of the efficiency on the interval <m>60 \leq s \leq 72</m>?</p>
-                      <p><m>\frac{\Delta f}{\Delta s} = </m><var name="$avrt2" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
-                  </statement>
+                    </setup>
+
+                    <statement>
+                        <p>You can see how the average rate of change of the efficiency of the vehicle is affected by different intervals of the speed of the vehicle.</p>
+                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dGpvT5eC/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                        <p><ol label="a">
+                            <li>
+                                <p>What is the average rate of change of the efficiency on the interval <m>10 \leq s \leq 20</m>?</p>
+                                <p><m>\frac{\Delta f}{\Delta s} = </m><var name="$avrt1" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
+                            </li>
+                            <li>
+                                <p>What is the average rate of change of the efficiency on the interval <m>60 \leq s \leq 72</m>?</p>
+                                <p><m>\frac{\Delta f}{\Delta s} = </m><var name="$avrt2" width="5" /> <quantity><unit base="milepergallon" /></quantity> per <quantity><unit base="mileperhour" /></quantity></p>
+                            </li>
+                        </ol></p>
+                    </statement>
                 </webwork>
             </exercise>
 
