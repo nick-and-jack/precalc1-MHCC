@@ -412,31 +412,31 @@
     <exercise>
       <webwork xml:id="function-composition-graph">
         <setup>
-          <var name="$xg[0]"><static>2</static></var>
-          <var name="$xg[1]"><static>4</static></var>
-          <var name="$xf[0]"><static>-2</static></var>
-          <var name="$xf[1]"><static>-4</static></var>
-          <var name="$G[0]"><static>0</static></var>
-          <var name="$FofG"><static>-2</static></var>
-          <var name="$F[0]"><static>2</static></var>
-          <var name="$GofF"><static>-6</static></var>
-          <var name="$G[1]"><static>2</static></var>
-          <var name="$GofG"><static>0</static></var>
-          <var name="$F[1]"><static>6</static></var>
-          <var name="$FofF"><static>2</static></var>
+          <var name="$xg[0]"><static>0</static></var>
+          <var name="$xg[1]"><static>5</static></var>
+          <var name="$xf[0]"><static>-4</static></var>
+          <var name="$xf[1]"><static>-1</static></var>
+          <var name="$G[0]"><static>2</static></var>
+          <var name="$FofG"><static>-3</static></var>
+          <var name="$F[0]"><static>1</static></var>
+          <var name="$GofF"><static>1</static></var>
+          <var name="$G[1]"><static>-3</static></var>
+          <var name="$GofG"><static>-1</static></var>
+          <var name="$F[1]"><static>-2</static></var>
+          <var name="$FofF"><static>-1</static></var>
           <pg-code>
-            @xg=map{2*($_-3)}NchooseK(7,2);
-            @xf=map{2*($_-2)}NchooseK(7,2);
-            @G=map{$_-2}@xg;
-            @F=map{2*abs($_-2)-6}@xf;
-            $FofG=2*abs($G[0]-2)-6;
-            $GofF=$F[0]-2;
-            $FofF=2*abs($F[1]-2)-6;
-            $GofG=$G[1]-2;
+            @xg=map{($_-6)}NchooseK(14,2);
+            @xf=map{($_-6)}NchooseK(14,2);
+            @G=map{2-abs($_)}@xg;
+            @F=map{abs($_-1)-4}@xf;
+            $FofG=abs($G[0]-1)-4;
+            $GofF=2-abs($F[0]);
+            $FofF=abs($F[1]-1)-4;
+            $GofG=2-abs($G[1]);
           </pg-code>
         </setup>
         <statement>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WJymUNhx/width/433/height/533/border/888888" width="433px" height="533px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WJymUNhx/width/432/height/373/border/888888" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Use the graph to evaluate each of the following compositions.</p>
           <p><m>g(<var name="$xg[0]" />) = </m><var name="$G[0]" width="15" /></p>
           <p><m>f(g(<var name="$xg[0]" />)) = f(</m><var name="$G[0]" width="10" /><m>) = </m><var name="$FofG" width="15" /></p>
