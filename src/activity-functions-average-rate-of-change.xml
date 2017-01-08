@@ -12,7 +12,7 @@
 -->
 
 <section xml:id="activity-functions-average-rate-of-change" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Average Rate of Change</title>
+    <title>Average Rate of Change Activity</title>
 
     <objectives>
         <introduction>
@@ -65,9 +65,8 @@
                 </setup>
 
                 <statement>
-                    <p>The graph below shows the position of three trains at various times.</p>
-
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mYBwwJSp/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>The graph below shows the position of three trains at various times.</p>
 
                     <p><ol>
                         <li>
@@ -219,7 +218,7 @@
                       $in1=Real(7);
                       $in2=Real(2);
                       parserFunction("f(x)"=>"(sin(x)+2)/pi");
-                      Context()->flags->set(reduceConstantFunctions=>0);
+                      Context()->flags->set(reduceConstantFunctions=>exe);
                       Context()->flags->set(formatStudentAnswer=>"parsed");
                       $f7=Formula("f(7)");
                       $evf7=$f7->cmp()->withPostFilter(AnswerHints(Compute("30") => "That's the actual value, but respond by using function notation."));
@@ -401,33 +400,37 @@
         <p>Let <m>T = f(m)</m> be the function that relates the average high temperatures, <m>T</m> degrees fahrenheit, in Portland as a function of <m>m</m>, the number of months the number of months since December 31 in any given year.</p>
         <exercise>
             <webwork>
-                <setup>
-                    <var name="$twoMonth">
-                        <static>6\leq x\leq 8</static>
-                    </var>
-                    <var name="$intMay">
-                        <static>2.2</static>
-                    </var>
-                    <var name="$intSep">
-                        <static>-9.5</static>
-                    </var>
-                    <var name="$intFeb">
-                        <static>10.3</static>
-                    </var>
-                    <pg-code>
-                      $intMay = Real(2.2);
-                      $intSep = Real(-9.5);
-                      $intFeb = Real(10.3);
-                      Context("Inequalities");
-                      Context()->variables->are(m => "Real");
-                      $twoMonth = Compute("6&lt;=m&lt;=8");
-                    </pg-code>
-                </setup>
-
-                <statement>
-                    <p>Change the length of the interval on the <q>month</q> axis to see how it affects the average rate of change of the temperature.</p>
-                    <p>The questions below are all asking for basically the same thing, but they are written in different ways so you can see how the language relates to the notation.</p>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/U3sF6duG/width/413/height/240/border/888888" width="413px" height="240px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <setup>
+                  <var name="$intMarch">
+                    <static>3&lt;=m&lt;=12</static>
+                  </var>
+                  <var name="$intMay">
+                    <static>2.6</static>
+                  </var>
+                  <var name="$intSep">
+                    <static>-10.3</static>
+                  </var>
+                  <var name="$intFeb">
+                    <static>0</static>
+                  </var>
+                  <var name="$March">
+                    <static>3</static>
+                  </var>
+                  <pg-code>
+                    $intMay = Real(2.6);
+                    $intSep = Real(-10.3);
+                    $intFeb = Real(0);
+                    $March = Real(3);
+                    Context("Inequalities");
+                    Context()->variables->are(m => "Real");
+                    $intMarch = Compute("3&lt;=m&lt;=12");
+                  </pg-code>
+              </setup>
+    
+              <statement>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/UeZmBGvG/width/413/height/250/border/888888" width="413px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                <p>Change the length of the interval on the <q>month</q> axis to see how it affects the average rate of change of the temperature.</p>
+                <p>The questions below are all asking for basically the same thing, but they are written in different ways so you can see how the language relates to the notation.</p>
                     <p><ol label="a">
                         <li>
                             <p>What is the average rate of change on the interval between May and August?</p>
@@ -438,19 +441,24 @@
                             <p><m>\frac{\Delta T}{\Delta m} =</m> <var name="$intSep" width="2" /></p>
                         </li>
                         <li>
-                            <p>Find <m>\frac{\Delta T}{\Delta m}</m> for <m>2 \leq m \leq 5</m></p>
+                            <p>Find <m>\frac{\Delta T}{\Delta m}</m> for <m>2 \leq m \leq 12</m></p>
                             <p><m>\frac{\Delta T}{\Delta m} =</m> <var name="$intFeb" width="2" /></p>
                         </li>
                         <li>
-                            <p>Find a two month interval (using numbers for months) for which <m>\frac{\Delta T}{\Delta m} = 0</m></p>
-                            <p><m>\frac{\Delta T}{\Delta m} = 0</m> on the  interval <var name="$twoMonth" width="10" /></p>
+                            <p>What month begins a <m>-1</m> degree per month average rate of temperature change that ends in December?</p>
+                            <p>The month is (use a number for the month) <var name="$March" width="10" /></p>
+                        </li>
+                        <li>
+                            <p>Finish the next sentence using the month number you just found to write the entire interval.</p>
+                            <p><m>\frac{\Delta T}{\Delta m} = -1</m> on the  interval <var name="$intMarch" width="10" /></p>
                         </li>
                     </ol></p>
-                </statement>
+                
+              </statement>
             </webwork>
         </exercise>
 
-        <p>To find an average rate of change, you need two inputs. Use each input to find the corresponding output. The outputs are subtracted and that difference is then divided by the difference between the two input values. Just keep the pairs, <m>(\text{input}, \text{output}</m> in the same order.</p>
+        
         <p>Earlier you found the outputs by estimating the results from a graph. Next you will find the outputs by calculating them directly using a formula.</p>
 
         <exercise>
@@ -505,6 +513,17 @@
                         </li>
                     </ol></p>
                 </statement>
+                <hint>
+                  <p>To find an average rate of change of any function where, in general <m>y = f(x)</m>, you need two ordered pairs (two points). Use each input to find its corresponding output. That makes one orederd pair.</p>
+                  <p><md>
+                      <mrow>f(\text{input}) = \text{output}</mrow></md></p>
+                  <p>makes the ordered pair</p>
+                      <p><md><mrow>(\text{input}, \text{output})</mrow></md></p>
+                  <p>Calculate the change in the output (subtract the two  outputs). That's <m>\Delta f</m>.</p>
+                  <p>Calculate the change in the input (subtract the two inputs). That's <m>\Delta x</m> </p>
+                  <p>Make sure to subtract the ordered pairs in the same order.</p>
+                  <p>Given ordered pairs <m>(a,f(a))</m> and <m>(b,f(b))</m> if you start with <m>f(a) - f(b)</m> as <m>\Delta f</m>, then you must start with <m>a - b</m> for <m>\Delta x</m>.</p>
+                </hint>
             </webwork>
         </exercise>
 
@@ -597,10 +616,8 @@
                 </setup>
 
                 <statement>
-                  <todo>The values shown in the graph for time = 1.5 and 2.0 keep changing everytime the graph is refreshed. So it's impossible for me to predict how to code the results. Need a fix or a recommendation of what else to do.</todo>
-
+                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZzdbKDBC/width/413/height/250/border/888888" width="413px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                   <p>The train changes position over time, therefore the train is moving and so the train has <em>speed</em>.  Speed is a rate of change.</p>
-                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rVNZehSm/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                   <p>In order to calculate an average speed for the train we need to determine how much distance the train covered <m>\Delta f</m> and how much time it took to cover that distance <m>\Delta t</m>. Consider the interval <m>1.5 \leq t \leq 2.0</m>.</p>
 
                   <p><ol label="a">
