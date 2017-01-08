@@ -13,7 +13,7 @@
 
 <section xml:id="activity-describing-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <title>Describing Function Behavior</title>
+    <title>Describing Function Behavior Activity</title>
     <objectives>
         <introduction>
             <p>After completing this lesson you will be able to:</p>
@@ -95,7 +95,7 @@
 
         <exercise>
             <title>Positive or Negative</title>
-            <webwork xml:id="pos-neg">
+            <webwork xml:id="exercise-pos-neg">
                 <setup>
                     <var name="$positive">
                         <set>
@@ -137,7 +137,7 @@
 
         <exercise>
             <title>Increasing or Decreasing</title>
-            <webwork xml:id="inc-dec">
+            <webwork xml:id="exercise-inc-dec">
                 <setup>
                     <var name="$Increasing">
                         <set>
@@ -158,7 +158,7 @@
                 </setup>
                 <statement>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZSZzHdMg/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-
+                    <p>Drag the input value A along the horizontal axis to determine where the function is increasing or decreasing.</p>
                     <p><ol label="a">
                         <li>
                             <p>A function is increasing if</p>
@@ -179,7 +179,7 @@
 
         <p>Another way to think about concavity is to imagine a straight metal wire. While one end of the wire is fixed, if the other end is pushed up the wire is now concave up. If that other end is pushed down the wire is concave down.</p>
 
-        <exercise>
+        <exercise xml:id="exercise-concavity">
             <title>Concave Up or Concave Down</title>
             <webwork>
                 <setup>
@@ -202,7 +202,6 @@
                 </setup>
                 <statement>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NrncRJR3/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-
                     <p>Use the slider on the graph to change the concavity of the function.</p>
 
                     <p><ol label="a">
@@ -220,7 +219,6 @@
         </exercise>
 
         <p>Now let's put all these function characteristics on the same graph. Using 24 hour time with midnight at <m>t = 0</m>, the graph in the next exercise shows the temperature variation in a small northern town during one day.</p>
-
 
         <exercise xml:id="exercise-increasing-decreasing">
             <webwork>
@@ -264,6 +262,7 @@
                 </setup>
 
                 <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tmanmNPG/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>The temperature <m>T</m> in degrees Fahrenheit throughout the day is a function of the time of day <m>t</m> in hours.  In function notation would could write:<me>T = f(t)</me></p>
 
                     <p>Sometimes the temperature rises (increasing) and sometimes is falls (decreasing). Sometimes the temperatures are above zero (positive) and sometimes the temperatures are below zero (negative).</p>
@@ -275,8 +274,6 @@
                     <p>Best to keep the time between <m>0</m> and <m>24</m> hours and round your answers to the nearest interger.</p>
 
                     <p>Remember, the input variable is <m>t</m>!</p>
-
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tmanmNPG/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
                     <p>Use inequalities to describe the interval(s) on which the function has the given characteristic.  If there is more   than one interval, list them as they appear from left to right on the graph.</p>
 

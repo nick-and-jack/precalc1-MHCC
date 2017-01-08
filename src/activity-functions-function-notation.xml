@@ -12,7 +12,7 @@
 -->
 
 <section xml:id="activity-functions-function-notation" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Function Notation (Input, Output)</title>
+    <title>Function Notation (Input, Output) Activity</title>
 
     <objectives>
         <introduction>
@@ -53,9 +53,79 @@
         <p>Start by remebmering this: one input, one output.</p>
 
         <p>A <term>function</term><index><main>function</main></index> is a rule that takes a piece of <q>usable</q> information that you pick (input) and gives you some kind of result (output).  By <q>usable</q> we mean information that has meaning for the function.</p>
-        <p>Think of a function as a sort of machine.  You put something into the machine, the machine does something then out pops a result.  In this course we will mostly put numbers into the machine and the machine will give us other numbers as results.</p>
-        <p>A simple example of a function machine is a temperature predictor.  The machine will predict the outside temperature throughout the day in your neighborhood. You only have to choose a time to walk outside, like <m>10</m> a.m. That choice of time is an input. The result of making that choice can is an outside temperature like <m>42</m> degress fahrenheit. That result is an output. The function in this case is the rule or process the machine uses to predict the temperature given a time of day.</p>
-        <p>In this example we say the temperature outside is a <term>function</term> of the time of day. It's a function because there is a relationship that links time and temperature together and most importantly, for each time you choose there an be only one temperature predicted.</p>
+        <p>Think of a function as a sort of machine.  Using some input, the machine does something to the input and then out pops a result.  In this course our inputs will be mostly numbers and the process will yeild numbers as results.</p>
+        <example>
+            <p>A simple example of a function machine is a temperature converter. It converts a temperature from degrees Fahrenheit to degrees Celcius.</p>
+            <p>The function is the rule or process used to convert from one measure of temperature to the other. Our function is a graph, but it could have been a table of values or a formula.</p>
+            <p>Thus we say the temperature in celcius is a <term>function</term> of the temperature in fahrenheit.</p>
+         <exercise>
+            <webwork>
+                <setup>
+                    <var name="$evaluate">
+                        <static>25</static>
+                    </var>
+                    <var name="$solve">
+                        <static>F=-7.6</static>
+                    </var>
+                    <pg-code>
+                        for my $i (0,1) {
+                            $gr[$i] = init_graph(-60,-60,110,110,axes=>[0,0],grid=>[17,17],size=>[400,400]);
+                            $gr[$i]->lb('reset');
+                            for my $j (-40,-20,20,40,60,80,100) {
+                                $gr[$i]->moveTo($j,-3);
+                                $gr[$i]->lineTo($j,3,'black',3);
+                                $gr[$i]->lb(new Label($j,-3,$j,'black','center','top'));
+                                $gr[$i]->moveTo(-5,$j);
+                                $gr[$i]->lineTo(5,$j,'black',3);
+                                $gr[$i]->lb(new Label(7,$j,$j,'black','left','middle'));
+                            };
+                            $gr[$i]->lb(new Label(105,5,'Temp (deg F)','black','right','bottom'));
+                            $gr[$i]->lb(new Label(5,105,'Temp (deg C)','black','left','middle'));
+                            add_functions($gr[$i], "5/9*(x-32) for x in &lt;-160,110> using color:blue and weight:2");
+                        };
+                        $gr[1]->moveTo(77,0);
+                        $gr[1]->lineTo(77,25,'black',1);
+                        $gr[1]->arrowTo(0,25,'black',1);
+                        $gr[1]->moveTo(0,-22);
+                        $gr[1]->lineTo(-7.6,-22,'black',1);
+                        $gr[1]->arrowTo(-7.6,0,'black',1);
+                        Context()->flags->set(tolType=>'absolute',tolerance=>'3');
+                        $evaluate=Compute("25");
+                        Context("Numeric");
+                        Context()->flags->set(tolType=>'absolute',tolerance=>'3');
+                        Context()->variables->are(C=>'Real',F=>'Real');
+                        parser::Assignment->Allow;
+                        $solve=Formula("F=-7.6");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The graph below shows temperature in degrees Celsius, C, as it depends on the temperature in degrees Fahrenheit, F.</p>
+                    <figure>
+                        <image pg-name="$gr[0]" />
+                    </figure>
+                    <p>Use the graph to:<ol>
+                        <li>
+                            <p>What is the temperature in Celcius of <m>77</m> degrees Fahrenheit?</p>
+                            <p><var name="$evaluate" width="15" /></p>
+                        </li>
+                        <li>
+                            <p>What temperature in Fahrenheit is the same as <m>-22</m> degrees Celcius? (Answer in the form <q><m>F=\ldots</m></q>.)</p>
+                            <p><var name="$solve" width="15" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p>To graphically find these answers, visualize arrows and guidelines on the graph. To find the Celcius equivalent of <m>77</m> degrees Fahrenheit, recognize that <m>77</m> is an input value, and so you must identify it on the horizontal axis. From there, move up, then left to the vertical axis, where you land at about <m>25</m> degrees Celcius. So <m>77 \text{degrees Fahrenheit} \approx25 \text{degrees Celcius}</m>.</p>
+
+                    <figure>
+                        <image pg-name="$gr[1]" />
+                    </figure>
+
+                    <p>A similar process in reverse is used to determine the Fahrenheith temperature equivalent of <m>-22</m> degrees Celcius. Recognize that <m>-22</m> is an output, and so you must identify it on the vertical axis. From there, move left, then up to the horizontal axis, where you land at about <m>-8</m> degrees Fahrenheit. So the answer is <m>F\approx-8</m>.</p>
+                </solution>
+            </webwork>
+        </exercise>
+        </example>
         <p>This brings up some good questions:</p>
         <p><ul>
               <li><p>How do we communicate that we have a function? There has to be a simple or quick way to communicate we have a function.</p></li>
@@ -173,18 +243,19 @@
         <p>For the <q>number of hours after 8 a.m.</q>, we can use the variable <m>t</m> where t counts how many hours have passed since 8 a.m.</p>
 
         <p>Typically we use variables that have something to do with the context of the problem, but sometimes we generalize an expression or equation with <m>x</m>'s and <m>y</m>'s when we have nothing specific in mind.</p>
-
-        <p>If the variables represent actual things or events we must define the varialbles to include the <term>units</term><index><main>units</main></index> we used to measure the event. This allows us to extract meaning from the values or expressions.</p>
-        <p>If you know Spanish you can <em>interpret</em> the meaning of a Spanish article you read into English.  Likewise, if you know <q>math</q> you can interpret the meaning of function notation into English if you know what the variables in the notation mean or what they are measuring.</p>
-
-        <blockquote>
-            <p>If <m>D</m> is distance you must define the units in which the distance is measured: miles, inches, centimeters, light years<ellipsis />what?</p>
-        </blockquote>
-
-        <blockquote>
-            <p>If <m>t</m> is time, will it be measured with units of seconds, hours<ellipsis />years?</p>
-        </blockquote>
-
+        <paragraphs>
+            <title>Variables have units</title>
+                <p>If the variables represent actual things or events we must define the varialbles to include the <term>units</term><index><main>units</main></index> we used to measure the event. This allows us to extract meaning from the values or expressions.</p>
+                <p>If you know Spanish you can <em>interpret</em> the meaning of a Spanish article you read into English.  Likewise, if you know <q>math</q> you can interpret the meaning of function notation into English if you know what the variables in the notation mean or what they are measuring.</p>
+        
+                <blockquote>
+                    <p>If <m>D</m> is distance you must define the units in which the distance is measured: miles, inches, centimeters, light years<ellipsis />what?</p>
+                </blockquote>
+        
+                <blockquote>
+                    <p>If <m>t</m> is time, will it be measured with units of seconds, hours<ellipsis />years?</p>
+                </blockquote>
+        </paragraphs>
         <p>Since the position of the train depends on the amount of time that has passed, we say <q>the distance depends on time</q>.  In fact, the distance of the train from downtown is a <term>function of time</term>.</p>
 
         <p>Function notation allows us to communicate that distance is a function of time by simply writing <m>D = f(t)</m>. The notation <m>f(t)</m> is read as, <q><m>f</m> of <m>t</m></q>.</p>
@@ -618,9 +689,9 @@
               </pg-code>
             </setup>
             <statement>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QTfyBkEb/width/413/height/266/border/888888" width="413px" height="266px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
               <p>Drag the input left or right to see the results on the graph.</p>
               <p>Hint: think about how many outputs each input yields.</p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QTfyBkEb/width/413/height/266/border/888888" width="413px" height="266px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
               <p><var name="$nopass" form="buttons" /></p>
               <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Req8ZfCM/width/413/height/290/border/888888" width="413px" height="290px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
               <p><var name="$pass" form="buttons" /></p>
@@ -659,10 +730,10 @@
                 </setup>
 
                 <statement>
-                    <p>Drag the input to change the postion of the vertical line.</p>
-                    <p>Does the line intersect the graph more than once?  If so, it does not pass the vertical line test and the graph is not a function.</p>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tqS4kTMd/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p><var name="$no" form="buttons" /></p>
+                    <p>Drag the input to change the postion of the vertical line.</p>
+                    <p>Does the line intersect the graph more than once?  If so, it does not pass the vertical line test and the graph is not a function.</p>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zepNEn3W/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p><var name="$yes" form="buttons" /></p>
                 </statement>
@@ -696,7 +767,6 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>Remember in a vertical table the inputs are found in the left column (independent variable) while outputs are found in the right column (dependent variable)</p>
                     <table>
                         <tabular top="medium" bottom="medium" left="medium" right="medium">
                             <col halign="center"/>
@@ -731,6 +801,7 @@
                             </row>
                         </tabular>
                     </table>
+                    <p>Remember in a vertical table the inputs are found in the left column (independent variable) while outputs are found in the right column (dependent variable)</p>
                     <p>Use the table to evaluate <m>f(2.5)</m></p>
                     <p><m>f(2.5)= </m><var name="$dist" width="5" /> <var name="$miles" form="popup" /></p>
                 </statement>
@@ -802,8 +873,8 @@
                 </setup>
 
                 <statement>
-                    <p>The graph the the function <m>f(x)</m> is shown below.  Slide the input along the horizonal axis to help you evaluate the function.</p>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WNngwB3K/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>The graph the the function <m>f(x)</m> is shown below.  Slide the input along the horizonal axis to help you evaluate the function.</p>
                     <p>Evaluate <m>f(-4)</m></p>
                     <p><m>f(-4) = </m> <var name="$output1" width="5" /></p>
                     <p>Evaluate <m>f(-1)</m></p>
@@ -929,11 +1000,9 @@
         <title>Solve</title>
 
         <p>What if the output, the result, is already known and we want to know all the inputs that give us this result?  This is called <term>solve</term><index><main>solve</main></index>.</p>
-
+        <p>If you live in Oregon in the winter, you might ask, <q>What time will the temperature outside be <m>37</m> degrees fahrenheit?</q> Typically there might be two answers to this question, one time in the morning and another time in the afternoon.</p>
+        <p>You could answer the question with actual times if you had a time <init>vs.</init> temperature graph or a formula or a table of times and temperatures.</p>
         <p>Solve means to work backwards from a known or given output value and determine all the inputs, if any, that give us the desired output.</p>
-
-        <p>If you live in Oregon in the winter, you might ask, <q>What time will the temperature outside be <m>37</m> degrees fahrenheit?</q> Typically there might be two answers to this question, one time in the morning and another time in the afternoon.  You could answer the question with actual times if you had a time <init>vs.</init> temperature graph or a formula or a table of times and temperatures.</p>
-
         <p>Suppose we want the output of a function to be <m>y =0</m>. Therefore, we must find all the input values of <m>x</m> that gives us that result. There may not be any, but there could be one, several or even infinite possible inputs that gives <m>y = 0</m> as the output.</p>
         <exercise>
           <webwork>
@@ -980,10 +1049,9 @@
 
               <stage>
                   <statement>
+                      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/DpUNTRSC/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                       <p>On a graph the output is the height of the graph.  Therefore,<q>Solve <m>f(x) = 0</m></q> on a graph means, <q>Find all the places on the <m>x</m>-axis where the graph reaches a height of <m>y = 0</m></q></p>
                       <p>Drag the output to the desired height on the <m>y</m>-axis to help you solve the given equations.</p>
-
-                      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/DpUNTRSC/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
                       <p>To solve the equation <m>f(x) = 0</m> graphically, move the height of the horizontal line to <m>y = 0</m></p>
 
@@ -1011,9 +1079,9 @@
 
               <stage>
                 <statement>
-                  <p>Adjust the height of the horizontal line to solve <m>f(x) = 3</m></p>
                   <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/DpUNTRSC/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                   <p>How many solutions does this equation have?</p>
+                  <p>Adjust the height of the horizontal line to solve <m>f(x) = 3</m></p>
                   <p>There is/are <var name="$numSolutions2" width="5" /> solution(s).</p>
 
                   <p>The solution(s) to <m>f(x) = 3</m> is/are: <m>x=</m><var name="$solutions2" width="15" />. (Use commas to separate multiple answers if necessary.)</p>
@@ -1050,7 +1118,7 @@
             <p>Solve <m>f(x) = 0</m></p>
         </blockquote>
 
-        <p>Solve means, <q>Find the input that gives you a particular result</q>.  In our case the result we want is an output value of <m>0</m>. There are still three answers to the question and each answer is called a <q>solution</q>.</p>
+        <p>In other words, <q>Find the input that gives you a particular result</q>.  In our case the result we want is an output value of <m>0</m>. There are still three answers to the question and each answer is called a <q>solution</q>.</p>
 
         <p>The statement:</p>
 
@@ -1103,12 +1171,8 @@
                 </setup>
 
                 <statement>
-                    <p>Next are the graphs of two functions, one linear <m>y = 0.55x - 0.3</m> and the other <m>f(x)=2^x + 0.025</m> is called <em>exponential</em>. Solving the equation</p>
-                    <me>2^x + 0.025 = 0.55x + b</me>
-                    <p>where <q>b</q> is any number, would not be possible using our current algebra techniques. But in English, sloving the equation means to find where the functions intersect. That we can do quite easily using graphs.</p>
-
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rZySMTyJ/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-
+                    <p>The graphs of two functions are shown, one is linear <m>y = 0.55x - 0.3</m> and the other <m>f(x)=2^x + 0.025</m> is called <em>exponential</em>. Solving the equation <me>2^x + 0.025 = 0.55x -0.3</me> would not be possible using our current algebra techniques. But in English, solving the equation means to find where the functions intersect. That we can do quite easily using graphs.</p>
                     <p><ol label="a">
                         <li>
                             <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025 = 0.55x + b</me>has two solutions.</p>
