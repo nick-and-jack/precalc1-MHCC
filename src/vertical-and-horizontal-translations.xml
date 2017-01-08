@@ -28,16 +28,16 @@
     <conclusion>
       <title>Gist of Vertical and Horizontal Translations</title>
       <paragraphs>
-        <p>To <term>transform</term> a function means to change it &#8212; either its <term>input</term> or its <term>output</term>. If the change is only in position (the graph looks the same, but is in a different location) the change is called a <term>translation</term>.</p>
+        <p>To <term>transform</term> a function means to change it <mdash /> either its <term>input</term> or its <term>output</term>. If the change is only in position (the graph looks the same, but is in a different location) the change is called a <term>translation</term>.</p>
         <p>In this chapter we learn how to translate a graph or a table of values. This will involve adding or subtracting values to the input and/or the output of a function's formula.</p>
         <p>It will be important for us to distinguish between the input and the output of a function. For instance, we must understand that the function <me>f(x) = x^2 - 5x</me>
         has an input <m>x</m> and an output <m>f(x)</m>.</p>
-        <p>If the input is changed to <m>x−3</m>, then the output would be <m>f(x−3)</m>. If the input is changed to <m>2w + 5</m>, the output would be <m>f(2w + 5)</m>.</p>
+        <p>If the input is changed to <m>x−3</m>, then the output would be <m>f(x−3)</m>. If the input is changed to <m>w + 1</m>, the output would be <m>f(w+1)</m>.</p>
         <p>We must also remember how a formula works. For example, if you put <m>x</m> into a formula, then the formula will have <m>x</m>’s in it. But if you substitute <m>x–3</m> into a formula, then it will have <m>(x-3)</m>’s in it.</p>
-        <p>Therefore, for the function <m>f(x) = x^2 - 5x</m>, we would have: <md><mrow>f(x−3) = (x−3)^2 − 5(x−3)</mrow></md> and <md><mrow>f(2w+5) = (2w+5)^2 − 5(2w+5)</mrow></md></p>
+        <p>Therefore, for the function <m>f(x) = x^2 - 5x</m>, we would have: <md><mrow>f(x−3) = (x−3)^2 − 5(x−3)</mrow></md> and <md><mrow>f(w+1) = (w+1)^2 − 5(w+1)</mrow></md></p>
       </paragraphs>
       <paragraphs>
-        <p>Now what does changing the input do to the <em>graph</em> of <m>f(x)</m>? It turns out that subtracting 3 from the input just moves the graph of the function to the right. This is called a horizontal <term>translation</term> (or horizontal <term>shift</term>).</p>
+        <p>Now what does changing the input do to the <em>graph</em> of <m>f(x)</m>? It turns out that subtracting <m>3</m> from the input would move the graph of <m>f</m> to the right by <m>3</m> units, or adding <m>1</m> to the input would move the graph to the left by <m>1</m> unit. This is called a horizontal <term>translation</term> (or horizontal <term>shift</term>).</p>
         <p>In short:
             <blockquote>Adding a number to the input will shift the graph to the <em>left</em>.</blockquote>
             <blockquote>Subtracting a number from the input will shift the graph to the <em>right</em>.</blockquote>
@@ -111,10 +111,10 @@
               </image>
           </figure>
           <p>A different function, <m>h(x) = (x+1) - (x+1)^3 + 2</m>, is a certain transformation of <m>g(x)</m>.</p>
-          <ol>
+          <p><ol>
             <li><p>Describe what transformations were done to <m>g(x)</m> to make <m>h(x)</m>.</p></li>
             <li><p>Then sketch a graph of <m>h(x) = (x+1) - (x+1)^3 + 2</m> by hand.</p></li>
-          </ol>
+          </ol></p>
         </statement>
         <hint>
             <p>Notice that <md>
@@ -177,15 +177,15 @@
           </setup>
 
             <statement>
-              <ul>
+              <p><ul>
                 <li><p>The parabola <m>f(x) = x^2</m> has its vertex at the origin <m>(0,0)</m>. Write a formula for this parabola, after it has been shifted so its vertex is at the point <m>(<var name="$h1"/>, <var name="$k1"/>)</m>.</p>
                     <p><m>y = </m><var name="$f" width="20" /></p></li>
                 <li><p>Write the formula if the vertex is at the point <m>(<var name="$h2"/>, <var name="$k2"/>)</m>.</p>
                     <p><m>y = </m><var name="$g" width="20" /></p></li>
-              </ul>
+              </ul></p>
             </statement>
             <solution>
-              <p>The correct formulas are <m>y = <var name="$f"/></m> and <m>y = <var name="$g"/></m>.</p>
+              <p>The correct formulas are: <me>y = <var name="$f"/></me> and <me>y = <var name="$g"/></me></p>
             </solution>
           </webwork>
       </exercise>
@@ -217,7 +217,6 @@
           </setup>
           <statement>
               <p>The dashed green graph below shows <m>f(x) = x^2 - \sqrt{x}</m>. The solid red graph shows <m>g(x)</m>, which is some transformation of <m>f(x)</m>.</p>
-
               <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VdWn6se7/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
               <p>Decide how <m>f(x) = x^2 - \sqrt{x}</m> was transformed to make <m>g(x)</m>. Then, choose the correct formula for <m>g(x)</m> below.</p>
               <p><var name="$formula1" form="buttons" /></p>
@@ -259,7 +258,6 @@
           </setup>
           <statement>
             <p>The dashed green graph below shows <m>f(x) = 5\left|x\right| - x^2</m>. The solid red graph shows <m>g(x)</m>, which is a transformation of <m>f(x)</m>.</p>
-
             <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tunQVvGS/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
             <p>Decide how <m>f(x) = 5\left|x\right| - x^2</m> was transformed to make <m>g(x)</m>. Then, choose the correct formula for <m>g(x)</m> below.</p>
             <p><var name="$formula2" form="buttons" /></p>
@@ -277,8 +275,60 @@
           </solution>
         </webwork>
       </exercise>
-
+      <paragraphs><title>Translations in context</title>
+      <p>Of course, translations should do more for us than just provide a quick way to move graphs around. If a function describes something about a real object or situation, then knowing about changes to that object should help us alter the function to account for those changes.</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$first">
+              <set>
+                <member>\text{?}</member>
+                <member>T(t+7)</member>
+                <member>T(t)+7</member>
+                <member correct="yes">T(t-7)</member>
+                <member>T(t)-7</member>
+              </set>
+            </var>
+            <var name="$second">
+              <set>
+                <member>\text{?}</member>
+                <member>T(t+14)+5</member>
+                <member correct="yes">T(t-14)+5</member>
+                <member>T(t+14)-5</member>
+                <member>T(t-14)-5</member>
+              </set>
+            </var>
+            <pg-code>
+              $first=PopUp(
+              ["?","T(t + 7)","T(t) + 7","T(t - 7)","T(t) - 7"],"T(t - 7)"
+              );
+              $second=PopUp(
+              ["?","T(t + 14) + 5","T(t - 14) + 5","T(t + 14) - 5","T(t - 14) - 5"],"T(t - 14) + 5"
+              );
+            </pg-code>
+          </setup>
+          <statement>
+            <p>Suppose <m>T(t)</m> describes the average daily temperature (in degrees) this week, where <m>t</m> is the day of the year (<m>t=1</m> for January <m>1^{\text{st}}</m>, etc.).</p>
+            <p>For each statement below, choose the correct translation which represents the temperature function for that week.</p>
+            <p><ol>
+              <li><p>"Next week's temperatures are expected to be an exact repeat of this week."</p>
+              <p>Formula for temperature, one week from now:  <var name="$first" form="popup" /></p></li>
+              <li><p>"Two weeks from now, temperatures are expected to be just like this week, but about <m>5</m> degrees warmer."</p>
+              <p>Formula for temperature, two weeks from now:  <var name="$second" form="popup" /></p></li>
+            </ol></p>
+          </statement>
+          <hint>
+            <p>Suppose today is the <m>50^{\text{th}}</m> day of the year. Next week, on the <m>57^{\text{th}}</m> day of the year, the temperature should be the same as <m>T(50)</m> again.</p>
+          </hint>
+          <solution>
+            <p><ol>
+              <li><p>The formula we could use next week is <me>T(t-7)</me> because for any date next week, the temperature would be the same as <m>7</m> days earlier. This is the formula way of saying we're "turning back time".</p></li>
+              <li><p>In two weeks, we would use <me>T(t-14)+5</me> because the temperatures are the same as <m>14</m> days before, <em>and</em> they are <m>5</m> degrees warmer.</p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+    </paragraphs>
 
     </conclusion>
-
 </chapter>
