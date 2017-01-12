@@ -91,7 +91,7 @@
               <p>Traveling from Portland, OR to Seattle, WA (about <m>200</m> miles) in <m>4</m> hours is an average speed of <quantity><mag>50</mag><unit base="mileperhour" /></quantity>.</p>
             </li>
             <li>
-              <p>Pressure at the surface of the ocean is about <quantity><mag>14.6</mag><unit base="poundpersquareinch" /></quantity> (pounds per square inch), if you dive under water <m>20</m> feet the pressure is about <quantity><mag>23.6</mag><unit base="poundpersquareinch" /></quantity>.  That's about <quantity><mag>0.45</mag><unit base="poundpersquareinch" /></quantity> per foot underwater.</p>
+              <p>Pressure at the surface of the ocean is about <quantity><mag>14.6</mag><unit base="poundpersquareinch" /></quantity> (pounds per square inch). If you dive under water <m>20</m> feet the pressure is about <quantity><mag>23.6</mag><unit base="poundpersquareinch" /></quantity>.  That's an average rate of pressure increase of about <quantity><mag>0.45</mag><unit base="poundpersquareinch" /></quantity> per foot underwater.</p>
             </li>
             <li>
               <p>Earning <m>\$108</m> for <m>6</m> hours of work is an average hourly pay rate of <m>18</m> dollars per hour.</p>
@@ -152,7 +152,9 @@
             </webwork>
         </exercise>
 
-        <p>In math we use the greek letter <m>\Delta</m> to mean <q>change in</q>. In our train story where <m>D = f(t)</m> the expression <m>\Delta f</m> means <q>change in miles from downtown</q>.  A positive change means the train travels away from downtown and a negative change means the train travels towards downtown.</p>
+        <p>In math we use the greek letter <m>\Delta</m> to mean <q>change in</q>. Change between two vaues is typically measured by sbutracting an old value from a new value.</p>
+        <p>In our train story where <m>D = f(t)</m> the expression <m>\Delta f</m> means <q>change in miles from downtown</q>.  As the train travels away from downtown, the distance from downtown increases.  New distance is greater than old distance, so traveling away from downtown is a positive change in distance.</p>
+        <p>However, the distance from downtown decreases as the train travels towrds downtown. New distance is less than old distance, therefore traveling towards downtown is a negative change in distance.</p>
 
         <exercise>
             <webwork>
@@ -239,15 +241,15 @@
                             <p>The output can be represented as <var name="$f2" width="2" evaluator="$evf2"/></p>
                         </li>
                         <li>
-                            <p>If the input changes from <m>x = 2</m> to <m>x = 7</m> how do we calculate the change in the input?</p>
+                            <p>Calculate the change in the input in moving from <m>x = 2</m> to <m>x = 7</m>.</p>
                             <p><m>\Delta x</m> <m>=</m> <var name="$in1" width="2" /> <m>-</m> <var name="$in2" width="2" /></p>
                         </li>
                         <li>
-                            <p>As the input changes from <m>x = 2</m> to <m>x = 7</m> the output also changes.  How do we calculate the change in the output?</p>
+                            <p>As the input changes from <m>x = 2</m> to <m>x = 7</m> the output also changes. Calculate the change in the output.</p>
                             <p><m>\Delta f</m> <m>=</m> <var name="$f7" width="2" /> <m>-</m> <var name="$f2" width="2" /></p>
                         </li>
                         <li>
-                            <p>Now let's put all that notation together. We want to calculate the  change in the output and divide that by the change in the input.</p>
+                            <p>Now let's put all that notation together. We want to calculate the average rate of change in the output as the input goes from <m>x = 2</m> to <m>x = 7</m>.</p>
 
                             <p><m>\dfrac{\Delta f}{\Delta x} =</m></p>
 
@@ -326,7 +328,7 @@
                 <stage>
                     <statement>
                         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vB6mAHUg/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                        <p>Use the graph of the function <m>f(x)</m> to place each point at the specified coordinates.</p>
+                        <p>Use the graph of the function <m>f(x)</m> to place each point at the specified coordinates. You will get a message when the points are placed correctly.</p>
                         <p>Point <m>A</m> at <m>(7,f(7))</m>, Point <m>B</m> at <m>(2,f(2))</m> and Point <m>C</m> at <m>(-8,f(-8))</m>.</p>
                         <p><ol label="a">
                             <li>
@@ -479,6 +481,12 @@
                     <var name="$aveRate2">
                         <static>-1</static>
                     </var>
+                    <var name="$fzero">
+                        <static>-6</static>
+                    </var>
+                    <var name="$ftwo">
+                        <static>-4</static>
+                    </var>
 
                     <pg-code>
                         $deltaInput = Real(2);
@@ -486,6 +494,8 @@
                         $aveRate = Real(-1);
                         $aveRate1 = Real(-1);
                         $aveRate2 = Real(-1);
+                        $fzero = Real(-6);
+                        $ftwo = Real(-4);
                     </pg-code>
                 </setup>
 
@@ -497,21 +507,15 @@
                         </li>
                         <li>
                             <p>Use the formula <m>f(x) = (x-2)(x+3)</m> to calculate <m>\Delta f</m> on the interval <m>-2 \leq x \leq 0</m>.</p>
+                            <p><m>f(0) =</m> <var name="$fzero" width="5" /></p>
+                            <p><m>f(-2) =</m> <var name="$ftwo" width="5" /></p>
                             <p><m>\Delta f = </m> <var name="$deltaF" width="5" /></p>
                         </li>
                         <li>
                             <p>Use the two results above to calculate <m>\frac{\Delta f}{\Delta x}</m> on the interval <m>-2 \leq x \leq 0</m>.</p>
                             <p><m>\frac{\Delta f}{\Delta x} = </m> <var name="$aveRate" width="5" /></p>
                         </li>
-                        <li>
-                            <p>One question that comes up a lot is, <q>Does it matter what order to evaluate <m>\frac{\Delta f}{\Delta x}</m></q>?</p>
-                            <p>To answer this question recall earlier you calculated <m>f(0)</m> and <m>f(-2)</m>. Use these values to make the following calculations:</p>
-                            <p><m>\frac{f(0) - f(2)}{0 - 2} = </m> <var name="$aveRate1" width="5" /></p>
-                            <p><m>\frac{f(2) - f(0)}{2 - 0} = </m> <var name="$aveRate2" width="5" /></p>
-                            <p>The only thing that matters is that the ordered pairs are kept together.  In this example the ordered pairs are <m>(0, f(0))</m> and <m>(2,f(2))</m>. If you choose to start with <m>x = 0</m> in the denominator then you must start with <m>f(0)</m> in the numerator.</p>
-                            <p>On the other hand, if you choose to start with <m>x = 2</m> in the denominator then you must start with <m>f(2)</m> in the numerator. We say that the ordered pairs <em>must be vertically aligned</em>.</p>
-                        </li>
-                    </ol></p>
+                        </ol></p>
                 </statement>
                 <hint>
                   <p>To find an average rate of change of any function where, in general <m>y = f(x)</m>, you need two ordered pairs (two points). Use each input to find its corresponding output. That makes one orederd pair.</p>
@@ -523,9 +527,41 @@
                   <p>Calculate the change in the input (subtract the two inputs). That's <m>\Delta x</m> </p>
                   <p>Make sure to subtract the ordered pairs in the same order.</p>
                   <p>Given ordered pairs <m>(a,f(a))</m> and <m>(b,f(b))</m> if you start with <m>f(a) - f(b)</m> as <m>\Delta f</m>, then you must start with <m>a - b</m> for <m>\Delta x</m>.</p>
+                  <p>But if you go the other direction <m>f(b) - f(a)</m> as <m>\Delta f</m>, then you must start with <m>b - a</m> for <m>\Delta x</m>.</p>
                 </hint>
             </webwork>
         </exercise>
+        <p>One question that comes up a lot is, <q>Does it matter what order to evaluate <m>\frac{\Delta f}{\Delta x}</m> ?</q></p>
+        <p>To answer this question recall earlier you used <m>f(x) = (x-2)(x+3)</m> to calculate <m>f(0)</m> and <m>f(-2)</m>. Use these values to calculate the average rate of change in two different directions.</p>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$forward">
+                        <static>-1</static>
+                    </var>
+                    <var name="$backward">
+                        <static>-1</static>
+                    </var>
+                    
+                    <pg-code>
+                        $forward = Real(-1);
+                        $backward = Real(-1);
+                    </pg-code>
+                </setup>
+        
+                <statement>
+                    <p>Previously you were given the function <m>f(x) = (x-2)(x+3)</m> and you calculated <m>f(0) = -6</m> and <m>f(2) = -4</m>. Use these values to calculate the average rate of change of the function in two different directions.</p>
+                    <p><m>\frac{f(0) - f(2)}{0 - 2} = </m> <var name="$forward" width="5" /></p>
+                    <p><m>\frac{f(2) - f(0)}{2 - 0} = </m> <var name="$backward" width="5" /></p>
+                </statement>
+                
+                <solution>
+                    <p>It does not matter what direction you calculate an average rate of change.  Just keep the ordered pairs vertically aligned!</p>
+                </solution>
+            </webwork>
+        </exercise>
+        <p>The only thing that matters is that the ordered pairs are kept together.  In the previous exercise the ordered pairs are <m>(0, f(0))</m> and <m>(2,f(2))</m>. If you choose to start with <m>x = 0</m> in the denominator then you must start with <m>f(0)</m> in the numerator.</p>
+        <p>On the other hand, if you choose to start with <m>x = 2</m> in the denominator then you must start with <m>f(2)</m> in the numerator. We say that the ordered pairs <em>must be vertically aligned</em>.</p>
 
         <p>Let's finish this activity by going back to the train example where the distance (miles) of the train from downtown is a function of the time (hours) after 8 a.m.  In other words <m>D = f(t)</m>.</p>
 
