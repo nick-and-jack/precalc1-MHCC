@@ -62,42 +62,40 @@
         <p>Working from the inside-out, this means that the function <m>g</m> is used first to get an output, and then that output is used as the <em>input</em> for the function <m>f</m>.</p>
 
         <exercise xml:id="exercise-composition-numbers">
-          <statement>
-            <p>Suppose <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>. Compute each of the following compositions:</p>
-            <p><ol label="a" cols="2">
-              <li>
-                <p><m>f(g(5))</m></p>
-              </li>
-              <li>
-                <p><m>g(f(5))</m></p>
-              </li>
-            </ol></p>
-          </statement>
+          <webwork>
+            <statement>
+              <p>Suppose <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>. Compute each of the following compositions. Remember to work inside the parentheses first.</p>
 
-          <hint>
-            <p>Remember to work inside the parentheses first.</p>
-          </hint>
+              <p><ol label="a">
+                <li>
+                  <p><m>f(g(5))</m>. We can first work inside the parentheses to find the value of <m>g(5)</m>, and then use that value as the input for <m>f</m>.<md>
+                    <mrow>f(g(5)) \amp= f\mathopen{}\left(5^2 + 5\right)\mathclose{}</mrow>
+                    <mrow>\amp= f(30)</mrow>
+                    <mrow>\amp= 3\cdot30 + 4</mrow>
+                    <mrow>\amp= 94</mrow>
+                  </md></p>
+                </li>
+                <li>
+                  <p><m>g(f(5))</m>. We can first work inside the parentheses to find the value of <m>f(5)</m>, and then use that value as the input for <m>g</m>.<md>
+                    <mrow>g(f(5)) \amp= g(3\cdot5 + 4)</mrow>
+                    <mrow>\amp= g(19)</mrow>
+                    <mrow>\amp= 19^2 + 19</mrow>
+                    <mrow>\amp= 380</mrow>
+                  </md></p>
+                </li>
+              </ol></p>
 
-          <answer>
-            <p><ol label="a">
-              <li>
-                <p>We can first work inside the parentheses to find the value of <m>g(5)</m>, and then use that value as the input for <m>f</m>.<md>
-                  <mrow>f(g(5)) \amp= f\mathopen{}\left(5^2 + 5\right)\mathclose{}</mrow>
-                  <mrow>\amp= f(30)</mrow>
-                  <mrow>\amp= 3\cdot30 + 4</mrow>
-                  <mrow>\amp= 94</mrow>
-                </md></p>
-              </li>
-              <li>
-                <p>We can first work inside the parentheses to find the value of <m>f(5)</m>, and then use that value as the input for <m>g</m>.<md>
-                  <mrow>g(f(5)) \amp= g(3\cdot5 + 4)</mrow>
-                  <mrow>\amp= g(19)</mrow>
-                  <mrow>\amp= 19^2 + 19</mrow>
-                  <mrow>\amp= 380</mrow>
-                </md></p>
-              </li>
-            </ol></p>
-          </answer>
+              <p>So we found: <ol label="a">
+                <li>
+                  <p><m>f(g(5))=</m><var name="94" width="5" /></p>
+                </li>
+                <li>
+                  <p><m>g(f(5))=</m><var name="380" width="5" /></p>
+                </li>
+              </ol></p>
+            </statement>
+
+          </webwork>
         </exercise>
 
         <p>If we use function composition with a numerical input, we will get a numerical answer. However, if we just use <m>x</m> as the input and compose functions, the result will be an expression involving <m>x</m>, which is a brand new function representing the composition.</p>
@@ -105,50 +103,51 @@
         <p>This new function is called a <term>composite</term> function.</p>
 
         <exercise xml:id="exercise-composition-formulas">
-          <statement>
-            <p>Again, let <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>. This time, find the composite functions by using <m>x</m> as the input.</p>
-            <p><ol label="a" cols="2">
-              <li>
-                <m>f(g(x))</m>
-              </li>
-              <li>
-                <m>g(f(x))</m>
-              </li>
-            </ol></p>
-          </statement>
-
-          <hint>
-            <p>Remember to simplify the expression inside the parentheses first.</p>
-          </hint>
-
-          <answer>
-            <p><ol label="a">
-              <li>
-                <p>We can first substitute the expression for <m>g(x)</m> inside the parentheses, and then use that expression as the input for <m>f</m>.<md>
+          <webwork>
+            <setup>
+              <pg-code>
+                Context("LimitedRadical");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>Again, let <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>. This time, find the composite functions by using <m>x</m> as the input. Remember to simplify the expression inside the parentheses first.</p>
+              <p><ol label="a">
+                <li>
+                  <p><m>f(g(x))</m>. We can first substitute the expression for <m>g(x)</m> inside the parentheses, and then use that expression as the input for <m>f</m>.<md>
                   <mrow>f(g(x)) \amp= f\mathopen{}\left(x^2 + x\right)\mathclose{}</mrow>
                   <mrow>\amp= 3\left(x^2 + x\right) + 4</mrow>
                   <mrow>\amp= 3x^2 + 3x + 4</mrow>
                 </md></p>
-              </li>
-              <li>
-                <p>We can first substitute the expression for <m>f(x)</m> inside the parentheses, and then use that expression as the input for <m>g</m>.<md>
+                </li>
+                <li>
+                  <p><m>g(f(x))</m>. We can first substitute the expression for <m>f(x)</m> inside the parentheses, and then use that expression as the input for <m>g</m>.<md>
                   <mrow>g(f(x)) \amp= g(3x + 4)</mrow>
                   <mrow>\amp= (3x + 4)^2 + (3x + 4)</mrow>
                   <mrow>\amp= 9x^2 + 24x + 16 + 3x + 4</mrow>
                   <mrow>\amp= 9x^2 + 27x + 20</mrow>
-                </md></p>
-              </li>
-            </ol></p>
-          </answer>
+                  </md></p>
+                </li>
+              </ol></p>
+
+              <p>So we found: <ol label="a">
+                <li>
+                  <p><m>f(g(x))=</m><var name="3x^2 + 3x + 4" width="15" /></p>
+                </li>
+                <li>
+                  <p><m>g(f(x))=</m><var name="9x^2 + 27x + 20" width="15" /></p>
+                </li>
+              </ol></p>
+            </statement>
+          </webwork>
         </exercise>
 
-        <p>Notice something important about the composite formula you found for <m>g(f(x))</m> in <xref ref="exercise-composition-formulas" >Example</xref>: Using <m>x</m> as the input, you found that <m>g(f(x)) = 9x^2 + 27x + 20</m>. Evaluating this new formula at the input <m>x = 5</m> gives:<md>
+        <p>Notice something important about the composite formula you found for <m>g(f(x))</m> in <xref ref="exercise-composition-formulas" >Exercise</xref>: Using <m>x</m> as the input, you found that <m>g(f(x)) = 9x^2 + 27x + 20</m>. Evaluating this new formula at the input <m>x = 5</m> gives:<md>
           <mrow>9(5)^2 + 27(5) + 20 \amp= 9\cdot25 + 27\cdot5 + 20</mrow>
           <mrow>\amp= 225 + 135 + 20</mrow>
           <mrow>\amp= 380</mrow>
         </md></p>
 
-        <p>This is <em>exactly</em> the same result you got when you evaluated <m>g(f(5))</m> in <xref ref="exercise-composition-numbers">Example</xref>.</p>
+        <p>This is <em>exactly</em> the same result you got when you evaluated <m>g(f(5))</m> in <xref ref="exercise-composition-numbers">Exercise</xref>.</p>
 
         <p>The formula <m>g(f(x)) = 9x^2 + 27x + 20</m> is really a new, single function that represents the composition <m>f(g(x))</m>. Once you've found this formula, you could quickly evaluate many numerical compositions, such as <m>g(f(7))</m> or <m>g(f(-3.6))</m>, without having to think about <m>g</m> and <m>f</m> separately.</p>
 
