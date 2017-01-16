@@ -204,7 +204,7 @@
               <var name="$hours"><static>20</static></var>
               <var name="$conExpression"><static>f(20)</static></var>
               <var name="$bpOfConExpression"><static>g(f(20))</static></var>
-              <var name="$conAtHours"><static>5\cdot \exp(-0.058\cdot20)</static></var>
+              <var name="$conAtHours"><static>5\cdot e^{-0.058\cdot20}</static></var>
               <var name="$bpAtHours"><static>-12.5\cdot(20-1)+160</static></var>
               <pg-code>
                 Context('Numeric');
@@ -251,7 +251,7 @@
               <var name="$answer">
                 <set>
                   <member>\text{?}</member>
-                  <member correct="yes">-12.5\cdot(5\cdotexp{-0.058\cdot t})+172.5</member>
+                  <member correct="yes">-12.5\cdot(5\cdot e^{-0.058\cdot t})+172.5</member>
                   <member>5\cdot e^{-0.058(-12.5C+172.5)}</member>
                   <member>\left(5\cdot e^{-0.058\cdot t}\right)\left(-12.5C+172.5\right)</member>
                 </set>
