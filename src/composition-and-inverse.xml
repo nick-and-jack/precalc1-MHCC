@@ -904,31 +904,53 @@
 
       <p>We <term>restrict</term> the domain of a function in order to make it <term>invertible</term>. We choose an interval for the input, so that the output never has repeated values <mdash /> this ensures that the inverse will pass the vertical line test.</p>
       <exercise>
-        <statement><p>An important use of restricting the domain is in finding the inverse of a <em>periodic</em> function (one which repeats itself over-and-over). For example, consider the function <m>f</m> below.</p>
-        <figure>
-          <caption>A periodic function <m>f</m></caption>
-            <image width="47%">
-                <latex-image-code>
-                <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[]
-                                \addplot+[domain=-6:6, smooth]{4*sin(90*x)};
-                             \end{axis}
-                        \end{tikzpicture}
-                ]]>
-                </latex-image-code>
-            </image>
-        </figure>
-        <p>How could we restrict the domain so this function is invertible?</p>
-        <p>Choose an interval for <m>x</m> so <m>f^{-1}</m> is a function.</p></statement>
-        <hint><p>There are several intervals which will work here. Remember that the function <m>f</m> cannot have repeated values on the interval you choose.</p>
-        <p>Also, remember that if the endpoints of your interval give the same outputs, then you can only include one of the endpoints in the interval.</p></hint>
-        <solution>
-          <p>Correct options include:<md>
-            <mrow>-1 \leqslant x \lt 1</mrow>
-            <mrow>-1 \lt x \leqslant 1</mrow>
-            <mrow>1 \leqslant x \lt 3</mrow>
-          </md></p>
-        </solution>
+        <webwork>
+          <setup>
+            <var name="$ans">
+              <static>[-1,1]</static>
+            </var>
+            <pg-code>
+              Context("Inequalities");
+              $gr = init_graph(-7,-2,7,2, axes=>[0,0], grid=>[14,8], size=>[400,400]);
+              $gr->lb('reset');
+              for my $i (-6..-1,1..6) {$gr->lb( new Label($i,-0.1,$i,'black','center','top'));};
+              for my $i (-1.5,-1,-0.5,0.5,1,1.5) {$gr->lb( new Label(-0.2,$i,$i,'black','right','middle'));};
+              add_functions($gr, "sin(2*pi*x/4) for x in &lt;-7,-3> using color:blue and weight:2");
+              add_functions($gr, "sin(2*pi*x/4) for x in &lt;-3,1> using color:blue and weight:2");
+              add_functions($gr, "sin(2*pi*x/4) for x in &lt;1,5> using color:blue and weight:2");
+              add_functions($gr, "sin(2*pi*x/4) for x in &lt;5,9> using color:blue and weight:2");
+              $ans=Interval("[-1,1]");
+              $evaluator=$ans->cmp(showEndpointHints => 0, showEndTypeHints => 0, checker => sub {
+                my ($correct,$student,$ansHash) = @_;
+                return 0 if ($student->type ne 'Interval');
+                my ($sa,$sb,$so,$sc) = $student->value;
+                Value->Error('Your left endpoint is not the correct type') if ($so ne '[');
+                Value->Error('Your right endpoint is not the correct type') if ($sc ne ']');
+                return 1 if (($sa % 2 == 1) and ($sb - $sa == 2));
+                return 0;
+              });
+            </pg-code>
+          </setup>
+          <statement>
+            <p>An important use of restricting the domain is in finding the inverse of a <em>periodic</em> function (one which repeats itself over-and-over). For example, consider the function <m>f</m> below.</p>
+            <figure>
+              <image pg-name="$gr" />
+            </figure>
+            <p>How could we restrict the domain so this function is invertible?</p>
+            <p>Choose an interval for <m>x</m> so <m>f^{-1}</m> is a function.</p>
+            <p><var name="$ans" evaluator="$evaluator" width="10" /></p>
+          </statement>
+          <hint>
+            <p>There are several intervals which will work here. Remember that the function <m>f</m> cannot have repeated values on the interval you choose.</p>
+          </hint>
+          <solution>
+            <p>Correct options include:<md>
+              <mrow>-1 \leqslant x \leqslant 1</mrow>
+              <mrow>-1 \leqslant x \leqslant 1</mrow>
+              <mrow>1 \leqslant x \leqslant 3</mrow>
+            </md></p>
+          </solution>
+        </webwork>
       </exercise>
     </subsection>
   </section>
