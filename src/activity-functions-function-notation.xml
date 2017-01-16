@@ -486,10 +486,16 @@
                 </setup>
                 <statement>
                     <p>Decide if each situation is possible given the function <m>y = f(x)</m> where <m>x</m> and <m>y</m> are just generic variables.</p>
-                    <p>Is it possible that <m>f(3)=10</m> and <m>f(3) = 17</m>?</p>
-                    <p><var name="$situation1" form="buttons" /></p>
-                    <p>Is it possible that <m>f(3)=10</m> and <m>f(8) = 10</m>?</p>
-                    <p><var name="$situation2" form="buttons" /></p>
+                    <p><ol label="a">
+                        <li>
+                            <p>Is it possible that <m>f(3)=10</m> and <m>f(3) = 17</m>?</p>
+                            <p><var name="$situation1" form="buttons" /></p>
+                        </li>
+                        <li>
+                            <p>Is it possible that <m>f(3)=10</m> and <m>f(8) = 10</m>?</p>
+                            <p><var name="$situation2" form="buttons" /></p>
+                        </li>
+                    </ol></p>
                 </statement>
             </webwork>
         </exercise>
@@ -560,65 +566,64 @@
               </pg-code>
             </setup>
             <statement>
-              <p>Is table A a function or not?</p>
-
-              <table>
-                <caption>Table A</caption>
-                  <tabular top="medium" bottom="medium" left="medium" right="medium">
-                      <col halign="center"/>
-                      <col halign="center"/>
-                      <row>
-                          <cell><m>x</m></cell>
-                          <cell><m>y</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>5</m></cell>
-                          <cell><m>8</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>5</m></cell>
-                          <cell><m>10</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>5</m></cell>
-                          <cell><m>-8</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>5</m></cell>
-                          <cell><m>0</m></cell>
-                      </row>
-                  </tabular>
-              </table>
-              <p><var name="$table1" form="buttons" /></p>
-              <p>Is table B a function or not?</p>
-              <table>
-                <caption>Table B</caption>
-                  <tabular top="medium" bottom="medium" left="medium" right="medium">
-                      <col halign="center"/>
-                      <col halign="center"/>
-                      <row>
-                          <cell><m>x</m></cell>
-                          <cell><m>y</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>8</m></cell>
-                          <cell><m>5</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>10</m></cell>
-                          <cell><m>5</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>-8</m></cell>
-                          <cell><m>5</m></cell>
-                      </row>
-                      <row>
-                          <cell><m>0</m></cell>
-                          <cell><m>5</m></cell>
-                      </row>
-                  </tabular>
-              </table>
-              <p><var name="$table2" form="buttons" /></p>
+                <p><ol label="A">
+                    <li>
+                        <p>Does this table describe a function?</p>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row>
+                                <cell><m>x</m></cell>
+                                <cell><m>y</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>8</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>10</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>-8</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>0</m></cell>
+                            </row>
+                        </tabular>
+                        <p><var name="$table1" form="buttons" /></p>
+                    </li>
+                    <li>
+                        <p>Does this table describe a function?</p>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row>
+                                <cell><m>x</m></cell>
+                                <cell><m>y</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>8</m></cell>
+                                <cell><m>5</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>10</m></cell>
+                                <cell><m>5</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-8</m></cell>
+                                <cell><m>5</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>0</m></cell>
+                                <cell><m>5</m></cell>
+                            </row>
+                        </tabular>
+                        <p><var name="$table2" form="buttons" /></p>
+                    </li>
+                </ol></p>
             </statement>
             <solution>
               <p>Table A is not a function because the input <m>x = 5</m> yields more than one result.</p>
@@ -649,17 +654,29 @@
               </pg-code>
             </setup>
             <statement>
-              <p>Is <m>y</m> a function of <m>x</m> if, <m>y=x^2</m>?</p>
-              <p><var name="$eq1" form="buttons" /></p>
-              <p>Is <m>y</m> a function of <m>x</m> if, <m>y^2=x</m>?</p>
-              <p><var name="$eq2" form="buttons" /></p>
+                <p><ol label="a">
+                    <li>
+                        <p>Is <m>y</m> a function of <m>x</m> if, <m>y=x^2</m>?</p>
+                        <p><var name="$eq1" form="buttons" /></p>
+                    </li>
+                    <li>
+                        <p>Is <m>y</m> a function of <m>x</m> if, <m>y^2=x</m>?</p>
+                        <p><var name="$eq2" form="buttons" /></p>
+                    </li>
+                </ol></p>
             </statement>
             <solution>
-              <p>In each case, ask yourself what happens when you choose a value for <m>x</m>?  Do you get one output or do you get more than one output?</p>
-              <p>Is <m>y</m> a function of <m>x</m> if, <m>y=x^2</m>?</p>
-              <p>Yes <m>y</m> is a function of <m>x</m> because for any value of <m>x</m> you pick, there is only one possible <m>y</m> as a result.</p>
-              <p>Is <m>y</m> a function of <m>x</m> if, <m>y^2=x</m>?</p>
-              <p>No <m>y</m> is not function of <m>x</m> because when you solve for <m>y</m> you get the equation <m>y = \pm \sqrt{x}</m></p>
+                <p>In each case, ask yourself what happens when you choose a value for <m>x</m>?  Do you get one output or do you get more than one output?</p>
+                <p><ol label="a">
+                    <li>
+                        <p>Is <m>y</m> a function of <m>x</m> if, <m>y=x^2</m>?</p>
+                        <p>Yes <m>y</m> is a function of <m>x</m> because for any value of <m>x</m> you pick, there is only one possible <m>y</m> as a result.</p>
+                    </li>
+                    <li>
+                        <p>Is <m>y</m> a function of <m>x</m> if, <m>y^2=x</m>?</p>
+                        <p>No <m>y</m> is not function of <m>x</m> because when you solve for <m>y</m> you get the equation <m>y = \pm \sqrt{x}</m></p>
+                    </li>
+                </ol></p>
             </solution>
           </webwork>
         </exercise>
@@ -688,13 +705,21 @@
               </pg-code>
             </setup>
             <statement>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QTfyBkEb/width/413/height/266/border/888888" width="413px" height="266px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>Drag the input left or right to see the results on the graph.</p>
-              <p>Hint: think about how many outputs each input yields.</p>
-              <p><var name="$nopass" form="buttons" /></p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Req8ZfCM/width/413/height/290/border/888888" width="413px" height="290px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p><var name="$pass" form="buttons" /></p>
+                <p>Drag the input left or right to see the results on each graph. Think about how many outputs each input yields.</p>
+                <p><ol label="a">
+                    <li>
+                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QTfyBkEb/width/413/height/266/border/888888" width="413px" height="266px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                        <p><var name="$nopass" form="buttons" /></p>
+                    </li>
+                    <li>
+                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Req8ZfCM/width/413/height/290/border/888888" width="413px" height="290px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                        <p><var name="$pass" form="buttons" /></p>
+                    </li>
+                </ol></p>
             </statement>
+            <hint>
+                <p>Think about how many outputs each input yields.</p>
+            </hint>
           </webwork>
         </exercise>
 
@@ -729,12 +754,18 @@
                 </setup>
 
                 <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tqS4kTMd/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p><var name="$no" form="buttons" /></p>
                     <p>Drag the input to change the postion of the vertical line.</p>
                     <p>Does the line intersect the graph more than once?  If so, it does not pass the vertical line test and the graph is not a function.</p>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zepNEn3W/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p><var name="$yes" form="buttons" /></p>
+                    <p><ol label="a">
+                        <li>
+                            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tqS4kTMd/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                            <p><var name="$no" form="buttons" /></p>
+                        </li>
+                        <li>
+                            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zepNEn3W/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                            <p><var name="$yes" form="buttons" /></p>
+                        </li>
+                    </ol></p>
                 </statement>
             </webwork>
         </exercise>
@@ -837,12 +868,18 @@
                 </setup>
                 <statement>
                     <p>Let <m>f(x) = 50x + 10</m>.  Evaluate the expressions below:</p>
-                    <p>What do you get when you put <m>1</m> into the formula?</p>
-                    <p><m>f(1) = 50 \big(</m><var name="$in1" width="2" /><m>\big)+ 10</m></p>
-                    <p><m>f(1) = </m> <var name="$output1" width="5" /></p>
-                    <p>What do you get when you put <m>2</m> into the formula?</p>
-                    <p><m>f(2) = 50\big(</m><var name="$in2" width="2" /><m>\big)+ 10</m></p>
-                    <p><m>f(2) = </m> <var name="$output2" width="5" /></p>
+                    <p><ol label="a">
+                        <li>
+                            <p>What do you get when you put <m>1</m> into the formula?</p>
+                            <p><m>f(1) = 50 \big(</m><var name="$in1" width="2" /><m>\big)+ 10</m></p>
+                            <p><m>f(1) = </m> <var name="$output1" width="5" /></p>
+                        </li>
+                        <li>
+                            <p>What do you get when you put <m>2</m> into the formula?</p>
+                            <p><m>f(2) = 50\big(</m><var name="$in2" width="2" /><m>\big)+ 10</m></p>
+                            <p><m>f(2) = </m> <var name="$output2" width="5" /></p>
+                        </li>
+                    </ol></p>
                 </statement>
             </webwork>
         </exercise>
@@ -872,16 +909,28 @@
                 </setup>
 
                 <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WNngwB3K/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>The graph the the function <m>f(x)</m> is shown below.  Slide the input along the horizonal axis to help you evaluate the function.</p>
-                    <p>Evaluate <m>f(-4)</m></p>
-                    <p><m>f(-4) = </m> <var name="$output1" width="5" /></p>
-                    <p>Evaluate <m>f(-1)</m></p>
-                    <p><m>f(-1) = </m> <var name="$output2" width="5" /></p>
-                    <p>Evaluate <m>f(0)</m></p>
-                    <p><m>f(0) = </m> <var name="$output4" width="5" /></p>
-                    <p>Evaluate <m>f(2)</m></p>
-                    <p><m>f(2) = </m> <var name="$output3" width="5" /></p>
+
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WNngwB3K/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+                    <p><ol label="a">
+                        <li>
+                            <p>Evaluate <m>f(-4)</m></p>
+                            <p><m>f(-4) = </m> <var name="$output1" width="5" /></p>
+                        </li>
+                        <li>
+                            <p>Evaluate <m>f(-1)</m></p>
+                            <p><m>f(-1) = </m> <var name="$output2" width="5" /></p>
+                        </li>
+                        <li>
+                            <p>Evaluate <m>f(0)</m></p>
+                            <p><m>f(0) = </m> <var name="$output4" width="5" /></p>
+                        </li>
+                        <li>
+                            <p>Evaluate <m>f(2)</m></p>
+                            <p><m>f(2) = </m> <var name="$output3" width="5" /></p>
+                        </li>
+                    </ol></p>
                     <p>Notice how each input yields only one result (there is only one answer for each input) but some inputs have the same output value.  It's no coincidence the graph passes the vertical line test!</p>
                 </statement>
             </webwork>
