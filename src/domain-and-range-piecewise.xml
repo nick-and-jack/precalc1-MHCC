@@ -49,77 +49,166 @@
     <conclusion>
         <subsection>
             <title>Domain and Range</title>
-                    <p>Sometimes a formula can only accept certain kinds of values. For instance the square root function <m>f(x) = \sqrt x</m> can only accept values of x are NOT negative.</p>
-                    <p>In math we say <m>x \geqslant 0</m> meaning the values we choose for <m>x</m> must be greater than or equal to zero.</p>
-                    <p>The <em>Domain</em> of a function is the set of all the inputs that a function can use. for <m>f(x) = \sqrt x </m> the domain is <m>x \geqslant 0</m> because these are the only values the function can use.</p>
-                    <p>Another example is <m>f(x) = \frac{x}{{{x^2} - 1}}</m>. In this case the denominator could be zero (a big no-no) if <m>x</m> is either <m>1</m> or <m>-1</m>. So the domain if this function si <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
-                    <p>An easier way to say the same thing is to state what values you CAN'T use, as in <m>x \ne  \pm 1</m></p>
-                    <p>For now the only functions that should raise re flags are those that have square roots (because you can't take the square root of negative numbers) and those with deonominators (because we have to avoid any numbers that give us zero in the denominator).</p>
-                    <p>Once we know what numbers a function can use, we can then consider what kinds of results we can get. This is called the <em>Range</em> of the function.</p>
-                    <p>For example, the square root function <m>f(x) = \sqrt {x - 8} </m> has a domain such that <m>x-8</m> must be positive. Therefor the domain is</p>
-                    <p><m>x - 8 \geqslant 0</m></p>
-                    <p><m>x \geqslant 8</m></p>
-                    <p>Under these conditions the function will never yeild negative results.  Only <m>y = 0</m> or positive results will ever come out of this function. Therefore the <em>Range</em>  of <m>f(x)</m> is <m>f(x) \geqslant 0</m></p>
-                    <p>Domain and Range are often more clear if we look at functions graphically. Below is a graph of <m>f(x) = \sqrt {x - 8}</m></p>
+              <p>Sometimes a formula can only accept certain kinds of values. For instance the square root function <me>f(x) = \sqrt x</me> can only accept values of x are NOT negative.</p>
+              <p>In math we say the function <m>f</m> can only accept values <m>x \geqslant 0</m> meaning whatever values we choose for <m>x</m> must be greater than or equal to zero. That's the math way of saying <q>not negative</q>.</p>
+              <p>The <term>domain</term> of a function is the set of all the inputs that a function can use. For <m>f(x) = \sqrt x </m> the domain is <m>x \geqslant 0</m> because only these inputs allow the function to yield real valued outputs.</p>
+              <p>Another example is <me>f(x) = \frac{x}{{{x^2} - 1}}</me>. In this case the denominator could be zero (a big no-no) if <m>x</m> is either <m>1</m> or <m>-1</m>. So the domain if this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
+              <p>An easier way to say the same thing is to state what values you CAN'T use, as in <m>x \ne  \pm 1</m></p>
+              <p>For now the only functions that should raise red flags are those that have square roots (because you can't take the square root of negative numbers) and those with deonominators (because we have to avoid any input that give us zero in the denominator).</p>
+              <p>Once we know what inputs a function will accept, we then consider all the possible output results. This is called the <term>range</term> of the function.</p>
+              <p>Back to our example of a square root function. <me>f(x) = \sqrt {x - 8} </me> has a domain such that whatever <m>x-8</m> is, it must be positive. Solving the inequality for x we arrive with the domain as</p>
+              <p><md><mrow>x - 8 \amp \geqslant 0</mrow>
+              <mrow>x \amp \geqslant 8</mrow></md></p>
+              <p>In English we would say that our function will accept any input that is greater than or equal to <m>8</m>. That's our domain.</p>
+              <p>Now consider all the possible output values our function can create.  The square root function always creates non-negative results.  In other words, if you put a number (from the domain) into the square root funciton, you always get a result that is greater than or equal to zero.</p>
+              <todo>Link to "But I thought the square root always give us plus or minus!?</todo>
+              <p>Under these conditions the function will never yield negative results.  Only <m>y = 0</m> or positive results will ever come out of this function. Therefore the range  of <m>f</m> is <m>f(x) \geqslant 0</m></p>
+              <p>Domain and range are often more clear if we look at functions graphically. Below is a graph of <m>f(x) = \sqrt {x - 8}</m></p>
 
-                    <example>
-                        <figure xml:id="graph-of-root-x-minus-8">
-                            <caption>Graph of <m>f(x)=\sqrt{x-8}</m></caption>
-                            <image xml:id="image-graph-of-root-x-minus-8">
-                                <latex-image-code>
-                                    <![CDATA[\begin{tikzpicture}
-                                    \begin{axis}[ymin=-5, ymax=7, xlabel={$x$}, ylabel={$f(x)$}, xtick={4,8,...,24}, minor xtick={-3,-2,...,25}, ytick={-4,-2,...,6}, minor ytick={-5,-4,...,7}, xmin=-3, xmax=25, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
-                                    \addplot[thick, color=red, domain=0:4,->] ({x^2+8},{x});
-                                    \end{axis}
-                                    \end{tikzpicture}]]>
-                                </latex-image-code>
-                            </image>
-                        </figure>
-                    </example>
-
-                    <p>Notice the graph only appears from <m>x = 8</m> and to the right. That's the domain of <m>f(x)</m>.</p>
-                    <p>Also notice that the graph only appears at or above the <m>x</m>- axis (<m>y = 0</m> or <m>y > 0</m>).  That is the range of <m>f(x)</m> (i.e. range is <m>f(x) \geqslant 0</m>)</p>
-                    <todo>This problem does not compile.</todo>
-                    <exercise>
-                        <webwork>
-                            <setup>
-                                <var name="$blueLine">
-                                   <static>y=0.5(x+3)-2</static>
-                                </var>
-                                <var name="$greenLine">
-                                   <static>y=3</static>
-                                </var>
-                                <var name="$answer1">
-                                    <static>-5&lt;=x&lt;0</static>
-                                </var>
-                                <var name="$answer2">
-                                    <static>1&lt;=x&lt;=4</static>
-                                </var>
-
-                                <pg-code>
-                                    Context()->variables->are(x=>'Real',y=>'Real');
-                                    $blueLine = ImplicitPlane("y=0.5(x+3)-2");
-                                    $greenLine = ImplicitPlane("y=3");
-                                    Context("Inequalities");
-                                    $answer1 = Compute("-5&lt;=x&lt;0");
-                                    $answer2 = Compute("1&lt;=x&lt;=4");
-                                </pg-code>
-                            </setup>
-
-                            <statement>
-                                <todo>Fix this problem. Will not render. Need to learn how to format a piecewise function and its notation.</todo>
-                                <p>Need to learn how to format a piecewise function and its notation.</p>
-
-                                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                                <p>Find a formula for the piecewise defined function shown in the graph</p>
-                                <p>What is the equation of the blue line? <var name="$blueLine" width="15" /> and what is its domain? <var name="$answer1" width="5" /></p>
-                                <p>What is the equation of the green line? <var name="$greenLine" width="15" /> and what is its domain? <var name="$answer2" width="5" /></p>
-                            </statement>
-                        </webwork>
-                    </exercise>
-
-                    <todo>Insert last interactive where student is given a piecewise formula and they have to graph it.</todo>
+              <example>
+                  <figure xml:id="graph-of-root-x-minus-8">
+                      <caption>Graph of <m>f(x)=\sqrt{x-8}</m></caption>
+                      <image xml:id="image-graph-of-root-x-minus-8">
+                          <latex-image-code>
+                              <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[ymin=-5, ymax=7, xlabel={$x$}, ylabel={$f(x)$}, xtick={4,8,...,24}, minor xtick={-3,-2,...,25}, ytick={-4,-2,...,6}, minor ytick={-5,-4,...,7}, xmin=-3, xmax=25, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
+                              \addplot[thick, color=red, domain=0:4,->] ({x^2+8},{x});
+                              \end{axis}
+                              \end{tikzpicture}]]>
+                          </latex-image-code>
+                      </image>
+                  </figure>
+              <p>Notice the graph only appears for input values <m>x \geqslant 8</m>. That's the domain of <m>f</m>.</p>
+              <p>Also notice the graph only appears at or above the <m>x-</m>axis.  The graph shows us the range is <m>f(x) \geqslant 0</m></p>
+              </example>
+              <p>When you want to find the domain and range of a function, one option is to graph it on a calculator or any web graphing tool. Determine the intervals or boundaries on the horizontal axis where the graph exists. This is the domain.</p>
+              <p>Next use the graph to determine if there are vertical intervals or boundaries to how high or low the graph reaches. This is the range.</p>
         </subsection>
+        <subsection>
+          <title>Piecewise Defined Functions</title>
+          <p>A piecewise defined function is actually a collection of two or more functions that tell us how to use an input to get an output. Each function must state the domain on which it is defined, that way you know when to use it.</p>
+          <example>
+              <p>Easy, everyday examples of piecewise defined functions are:</p>
+              <p>
+                  <ul>
+                      <li>
+                          <p>The cost of renting a snowboard is <m>$25</m> per day or <m>$60</m> for three days or <m>$75</m> for a week.</p>
+                          <p>The first cost function is <m>$25</m> per day and is good for <m>1</m> or <m>2</m> days. The domain of this function is the <q><m>1</m> or <m>2</m> days</q>. It tells you when to use this cost function.</p>
+                          <p>On the third day is a new cost function, a simple constant <m>$60</m></p>
+                          <p>Finally the last cost function is for more than 3 days, <m>$75</m> per week.</p>
+                          <p>Each rule has its own domain that tells us when to use the rule.</p>
+                      </li>
+                      <li>
+                          <p>The rate at which your coffee cools on the counter is related to the temperature in the room (there's actually a formula for that). The formula is good for as long the situation in the room remains the same.</p>
+                          <p>If you suddenly change the room conditions by turning on the air conditioner, then the rate at which the coffee cools will also change.  There is a new formula to model the cooling coffee after the air conditioner is swithed on.</p>
+                          <p>One formula is good from the time you make your coffee up until you switch on the air conditioner. Then the other forumla takes over after the air conditioner has been turned on.</p>
+                      </li>
+                      <li>
+                          <p>In the United States there are 7 income tax brackets. That means there are 7 different functions to tell us how much income tax we owe. The function you use is determined by how much money you make.</p>
+                          <p>In other words, each function has its own domain (income bracket) that tells you when to use the function.</p>
+                          <p>One family's income will put them in a <m>25\%</m> tax bracket, but another family with a higher income will fall under a higher tax bracket, like <m>28\%</m>.</p>
+                      </li>
+                  </ul>
+              </p>
+          </example>
+          <p>To create a piecewise function, start by finding formulas or rules for all the different functions in the set.  Then identify the domain for each function.</p>
+          <p>When you finally write the piecewise function, write each formula with its corresponding domain to its right.</p>
+
+          <exercise>
+            <webwork>
+              <setup>
+                  <var name="$blueLine">
+                     <static>y=0.5(x+3)-2</static>
+                  </var>
+                  <var name="$greenLine">
+                     <static>y=3</static>
+                  </var>
+                  <var name="$answer1">
+                      <static>-5&lt;=x&lt;0</static>
+                  </var>
+                  <var name="$answer2">
+                      <static>1&lt;=x&lt;=4</static>
+                  </var>
+
+                  <pg-code>
+                      Context()->variables->are(x=>'Real',y=>'Real');
+                      $blueLine = ImplicitPlane("y=0.5(x+3)-2");
+                      $greenLine = ImplicitPlane("y=3");
+                      Context("Inequalities");
+                      $answer1 = Compute("-5&lt;=x&lt;0");
+                      $answer2 = Compute("1&lt;=x&lt;=4");
+                  </pg-code>
+              </setup>
+
+              <statement>
+                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                  <p>Find a formula for the piecewise defined function shown in the graph</p>
+                  <p>What is the equation of the blue line? <var name="$blueLine" width="15" /> and what is its domain? <var name="$answer1" width="5" /></p>
+                  <p>What is the equation of the green line? <var name="$greenLine" width="15" /> and what is its domain? <var name="$answer2" width="5" /></p>
+                  <p>Once you have determined the equations and their corresponding domains, group the equations and their domains into one piecewise defined function.</p>
+              </statement>
+              <solution>
+                <p>
+                  <me>f(x) = \left\{
+                  \begin{array}{ll}
+                  0.5x-0.5 \amp -5 \leqslant x \leqslant 0 \\
+                  3 \amp 1 \leqslant x \leqslant 4 \\
+                  \end{array}
+                  \right.</me>
+                </p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <title>Match the Graph to the Piecewise Formula</title>
+            <webwork xml:id="exercise-match-piecewise">
+              <setup>
+                <var name="$one">
+                  <set>
+                    <member>\text{Function A}</member>
+                    <member>\text{Function B}</member>
+                    <member correct="yes">\text{Function C}</member>
+                  </set>
+                </var>
+                <pg-code>
+                  $one = RadioButtons(
+                  ["Function A","Function B","Function C"],
+                  2, labels => ["Function A","Function B","Function C"],displayLabels => 0
+                  );
+                </pg-code>
+              </setup>
+              <statement>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/UY2xPaVW/width/413/height/300/border/888888" width="413px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                <p>
+                  <me>\text{A: } f(x) = \left\{
+                  \begin{array}{ll}
+                  x^2 \amp 1 \leqslant x \leqslant 3 \\
+                  x \amp -2 \leqslant x \leqslant 0 \\
+                  \end{array}
+                  \right.</me>
+                </p>
+                <p>
+                  <me>\text{B: } f(x) = \left\{
+                  \begin{array}{ll}
+                  x^2 \amp 0 \leqslant x \leqslant 4 \\
+                  x \amp 1 \leqslant x \leqslant 3 \\
+                  \end{array}
+                  \right.</me>
+                </p>
+                <p>
+                  <me>\text{C: } f(x) = \left\{
+                  \begin{array}{ll}
+                  x^2 \amp -2 \leqslant x \leqslant 0 \\
+                  x \amp 1 \leqslant x \leqslant 3 \\
+                  \end{array}
+                  \right.</me>
+                </p>
+                <p><var name="$one" form="buttons" /></p>
+              </statement>
+            </webwork>
+          </exercise>
+      </subsection>
 
     </conclusion>
 </chapter>

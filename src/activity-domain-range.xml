@@ -14,18 +14,36 @@
   <title>Domain and Range Activity </title>
   <subsection>
       <title>Domain and Range</title>
+      
+      <p>
+        <ul>
+          <li><p>What kinds of input does a function accept?</p></li>
+          <li><p>Once a function is given an input value, what are all the possible outputs you can get?</p></li>
+        </ul>
+      </p>
+      <p>In math we have our own vocabulary we use to ask the same questions.  The kinds of inputs a function will accept is called the <term>domain</term> of the function.  All the possible outcomes is call the <term>range</term>.</p>
+      <example>
+        <p>Consider online shopping at a t-shirt store.  Each t-shirt costs $13.00 and each time you click on the <q>add to shopping cart</q> your account adds a charge for $13.00.  In this case the cost C of shopping is a function of the number N of t-shirts you add to the cart.  Therefore, <m>C = f(N)</m>.</p>
+        <p>What kinds of values for N does our function accept?</p>
+        <p>Well, you can't choose to buy negative t-shirts so N can't be less than zero.  You can buy 0 t-shirts or 1 or 2 or more, but you can't buy 1.5 t-shirts or 2.63 t-shirts.  You can only buy whole t-shirts, not fractions of shirts.</p>
+        <p>In math we say that the domain of our function is <em>non-negative integers</em>.  This means the domain is the numbers N = 0, 1, 2, 3, <init>etc.</init> these are the only numbers that make sense for our function, the only numbers our function accepts.</p>
+        <p>What are all the possible output values of our function?</p>
+        <p>Let's see, if you don't click to add t-shirts, then <m>N = 0</m>, your cart will have no t-shirst and you won't pay anything, <m>f(0) = 0</m>.</p>
+        <p>If you choose <m>N = 1</m> t-shirts you will pay $13.00  At <m>N = 2</m> you pay $26.00</p>
+        <p>Notice you can't pay a negative amount.  The least cost you will ever get is $0.00 for <m>N = 0</m> t-shirts. Also notice you will never have a final checkout of $10.00 or $18.00, in fact, you will only pay in multiples of $13.00 because, again, you can't buy fractions of a t-shirt.</p>
+        <p>In math we say the <term>range</term> of our function is <em>all non-negative integer multiples of <m>13</m></em>.</p>
+      </example>
+      
+      <todo>Jack, make a webwork problem out the content below</todo>
 
-      <p>What kinds of input does a function accept?  Once a function is given an input value, what are all the possible outputs you can get?  These are good questions and in math we have our own words to ask the same questions.  The kinds of inputs a function will accept is called the <em>Domain</em> of the function.  All the possible outcomes is call the <em>Range</em>.</p>
-      <p>For a simple example, consider online shopping at a t-shirt store.  Each t-shirt costs $13.00 and each time you click on the <q>add to shopping cart</q> your account adds a charge for $13.00.  In this case the cost C of shopping is a function of the number N of t-shirts you add to the cart.  Therefore, <m>C = f(N)</m>.</p>
-      <p>What kinds of values for N does our function accept?  Well, you can't choose to buy negative t-shirts so N can't be less than zero.  You can buy 0 t-shirts or 1 or 2 or more, but you can't buy 1.5 t-shirts or 2.63 t-shirts.  You can only buy whole t-shirts, not fractions of shirts.</p>
-      <p>In math we say that the domain of our function is non-negative integers.  That is the domain is all N = 0, 1, 2, 3, <init>etc.</init> these are the only numbers that make sense for our function, the only numbers our function accepts.</p>
-      <p>What are all the possible output values of our function?  Let's see, if you don't click to add t-shirts, <m>N = 0</m>, to your cart you won't pay anything, <m>f(0) = 0</m>.  If you choose <m>N = 1</m> t-shirts you will pay $13.00  At <m>N = 2</m> you pay $26.00</p>
-      <p>Notice you can't pay a negative amount.  The least cost you will ever get is $0.00 for <m>N = 0</m> t-shirts. Also notice you will never have a final checkout of $10.00 or $18.00, in fact, you will only pay in multiples of $13.00 because, again, you can't buy fractions of a t-shirt.</p>
-      <p>In math we say the <em>range</em> of our function is all non-negative integer multiples of 13</p>
-      <p>Sometimes a function can use any number, like <q>all real numbers</q> and sometimes a function may only defined for certain kinds of values. Likewise the range of a function could be <q>all real numbers</q> or maybe there are only specific values the function will ever produce.</p>
-      <p>In this activity we observe the domain and range of a fucntion graphically then in tables and finally in formulas.</p>
+      <p>Sometimes a function can use any number as an input.</p>
+      <p>Consider <me>f(x) = x^2</me> Can you think of a number you can't multiply by itself? <em>Hint: No, you can multiply any number by itself and you will always get a result.</em> Therefore, the domain of <m>f(x) = x^2</m> is <q>all real numbers</q></p>
+      <p>Sometimes a function is only defined for certain kinds of values.</p>
+      <p>Consider <me>f(x) = \sqrt{x}</me> This function will yield real number results as long as the input is not negative. In this case the function has a domain <m>x \geqslant 0</m>.</p>
+      <p>Similarly, the range of a function could be <q>all real numbers</q> or maybe there are only specific values the function will ever produce.</p>
+      <p>In this activity we observe the domain and range of a function graphically, then in tables, and finally in formulas.</p>
 
-      <p>checkout the graph of <m>f(x)</m> shown in the exercise below. Use the slider to adust the domain of the function and see how it affects the range.</p>
+      <p>Check out the graph of <m>f</m> shown in the exercise below. Use the slider to adjust the domain of the function and see how it affects the range.</p>
 
           <exercise>
               <webwork>
@@ -40,9 +58,7 @@
                 </setup>
 
                 <statement>
-                    <todo>Insert graph that has adjustable domain, maybe highlight interval on x-axis while the range changes and is highlighted in a different color.  User identifies the domain and range of the graph.</todo>
-
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GaCY9FX2/width/458/height/313/border/888888/sri/true" width="458px" height="313px" style="border:0px;" width="458px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>Need to insert values on vertical and horizontal axes to properly identify the ends of the intervals.</p>
 
                     <p><var name="$variablename" width="5" /></p>
