@@ -35,84 +35,87 @@
 
     <colophon>
 
-        <copyright>
-            <year>2010<ndash />2017</year>
-            <holder>Jack Green, Nick Chura</holder>
-            <!--<minilicense>GFDL License</minilicense>
-            <shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the appendix entitled <q>GNU Free Documentation License.</q>  All trademarks<trademark /> are the registered<registered /> marks of their respective owners.</shortlicense>-->
-        </copyright>
+      <copyright>
+          <year>2012<ndash />2017</year>
+          <holder>Jack Green, Nickolas Chura</holder>
+          <minilicense>Creative Commons BY-SA</minilicense>
+          <shortlicense>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</shortlicense>
+          <creativecommons BY="yes" NC="yes" ubiquity="medium"/>
+      </copyright>
 
     </colophon>
 
-    <!-- A section of its own in HTML, migrates to copyright-page in LaTeX (sans a title)-->
-    <!--<biography>
-        <p>Thomas W. Judson did his undergraduate work in Illinois, his graduate work in Oregon and presently teaches in Texas.</p>
+    <acknowledgement>
+        <p>Over several terms, Jack Green wrote most of the book's content as a Word/PDF document for use in his face-to-face and online Precalculus courses at Mt. Hood Community College.</p>
+        <p>In 2016/2017, Nick Chura, Jack Green and Dr. Alex Jordan converted the material to MathBook XML (enabling the HTML output alongside a PDF) with support from an Open Oregon grant.</p>
+        <p>Special thanks to Dr. Rob Beezer, David Favreault, Jim Hatton, Robert Hauss, Dr. Alex Jordan, Dr. Elise Lockwood and Gina Shankland for proofreading and review.</p>
+    </acknowledgement>
 
-        <p>He likes to ride his bicycle in France.</p>
-    </biography>-->
+    <preface xml:id="to-all">
+        <title>To All</title>
+        <p>Precalculus is taught at Mt. Hood Community College over two <m>10</m><ndash />week courses. This text aims to address all learning outcomes from the first course, suitable for use in a single <m>10</m> week term.</p>
 
-    <!-- The following items must be placed in the desired/required order -->
-    <!-- This will be checked by a Document Type Definition eventually -->
-    <!-- Order: dedication, acknowledgements, forewords, prefaces -->
+        <paragraphs>
+            <title>HTML and PDF</title>
+            <p>This text will be released with several synchronous versions that offer different features. The essential content of each version is the same as for all others.</p>
+            <ul>
+                <li><p>Currently, a preview of the web version is available at <url href="http://www.greenprecalc.com/Math%20111/precalc1-MHCC/html/"/>. The web version offers full walk-through solutions to most exercises, as well as interactive elements and easier navigation than print versions.</p></li>
+                <li><p>A PDF-for-print will be available in June 2017. This version is designed to be printed, not read on a screen. To save on printing expense, this version is mostly black-and-white.</p></li>
+            </ul>
+        </paragraphs>
 
-    <!-- Each paragraph gets centered and has some vertical separatation -->
-    <!-- A line break may be used here to aid with intended formatting   -->
-    <!--<dedication>
-        <p>To students of algebra everywhere<ndash />they are the reason</p>
-        <p>And to those who teach them</p>
-    </dedication>-->
+        <paragraphs>
+            <title>Copying Content</title>
 
-    <!--<acknowledgement>
+            <p>Mathematical content can be copied from the HTML version. To copy math content into MS Word, right-click or control-click over the math content, and click to Show Math As MathML Code. Copy the resulting code, and Paste <em>Special</em> into Word. In the Paste Special menu, paste it as Unformatted Text. To copy math content into <latex/> source, right-click or control-click over the math content, and click to Show Math As TeX Commands.</p>
 
-        <p>I would like to acknowledge the following reviewers for their helpful comments and suggestions. </p>
+        </paragraphs>
 
-        <ul>
-            <li><p>David Anderson, University of Tennessee, Knoxville</p></li>
-            <li><p>Robert Beezer, University of Puget Sound</p></li>
-            <li><p>Myron Hood, California Polytechnic State University</p></li>
-            <li><p>Herbert Kasube, Bradley University</p></li>
-            <li><p>John Kurtzke, University of Portland</p></li>
-            <li><p>Inessa Levi, University of Louisville</p></li>
-            <li><p>Geoffrey Mason, University of California, Santa Cruz</p></li>
-            <li><p>Bruce Mericle, Mankato State University</p></li>
-            <li><p>Kimmo Rosenthal, Union College</p></li>
-            <li><p>Mark Teply, University of Wisconsin</p></li>
-        </ul>
+        <paragraphs>
+            <title>Accessibility</title>
+            <p>The HTML version is intended to meet or exceed all web accessibility standards. If you encounter an accessibility issue, please report it to the editor.</p>
+            <ul>
+                <li><p>All graphs and images should have meaningful alt text that communicates what a sighted person would see, without necessarily giving away anything that is intended to be deduced from the image.</p></li>
+                <li><p>All math content is rendered using MathJax. MathJax has a contextual menu that can be accessed in several ways, depending on what operating system and browser you are using. The most common way is to right-click or control-click on some piece of math content.</p></li>
+                <li><p>In the MathJax contextual menu, you may set options for triggering a zoom effect on math content, and also by what factor the zoom will be.</p></li>
+                <li><p>If you change the MathJax renderer to MathML, then a screen reader will generally have success verbalizing the math content.</p></li>
+            </ul>
+        </paragraphs>
 
-        <p>I would also like to thank Steve Quigley, Marnie Pommett, Cathie Griffin, Kelle Karshick, and the rest of the staff at PWS Publishing for their guidance throughout this project. It has been a pleasure to work with them.</p>
--->
-        <!-- Added NSF support statement.  TWJ 8/9/2012 -->
-<!--        <p>Robert Beezer encouraged me to make <em>Abstract Algebra: Theory and Applications</em> available as an open source textbook, a decision that I have never regretted.  With his assistance, the book has been rewritten in MathBook XML (<url href="http://mathbook.pugetsound.edu">http://mathbook.pugetsound.edu</url>), making it possible to quickly output print, web, PDF versions and more from the same source.  The open source version of this book has received support from the National Science Foundation (Award <hash />DUE-1020957).</p>
+        <paragraphs>
+            <title>Tablets and Smartphones</title>
+            <p>MathBook XML documents like this text are <q>mobile-friendly</q>. The display adapts to whatever screen size or window size you are using. A math teacher will always recommend that you do not study from the small screen on a phone, but if it's necessary, this text gives you that option.</p>
+        </paragraphs>
+    </preface>
 
-    </acknowledgement>-->
+    <preface xml:id="to-the-student">
+        <title>To the Student</title>
 
-    <!--<preface>
+        <p>You may think of this text as a <q>workbook</q>. Each chapter begins with activity sets, meant to serve as an introduction to a topic, and your instructor may assign activities to be done out of class as homework. In this way, you will come to class, having already studied the basics of a new topic, and ready to build on that new knowledge.</p>
+        <p>The activity sets are followed by a <q>gist</q> section. The gist assumes that you have completed the activities, and it provides a retelling of the basic concepts and techniques. This will be a good place for you to refer when studying the material for an exam or quiz.</p>
+        <p>Instead of just <em>reading</em> example problems, you will get to explore new ideas by working along <em>with</em> the examples. Most problems in the book allow you to manipulate dynamic graphs and receive immediate feedback by submitting your answers through WeBWorK online.</p>
+        <p>We wrote this text with students in mind. We know how busy the life of a student can be <mdash /> some working full-time jobs, some with children to care for, often while taking a full load of classes. We want this to be a safe learning space and reference that you can take anywhere you have an internet connection. Also, we are releasing this for free, to help lessen the cost of higher education.</p>
+        <p>We hope you find learning with this book to be an enjoyable and engaging experience!</p>
 
-        <p>This text is intended for a one or two-semester undergraduate course in  abstract algebra. Traditionally, these courses have covered the theoretical aspects of groups, rings, and fields.  However, with the development of computing in the last several decades, applications that involve abstract algebra and discrete mathematics have become increasingly important, and many science, engineering, and computer science students are now electing to minor in mathematics. Though theory still occupies a central role in the subject of abstract algebra and no student should go through such a course without a good notion of what a proof is, the importance of applications such as coding theory and cryptography has grown significantly.</p>
+    </preface>
 
-        <p>Until recently most abstract algebra texts included few if any applications. However, one of the major problems in teaching an abstract algebra course is that for many students it is their first encounter with an environment that requires them to do rigorous proofs. Such students often find it hard to see the use of learning to prove theorems and propositions; applied examples help the instructor provide motivation.</p>
+    <preface xml:id="to-the-instructor">
 
-        <p>This text contains more material than can possibly be covered in a single semester.  Certainly there is adequate material for a two-semester course, and perhaps more; however, for a one-semester course it would be quite easy to omit selected chapters and still have a useful text.  The order of presentation of topics is standard: groups, then rings, and finally fields. Emphasis can be placed either on theory or on applications. A typical one-semester course might cover groups and rings while briefly touching on field theory, using Chapters<nbsp />1 through 6, 9, 10, 11, 13 (the first part), 16, 17, 18 (the first part), 20, and 21. Parts of these chapters could be deleted and applications substituted according to the interests of the students and the instructor. A two-semester course emphasizing theory might cover Chapters<nbsp />1 through 6, 9, 10, 11, 13 through 18, 20, 21, 22 (the first part), and 23. On the other hand, if applications are to be emphasized, the course might cover Chapters 1 through 14, and 16 through 22. In an applied course, some of the more theoretical results could be assumed or omitted. A chapter dependency chart appears below. (A broken line indicates a partial dependency.)</p>
+        <title>To the Instructor</title>
+        <paragraphs>
+        <p>This book is a collection of activities, a digital workbook, that replaces traditional textbook reading with an interactive, guided-lesson approach to learning. The workbook covers common topics of precalculus that are otherwise delivered as passive reading assignments or lectures.</p>
+        <p>We hope this book will feel very natural to use. Each chapter begins with <em>activities</em> which introduce students to the basics of a topic. Activities can be assigned, graded and recorded through the use of <a href="http://webwork.maa.org/">WeBWorK</a>, an open-source online homework system. Many exercises include dynamic <a href="http://geogebra.org">GeoGebra</a> graphs for students to manipulate.</p>
+        <p>These activities mimic what has traditionally been done in discovery-based classroom work, to be completed by students as <q>homework</q>. Having completed the activities, students come to class ready to engage in further discussion and application of the material. Since WeBWorK gives students immediate feedback, they get basic questions answered as they <em>actively read</em>.</p>
+        <p>Following the activities, each chapter has a <q>gist</q> section which resembles the expository content in a traditional textbook, though it still has interactive components such as found in the activities.</p>
+        </paragraphs>
+        <paragraphs><title>Why Another Math Book</title>
+        <p>Many mathematics textbooks begin with the assertion that they deliver a <em>new</em> or <em>unique</em> approach to learning. This book is different, at least in that regard, in that the authors concede there is really nothing new in our approach. What follows is a presentation of learning that happens in mathematics classrooms all over the world <mdash /> students actively engaged in the learning process: experimenting, observing, discovering and applying.</p>
+        <p>Current technology in education software is used mostly in the assessment of homework. On the other hand, reading material in the form of an e-book is relatively static <mdash /> it is an electronic version of the text that remains a passive reading experience for the student.
+          The result is students often skip the reading altogether and go directly to the homework section where they hope to learn their skills through repetition or by <q>reverse engineering</q> of the solutions.
+          While homework remains a key aspect in student learning, it is currently used at the <q>back end</q> of the learning process. Research shows that an active, discovery-based approach in knowledge development, the <q>front end</q> of learning, contributes to longer knowledge retention and is linked to a deeper understanding of the material.</p>
+        <p>Therefore with this book, we hope that the active learning process used so well in college classrooms can be brought to the <em>reading</em> experience. This is nothing new to mathematics, though perhaps it is somewhat new to the textbook.</p>
+        </paragraphs>
 
-
--->
-<!--
-
-        <p>Though there are no specific prerequisites for a course in abstract algebra, students who have had other higher-level courses in mathematics will generally be more prepared than those who have not, because they will possess a bit more mathematical sophistication. Occasionally, we shall assume some basic linear algebra; that is, we shall take for granted an elementary knowledge of matrices and determinants. This should present no great problem, since most students taking a course in abstract algebra have been introduced to matrices and determinants elsewhere in their career, if they have not already taken a sophomore or junior-level course in linear algebra.</p>
-
-        <p>Exercise sections are the heart of any mathematics text. An exercise set appears at the end of each chapter. The nature of the exercises ranges over several categories; computational,  conceptual, and theoretical problems are included. A section presenting hints and solutions to many of the exercises appears at the end of the text. Often in the solutions a proof is only sketched, and it is up to the student to provide the details. The exercises range in difficulty from very easy to very challenging. Many of the more substantial problems require careful thought, so the student should not be discouraged if the solution is not forthcoming after a few minutes of work.</p>
--->
-        <!-- Removed reference to the solutions manual.  TWJ 8/19/2010 -->
-        <!-- A complete solutions manual is available for the instructor's use.  -->
-<!--
-        <p>There are additional exercises or computer projects at the ends of many of the chapters. The computer projects usually require a knowledge of programming. All of these exercises and projects are more substantial in nature and allow the exploration of new results and theory.</p>
--->
-        <!-- % Added Sage blurb, RAB 2011/07/28 -->
-<!--        <p>Sage (<url href="http://sagemath.org">sagemath.org</url>) is a free, open source, software system for advanced mathematics, which is ideal for assisting with a study of abstract algebra. Sage can be used either on your own computer, a local server, or on SageMathCloud (<url href="https://cloud.sagemath.com">https://cloud.sagemath.com</url>). Robert Beezer has written a comprehensive introduction to Sage and a selection of relevant exercises that appear at the end of each chapter, including live Sage cells in the web version of the book.</p>
--->
-        <!-- RAB 2014/08/18 Should move flush right with some vertical spacing -->
-<!--        <attribution>Thomas W. Judson <br />Nacogdoches, Texas 2015</attribution>
-
-    </preface>-->
+    </preface>
 
 </frontmatter>
