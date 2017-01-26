@@ -24,7 +24,7 @@
                 <li><p>Define, distinguish, and apply piecewise-defined functions.</p></li>
             </ul>
         </list>
-        <list>
+        <!-- <list>
             <title>Video Lectures</title>
                 <dl>
                     <li>
@@ -40,80 +40,138 @@
                         <title>video title here</title>
                     </li>
                 </dl>
-        </list>
+        </list> -->
     </introduction>
 
     <xi:include href="./activity-domain-range.xml" />
     <xi:include href="./activity-piecewise.xml" />
 
-    <conclusion>
+    <section xml:id="domain-and-range-piecewise-gist">
+      <title>Gist of Domain, Range and Piecewise Defined Functions</title>
         <subsection>
-            <title>Domain and Range</title>
-              <p>Sometimes a formula can only accept certain kinds of values. For instance the square root function <me>f(x) = \sqrt x</me> can only accept values of x are NOT negative.</p>
-              <p>In math we say the function <m>f</m> can only accept values <m>x \geqslant 0</m> meaning whatever values we choose for <m>x</m> must be greater than or equal to zero. That's the math way of saying <q>not negative</q>.</p>
-              <p>The <term>domain</term> of a function is the set of all the inputs that a function can use. For <m>f(x) = \sqrt x </m> the domain is <m>x \geqslant 0</m> because only these inputs allow the function to yield real valued outputs.</p>
-              <p>Another example is <me>f(x) = \frac{x}{{{x^2} - 1}}</me>. In this case the denominator could be zero (a big no-no) if <m>x</m> is either <m>1</m> or <m>-1</m>. So the domain if this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
-              <p>An easier way to say the same thing is to state what values you CAN'T use, as in <m>x \ne  \pm 1</m></p>
-              <p>For now the only functions that should raise red flags are those that have square roots (because you can't take the square root of negative numbers) and those with deonominators (because we have to avoid any input that give us zero in the denominator).</p>
-              <p>Once we know what inputs a function will accept, we then consider all the possible output results. This is called the <term>range</term> of the function.</p>
-              <p>Back to our example of a square root function. <me>f(x) = \sqrt {x - 8} </me> has a domain such that whatever <m>x-8</m> is, it must be positive. Solving the inequality for x we arrive with the domain as</p>
-              <p><md><mrow>x - 8 \amp \geqslant 0</mrow>
-              <mrow>x \amp \geqslant 8</mrow></md></p>
-              <p>In English we would say that our function will accept any input that is greater than or equal to <m>8</m>. That's our domain.</p>
-              <p>Now consider all the possible output values our function can create.  The square root function always creates non-negative results.  In other words, if you put a number (from the domain) into the square root funciton, you always get a result that is greater than or equal to zero.</p>
-              <todo>Link to "But I thought the square root always give us plus or minus!?</todo>
-              <p>Under these conditions the function will never yield negative results.  Only <m>y = 0</m> or positive results will ever come out of this function. Therefore the range  of <m>f</m> is <m>f(x) \geqslant 0</m></p>
-              <p>Domain and range are often more clear if we look at functions graphically. Below is a graph of <m>f(x) = \sqrt {x - 8}</m></p>
+          <title>Domain and Range</title>
+            <p>Sometimes a formula can only accept certain kinds of input values. For instance the square root function <me>f(x) = \sqrt x</me> can only accept values of x are NOT negative because only these inputs allow the function to yield real valued outputs.</p>
+            <p>In math we say</p>
+            <blockquote>
+              <p>The function <m>f</m> has a domain such that <m>x \geqslant 0</m></p>
+            </blockquote>
+            <p>meaning whatever values we choose for <m>x</m>, they must be greater than or equal to zero. That's the math way of saying <q>not negative</q>.
+            </p>
+            <p>The <term>domain</term> of a function is the set of all inputs a function can or is allowed to use.</p>
+            <p>Consider another example<me>f(x) = \frac{x}{{{x^2} - 1}}</me>In this case the denominator could be zero (a big no-no) if <m>x</m> is either <m>1</m> or <m>-1</m>. So the domain if this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
+            <p>In math this is written as</p> 
+            <blockquote>
+              <p>Domain is all <m>x \ne  \pm 1</m></p>
+            </blockquote>
+            <p>Once we know what inputs a function accepts, we then consider all the possible output results. This is called the <term>range</term> of the function.</p>
+            <p>Back to our example of a square root function. Consider <me>f(x) = \sqrt {x - 8}</me> This function has a domain such that whatever <m>x</m> is, then <m>x-8</m> must be positive. Solving the inequality for x we arrive with the domain of</p>
+            <p><md><mrow>x - 8 \amp \geqslant 0</mrow>
+            <mrow>x \amp \geqslant 8</mrow></md></p>
+            <p>In English we would say that our function will accept inputs that are greater than or equal to <m>8</m>.</p>
+            <p>Assuming our inputs are in the domain of f, consider all the possible output values our function can create.</p>
+            <p>The square root function always creates non-negative results.  In other words, if you put a number (from the domain) into the square root funciton, you always get a result that is greater than or equal to zero.</p>
+            <p>Under these conditions the function will never yield negative results.  Only <m>y = 0</m> or <m>y > 0</m>, positive results, will ever come out of this function. Therefore</p>
+            <blockquote>
+              <p>The range  of <m>f(x) = \sqrt x </m> is <m>y \geqslant 0</m></p>
+            </blockquote>
+            <p>At this point it is important to notice that when we state the domain of a function, we refer to the input varialbe. So far our input has been caled <m>x</m>, so every domain we have described has <m>x</m> in it. For instance <m>f(x) = \frac{x}{{{x^2} - 1}}</m> had the domain <m>x \ne  \pm 1</m></p>
+            <p>When we state the range of a function we must refer to the output variable or the function itself. If <m>y=f(x)</m> where <m>f(x) = \frac{x}{{{x^2} - 1}}</m> then our range has to refer to <m>y</m> or to <m>f(x)</m>. In this case the range is <m>y \leqslant 0</m> or <m>y \geqslant 0</m> (graph this function on your calculator to see that the outputs all real numbers, but never zero). We could also use <m>f(x)</m> instead of <m>y</m>.</p>
+            <p>Identifying the domain and range directly from a formula can be difficult. It is often more clear if we look at functions graphically. Below is a graph of <m>f(x) = \sqrt {x - 8}</m></p>
 
-              <example>
-                  <figure xml:id="graph-of-root-x-minus-8">
-                      <caption>Graph of <m>f(x)=\sqrt{x-8}</m></caption>
-                      <image xml:id="image-graph-of-root-x-minus-8">
-                          <latex-image-code>
-                              <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[ymin=-5, ymax=7, xlabel={$x$}, ylabel={$f(x)$}, xtick={4,8,...,24}, minor xtick={-3,-2,...,25}, ytick={-4,-2,...,6}, minor ytick={-5,-4,...,7}, xmin=-3, xmax=25, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
-                              \addplot[thick, color=red, domain=0:4,->] ({x^2+8},{x});
-                              \end{axis}
-                              \end{tikzpicture}]]>
-                          </latex-image-code>
-                      </image>
-                  </figure>
-              <p>Notice the graph only appears for input values <m>x \geqslant 8</m>. That's the domain of <m>f</m>.</p>
-              <p>Also notice the graph only appears at or above the <m>x-</m>axis.  The graph shows us the range is <m>f(x) \geqslant 0</m></p>
-              </example>
-              <p>When you want to find the domain and range of a function, one option is to graph it on a calculator or any web graphing tool. Determine the intervals or boundaries on the horizontal axis where the graph exists. This is the domain.</p>
-              <p>Next use the graph to determine if there are vertical intervals or boundaries to how high or low the graph reaches. This is the range.</p>
+            <example>
+                <figure xml:id="graph-of-root-x-minus-8">
+                  <caption>Graph of <m>f(x)=\sqrt{x-8}</m></caption>
+                    <image xml:id="image-graph-of-root-x-minus-8">
+                      <latex-image-code>
+                          <![CDATA[\begin{tikzpicture}
+                          \begin{axis}[ymin=-5, ymax=7, xlabel={$x$}, ylabel={$y$}, xtick={4,8,...,24}, minor xtick={-3,-2,...,25}, ytick={-4,-2,...,6}, minor ytick={-5,-4,...,7}, xmin=-3, xmax=25, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
+                          \addplot[thick, color=red, domain=0:4,->] ({x^2+8},{x});
+                          \end{axis}
+                          \end{tikzpicture}]]>
+                      </latex-image-code>
+                    </image>
+                </figure>
+            <p>Notice the graph only appears for input values <m>x \geqslant 8</m>. That's the domain of <m>f</m>.</p>
+            <p>Also notice the graph only appears at or above the <m>x-</m>axis.  The graph shows us the range is <m>y \geqslant 0</m></p>
+            </example>
+
+            <p>When you want to find the domain and range of a function, one option is to graph it on a calculator or any web graphing tool. Determine the intervals or boundaries on the horizontal axis where the graph exists. This is the domain.</p>
+            <p>Next use the graph to determine if there are vertical intervals or boundaries to how high or low the graph reaches. This is the range.</p>
+            <exercise>
+              <webwork>
+                <setup>
+                  <var name="$dom1">
+                      <static>2&lt;=x&lt;6</static>
+                  </var>
+                  <var name="$dom2">
+                      <static>3&lt;=x&lt;7</static>
+                  </var>
+                  <var name="$rng1">
+                      <static>1.5&lt;=y&lt;3.5</static>
+                  </var>
+                  <var name="$rng2">
+                      <static>3&lt;=y&lt;5</static>
+                  </var>
+
+                  <pg-code>
+                    Context("Inequalities");
+                    Context()->variables->are(x=>'Real',y=>'Real');
+                    $dom1 = Compute("2&lt;=x&lt;6");
+                    $dom2 = Compute("3&lt;=x&lt;7");
+                    $rng1 = Compute("1.5&lt;=y&lt;3.5");
+                    $rng2 = Compute("3&lt;=y&lt;5");
+                  </pg-code>
+                </setup>
+                <statement>
+                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/s4F4ptNM/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                  <p>The domain of the function f is shaded in green on the horizontal axis while its range is shaded in red on the vertical axis. Drag the graph to change its domain and range.</p>
+                  <p>Use <m>x</m> to describe the domain and use <m>y</m> to describe the range.</p>
+                  <p>Drag the graph from the point at the origin to the point <m>(2, 1.5)</m>.</p>
+                  <blockquote>
+                    <p>The domain is <var name="$dom1" width="8" /></p>
+                    <p>The range is <var name="$rng1" width="8" /></p>
+                  </blockquote>
+                  <p>Drag the graph from the point at the origin to the point <m>(2, 3)</m>.</p>
+                  <blockquote>
+                    <p>The domain is <var name="$dom1" width="8" /></p>
+                    <p>The range is <var name="$rng2" width="8" /></p>
+                  </blockquote>
+                  <p>Drag the graph from the point at the origin to the point <m>(3, 3)</m>.</p>
+                  <blockquote>
+                    <p>The domain is <var name="$dom2" width="8" /></p>
+                    <p>The range is <var name="$rng2" width="8" /></p>
+                  </blockquote>
+                </statement>
+              </webwork>
+            </exercise>
+            
         </subsection>
         <subsection>
           <title>Piecewise Defined Functions</title>
           <p>A piecewise defined function is actually a collection of two or more functions that tell us how to use an input to get an output. Each function must state the domain on which it is defined, that way you know when to use it.</p>
-          <example>
-              <p>Easy, everyday examples of piecewise defined functions are:</p>
-              <p>
-                  <ul>
-                      <li>
-                          <p>The cost of renting a snowboard is <m>$25</m> per day or <m>$60</m> for three days or <m>$75</m> for a week.</p>
-                          <p>The first cost function is <m>$25</m> per day and is good for <m>1</m> or <m>2</m> days. The domain of this function is the <q><m>1</m> or <m>2</m> days</q>. It tells you when to use this cost function.</p>
-                          <p>On the third day is a new cost function, a simple constant <m>$60</m></p>
-                          <p>Finally the last cost function is for more than 3 days, <m>$75</m> per week.</p>
-                          <p>Each rule has its own domain that tells us when to use the rule.</p>
-                      </li>
-                      <li>
-                          <p>The rate at which your coffee cools on the counter is related to the temperature in the room (there's actually a formula for that). The formula is good for as long the situation in the room remains the same.</p>
-                          <p>If you suddenly change the room conditions by turning on the air conditioner, then the rate at which the coffee cools will also change.  There is a new formula to model the cooling coffee after the air conditioner is swithed on.</p>
-                          <p>One formula is good from the time you make your coffee up until you switch on the air conditioner. Then the other forumla takes over after the air conditioner has been turned on.</p>
-                      </li>
-                      <li>
-                          <p>In the United States there are 7 income tax brackets. That means there are 7 different functions to tell us how much income tax we owe. The function you use is determined by how much money you make.</p>
-                          <p>In other words, each function has its own domain (income bracket) that tells you when to use the function.</p>
-                          <p>One family's income will put them in a <m>25\%</m> tax bracket, but another family with a higher income will fall under a higher tax bracket, like <m>28\%</m>.</p>
-                      </li>
-                  </ul>
-              </p>
+          <p>Easy, everyday examples of piecewise defined functions are:</p>
+          <example>       
+            <p>The cost of renting a snowboard is <m>$25</m> per day or <m>$60</m> for three days or <m>$75</m> for a week.</p>
+            <p>The first cost function is <m>$25</m> per day and is good for <m>1</m> or <m>2</m> days. The domain of this function is the <q><m>1</m> or <m>2</m> days</q>. It tells you when to use this cost function.</p>
+            <p>On the third day is a new cost function, a simple constant <m>$60</m></p>
+            <p>Finally the last cost function is for more than 3 days, <m>$75</m> per week.</p>
+            <p>Each rule has its own domain that tells us when to use the rule.</p>
           </example>
+          <example>
+            <p>The rate at which your coffee cools on the counter is related to the temperature in the room (there's actually a formula for that). The formula is good for as long the situation in the room remains the same.</p>
+            <p>If you suddenly change the room conditions by turning on the air conditioner, then the rate at which the coffee cools will also change.  There is a new formula to model the cooling coffee after the air conditioner is swithed on.</p>
+            <p>One formula is good from the time you make your coffee up until you switch on the air conditioner. Then the other forumla takes over after the air conditioner has been turned on.</p>
+          </example>
+          <example>
+            <p>In the United States there are 7 income tax brackets. That means there are 7 different functions to tell us how much income tax we owe. The function you use is determined by how much money you make.</p>
+            <p>In other words, each function has its own domain (income bracket) that tells you when to use the function.</p>
+            <p>One family's income will put them in a <m>25\%</m> tax bracket, but another family with a higher income will fall under a higher tax bracket, like <m>28\%</m>.</p>
+          </example>
+
           <p>To create a piecewise function, start by finding formulas or rules for all the different functions in the set.  Then identify the domain for each function.</p>
           <p>When you finally write the piecewise function, write each formula with its corresponding domain to its right.</p>
-
+          
+          <todo>It would be nice if the student could enter their answers in such a way that in the end the answer looks like proper piecewise notation as shown in the solution.</todo>
           <exercise>
             <webwork>
               <setup>
@@ -141,7 +199,7 @@
               </setup>
 
               <statement>
-                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                   <p>Find a formula for the piecewise defined function shown in the graph</p>
                   <p>What is the equation of the blue line? <var name="$blueLine" width="15" /> and what is its domain? <var name="$answer1" width="5" /></p>
                   <p>What is the equation of the green line? <var name="$greenLine" width="15" /> and what is its domain? <var name="$answer2" width="5" /></p>
@@ -179,7 +237,7 @@
                 </pg-code>
               </setup>
               <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/UY2xPaVW/width/413/height/300/border/888888" width="413px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/UY2xPaVW/width/413/height/300/border/888888" width="413px" height="300px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                 <p>
                   <me>\text{A: } f(x) = \left\{
                   \begin{array}{ll}
@@ -210,5 +268,5 @@
           </exercise>
       </subsection>
 
-    </conclusion>
+    </section>
 </chapter>
