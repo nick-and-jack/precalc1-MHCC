@@ -55,7 +55,7 @@
       <subsection>
         <title>Summary of Composition</title>
 
-        <p>The <term>composition</term> of functions is all about using the <em>output</em> of one function as the <em>input</em> for another.</p>
+        <p>The <term>composition</term><index><main>function</main><sub>composition</sub></index><index><main>function composition</main></index> of functions is all about using the <em>output</em> of one function as the <em>input</em> for another.</p>
 
         <p>The notation we will use for composing two functions is <me>f(g(x))</me> which we read as "<m>f</m> of <m>g</m> of <m>x</m>".</p>
 
@@ -98,9 +98,7 @@
           </webwork>
         </exercise>
 
-        <p>If we use function composition with a numerical input, we will get a numerical answer. However, if we just use <m>x</m> as the input and compose functions, the result will be an expression involving <m>x</m>, which is a brand new function representing the composition.</p>
-
-        <p>This new function is called a <term>composite</term> function.</p>
+        <p><index><main>function</main><sub>composite</sub></index><index><main>composite function</main></index>If we use function composition with a numerical input, we will get a numerical output. However, if we just use <m>x</m> as the input and compose functions, the result will be an expression involving <m>x</m>, which is a brand new function representing the composition. This new function is called a <term>composite</term> function.</p>
 
         <exercise xml:id="exercise-composition-formulas">
           <webwork>
@@ -167,7 +165,7 @@
             <p>Etc.</p>
           </li>
         </ul></p>
-       
+
         <p>Now, few people would look at a car and see it as a composition of its dozens of connected systems and processes. We just simplify this by assigning a single word to refer to this complex composite function: <q>car</q>.</p>
 
         <p>If everything is working properly, from the driver's perspective, there is just one input <mdash /> depressing the accelerator <mdash /> that sets everything else in motion.</p>
@@ -343,7 +341,7 @@
       <subsection>
         <title>Summary of Inverses</title>
 
-        <p>Two functions are called <term>inverses</term> if they <em>undo</em> each other. If one function has a certain process, then the other function will have the reverse process.</p>
+        <p>Two functions are called <term>inverses</term><index><main>function</main><sub>inverse</sub></index><index><main>inverse function</main></index> if they <em>undo</em> each other. If one function has a certain process, then the other function will have the reverse process.</p>
 
         <p>This means that if <m>f</m> and <m>g</m> are inverses, then both of the following will be true:<md>
           <mrow>f(g(x)) \amp= x</mrow>
@@ -352,7 +350,7 @@
 
         <p>This is because whatever the inside function did with the input <m>x</m>, the outside function <em>undid</em> that action.</p>
 
-        <p>If a function <m>f</m> has an inverse function <m>f^{-1}</m>, then we say that the function <m>f</m> is <term>invertible</term>.</p>
+        <p>If a function <m>f</m> has an inverse function <m>f^{-1}</m>, then we say that the function <m>f</m> is <term>invertible</term><index><main>function</main><sub>invertible</sub></index><index><main>invertible function</main></index>.</p>
 
         <example>
           <p>The functions <m>f(x) = 2^x + 1</m> and <m>g(x) = \log_{2}(x - 1)</m> are inverses.</p>
@@ -625,7 +623,7 @@
         </table>
       </sidebyside>
 
-      <p>From a graphical standpoint, taking a set of points from the table of <m>y = f(x)</m>, and switching the <m>x</m>- and <m>y</m>-coordinates, will give us points on the graph of <m>y = f^{-1}(x)</m>.</p>
+      <p><index><main>inverse function</main><sub>the graph</sub></index>From a graphical standpoint, taking a set of points from the table of <m>y = f(x)</m>, and switching the <m>x</m>- and <m>y</m>-coordinates, will give us points on the graph of <m>y = f^{-1}(x)</m>.</p>
 
       <exercise>
         <webwork>
@@ -811,7 +809,7 @@
         </li>
         <li>
           <title>Horizontal Line Test</title>
-          <p>If a function is invertible, then its graph may only intersect a horizontal line at most once. If a horizontal line could intersect the graph more than once, then the graph is not invertible.</p>
+          <p><index><main>horizontal line test</main></index>If a function is invertible, then its graph may only intersect a horizontal line at most once. If a horizontal line could intersect the graph more than once, then the graph is not invertible.</p>
         </li>
       </dl></p>
       <example>
@@ -902,7 +900,7 @@
         </webwork>
       </exercise>
 
-      <p>We <term>restrict</term> the domain of a function in order to make it <term>invertible</term>. We choose an interval for the input, so that the output never has repeated values <mdash /> this ensures that the inverse will pass the vertical line test.</p>
+      <p><index><main>function</main><sub>restricting the domain</sub></index>We <term>restrict</term> the domain of a function in order to make it <term>invertible</term>. We choose an interval for the input, so that the output never has repeated values <mdash /> this ensures that the inverse will pass the vertical line test.</p>
       <exercise>
         <webwork>
           <setup>
