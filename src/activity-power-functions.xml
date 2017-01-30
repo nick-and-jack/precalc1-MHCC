@@ -14,10 +14,11 @@
 <section xml:id="section-activity-power-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Power Functions Activity</title>
   <introduction>
-    <p>In this activity, we will explore <term>power functions</term>.</p>
+    <p>In this activity, we will explore <term>power functions</term>.<index><main>power function</main></index><index><main>function</main><sub>power</sub></index></p>
     <p>A power function is a function of the form <me>f(x) = x^a</me> where <m>a</m> is a constant real number.</p>
     <p>Our goal is to learn to predict what the graph of a power function will look like, depending on the exponent <m>a</m>.</p>
-    <p>We will begin by examining power functions with <term>integer</term> exponents.</p>
+    <p>We will begin by examining power functions with integer exponents.</p>
+  </introduction>
     <exercise>
       <webwork xml:id="webwork-power-function-intro">
         <setup>
@@ -42,26 +43,24 @@
               <member correct="yes">\text{(0,0) and (1,1)}</member>
             </set>
           </var>
-
           <pg-code>
             $evenExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],'points upward on the right and the left');
             $oddExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],'points upward on the right and downward on the left');
             $commonPoints=PopUp(["?",'(-1,1)','(0,0) and (1,1)','(-1,-1) and (0,0) and (1,1)'],'(0,0) and (1,1)');
-
           </pg-code>
         </setup>
         <statement>
           <p>The graph below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a positive integer. Use the slider to change the exponent <m>n</m>.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ECrUf9u9/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Power functions have a similar overall <em>shapes</em>, depending on their exponents. Complete the following statements about the shapes of the power functions in this exercise.</p>
-          <ul>
+          <p><ul>
             <li><p>If the exponent is an <em>even</em> positive number, then its graph:</p>
             <p><var name="$evenExponent" form="popup" /></p></li>
             <li><p>If the exponent is an <em>odd</em> positive number, then its graph:</p>
             <p><var name="$oddExponent" form="popup" /></p></li>
             <li><p>All of these power functions pass through the point(s):</p>
             <p><var name="$commonPoints" form="popup" /></p></li>
-          </ul>
+          </ul></p>
         </statement>
       </webwork>
     </exercise>
@@ -84,17 +83,24 @@
                 1, labels => ["x^4","x^5","None of these"],
                 displayLabels => 0
             );
+            $gr=init_graph(-6,-6,6,6,
+            axes=>[0,0],
+            grid=>[12,12],
+            size=>[400,400]
+            );
+            add_functions($gr, "x**5 for x in &lt;-6,6&gt; using color:red and weight:2");
           </pg-code>
         </setup>
         <statement>
           <p>The graph below shows a power function.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zKadUZzt/width/424/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <figure>
+            <image pg-name="$gr" />
+          </figure>
           <p>What is a possible formula for this function?</p>
           <p><var name="$formula" form="buttons" /></p>
         </statement>
         <hint>
           <p>Remember that the graphs of <em>all</em> power functions with positive whole number exponents look similar, depending on whether the exponent is <em>odd</em> or <em>even</em>. Think about a function whose graph you know, such as <m>x^1</m> or <m>x^2</m>. How does that compare to the graph shown above?</p>
-
         </hint>
         <solution>
           <p>The only possibility given is <m>f(x) = x^5</m>.</p>
@@ -148,12 +154,25 @@
             $posOdd=PopUp(["?","A","B","C","D"],"B");
             $negEven=PopUp(["?","A","B","C","D"],"C");
             $negOdd=PopUp(["?","A","B","C","D"],"A");
+
+            for my $i(0..4){$gr[$i] = init_graph(-5,-5,5,5,axes=>[0,0],grid=>[10,10],size=>[200,200]);};
+            $gr[0] -> lb(new Label ( -4.5,4,'A','red','left','bottom'));
+            $gr[1] -> lb(new Label ( -4.5,4,'B','red','left','bottom'));
+            $gr[2] -> lb(new Label ( -4.5,4,'C','red','left','bottom'));
+            $gr[3] -> lb(new Label ( -4.5,4,'D','red','left','bottom'));
+            add_functions($gr[0], "-x^3 for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[1], "x^5 for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[2], "-x^2 for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[3], "x^4 for x in &lt;-5,5> using color:blue and weight:2");
+
           </pg-code>
         </setup>
 
         <statement>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/hU6c22WZ/width/229/height/230/border/888888" width="229px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jUTFkbFb/width/229/height/230/border/888888" width="229px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jHt9DjNU/width/229/height/230/border/888888" width="229px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GgFu8R9Y/width/229/height/230/border/888888" width="229px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <figure><image pg-name="$gr[0]" width="200" height="200" tex_size="200"/></figure>
+          <figure><image pg-name="$gr[1]" width="200" height="200" tex_size="200"/></figure>
+          <figure><image pg-name="$gr[2]" width="200" height="200" tex_size="200"/></figure>
+          <figure><image pg-name="$gr[3]" width="200" height="200" tex_size="200"/></figure>
 
           <p>The graphs show the following functions:<md>
             <mrow>y = -x^2</mrow>
@@ -161,7 +180,6 @@
             <mrow>y = x^4</mrow>
             <mrow>y = x^5</mrow>
           </md></p>
-          <p>Use the letters <em>A</em> through <em>D</em> to answer the following questions.</p>
           <p>Which graph shows <m>y = x^4</m>?</p>
           <p>Answer:  Graph <var name="$posEven" form="popup" /></p>
           <p>Which graph shows <m>y = x^5</m>?</p>
@@ -255,11 +273,17 @@
                 2, labels => ["x^4","x^3","x^{-4}","x^{-3}","None of these"],
                 displayLabels => 0
             );
+            $gr=init_graph(-6,-6,6,6,
+            axes=>[0,0],
+            grid=>[12,12],
+            size=>[400,400]
+            );
+            add_functions($gr, "x**(-4) for x in &lt;-6,6&gt; using color:red and weight:2");
           </pg-code>
         </setup>
         <statement>
           <p>The graph below shows a power function.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QZC79zzV/width/417/height/349/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <figure><image pg-name="$gr" /></figure>
           <p>What is a possible formula for this function?</p>
           <p><var name="$formula" form="buttons" /></p>
         </statement>
@@ -316,20 +340,25 @@
             $posOdd=PopUp(["?","A","B","C","D"],"C");
             $negEven=PopUp(["?","A","B","C","D"],"A");
             $negOdd=PopUp(["?","A","B","C","D"],"D");
+
+            for my $i(0..4){$gr[$i] = init_graph(-5,-5,5,5,axes=>[0,0],grid=>[10,10],size=>[200,200]);};
+            $gr[0] -> lb(new Label ( -4.5,4,'A','red','left','bottom'));
+            $gr[1] -> lb(new Label ( -4.5,4,'B','red','left','bottom'));
+            $gr[2] -> lb(new Label ( -4.5,4,'C','red','left','bottom'));
+            $gr[3] -> lb(new Label ( -4.5,4,'D','red','left','bottom'));
+            add_functions($gr[0], "x^(-1) for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[1], "-x^(-2) for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[2], "x^(-4) for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[3], "-x^(-3) for x in &lt;-5,5> using color:blue and weight:2");
           </pg-code>
         </setup>
 
         <statement>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/B5uBvHQg/width/231/height/184/border/888888" width="231px" height="184px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/HmeJbAbg/width/231/height/184/border/888888" width="231px" height="184px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/k7vnqkZd/width/231/height/184/border/888888" width="231px" height="184px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*   [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/c6kSw98S/width/231/height/184/border/888888" width="231px" height="184px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-
-          <p>The graphs show the following functions:<md>
-            <mrow>y = -x^{-2}</mrow>
-            <mrow>y = x^{-4}</mrow>
-            <mrow>y = x^{-1}</mrow>
-            <mrow>y = -x^{-3}</mrow>
-          </md></p>
-          <p>Use the letters <em>A</em> through <em>D</em> to answer the following questions.</p>
+          <figure><image pg-name="$gr[0]" width="200" height="200" tex_size="200" /></figure>
+          <figure><image pg-name="$gr[1]" width="200" height="200" tex_size="200" /></figure>
+          <figure><image pg-name="$gr[2]" width="200" height="200" tex_size="200" /></figure>
+          <figure><image pg-name="$gr[3]" width="200" height="200" tex_size="200" /></figure>
+          <p>Select the graph for each formula:</p>
           <p>Which graph shows <m>y = -x^{-2}</m>?</p>
           <p>Answer:  Graph <var name="$posEven" form="popup" /></p>
           <p>Which graph shows <m>y = x^{-4}</m>?</p>
@@ -400,7 +429,5 @@
         </statement>
       </webwork>
     </exercise>
-
-  </introduction>
 
 </section>
