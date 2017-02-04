@@ -23,20 +23,22 @@
             </ul>
         </objectives>
 
-        <list>
-            <title>Video Lectures</title>
-            <!-- If we can get these videos up onto YouTube, much easier to embed -->
-            <dl>
-                <li>
-                    <title>Power Functions</title>
-                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-composition-captioned_-_20150124_193451_26.html" />-->
-                </li>
-                <li>
-                    <title>Polynomials</title>
-                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-inverse-functions-captioned_-_20150124_202541_26.html" />-->
-                </li>
-            </dl>
-        </list>
+        <introduction>
+          <list>
+              <title>Video Lectures</title>
+              <!-- If we can get these videos up onto YouTube, much easier to embed -->
+              <dl>
+                  <li>
+                      <title>Power Functions</title>
+                      <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-composition-captioned_-_20150124_193451_26.html" />-->
+                  </li>
+                  <li>
+                      <title>Polynomials</title>
+                      <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-inverse-functions-captioned_-_20150124_202541_26.html" />-->
+                  </li>
+              </dl>
+          </list>
+        </introduction>
 
 
     <xi:include href="./activity-power-functions.xml" />
@@ -163,15 +165,14 @@
 
         <exercise>
           <statement>
-            <p>Which of the functions below are polynomials?</p>
-            <md>
+            <p>Which of the functions below are polynomials?<md>
               <mrow>f(x) \amp= x^5 - \frac{2}{x}</mrow>
               <mrow>g(x) \amp= 2 + 6x^3</mrow>
               <mrow>h(x) \amp= \frac{11x^3+4x}{9\pi}</mrow>
               <mrow>p(x) \amp= 5\sqrt{x}+9</mrow>
               <mrow>q(x) \amp= (6x-2)(5x^3-2x+7)</mrow>
               <mrow>r(x) \amp= \log_7(4)x(x+\sqrt{12.8})</mrow>
-            </md>
+            </md></p>
           </statement>
           <hint><p>You may do some algebra to simplify a function before deciding if it is a polynomial.</p></hint>
           <answer><p>The functions <m>f(x)</m> and <m>p(x)</m> are <em>not</em> polynomials, but the others <em>are</em>.</p>
@@ -201,6 +202,9 @@
 
 
         <p>An input value which gives an output of zero is called a <term>root</term> of the polynomial, and a <term>root</term> corresponds to an <m>x</m>-intercept of the polynomial's graph.</p>
+
+        <todo>Fix the graph below, adding points on the x-coordinates</todo>
+
         <example xml:id="example-cubic-polynomial-roots">
           <p>The values <md>
           <mrow>x \amp= 3</mrow>
@@ -208,11 +212,13 @@
           <mrow>x \amp= -4</mrow></md>
           are all roots of the polynomial: <me>f(x) = 8x^3 + 4x^2 - 100x + 48</me></p>
           <p>To confirm this, we could either:</p>
-            <ol>
-              <li><p>Evaluate <m>f\left(3\right)</m>, <m>f\left(\frac{1}{2}\right)</m> and <m>f(-4)</m>, and see that they each give zero as the output. (Try this!)</p></li>
-              <li><p>Graph the function <m>y = f(x)</m> and observe that it contains the <m>x</m>-intercepts <m>(3, 0)</m>, <m>\left(\frac{1}{2}, 0\right)</m> and <m>(-4, 0)</m>.</p>
-              <todo>Fix the graph below, adding points on the x-coordinates</todo>
-              <p><figure>
+            <p><ol>
+              <li>
+                <p>Evaluate <m>f\left(3\right)</m>, <m>f\left(\frac{1}{2}\right)</m> and <m>f(-4)</m>, and see that they each give zero as the output. (Try this!)</p>
+              </li>
+              <li>
+                <p>Graph the function <m>y = f(x)</m> and observe that it contains the <m>x</m>-intercepts <m>(3, 0)</m>, <m>\left(\frac{1}{2}, 0\right)</m> and <m>(-4, 0)</m>.</p>
+                <figure>
                 <caption><m>y = 8x^3 + 4x^2 - 100x + 48</m></caption>
                   <image>
                       <latex-image-code>
@@ -229,12 +235,15 @@
                       ]]>
                       </latex-image-code>
                   </image>
-              </figure></p></li>
-            </ol>
+                </figure>
+              </li>
+            </ol></p>
         </example>
 
-        <paragraphs><title>Finding the Formula for a Polynomial</title>
-        <p>If you know the roots of a polynomial, you can easily create a list of linear factors (lines of degree 1) which have those same roots. Then, multiplying those linear factors together will create a polynomial which has all of those roots.</p>
+        <paragraphs>
+          <title>Finding the Formula for a Polynomial</title>
+          <p>If you know the roots of a polynomial, you can easily create a list of linear factors (lines of degree 1) which have those same roots. Then, multiplying those linear factors together will create a polynomial which has all of those roots.</p>
+        </paragraphs>
         <example>
           <p>In <xref ref="example-cubic-polynomial-roots">Example</xref>, we were told that the polynomial had the roots <m>3</m>, <m>\frac{1}{2}</m> and <m>-4</m>.</p>
           <p>If we wanted to write the formula for <m>f(x)</m>, using only this information, we could create the linear factors: <md>
@@ -279,12 +288,8 @@
             <mrow>\amp=0.04</mrow>
           </md></p>
           <p>Therefore, we have a polynomial which passes through <m>(4,2)</m> and has the correct roots:<me>y = 0.04(x-5)(x+6)(x-9)</me></p>
-          <remark>
-            <p>This is not the only polynomial that fits these conditions. Why?</p>
-          </remark>
-
+          <p>This is not the only polynomial that fits these conditions. Why?</p>
         </example>
-        </paragraphs>
 
         <paragraphs><title>Repeated Roots</title>
         <p>Linear factors may be repeated, as in: <md>
@@ -295,6 +300,7 @@
            <mrow>\amp= x(x+1)(x+1)(x-6)(x-6)(x-6)(x-6)</mrow></md></p>
         <p>Since a linear factor <m>(x-a)</m> corresponds to a root <m>x = a</m>, then repeating a linear factor will give us a <term>repeated root</term>.</p>
         <p>If a root is repeated <m>k</m> times, then we say that root has <term>multiplicity</term> <m>k</m>.</p>
+        </paragraphs>
         <example>
           <p>The polynomial <me>y = x^3(x-5)^2</me> has only two roots:  <m>x = 0</m> and <m>x = 5</m></p>
           <p>We say the root <m>x = 0</m> has <term>multiplicity</term> <m>3</m>, and the root <m>x = 5</m> has <term>multiplicity</term> <m>2</m>.</p>
@@ -308,7 +314,7 @@
         <p>This phenomenon of <em>bouncing</em> remains a characteristic of the graph, even if we give a polynomial more linear factors, such as: <me>y = (x+3)^2(x-1)</me></p>
         <todo>Fix the following graph, then learn how to make graphs that aren't disgusting</todo>
 
-        <p><figure>
+        <figure>
           <caption><m>y = (x+3)^2(x-1)</m></caption>
             <image>
                 <latex-image-code>
@@ -325,10 +331,10 @@
                 ]]>
                 </latex-image-code>
             </image>
-        </figure></p>
+        </figure>
 
         <p>Notice that the <term>root</term> <m>x = -3</m> has multiplicity <m>2</m>, and the graph resembles a parabola near that point, bouncing off of the <m>x</m>-axis. It also has the <term>root</term> <m>x = 1</m>, which has <term>multiplicity</term> <m>1</m>, and the graph crosses over the <m>x</m>-axis there.</p>
-        <p>The polynomials below both have <m>(x+3)^2</m> as a factor, but they have other linear factors with either <em>odd</em> or <em>even</em> multiplicity:
+        <p>The polynomials below both have <m>(x+3)^2</m> as a factor, but they have other linear factors with either <em>odd</em> or <em>even</em> multiplicity:</p>
           <sidebyside widths="48% 48%">
             <figure>
               <caption><m>y = (x+3)^2(x-1)^2</m></caption>
@@ -357,7 +363,6 @@
                 </image>
             </figure>
           </sidebyside>
-        </p>
 
         <p>Notice that when the <term>multiplicity</term> of a <term>root</term> is <em>even</em>, the graph bounces off of the <m>x</m>-axis at that value. When the <term>multiplicity</term> of a <term>root</term> is <em>odd</em>, the graph crosses over the <m>x</m>-axis at that value.</p>
 
@@ -476,19 +481,24 @@
           <p>(In fact, the output is <m>999,955,000,011,999,980</m>.)</p>
 
           <p>The point is that raising a large value to the power of <m>3</m> is much more significant than raising it to the power of <m>2</m> (or any smaller power). As another piece of math terminology, we would say that the term <m>x^3</m> <term>dominates</term> the other terms. The highest power of <m>x</m> is most significant in the end, so we can just focus our attention on the <term>leading term</term> of a polynomial to determine the <term>end-behavior</term>.</p>
-          <p>Written more succinctly: <blockquote>A polynomial has the same <term>end-behavior</term> as its leading term.</blockquote></p>
+          <p>Written more succinctly:</p>
+          <blockquote>
+            <p>A polynomial has the same <term>end-behavior</term> as its leading term.</p>
+          </blockquote>
           <p>Similarly, we can ask what the graph tends to do as <m>x \rightarrow -\infty</m>. This will be the same as the leading term <m>x^3</m>, which eventually decreases forever as <m>x \rightarrow -\infty</m>.</p>
         </example>
 
         <exercise>
+          <statement>
           <p>Make a rough sketch of the graph of the polynomial <m>f(x) = (x-4)(x-1)^2(x+3)^2(x+5)</m>.</p>
           <p>We must use what we know about the <term>roots</term> and their <term>multiplicities</term>, and also the <term>end-behavior</term> of the function.</p>
-          <ol>
+          <p><ol>
             <li><p>First, plot the <m>x</m>-intercepts on your graph. Remember that these are determined by finding the <term>roots</term> of the function.</p></li>
             <li><p>Next, consider the <term>end-behavior</term> of the polynomial. Do this by deciding what the <term>leading term</term> would be if it was completely expanded. On the far left and far right side of the graph, draw arrows to show what the graph will eventually do (increasing or decreasing).</p></li>
             <li><p>Finally, use what you know about the <term>multiplicity</term> of each <term>root</term>. Beginning at your arrow on the far left side of the graph, draw a smooth curve which contains all of the <m>x</m>-intercepts you drew in the first step. When you get to an <m>x</m>-intercept, if its <term>multiplicity</term> is <em>odd</em>, the graph will cross over the <m>x</m>-axis, and if the <term>multiplicity</term> is <em>even</em>, the graph will bounce off of the <m>x</m>-axis. Your smooth curve should end at the arrow you drew on the far right hand side.</p></li>
-          </ol>
+          </ol></p>
           <p>Check the graph. If drawn correctly, you should have been able to draw from your arrow on the left side to the arrow on the right side without picking up your pencil.</p>
+          </statement>
           <hint>
             <p>The roots are <md>
               <mrow>x = 4</mrow>
@@ -514,8 +524,6 @@
             <p>Notice that the graph crosses the <m>x</m>-axis at <m>x = -5</m> and <m>x = 4</m>, and it bounces off of the <m>x</m>-axis at <m>x = -3</m> and <m>x = 1</m>.</p>
           </answer>
         </exercise>
-
-      </paragraphs>
       </subsection>
     </section>
 </chapter>

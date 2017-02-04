@@ -438,7 +438,7 @@
 
     <p>One important note should be made here: Not every polynomial can be written as just a product of linear factors. <fn>The function <m>f(x) = x^2 + 1</m> is an easy example, as it has <em>no</em> <m>x</m>-intercepts.</fn></p>
     <p>But in this section, we will focus primarily on polynomials which <em>can</em> be written as a product of linear factors.</p>
-    <p>One skill we will develop here is being able to determine a formula for a polynomial if we have its graph. However, before we can do that, we need to discuss the <term>end<hyphen />behavior</term> of a polynomial <mdash /> that is, the function's behavior as <m>x</m> gets far from zero.</p>
+    <p>One skill we will develop here is being able to determine a formula for a polynomial if we have its graph. However, before we can do that, we need to discuss the <term>end-behavior</term> of a polynomial <mdash /> that is, the function's behavior as <m>x</m> gets far from zero.</p>
     <p>End-behavior is one thing we <em>can</em> tell about the graph of a polynomial, even if it is <em>not</em> written as a product of linear factors, such as: <md>
     <mrow>y = 3x - 5x^2 + 17</mrow>
     <mrow>\text{or}</mrow>
@@ -450,7 +450,10 @@
     <title>End Behavior</title>
     <p>Recall that a <term>horizontal asymptote</term><index><main>horizontal asymptote</main></index><index><main>asymptote</main><sub>horizontal</sub></index>, <m>y = a</m>, is a horizontal line which a function <m>f(x)</m> seems to <em>resemble</em>, as either <m>x \to \infty</m> or <m>x \to -\infty</m>.</p>
     <p>Put another way, if the function <m>f</m> has a horizontal asymptote <m>y = a</m>, then as we evaluate <m>f(x)</m> at <m>x</m> values which are farther and farther from zero, the ouputs will eventually get very close to the number <m>a</m>.</p>
-    <p>In calculus language, we would write <me>\lim_{x\to\pm\infty}f(x)=a</me> and in words, we would say <blockquote><em>the limit of <m>f(x)</m>, as <m>x</m> goes to positive or negative infinity, is <m>a</m>.</em></blockquote></p>
+    <p>In calculus language, we would write <me>\lim_{x\to\pm\infty}f(x)=a</me> and in words, we would say</p>
+    <blockquote>
+      <p><em>the limit of <m>f(x)</m>, as <m>x</m> goes to positive or negative infinity, is <m>a</m>.</em></p>
+    </blockquote>
     <p>In the next exercise, you will see how a horizontal asymptote of a function can be seen by a table of values.</p>
     <exercise>
       <webwork xml:id="webwork-horizontal-asymptote-numerical">
@@ -569,7 +572,7 @@
     </figure>
   </sidebyside>
 
-    <p>As you know, not every function has a horizontal asymptote. For example, power functions do not <q>flatten out</q>, but rather they either increase toward <m>\infty</m> (point upward) or decrease toward <m>-\infty</m> (point downward). So, end<hyphen />behavior may be just that <mdash /> the graph increasing or decreasing forever.</p>
+    <p>As you know, not every function has a horizontal asymptote. For example, power functions do not <q>flatten out</q>, but rather they either increase toward <m>\infty</m> (point upward) or decrease toward <m>-\infty</m> (point downward). So, end-behavior may be just that <mdash /> the graph increasing or decreasing forever.</p>
     <p>In the next two exercises, you will examine the end-behavior of a polynomial and learn to predict this end-behavior by observing its formula.</p>
     <exercise>
       <webwork xml:id="webwork-polynomial-end-behavior">
@@ -666,7 +669,9 @@
       </webwork>
     </exercise>
     <p>The rule for determining the end-behavior of a polynomial is a simple one:</p>
-    <p><blockquote>A polynomial and its leading term have the same end-behavior.</blockquote></p>
+    <blockquote>
+      <p>A polynomial and its leading term have the same end-behavior.</p>
+    </blockquote>
     <p>And, since you already know the graphs of power functions, you should be able to predict the end-behavior of a polynomial if you know its leading term.</p>
     <p>In the next exercise, you will get practice finding the leading term of a polynomial.</p>
     <exercise>
@@ -792,9 +797,13 @@
   <subsection>
     <title>The Formula for a Polynomial</title>
     <p>We have now learned the two most important things we need in order to write the formula for a polynomial:</p>
-    <blockquote>the relationship between the <term>roots</term> of a polynomial and its linear factors</blockquote>
+    <blockquote>
+      <p>the relationship between the <term>roots</term> of a polynomial and its linear factors</p>
+    </blockquote>
     <p>and</p>
-    <blockquote>the relationship between the <term>end-behavior</term> of a polynomial and its leading term</blockquote>
+    <blockquote>
+      <p>the relationship between the <term>end-behavior</term> of a polynomial and its leading term</p>
+    </blockquote>
     <p>Let's put these together in order to write the formula for a polynomial.</p>
     <p>In the next two exercises, you will be given the graph of a polynomial. Use what you know about the roots and end-behavior in order to write the formula.</p>
 
@@ -960,7 +969,7 @@
           </figure>
       </sidebyside>
 
-      <p>They each appear to have the same end-behavior as <m>x^3</m>, and they all have the same <m>x</m><hyphen />intercepts:<md>
+      <p>They each appear to have the same end-behavior as <m>x^3</m>, and they all have the same <m>x</m>-intercepts:<md>
       <mrow>(1, 0)</mrow>
       <mrow>(3, 0)</mrow>
       <mrow>(4, 0)</mrow></md></p>
@@ -1014,13 +1023,15 @@
                   <figure><image pg-name="$gr[2]" /></figure>
           <p>Answer: <var name="$graph" form="popup" /></p>
         </statement>
-        <hint>Substitute <m>x = 2</m> into our formula, and see which graph has the same output value.</hint>
-        <answer>
+        <hint>
+          <p>Substitute <m>x = 2</m> into our formula, and see which graph has the same output value.</p>
+        </hint>
+        <solution>
           <p>Our formula matches the first graph, because <md>
             <mrow>f(2) \amp= (2-1)(2-3)(2-4)</mrow>
             <mrow>\amp= 2</mrow></md>
             and the first graph contains the point <m>(2, 2)</m>.</p>
-        </answer>
+        </solution>
       </webwork>
       </exercise>
 
