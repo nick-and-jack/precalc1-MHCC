@@ -15,8 +15,11 @@
   <title>Power Functions Activity</title>
 
     <p>In this activity, we will explore <term>power functions</term>.<index><main>power function</main></index><index><main>function</main><sub>power</sub></index></p>
+
     <p>A power function is a function of the form <me>f(x) = x^a</me> where <m>a</m> is a constant real number.</p>
+
     <p>Our goal is to learn to predict what the graph of a power function will look like, depending on the exponent <m>a</m>.</p>
+
     <p>We will begin by examining power functions with integer exponents.</p>
 
     <exercise>
@@ -24,43 +27,46 @@
         <setup>
           <var name="$evenExponent">
             <set>
-              <member>\text{?}</member>
               <member>\text{points upward on the right and downward on the left}</member>
               <member correct="yes">\text{points upward on the right and the left}</member>
             </set>
           </var>
           <var name="$oddExponent">
             <set>
-              <member>\text{?}</member>
               <member correct="yes">\text{points upward on the right and downward on the left}</member>
               <member>\text{points upward on the right and the left}</member>
             </set>
           </var>
           <var name="$commonPoints">
             <set>
-              <member>\text{?}</member>
-              <member>\text{(-1,1)}</member>
-              <member correct="yes">\text{(0,0) and (1,1)}</member>
+              <member>(-1,1)}</member>
+              <member correct="yes">(0,0)\text{ and }(1,1)</member>
+              <member correct="yes">(-1,-1)\text{ and }(0,0)\text{ and }(1,1)</member>
             </set>
           </var>
           <pg-code>
-            $evenExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],'points upward on the right and the left');
-            $oddExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],'points upward on the right and downward on the left');
-            $commonPoints=PopUp(["?",'(-1,1)','(0,0) and (1,1)','(-1,-1) and (0,0) and (1,1)'],'(0,0) and (1,1)');
+            $evenExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],2);
+            $oddExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],1);
+            $commonPoints=PopUp(["?",'(-1,1)','(0,0) and (1,1)','(-1,-1) and (0,0) and (1,1)'],2);
           </pg-code>
         </setup>
         <statement>
           <p>The graph below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a positive integer. Use the slider to change the exponent <m>n</m>.</p>
+
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ECrUf9u9/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
           <p>Power functions have a similar overall <em>shapes</em>, depending on their exponents. Complete the following statements about the shapes of the power functions in this exercise.</p>
-          <p><ul>
-            <li><p>If the exponent is an <em>even</em> positive number, then its graph:</p>
-            <p><var name="$evenExponent" form="popup" /></p></li>
-            <li><p>If the exponent is an <em>odd</em> positive number, then its graph:</p>
-            <p><var name="$oddExponent" form="popup" /></p></li>
-            <li><p>All of these power functions pass through the point(s):</p>
-            <p><var name="$commonPoints" form="popup" /></p></li>
-          </ul></p>
+          <p><ol label="a">
+            <li>
+              <p>If the exponent is an <em>even</em> positive number, then its graph: <var name="$evenExponent" form="popup" /></p>
+            </li>
+            <li>
+              <p>If the exponent is an <em>odd</em> positive number, then its graph: <var name="$oddExponent" form="popup" /></p>
+            </li>
+            <li>
+              <p>All of these power functions pass through the point(s): <var name="$commonPoints" form="popup" /></p>
+            </li>
+          </ol></p>
         </statement>
       </webwork>
     </exercise>
@@ -88,7 +94,7 @@
             grid=>[12,12],
             size=>[400,400]
             );
-            add_functions($gr, "x**5 for x in &lt;-6,6&gt; using color:red and weight:2");
+            add_functions($gr, "x**5 for x in &lt;-1.5,1.5&gt; using color:red and weight:2");
           </pg-code>
         </setup>
         <statement>
@@ -109,12 +115,13 @@
     </exercise>
 
     <p>Now, recall what you know about function transformations from <xref ref="chapter-reflections-and-vertical-stretches">chapter</xref> <mdash /> in particular, that the transformation <me>y = -f(x)</me> will reflect the graph of <m>f(x)</m> over the <m>x</m>-axis. Use this in the next exercise.</p>
+
+    <todo>At a future date, make this a sidebyside, once that is possible within a webwork</todo>
     <exercise>
       <webwork xml:id="webwork-power-function-flipped">
         <setup>
           <var name="$posEven">
             <set>
-              <member>\text{?}</member>
               <member>\text{A}</member>
               <member>\text{B}</member>
               <member>\text{C}</member>
@@ -123,7 +130,6 @@
           </var>
           <var name="$posOdd">
             <set>
-              <member>\text{?}</member>
               <member>\text{A}</member>
               <member correct="yes">\text{B}</member>
               <member>\text{C}</member>
@@ -132,7 +138,6 @@
           </var>
           <var name="$negEven">
             <set>
-              <member>\text{?}</member>
               <member>\text{A}</member>
               <member>\text{B}</member>
               <member correct="yes">\text{C}</member>
@@ -141,7 +146,6 @@
           </var>
           <var name="$negOdd">
             <set>
-              <member>\text{?}</member>
               <member correct="yes">\text{A}</member>
               <member>\text{B}</member>
               <member>\text{C}</member>
@@ -175,58 +179,53 @@
           <figure><image pg-name="$gr[3]" width="200" height="200" tex_size="200"/></figure>
 
           <p>The graphs show the following functions:<md>
-            <mrow>y = -x^2</mrow>
-            <mrow>y = -x^3</mrow>
-            <mrow>y = x^4</mrow>
-            <mrow>y = x^5</mrow>
+            <mrow>y \amp= -x^2\amp y \amp= -x^3\amp y \amp= x^4\amp y = x^5</mrow>
           </md></p>
-          <p>Which graph shows <m>y = x^4</m>?</p>
-          <p>Answer:  Graph <var name="$posEven" form="popup" /></p>
-          <p>Which graph shows <m>y = x^5</m>?</p>
-          <p>Answer:  Graph <var name="$posOdd" form="popup" /></p>
-          <p>Which graph shows <m>y = -x^2</m>?</p>
-          <p>Answer:  Graph <var name="$negEven" form="popup" /></p>
-          <p>Which graph shows <m>y = -x^3</m>?</p>
-          <p>Answer:  Graph <var name="$negOdd" form="popup" /></p>
+
+          <p><ol label="a">
+            <li>
+              <p>Which graph shows <m>y = x^4</m>? <var name="$posEven" form="popup" /></p>
+            </li>
+            <li>
+              <p>Which graph shows <m>y = x^5</m>? <var name="$posOdd" form="popup" /></p>
+            </li>
+            <li>
+              <p>Which graph shows <m>y = -x^2</m>? <var name="$negEven" form="popup" /></p>
+            </li>
+            <li>
+              <p>Which graph shows <m>y = -x^3</m>? <var name="$negOdd" form="popup" /></p>
+            </li>
+          </ol></p>
         </statement>
-
-        <hint>
-
-        </hint>
-        <solution>
-
-        </solution>
       </webwork>
     </exercise>
+
     <p>Next, we will expand our set of power functions to include <em>negative</em> integer exponents.</p>
     <exercise>
       <webwork xml:id="webwork-power-function-negative-exponents">
         <setup>
           <var name="$evenExponent">
             <set>
-              <member>\text{?}</member>
               <member correct="yes">\text{points upward on both sides}</member>
               <member>\text{points in opposite directions}</member>
             </set>
           </var>
           <var name="$oddExponent">
             <set>
-              <member>\text{?}</member>
               <member>\text{points upward on both sides}</member>
               <member correct="yes">\text{points in opposite directions}</member>
             </set>
           </var>
           <var name="$commonPoints">
             <set>
-              <member>\text{?}</member>
               <member correct="yes">\text{(1,1)}</member>
               <member>\text{(1,1) and (-1,1)}</member>
             </set>
           </var>
           <pg-code>
-            $evenExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],'points upward on both sides');
-            $oddExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],'points in opposite directions');
-            $commonPoints=PopUp(["?",'(1,1)','(1,1) and (-1,1)'],'(1,1)');
+            $evenExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],1);
+            $oddExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],2);
+            $commonPoints=PopUp(["?",'(1,1)','(1,1) and (-1,1)'],1);
           </pg-code>
         </setup>
         <statement>
@@ -235,18 +234,19 @@
           <p>Notice that the <em>x</em>-axis is a horizontal <term>asymptote</term>, and the <em>y</em>-axis is a vertical <term>asymptote</term>.</p>
           <p>Observe the general <em>shapes</em> of these functions. How would you describe the following types of power functions?</p>
           <p>Complete each statement below with the best option.</p>
-          <p><ul>
-            <li><p>If the exponent is an <em>even</em> negative number, then near the vertical asymptote, the graph:</p>
-            <p><var name="$evenExponent" form="popup" /></p></li>
-            <li><p>If the exponent is an <em>odd</em> negative number, then near the verical asymptote, the graph:</p>
-            <p><var name="$oddExponent" form="popup" /></p></li>
-            <li><p>All of these power functions pass through the point(s):</p>
-            <p><var name="$commonPoints" form="popup" /></p></li>
-          </ul></p>
+          <p><ol label="a">
+            <li>
+              <p>If the exponent is an <em>even</em> negative number, then near the vertical asymptote, the graph: <var name="$evenExponent" form="popup" /></p>
+            </li>
+            <li>
+              <p>If the exponent is an <em>odd</em> negative number, then near the verical asymptote, the graph: <var name="$oddExponent" form="popup" /></p>
+            </li>
+            <li>
+              <p>All of these power functions pass through the point(s): <var name="$commonPoints" form="popup" /></p>
+            </li>
+          </ol></p>
         </statement>
-        <hint>
 
-        </hint>
         <solution>
           <p>If <m>n</m> is an even negative integer, then the graph of <m>y = x^n</m> will point upward on both sides of the vertical asymptote.</p>
           <p>If <m>n</m> is an odd negative integer, then the graph of <m>y = x^n</m> will point in opposite directions (up/down) on the sides of the vertical asymptote.</p>
@@ -278,29 +278,32 @@
             grid=>[12,12],
             size=>[400,400]
             );
-            add_functions($gr, "x**(-4) for x in &lt;-6,6&gt; using color:red and weight:2");
+            add_functions($gr, "x**(-4) for x in &lt;-6,-0.6&gt; using color:red and weight:2");
+            add_functions($gr, "x**(-4) for x in &lt;0.6,6&gt; using color:red and weight:2");
           </pg-code>
         </setup>
         <statement>
           <p>The graph below shows a power function.</p>
-          <figure><image pg-name="$gr" /></figure>
+          <figure>
+            <image pg-name="$gr" />
+          </figure>
           <p>What is a possible formula for this function?</p>
           <p><var name="$formula" form="buttons" /></p>
         </statement>
         <solution>
-          <p>The only possibility given is <m><var name="$formula" /></m>.</p>
+          <p>The only possibility given is <m>f(x)=x^{-4}</m>.</p>
         </solution>
       </webwork>
     </exercise>
 
-    <p>Again, remember the function transformation for reflecting over the <em>x</em>-axis. Use this in the next exercise.</p>
+    <p>Again, remember the function transformation for reflecting over the <m>x</m>-axis. Use this in the next exercise.</p>
 
+    <todo>Use sidebyside when it is available</todo>
     <exercise>
       <webwork xml:id="webwork-power-function-flipped-negexp">
         <setup>
           <var name="$posEven">
             <set>
-              <member>\text{?}</member>
               <member>\text{A}</member>
               <member correct="yes">\text{B}</member>
               <member>\text{C}</member>
@@ -309,7 +312,6 @@
           </var>
           <var name="$posOdd">
             <set>
-              <member>\text{?}</member>
               <member>\text{A}</member>
               <member>\text{B}</member>
               <member correct="yes">\text{C}</member>
@@ -318,7 +320,6 @@
           </var>
           <var name="$negEven">
             <set>
-              <member>\text{?}</member>
               <member correct="yes">\text{A}</member>
               <member>\text{B}</member>
               <member>\text{C}</member>
@@ -327,7 +328,6 @@
           </var>
           <var name="$negOdd">
             <set>
-              <member>\text{?}</member>
               <member>\text{A}</member>
               <member>\text{B}</member>
               <member>\text{C}</member>
@@ -346,10 +346,14 @@
             $gr[1] -> lb(new Label ( -4.5,4,'B','red','left','bottom'));
             $gr[2] -> lb(new Label ( -4.5,4,'C','red','left','bottom'));
             $gr[3] -> lb(new Label ( -4.5,4,'D','red','left','bottom'));
-            add_functions($gr[0], "x^(-1) for x in &lt;-5,5> using color:blue and weight:2");
-            add_functions($gr[1], "-x^(-2) for x in &lt;-5,5> using color:blue and weight:2");
-            add_functions($gr[2], "x^(-4) for x in &lt;-5,5> using color:blue and weight:2");
-            add_functions($gr[3], "-x^(-3) for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[0], "x^(-1) for x in &lt;-5,-0.1> using color:blue and weight:2");
+            add_functions($gr[1], "-x^(-2) for x in &lt;-5,-0.1> using color:blue and weight:2");
+            add_functions($gr[2], "x^(-4) for x in &lt;-5,-0.1> using color:blue and weight:2");
+            add_functions($gr[3], "-x^(-3) for x in &lt;-5,-0.1> using color:blue and weight:2");
+            add_functions($gr[0], "x^(-1) for x in &lt;0.1,5> using color:blue and weight:2");
+            add_functions($gr[1], "-x^(-2) for x in &lt;0.1,5> using color:blue and weight:2");
+            add_functions($gr[2], "x^(-4) for x in &lt;0.1,5> using color:blue and weight:2");
+            add_functions($gr[3], "-x^(-3) for x in &lt;0.1,5> using color:blue and weight:2");
           </pg-code>
         </setup>
 
@@ -359,17 +363,23 @@
           <figure><image pg-name="$gr[2]" width="200" height="200" tex_size="200" /></figure>
           <figure><image pg-name="$gr[3]" width="200" height="200" tex_size="200" /></figure>
           <p>Select the graph for each formula:</p>
-          <p>Which graph shows <m>y = -x^{-2}</m>?</p>
-          <p>Answer:  Graph <var name="$posEven" form="popup" /></p>
-          <p>Which graph shows <m>y = x^{-4}</m>?</p>
-          <p>Answer:  Graph <var name="$posOdd" form="popup" /></p>
-          <p>Which graph shows <m>y = x^{-1}</m>?</p>
-          <p>Answer:  Graph <var name="$negEven" form="popup" /></p>
-          <p>Which graph shows <m>y = -x^{-3}</m>?</p>
-          <p>Answer:  Graph <var name="$negOdd" form="popup" /></p>
+          <p><ol label="a">
+            <li>
+              <p>Which graph shows <m>y = -x^{-2}</m>? <var name="$posEven" form="popup" /></p>
+            </li>
+            <li>
+              <p>Which graph shows <m>y = x^{-4}</m>? <var name="$posOdd" form="popup" /></p>
+            </li>
+            <li>
+              <p>Which graph shows <m>y = x^{-1}</m>? <var name="$negEven" form="popup" /></p>
+            </li>
+            <li>
+              <p>Which graph shows <m>y = -x^{-3}</m>? <var name="$negOdd" form="popup" /></p>
+            </li>
+          </ol></p>
         </statement>
         <solution>
-          <p><ol>
+          <p><ol label="a">
             <li><p><m>y = -x^{-2}</m> is graph <var name="$posEven" />.</p></li>
             <li><p><m>y = x^{-4}</m> is graph <var name="$posOdd" />.</p></li>
             <li><p><m>y = x^{-1}</m> is graph <var name="$negEven" />.</p></li>
@@ -387,45 +397,44 @@
         <setup>
           <var name="$evenExponent">
             <set>
-              <member>\text{?}</member>
               <member>\text{all real numbers}</member>
-              <member correct="yes">\text{x greater than or equal to 0}</member>
+              <member correct="yes">x\text{ greater than or equal to }0</member>
             </set>
           </var>
           <var name="$oddExponent">
             <set>
-              <member>\text{?}</member>
               <member correct="yes">\text{all real numbers}</member>
-              <member>\text{x greater than or equal to 0}</member>
+              <member>x\text{ greater than or equal to }0</member>
             </set>
           </var>
           <var name="$commonPoints">
             <set>
-              <member>\text{?}</member>
               <member>\text{(-1,-1) and (0,0)}</member>
               <member correct="yes">\text{(0,0) and (1,1)}</member>
             </set>
           </var>
 
           <pg-code>
-            $evenExponent=PopUp(["?",'all real numbers',"x greater than or equal to 0"],"x greater than or equal to 0");
-            $oddExponent=PopUp(["?",'all real numbers',"x greater than or equal to 0"],'all real numbers');
-            $commonPoints=PopUp(["?",'(-1,-1) and (0,0)','(0,0) and (1,1)'],'(0,0) and (1,1)');
-
+            $evenExponent=PopUp(["?",'all real numbers',"x greater than or equal to 0"],2);
+            $oddExponent=PopUp(["?",'all real numbers',"x greater than or equal to 0"],1);
+            $commonPoints=PopUp(["?",'(-1,-1) and (0,0)','(0,0) and (1,1)'],2);
           </pg-code>
         </setup>
         <statement>
           <p>The graph below shows a power function of the form <m>f(x) = x^{1/n}</m>, where <m>n</m> is a positive integer. Use the slider to change the value of <m>n</m>.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PGyGRyHg/width/417/height/349/border/888888" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Power functions of this type also have similar overall <em>shapes</em>, depending on the denominator in the exponent. Complete the following statements about the shapes of the power functions in this exercise.</p>
-          <p><ul>
-            <li><p>If the exponent is <m>1</m> over an <em>even</em> positive number, then the domain is:</p>
-            <p><var name="$evenExponent" form="popup" /></p></li>
-            <li><p>If the exponent is <m>1</m> over an <em>odd</em> positive number, then the domain is:</p>
-            <p><var name="$oddExponent" form="popup" /></p></li>
-            <li><p>All of these power functions pass through the point(s):</p>
-            <p><var name="$commonPoints" form="popup" /></p></li>
-          </ul></p>
+          <p><ol label="a">
+            <li>
+              <p>If the exponent is <m>1</m> over an <em>even</em> positive number, then the domain is: <var name="$evenExponent" form="popup" /></p>
+            </li>
+            <li>
+              <p>If the exponent is <m>1</m> over an <em>odd</em> positive number, then the domain is: <var name="$oddExponent" form="popup" /></p>
+            </li>
+            <li>
+              <p>All of these power functions pass through the point(s): <var name="$commonPoints" form="popup" /></p>
+            </li>
+          </ol></p>
         </statement>
       </webwork>
     </exercise>
