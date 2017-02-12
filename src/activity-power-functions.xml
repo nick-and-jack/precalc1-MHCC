@@ -15,12 +15,55 @@
   <title>Power Functions Activity</title>
 
     <p>In this activity, we will explore <term>power functions</term>.<index><main>power function</main></index><index><main>function</main><sub>power</sub></index></p>
-
     <p>A power function is a function of the form <me>f(x) = x^a</me> where <m>a</m> is a constant real number.</p>
-
     <p>Our goal is to learn to predict what the graph of a power function will look like, depending on the exponent <m>a</m>.</p>
+    <paragraphs><title>Positive Integer Exponents</title>
+    <p>We will begin by examining power functions with positive integer exponents. Before looking at graphs, however, we should briefly remind ourselves about the difference between even and odd exponents.</p></paragraphs>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$positive">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{positive}</member>
+              <member>\text{negative}</member>
+            </set>
+          </var>
+          <var name="$negative">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{positive}</member>
+              <member correct="yes">\text{negative}</member>
+            </set>
+          </var>
+          <pg-code>
+            $positive=PopUp(
+            ["?","positive","negative"],"positive"
+            );
+            $negative=PopUp(
+            ["?","positive","negative"],"negative"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Recall that a positive integer exponent refers to <em>repeated</em> multiplication, so that: <me>x^3 = x\cdot x\cdot x</me> and <me>x^4 = x\cdot x\cdot x\cdot x</me></p>
+          <p><ol label="a">
+          <li><p>If we evaluate the function <m>f(x) = x^4</m> when <m>x \gt 0</m>, then the output will be <var name="$positive" form="popup" />, and if <m>x \lt 0</m>, the output will be <var name="$positive" form="popup" /></p></li>
+          <li><p>If we evaluate the function <m>g(x) = x^3</m> when <m>x \gt 0</m>, then the output will be <var name="$positive" form="popup" />, and if <m>x \lt 0</m>, the output will be <var name="$negative" form="popup" /></p></li>
+          </ol></p>
+        </statement>
+        <hint>
+          <p><m>f(-10) = (-10)\cdot(-10)\cdot(-10)\cdot(-10)</m></p>
+          <p><m>g(-10) = (-10)\cdot(-10)\cdot(-10)</m></p>
+        </hint>
+        <solution>
+          <p>The function <m>f(x) = x^4</m> only outputs non-negative numbers, regardless of the sign of the input.</p>
+          <p>The function <m>g(x) = x^3</m> will output a positive number if the input is positive, and it will output a negative number if the input is negative.</p>
+        </solution>
+      </webwork>
+    </exercise>
 
-    <p>We will begin by examining power functions with integer exponents.</p>
+    <p>Now, let's see the graphs of different power functions with positive exponents, and generalize what happens if the exponent is even or odd.</p>
 
     <exercise>
       <webwork xml:id="webwork-power-function-intro">
@@ -53,9 +96,9 @@
         <statement>
           <p>The graph below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a positive integer. Use the slider to change the exponent <m>n</m>.</p>
 
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ECrUf9u9/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ECrUf9u9/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
-          <p>Power functions have a similar overall <em>shapes</em>, depending on their exponents. Complete the following statements about the shapes of the power functions in this exercise.</p>
+          <p>Power functions have similar overall <em>shapes</em>, depending on their exponents. Complete the following statements about the shapes of the power functions in this exercise.</p>
           <p><ol label="a">
             <li>
               <p>If the exponent is an <em>even</em> positive number, then its graph: <var name="$evenExponent" form="popup" /></p>
@@ -200,7 +243,76 @@
       </webwork>
     </exercise>
 
-    <p>Next, we will expand our set of power functions to include <em>negative</em> integer exponents.</p>
+    <paragraphs><title>Negative Integer Exponents</title>
+    <p>Next, we will expand our set of power functions to include <em>negative</em> integer exponents. First, however, we should review the meaning of a negative exponent.</p></paragraphs>
+    <example>
+      <statement>
+        <p>A positive integer exponent refers to <em>repeated multiplication</em>: <me>x^5 = x\cdot x\cdot x\cdot x\cdot x</me></p>
+        <p>It is often helpful to think of this as a product beginning with the number <m>1</m>, so that we really have: <me>x^5 = 1\cdot x\cdot x\cdot x\cdot x\cdot x</me></p>
+        <p>Now, a <em>negative</em> integer exponent refers to <em>repeated division</em>. So, expanding an expression like <m>x^{-3}</m> is easy if we begin with the number <m>1</m>, as in: <md>
+        <mrow>x^{-3} \amp= 1 / (x\cdot x\cdot x)</mrow>
+        <mrow>\amp= \frac{1}{x\cdot x\cdot x}</mrow>
+        <mrow>\amp= \frac{1}{x^3}</mrow></md></p>
+        <p>Rewrite the following expressions:</p>
+        <p><ul>
+          <li><p><m>x^{-2}</m></p></li>
+          <li><p><m>5x^{-3}</m></p></li>
+          <li><p><m>\frac{1}{x^{-1}}</m></p></li>
+        </ul></p>
+      </statement>
+      <answer>
+        <p><ul>
+          <li><p><m>x^{-2} = \frac{1}{x^2}</m></p></li>
+          <li><p><m>5x^{-2} = 5\cdot \frac{1}{x^2} = \frac{5}{x^2}</m></p></li>
+          <li><p><m>\frac{1}{x^{-1}} = \frac{1}{\frac{1}{x}} = x</m></p></li>
+          </ul></p>
+      </answer>
+    </example>
+    <p>So, a variable raised to a negative exponent is the same as dividing by that variable raised to a positive exponent. Keep that in mind as you answer the next exercise.</p>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$true">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{True}</member>
+              <member>\text{False}</member>
+            </set>
+          </var>
+          <var name="$false">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{True}</member>
+              <member correct="yes">\text{False}</member>
+            </set>
+          </var>
+          <pg-code>
+            $false=PopUp(
+            ["?","True","False"],"False"
+            );
+            $true=PopUp(
+            ["?","True","False"],"True"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>True or False: The function <m>f(x) = x^{-2}</m> <em>always</em> gives negative outputs, because it has a negative exponent.</p>
+          <p>Answer:  <var name="$false" form="popup" /></p>
+          <p>True or False: The function <m>f(x) = x^{-2}</m> <em>never</em> gives negative outputs, because it is the same as <m>\frac{1}{x^2}</m>, which is just <m>1</m> divided by a positive number.</p>
+          <p>Answer:  <var name="$true" form="popup" /></p>
+          <p>True or False: The function <m>g(x) = x^{-3}</m> <em>always</em> gives negative outputs, because it has a negative exponent.</p>
+          <p>Answer:  <var name="$false" form="popup" /></p>
+          <p>True or False: The function <m>g(x) = x^{-3}</m> <em>will only</em> give a negative output if the input is negative.</p>
+          <p>Answer:  <var name="$true" form="popup" /></p>
+        </statement>
+        <solution>
+          <p>First, we rewrite these functions so they have positive exponents: <me>f(x) = x^{-2} = \frac{1}{x^2}</me> and <me>g(x) = x^{-3} = \frac{1}{x^3}</me></p>
+          <p>We know <m>x^2</m> never gives negative outputs, so neither will <m>x^{-2} = \frac{1}{x^2}</m>.</p>
+          <p>We also know that <m>x^3</m> will only give a negative output when <m>x \lt 0</m>, so the same is true about <m>x^{-3} = \frac{1}{x^3}</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
+    <p>Now, explore the graphs of power functions with negative integer exponents. You will see a pattern for the shapes of these graphs, depending on whether the exponent is <em>even</em> or <em>odd</em>.</p>
     <exercise>
       <webwork xml:id="webwork-power-function-negative-exponents">
         <setup>
@@ -230,9 +342,9 @@
         </setup>
         <statement>
           <p>The graph below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a negative integer. Use the slider to change the exponent <m>n</m>.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PAjZ6WxB/width/417/height/349/border/888888" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PAjZ6WxB/width/417/height/349/border/888888/sdz/false/" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Notice that the <em>x</em>-axis is a horizontal <term>asymptote</term>, and the <em>y</em>-axis is a vertical <term>asymptote</term>.</p>
-          <p>Observe the general <em>shapes</em> of these functions. How would you describe the following types of power functions?</p>
+          <p>Observe the general <em>shapes</em> of these functions, and think about what is the same or different about them.</p>
           <p>Complete each statement below with the best option.</p>
           <p><ol label="a">
             <li>
@@ -388,9 +500,35 @@
         </solution>
       </webwork>
     </exercise>
-
+    <paragraphs><title>Fractional Exponents</title>
     <p>We now explore the graphs of power functions which have fractional exponents of the form <m>\frac{1}{n}</m>.</p>
-    <p>In this case we will look first at the case where the exponent is positive.</p>
+    <p>Here, we only consider when the exponent is positive.</p></paragraphs>
+    <p>Before looking at graphs, we will briefly revisit the meaning of a fractional exponent.</p>
+    <example>
+      <statement>
+        <p>Recall the meaning of a fractional exponent. For example, the expression <m>9^{\frac{1}{2}}</m> is the same as the <em>square root</em> of <m>9</m>:  <me>9^{\frac{1}{2}} = \sqrt{9} = 3</me></p>
+        <p>This can be justified by using properties of exponents. If we multiplied <m>9^{\frac{1}{2}}</m> by itself, we would have: <md>
+        <mrow>9^{\frac{1}{2}}\cdot 9^{\frac{1}{2}} \amp= 9^{\frac{1}{2} + \frac{1}{2}}</mrow>
+        <mrow>\amp= 9^1</mrow>
+        <mrow>\amp= 9</mrow></md></p>
+        <p>So, <m>9^{\frac{1}{2}}</m> must be a square root of <m>9</m>, because squaring it actually equals <m>9</m>.</p>
+        <p>Find the following values:</p>
+        <p><ul>
+          <li><p><m>100^{\frac{1}{2}}</m></p></li>
+          <li><p><m>-100^{\frac{1}{2}}</m></p></li>
+          <li><p><m>(-100)^{\frac{1}{2}}</m></p></li>
+        </ul></p>
+      </statement>
+      <answer>
+        <p><ul>
+          <li><p><m>100^{\frac{1}{2}} = \sqrt{100} = 10</m></p></li>
+          <li><p><m>-100^{\frac{1}{2}} = -\sqrt{100} = -10</m></p></li>
+          <li><p><m>(-100)^{\frac{1}{2}} = \sqrt{-100}</m> is <em>not</em> a real number</p></li>
+        </ul></p>
+      </answer>
+    </example>
+
+    <p>Now explore the graphs of power functions with exponents of the form <m>\frac{1}{n}</m>, noting what happens when <m>n</m> is even or odd.</p>
 
     <exercise>
       <webwork xml:id="webwork-power-function-positive-fraction">
@@ -422,7 +560,7 @@
         </setup>
         <statement>
           <p>The graph below shows a power function of the form <m>f(x) = x^{1/n}</m>, where <m>n</m> is a positive integer. Use the slider to change the value of <m>n</m>.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PGyGRyHg/width/417/height/349/border/888888" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PGyGRyHg/width/417/height/349/border/888888/sdz/false/" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Power functions of this type also have similar overall <em>shapes</em>, depending on the denominator in the exponent. Complete the following statements about the shapes of the power functions in this exercise.</p>
           <p><ol label="a">
             <li>
@@ -438,5 +576,6 @@
         </statement>
       </webwork>
     </exercise>
+    <p>So we see that fractional exponents refer to <m>n^{\rm{th}}</m> roots: <m>x^{\frac{1}{2}}</m> is a square root, <m>x^{\frac{1}{3}}</m> is a cube root, etc. <fn>One should be careful when evaluating power functions of this type when the input <m>x</m> is negative. Some calculators/programs will evaluate an expression like <m>(-8)^{-\frac{1}{3}}</m> differently, and actually <em>not</em> return a real number. In this course, we will treat <m>x^{\frac{1}{3}}</m> and <m>\sqrt[3]{x}</m> the same.</fn></p>
 
 </section>

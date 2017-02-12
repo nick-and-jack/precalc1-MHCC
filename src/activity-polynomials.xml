@@ -19,11 +19,11 @@
 
     <p>A <term>polynomial</term><index><main>polynomial</main></index><index><main>function</main><sub>polynomial</sub></index> is a function of the form <me>f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n</me> where the numbers <m>a_0</m> through <m>a_n</m> are constant values, called <term>coefficients</term><index><main>coefficient</main></index>. A polynomial is a sum of <term>power</term> functions.</p>
 
-    <p>Let's first understand two important terms associated with polynomials: <em>degree</em> and <em>root</em></p>
+    <p>First, we will introduce two important terms associated with polynomials: <em>degree</em> and <em>root</em></p>
 
     <p>The <term>degree</term><index><main>polynomial</main><sub>degree</sub></index> of a polynomial is the highest exponent on the variable.</p>
     <example>
-      <p>Some polynomial functions and their degrees:</p>
+      <p>Some polynomials and their degrees:</p>
       <table>
         <tabular top="major" halign="center">
             <col halign="left" />
@@ -59,7 +59,7 @@
     </example>
 
     <p>A <term>root</term><index><main>polynomial</main><sub>root</sub></index> of a polynomial is a value of the input which gives an output of <em>zero</em>.</p>
-
+    <p>The next two exercises deal with these two definitions.</p>
     <exercise>
       <webwork>
         <setup>
@@ -171,7 +171,7 @@
             <mrow>y \amp= x - 2\amp y \amp= x + 1\amp y \amp= (x - 2)(x + 1)</mrow>
           </md></p>
 
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888/sdz/false/" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
           <p><ol label="a">
             <li>
@@ -222,7 +222,7 @@
           </pg-code>
         </setup>
         <statement>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888/sdz/false/" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
           <p>The <m>2^{\text{nd}}</m> degree polynomial <me>y = (x - 2)(x + 1)</me> is the product of two linear functions: <me>y = x - 2 \text{ and } y = x + 1</me>.</p>
           <p>The <m>1^{\text{st}}</m> degree polynomials each had one root. Where are the roots of the <m>2^{\text{nd}}</m> degree polynomial?</p>
@@ -267,7 +267,7 @@
           <p>Use the checkboxes to graph the functions: <md>
             <mrow>f(x) \amp= x - 3\amp g(x) \amp= x - 1\amp h(x) \amp= x</mrow>
           </md></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aBfjCKXg/width/433/height/373/border/888888" width="433px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aBfjCKXg/width/433/height/373/border/888888/sdz/false/" width="433px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>What is the root of each function?</p>
           <p>Root of <m>f(x) = x - 3</m>:  <var name="$variable" form="popup" /> = <var name="$root3" width="10" /></p>
           <p>Root of <m>g(x) = x - 1</m>:  <var name="$variable" form="popup" /> = <var name="$root1" width="10" /></p>
@@ -278,7 +278,7 @@
       </webwork>
     </exercise>
 
-    <p>By now, you are already seeing a relationship between the <term>roots</term> of a polynomial, and the <term>roots</term> of its linear factors. Use this observation to make predictions about the graph of a polynomial in the next exercise.</p>
+    <p>By now, you are already seeing the relationship between the <term>roots</term> of a polynomial, and the <term>roots</term> of its linear factors. Use this observation to make predictions about the graph of a polynomial in the next exercise.</p>
 
     <exercise>
       <webwork xml:id="webwork-roots-graph-guess">
@@ -344,7 +344,7 @@
           </md>and find the <term>root</term> of each one, this will tell you where the function <m>p(x)</m> should cross the <m>x</m>-axis.</p>
         </hint>
         <solution>
-          <p>The graph of <m>p(x) = (x-2)(x+1))2x-6)</m> is graph <var name="$graph" /> because it has the roots <md>
+          <p>The graph of <m>p(x) = (x-2)(x+1))2x-6)</m> is graph <var name="$graph" /> because it has the roots: <md>
           <mrow>x = 2</mrow>
           <mrow>x = -1</mrow>
           <mrow>x = 3</mrow></md></p>
@@ -352,7 +352,7 @@
       </webwork>
     </exercise>
 
-    <p>In the next two problems, you'll guess the number of roots of a polynomial and where those roots are located.</p>
+    <p>In the next two problems, you'll predict the number of roots of a polynomial and where those roots are located.</p>
 
     <exercise>
       <webwork xml:id="webwork-guess-the-number-of-roots">
@@ -417,7 +417,7 @@
         <statement>
           <p>Below is the graph of: <me>f(x) = (x+3)(x+1)(x-2)(2x-8)</me></p>
           <p>Put the points on the <m>x</m>-intercepts of the graph.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VkKRBCpF/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VkKRBCpF/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>If you placed the points in the correct locations, the graph of <m>f(x)</m> would be shown.</p>
           <p>Did you correctly place the points?</p>
           <p><var name="$didItGraph" form="popup" /></p>
@@ -495,7 +495,7 @@
     <p>Put another way, if the function <m>f</m> has a horizontal asymptote <m>y = a</m>, then as we evaluate <m>f(x)</m> at <m>x</m> values which are farther and farther from zero, the ouputs will eventually get very close to the number <m>a</m>.</p>
     <p>In calculus language, we would write <me>\lim_{x\to\pm\infty}f(x)=a</me> and in words, we would say</p>
     <blockquote>
-      <p><em>The limit of <m>f(x)</m>, as <m>x</m> goes to positive or negative infinity, is <m>a</m>.</em></p>
+      <p><em>The limit of <m>f(x)</m>, as <m>x</m> goes to positive or negative infinity, is equal to <m>a</m>.</em></p>
     </blockquote>
     <p>In the next exercise, you will see how a horizontal asymptote of a function can be seen by a table of values.</p>
     <exercise>
@@ -648,7 +648,7 @@
         </setup>
         <statement>
           <p>The graph below shows: <me>f(x) = x(x+3)(x-4)</me></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Abx2UAXB/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Abx2UAXB/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Use the checkbox to graph the power function <m>y = x^3</m>.</p>
           <p>Now use the slider to zoom out, and observe the shape of the graph.</p>
           <p>After zooming out, how do the graphs of <m>y = x(x+3)(x-4)</m> and <m>y = x^3</m> compare to each other?</p>
@@ -690,7 +690,7 @@
           <mrow>y \amp= x^4</mrow>
           <mrow>y \amp= x^5</mrow></md></p>
           <p>Before maniuplating the graph, make a guess:  Which of these power functions will the function <m>g(x)</m> resemble if we zoom out?</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Swe8tMPk/width/416/height/373/border/888888" width="416px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Swe8tMPk/width/416/height/373/border/888888/sdz/false/" width="416px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Make your choice from among the power functions by selecting its checkbox. Then, use the slider to zoom out.</p>
           <p>If you guessed correctly, the graph of <m>g(x)</m> will begin to look more and more like your power function.</p>
           <p>Which power function has the same end behavior as <m>g(x)</m>?</p>
@@ -819,7 +819,7 @@
         </setup>
         <statement>
           <p>This problem concerns the polynomial <me>f(x) = x(x - 2)(x + 3)</me>and your goal is to predict the end-behavior. Think about which power function has the same end-behavior as <m>f(x)</m>.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NcwafvMp/width/427/height/392/border/888888" width="427px" height="392px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NcwafvMp/width/427/height/392/border/888888/sdz/false/" width="427px" height="392px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Use the checkboxes to choose whether the graph will point upward or downward as <m>x</m> gets far from zero on the left and right.</p>
           <p>On the left-hand side, the graph points <var name="$left" form="popup" /></p>
           <p>On the right-hand side, the graph points <var name="$right" form="popup" /></p>
@@ -1077,7 +1077,7 @@
 
       <p>But what about the formula for the <xref ref="figure-second-polynomial" autoname="title">Second Graph</xref>? Its output when <m>x = 2</m> is <m>4</m>, which is two times as large as the first graph.</p>
 
-      <p>This is a <term>vertical stretch</term> of the first graph, as you saw in <xref ref="activity-vertical-stretches">Chapter</xref></p>
+      <p>This is a <term>vertical stretch</term> of the first graph, as you saw in <xref ref="activity-vertical-stretches">Section</xref></p>
 
       <exercise>
         <webwork>
@@ -1230,7 +1230,7 @@
         </setup>
         <statement>
           <p>The graph below shows the polynomial: <me>f(x) = (x-1)^k</me></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aysca3Xq/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aysca3Xq/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Use the slider to change the exponent <m>k</m>, and observe the changes to the graph.</p>
           <p>There are a few things to take note of here:</p>
           <p><ol label="a">
@@ -1302,7 +1302,7 @@
         </setup>
         <statement>
           <p>The graph below shows the polynomial: <me>f(x) = x^2(x-2)^k</me></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BZWTYcmb/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BZWTYcmb/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Use the slider to change the exponent <m>k</m>, and observe the changes to the graph.</p>
           <p>The factor <m>x^2</m> corresponds to the <m>x</m>-intercept <m>(0,0)</m>. Since the exponent is <em>even</em>, the graph always <var name="$bounces" form="popup" /> the <m>x</m>-axis at that point.</p>
           <p>When <m>k = 2</m>, the end-behavior of <m>f(x)</m> is the same as <var name="$end2" form="popup" />.</p>
