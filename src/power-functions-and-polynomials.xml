@@ -138,6 +138,48 @@
             </image>
           </figure>
         </sidebyside>
+
+        <example>
+          <statement>
+            <p>If you have ever stood on the end of a diving board, your weight caused the board to <em>deflect</em> <mdash /> that is, it bent downward a bit toward the water below. If the board was <em>longer</em>, it would deflect more, and if it was shorter, it would deflect less.</p>
+            <p>Assuming one end of the board is fixed solidly to a wall, and the other end is free to move up and down, then engineers could use the following equation to model the weight required to deflect a board of a given length <m>L</m>:<md>
+            <mrow>W = \frac{3 \delta E I}{L^3}</mrow></md></p>
+            <p>Here, <m>\delta</m> is the deflection (inches), <m>E</m> is a physical constant called <em>Young's Modulus of Elasticity</em> (<m>in^4</m>), <m>I</m> is a geometric constant called the <em>Area Moment of Inertia</em> (<m>\frac{lb}{in^2}</m>), and <m>L</m> is the length of the board (<m>in</m>).</p>
+            <p>Assuming the board is deflected by <m>6</m> inches, and using typical materials and dimensions, this equation simplifies to: <md>
+            <mrow>W = W(L) \amp= \frac{(3)(6)(10,010,000)(1.64)}{L^3}</mrow>
+            <mrow>\amp= \frac{295,495,200}{L^3}</mrow></md></p>
+            <p>So, <m>W</m> is a power function with the variable <m>L</m>.</p>
+            <p>Professional diving boards are typically between <m>177</m> and <m>201</m> inches long. See a portion of the graph of <m>W = W(L)</m> below.</p>
+            <figure>
+              <caption><m>W = \frac{295495200}{L^3}</m></caption>
+                <image width="47%">
+                  <latex-image-code>
+                  <![CDATA[
+                    \begin{tikzpicture}
+                      \begin{axis}[xmax=210, xmin=170,
+                                  xlabel={Length (inches)},
+                                  ylabel={Weight (lbs)},
+                                  xtick={170,180,190,200,210},
+                                  minor xtick={175,180,...,210},
+                                  ymax=60, ymin=30,
+                                  ytick={30,40,50,60},
+                                  minor ytick={30,35,...,60}]
+                        \addplot+[domain=177:201, samples=50] {295495200/(x^3)};
+                      \end{axis}
+                    \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+            </figure>
+            <p>Notice the slight curve to this graph and that it is concave <em>up</em>. Is there a horizontal asymptote for this function? Why?</p>
+          </statement>
+          <answer>
+            <p>Notice that: <me>\frac{295495200}{L^3} = 295495200\cdot \frac{1}{L^3}</me></p>
+            <p>Even with a large coefficient, the power function <m>\frac{1}{L^3}</m> still goes to <em>zero</em> as <m>L \to \infty</m>.</p>
+            <p>This makes sense, because as the length of the board gets longer and longer, it would require a smaller and smaller weight in order to deflect the board by <m>6</m> inches.</p>
+            <p>[However, the weight of the board itself would tend to cause significant deflection as the length increased. This function would work to model only boards of moderate length, and it should not be used for boards which are extremely long.]</p>
+          </answer>
+        </example>
       </subsection>
 
       <subsection>
@@ -210,7 +252,7 @@
                   <image width="47%">
                       <latex-image-code>
                       <![CDATA[
-                          \begin{tikzpicture} 
+                          \begin{tikzpicture}
                           \begin{axis}[xmin=-5,xmax=4,
                                       ymax=300, ymin=-300,
                                       ytick={-200,-100,...,200},
@@ -376,7 +418,7 @@
             </setup>
             <statement>
               <p>The graph below shows a polynomial <m>y = f(x)</m>.</p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qUku8jCM/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qUku8jCM/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
               <p>Which of the following options could be the formula for <m>f(x)</m>?</p>
               <p><var name="$formulaOptions" form="buttons" /></p>
             </statement>
