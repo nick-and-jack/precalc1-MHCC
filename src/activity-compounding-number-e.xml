@@ -14,72 +14,152 @@
   <title>Introducing the number e, Continous Compounding Activity</title>
   <subsection>
     <title>Review of Discrete Compouding</title>
+    <p>Earlier we learned that exponents <q>count</q> how many times the growth factor is repeated. The expression <me>296(1.013)^{5}</me> is stating an initial amount of <m>296</m> increased by <m>1.3 \%</m> compounded <m>5</m> times.</p>
+    <p>The exponent <m>5</m> means the <m>1.3 \%</m> increase happens <m>5</m> times in a row.</p>
+    <example>
+      <p>Consider the expression <me>296(1.013)^{\frac{t}{10}}</me> with <m>t</m> counting time in years. What would <m>t</m> have to be so the exponent counts <m>5</m> increases of <m>1.3 \%</m>?</p>
       <exercise>
-        <title>Interpretation of the Exponential Form</title>
         <webwork>
-          <setup>
-            <var name="$init">
-                <static>1350</static>
-            </var>
+          <stage>
+            <statement>
+              <p>Given <m>296(1.013)^{\frac{t}{10}}</m> it would take <m>t=</m> <var name="50" width="4" /> years in order to get just <m>5</m> increases of the growth factor.</p>
+            </statement>
+          </stage>
+          <stage>
+            <statement>
+              <p>
+                <ol label="a" >
+                  <li>
+                    <p>Consider the expression<m>30(0.87)^{2}</m> where the exponent once again counts years.</p>
+                    <p>What is the percent decrease each year?</p>
+                    <p>The yearly percent decrease is <var name="13" width="4" /><m>\,\%</m> each year.</p>
+                  </li>
+                  <li>
+                    <p>How many years does the decrease occur? <var name="2" width="4" /> times.</p>
+                  </li>
+                  <li>
+                    <p>If the expression were re-written as <m>30(0.87)^{\frac{t}{6}}</m> How many years must we wait to get <m>2</m> decreases of <m>13 \%</m>?</p>
+                    <p>We must wait <var name="12" width="4" /> years.</p>
+                  </li>
+                  <li>
+                    <p>How many years must we wait to get <m>1</m> decrease of <m>13 \%</m>?</p>
+                    <p>We must wait <var name="6" width="4" /> years.</p>
+                  </li>
+                  <li>
+                    <p>We know the exponent counts how many times the growth factor is repeated.  We also know the growth factor tells us the percent increase or decrease.</p>
+                    <p>If <m>401(1.025)^{t}</m> means <m>401</m> is increased by <m>2.5 \%</m> every year. Then what does <m>401(1.025)^{\frac{t}{300}}</m> mean?</p>
+                    <p>It means there is a <m>2.5 \%</m> increase every <var name="300" width="4" /> years.</p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </stage>
+          <solution>
+            <p><m>t=50</m> in order for the exponent to end up as <m>5</m>.</p>
+            <p>Next page:</p>
+            <p>
+              <ol label="a" >
+                <li>
+                  <p>Consider the expression<m>30(0.87)^{2}</m> where the exponent once again counts years.</p>
+                  <p>The yearly percent decrease is <m>1-0.87 = 0.13</m> which is the decimal equivalent of <m>13 \%</m>each year.</p>
+                </li>
+                <li>
+                  <p>How many years does the decrease occur? <m>4</m> times.</p>
+                </li>
+                <li>
+                  <p>If the expression were re-written as <m>30(0.87)^{\frac{t}{6}}</m> How many years must we wait to get <m>2</m> decreases of <m>13 \%</m>?</p>
+                  <p>We must wait <m>12</m> years because <m>2=\frac{12}{6}</m>.</p>
+                </li>
+                <li>
+                  <p>How many years must we wait to get <m>1</m> decrease of <m>13 \%</m>?</p>
+                  <p>We must wait <m>6</m> years because <m>1=\frac{6}{6}</m>.</p>
+                </li>
+                <li>
+                  <p>If <m>401(1.025)^{t}</m> means <m>401</m> is increased by <m>2.5 \%</m> every year. Then what does <m>401(1.025)^{\frac{t}{300}}</m> mean?</p>
+                  <p>It means there is a <m>2.5 \%</m> increase every <m>300</m> years because the exponent will finally be <m>1</m> when <m>t=300</m>.</p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+    </example>
+    
+    <exercise>
+      <title>Interpretation of the Exponential Form</title>
+      <webwork>
+        <setup>
+          <var name="$init">
+              <static>1350</static>
+          </var>
 
-            <var name="$m1" category="set">
-                <set>
-                  <member>\text{the growth factor}</member>
-                  <member>\text{the initial value}</member>
-                  <member>\text{the percent change}</member>
-                  <member>\text{the time for investment to mature}</member>
-                </set>
-            </var>
-
-            <var name="$b">
-                <static>1.082</static>
-            </var>
-
-            <var name="$m2" category="set">
+          <var name="$m1" category="set">
               <set>
                 <member>\text{the growth factor}</member>
                 <member>\text{the initial value}</member>
                 <member>\text{the percent change}</member>
                 <member>\text{the time for investment to mature}</member>
               </set>
-            </var>
+          </var>
 
-            <var name="$per">
-              <static>8.02</static>
-            </var>
+          <var name="$b">
+              <static>1.082</static>
+          </var>
 
-            <var name="$m3" category="set">
-              <set>
-                <member>\text{An 8.2 percent increase occurs every five years}</member>
-                <member>\text{An 8.2 percent increase occurs five times each year}</member>
-                <member>\text{An 8.2 percent increase is divided into five equal parts}</member>
-                <member>\text{An 8.2 percent increase is multiplied by 5}</member>
-              </set>
-            </var>
+          <var name="$m2" category="set">
+            <set>
+              <member>\text{the growth factor}</member>
+              <member>\text{the initial value}</member>
+              <member>\text{the percent change}</member>
+              <member>\text{the time for investment to mature}</member>
+            </set>
+          </var>
 
-            <pg-code>
-                $init= Real(1350);
-                $m1 = PopUp(["?", "the growth factor", "the initial value", "the percent change", "the time for investment to mature"], "the initial value");
-                $b= Real(1.082);
-                $m2 = PopUp(["?", "the growth factor", "the initial value", "the percent change", "the time for investment to mature"], "the growth factor");
-                $per=Real(8.20);
-                $m3 = PopUp(["?", "An 8.2 percent increase occurs every five years", "An 8.2 percent increase occurs five times each year", "An 8.2 percent increase is divided into five equal parts", "An 8.2 percent increase is multiplied by 5"], "An 8.2 percent increase occurs every five years");
-            </pg-code>
-          </setup>
+          <var name="$per">
+            <static>8.02</static>
+          </var>
 
-          <statement>
-            <p>Let <m>f(t) = 1350(1.082)^\frac{t}{5}</m> be the value of an investment, in dollars, over time, t in years. What does the number <m>1350</m> represent?</p>
-            <p>The number <m><var name="$init" /></m> represents <var name="$m1" form="popup" /></p>
-            <p>What does the number <m><var name="$b" /></m> represent?</p>
-            <p>The number represents <var name="$m2" form="popup" /></p>
-            <p>What percent increase does the growth factor represent?</p>
-            <p>The growth factor represents an increase of <var name="$per" width="5" /><m>\%</m></p>
-            <p>What information does the exponent give us (what is the significance of dividing by 5) in the context fo the problem?</p>
-            <p>It means <var name="$m3" form="popup" /></p>
-          </statement>
+          <var name="$m3" category="set">
+            <set>
+              <member>\text{An 8.2 percent increase occurs every five years}</member>
+              <member>\text{An 8.2 percent increase occurs five times each year}</member>
+              <member>\text{An 8.2 percent increase is divided into five equal parts}</member>
+              <member>\text{An 8.2 percent increase is multiplied by 5}</member>
+            </set>
+          </var>
 
-          <solution>
-          </solution>
+          <pg-code>
+              $init= Real(1350);
+              $m1 = PopUp(["?", "the growth factor", "the initial value", "the percent change", "the time for investment to mature"], "the initial value");
+              $b= Real(1.082);
+              $m2 = PopUp(["?", "the growth factor", "the initial value", "the percent change", "the time for investment to mature"], "the growth factor");
+              $per=Real(8.20);
+              $m3 = PopUp(["?", "An 8.2 percent increase occurs every five years", "An 8.2 percent increase occurs five times each year", "An 8.2 percent increase is divided into five equal parts", "An 8.2 percent increase is multiplied by 5"], "An 8.2 percent increase occurs every five years");
+          </pg-code>
+        </setup>
+
+        <statement>
+          <p>
+            <ol label="a" >
+              <li>
+                <p>Let <m>f(t) = 1350(1.082)^\frac{t}{5}</m> be the value of an investment, in dollars, over time, t in years. What does the number <m>1350</m> represent?</p>
+                <p>The number <m><var name="$init" /></m> represents <var name="$m1" form="popup" /></p>
+              </li>
+              <li>
+                <p>What does the number <m><var name="$b" /></m> represent?</p>
+                <p>The number represents <var name="$m2" form="popup" /></p>
+              </li>
+              <li>
+                <p>What percent increase does the growth factor represent?</p>
+                <p>The growth factor represents an increase of <var name="$per" width="5" /><m>\%</m></p>
+              </li>
+              <li>
+                <p>What information does the fractional exponent give us (what is the significance of dividing by 5) in the context fo the problem?</p>
+                <p>It means <var name="$m3" form="popup" /></p>
+              </li>
+            </ol>
+          </p>
+        </statement>
       </webwork>
     </exercise>
 
@@ -130,55 +210,71 @@
         </statement>
       </webwork>
     </exercise>
-
-    <exercise>
-      <todo>The string of words in the drop down menu is too long so it gets chopped off on the screen.  Need to fix the window of shorten the phrase.</todo>
+    <example>
+      <p>The value of an investment is modeled by the equation</p>
+      <p><m>V(t) = 4280(1.0401)^{12t}</m></p>
+      <p>Where <m>V(t)</m> is the value of the investment in dollars and <m>t</m> is the number of years since the investment was made. The growth factor <m>1.0401</m> represents a percent increase on the investment which is sometimes called the <q>interest</q> or <q>return</q> on the investment.</p>
+      <exercise>
+        <todo>The string of words in the drop down menu is too long so it gets chopped off on the screen.  Need to fix the window of shorten the phrase.</todo>
         <webwork>
             <setup>
                 <var name="$num">
                     <static>12</static>
                 </var>
-                <var name="$times" category="set">
+                <var name="$times1" category="set">
                     <set>
-                         <member>\text{Counts how often the interest is compounded}</member>
-                         <member>\text{Multiplies the interest}</member>
-                         <member>\text{Counts how often interest is compounded each year}</member>
-                         <member>\text{It is the new percent value}</member>
+                         <member>\text{Investment is compounded 12 times}</member>
+                         <member>\text{Investment is compounded every 12 years}</member>
+                         <member correct="yes" >\text{Investment is compounded 12 times each year}</member>
+                         <member>\text{Investment grows by 12 percent}</member>
                     </set>
                 </var>
-                <var name="$comp" category="set">
-                  <set>
-                    <member>\text{hourly}</member>
-                    <member>\text{daily}</member>
-                    <member>\text{monthly}</member>
-                    <member>\text{yearly}</member>
-                  </set>
+                <var name="$times2" category="set">
+                    <set>
+                         <member>\text{Investment is compounded 12 times}</member>
+                         <member correct="yes" >\text{Investment is compounded every 12 years}</member>
+                         <member>\text{Investment is compounded 12 times each year}</member>
+                         <member>\text{Investment grows by 12 percent}</member>
+                    </set>
                 </var>
                 <pg-code>
                     $num= Real(12);
-                    $times = PopUp(["?", "Counts how often the interest is compounded", "Multiplies the interest", "Counts how often the interest is compounded each year", "It is the new interest value"], "Counts how often the interest is compounded each year");
-                    $comp = PopUp(["?", "hourly", "daily", "monthly", "yearly"], "monthly");
+                    $times1 = PopUp(["?", "Investment is compounded 12 times", "Investment is compounded every 12 years", "Investment is compounded 12 times each year", "Investment grows by 12 percent"], "Investment is compounded 12 times each year");
+                    $times2 = PopUp(["?", "Investment is compounded 12 times", "Investment is compounded every 12 years", "Investment is compounded 12 times each year", "Investment grows by 12 percent"], "Investment is compounded every 12 years");
                 </pg-code>
           </setup>
-    
-            <statement>
-                <p>The value of an investment is modeled by the equation</p>
-                <p><m>v(t) = 4280(1.0401)^{12t}</m></p>
-                <p>Where <m>v(t)</m> is the value of the investment in dollars and <m>t</m> is the number of years since the investment was made. The growth factor <m>1.0401</m> represents a percent increase on the investment which is sometimes called the <q>interest</q> or <q>return</q> on the investment.</p>
-                <p>In one year how often is the interest compounded?</p>
-                <p><var name="$num" width="5" /> times each year.</p>
-                <p>Since <m>t</m> represents the number of years the investment has been growing. What does the value <var name="$num" /> do in our exponential equation?</p>
-                <p><var name="$times" form="popup" /></p>
-                <p>How often is the interest being compounded?</p>
-                <p>It is compounded <var name="$comp" form="popup" />. This is the same as compounding the interest every <m>\frac{1}{<var name="$num" />}</m> of a year.</p>
-                <p>Therefore another way to write the same equation would be</p>
-                <p><m>v(t) = 4280(1.0401)^{\frac{t}{1/<var name="$num" />}}</m></p>
-                <p>but no one would do this because it is silly looking.</p>
-            </statement>
-            <solution>
-                <!-- <p><var name="$num" />  <var name="$times" /></p> -->
-            </solution>
+          
+          <statement>
+            <p>Given <m>V(t) = 4280(1.0401)^{12t}</m></p>
+            <p>
+              <ol label="a" >
+                <li>
+                  <p>In one year <m>t=1</m> what is the value of the exponent? The exponent is <var name="12" width="3" /> after one year.</p>
+                </li>
+                <li>
+                  <p>So, for each year that goes by, how often is the interest compounded?</p>
+                  <p><var name="$num" width="3" /> times each year.</p>
+                </li>
+                <li>
+                  <p>In <m>3</m> years, how many times will the interest be compounded? <var name="36" width="3" /> times.</p>
+                </li>
+                <li>
+                  <p>What is the difference in meaning between these two formulas that calculate the value of an investment?</p>
+                  <p>Formula <m>1</m>: <m>4280(1.0401)^{12t}</m></p>
+                  <p>Formula <m>2</m>: <m>4280(1.0401)^{t}{12}</m></p>
+                  <p><m>4280(1.0401)^{12t}</m> means <var name="$times1" form="popup" /></p>
+                  <p><m>4280(1.0401)^{\frac{t}{12}}</m>means <var name="$times2" form="popup" /></p>
+                </li>
+              </ol>
+            </p>
+            <p>Compounding interest <m>12</m> times each year is the same as compounding the interest every <m>\frac{1}{<var name="$num" />}</m> of a year. That's called <q>monthly</q> because there are <m>12</m> months in a year.</p>
+            <p>Another way to write the same equation would be</p>
+            <p><m>V(t) = 4280(1.0401)^{\frac{t}{1/<var name="$num" />}}</m></p>
+            <p>Which means the interest is calculated every <m>\frac{1}{12}</m> of a year, but no one would do this because it is silly looking.</p>
+            <p>Instead we say the interest is compounded <m>12</m> times a year which is the same as monthly and the equation is prettier.</p>
+          </statement>
         </webwork>
-    </exercise>
+      </exercise>
+    </example>
   </subsection>
 </section>
