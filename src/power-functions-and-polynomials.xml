@@ -312,7 +312,6 @@
             <mrow>\amp=0.04</mrow>
           </md></p>
           <p>Therefore, we have a polynomial which passes through <m>(4,2)</m> and has the correct roots:<me>y = 0.04(x-5)(x+6)(x-9)</me></p>
-          <p>This is not the only polynomial that fits these conditions. Why?</p>
         </example>
 
         <paragraphs>
@@ -334,6 +333,7 @@
         <p>How does a <term>repeated root</term> affect the graph? We know that a root will appear as an <m>x</m>-intercept on the graph, but will repeating a root in a formula mean the <m>x</m>-intercept is somehow also repeated?</p>
         <p>In <xref ref="chapter-vertical-and-horizontal-translations">Chapter</xref>, we learned to shift a parabola <em>left</em> or <em>right</em>, just by adding a number to the input. For example:<me>y = (x+3)^2</me>is the parabola <m>x^2</m>moved to the left by <m>3</m> units.</p>
         <p>This parabola has just one root which has been repeated twice, and the graph appears to <em>bounce</em> off of the <m>x</m>-axis at the root.</p>
+        <todo>Insert a graph here.</todo>
         <p>This phenomenon of <em>bouncing</em> remains a characteristic of the graph, even if we give a polynomial more linear factors, such as: <me>y = (x+3)^2(x-1)</me></p>
         <todo>Fix the following graph, then learn how to make graphs that aren't disgusting</todo>
 
@@ -519,7 +519,23 @@
           </blockquote>
           <p>Similarly, we can ask what the graph tends to do as <m>x \to -\infty</m>. This will be the same as the leading term <m>x^3</m>, which eventually decreases forever as <m>x \to -\infty</m>.</p>
         </example>
-
+        <p>In the next exercise, we show the steps for graphing a polynomial. Following these steps, you can sketch the graph of a polynomial by hand.</p>
+        <exercise>
+          <webwork>
+            <setup>
+              <pg-code>
+              </pg-code>
+            </setup>
+            <statement>
+              <p>Make a rough sketch of the graph of the polynomial: <me>f(x) = x(x+3)(x-2)^2</me></p>
+              <p>First, we know that the <m>x</m>-intercepts are at <m>x=0</m>, <m>x=-3</m> and <m>x=-2</m>.</p>
+              <p>Next, the leading term is <m>x^4</m>, so we know the end-behavior of the graph.</p>
+              <p>Finally, the multiplicity of the roots tells us whether the graph crosses or bounces off of the <m>x</m>-axis.</p>
+              <p>In the graph below, use the slider to show steps for graphing this function.</p>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MRSRj24k/width/425/height/373/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            </statement>
+          </webwork>
+        </exercise>
         <exercise>
           <statement>
           <p>Make a rough sketch of the graph of the polynomial <m>f(x) = (x-4)(x-1)^2(x+3)^2(x+5)</m>.</p>
