@@ -13,6 +13,64 @@
 
 <section xml:id="activity-vertical-stretches" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vertical Stretches Activity</title>
+<!-- Next exercise is just a test -->
+  <exercise>
+    <webwork>
+      <setup>
+        <var name="$input1">
+          <static>0</static>
+        </var>
+
+        <var name="$input2">
+          <static>4</static>
+        </var>
+
+        <var name="$output1">
+          <static>3*f(0)</static>
+        </var>
+
+        <var name="$output2">
+          <static>-f(4)</static>
+        </var>
+
+        <var name="$output3">
+          <static>f(-x)</static>
+        </var>
+
+        <var name="$output4">
+          <static>-f(x)</static>
+        </var>
+
+        <pg-code>
+          Context('Numeric');
+          $input1=Real(random(0,10,1));
+          $input2=Real(random(0,10,1));
+          parserFunction("f(x)"=>"(sin(x)+2)/pi");
+          Context()->flags->set(reduceConstantFunctions=>0);
+          Context()->flags->set(formatStudentAnswer=>"parsed");
+          $output1=Formula("3*f($input1)");
+          $output2=Formula("-f($input2)");
+          $output3=Formula("f(-x)");
+          $output4=Formula("-f(x)");
+        </pg-code>
+      </setup>
+
+      <statement>
+        <p>Use the function <m>f(x)</m> to write an expression to answer each question below.</p>
+        <p>The first question has been answered already as an example.</p>
+        <p><ol label="a">
+          <li><p>What is the output, when the input is <m>20</m>?</p>
+          <p>Answer:  <m>f(20)</m></p></li>
+          <li><p>What is the opposite of the output, when the input is <m><var name="$input2" /></m>?</p>
+          <p>Answer:  <var name="$output2" width="10" /></p></li>
+          <li><p>What is the output, when we evaluate the function at the opposite of <m>x</m>?</p>
+          <p>Answer:  <var name="$output3" width="10" /></p></li>
+          <li><p>What is the opposite of the output, when we evaluate the function at <m>x</m>?</p>
+          <p>Answer:  <var name="$output4" width="10" /></p></li>
+        </ol></p>
+      </statement>
+    </webwork>
+  </exercise>
 
   <p>In this activity, remember that <m>f(a)</m> is the output of the function <m>f</m> when the input is <m>a</m>.</p>
   <p>So, if you perform some calculation with the <em>output</em> of the function, you will be performing that calculation with an expression like <m>f(a)</m>.</p>
