@@ -147,7 +147,7 @@
         <ol>
           <li><p>For a function <m>f(x)</m>, what does <m>f\left(\frac{x}{2}\right)</m> calculate?</p>
           <p>Answer:  <var name="$interpret1" form="popup" /></p></li>
-          <li><p>For a function <m>g(x)</m>, what does <m>3*g(5)</m> calculate?</p>
+          <li><p>For a function <m>g(x)</m>, what does <m>3\cdot g(5)</m> calculate?</p>
           <p>Answer:  <var name="$interpret2" form="popup" /></p></li>
         </ol>
       </statement>
@@ -160,7 +160,7 @@
       <solution>
         <ol>
           <li><p>While it is certainly true that the input <m>x</m> has been divided by <m>2</m>, the expression <m>f\left(\frac{x}{2}\right)</m> is the <em>output</em> of the function, when the input <m>x</m> has been divided by <m>2</m>.</p></li>
-          <li><p>Since <m>g(5)</m> represents the output of the function, when the input is <m>5</m>, then <m>3*g(5)</m> is just <m>3</m> times the output, when the input is <m>5</m>.</p></li>
+          <li><p>Since <m>g(5)</m> represents the output of the function, when the input is <m>5</m>, then <m>3\cdot g(5)</m> is just <m>3</m> times the output, when the input is <m>5</m>.</p></li>
         </ol>
       </solution>
     </webwork>
@@ -213,7 +213,7 @@
           <p>The graph shows a function <m>y = f(x)</m>.</p>
           <p>In the first column of the table below, approximate the function values to the nearest <em>whole number</em>. These will be the function values you can read directly from the graph.</p>
           <table>
-            <caption>Table of <m>f(x)</m>, <m>2f(x)</m> and <m>1/2*f(x)</m></caption>
+            <caption>Table of <m>f(x)</m>, <m>2f(x)</m> and <m>1/2\cdot f(x)</m></caption>
             <tabular top="major" halign="center">
               <col halign="left" />
               <col />
@@ -264,7 +264,7 @@
 
             </tabular>
           </table>
-          <p>Then use those values to determine the values in the next two colums for <m>2*f(x)</m> and <m>\frac{1}{2}*f(x)</m>. Remember that multiplying <em>outside</em> of a function by a number will change its <em>output</em> values.</p>
+          <p>Then use those values to determine the values in the next two colums for <m>2\cdot f(x)</m> and <m>\frac{1}{2}\cdot f(x)</m>. Remember that multiplying <em>outside</em> of a function by a number will change its <em>output</em> values.</p>
       </statement>
     </webwork>
   </exercise>
@@ -339,7 +339,7 @@
       <statement>
             <p>The graph below shows a function <m>y = f(x)</m>.</p>
             <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aSr3RBYV/width/432/height/438/border/888888/sri/true" width="432px" height="438px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Moving the slider allows you to also graph <m>y = a*f(x)</m>, where you can change the value of <m>a</m> between <m>0</m> and <m>3</m>.</p>
+            <p>Moving the slider allows you to also graph <m>y = a\cdot f(x)</m>, where you can change the value of <m>a</m> between <m>0</m> and <m>3</m>.</p>
         <ul>
           <li>
             <p>Move the slider so <m>a &gt; 1</m>, and use what you observe to complete the statement below:</p>
@@ -380,25 +380,25 @@
       <statement>
         <p>The graph below shows a function <m>y = f(x)</m>.</p>
         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/b2KYhMZS/width/433/height/518/border/888888/sri/true" width="433px" height="518px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-        <p>Moving the slider allows you to also graph <m>y = a*f(x)</m>, where you can change the value of <m>a</m> between <m>-2</m> and <m>3</m>.</p>
+        <p>Moving the slider allows you to also graph <m>y = a\cdot f(x)</m>, where you can change the value of <m>a</m> between <m>-2</m> and <m>3</m>.</p>
         <p>Move the slider so <m>a = -2</m>, and use what you observe to complete the statement below:</p>
-        <p>The graph of <m>y = -2*f(x)</m> is like the graph of <m>y = f(x)</m>, after it has been <var name="$reflection" form="popup" /> and <var name="$stretch" form="popup" />.</p>
+        <p>The graph of <m>y = -2\cdot f(x)</m> is like the graph of <m>y = f(x)</m>, after it has been <var name="$reflection" form="popup" /> and <var name="$stretch" form="popup" />.</p>
       </statement>
 
     </webwork>
   </exercise>
 
-  <p>Finally, compare the transformation <m>a*f(x)</m> with the transformation <m>f(x) + a</m> which we studied in <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>.</p>
+  <p>Finally, compare the transformation <m>a\cdot f(x)</m> with the transformation <m>f(x) + a</m> which we studied in <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>.</p>
 
   <exercise>
     <webwork xml:id="contrast-a-times-f-and-a-plus-f">
       <setup>
         <var name="$description">
           <set>
-            <member>\text{The transformations <m>a*f(x)</m> and <m>f(x) + a</m> are really the same thing.}</member>
-            <member correct="yes">\text{The transformation <m>a*f(x)</m> stretches or compresses the graph vertically, but <m>f(x) + a</m> shifts the graph up or down.}</member>
-            <member>\text{The transformation <m>a*f(x)</m> shifts the graph up or down, but <m>f(x) + a</m> stretches or compresses the graph vertically.}</member>
-            <member>\text{The transformation <m>a*f(x)</m> changes the graph vertically, but <m>f(x) + a</m> changes the graph horizontally.}</member>
+            <member>\text{The transformations <m>a\cdot f(x)</m> and <m>f(x) + a</m> are really the same thing.}</member>
+            <member correct="yes">\text{The transformation <m>a\cdot f(x)</m> stretches or compresses the graph vertically, but <m>f(x) + a</m> shifts the graph up or down.}</member>
+            <member>\text{The transformation <m>a\cdot f(x)</m> shifts the graph up or down, but <m>f(x) + a</m> stretches or compresses the graph vertically.}</member>
+            <member>\text{The transformation <m>a\cdot f(x)</m> changes the graph vertically, but <m>f(x) + a</m> changes the graph horizontally.}</member>
           </set>
         </var>
 
@@ -408,7 +408,7 @@
       </setup>
 
       <statement>
-        <p>Which statement below correctly describes the difference between the transformations <m>a*f(x)</m> and <m>f(x) + a</m>?</p>
+        <p>Which statement below correctly describes the difference between the transformations <m>a\cdot f(x)</m> and <m>f(x) + a</m>?</p>
         <p><var name="$description" form="buttons" /></p>
       </statement>
     </webwork>
