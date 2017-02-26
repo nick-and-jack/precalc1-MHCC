@@ -72,15 +72,38 @@
     </webwork>
   </exercise>
 
-  <p>In this activity, remember that <m>f(a)</m> is the output of the function <m>f</m> when the input is <m>a</m>.</p>
-  <p>So, if you perform some calculation with the <em>output</em> of the function, you will be performing that calculation with an expression like <m>f(a)</m>.</p>
-  <example>
-    <p>For a function <m>g(x)</m>, write an expression which means the same thing as:</p>
-    <p><blockquote><em>ten times the output of the function, when the input is six</em></blockquote></p>
-    <answer>
-      <p>The expression would be: <me>10*g(6)</me></p>
-    </answer>
-  </example>
+  <p>In this activity, we will continue to explore how a change to a function's formula will alter its graph. In particular, we will see the effect of multiplying the output of a function by a constant number.</p>
+  <p>Remember that if you perform some calculation with the <em>output</em> of a function <m>f</m>, you will be performing that calculation with an expression like <m>f(a)</m>.</p>
+  <p>In this first exercise, you'll practice writing an expression for the output of a function which has been altered.</p>
+  <exercise>
+    <webwork>
+      <setup>
+        <var name="$num[0]"><static>8</static></var>
+        <var name="$num[1]"><static>3</static></var>
+        <pg-code>
+          Context('Numeric');
+          @num=map{$_+2}NchooseK(10,3);
+          parserFunction("g(x)"=>"(sin(x)+2)/pi");
+          parserFunction("f(x)"=>"(sin(x)+2)/pi");
+          Context()->flags->set(reduceConstantFunctions=>0);
+          Context()->flags->set(formatStudentAnswer=>"parsed");
+          $output=Formula("$num[0]*g($num[1])");
+          $output1=Formula("$num[2]*f(x)");
+        </pg-code>
+      </setup>
+      <statement>
+        <p>If <m>g</m> is a function, write an expression which means <q><var name="$num[0]" /> times the output of the function, when the input is <var name="$num[1]" /></q>.</p>
+        <p>Answer:  <var name="$output" width="15" /></p>
+        <p>If <m>f</m> is a function, write an expression which means <q><var name="$num[2]" /> times the output of the function, when the input is <m>x</m></q>.</p>
+        <p>Answer:  <var name="$output1" width="15" /></p>
+      </statement>
+      <solution>
+        <p>The expression is: <var name="$output" /></p>
+      </solution>
+    </webwork>
+  </exercise>
+
+
   <p>Similarly, remember that the number (or expression) inside parentheses, such as the variable <m>a</m> in the expression <m>f(a)</m>, always represents the input of the function.</p>
   <p>So, if you perform some calculation with the <em>input</em> of a function, you will be performing that calculation on the expression inside the parentheses.</p>
   <example>

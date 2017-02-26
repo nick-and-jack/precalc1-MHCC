@@ -23,7 +23,7 @@
               <set>
                   <member>18</member>
                   <member>6\text{ times the input of }3</member>
-                  <member correct="yes">6\text{ times the output when }x\text{ is }3</member>
+                  <member correct="yes">6\text{ times the output when the input is }3</member>
                   <member>f(18)</member>
               </set>
             </var>
@@ -34,7 +34,7 @@
               Context('Numeric');
               $withSymbols = RadioButtons(
                 ["18","6 times the input of 3", "6 times the output when x is 3"],
-                2, labels => ["18","6 times the input of 3","6 times the output when x is 3"],
+                2, labels => ["18","6 times the input of 3","6 times the output when the input is 3"],
                 displayLabels => 0
               );
               $withNumbers = Real(42);
@@ -182,6 +182,16 @@
                 <p>Answer:  <var name="$output4" width="10" /></p></li>
               </ol></p>
             </statement>
+            <hint>
+              <p>Remember that changing the output of a function is different from changing the input of the function. The function notation for the output of a function is: <me>f(\text{something})</me> The notation for the input is merely what <m>f</m> is acting on: the input <em>is</em> the <q>something</q> in the expression: <me>f(\text{something})</me></p>
+            </hint>
+            <solution>
+              <p><ol label="a">
+                <li><p><var name="$output2" /></p></li>
+                <li><p><var name="$output3" /></p></li>
+                <li><p><var name="$output4" /></p></li>
+              </ol></p>
+            </solution>
           </webwork>
         </exercise>
 
