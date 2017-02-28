@@ -13,61 +13,62 @@
 
 <chapter xml:id="chapter-exponential-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <title>Exponential Functions</title>
+  <title>Exponential Functions</title>
 
-    <introduction>
-        <list xml:id="outcomes-exponential-functions">
-            <title>Student Learning Outcomes</title>
-            <ul>
-                <li>
-                    <p>Define, distinguish and apply exponential functions.</p>
-                </li>
-                <li>
-                    <p>Sketch the graph of an exponential function.</p>
-                </li>
-                <li>
-                    <p>Identify a horizontal asymptote from a graph, numerical model, verbal description or equation.</p>
-                </li>
-                <li>
-                    <p>Distinguish growht vs. decay given any model (verbal, numberical, graphical, equation).</p>
-                </li>
-                <li>
-                    <p>Determine percent change of an exponential function.</p>
-                </li>
-                <li>
-                    <p>Model real-world situations algebraically using exponential functions.</p>
-                </li>
-                <li>
-                    <p>Identify the meaning of the parameters of an exponential function.</p>
-                </li>
-            </ul>
-        </list>
+  <objectives xml:id="outcomes-exponential-functions">
+    <title>Student Learning Outcomes</title>
+    <ul>
+        <li>
+            <p>Define, distinguish and apply exponential functions.</p>
+        </li>
+        <li>
+            <p>Sketch the graph of an exponential function.</p>
+        </li>
+        <li>
+            <p>Identify a horizontal asymptote from a graph, numerical model, verbal description or equation.</p>
+        </li>
+        <li>
+            <p>Distinguish growht vs. decay given any model (verbal, numberical, graphical, equation).</p>
+        </li>
+        <li>
+            <p>Determine percent change of an exponential function.</p>
+        </li>
+        <li>
+            <p>Model real-world situations algebraically using exponential functions.</p>
+        </li>
+        <li>
+            <p>Identify the meaning of the parameters of an exponential function.</p>
+        </li>
+    </ul>
+     <!--  <list>
+      <title>Video Lectures</title>
+          <dl>
+              <li>
+                  <title>Percent and the Decimal Equivalent</title>
+              </li>
+              <li>
+                  <title>Growth/Decay Factor</title>
+              </li>
+              <li>
+                  <title>Finding Exponential Formulas (Tables, Graphs and Language)</title>
+              </li>
+              <li>
+                  <title>Graphs of Exponential Functions.</title>
+              </li>
+          </dl>
+      </list> -->
 
-        <list>
-        <title>Video Lectures</title>
-            <dl>
-                <li>
-                    <title>Percent and the Decimal Equivalent</title>
-                </li>
-                <li>
-                    <title>Growth/Decay Factor</title>
-                </li>
-                <li>
-                    <title>Finding Exponential Formulas (Tables, Graphs and Language)</title>
-                </li>
-                <li>
-                    <title>Graphs of Exponential Functions.</title>
-                </li>
-            </dl>
-        </list>
+  </objectives>
 
-    </introduction>
+  <xi:include href="./activity-exponential-intro.xml" />
+  <xi:include href="./activity-discrete-continuous-compounding.xml" />
+  <xi:include href="./activity-compounding-number-e.xml" />
+  <xi:include href="./activity-review-percent-change.xml" />
 
-    <xi:include href="./activity-exponential-intro.xml" />
-    <xi:include href="./activity-discrete-continuous-compounding.xml" />
-    <xi:include href="./activity-compounding-number-e.xml" />
+  <section xml:id="exponential-functions-gist">
+    <title>Gist of Exponential Functions</title>
 
-    <conclusion>
+    <subsection>
         <p>In this lesson we learn about a family of functions called "exponential". Just like linear functions, exponentials have their or own general shapes and basic formulas and numerical patterns.</p> 
         <p>For instance, linear functions look like lines on a graph.</p>
 
@@ -75,6 +76,13 @@
 
         <p>While exponential functions bend in a smooth curve. In the figure below the curve is <q>concave up</q>.</p>
         
+        <todo>Move this paragragh to gist <p>One way to distiguish between linear and exponential patterns is <term>linear</term> means <q>repeated addition.</q> Where as <term>exponential</term> means <q>repeated multiplication.</q></p>
+    <p>We can pick out patterns from language too.  For instance the statement, <q>A worker makes <m>\$ 15</m> per hour</q> is giving us information about a linear pattern. The statement indicates that for each hour that passes the worker adds <m>\$ 15</m> to their earnings.</p>
+    <p>On the other hand if the worker has a salary increase of <m>15 \%</m> each hour it means their earnings are multiplied by <m>1.15</m> for each hour they work.</p>
+    <p>We must realize that multiplication and percent change are related. To change a value by a percent we multiply that value by something.</p>    
+    </todo>
+
+  
         <todo>Graph of an increasing exponential function.
         </todo>
         
@@ -115,15 +123,15 @@
                 <p>Find an exponential formula for the graph shown in the figure below. Given any two points.</p>
        </example>
 
-        <example>
-            <title>Example Problem 6:  solution video</title>
-                <p>The amount <m>A(t)</m> in milligrams, of drug in the body <m>t</m> hours after taking a pill is modeled by the formula  <m>A(t) = 22(0.89)^{t}</m></p>
-                <p>What is the amount of the initial dose?</p>
-                <p>What percent of the drug leaves the body each hour?</p>
-                <p>What is the amount of drug left after 10 hours?</p>
-                <p>How many hours will it take for there to be 1 milligram of drug in the body?</p>
-            </example>
+      <example>
+        <title>Example Problem 6:  solution video</title>
+        <p>The amount <m>A(t)</m> in milligrams, of drug in the body <m>t</m> hours after taking a pill is modeled by the formula  <m>A(t) = 22(0.89)^{t}</m></p>
+        <p>What is the amount of the initial dose?</p>
+        <p>What percent of the drug leaves the body each hour?</p>
+        <p>What is the amount of drug left after 10 hours?</p>
+        <p>How many hours will it take for there to be 1 milligram of drug in the body?</p>
+      </example>
 
-    </conclusion>
-
+    </subsection>
+  </section>
 </chapter>

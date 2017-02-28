@@ -13,16 +13,97 @@
 
 <section xml:id="activity-vertical-stretches" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vertical Stretches Activity</title>
+<!-- Next exercise is just a test -->
+  <exercise>
+    <webwork>
+      <setup>
+        <var name="$input1">
+          <static>0</static>
+        </var>
 
-  <p>In this activity, remember that <m>f(a)</m> is the output of the function <m>f</m> when the input is <m>a</m>.</p>
-  <p>So, if you perform some calculation with the <em>output</em> of the function, you will be performing that calculation with an expression like <m>f(a)</m>.</p>
-  <example>
-    <p>For a function <m>g(x)</m>, write an expression which means the same thing as:</p>
-    <p><blockquote><em>ten times the output of the function, when the input is six</em></blockquote></p>
-    <answer>
-      <p>The expression would be: <me>10*g(6)</me></p>
-    </answer>
-  </example>
+        <var name="$input2">
+          <static>4</static>
+        </var>
+
+        <var name="$output1">
+          <static>3*f(0)</static>
+        </var>
+
+        <var name="$output2">
+          <static>-f(4)</static>
+        </var>
+
+        <var name="$output3">
+          <static>f(-x)</static>
+        </var>
+
+        <var name="$output4">
+          <static>-f(x)</static>
+        </var>
+
+        <pg-code>
+          Context('Numeric');
+          $input1=Real(random(0,10,1));
+          $input2=Real(random(0,10,1));
+          parserFunction("f(x)"=>"(sin(x)+2)/pi");
+          Context()->flags->set(reduceConstantFunctions=>0);
+          Context()->flags->set(formatStudentAnswer=>"parsed");
+          $output1=Formula("3*f($input1)");
+          $output2=Formula("-f($input2)");
+          $output3=Formula("f(-x)");
+          $output4=Formula("-f(x)");
+        </pg-code>
+      </setup>
+
+      <statement>
+        <p>Use the function <m>f(x)</m> to write an expression to answer each question below.</p>
+        <p>The first question has been answered already as an example.</p>
+        <p><ol label="a">
+          <li><p>What is the output, when the input is <m>20</m>?</p>
+          <p>Answer:  <m>f(20)</m></p></li>
+          <li><p>What is the opposite of the output, when the input is <m><var name="$input2" /></m>?</p>
+          <p>Answer:  <var name="$output2" width="10" /></p></li>
+          <li><p>What is the output, when we evaluate the function at the opposite of <m>x</m>?</p>
+          <p>Answer:  <var name="$output3" width="10" /></p></li>
+          <li><p>What is the opposite of the output, when we evaluate the function at <m>x</m>?</p>
+          <p>Answer:  <var name="$output4" width="10" /></p></li>
+        </ol></p>
+      </statement>
+    </webwork>
+  </exercise>
+
+  <p>In this activity, we will continue to explore how a change to a function's formula will alter its graph. In particular, we will see the effect of multiplying the output of a function by a constant number.</p>
+  <p>Remember that if you perform some calculation with the <em>output</em> of a function <m>f</m>, you will be performing that calculation with an expression like <m>f(a)</m>.</p>
+  <p>In this first exercise, you'll practice writing an expression for the output of a function which has been altered.</p>
+  <exercise>
+    <webwork>
+      <setup>
+        <var name="$num[0]"><static>8</static></var>
+        <var name="$num[1]"><static>3</static></var>
+        <pg-code>
+          Context('Numeric');
+          @num=map{$_+2}NchooseK(10,3);
+          parserFunction("g(x)"=>"(sin(x)+2)/pi");
+          parserFunction("f(x)"=>"(sin(x)+2)/pi");
+          Context()->flags->set(reduceConstantFunctions=>0);
+          Context()->flags->set(formatStudentAnswer=>"parsed");
+          $output=Formula("$num[0]*g($num[1])");
+          $output1=Formula("$num[2]*f(x)");
+        </pg-code>
+      </setup>
+      <statement>
+        <p>If <m>g</m> is a function, write an expression which means <q><var name="$num[0]" /> times the output of the function, when the input is <var name="$num[1]" /></q>.</p>
+        <p>Answer:  <var name="$output" width="15" /></p>
+        <p>If <m>f</m> is a function, write an expression which means <q><var name="$num[2]" /> times the output of the function, when the input is <m>x</m></q>.</p>
+        <p>Answer:  <var name="$output1" width="15" /></p>
+      </statement>
+      <solution>
+        <p>The expression is: <var name="$output" /></p>
+      </solution>
+    </webwork>
+  </exercise>
+
+
   <p>Similarly, remember that the number (or expression) inside parentheses, such as the variable <m>a</m> in the expression <m>f(a)</m>, always represents the input of the function.</p>
   <p>So, if you perform some calculation with the <em>input</em> of a function, you will be performing that calculation on the expression inside the parentheses.</p>
   <example>
@@ -66,7 +147,7 @@
         <ol>
           <li><p>For a function <m>f(x)</m>, what does <m>f\left(\frac{x}{2}\right)</m> calculate?</p>
           <p>Answer:  <var name="$interpret1" form="popup" /></p></li>
-          <li><p>For a function <m>g(x)</m>, what does <m>3*g(5)</m> calculate?</p>
+          <li><p>For a function <m>g(x)</m>, what does <m>3\cdot g(5)</m> calculate?</p>
           <p>Answer:  <var name="$interpret2" form="popup" /></p></li>
         </ol>
       </statement>
@@ -79,7 +160,7 @@
       <solution>
         <ol>
           <li><p>While it is certainly true that the input <m>x</m> has been divided by <m>2</m>, the expression <m>f\left(\frac{x}{2}\right)</m> is the <em>output</em> of the function, when the input <m>x</m> has been divided by <m>2</m>.</p></li>
-          <li><p>Since <m>g(5)</m> represents the output of the function, when the input is <m>5</m>, then <m>3*g(5)</m> is just <m>3</m> times the output, when the input is <m>5</m>.</p></li>
+          <li><p>Since <m>g(5)</m> represents the output of the function, when the input is <m>5</m>, then <m>3\cdot g(5)</m> is just <m>3</m> times the output, when the input is <m>5</m>.</p></li>
         </ol>
       </solution>
     </webwork>
@@ -128,11 +209,11 @@
         </pg-code>
       </setup>
       <statement>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dAA6utJV/width/433/height/376/border/888888/sri/true" width="433px" height="376px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dAA6utJV/width/433/height/376/border/888888/sri/true/sdz/false/" width="433px" height="376px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>The graph shows a function <m>y = f(x)</m>.</p>
           <p>In the first column of the table below, approximate the function values to the nearest <em>whole number</em>. These will be the function values you can read directly from the graph.</p>
           <table>
-            <caption>Table of <m>f(x)</m>, <m>2f(x)</m> and <m>1/2*f(x)</m></caption>
+            <caption>Table of <m>f(x)</m>, <m>2f(x)</m> and <m>1/2\cdot f(x)</m></caption>
             <tabular top="major" halign="center">
               <col halign="left" />
               <col />
@@ -183,7 +264,7 @@
 
             </tabular>
           </table>
-          <p>Then use those values to determine the values in the next two colums for <m>2*f(x)</m> and <m>\frac{1}{2}*f(x)</m>. Remember that multiplying <em>outside</em> of a function by a number will change its <em>output</em> values.</p>
+          <p>Then use those values to determine the values in the next two colums for <m>2\cdot f(x)</m> and <m>\frac{1}{2}\cdot f(x)</m>. Remember that multiplying <em>outside</em> of a function by a number will change its <em>output</em> values.</p>
       </statement>
     </webwork>
   </exercise>
@@ -211,11 +292,11 @@
       <statement>
         <ol>
           <li><p>The graph below shows the function <m>y = f(x)</m>. Plot five points on the graph of <m>y = 2f(x)</m> by moving the five blue points to appropriate locations.</p>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FNyrMUGq/width/433/height/406/border/888888/sri/true" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FNyrMUGq/width/433/height/406/border/888888/sri/true/sdz/false/" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
             <p>Did you successfully make the graph of <m>y = 2f(x)</m>.</p>
             <p><var name="$didItGraph" form="popup" /></p></li>
           <li><p>Again, we have the graph of <m>y = f(x)</m>. Plot five points on the graph of <m>\frac{1}{2}f(x)</m> by moving the five blue points to appropriate locations.</p>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PFcvTbgD/width/433/height/406/border/888888/sri/true" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PFcvTbgD/width/433/height/406/border/888888/sri/true/sdz/false/" width="433px" height="406px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
             <p>Did you successfully make the graph of <m>y = \frac{1}{2}f(x)</m>.</p>
             <p><var name="$didItGraph" form="popup" /></p></li>
         </ol>
@@ -257,8 +338,8 @@
 
       <statement>
             <p>The graph below shows a function <m>y = f(x)</m>.</p>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aSr3RBYV/width/432/height/438/border/888888/sri/true" width="432px" height="438px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Moving the slider allows you to also graph <m>y = a*f(x)</m>, where you can change the value of <m>a</m> between <m>0</m> and <m>3</m>.</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aSr3RBYV/width/432/height/438/border/888888/sri/true/sdz/false/" width="432px" height="438px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Moving the slider allows you to also graph <m>y = a\cdot f(x)</m>, where you can change the value of <m>a</m> between <m>0</m> and <m>3</m>.</p>
         <ul>
           <li>
             <p>Move the slider so <m>a &gt; 1</m>, and use what you observe to complete the statement below:</p>
@@ -298,26 +379,26 @@
 
       <statement>
         <p>The graph below shows a function <m>y = f(x)</m>.</p>
-        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/b2KYhMZS/width/433/height/518/border/888888/sri/true" width="433px" height="518px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-        <p>Moving the slider allows you to also graph <m>y = a*f(x)</m>, where you can change the value of <m>a</m> between <m>-2</m> and <m>3</m>.</p>
+        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/b2KYhMZS/width/433/height/518/border/888888/sri/true/sdz/false/" width="433px" height="518px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+        <p>Moving the slider allows you to also graph <m>y = a\cdot f(x)</m>, where you can change the value of <m>a</m> between <m>-2</m> and <m>3</m>.</p>
         <p>Move the slider so <m>a = -2</m>, and use what you observe to complete the statement below:</p>
-        <p>The graph of <m>y = -2*f(x)</m> is like the graph of <m>y = f(x)</m>, after it has been <var name="$reflection" form="popup" /> and <var name="$stretch" form="popup" />.</p>
+        <p>The graph of <m>y = -2\cdot f(x)</m> is like the graph of <m>y = f(x)</m>, after it has been <var name="$reflection" form="popup" /> and <var name="$stretch" form="popup" />.</p>
       </statement>
 
     </webwork>
   </exercise>
 
-  <p>Finally, compare the transformation <m>a*f(x)</m> with the transformation <m>f(x) + a</m> which we studied in <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>.</p>
+  <p>Finally, compare the transformation <m>a\cdot f(x)</m> with the transformation <m>f(x) + a</m> which we studied in <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>.</p>
 
   <exercise>
     <webwork xml:id="contrast-a-times-f-and-a-plus-f">
       <setup>
         <var name="$description">
           <set>
-            <member>\text{The transformations <m>a*f(x)</m> and <m>f(x) + a</m> are really the same thing.}</member>
-            <member correct="yes">\text{The transformation <m>a*f(x)</m> stretches or compresses the graph vertically, but <m>f(x) + a</m> shifts the graph up or down.}</member>
-            <member>\text{The transformation <m>a*f(x)</m> shifts the graph up or down, but <m>f(x) + a</m> stretches or compresses the graph vertically.}</member>
-            <member>\text{The transformation <m>a*f(x)</m> changes the graph vertically, but <m>f(x) + a</m> changes the graph horizontally.}</member>
+            <member>\text{The transformations <m>a\cdot f(x)</m> and <m>f(x) + a</m> are really the same thing.}</member>
+            <member correct="yes">\text{The transformation <m>a\cdot f(x)</m> stretches or compresses the graph vertically, but <m>f(x) + a</m> shifts the graph up or down.}</member>
+            <member>\text{The transformation <m>a\cdot f(x)</m> shifts the graph up or down, but <m>f(x) + a</m> stretches or compresses the graph vertically.}</member>
+            <member>\text{The transformation <m>a\cdot f(x)</m> changes the graph vertically, but <m>f(x) + a</m> changes the graph horizontally.}</member>
           </set>
         </var>
 
@@ -327,7 +408,7 @@
       </setup>
 
       <statement>
-        <p>Which statement below correctly describes the difference between the transformations <m>a*f(x)</m> and <m>f(x) + a</m>?</p>
+        <p>Which statement below correctly describes the difference between the transformations <m>a\cdot f(x)</m> and <m>f(x) + a</m>?</p>
         <p><var name="$description" form="buttons" /></p>
       </statement>
     </webwork>
