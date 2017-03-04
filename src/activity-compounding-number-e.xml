@@ -22,7 +22,7 @@
     <p>The second equation states <m>50</m> miles were covered in <m>1</m> hour. We don’t know if this actually happened, it’s just an average rate of change.</p>
     <p>Both equations will give us the same results, but each one tells a different story.</p>
     <p>In the activity, <em>Introduction to Exponential Functions</em> we learned to calculate the per unit growth factor using an overall percent change between two values.</p>
-    <p>In this activity we will first explore the meaning of exponential notation and how it can help us tell the stories of our observations. Later we expand on this knowledge to build a new form of the exponential function called the <q>continuous</q> model.</p>
+    <p>In this activity we first explore the meaning of exponential notation in the context of some real situations and see how it can help us comunicate our observations. Later we expand on this knowledge to build a new form of the exponential function called the <q>continuous</q> model.</p>
     <example>
       <p><q>A <m>20 \%</m> increase in the span of <m>5</m> years</q>, means the annual, <em>per year</em> growth factor <q>b</q> has been compounded <m>5</m> times for an overall <m>20 \%</m> increase (multiple of <m>1.2</m>)</p>
       <p>Therefore, 
@@ -33,7 +33,7 @@
       </md>
       which represents an average increase of approximately a <m>3.71 \%</m> per year.</p>
     </example>
-    <p>There is a difference between an obeservation and a calculation.  In the previous example, there really was a <m>20 \%</m> increase and it actually occurred over <m>5</m> years.  The value of <m>3.71 \%</m> annual increase is something we calculated with the given data which is an average percent growth.</p>
+    <p>There is a difference between an obeservation and a calculation.  In the previous example, there really was a <m>20 \%</m> increase and it actually occurred over <m>5</m> years.  The value of <m>3.71 \%</m> annual increase is something we calculated with the given data which is an average annual percent growth.</p>
   </introduction>
 
   <subsection>
@@ -121,7 +121,7 @@
         </solution>
       </webwork>
     </exercise>
-    <p>This method of translating between the languages of English and Math is actually very useful in practice. Instead of scribbling out a bunch of algebra every time a formula is needed, we can directly translate our stated observations in English to expressions or equations in Math.</p>
+    <p>This method of translating between English and Math languages is actually very useful in practice. Instead of scribbling out a bunch of algebra every time a formula is needed, we can directly translate our observations in English to expressions or equations in Math.</p>
     <exercise>
       <introduction>
         <p>Interpret the meaning of the fractional exponent.</p>
@@ -197,12 +197,13 @@
                 <p>It means <var name="$m3" form="popup" /></p>
               </li>
               <li>
+                <p>To find the annual (every year) growth factor we can use a calculator to evaluate the expression <m>b^{\frac{t}{5}}</m> for <m>t=1</m></p>
                 <p>What is the annual (ever year) growth factor?</p>
                 <p>The annual growth factor is <var name="1.0159" width="5" /> <em>(round to <m>4</m> decimal places).</em></p>
               </li>
               <li>
-                <p>Calculate the average annual percent increase.</p>
-                <p>Average annual percent increase <m>=</m> <var name="1.59" width="5" /> <em>(round to <m>2</m> decimal places)</em></p>
+                <p>Using the annual growth factor, we can extract the information about the annual percent increase/decrease.</p>
+                <p>Annual percent increase is <var name="1.59" width="5" /><m>\, \%</m> <em>(round to <m>2</m> decimal places)</em></p>
               </li>
             </ol>
           </p>
@@ -239,7 +240,7 @@
       <p>Without missing a beat, or the need for any algebra, the biologist can immediately write a simple exponential formula as a function of time to model what she just measured.</p>
       <p>Using the initial amount of pollutant and letting <m>t</m> represent the time in hours since her first measurement, she writes <me>P(t)=4890(0.96)^{\frac{t}{72}}</me></p>
       <p>The formula literally says, <q>An initial amount <m>4890</m> ppm of pollutant decreases by <m>4 \%</m> every <m>72</m> hours.</q></p>
-      <p>Of course, she doesn't know if the breakdown is actually exponential, it's just an assumption. She could have assumed a linear breakdown of the pollutant in which the <m>4 \%</m> decrease of the initial amount is the same amount each hour. A linear formula would therefore be, <me>P(t)=4890-0.4*4890*t</me></p>
+      <p>Of course, she doesn't know if the breakdown is actually exponential, it's just an assumption. She could have assumed a linear breakdown of the pollutant in which the <m>4 \%</m> decrease of the initial amount is the same amount each hour. A linear formula would therefore be, <me>P(t)=4890-4890(0.4 \cdot t)</me></p>
       <p>Nobody knows what the correct formula should be. There are many possible formulas that could model the breakdown of the pollutant. But one model may predict past or future data better than others and knowing what model to choose and why is the reason the biologist gets paid the big bucks.</p>
     </example>
     <p>By developing the connection between our literal understanding of a situation and the math notation used to describe it we afford ourselves great flexibility in how we interpret and how we model <q>real-life</q> data.</p>
