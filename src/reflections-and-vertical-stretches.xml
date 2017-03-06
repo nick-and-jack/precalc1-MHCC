@@ -14,7 +14,6 @@
 <chapter xml:id="chapter-reflections-and-vertical-stretches" xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <title>Reflections and Vertical Stretches</title>
-    <introduction>
 
         <objectives>
           <title>Student Learning Outcomes</title>
@@ -24,82 +23,45 @@
             <li><p>Use transformations to model situations algebraically (from verbal descriptions, graphs, tables, and data points). Recognize functions as transformations of basic functions.</p></li>
           </ul>
         </objectives>
-
-              <todo>Maybe fix video below. A mistake at 5min 20sec</todo>
-                <!-- <video source="http://stream.mhcc.edu/videos/greenja/captioned/m06-lec-stretch-factor-captioned_-_20150120_200703_26.html" />
-            </li>
-            <li>
-              <title>Opposite of Input vs. Opposite of Output</title>
-                <video source="http://stream.mhcc.edu/videos/greenja/captioned/m06-cyu-transformation-equations-captioned_-_20150120_183648_26.html" /> -->
-
-          <!-- what is the point of the following list?
-          <p>Function notation is all about describing inputs and outputs. So far, we have seen inputs and outputs in these contexts:</p>
+        <todo>Maybe fix video below. A mistake at 5min 20sec</todo>
+        <introduction>
+          <list>
+            <title>Video Lectures</title>
+            <!-- If we can get these videos up onto YouTube, much easier to embed -->
             <dl>
-              <title></title>
               <li>
-                <title>Formulas</title>
-                  <p><m>P(t) = 3(1.09)^t</m></p>
-                  <p>The value <m>t</m> is the input, and the value <m>P(t)</m> is the result.</p>
-                </li>
-                <li>
-                  <title>Ordered Pairs</title>
-                    <p><m>(m, W(m))</m></p>
-                    <p>The input <m>m</m> is the horizontal location of a point, and the ouput <m>W(m)</m> is the vertical location of the point.</p>
-                </li>
-                <li>
-                  <title>Tables of Values</title>
-
-                  <table xml:id="function-table">
-                  <tabular halign="center" top="medium" left="medium" bottom="medium" right="medium">
-                    <row>
-                      <cell>x</cell>
-                      <cell halign="left">y</cell>
-                    </row>
-
-                    <row>
-                      <cell>1</cell>
-                      <cell halign="left">-3</cell>
-                    </row>
-
-                    <row>
-                      <cell>2</cell>
-                      <cell halign="left">-1</cell>
-                    </row>
-
-                    <row>
-                      <cell>3</cell>
-                      <cell halign="left">7</cell>
-                    </row>
-                  </tabular>
-                </table>
+                <title>Reflections</title>
+                <!-- <video source="http://stream.mhcc.edu/videos/greenja/captioned/m06-lec-stretch-factor-captioned_-_20150120_200703_26.html" /> -->
+              </li>
+              <li>
+                <title>Vertical Stretches</title>
+                <!-- <video source="http://stream.mhcc.edu/videos/greenja/captioned/m06-cyu-transformation-equations-captioned_-_20150120_183648_26.html" /> -->
               </li>
             </dl>
+          </list>
+        </introduction>
 
-            <p>In this section, we will continue to explore changes to the input and output of a function.</p>
-        -->
-
-      </introduction>
       <xi:include href="./activity-reflections.xml" />
       <xi:include href="./activity-vertical-stretches.xml" />
 
-    <conclusion>
-      <title>Summary of Reflections and Vertical Stretches</title>
+      <section xml:id="reflections-and-vertical-stretches-gist">
+      <title>Gist of Reflections and Vertical Stretches</title>
 
+      <subsection>
+        <title>Reflections</title>
 
-        <p>In this section we study transformations that stretch a function vertically, or reflect the function across one of the axes.</p>
-      <paragraphs><title>Reflections</title>
-        <p>Thinking again of function notation as language, we know that the notation <m>f(x)</m> indicates that there is an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are using the <term>opposite</term> of the <em>input</em>.</p>
+        <p>Thinking again of function notation as language, we know that the notation <m>f(x)</m> indicates that there is an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are using the <term>opposite</term><index><main>opposite</main></index> of the <em>input</em>.</p>
         <p>Likewise, if we replace <m>f(x)</m> with <m>-f(x)</m>, we are referring to the <term>opposite</term> of the <em>output</em>.</p>
         <p>From a graphical standpoint, both of the transformations <m>-f(x)</m> and <m>f(-x)</m> represent reflections of a graph:</p>
         <dl>
           <title></title>
           <li>
-            <title><m>-f(x)</m></title>
-            <p>reflects of <m>f(x)</m> over the horizontal-axis</p>
+            <title><m>y = -f(x)</m></title>
+            <p>reflects <m>y = f(x)</m> over the horizontal-axis</p>
           </li>
           <li>
-            <title><m>f(-x)</m></title>
-            <p>reflects <m>f(x)</m> over the vertical-axis</p>
+            <title><m>y = f(-x)</m></title>
+            <p>reflects <m>y = f(x)</m> over the vertical-axis</p>
           </li>
         </dl>
 
@@ -123,8 +85,6 @@
                   </latex-image-code>
               </image>
             </figure>
-
-
 
             <sidebyside widths="48% 48%">
               <paragraphs>
@@ -186,8 +146,10 @@
                   </figure>
             </sidebyside>
         </example>
-      </paragraphs>
 
+
+
+<!--
       <exercise>
         <statement>
           <p>Let <m>f(x) = 5^x + 3x^2</m>, and use it to answer the following questions.</p>
@@ -219,6 +181,8 @@
           and it is a reflection of <m>y = f(x)</m> over the <m>y</m>-axis.</p>
         </answer>
       </exercise>
+
+    -->
 
       <p>Now practice writing the formula for a function which has been transformed.</p>
 
@@ -262,67 +226,118 @@
               $a=random(2,9,1);
               do{$b=random(2,9,1)}until($a!=$b);
               do{$c=random(2,9,1)}until(($a!=$c)and($b!=$c));
-              Context()->variables->are(n=>'Real');
-              $f=Compute("(-n)^2-$a*(-n)+$b");
-              $g=Compute("-((n-$c)^2-$a*(n-$c)+$b)");
+              Context()->variables->are(x=>'Real');
+              $f=Compute("(-x)^2-$a*(-x)+$b");
+              $g=Compute("-((x-$c)^2-$a*(x-$c)+$b)");
 
-              $nMinusC=Compute("n-$c");
+              $nMinusC=Compute("x-$c");
             </pg-code>
 
           </setup>
           <statement>
-            <p>Let <m>m(n) = n^2 - <var name="$a" />n + <var name="$b" /></m>.</p>
-            <ol>
-              <li><p>Write a formula for the transformation <m>m(-n)</m> and geometrically describe the transformation.</p>
-              <p>To do this, use the <em>blank</em> method: write the output <m>n^2 - <var name="$a" />n + <var name="$b" /></m>, but replace all instances of the variable <m>n</m> with the new input, <m>-n</m>. Remember to use parentheses when substituting this in for <m>n</m>.</p>
-              <p>Formula: <m>m(-n) = </m><var name="$f" width="15" /></p>
+            <p>Let <m>m(x) = x^2 - <var name="$a" />x + <var name="$b" /></m>.</p>
+            <p><ol>
+              <li><p>Write a formula for the transformation <m>m(-x)</m> and geometrically describe the transformation.</p>
+              <p>To do this, use the <em>blank</em> method: write the output <m>x^2 - <var name="$a" />x + <var name="$b" /></m>, but replace all instances of the variable <m>x</m> with the new input, <m>-x</m>. Remember to use parentheses when substituting this in for <m>x</m>.</p>
+              <p>Formula: <m>m(-x) = </m><var name="$f" width="15" /></p>
               <p>For the geometric description, remember that we are taking the opposite of the input variable, so this will affect the graph's position in the horizontal direction.</p>
-              <p>Description: <m>m(-n)</m> will reflect the graph of <m>m(n)</m> over the <var name="$description1" form="popup" /></p></li>
+              <p>Description: <m>m(-x)</m> will reflect the graph of <m>m(x)</m> over the <var name="$description1" form="popup" /></p></li>
 
-              <li><p>Write a formula for the transformation <m>-m(n - </m><var name="$c" /><m>)</m>.</p>
+              <li><p>Write a formula for the transformation <m>-m(x - </m><var name="$c" /><m>)</m>.</p>
               <p>Notice that there are two changes here: Subtracting <var name="$c" /> from the input, and the opposite symbol outside.</p>
-              <p>First take care of the inside change by replacing all instances of the variable <m>n</m> with the new input, <m>n - <var name="$c" /></m>. Remember again to use parentheses when substituting this in for <m>n</m>.</p>
+              <p>First apply the inside change by replacing all instances of the variable <m>x</m> with the new input, <m>x - <var name="$c" /></m>. Remember again to use parentheses when substituting this expression for <m>x</m>.</p>
               <p>This would leave us with:</p>
               <p>(<var name="$nMinusC" width="6" /><m>)^2 - </m><var name="$a" />(<var name="$nMinusC" width="6" /><m>) + </m><var name="$b" /></p>
-              <p>Next, take care of the outside change by putting the opposite symbol outside of this whole expression, remembering to use parentheses.</p>
-              <p>Formula: <m>-m(n - </m><var name="$c" /><m>) = </m><var name="$g" width="15" /></p>
+              <p>Next, apply the outside change by putting the opposite symbol outside of this whole expression, again remembering to use parentheses.</p>
+              <p>Formula: <m>-m(x - </m><var name="$c" /><m>) = </m><var name="$g" width="15" /></p>
               <p>The inside change of subtracting <var name="$c" /> will move the graph in the horizontal direction. The outside change of taking the opposite will affect the output values by changing their sign.</p>
-              <p>Description: <m>-m(n - <var name="$c" />)</m> will shift the graph of <m>m(n)</m> by <var name="$c" /> units <var name="$description2" form="popup"/> and reflect over the <var name="$description3" form="popup" /></p></li>
-            </ol>
+              <p>Description: <m>-m(x - <var name="$c" />)</m> will shift the graph of <m>m(x)</m> by <var name="$c" /> units <var name="$description2" form="popup"/> and reflect it over the <var name="$description3" form="popup" /></p></li>
+            </ol></p>
           </statement>
           <solution>
-            <ol>
-              <li><p>The formula for <m>m(-n)</m> is found by substituting <m>-n</m> into the formula of <m>m(n)</m>. The original formula was <m>n^2 - </m><var name="$a" /><m>n + </m><var name="$b" />.</p>
-              <p>The result is:  <m><var name="$f" /></m></p></li>
+            <p><ol>
+              <li><p>The formula for <m>m(-x)</m> is found by substituting <m>-x</m> in the place of <m>x</m> in the function <m>m(x)</m>. The original formula was <m>x^2 - </m><var name="$a" /><m>x + </m><var name="$b" />, so the result is:  <me><var name="$f" /></me></p></li>
 
-              <li><p>The formula for <m>-m(n-</m><var name="$c" /><m>)</m> is found by substituting <m>n-</m><var name="$c" /><m>)</m> and then taking the opposite of that whole expression.</p>
+              <li><p>The formula for <m>-m(x-</m><var name="$c" /><m>)</m> is found by substituting <m>(x-<var name="$c" />)</m> in the place of <m>x</m>, and then taking the opposite of that whole expression.</p>
               <p>The result is:  <m><var name="$g" /></m></p></li>
-            </ol>
+            </ol></p>
           </solution>
         </webwork>
       </exercise>
+      <p>One use of the transformation <m>-f(x)</m> is in redefining a variable from positive-to-negative, or vice versa, as shown in the example below.</p>
+      <example>
+        <statement>
+          <p>When deep sea divers swim back to the surface of the water after a dive, they must do so slowly. If a diver ascends too quickly, she may experience <url href="https://en.wikipedia.org/wiki/Decompression_sickness">decompression sickness</url>. In order to prevent this, divers must ascend at a rate slower than <quantity><mag>33</mag><unit base="foot" /><per base="minute" /></quantity>.</p>
+          <p>Suppose a diver begins at a depth of <quantity><mag>100</mag><unit base="foot" /></quantity> and ascends at a rate of <quantity><mag>30</mag><unit base="foot" /><per base="minute" /></quantity>.</p>
+          <p>If we wanted to represent the diver's depth below the water as a function of time, we could write: <me>D = f(t) = 100 - 30t</me></p>
+          <p>Alternatively, we could have written a function for the diver's <em>altitude</em> as a function of time. In this case, the diver's altitude when below the water would be <em>negative</em>, so our function would be: <me>A = g(t) = -100 + 30t</me></p>
+          <p>Notice that the altitude is the opposite of the depth here, so our function <m>g(t)</m> is equal to <m>-f(t)</m>.</p>
+          <p>The graphs below show these functions as reflections of each other over the horizontal axis.</p>
+          <sidebyside widths="48% 48%">
+                <figure>
+                  <caption>The diver's depth: <m>D = f(t)</m></caption>
+                    <image>
+                        <latex-image-code>
+                          <![CDATA[
+                            \begin{tikzpicture}
+                              \begin{axis}[xmax=4, xmin=-1,
+                                          ymax=120, ymin=-120,
+                                          ytick={},
+                                          xlabel={t (min)},
+                                          ylabel={D (feet)},
+                                          minor ytick={}]
+                                \addplot+[domain=0:3.333] {100-30*x};
+                              \end{axis}
+                            \end{tikzpicture}
+                          ]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
 
-      <paragraphs>
-        <title>Vertical Stretch/Compress</title>
-        <p>In addition to reflecting a function, we can also <term>stretch</term> or <term>compress</term> a function vertically by multiplying the output by a constant number <m>a</m>.</p>
+                <figure>
+                  <caption>The diver's altitude: <m>A = g(t) = -f(t)</m></caption>
+                    <image>
+                        <latex-image-code>
+                          <![CDATA[
+                            \begin{tikzpicture}
+                              \begin{axis}[xmax=4, xmin=-1,
+                                          ymax=120, ymin=-120,
+                                          ytick={},
+                                          xlabel={t (min)},
+                                          ylabel={A (feet)},
+                                          minor ytick={}]
+                                \addplot+[domain=0:3.333] {-100+30*x};
+                              \end{axis}
+                            \end{tikzpicture}
+                          ]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+          </sidebyside>
+        </statement>
+      </example>
+    </subsection>
+    <subsection>
+        <title>Vertical Stretches and Compressions</title>
+        <p>In addition to reflecting a function, we can also <term>stretch</term><index><main>vertical stretch</main></index><index><main>function</main><sub>vertical stretch</sub></index> or <term>compress</term><index><main>vertical compression</main></index><index><main>function</main><sub>vertical compression</sub></index> a function vertically by multiplying the output by a constant number <m>a</m>.</p>
         <dl>
           <title></title>
           <li>
             <title>If <m>a &gt; 1</m></title>
-            <p><m>a\cdot f(x)</m> will vertically <term>stretch</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
+            <p>The transformation <m>y = a\cdot f(x)</m> will vertically <term>stretch</term> the graph of <m>y = f(x)</m> by a factor of <m>a</m>.</p>
           </li>
           <li>
             <title>If <m>0 &lt; a &lt; 1</m></title>
-            <p><m>a\cdot f(x)</m> will vertically <term>compress</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
+            <p>The transformation <m>y = a\cdot f(x)</m> will vertically <term>compress</term> the graph of <m>y = f(x)</m> by a factor of <m>a</m>.</p>
           </li>
         </dl>
-      </paragraphs>
 
       <example>
-        <p>If we began with the function <me>f(x) = x^2 - 1</me> then the transformation <md>
+        <p>For the function <me>f(x) = x^2 - 1</me>, describe the transformations <m>3f(x)</m> and <m>\frac{1}{2}f(x)</m>.</p>
+        <p>For the first transformation, we have: <md>
         <mrow>3f(x) \amp= 3(x^2 - 1)</mrow>
         <mrow>\amp= 3x^2 - 3</mrow></md>
-        would be just like <m>f(x) = x^2 - 1</m>, but all of its output values would be multiplied by <m>3</m>.</p>
+        This is just like <m>f(x) = x^2 - 1</m>, but all of the output values have been multiplied by <m>3</m>.</p>
             <table>
               <tabular top="major" halign="center">
                 <col halign="left" />
@@ -371,7 +386,35 @@
                 </row>
               </tabular>
             </table>
-        <p>Since the output values were all multiplied by <m>3</m>, this would make all of the <m>y</m> values of the points <m>3</m> times as far from zero (either positive or negative).</p>
+        <p>Since the output values were all multiplied by <m>3</m>, this would make all of the <m>y</m>-coordinates of the points <m>3</m> times as far from zero (either positive or negative).</p>
+        <sidebyside widths="40% 40%">
+          <figure>
+            <caption><m>f(x) = x^2 - 1</m></caption>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-3:3, samples=50]{x^2-1};
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+          <figure>
+            <caption><m>3f(x) = 3x^2 - 3</m></caption>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-2:2, samples=50]{3*x^2-3};
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+        </sidebyside>
         <p>Similarly, if we began with <m>f(x) = x^2 - 1</m>, then the transformation <md>
         <mrow>\frac{1}{2}f(x) \amp= \frac{1}{2}(x^2 - 1)</mrow>
         <mrow>\amp= \frac{1}{2}x^2 - \frac{1}{2}</mrow></md>
@@ -426,27 +469,14 @@
         </table>
         <p>Since the output values were all multiplied by <m>\frac{1}{2}</m>, this would make all of the <m>y</m> values of the points only half as far from zero (either positive or negative).</p>
 
-        <sidebyside widths="32% 32% 32%">
+        <sidebyside widths="40% 40%">
           <figure>
             <caption><m>f(x) = x^2 - 1</m></caption>
               <image>
                   <latex-image-code>
                   <![CDATA[\begin{tikzpicture}
                               \begin{axis}[]
-                                  \addplot+[domain=-5:5]{x^2-1};
-                               \end{axis}
-                          \end{tikzpicture}
-                  ]]>
-                  </latex-image-code>
-              </image>
-          </figure>
-          <figure>
-            <caption><m>3f(x) = 3x^2 - 3</m></caption>
-              <image>
-                  <latex-image-code>
-                  <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[]
-                                  \addplot+[domain=-5:5]{3*x^2-3};
+                                  \addplot+[domain=-3:3, samples=50]{x^2-1};
                                \end{axis}
                           \end{tikzpicture}
                   ]]>
@@ -459,7 +489,7 @@
                   <latex-image-code>
                   <![CDATA[\begin{tikzpicture}
                               \begin{axis}[]
-                                  \addplot+[domain=-5:5]{0.5*x^2-0.5};
+                                  \addplot+[domain=-4:4, samples=50]{0.5*x^2-0.5};
                                \end{axis}
                           \end{tikzpicture}
                   ]]>
@@ -467,11 +497,11 @@
               </image>
           </figure>
         </sidebyside>
-
       </example>
+<todo>Nick, write an exercise wherein the user writes the equation for a vertical stretch or compression of a given function, so its graph passes through a given point. If their graph passes through the point but is not a vertical stretch or compression, give appropriate feedback.</todo>
 
-      <note><p>In this section, we will not be exploring the transformation <m>f(a\cdot x)</m> which represents a horizontal stretch or compression.</p></note>
-    </conclusion>
+    </subsection>
+  </section>
 </chapter>
 
 <!-- Extra problem
