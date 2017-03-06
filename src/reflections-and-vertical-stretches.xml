@@ -56,12 +56,12 @@
         <dl>
           <title></title>
           <li>
-            <title><m>-f(x)</m></title>
-            <p>reflects of <m>f(x)</m> over the horizontal-axis</p>
+            <title><m>y = -f(x)</m></title>
+            <p>reflects of <m>y = f(x)</m> over the horizontal-axis</p>
           </li>
           <li>
-            <title><m>f(-x)</m></title>
-            <p>reflects <m>f(x)</m> over the vertical-axis</p>
+            <title><m>y = f(-x)</m></title>
+            <p>reflects <m>y = f(x)</m> over the vertical-axis</p>
           </li>
         </dl>
 
@@ -245,13 +245,13 @@
 
               <li><p>Write a formula for the transformation <m>-m(x - </m><var name="$c" /><m>)</m>.</p>
               <p>Notice that there are two changes here: Subtracting <var name="$c" /> from the input, and the opposite symbol outside.</p>
-              <p>First take care of the inside change by replacing all instances of the variable <m>x</m> with the new input, <m>x - <var name="$c" /></m>. Remember again to use parentheses when substituting this in for <m>x</m>.</p>
+              <p>First apply the inside change by replacing all instances of the variable <m>x</m> with the new input, <m>x - <var name="$c" /></m>. Remember again to use parentheses when substituting this expression for <m>x</m>.</p>
               <p>This would leave us with:</p>
               <p>(<var name="$nMinusC" width="6" /><m>)^2 - </m><var name="$a" />(<var name="$nMinusC" width="6" /><m>) + </m><var name="$b" /></p>
-              <p>Next, take care of the outside change by putting the opposite symbol outside of this whole expression, remembering to use parentheses.</p>
+              <p>Next, apply the outside change by putting the opposite symbol outside of this whole expression, again remembering to use parentheses.</p>
               <p>Formula: <m>-m(x - </m><var name="$c" /><m>) = </m><var name="$g" width="15" /></p>
               <p>The inside change of subtracting <var name="$c" /> will move the graph in the horizontal direction. The outside change of taking the opposite will affect the output values by changing their sign.</p>
-              <p>Description: <m>-m(x - <var name="$c" />)</m> will shift the graph of <m>m(x)</m> by <var name="$c" /> units <var name="$description2" form="popup"/> and reflect over the <var name="$description3" form="popup" /></p></li>
+              <p>Description: <m>-m(x - <var name="$c" />)</m> will shift the graph of <m>m(x)</m> by <var name="$c" /> units <var name="$description2" form="popup"/> and reflect it over the <var name="$description3" form="popup" /></p></li>
             </ol></p>
           </statement>
           <solution>
@@ -264,9 +264,10 @@
           </solution>
         </webwork>
       </exercise>
+      <p>One use of the transformation <m>-f(x)</m> is in redefining a variable from positive-to-negative, or vice versa, as shown in the example below.</p>
       <example>
         <statement>
-          <p>When deep sea divers swim back to the surface of the water after a dive, they must do so slowly. If a diver ascends too quickly, they may experience <url href="https://en.wikipedia.org/wiki/Decompression_sickness">decompression sickness</url>. In order to prevent this, divers must ascend at a rate slower than <quantity><mag>33</mag><unit base="foot" /><per base="minute" /></quantity>.</p>
+          <p>When deep sea divers swim back to the surface of the water after a dive, they must do so slowly. If a diver ascends too quickly, she may experience <url href="https://en.wikipedia.org/wiki/Decompression_sickness">decompression sickness</url>. In order to prevent this, divers must ascend at a rate slower than <quantity><mag>33</mag><unit base="foot" /><per base="minute" /></quantity>.</p>
           <p>Suppose a diver begins at a depth of <quantity><mag>100</mag><unit base="foot" /></quantity> and ascends at a rate of <quantity><mag>30</mag><unit base="foot" /><per base="minute" /></quantity>.</p>
           <p>If we wanted to represent the diver's depth below the water as a function of time, we could write: <me>D = f(t) = 100 - 30t</me></p>
           <p>Alternatively, we could have written a function for the diver's <em>altitude</em> as a function of time. In this case, the diver's altitude when below the water would be <em>negative</em>, so our function would be: <me>A = g(t) = -100 + 30t</me></p>
@@ -323,19 +324,20 @@
           <title></title>
           <li>
             <title>If <m>a &gt; 1</m></title>
-            <p><m>a\cdot f(x)</m> will vertically <term>stretch</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
+            <p>The transformation <m>y = a\cdot f(x)</m> will vertically <term>stretch</term> the graph of <m>y = f(x)</m> by a factor of <m>a</m>.</p>
           </li>
           <li>
             <title>If <m>0 &lt; a &lt; 1</m></title>
-            <p><m>a\cdot f(x)</m> will vertically <term>compress</term> the graph of <m>f(x)</m> by a factor of <m>a</m></p>
+            <p>The transformation <m>y = a\cdot f(x)</m> will vertically <term>compress</term> the graph of <m>y = f(x)</m> by a factor of <m>a</m>.</p>
           </li>
         </dl>
 
       <example>
-        <p>If we began with the function <me>f(x) = x^2 - 1</me> then the transformation <md>
+        <p>For the function <me>f(x) = x^2 - 1</me>, describe the transformations <m>3f(x)</m> and <m>\frac{1}{2}f(x)</m>.</p>
+        <p>For the first transformation, we have: <md>
         <mrow>3f(x) \amp= 3(x^2 - 1)</mrow>
         <mrow>\amp= 3x^2 - 3</mrow></md>
-        would be just like <m>f(x) = x^2 - 1</m>, but all of its output values would be multiplied by <m>3</m>.</p>
+        This is just like <m>f(x) = x^2 - 1</m>, but all of the output values have been multiplied by <m>3</m>.</p>
             <table>
               <tabular top="major" halign="center">
                 <col halign="left" />
@@ -384,7 +386,35 @@
                 </row>
               </tabular>
             </table>
-        <p>Since the output values were all multiplied by <m>3</m>, this would make all of the <m>y</m> values of the points <m>3</m> times as far from zero (either positive or negative).</p>
+        <p>Since the output values were all multiplied by <m>3</m>, this would make all of the <m>y</m>-coordinates of the points <m>3</m> times as far from zero (either positive or negative).</p>
+        <sidebyside widths="40% 40%">
+          <figure>
+            <caption><m>f(x) = x^2 - 1</m></caption>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-3:3, samples=50]{x^2-1};
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+          <figure>
+            <caption><m>3f(x) = 3x^2 - 3</m></caption>
+              <image>
+                  <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                              \begin{axis}[]
+                                  \addplot+[domain=-2:2, samples=50]{3*x^2-3};
+                               \end{axis}
+                          \end{tikzpicture}
+                  ]]>
+                  </latex-image-code>
+              </image>
+          </figure>
+        </sidebyside>
         <p>Similarly, if we began with <m>f(x) = x^2 - 1</m>, then the transformation <md>
         <mrow>\frac{1}{2}f(x) \amp= \frac{1}{2}(x^2 - 1)</mrow>
         <mrow>\amp= \frac{1}{2}x^2 - \frac{1}{2}</mrow></md>
@@ -439,7 +469,7 @@
         </table>
         <p>Since the output values were all multiplied by <m>\frac{1}{2}</m>, this would make all of the <m>y</m> values of the points only half as far from zero (either positive or negative).</p>
 
-        <sidebyside widths="32% 32% 32%">
+        <sidebyside widths="40% 40%">
           <figure>
             <caption><m>f(x) = x^2 - 1</m></caption>
               <image>
@@ -447,19 +477,6 @@
                   <![CDATA[\begin{tikzpicture}
                               \begin{axis}[]
                                   \addplot+[domain=-3:3, samples=50]{x^2-1};
-                               \end{axis}
-                          \end{tikzpicture}
-                  ]]>
-                  </latex-image-code>
-              </image>
-          </figure>
-          <figure>
-            <caption><m>3f(x) = 3x^2 - 3</m></caption>
-              <image>
-                  <latex-image-code>
-                  <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[]
-                                  \addplot+[domain=-2:2, samples=50]{3*x^2-3};
                                \end{axis}
                           \end{tikzpicture}
                   ]]>
@@ -480,10 +497,9 @@
               </image>
           </figure>
         </sidebyside>
-
       </example>
+<todo>Nick, write an exercise wherein the user writes the equation for a vertical stretch or compression of a given function, so its graph passes through a given point. If their graph passes through the point but is not a vertical stretch or compression, give appropriate feedback.</todo>
 
-      <note><p>In this section, we will not be exploring the transformation <m>f(a\cdot x)</m> which represents a horizontal stretch or compression.</p></note>
     </subsection>
   </section>
 </chapter>
