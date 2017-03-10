@@ -59,7 +59,7 @@
     </example>
 
     <p>A <term>root</term><index><main>polynomial</main><sub>root</sub></index> of a polynomial is a value of the input which gives an output of <em>zero</em>.</p>
-    <p>The next two exercises deal with these two definitions.</p>
+    <p>Test your understanding of these definitions in the next two exercises.</p>
     <exercise>
       <webwork>
         <setup>
@@ -102,7 +102,7 @@
           </ol></p>
         </statement>
         <hint>
-          <p>Use the definition: A number <m>x = a</m> is a root of a polynomial <m>f(x)</m> if <m>f(a) = 0</m>.</p>
+          <p>Use your calculator. Remember that a number <m>x = a</m> is a root of a polynomial <m>f(x)</m> if <m>f(a) = 0</m>.</p>
         </hint>
         <solution>
           <p>The roots of the polynomial are <m>x = 2.5</m> and <m>x = 1.2</m> because:<md>
@@ -278,7 +278,7 @@
       </webwork>
     </exercise>
 
-    <p>By now, you are already seeing the relationship between the <term>roots</term> of a polynomial, and the <term>roots</term> of its linear factors. Use this observation to make predictions about the graph of a polynomial in the next exercise.</p>
+    <p>By now, you are already seeing the relationship between the roots of a polynomial, and the roots of its linear factors. Use this observation to make predictions about the graph of a polynomial in the next exercise.</p>
 
     <exercise>
       <webwork xml:id="webwork-roots-graph-guess">
@@ -415,14 +415,14 @@
           </pg-code>
         </setup>
         <statement>
-          <p>Put the points on the <m>x</m>-intercepts of the graph: <m>f(x) = (x+3)(x+1)(x-2)(2x-8)</m></p>
+          <p>Move the points to the <m>x</m>-intercepts of the graph: <m>f(x) = (x+3)(x+1)(x-2)(2x-8)</m></p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VkKRBCpF/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>If you placed the points in the correct locations, the graph of <m>f(x)</m> would be shown.</p>
+          <p>If you place the points in the correct locations, the graph of <m>f(x)</m> will appear.</p>
           <p>Did you correctly place the points?</p>
           <p><var name="$didItGraph" form="popup" /></p>
         </statement>
         <hint>
-          <p>Did you set each of the linear factors, such as <m>(x+1)</m>, equal to zero and solve for <m>x</m>? Remember that the <term>roots</term> are the same as the <m>x</m>-intercepts.</p>
+          <p>Did you set each of the linear factors, such as <m>(x+1)</m>, equal to zero and solve for <m>x</m>? Remember that the roots are the <m>x</m>-coordinates of the <m>x</m>-intercepts.</p>
         </hint>
         <solution>
           <p>The <m>x</m>-intercepts are <m>(-3,0)</m>, <m>(-1,0)</m>, <m>(2,0)</m> and <m>(4,0)</m>.</p>
@@ -478,9 +478,8 @@
       </webwork>
     </exercise>
 
-    <p>One important note should be made here: Not every polynomial can be written as just a product of linear factors.<fn>The function <m>f(x) = x^2 + 1</m> is an easy example, as it has <em>no</em> <m>x</m>-intercepts.</fn></p>
-    <p>But in this section, we will focus primarily on polynomials which <em>can</em> be written as a product of linear factors.</p>
-    <p>One skill we will develop here is being able to determine a formula for a polynomial if we have its graph. However, before we can do that, we need to discuss the <term>end-behavior</term> of a polynomial <mdash /> that is, the function's behavior as <m>x</m> gets far from zero.</p>
+    <p>One important note should be made here: Not every polynomial can be written as just a product of linear factors.<fn>The function <m>f(x) = x^2 + 1</m> is an easy example, as it has <em>no</em> <m>x</m>-intercepts. Can you think of other examples?</fn> But in this section, we will focus primarily on polynomials which <em>can</em> be written as a product of linear factors.</p>
+    <p>One skill we will develop here is being able to determine a formula for a polynomial if we have its graph. However, before we can do that, we need to discuss the end-behavior of a polynomial. The <term>end-behavior</term><index><main>end-behavior</main></index><index><main>function</main><sub>end-behavior</sub></index> of a function is what its outputs tend to do as <m>x</m> gets (infinitely) far from zero.</p>
     <p>End-behavior is one thing we <em>can</em> tell about the graph of a polynomial, even if it is <em>not</em> written as a product of linear factors, such as: <md>
       <mrow>y = 3x - 5x^2 + 17</mrow>
       <mrow>\text{or}</mrow>
@@ -494,7 +493,7 @@
     <p>Put another way, if the function <m>f</m> has a horizontal asymptote <m>y = a</m>, then as we evaluate <m>f(x)</m> at <m>x</m> values which are farther and farther from zero, the ouputs will eventually get very close to the number <m>a</m>.</p>
     <p>In calculus language, we would write <me>\lim_{x\to\pm\infty}f(x)=a</me> and in words, we would say</p>
     <blockquote>
-      <p><em>The limit of <m>f(x)</m>, as <m>x</m> goes to positive or negative infinity, is equal to <m>a</m>.</em></p>
+      <p>The limit of <m>f(x)</m>, as <m>x</m> goes to positive or negative infinity, is equal to <m>a</m>.</p>
     </blockquote>
     <p>In the next exercise, you will see how a horizontal asymptote of a function can be seen by a table of values.</p>
     <exercise>
@@ -579,7 +578,7 @@
       </webwork>
     </exercise>
 
-    <p><index><main>end-behavior</main></index><index><main>long-run behavior</main></index>This behavior can be seen in the graph, as the function <m>f(x)</m> appears to <q>flatten out</q> to the left and the right. This is an example of what is called <term>end-behavior</term> (or <term>long-run behavior</term>). From a graphical perspective, <term>end-behavior</term> is about what the graph tends to do as the input <m>x</m> gets far from zero.</p>
+    <p><index><main>end-behavior</main></index><index><main>long-run behavior</main></index>This behavior can be seen in the graph, as the function <m>f(x)</m> appears to <q>flatten out</q> to the left and the right. This is an example of what is called <term>end-behavior</term> (or <term>long-run behavior</term>). From a graphical perspective, end-behavior is what the graph tends to do as the input <m>x</m> gets far from zero.</p>
 
     <sidebyside widths="48% 48%">
       <figure>
@@ -689,8 +688,8 @@
           <mrow>y \amp= x^4</mrow>
           <mrow>y \amp= x^5</mrow></md></p>
           <p>Before maniuplating the graph, make a guess:  Which of these power functions will the function <m>g(x)</m> resemble if we zoom out?</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Swe8tMPk/width/416/height/373/border/888888/sdz/false/" width="416px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>Make your choice from among the power functions by selecting its checkbox. Then, use the slider to zoom out.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Swe8tMPk/width/416/height/373/border/888888/sdz/false/" width="416px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
           <p>If you guessed correctly, the graph of <m>g(x)</m> will begin to look more and more like your power function.</p>
           <p>Which power function has the same end behavior as <m>g(x)</m>?</p>
           <p>Answer:  <var name="$function" form="popup" /></p>
@@ -835,12 +834,12 @@
 
   <subsection>
     <title>The Formula for a Polynomial</title>
-    <p>We have now learned the two most important things we need in order to write the formula for a polynomial:<ul>
+    <p>We have now learned two important things we need in order to write the formula for a polynomial:<ul>
       <li>
-        <p>the relationship between the <term>roots</term> of a polynomial and its linear factors</p>
+        <p>the relationship between the roots of a polynomial and its linear factors</p>
       </li>
       <li>
-        <p>the relationship between the <term>end-behavior</term> of a polynomial and its leading term</p>
+        <p>the relationship between the end-behavior of a polynomial and its leading term</p>
       </li>
     </ul></p>
     <p>Let's put these together in order to write the formula for a polynomial.</p>
@@ -867,7 +866,7 @@
           <figure><image pg-name="$gr" /></figure>
           <p>Complete the statement below with a number:</p>
           <p>The polynomial will have <var name="$num" width="10" /> different linear factors.</p>
-          <p>Now write the formula for the polynomial:</p>
+          <p>Now write the formula for the polynomial.</p>
           <p><m>f(x) = </m><var name="$formula" width="15" /></p>
         </statement>
         <hint>
@@ -970,7 +969,7 @@
     <title>Applying Vertical Stretches</title>
     <p>There are a few additional things we will encounter with the graph of a polynomial.</p>
     <p>The first issue concerns using vertical stretches to the graph of a polynomial (see <xref ref="chapter-reflections-and-vertical-stretches">Chapter</xref>).</p>
-      <p>Imagine trying to determine the formulas for the <m>3^{\rm{rd}}</m> degree polynomials graphed below.</p>
+    <p>Imagine trying to determine the formulas for the <m>3^{\rm{rd}}</m> degree polynomials graphed below.</p>
       <sidebyside widths="32% 32% 32%">
           <figure xml:id="figure-first-polynomial">
             <caption>First Graph</caption>
@@ -1029,7 +1028,6 @@
       <p>To begin, we will give the formula the necessary linear factors: <me>f(x) = (x-1)(x-3)(x-4)</me> because this gives us the correct roots and end-behavior. However, the graphs are not identical, so this formula cannot work for all of them.</p>
       <p>Since these graphs all have the same roots of <m>1</m>, <m>3</m> and <m>4</m>, we might consider examining a different input value.</p>
       <p>Fix your attention on the value <m>x = 2</m> for each graph.</p>
-
       <exercise>
         <webwork>
           <setup>

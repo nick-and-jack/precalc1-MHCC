@@ -12,11 +12,10 @@
 -->
 
 <section xml:id="activity-combination-of-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Combination of Functions Activity</title>
-  <introduction>
+  <title>Combinations of Functions Activity</title>
+
     <p>These first three exercises introduce <term>combinations of functions</term> in the context of a table of values, a graph, and a formula.</p>
     <p>In the problems that follow, remember that <m>f(x)</m> refers to the ouput of the function <m>f</m>.</p>
-  </introduction>
 
   <exercise>
     <webwork xml:id="combinations-first-example">
@@ -42,9 +41,6 @@
 
       </setup>
       <statement>
-        <p>Combining functions is just like performing regular operations with real numbers, except now we do so with function outputs.</p>
-        <p>Remember that if <m>w(4) = 9</m>, then any time you see the expression <m>w(4)</m>, you can just rewrite it as the number <m>9</m>.</p>
-        <p>Then, an expression such as <m>7 + w(4)</m> would just mean <m>7 + 9</m>, and the result would be <m>16</m>.</p>
         <p>Now suppose we have the following facts about functions <m>M</m> and <m>N</m>:</p>
         <p><md><mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow><mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow></md></p>
         <p>If we define a new function <m>s(x) = M(x) + N(x)</m>, then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.</p>
@@ -52,19 +48,19 @@
         <p>Now, we could define many other functions which are combinations of <m>M</m> and <m>N</m>, such as:</p>
         <p><md><mrow>d(x) \amp= M(x) - N(x)</mrow><mrow>p(x) \amp= M(x)*N(x)</mrow><mrow>q(x) \amp= \frac{\displaystyle{M(x)}}{\displaystyle{N(x)}}</mrow></md></p>
         <p>Using these definitions, evaluate each of the following:</p>
-        <ul>
+        <p><ul>
           <li><p><m>d(</m><var name="$x" /><m>) = </m><var name="$d" width="10" /></p></li>
           <li><p><m>p(</m><var name="$x" /><m>) = </m><var name="$p" width="10" /></p></li>
           <li><p><m>q(</m><var name="$x" /><m>) = </m><var name="$q" width="10" /></p></li>
-        </ul>
+        </ul></p>
       </statement>
       <solution>
-        <ol>
+        <p><ul>
           <li><p><m>s(<var name="$x" />) = </m><var name="$s" /></p></li>
           <li><p><m>d(</m><var name="$x" /><m>) = </m><var name="$d" /></p></li>
           <li><p><m>p(</m><var name="$x" /><m>) = </m><var name="$p" /></p></li>
           <li><p><m>q(</m><var name="$x" /><m>) = </m><var name="$q" /></p></li>
-        </ol>
+        </ul></p>
       </solution>
     </webwork>
   </exercise>
@@ -188,11 +184,11 @@
           </tabular>
         </table>
         <p>The three other functions are defined as follows:</p>
-        <ul>
+        <p><ul>
           <li><p><m>M(x) = f(x) + g(x)</m></p></li>
           <li><p><m>N(x) = f(x) - g(x)</m></p></li>
           <li><p><m>P(x) = f(x)\cdot g(x)</m></p></li>
-        </ul>
+        </ul></p>
         <p>Complete the table of values for <m>M(x)</m>, <m>N(x)</m> and <m>P(x)</m>.</p>
 
       </statement>
@@ -298,14 +294,22 @@
         <var name="$P[4]"><static>1</static></var>
         <var name="$P[5]"><static>0</static></var>
 
-        <var name="didItGraph"><static>1</static></var>
+        <var name="$didItGraph">
+          <set>
+            <member>\text{?}</member>
+            <member correct="yes">\text{yes}</member>
+            <member>\text{no}</member>
+          </set>
+        </var>
 
         <pg-code>
           @x=(-4,0,2,4,6,8);
           @f=map{-1+0.5*$_}@x;
           @g=map{2-0.25*$_}@x;
           @P=map{$f[$_]*$g[$_]}0..$#f;
-          $didItGraph=Real(1);
+          $didItGraph=PopUp(
+          ["?","yes","no"],"yes"
+          );
         </pg-code>
       </setup>
 
@@ -330,51 +334,51 @@
 
                 <row>
                   <cell><var name="$x[0]" /></cell>
-                  <cell><var name="$f[0]" width="10" /></cell>
-                  <cell><var name="$g[0]" width="10" /></cell>
+                  <cell><var name="$f[0]" /></cell>
+                  <cell><var name="$g[0]" /></cell>
                   <cell><var name="$P[0]" width="10" /></cell>
                 </row>
 
                 <row>
                   <cell><var name="$x[1]" /></cell>
-                  <cell><var name="$f[1]" width="10" /></cell>
-                  <cell><var name="$g[1]" width="10" /></cell>
+                  <cell><var name="$f[1]" /></cell>
+                  <cell><var name="$g[1]" /></cell>
                   <cell><var name="$P[1]" width="10" /></cell>
                 </row>
 
                 <row>
                   <cell><var name="$x[2]" /></cell>
-                  <cell><var name="$f[2]" width="10" /></cell>
-                  <cell><var name="$g[2]" width="10" /></cell>
+                  <cell><var name="$f[2]" /></cell>
+                  <cell><var name="$g[2]" /></cell>
                   <cell><var name="$P[2]" width="10" /></cell>
                 </row>
 
                 <row>
                   <cell><var name="$x[3]" /></cell>
-                  <cell><var name="$f[3]" width="10" /></cell>
-                  <cell><var name="$g[3]" width="10" /></cell>
+                  <cell><var name="$f[3]" /></cell>
+                  <cell><var name="$g[3]" /></cell>
                   <cell><var name="$P[3]" width="10" /></cell>
                 </row>
 
                 <row>
                   <cell><var name="$x[4]" /></cell>
-                  <cell><var name="$f[4]" width="10" /></cell>
-                  <cell><var name="$g[4]" width="10" /></cell>
+                  <cell><var name="$f[4]" /></cell>
+                  <cell><var name="$g[4]" /></cell>
                   <cell><var name="$P[4]" width="10" /></cell>
                 </row>
 
                 <row>
                   <cell><var name="$x[5]" /></cell>
-                  <cell><var name="$f[5]" width="10" /></cell>
-                  <cell><var name="$g[5]" width="10" /></cell>
+                  <cell><var name="$f[5]" /></cell>
+                  <cell><var name="$g[5]" /></cell>
                   <cell><var name="$P[5]" width="10" /></cell>
                 </row>
             </tabular>
         </table>
         <p>Use the values from your table above to plot six points on the graph of <m>y= P(x)</m>. Move the six blue points to those locations and the graph of <m>P(x)</m> will appear.</p>
         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xE8wUtMM/width/433/height/493/border/888888/sri/true/sdz/false/" width="433px" height="493px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-        <p>Enter the number <m>1</m> if you successfully made the graph of <m>P(x)</m></p>
-        <p><var name="$didItGraph" width="5" /></p>
+        <p>Did you successfully create the graph of <m>P(x)</m>?</p>
+        <p>Answer:  <var name="$didItGraph" form="popup" /></p>
 
       </statement>
       <solution>
@@ -459,22 +463,22 @@
         <p>The graph below shows the same functions <m>f</m> and <m>g</m> from the last problem.</p>
         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888/sri/true/sdz/false/" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
         <p>This time, find the formulas for each function <m>f(x)</m> and <m>g(x)</m>, and use those formulas to write a formula for the function <m>P(x)</m>.</p>
-        <ul>
+        <p><ol label="a">
           <li><p><m>f(x) = </m><var name="$f" width="15" /></p></li>
           <li><p><m>g(x) = </m><var name="$g" width="15" /></p></li>
           <li><p><m>P(x) = </m><var name="$P" width="15" /></p></li>
-        </ul>
+        </ol></p>
 
       </statement>
       <hint>
         <p>Remember that the functions <m>f(x)</m> and <m>g(x)</m> are linear, so begin by finding the slope and vertical intercept for each graph.</p>
       </hint>
       <solution>
-        <ul>
+        <p><ol label="a">
           <li><p><m>f(x) = </m><var name="$f" /></p></li>
           <li><p><m>g(x) = </m><var name="$g" /></p></li>
           <li><p><m>P(x) = </m><var name="$P" /></p></li>
-        </ul>
+        </ol></p>
       </solution>
     </webwork>
   </exercise>
@@ -502,7 +506,7 @@
         <p>In this problem, we are considering the function <m>h</m> defined by <md><mrow>h(x) = f(x) - g(x)</mrow></md></p>
         <p>The graphs of functions <m>f(x)</m> and <m>g(x)</m> are shown below.</p>
         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/uSYHMfWJ/width/422/height/427/border/888888/sri/true/sdz/false/" width="422px" height="427px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-        <ul>
+        <p><ol label="a">
           <li><p>The function <m>h(x)</m> is called the <em>difference</em> of <m>f</m> and <m>g</m>.</p></li>
           <li><p>Consider the <m>x</m> values:</p>
             <table>
@@ -531,15 +535,15 @@
 
           <li><p>Choose an <m>x</m> value from the list so that <m>h(x)</m> has a negative output. Type your answer below.</p>
           <p><var name="$hNegative" width="10" /></p></li>
-        </ul>
+        </ol></p>
 
       </statement>
       <solution>
-        <ol>
+        <p><ol label="a">
           <li><p><m>h(x) = 0</m> when <m>x = 4.4</m>, because that is where <m>f(x) = g(x)</m>.</p></li>
           <li><p>For <m>h(x)</m> to have a positive output, it must be true that <m>f(x) &gt; g(x)</m>. Among the options given, this is only true for <m>x = 0</m> and <m>x = 2.1</m>.</p></li>
           <li><p><m>h(x)</m> will have negative outputs when <m>f(x) &lt; g(x)</m>. Among the options given, this happens when <m>x = -2</m> or <m>x = 7</m>.</p></li>
-        </ol>
+        </ol></p>
       </solution>
     </webwork>
   </exercise>
