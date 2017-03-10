@@ -317,9 +317,11 @@
         </statement>
       </webwork>
     </exercise> -->
-    <p>We now turn our attention towards finance where there are some variations in how exponential growth is calculated. Why is finance different? Short answer: money.</p>
-    <p>When it comes to money, everybody seems to want more and some people have figured out ways to make more money depending on how they word things or how they make their calcualtions.</p>
-    <p>Keep in mind that financial formulas quickly get extremely complicated, so our examples are overly simple in order to make our point.</p>
+  </subsection>
+  <subsection>
+    <title>Finance <mdash/> Compounded Interest</title>
+    <p>We now turn our attention towards finance where there are some variations in how exponential growth is calculated.</p>
+    <p>Keep in mind that financial formulas quickly get extremely complicated, so our examples are simple in order to make our point.</p>
     <exercise>
       <introduction>
         <p>An bank loan of <m>\$ 2700</m> is charged an annual interest of <m>12 \%</m></p>
@@ -422,13 +424,21 @@
     <p>We can extend what we concluded in the last exercise with a general form of an expression for compounded interest.<me>A_{0}(1+\frac{r}{n})^{nt}</me></p>
     <p>Here <m>A_{0}</m> is the initial amount or value, <m>r</m> is the decimal equivalent of the interest rate, <m>n</m> is the number of times the interest is compounded and <m>t</m> is the amount of time the initial amount is left to grow or decay (think stock values over time). </p>
     <p>You may already know where this is going. We have to ask, "What is the most amount of money that can be made?" The answer depends on how often the interest is compounded. So, the real question is, "What is the most compounding possible?"</p>
-    <p>Let's think about that. Compounding the interest is the process of <q>chopping</q> up the interest percentage into pieces and calculating the increase or decrease for each piece until all the pieces are counted.</p>
-    <p><term>Annual interest compounded <em>yearly</em></term><index><main>Annual interest compounded</main><sub>yearly</sub></index>: the interest is divided into <m>1</m> piece and <m>1</m> increase is counted</p>
-    <p><term>Annual interest compounded <em>monthly</em></term><index><main>Annual interest compounded</main><sub>monthly</sub></index>: the interest is divided into <m>12</m> pieces and <m>12</m> increases are counted</p>
-    <p><term>Annual interest compounded <m>daily</m></term><index><main>Annual interest compounded</main><sub>daily</sub></index>: the interest is divided into <m>365</m> pieces and <m>365</m> increases are counted</p>
-    <p>What is the maximum number of times any number can be divide? Infinity!</p>
-    <p>Infinite compounding is called <term>continuous compounding</term><index><main>conituous compounding</main></index>. It means the interest is being calculated at every moment in time. In fact, there is no time at which the interest is not being calculated.</p>
-    <p>When contiuous compounding occurs, the formula general formula we came up with earlier <me>A_{0}(1+\frac{r}{n})^{nt}</me> changes form. It becomes <me>A_{0}e^{0.12t}</me></p>
+    <p>Let's think about that. Compounding the interest is the process of <q>chopping</q> up the interest percentage into pieces and calculating the increase or decrease for each piece until all the pieces are counted. Focus on the growth factor for <m>t=1</m> (notice the exponents in each example below have a multiple of <em>something</em><m> \cdot 1</m>) year assuming some intitial value <m>A_{0}</m>.</p>
+    <p><term>Annual interest compounded <em>yearly</em></term><index><main>Annual interest compounded</main><sub>yearly</sub></index>: the interest is divided into <m>1</m> piece and <m>1</m> increase is counted each year.</p>
+    <aside><p><me>A_{0}(1+\frac{r}{1})^{1 \cdot 1}</me></p></aside>
+    <p><term>Annual interest compounded <em>monthly</em></term><index><main>Annual interest compounded</main><sub>monthly</sub></index>: the interest is divided into <m>12</m> pieces and <m>12</m> increases are counted each year.</p>
+    <aside><p><me>A_{0}(1+\frac{r}{12})^{12 \cdot 1}</me></p></aside>
+    <p><term>Annual interest compounded <m>daily</m></term><index><main>Annual interest compounded</main><sub>daily</sub></index>: the interest is divided into <m>365</m> pieces and <m>365</m> increases are counted each year.</p>
+    <aside><p><me>A_{0}(1+\frac{r}{365})^{365 \cdot 1}</me></p></aside>
+    <p>What is the maximum number of times any number can be divide? Infinity (and beyond)!</p>
+    <p>In math, infinite compounding is called <term>continuous compounding</term><index><main>conituous compounding</main></index>. It means the interest is being calculated at every moment in time. In fact, there is no time at which the interest is not being calculated.</p>
+    <p>When contiuous compounding occurs, the formula general formula we came up with earlier <me>A_{0}(1+\frac{r}{n})^{nt}</me> changes form. It becomes <me>A_{0}e^{rt}</me></p>
+    <p>Talk about the language of discrete and continuous models.  Make student write equations for different scenarios.</p>
+  </subsection>
+  <subsection>
+    <title>From English to Math (and back again)</title>
+    <p>Something about language.</p>
     <p>Compounding interest <m>12</m> times each year is the same as compounding the interest every <m>\frac{1}{12}</m> of a year. It is referred to as <q>compounded monthly</q> because <m>\frac{1}{12}</m> of a year is <m>1</m> month.</p>
     <p>Therefore another way to write the same equation would be</p>
     <p><m>V(t) = 4280(1.0401)^{\frac{t}{1/12}}</m></p>

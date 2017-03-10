@@ -27,24 +27,24 @@
             </ul>
         </list>
 
-        <list>
+<!--         <list>
             <title>Video Lectures</title>
-            <!-- If we can get these videos up onto YouTube, much easier to embed -->
+             If we can get these videos up onto YouTube, much easier to embed
             <dl>
                 <li>
                     <title>Solving Equations with Logarithms</title>
-                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/l04-how-to-use-logarithms-to-solve-equations-capti_-_20141122_220459_26.html" />-->
+                    <video source="http://stream.mhcc.edu/videos/greenja/captioned/l04-how-to-use-logarithms-to-solve-equations-capti_-_20141122_220459_26.html" />
                 </li>
                 <li>
                     <title>Properties of Logarithms</title>
-                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-inverse-functions-captioned_-_20150124_202541_26.html" />-->
+                    <video source="http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-inverse-functions-captioned_-_20150124_202541_26.html" />
                 </li>
                 <li>
                     <title>Half-life and Doubling Time</title>
-                    <!--<video source="http://stream.mhcc.edu/videos/greenja/captioned/lec-half-life-doubling-time-captioned_-_20141122_220814_26.html" />-->
+                    <video source="http://stream.mhcc.edu/videos/greenja/captioned/lec-half-life-doubling-time-captioned_-_20141122_220814_26.html" />
                 </li>
             </dl>
-        </list>
+        </list>  -->
 
     </introduction>
 
@@ -53,12 +53,113 @@
     <conclusion>
 
         <title>Gist of Composition and Inverses</title>
-
-        <p>Most every function or operation in math has a <q>reverse</q> function that <q>undoes</q> the original. For instance the square root function <m>f(x)=\sqrt{x}</m> has the square function <m>f(x)=x^2</m> that undoes it.</p>
-
-        <p>The exponential function has its own <q>reverse</q> function called the <term>logarithm</term>. (Actually, these <q>reverse</q> functions are called <term>inverses</term> of each other and we will study more about that in a later lesson.) For now just know that an exponential function takes an input value as an exponent and gives a number as a result.<me>b^{\text{exponent}}=\text{result}\text{.}</me>The logarithm function takes the result and tells you what exponent you need to get it.<me>\log_b{\text{result}}=\text{exponent}\text{.}</me></p>
-
-        <p>And just like exponential functions have horizontal asymptotes as in <xref ref="figure-exponential-asymptote" />, logarithm functions have <em>vertical</em> asymptotes as in <xref ref="figure-logarithm-asymptote" />.</p>
+        <p>Logarithms are functions that, among other things, are used to solve exponential equations. If we have an exponential equation in which the variable is in the exponent, we use logarithms to isolate the variable.</p>
+        <p>There are at least three usefull rules about logarithms:</p>
+        <aside>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  <m>\log_{b}(x^{N})=N \log_{b}(x)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\log_{b}(AB)=\log_{b}(A)+\log_{b}(B)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\log_{b}(\frac{A}{B})=\frac{ \log_{b}(A)}{ \log_{b}(B)}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </aside>
+        <p>The first rule is the big bread winner. I used to have a pocket knife with <m>10</m> different tools, but I only used one. Rule <m>1</m> is that tool. It allows us to take an exponential expression and <q>bring down the exponent</q> so we can isolate it.</p>
+        <p>If we end up with an equation that looks like <me>(0.337)^{\text{?}}=1.272</me> as in, <q>I wonder what power makes the left side equal to the right side?</q> we can use a logarithmic function to find the value of the exponent <q>?</q>.</p>
+        <p>Although most likely a variable is used instead of a question mark as in <me>(0.337)^{x}=1.272</me> where <m>x</m> is the unknown value we are trying to find.</p>
+        <p>Using rule <m>\# 1</m> and applying any logarithm to both sides of the equation we can work our way towards isolating the unknown variable <m>x</m>.</p>
+        <example>
+          <statement>
+          <p>
+            <md>
+              <mrow>(0.337)^{x}=1.272</mrow>
+              <mrow>\log(0.337)^{x}= \log(1.272)</mrow>
+              <mrow>x \log(0.337)= \log(1.272)</mrow>
+              <mrow>x=\frac{\log(1.272)}{\log(0.337)}</mrow>
+              <mrow>x \approx -0.2212</mrow>
+            </md>
+          </p>
+          <p>We get the same answer using the natural log, <m>\ln</m>, instead. Try it!</p>
+         </statement> 
+        </example>
+        <exercise>
+          <introduction>
+            <p>How many <m>7 \%</m> increases is the same as one <m>49 \%</m> increase?</p>
+          </introduction>
+            <webwork>
+            <stage>
+              <statement>
+                <p>The growth factor associated with a <m>7 \%</m> increase is <m>b=</m><var name="1.07" width="5" /></p>
+              </statement>
+            </stage>
+            <stage>
+              <statement>
+                <p>The equation below literally states, <q>An unknown number of growth factors <m>b=1.07</m> is the same as <m>1.49</m></q></p>
+                <p><m>(1.07)^{x}=1.49</m></p>
+                <p>Apply your favorite logarithm to each side of the equation. My favorite is <m>\ln</m>, so the equation is now <me>\ln(1.07)^{x}= \ln(1.49)</me></p>
+                <p>Invoke rule <m>\# 1</m> so that the exponent can come down in front of the expression on the left <me>x \ln(1.07)= \ln(1.49)</me></p>
+                <p>Last step, isolate the variable by dividing both sides by <m>\ln(1.07)</m> what to you get?</p>
+                <p><m>x=</m><var name="5.894" width="5" /> <em>(round to <m>3</m> decimal places)</em></p>
+              </statement>
+            </stage>
+          </webwork>
+        </exercise>
+        <p>Rule <m>\# 1</m> is great, but if we want to use it as the main tool we have to know when it applies and how to deal with the situation if the rule does not apply.</p>
+        <example>
+          <introduction>
+            <blockquote>
+            <p>
+              Solve <m>3(2.83)^{x}=15</m>
+            </p>
+            </blockquote>
+            <p>At first glance it seems you can apply rule <m>\# 1</m>, but is that right?  Rule <m>\# 1</m> states <me>\log_{b}(x^{N})=N \log_{b}(x)</me></p>
+            <p>Notice how the exponential term on the left of the equation has no number in front (called a coefficient)? You can only apply the rule if the equation has precisely the correct form.</p>
+            <p>Our equation has the constant <m>3</m> sitting directly in front of the growth factor in the exponential. That constant either has to be moved or we have to use another rule (if there is one that applies).</p>
+            <p>We can solve this equation by rearranging the equation so that it matches rule <m>\# 1</m> or we could break out rule <m>\# 2</m> because at least it matches our equation.</p>
+          </introduction>
+          <statement>
+            <p><term><em>Rule <m>\# 1</m>:</em></term> <m>\log_{b}(x^{N})=N \log_{b}(x)</m></p>
+            <p>The constant <m>3</m> needs to be moved so only the exponential remains on the left side of the equation. <me>(2.83)^{x}=\frac{15}{3}</me>
+            Voila, now we have the correct form to use rule <m>\#  1</m>. Apply your favorite log to both sides. I'll use <m>\ln</m> this time because I used <m>\log</m> in the last example <me>\ln (2.83)^{x}= \ln \big( \frac{15}{3} \big)</me> The exponent gets to come down and we have <me>x \ln(2.83)= \ln \big( \frac{15}{3} \big)</me> the last step is to isolate the variable <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> so that <me>x \approx 1.547</me></p>
+            <p><term><em>Rule <m>\# 2</m>:</em></term> <m>\log_{b}(AB)=\log_{b}(A)+\log_{b}(B)</m></p>
+            <p>In English the second rule says, <q>The log of a product is equal to the sum of the logs.</q></p>
+            <p>Applying <m>\ln</m> to both sides of our equation, in fact we have the log of the product <m>3</m> times <m>(2.83)^{x}</m> on the left side <me>\ln 3(2.83)^{x}=\ln(15)</me> use rule <m>\# 2</m> and to write the left side of the equation as the sum of the logs <me>\ln(3)+\ln(2.83)^{x}=\ln(15)</me> Remember the whole point of this is to isolate the variable <m>x</m> which we can now do since on the left side one term has <m>x</m> and the other does not <me>\ln (2.83)^{x}=\ln(15)-\ln(3)</me> Look, we get to use rule <m>\# 1</m> anyway! On the left to bring down the <m>x</m> <me>x \ln(2.83)=\ln(15)-\ln(3)</me> now isolate <m>x</m> <me>x=\frac{\ln(15)-\ln(3)}{\ln(2.83)}</me> and we get the same answer <me>x \approx 1.547</me></p>
+            <p>Which method did you like better?</p>
+            <p>Of course we could have just solve the whole problem graphically and avoided the algebra all together.</p>
+            <p>Insert graph here</p>
+            <todo>Insert graph of solving graphically</todo>
+            <p>A note about solving. In the two algebra examples we were able to find exact solutions <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> is exact.</p>
+            <p>We then entered the exact expressions into a calculator and found approximations rounded to three decimal places. Though graphically may seem quick and easy, most often we can only get an approximation to the answer.</p>
+          </statement>
+        </example>
+        <p>Most every function or operation in math has a <q>reverse</q> function that undoes the original. For instance the square root function <m>f(x)=\sqrt{x}</m> has the square function <m>g(x)=x^2</m> that undoes it.</p>
+        <aside>
+          <p>
+            <me>\sqrt{16}=4</me>
+            <me>\text{and}</me>
+            <me>4^{2}=16</me>
+          </p>
+        </aside>
+        <p>These functions relate to each other in a way that is part of a bigger subject called the <term>inverse</term>. We will study more about that in a later lesson.</p>
+        <p>An exponential function takes an input value as an exponent and yields a result.</p>
+        <aside><p><me>b^{\text{exponent}}=\text{result}\text{.}</me></p></aside>
+        <p>The exponential function has its own <q>reverse</q> function called the <term>logarithm</term>. The logarithm function takes the result as the input and tells you what exponent you need to get it.</p>
+        <p>Logarithms are useful in solving equations in which the exponent is unknown.</p>
+        
+        <aside><p><me>\log_b{\text{result}}=\text{exponent}\text{.}</me></p></aside>
+        <p>Just like exponential functions have horizontal asymptotes as in <xref ref="figure-exponential-asymptote" />, logarithm functions have <em>vertical</em> asymptotes as in <xref ref="figure-logarithm-asymptote" />.</p>
 
         <sidebyside widths="48% 48%">
             <figure xml:id="figure-exponential-asymptote">
@@ -91,9 +192,27 @@
             </figure>
         </sidebyside>
 
-        <p>The vertical asymptote is like a vertical boundary that the function can't cross. In the case of the logarithm the <m>y</m>-axis is the asymptote and the funciton only exists to the right of it. Therefore the domain of the log function is, in general, all inputs greater than zero (unless you shift the function around like we will do in another lesson).</p>
+        <p>The vertical asymptote is like a vertical boundary that the function cannot cross. In the case of the logarithm the asymptote is the <m>y</m>-axis and the funciton only exists to the right of this boundary. Therefore the domain of the log function is, in general, all inputs greater than zero (unless you shift the function around as we will do in another lesson).</p>
+        <aside>
+          <p>
+            <md>
+              <mrow>\text{Domain:} \log_{b}(x) , x \geq 0</mrow>
+              <mrow>\text{Range:} \log_{b}(x) , \text{All real numbers.}</mrow>
+            </md>
+          </p>
+        </aside>
 
-        <p>For every base of an exponential function there is a corresponding logarithm function. For instance <m>2^x</m> has <m>\log_2(x)</m> and <m>3^x</m> has <m>\log_3(x)</m> and <m>e^x</m> has <m>\ln(x)</m> which means <q>natural logarithm</q> and technically should be written as <m>\log_e(x)</m> <ellipsis />oh well.</p>
+        <p>For every base of an exponential function there is a corresponding logarithm function. Each function within the pair is the <q>reverse</q> function of the other.</p>
+        <p>For instance each pair of functions listed below undo each other.</p>
+        <aside>
+          <p>
+            <md>
+              <mrow>2^x \text{and} \log_2(x)</mrow>
+              <mrow>3^x \text{and} \log_3(x)</mrow>
+              <mrow>e^x \text{and} \ln(x)</mrow>
+            </md>The last line shows the funciton <m>\ln(x)</m> which means <q>natural logarithm</q> and technically should be written as <m>\log_e(x)</m>. But for historical reasons, the number <m>e</m> is sometimes referred to as the <q>natural number</q> and <m>\ln</m> as the <q>natural log</q>.
+          </p>
+        </aside>
 
         <exercise>
             <webwork seed="1">

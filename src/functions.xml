@@ -241,7 +241,7 @@
                 <p>The input is the speed, <m>s</m>, and the output is the efficiency, <m>E</m> so we can write an ordered pair <m>(s, E)</m> or <m>(s, f(s))</m>.</p>
                 <p>It should make sense that a car can only have one efficiency at any given speed (one input, one output) since it cannot get <quantity><mag>10</mag><unit base="milepergallon" /></quantity> and <quantity><mag>20</mag><unit base="milepergallon" /></quantity> at the same time.</p>
                 <p>Also, during the controlled test, if the car travelling at a speed of <quantity><mag>5</mag><unit base="mileperhour" /></quantity> has an efficiency of <quantity><mag>12</mag><unit base="milepergallon" /></quantity> then  <quantity><mag>5</mag><unit base="mileperhour" /></quantity> always gets us <quantity><mag>12</mag><unit base="milepergallon" /></quantity>. The value <m>12</m> is the unique output associated with the input of <m>5</m>.</p>
-                <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of <quantity><mag>25</mag><unit base="milepergallon" /></quantity> can be attained by traveling at a speed of about <quantity><mag>20</mag><unit base="mileperhour"/></quantity> and also at about <quantity><mag>70</mag><unit base="mileperhour"/></quantity>.</p>
+                <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of <quantity><mag>25</mag><unit base="milepergallon" /></quantity> can be attained by traveling at a speed of about <quantity><mag>16</mag><unit base="mileperhour"/></quantity> and also at about <quantity><mag>70</mag><unit base="mileperhour"/></quantity>.</p>
             </example>
           
             <p>Graphically, a relation must pass the <xref ref="exercise-vertical-line-test">vertical line test</xref> to be a function. When the test is <q>passed</q>, we say the function is <term>well defined</term>.</p>
@@ -317,14 +317,14 @@
                         </var>
 
                         <pg-code>
-                            $f35 = Real(37);
+                            $f35 = Real(36.5);
                         </pg-code>
                     </setup>
 
                     <statement>
                         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KuW5Vbqz/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                         <p>Drag the point on the <q>speed</q> axis to the desired input. Read the output values on the vertical axis to help you evaluate the function.</p>
-                        <p>Evaluate <m>f(35)</m>. Round your answer up to the nearest integer.</p>
+                        <p>Evaluate <m>f(35)</m>.</p>
                         <p><m>f(35) = </m> <var name="$f35" width="5" /></p>
                     </statement>
                 </webwork>
@@ -426,6 +426,9 @@
                 <p>In car efficiency example the units of efficiency are <q><quantity><unit base="milepergallon" /></quantity></q> (miles per gallon) and the units of speed are <q><quantity><unit base="mileperhour" /></quantity></q> (miles per hour).  Therefore the average rate of change for this example will have units of <quantity><unit base="milepergallon" /><per base="mileperhour" /></quantity>.</p>
 
                 <p>Because slope is just <q>rise over run</q>, a fraction, the units of the average rate of change are also a fraction.</p>
+
+                <todo>The exercise below has a strange error message in html. Please fix.</todo>
+                
                 <exercise>
                   <title>Name the Units of Average Rate of Change</title>
                   <webwork>
