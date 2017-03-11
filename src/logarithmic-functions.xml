@@ -54,7 +54,7 @@
 
         <title>Gist of Composition and Inverses</title>
         <p>Logarithms are functions that, among other things, are used to solve exponential equations. If we have an exponential equation in which the variable is in the exponent, we use logarithms to isolate the variable.</p>
-        <p>There are at least three usefull rules about logarithms:</p>
+        <p>There are at least three useful rules about logarithms:</p>
         <aside>
           <p>
             <ol>
@@ -110,7 +110,7 @@
                 <p><m>(1.07)^{x}=1.49</m></p>
                 <p>Apply your favorite logarithm to each side of the equation. My favorite is <m>\ln</m>, so the equation is now <me>\ln(1.07)^{x}= \ln(1.49)</me></p>
                 <p>Invoke rule <m>\# 1</m> so that the exponent can come down in front of the expression on the left <me>x \ln(1.07)= \ln(1.49)</me></p>
-                <p>Last step, isolate the variable by dividing both sides by <m>\ln(1.07)</m> what to you get?</p>
+                <p>Last step <mdash /> isolate the variable by dividing both sides by <m>\ln(1.07)</m>, and what do you get?</p>
                 <p><m>x=</m><var name="5.894" width="5" /> <em>(round to <m>3</m> decimal places)</em></p>
               </statement>
             </stage>
@@ -125,14 +125,14 @@
             </p>
             </blockquote>
             <p>At first glance it seems you can apply rule <m>\# 1</m>, but is that right?  Rule <m>\# 1</m> states <me>\log_{b}(x^{N})=N \log_{b}(x)</me></p>
-            <p>Notice how the exponential term on the left of the equation has no number in front (called a coefficient)? You can only apply the rule if the equation has precisely the correct form.</p>
+            <p>Notice how the exponential term on the left of the equation has no number multiplied in front (called a coefficient)? You can only apply the rule if the equation has precisely the correct form.</p>
             <p>Our equation has the constant <m>3</m> sitting directly in front of the growth factor in the exponential. That constant either has to be moved or we have to use another rule (if there is one that applies).</p>
-            <p>We can solve this equation by rearranging the equation so that it matches rule <m>\# 1</m> or we could break out rule <m>\# 2</m> because at least it matches our equation.</p>
+            <p>We can solve this equation by rearranging the equation so that it matches rule <m>\# 1</m> or we could use rule <m>\# 2</m> because at least it matches our equation.</p>
           </introduction>
           <statement>
             <p><term><em>Rule <m>\# 1</m>:</em></term> <m>\log_{b}(x^{N})=N \log_{b}(x)</m></p>
             <p>The constant <m>3</m> needs to be moved so only the exponential remains on the left side of the equation. <me>(2.83)^{x}=\frac{15}{3}</me>
-            Voila, now we have the correct form to use rule <m>\#  1</m>. Apply your favorite log to both sides. I'll use <m>\ln</m> this time because I used <m>\log</m> in the last example <me>\ln (2.83)^{x}= \ln \big( \frac{15}{3} \big)</me> The exponent gets to come down and we have <me>x \ln(2.83)= \ln \big( \frac{15}{3} \big)</me> the last step is to isolate the variable <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> so that <me>x \approx 1.547</me></p>
+            Voil&#224;! Now we have the correct form to use rule <m>\#  1</m>. Apply your favorite log to both sides. I'll use <m>\ln</m> this time because I used <m>\log</m> in the last example <me>\ln (2.83)^{x}= \ln \big( \frac{15}{3} \big)</me> The exponent gets to come down and we have <me>x \ln(2.83)= \ln \big( \frac{15}{3} \big)</me> the last step is to isolate the variable <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> so that <me>x \approx 1.547</me></p>
             <p><term><em>Rule <m>\# 2</m>:</em></term> <m>\log_{b}(AB)=\log_{b}(A)+\log_{b}(B)</m></p>
             <p>In English the second rule says, <q>The log of a product is equal to the sum of the logs.</q></p>
             <p>Applying <m>\ln</m> to both sides of our equation, in fact we have the log of the product <m>3</m> times <m>(2.83)^{x}</m> on the left side <me>\ln 3(2.83)^{x}=\ln(15)</me> use rule <m>\# 2</m> and to write the left side of the equation as the sum of the logs <me>\ln(3)+\ln(2.83)^{x}=\ln(15)</me> Remember the whole point of this is to isolate the variable <m>x</m> which we can now do since on the left side one term has <m>x</m> and the other does not <me>\ln (2.83)^{x}=\ln(15)-\ln(3)</me> Look, we get to use rule <m>\# 1</m> anyway! On the left to bring down the <m>x</m> <me>x \ln(2.83)=\ln(15)-\ln(3)</me> now isolate <m>x</m> <me>x=\frac{\ln(15)-\ln(3)}{\ln(2.83)}</me> and we get the same answer <me>x \approx 1.547</me></p>
