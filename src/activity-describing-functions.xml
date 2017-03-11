@@ -45,6 +45,9 @@
         <todo>The plots in this exercise need not be GeoGebra</todo>
         <exercise>
             <title>Intervals: Review of Compound Inequalities</title>
+            <introduction><p>You may use inequality or interval notation to answer the questions below.</p>
+            <p><url href="http://webwork.uwyo.edu/webworkdocs/IntervalNotation.html">How to input interval or inequality notation from your keyboard.</url> </p>
+            </introduction>
             <webwork>
                 <setup>
                     <var name="$answer1">
@@ -95,7 +98,7 @@
 
         <p>A function can be <term>Positive</term> or <term>Negative</term>.</p>
         
-        <p>If the output values of a function are above the horizontal axis, we say the function is <term>positive</term>.  If the output values of a function are below the horizontal axis, we say the function is <term>negative</term>.<index><main>positive function</main></index><index><main>function</main><sub>positive</sub></index><index><main>negative function</main></index><index><main>function</main><sub>negative</sub></index></p>
+        <p>On a graph, if the output values of a function are above the horizontal axis, we say the function is <term>positive</term>.  If the output values of a function are below the horizontal axis, we say the function is <term>negative</term>.<index><main>positive function</main></index><index><main>function</main><sub>positive</sub></index><index><main>negative function</main></index><index><main>function</main><sub>negative</sub></index>. If the output value is zero, touching the horizontal axis, we say the function is zero (neither positive nor negative). </p>
 
         <exercise>
             <title>Positive or Negative</title>
@@ -138,39 +141,61 @@
         <p>A function can be <term>Increasing</term> or <term>Decreasing</term>.</p>
 
         <p>If the values of the function (output) increase as the input increases, we say the funciton is <term>increasing</term>.  If the values of the function decrease as the input increases, we say the function is <term>decreasing</term><index><main>increasing function</main></index><index><main>function</main><sub>increasing</sub></index><index><main>decreasing function</main></index><index><main>function</main><sub>decreasing</sub></index>.</p>
+        <p>Graphically, reading from left to right, a function is increasing if its graph goes up and decreasing if its graph goes down.</p>
 
         <exercise>
             <title>Increasing or Decreasing</title>
             <webwork xml:id="exercise-inc-dec">
                 <setup>
+                    <var name="$inc1">
+                        <static>0\leq x \leq 2</static>
+                    </var>
+                    <var name="$inc2">
+                        <static>4\leq x \leq 6</static>
+                    </var>
+                    <var name="$dec1">
+                        <static>2\leq x \leq 4</static>
+                    </var>
+                    <var name="$dec2">
+                        <static>6\leq x \leq 8</static>
+                    </var>
                     <var name="$Increasing">
-                        <set>
-                            <member correct="yes">\text{as input increases, output increases.}</member>
-                            <member>\text{as input increases, output decreases.}</member>
-                        </set>
+                      <set>
+                        <member correct="yes">\text{as input increases, output increases.}</member>
+                        <member>\text{as input increases, output decreases.}</member>
+                      </set>
                     </var>
                     <var name="$Decreasing">
-                        <set>
-                            <member>\text{as input increases, output increases.}</member>
-                            <member correct="yes">\text{as input increases, output decreases.}</member>
-                        </set>
+                      <set>
+                        <member>\text{as input increases, output increases.}</member>
+                        <member correct="yes">\text{as input increases, output decreases.}</member>
+                      </set>
                     </var>
                     <pg-code>
-                        $Increasing = RadioButtons(["as input increases, output increases.","as input increases, output decreases."],0);
-                        $Decreasing = RadioButtons(["as input increases, output increases.","as input increases, output decreases."],1);
+                      $Increasing = RadioButtons(["as input increases, output increases.","as input increases, output decreases."],0);
+                      $Decreasing = RadioButtons(["as input increases, output increases.","as input increases, output decreases."],1);
+                      Context("Inequalities");
+                      $inc1 = Compute("0&lt;=x&lt;=2");
+                      $inc2 = Compute("4&lt;=x&lt;=6");
+                      $dec1 = Compute("2&lt;=x&lt;=4");
+                      $dec2 = Compute("6&lt;=x&lt;=8");
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZSZzHdMg/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>Drag the input value A along the horizontal axis to determine where the function is increasing or decreasing.</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pbwn6UAF/width/431/height/230/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>Drag the input using the crosshair (green) along the horizontal axis to determine the intervals where the function is increasing or decreasing.</p>
                     <p><ol label="a">
                         <li>
                             <p>A function is increasing if</p>
                             <p><var name="$Increasing" form="buttons" /></p>
+                            <p>The function is increasing on the intervals (from left to right)</p>
+                            <p><var name="$inc1" width="10" /> and <var name="$inc2" width="10" /> </p>
                         </li>
                         <li>
                             <p>A function is decreasing if</p>
                             <p><var name="$Decreasing" form="buttons" /></p>
+                            <p>The function is decreasing on the intervals (from left to right)</p>
+                            <p><var name="$dec1" width="10" /> and <var name="$dec2" width="10" /> </p>
                         </li>
                     </ol></p>
                 </statement>
@@ -248,20 +273,24 @@
                     <var name="$cUp">
                         <static>0\leq t\leq 9</static>
                     </var>
+                    <var name="$cUp2">
+                        <static>21\leq t\leq 24</static>
+                    </var>
                     <var name="$cDwn">
-                        <static>9\leq t\leq 24</static>
+                        <static>9\leq t\leq 21</static>
                     </var>
                     <pg-code>
                         Context("Inequalities");
                         Context()->variables->are(t => "Real");
-                        $pos = Compute("11&lt;t&lt;19");
+                        $pos = Compute("11&lt;t &lt;19");
                         $neg1 = Compute("0&lt;t&lt;11");
                         $neg2 = Compute("19&lt;t&lt;24");
                         $inc = Compute("3&lt;=t&lt;=15");
                         $dec1 = Compute("0&lt;=t&lt;=3");
                         $dec2 = Compute("15&lt;=t&lt;=24");
                         $cUp = Compute("0&lt;=t&lt;=9");
-                        $cDwn = Compute("9&lt;=t&lt;=24");
+                        $cUp2 = Compute("21&lt;=t&lt;=24");
+                        $cDwn = Compute("9&lt;=t&lt;=21");
                     </pg-code>
                 </setup>
 
@@ -269,17 +298,13 @@
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tmanmNPG/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                     <p>The temperature <m>T</m> in degrees Fahrenheit throughout the day is a function of the time of day <m>t</m> in hours.  In function notation would could write:<me>T = f(t)</me></p>
 
-                    <p>Sometimes the temperature rises (increasing) and sometimes is falls (decreasing). Sometimes the temperatures are above zero (positive) and sometimes the temperatures are below zero (negative).</p>
+                    <p>Adjust the postion of the points <m>A</m> and <m>B</m> on the horizontal axis to identify the intervals on which the function has the given properties. Include the ends of the intervals for increasing/decreasing and concave up/down.</p>
 
-                    <p>Finally the temperature changes are speeding up (concave up) and sometimes the changes in temperature are slowing down (concave down).</p>
-
-                    <p>Adjust the postion of the points <m>A</m> and <m>B</m> in order to identify the intervals on which the Temperature function has the given properties.</p>
-
-                    <p>Best to keep the time between <m>0</m> and <m>24</m> hours and round your answers to the nearest interger.</p>
+                    <p>Best to keep the time between <m>0</m> and <m>24</m> hours and round your answers to the nearest interger. In other words, don't go out to infinity, time is between <m>0</m> and <m>24</m> hours only.</p>
 
                     <p>Remember, the input variable is <m>t</m>!</p>
 
-                    <p>Use inequalities to describe the interval(s) on which the function has the given characteristic.  If there is more   than one interval, list them as they appear from left to right on the graph.</p>
+                    <p>Use inequalities to describe the interval(s) on which the function has the given characteristic.  If there is more than one interval, list them as they appear from left to right on the graph.</p>
 
                     <p><ol label="a">
                         <li>
@@ -300,7 +325,7 @@
                         </li>
                         <li>
                             <p>On what intervals is the function concave up? For concave up or down intervals of continuous functions, we always include the ends of the intervals (unless the interval is unbounded <init>i.e.</init> is at infinity).</p>
-                            <p><var name="$cUp" width="10" /></p>
+                            <p><var name="$cUp" width="10" /> and <var name="$cUp2" width="10" /></p>
                         </li>
                         <li>
                             <p>On what intervals is the function concave down?</p>
@@ -312,17 +337,15 @@
                 <solution>
                     <p>Remember, the input variable is <m>t</m>!</p>
 
-                    <p>Notice we do not include the end values of the intervals.</p>
+                    <p> The function is positive on the interval <m><var name="$pos" /></m> but it does not include the ends of the interval. This is because the function is exactly zero, <m>f(t) = 0</m>, at the boundaries of the interval. We want <m>f(t) > 0</m>.</p>
 
-                    <p>For instance, the function is positive on the interval <m><var name="$pos" /></m> but it does not include the ends of the interval. This is because the function is exactly zero, <m>f(t) = 0</m>, at the boundaries of the interval. We want <m>f(t) > 0</m>.</p>
+                    <p>The function is decreasing on the intervals <m><var name="$dec1" /></m> and <m><var name="$dec2" /></m>.</p>
 
-                    <p>For a similar reason the intervals on which the function is decreasing, <m><var name="$dec1" /></m> and <m><var name="$dec1" /></m> do not include the boundaries of the interval because at the maximum or the minimum of the function the function is neither increasing nor decreasing.</p>
+                    <p>Concavity is tricky to determine exactly without actually knowing calculus.</p>
 
-                    <p>Concavity is always tricky to determine exaclty without actually knowing calculus.</p>
+                    <p>For the purpose of this class, in order to determine where the concavity changes from up to down or vice versa, find the point on the graph that appears to be in the middle between concave up and concave down, and use that as the boundary.</p>
 
-                    <p>For the purpose of this class, in order to determine where concave changes from up to down or vice versa, find the point on the graph that is in the middle between concave up and concave down use that as the boundary.</p>
-
-                    <p>The temperature graph is concave down on the interval <m><var name="$cDwn" /></m> and concave up on the interval <m><var name="$cUp" /></m>.  Notice that the graph does not include the boundary between conc down and conc up.</p>
+                    <p>The temperature graph is concave down on the interval <m><var name="$cDwn" /></m> and concave up on the intervals <m><var name="$cUp" /></m> and <m><var name="$cUp2" /></m>.</p>
                 </solution>
               </webwork>
           </exercise>
