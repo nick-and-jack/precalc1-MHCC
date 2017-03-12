@@ -28,6 +28,230 @@
       </ul></p>
     </paragraphs>
 
+
+    <p>In preparation for this activity, we should revisit function evaluation with an eye toward describing changes to the input or the output.</p>
+    <subsection>
+      <title>Prep Activity</title>
+      <p>Each of the following problems involves something you have already learned.</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$ans1"><static>(x+6)^2 + (x+6)</static></var>
+            <var name="$ans2"><static>x^2+x+6</static></var>
+            <var name="$ans3"><static>3*(x^2+x)</static></var>
+            <pg-code>
+              $ans1=Compute("(x+6)^2+x+6");
+              $ans2=Compute("x^2+x+6");
+              $ans3=Compute("3*(x^2+x)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>For the function <m>f(x) = x^2 + x</m>, simplify each expression below.</p>
+            <p><ol label="a">
+              <li><p><m>f(x+6)</m></p>
+              <p>Answer:  <var name="$ans1" width="15" /></p></li>
+              <li><p><m>f(x) + 6</m></p>
+              <p>Answer:  <var name="$ans2" width="15" /></p></li>
+              <li><p><m>3f(x)</m></p>
+              <p>Answer:  <var name="$ans3" width="15" /></p></li>
+            </ol></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p><m>f(x+6) = (x+6)^2 + (x+6)</m></p></li>
+              <li><p><m>f(x) + 6 = x^2 + x + 6</m></p></li>
+              <li><p><m>3f(x) = 3(x^2 + x)</m></p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$ans1"><static>5(-3t+7)</static></var>
+            <var name="$ans2"><static>5(-3(t-4)+7)</static></var>
+            <var name="$ans3"><static>-5(-3(t-4)+7)</static></var>
+            <pg-code>
+              Context()->variables->are(t=>'Real');
+              $ans1=Compute("5(-3t+7)");
+              $ans2=Compute("5(-3(t-4)+7)");
+              $ans3=Compute("-5(-3(t-4)+7)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>For the function <m>g(t) = -3t + 7</m>, simplify each expression below.</p>
+            <p><ol label="a">
+              <li><p><m>5g(t)</m></p>
+              <p>Answer:  <var name="$ans1" width="15" /></p></li>
+              <li><p><m>5g(t-4)</m></p>
+              <p>Answer:  <var name="$ans2" width="15" /></p></li>
+              <li><p><m>-5g(t-4)</m></p>
+              <p>Answer:  <var name="$ans3" width="15" /></p></li>
+            </ol></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p><m>5g(t) = 5(-3t+7)</m></p></li>
+              <li><p><m>5g(t-4) = 5(-3(t-4)+7)</m></p></li>
+              <li><p><m>-5g(t-4) = -5(-3(t-4)+7)</m></p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+      <p>For any function <m>y = f(x)</m>, remember that <m>x</m>-values are inputs, and <m>y</m>-values are outputs. If we change this equation to become <me>y = f(x)+10</me> then we are really just adding the number <m>10</m> to all of the outputs for the original function <m>f</m>.</p>
+      <p>In the next exercise, you will describe changes to either the input or the output of a function.</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$ans1">
+              <set>
+                <member>\text{?}</member>
+                <member correct="yes">\text{adding 4 to the input}</member>
+                <member>\text{adding 4 to the output}</member>
+              </set>
+            </var>
+            <var name="$ans2">
+              <set>
+                <member>\text{?}</member>
+                <member>\text{subtracting 2 from the input}</member>
+                <member correct="yes">\text{subtracting 2 from the input}</member>
+              </set>
+            </var>
+            <var name="$ans3">
+              <set>
+                <member>\text{?}</member>
+                <member>\text{multiplying the input by 5}</member>
+                <member correct="yes">\text{multiplying the output by 5}</member>
+              </set>
+            </var>
+            <var name="$ans4">
+              <set>
+                <member>\text{?}</member>
+                <member correct="yes">\text{multiplying the input by 9}</member>
+                <member>text{multiplying the output by 9}</member>
+              </set>
+            </var>
+            <pg-code>
+              $ans1=PopUp(
+              ["?","adding 4 to the input","adding 4 to the output"],"adding 4 to the input"
+              );
+              $ans2=PopUp(
+              ["?","subtracting 2 from the input","subtracting 2 from the output"],"subtracting 2 from the output"
+              );
+              $ans3=PopUp(
+              ["?","multiplying the input by 5","multiplying the output by 5"],"multiplying the output by 5"
+              );
+              $ans4=PopUp(
+              ["?","multiplying the input by 9","multiplying the output by 9"],"multiplying the input by 9"
+              );
+            </pg-code>
+          </setup>
+          <statement>
+            <p>For each equation below, give a description of what we are changing (<init>e.g.</init> <q>adding 10 to the outputs</q>).</p>
+            <p><ol label="a">
+              <li><p><m>y = f(x+4)</m></p>
+              <p>Answer:  <var name="$ans1" form="popup" /></p></li>
+              <li><p><m>y = f(x) - 2</m></p>
+              <p>Answer:  <var name="$ans2" form="popup" /></p></li>
+              <li><p><m>y = 5f(x)</m></p>
+              <p>Answer:  <var name="$ans3" form="popup" /></p></li>
+              <li><p><m>y = f(9x)</m></p>
+              <p>Answer:  <var name="$ans4" form="popup" /></p></li>
+            </ol></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p>The equation <m>y = f(x+4)</m> adds <m>4</m> to the input of the function <m>f</m>.</p></li>
+              <li><p>The equation <m>y = f(x)-2</m> subtracts 2 from the input of the function <m>f</m>.</p></li>
+              <li><p>The equation <m>y = 5f(x)</m> multiplies the output of the function <m>f</m> by <m>5</m>.</p></li>
+              <li><p>The equation <m>y = f(9x)</m> multiplies the input of the function <m>f</m> by <m>9</m>.</p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>Finally, you will write equations which match verbal descriptions of changes to the input and/or output.</p>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$ans1"><static>g(t-5)+4</static></var>
+            <var name="$ans2"><static>g(2t)-1</static></var>
+            <var name="$ans3"><static>7g(t)</static></var>
+            <pg-code>
+              Context('Numeric');
+              Context()->variables->are(t=>'Real');
+              parserFunction("g(t)"=>"(sin(t)+2)/pi");
+              Context()->flags->set(reduceConstantFunctions=>0);
+              Context()->flags->set(formatStudentAnswer=>"parsed");
+              $ans1=Formula("g(t-5)+4");
+              $ans2=Formula("g(2*t)-1");
+              $ans3=Formula("7*g(t)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>Beginning with the function <m>y = g(t)</m>, write an equation which matches each description.</p>
+            <p><ol label="a">
+              <li><p><q>We subtracted <m>5</m> from the input and added <m>4</m> to the output.</q></p>
+              <p>Answer:  <m>y = </m><var name="$ans1" width="10" /></p></li>
+              <li><p><q>We doubled the input and then subtracted <m>1</m> from the output.</q></p>
+              <p>Answer:  <m>y = </m><var name="$ans2" width="10" /></p></li>
+              <li><p><q>We multiplied the output by 7.</q></p>
+              <p>Answer:  <m>y = </m><var name="$ans3" width="10" /></p></li>
+            </ol></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p><m>g(t-5)+4</m></p></li>
+              <li><p><m>g(2t)-1</m></p></li>
+              <li><p><m>7g(t)</m></p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+    </subsection>
+    <subsection>
+      <title>Vertical and Horizontal Translations</title>
+      <p>In this section, we will see the effects of changing the input or the output of a function, particularly as relates to the graph. We begin a single example that will lead us through most of the main points of this section.</p>
+      <example>
+        <statement>
+          <p>A swimmer jumps off a diving board into a swimming pool below. Below is a graph of the swimmer's height above the water as a function of time.</p>
+        <!--  <figure>
+            <caption><m>h = g(t)</m></caption>
+              <image width="47%">
+                <latex-image-code>
+                <![CDATA[
+                  \begin{tikzpicture}
+                    \begin{axis}[xmax=5, xmin=0,
+                                xlabel={Time (seconds)},
+                                ylabel={Height (feet)},
+                                xtick={0,1,2,3,4,5},
+                                ymax=14, ymin=0,
+                                ytick={0,2,4,...,14}]
+                      \addplot+[domain=0:1.2, samples=50] 3+15*x-16*x^2};
+                    \end{axis}
+                  \end{tikzpicture}
+                ]]>
+                </latex-image-code>
+            </image>
+          </figure> -->
+          <p>You can see some basic information from the graph:</p>
+          <p><ol label="a">
+            <li><p>How high was the diving board?</p></li>
+            <li><p>When did the person reach the water?</p></li>
+            <li><p>What was the person's maximum height above the water?</p></li>
+          </ol></p>
+        </statement>
+        <solution>
+          <p><ol label="a">
+            <li><p>The diving board was <m>3</m> feet high, as this is the person's height at <m>t = 0</m> seconds.</p></li>
+            <li><p>The person reached the water at approximately <m>1.2</m> seconds, according to the graph.</p></li>
+            <li><p>The person's maximum height above the water was approximately <m>6.5</m> feet, according to the graph.</p></li>
+          </ol></p>
+        </solution>
+      </example>
+
     <p>First, we will see the effect of making a change to the <em>output</em> of a function. You will be able to describe what happens to the graph of a function after it has been changed from: <md>
       <mrow>y = f(x)</mrow>
       <mrow>\text{to}</mrow>
@@ -330,5 +554,6 @@
         </solution>
       </webwork>
     </exercise>
+  </subsection>
 
   </section>
