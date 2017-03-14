@@ -428,7 +428,8 @@
 
             <p>Because slope is just <q>rise over run</q>, a fraction, the units of the average rate of change are also a fraction.</p>
 
-            <todo>The exercise below has a strange error message in html. Please fix.</todo>
+
+            <!-- <todo>The exercise below needs context.</todo>
             
             <exercise>
               <title>Name the Units of Average Rate of Change</title>
@@ -446,20 +447,12 @@
                       <member correct="yes">\text{feet}</member>
                     </set>
                   </var>
-                  <var name="$NumUnit" category="set">
-                    <set>
-                      <member>\text{psi}</member>
-                      <member>\text{foot}</member>
-                      <member>\text{feet per psi}</member>
-                      <member>\text{psi per foot}</member>
-                    </set>
-                  </var>
-                  <!-- <var name="$numer">
+                  <var name="$numer">
                     <static>psi</static>
                   </var>
                   <var name="$denom">
                     <static>ft</static>
-                  </var> -->
+                  </var>
                   <pg-code>
                     $output = RadioButtons(
                     ["psi","feet"],
@@ -469,29 +462,25 @@
                     ["psi","feet"],
                     1, labels => ["psi","feet"],displayLabels => 0
                     );
-                    $NumUnit = PopUp(["?", "psi", "foot", "feet per psi", "psi per foot"], "psi per foot");
-                    <!-- 
                     Context()->strings->add(psi=>{});
                     Context()->strings->add(ft=>{},foot=>{alias=>"ft"});
                     $numer = Compute("psi");
-                    $denom = Compute("ft"); -->
+                    $denom = Compute("ft");
                   </pg-code>
                 </setup>
                 <statement>
                   <p>The units of the output are <var name="$output" form="buttons" /></p>
                   <p>The units of the input are <var name="$input" form="buttons" /></p>
-                  <p>So the units of the average rate of change should be <var name="$NumUnit" form="popup" /></p><!-- 
-                  <p>So the units of the average rate of change should be <var name="$numer" width="4" /> per <var name="$denom" width="4" />  </p> -->
+                  <p>So the units of the average rate of change should be <var name="$numer" width="4" /> per <var name="$denom" width="4" />  </p>
                 </statement>
                 <solution>
                   <p>The units of the output are <var name="$output" /></p>
                   <p>The units of the input are <var name="$input" /></p>
-                  <p>So the units of the average rate of change should be <var name="$NumUnit" /></p>
-                  <!-- <p>The units of the answer are made from the units you use to get the answer.</p>
-                  <p>If the numerator has units of psi and the denominator has units of feet.  Then the average rate of change, a fraction, will also be a fraction. Therefore the units of our answer should be <quantity><unit base="poundpersquareinch" /><per base="foot" /></quantity></p> -->
+                  <p>The units of the answer are made from the units you use to get the answer.</p>
+                  <p>If the numerator has units of psi and the denominator has units of feet.  Then the average rate of change, a fraction, will also be a fraction. Therefore the units of our answer should be <quantity><unit base="poundpersquareinch" /><per base="foot" /></quantity></p> 
                 </solution>
               </webwork>
-            </exercise>
+            </exercise>-->
         </subsection>
     </section>
 </chapter>
