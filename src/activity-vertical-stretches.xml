@@ -12,7 +12,7 @@
 -->
 
 <section xml:id="activity-vertical-stretches" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Vertical Stretches Activity</title>
+  <title>Vertical Stretches</title>
 
   <p>In this activity, we will continue to explore how a change to a function's formula will alter its graph. In particular, we will see the effect of multiplying the output of a function by a constant number: <me>k\cdot f(x)</me></p>
   <p>Remember that if you perform some calculation with the <em>output</em> of a function <m>f</m>, you will be performing that calculation with an expression like <m>f(a)</m>.</p>
@@ -20,13 +20,16 @@
   <exercise>
     <webwork>
       <setup>
-        <var name="$num[0]"><static>8</static></var>
-        <var name="$num[1]"><static>3</static></var>
+        <var name="$num[0]"><static>11</static></var>
+        <var name="$num[1]"><static>9</static></var>
+        <var name="$num[2]"><static>10</static></var>
+        <var name="$output"><static>11g(9)</static></var>
+        <var name="$output1"><static>10f(x)</static></var>
         <pg-code>
           Context('Numeric');
           @num=map{$_+2}NchooseK(10,3);
           parserFunction("g(x)"=>"(sin(x)+2)/pi");
-          parserFunction("f(x)"=>"(sin(x)+2)/pi");
+          parserFunction("f(x)"=>"(cos(x)+2)/pi");
           Context()->flags->set(reduceConstantFunctions=>0);
           Context()->flags->set(formatStudentAnswer=>"parsed");
           $output=Formula("$num[0]*g($num[1])");

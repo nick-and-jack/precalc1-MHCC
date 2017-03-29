@@ -33,7 +33,7 @@
       </list>
     </introduction>
 
-    <xi:include href="./activity-combination-of-functions.xml" />
+    <xi:include href="./activity-combinations-of-functions.xml" />
     <section xml:id="combination-of-functions-gist">
       <title>Gist of Combinations of Functions</title>
 
@@ -70,10 +70,12 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$a[0]"><static>2</static></var>
-            <var name="$a[1]"><static>5</static></var>
-            <var name="$b[0]"><static>3</static></var>
-            <var name="$b[1]"><static>11</static></var>
+            <var name="$a[0]"><static>4</static></var>
+            <var name="$a[1]"><static>3</static></var>
+            <var name="$b[0]"><static>8</static></var>
+            <var name="$b[1]"><static>5</static></var>
+            <var name="$y1"><static>42</static></var>
+            <var name="$y2"><static>171</static></var>
             <pg-code>
               @a=map{$_+1}NchooseK(4,2);
               @b=map{$_+5}NchooseK(4,2);
