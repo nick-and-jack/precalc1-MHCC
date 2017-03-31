@@ -816,7 +816,7 @@
             <p>The domain is limited to only positive input values. So there should be some kind of boundary that separates the inputs the function can use from the ones the function cannot use.</p>
           </li>
           <li>
-            <p>For any base, the bigger the result we want to get, the bigger the exponent needs to be. So the logarithm should be an increasing function.</p>
+            <p>For a base greater than <m>1</m>, the bigger the result we want to get, the bigger the exponent needs to be. So the logarithm should be an increasing function.</p>
           </li>
           <li>
             <p>The output can be any real number, so we expect the graph to exist both above and below the horizontal axis as well as having a horizontal intercept.</p>
@@ -963,7 +963,7 @@
               </ol>
             </p>
             <p>Notice the graph only appears to the right of the y-axis. This is because the y-axis is a vertical line at <m>x=0</m> and we know the domain of a logarithmic function is <m>x \gt 0</m>.</p>
-            <p>The y-axis is a vertical asymptote. It represents a boundary the graph cannot cross.</p>
+            <p>The y-axis is a vertical asymptote. It represents that the outputs increase toward infinity as <m>x</m> decreases toward zero.</p>
             <p>Notice the graph has negative and positive outputs and zero output. Those represent the range of the function.</p>
             <p>Finally, notice that the bigger the base value, the more closely the graph <q>hugs</q> the horizontal axis</p>
           </statement>
@@ -1165,7 +1165,7 @@
     <subsubsection>
       <title>Rule: Bring Down the Exponent</title>
       <p>We start with something obvious. You already know that instead of writing <m>8+8+8+8</m> you could just write <m>4\cdot8</m>.</p>
-      <p>Maybe you never thought about it, but multiplication is just repeated addition. It's a shortcut way to write the same thing over and over.</p>
+      <p>Maybe you never thought about it, but multiplication is just repeated addition. It's a shortcut way to write the same thing <em>added</em> over and over.</p>
       <p>On the other hand, exponents are just repeated multiplication. Exponents are a shortcut way to write the same thing <em>multiplied</em> over and over.</p>
 
       <p>Consider the expression <m>\log(8\cdot8\cdot8\cdot8)</m>. We can use some shortcuts to write the expression in at least two different ways.<me>\log(8\cdot8\cdot8\cdot8)=\log\mathopen{}\left(8^4\right)\mathclose{}</me> and using the last rule we discovered about the log of a product <me>\log(8\cdot8\cdot8\cdot8)=\log(8)+\log(8)+\log(8)+\log(8)\text{.}</me></p>
@@ -1191,7 +1191,7 @@
             </pg-code>
           </setup>
           <statement>
-            <p>Multiplication is a shortcut to repeated addition. So a shortcut to adding <m>Q</m> four times is <me>Q+Q+Q+Q=4 \cdot Q</me> Use the same shortcut to rewrite the repeated sum</p>
+            <p>Multiplication is shorthand for repeated addition. So, adding <m>Q</m> four times is <me>Q+Q+Q+Q=4 \cdot Q</me> Use the same shorthand to rewrite the repeated sum</p>
             <p><m>\log(8)+\log(8)+\log(8)+\log(8)=</m> <var name="$answer" width="10" /> (hint: how many times is <m>\log(8)</m> repeated?)</p>
             <p>So here is the big finale:</p>
             <p><m>\log(8^4)=</m><var name="$c" width="2" /><m>{}\cdot\log(8)</m></p>
