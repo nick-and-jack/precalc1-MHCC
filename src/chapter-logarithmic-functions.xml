@@ -23,7 +23,7 @@
                 <li><p>Sketch the graph of a logarithmic function.</p></li>
                 <li><p>Identify a vertical/horizontal asymptote from a graph, numerical model, verbal description or equation.</p></li>
                 <li><p>Solve equations algebraically using properties of exponents and logarithms.</p></li>
-                <li><p>Use the characteristics of basic functions, especially slope intercepts, rate of change, percent change and average change to answer questions in application situations, to write equations and to create graphs by hand and on the calculator.</p></li>
+                <li><p>Use the characteristics of basic functions, especially slope, intercepts, rate of change, percent change and average change to answer questions in application situations, to write equations and to create graphs by hand and on the calculator.</p></li>
             </ul>
         </list>
 
@@ -65,9 +65,9 @@
           <p>
             <ol label="1">
               <li>
-                <p>This first rule is often used to <q>bring the exponent down</q> from its position above to be in line with the given equation.</p>
+                  <p>This first rule is often used to <q>bring the exponent down</q> <mdash /> after applying the logarithm, the exponent becomes a factor.</p>
                 <p><m>\log_{b}(N^{x})=x \log_{b}(N)</m></p>
-                <p>The next two rules are sometimes used to split equations apart or rewrite separate terms as one term.</p>
+                <p>The next two rules are sometimes used to combine two terms involving logarithms, or to split one term into two.</p>
               </li>
               <li>
                 <p><m>\log_{b}(AB)=\log_{b}(A)+\log_{b}(B)</m></p>
@@ -80,7 +80,7 @@
             </ol>
           </p>
         </assemblage>
-        <p>The first rule is the big bread winner. I used to have a pocket knife with <m>10</m> different tools folded into it, but I only used one. Rule <m>1</m> is that tool. It allows us to take an exponential expression and <q>bring down the exponent</q> so we can isolate it.</p>
+        <p>The first rule is definitely the most useful. I used to have a pocket knife with <m>10</m> different tools folded into it, but I only used one. Rule <m>1</m> is that tool. It allows us to take an exponential expression and <q>bring down the exponent</q> so we can isolate it.</p>
         <p>If we end up with an equation that looks like <me>(0.337)^{\text{?}}=1.272</me> as in, <q>I wonder what the exponent is?</q>, we can use a logarithmic function to find the answer.</p>
         <p>Although most likely a variable is used instead of a question mark like <me>(0.337)^{x}=1.272</me> where <m>x</m> is the unknown value we are trying to find.</p>
         <p>Using rule <m>\# 1</m> and applying any logarithm to both sides of the equation we can work our way towards isolating the unknown variable <m>x</m>.</p>
@@ -97,7 +97,7 @@
             </md>
           </p>
           <p>In this case we used <m>\log</m>, but we get the same answer using the natural logarithm, <m>\ln</m>, instead. Try it!</p>
-          <p>It does not matter what base logarithm you use, as long as you use the same <m>\log_{b}</m> on both sides of the equation. However, it does help to use a function that is readily available on most calculators like base 10, <m>\log</m>, or base <m>e</m>, <m>\ln</m>.</p>
+          <p>It does not matter what base logarithm you use, as long as you use the same <m>\log_{b}</m> on both sides of the equation. However, it does help to use a function that is readily available on most calculators like base <m>10</m> (<m>\log</m>), or base <m>e</m> (<m>\ln</m>).</p>
          </statement>
         </example>
         <p>Now you try it. Solve an exponential equation using rule <m>\# 1</m>.</p>
@@ -138,7 +138,7 @@
           <statement>
             <p><term><em>Rule <m>\# 1</m>:</em></term> <m>\log_{b}(N^{x})=x \log_{b}(N)</m></p>
             <p>The constant <m>3</m> needs to be moved so only the exponential remains on the left side of the equation. <me>(2.83)^{x}=\frac{15}{3}</me>
-            Voil&#224;! Now we have the correct form to use rule <m>\#  1</m>. Apply your favorite logarithm to both sides. I'll use <m>\ln</m> this time because I used <m>\log</m> in the last example <me>\ln (2.83)^{x}= \ln \big( \frac{15}{3} \big)</me> The exponent comes down and we have <me>x \ln(2.83)= \ln \big( \frac{15}{3} \big)</me> the last step is to isolate the variable <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> so that (rounded to three decimal) <me>x \approx 1.547</me></p>
+            Voil&#224;! Now we have the correct form to use rule <m>\#  1</m>. Apply your favorite logarithm to both sides. I'll use <m>\ln</m> this time because I used <m>\log</m> in the last example. <me>\ln (2.83)^{x}= \ln \big( \frac{15}{3} \big)</me> The exponent comes down and we have: <me>x \ln(2.83)= \ln \big( \frac{15}{3} \big)</me>The last step is to isolate the variable <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> so that (rounded to three decimals): <me>x \approx 1.547</me></p>
             <p><term><em>Rule <m>\# 2</m>:</em></term> <m>\log_{b}(AB)=\log_{b}(A)+\log_{b}(B)</m></p>
             <p>In English the second rule says, <q>The log of a product is equal to the sum of the logs.</q></p>
             <p>Applying <m>\ln</m> to both sides of our equation, we in fact have the log of the product <m>3</m> times <m>(2.83)^{x}</m> on the left side <me>\ln (3(2.83)^{x})=\ln(15)</me> Use rule <m>\# 2</m> to write the left side of the equation as the sum of the logs <me>\ln(3)+\ln(2.83)^{x}=\ln(15)</me> Remember the goal is to isolate the variable <m>x</m> which we can now do since, on the left side, one term has <m>x</m> and the other does not.</p>
@@ -159,7 +159,7 @@
             <p>We then entered the exact expressions into a calculator and found approximations rounded to three decimal places. Though graphically may seem quick and easy, most often we can only get an approximation to the answer.</p></conclusion>
           </webwork>
         </exercise>
-        <p>Finally, we could just ask a computer to solve the equation for us. Go to <url href="http://www.wolframalpha.com/">Wolframalpha.com</url> and type <q>solve <m>3(2.83)\text{^x = 15}</m></q> into the empty box at the top of the webpage. In the real solution area, choose <q>approximate solution</q>. Done!</p>
+        <p>Finally, we could just ask a computer to solve the equation for us. Many websites have tools for solving equations such as: <m>3(2.83)\text{^x = 15}</m> You may wish to perform a web search for such a website.</p>
         <p>Technology can now do much of what only people could do in the past. The question is no longer <q>Can you solve an equation?</q>, the question is <q>Do you have the right equation?</q></p>
         <p>Computers can solve all kinds of equations, but so far only people have the ability to set the problems up.</p>
       </subsection>
@@ -352,7 +352,7 @@
                     <p>The word <q>continuous</q> is telling us to use base <m>e</m>. Therefore we can write the formula for decay as <me>Ae^{-kt}</me> where <m>k</m> is the continuous decay constant <m>k=<var name="$k" /></m></p>
                     <p>The value <m>A</m> represents the initial amount of substance, but it was not stated. So we put a variable there to hold its place.</p>
                     <p>The first question is about the hourly percent decay. We were given the <q>continuous</q> hourly decay. These are two different things.</p>
-                    <p>A discrete model would look like <me>Ab^{t}</me> where <m>b</m> is the hourly growth factor we are trying to find. But both the discrete and continuous models have to predict the same behavior. Therefore the two formulas have to be equal, they have to produce the same values. <me>A(b)^{t}=A(e^{-k})^t</me> Notice how the parenthesis are used to show that both sides are actually the same thing. Both say <me>A(something)^{t}</me>. The <q>somethings</q> must be the same number. That is <me>b = e^{-k}</me></p>
+                    <p>A discrete model would look like <me>Ab^{t}</me> where <m>b</m> is the hourly growth factor we are trying to find. But both the discrete and continuous models have to predict the same behavior. Therefore the two formulas have to be equal <mdash /> they have to produce the same values. <me>A(b)^{t}=A(e^{-k})^t</me> Notice how the parentheses are used to show that both sides are actually the same thing. Both say <me>A(something)^{t}</me>. The <q>somethings</q> must be the same number. That is: <me>b = e^{-k}</me></p>
                     <p>With <m>k=<var name="$k"/></m> then <m>b=</m><var name="$b" width="5" /> <em>(round to <m>4</m> decimal places)</em> </p>
                     <p>Therefore, the percent hourly rate of decay is <var name="$hourlyrate" width="10" /> <em>(Include units and round to <m>2</m> decimal places)</em></p>
                   </statement>
@@ -361,7 +361,7 @@
                   <statement>
                     <p>What is the half-life of the substance?</p>
                     <p>The half-life is the time is takes to reduce the substance to half its value. We do not know how much substance there is, but we do know there is something.</p>
-                    <p>Earlier we called the initial amount <m>A</m>. In some time we will have <m>\frac{1}{2}A</m>. How much time? The answer is the half-life</p>
+                    <p>Earlier we called the initial amount <m>A</m>. In some time we will have <m>\frac{1}{2}A</m>. How much time? The answer is the half-life.</p>
                     <p>
                       <md>
                         <mrow>Ae^{-kt}=\frac{1}{2}A</mrow>
