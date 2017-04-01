@@ -12,12 +12,24 @@
 -->
 
 <section xml:id="activity-logarithmic-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  
     <title>Logarithmic Functions</title>
+    <p>Logarithms can sometimes be the source of much turmoil and angst to students. To some members of the English department, the word <q>logarithms</q> is used as a joke to respond to something that is confusing, <q>Is that like logarithms?</q> (laughter ensues).</p>
+    <p>But you will not have these issues, because logarithms are not bad, they're just spelled that way. Remember this, in short, a logarithm is essentially an exponent.</p>
+    <p>This activity is an introduction to logarithms and the logarithmic function. And since logarithms are exponents, it is a good idea to review some key properties of exponents, in particular negative and fractional exponents.</p>
 
     <subsection>
-        <title>Review</title>
-        <p>Remember that negative exponents mean <q>reciprocal</q> and fraction exponents mean <q>roots</q>. Check out this review in <url href="https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-negative-exponents/v/zero-negative-and-fractional-exponents">Khan Academy</url>.</p>
-
+        <title>Review: Exponents</title>
+        
+        <p>Remember that negative exponents mean <q>reciprocal</q> and fractional exponents mean <q>roots</q>.</p>
+        <example>
+          <statement>
+            <p><me>9^{-1}= \frac{1}{9}</me></p>
+            <p><me>9^{\frac{1}{2}}= \sqrt{9} = 3</me></p>
+            <p>For additional practice and information follow this link to <url href="https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-negative-exponents/v/zero-negative-and-fractional-exponents">Khan Academy</url>.</p>
+          </statement>
+        </example>
+        <p>In the next set of exercises, practice the idea of using the power (exponent) of a number (the base) to get a particular result.</p>
         <exercise>
             <webwork seed="1">
                 <setup>
@@ -201,8 +213,10 @@
     </subsection>
 
     <subsection>
-        <title>Logarithms as Language</title>
+        <title>The Meaning of a Logarithm</title>
+        <p>Earlier in the study of exponential functions, we solved exponential equations graphically. Another way to solve an exponential equation is to <q>guess-and-check</q>. It is not a very efficient method, but in this case it may help clarify what a logarithm does.</p>
         <exercise>
+            <title>Powers of <m>10</m></title>
             <webwork seed="1">
                 <setup>
                     <var name="$a">
@@ -265,11 +279,12 @@
             </webwork>
         </exercise>
 
-        <p>Notice that for each ordered pair, we could say <q><m>10</m> raised to the (input) power is (output)</q>. For instance, <m>10</m> raised to the <m>-1</m> power is <m>0.1</m>.</p>
+        <p>Notice that for each ordered pair, we could say <q><m>10</m> raised to the (input) power is (output)</q>. For instance, <m>10</m> raised to the <m>-1</m> power is <m>\frac{1}{10}=0.1</m></p>
 
-        <p>In the following, our goal is to find the power of <m>10</m> that equals <m>36</m>. In other words, to solve the equation <m>10^x=36</m>. First we'll try a table-based approach.</p>
-
+        <p>In the following exercise, our goal is to find the power of <m>10</m> that equals <m>36</m>. In other words, to solve the equation <m>10^x=36</m> in which we want to know <q>What power of <m>10</m> gives us <m>36</m>.</q></p>
+        <p>From the results in the previous table we realize the exponent is not going to be an integer like <m>0</m> or <m>1</m> or <m>2</m>. It will have to be some decimal value.</p>
         <exercise>
+            <title>Guess-and-Check</title>
             <webwork seed="1">
                 <setup>
                     <var name="$a">
@@ -317,7 +332,7 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>You wish to solve the equation <m><var name="$a"/>^x=<var name="$b"/></m>. To that end, you make the table:</p>
+                    <p>We wish to solve the equation <m><var name="$a"/>^x=<var name="$b"/></m>. To that end, you make the table:</p>
                     <table>
                         <tabular top="medium" bottom="medium" left="medium" right="medium">
                             <col halign="center"/>
@@ -348,16 +363,24 @@
                             </row>
                         </tabular>
                     </table>
-                    <p><m>y=<var name="$b"/></m> is between what two outputs in the table?</p>
-                    <p><m><var name="$b"/></m> is between <var name="$low" width="15"/> and <var name="$high" width="15" />.</p>
-                    <p>Therefore, <m>x</m> must be between <var name="$lowx" width="15"/> and <var name="$highx" width="15" />.</p>
+                    <p>The result we want, <m>y=<var name="$b"/></m> is between what two outputs in the table?</p>
+                    <p><var name="$low" width="5"/> <m>\lt <var name="$b"/> \lt</m> <var name="$high" width="15" /></p>
+                    <p>Therefore, the exponent must be <var name="$lowx" width="5"/> <m>\lt x \lt</m> <var name="$highx" width="5" /></p>
+                    <p>We can pick a number between <m>1</m> and <m>2</m> like <m>x=1.5</m> to see how close the result is to <m>36</m></p>
+                    <p><m>10^{1.5} \approx</m> <var name="31.623" width="5" /><em>(round to <m>3</m> decimal places)</em></p>
+                    <p>Since the exponent <m>x=1.5</m> is too small, how about <m>x=1.6</m>?</p>
+                    <p><m>10^{1.6} \approx</m> <var name="39.811" width="5" /><em>(round to <m>3</m> decimal places)</em></p>
+                    <p>Since the exponent <m>x=1.6</m> is too big we now know a better answer is <m>1.5 \lt x \lt 1.6</m></p>
+                    <p>To get better accuracy, we need to keep guessing. As we suspected, guess-and-check is a slow, clunky way of solving equations.</p>
                 </statement>
             </webwork>
         </exercise>
 
-        <p>Now we'll try a graphical approach.</p>
+        <p>Next, we can try a graphical approach.</p>
 
         <exercise>
+            <title>Solving Graphically</title>
+            <introduction><p>So far the Geogebra graphing tool has been sufficient in helping us create and manipulate graphs. However, to get more accuracy in our solution we can use another free, online graphing tool, Desmos. Although you may also use your graphing calculator.</p></introduction>
             <webwork seed="1">
                 <setup>
                     <var name="$a">
@@ -385,17 +408,37 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>You wish to solve the equation <m><var name="$a"/>^x=<var name="$b"/></m>. To that end, you examine the graph:</p>
-                    <todo>Make GeoGebra for this.</todo>
+                    <p>We wish to solve the equation <m><var name="$a"/>^x=<var name="$b"/></m>. To that end, examine the graph:</p>
+                    <!-- <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/SPx8Srb3/width/431/height/275/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="275px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p> -->
+                    <p>Click on this link to <url href="https://www.desmos.com/calculator/soxcvqkg9i">Desmos.com</url> and solve the equation graphically.</p>
                     <p>To three decimal places, what is the value of <m>x</m> that solves the equation <m><var name="$a"/>^x=<var name="$b"/></m>?</p>
-                    <p><m>x={}</m><var name="$answer" width="15"/></p>
-                    <p>Use the same method to solve <m><var name="$a"/>^x=<var name="$c"/></m>.</p>
-                    <p><m>x={}</m><var name="$answer2" width="15"/></p>
+                    <p><m>x \approx</m> <var name="$answer" width="10"/></p>
+                    <p>Use the same method to solve <m><var name="$a"/>^x=<var name="$c"/></m></p>
+                    <p><m>x \approx</m> <var name="$answer2" width="10"/></p>
                 </statement>
             </webwork>
         </exercise>
 
-        <p>What we see is that different powers of <m>10</m> give us different results. There is another way to say the same thing using <q>math language</q>.</p>
+        <p>As you experienced in the last two exercises, different powers of <m>10</m> give us different results. In fact, we can get any positive result we want using only powers of <m>10</m> (or any positive base for that matter). </p>
+        <p>One use for logarithms is to answer the question,</p>
+        <blockquote><p>I wonder what power of (choose a base) I need to get (whatever result you want)</p></blockquote>
+        <example>
+          <statement>
+              <p>In English we can ask an exponential question and get a logarithm answer:</p>
+              <blockquote>
+                <p>Exponential question, <em>What power of 3 gives you 81?</em></p>
+                <p>Logarithm answer, <em>The power of 3 that gives you 81 is the <m>4</m>th power.</em> (Because <m>3^{4}=81</m>)</p>
+              </blockquote>
+              <p>In Math that same question and answer look like this:</p>
+              <blockquote>
+                <p>Exponential question, <m>3^{x}=81</m></p>
+                <p>Logarithm answer, <m>x= \log_{3}(81)=4</m></p>
+              </blockquote>
+          </statement>
+        </example>
+        <p>The structure of a logarithm is that it must tell the reader the base number and it has to state what value you are trying to get.</p>
+        <p>Base <m>10</m> means you are using powers of <m>10</m> as in <m>10^{x}</m>. Base <m>3</m> means you are using powers of <m>3</m> as in <m>3^{x}</m> etc.</p>
+        <p>Below is a table that shows how our previous example using base <m>10</m> looks when written in English vs. what the same statement looks like in Math.</p>
 
         <table>
             <tabular>
@@ -403,9 +446,9 @@
                 <col right="medium" halign="center"/>
                 <col />
                 <row bottom="medium">
-                    <cell></cell>
-                    <cell>can be written in <q>math</q> as</cell>
-                    <cell>read as</cell>
+                    <cell>English</cell>
+                    <cell>Math</cell>
+                    <cell>How you <q>say the math</q></cell>
                 </row>
                 <row>
                     <cell>The power of <m>10</m> that gives you <m>36</m></cell>
@@ -439,14 +482,16 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>What is <m>\log(<var name="$c"/>)</m>? <var name="$b" width="15" /></p>
+                    <p>The <q>power of <m>10</m> that gives you <m>100</m></q> is written in math as <m>\log(36)</m>. With that in mind, what power of <m>10</m> gives you <m>100</m>?</p>
+                    <p><m>\log(<var name="$c"/>) = </m> <var name="$b" width="15" /></p>
                 </statement>
             </webwork>
         </exercise>
 
-        <p>The math word <term>log</term> is short for <term>logarithm</term>. It means <q>log base <m>10</m></q> whereas <m>\log_b</m> means <q>log base <m>b</m></q>. Since <m>\log</m> is base <m>10</m> (powers of <m>10</m>) we technically should write <m>\log_{10}</m>, but the <q><m>10</m></q> is left out for convenience.</p>
+        <p>The math word <term>log</term> is short for <term>logarithm</term>. It means <q>log base <m>10</m></q>. But we can use any positive number as a base, so <m>\log_b</m> means <q>log base <m>b</m></q>.</p>
+        <p>Since <m>\log</m> is base <m>10</m> (powers of <m>10</m>) we technically should write <m>\log_{10}</m>, but base <m>10</m> is so often used, we leave out the <m>10</m> for convenience.</p>
 
-        <p>Another often used logarithm is base <m>e</m>. It's called the <term>natural logarithm</term> and is written <m>\ln</m>. Again, technically we should write <m>\log_e</m>, but we write <m>\ln</m> for conveneience.</p>
+        <p>Another often used logarithm is base <m>e</m>. It's called the <term>natural logarithm</term> and is written <m>\ln</m>. Again, technically we should write <m>\log_e</m>, but we write <m>\ln</m> for convenience.</p>
 
         <p>All other logarithms are written in standard format. The base, <m>b</m>, indicates what number is being multiplied over and over. So if <m>2</m> is the base, we write <m>\log_2</m> which indicates powers of <m>2</m>.</p>
 
@@ -545,7 +590,7 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>Using math notation, how would you write each expression below?</p>
+                    <p>Write the following English statements using the equivalent Math statements using logarithms.</p>
                     <ol>
                         <li><p>The power of <m>10</m> that gives you <m><var name="$c[0]"/></m></p>
                             <p><var name="$answer[0]" width="15" /></p></li>
@@ -594,88 +639,83 @@
                 </statement>
             </webwork>
         </exercise>
-
+      <p>At this point of the activity we should be able to estimate the value of a given logarithmic expression with the understanding that a logarithm is just an exponent.</p>
+      <exercise>
+          <webwork seed="1">
+              <setup>
+                  <var name="$c[0]">
+                      <static>120</static>
+                  </var>
+                  <var name="$c[1]">
+                      <static>15</static>
+                  </var>
+                  <var name="$c[2]">
+                      <static>18</static>
+                  </var>
+                  <var name="$c[3]">
+                      <static>0.7</static>
+                  </var>
+                  <var name="$b[1]">
+                      <static>5</static>
+                  </var>
+                  <var name="$b[2]">
+                      <static>2</static>
+                  </var>
+                  <var name="$b[3]">
+                      <static>2</static>
+                  </var>
+                  <var name="$low[0]">
+                      <static>2</static>
+                  </var>
+                  <var name="$low[1]">
+                      <static>1</static>
+                  </var>
+                  <var name="$low[2]">
+                      <static>4</static>
+                  </var>
+                  <var name="$low[3]">
+                      <static>-1</static>
+                  </var>
+                  <var name="$high[0]">
+                      <static>3</static>
+                  </var>
+                  <var name="$high[1]">
+                      <static>2</static>
+                  </var>
+                  <var name="$high[2]">
+                      <static>5</static>
+                  </var>
+                  <var name="$high[3]">
+                      <static>0</static>
+                  </var>
+                  <pg-code>
+                      $b[0]=10;
+                      $c[0]=floor(10**random(1.5,3.5,0.2));
+                      for my $i(1,2,3){$b[$i]=random(2,9,1);};
+                      for my $i(1,2) {do{$c[$i]=floor($b[$i]**random(0.5,4.5,0.2));}until($c[$i]&lt;100)};
+                      $c[3]=int(10*$b[3]**random(-1.9,-0.3,0.2))/10;
+                      if($envir{problemSeed}==1){@b=(10,5,2,2);@c=(120,15,18,0.7)};
+                      for my $i(0..3){$low[$i]=floor(ln($c[$i])/ln($b[$i]));$high[$i]=$low[$i]+1;};
+                  </pg-code>
+              </setup>
+              <statement>
+                  <p>For each logarithm expression below, estimate the result with an integer that is just below and an integer that is just above the result.</p>
+                  <p>For example, <m>\log(36)</m> is between <m>1</m> and <m>2</m> because <m>36</m> is between <m>10^1</m> and <m>10^2</m>.</p>
+                  <p>Remember, a logarithm is an exponent.</p>
+                  <ol>
+                      <li><p><m>\log(<var name="$c[0]" />)</m> is between <var name="$low[0]" width="2" /> and <var name="$high[0]" width="2" />.</p></li>
+                      <li><p><m>\log_{<var name="$b[1]" />}(<var name="$c[1]" />)</m> is between <var name="$low[1]" width="2" /> and <var name="$high[1]" width="2" />.</p></li>
+                      <li><p><m>\log_{<var name="$b[2]" />}(<var name="$c[2]" />)</m> is between <var name="$low[2]" width="2" /> and <var name="$high[2]" width="2" />.</p></li>
+                      <li><p><m>\log_{<var name="$b[3]" />}(<var name="$c[3]" />)</m> is between <var name="$low[3]" width="2" /> and <var name="$high[3]" width="2" />.</p></li>
+                  </ol>
+              </statement>
+          </webwork>
+      </exercise>
     </subsection>
 
     <subsection>
-        <title>Logarithms by Intuition</title>
-        <p>In this portion of the activity we learn to estimate the value of a given logarithm expression.</p>
-        <exercise>
-            <webwork seed="1">
-                <setup>
-                    <var name="$c[0]">
-                        <static>120</static>
-                    </var>
-                    <var name="$c[1]">
-                        <static>15</static>
-                    </var>
-                    <var name="$c[2]">
-                        <static>18</static>
-                    </var>
-                    <var name="$c[3]">
-                        <static>0.7</static>
-                    </var>
-                    <var name="$b[1]">
-                        <static>5</static>
-                    </var>
-                    <var name="$b[2]">
-                        <static>2</static>
-                    </var>
-                    <var name="$b[3]">
-                        <static>2</static>
-                    </var>
-                    <var name="$low[0]">
-                        <static>2</static>
-                    </var>
-                    <var name="$low[1]">
-                        <static>1</static>
-                    </var>
-                    <var name="$low[2]">
-                        <static>4</static>
-                    </var>
-                    <var name="$low[3]">
-                        <static>-1</static>
-                    </var>
-                    <var name="$high[0]">
-                        <static>3</static>
-                    </var>
-                    <var name="$high[1]">
-                        <static>2</static>
-                    </var>
-                    <var name="$high[2]">
-                        <static>5</static>
-                    </var>
-                    <var name="$high[3]">
-                        <static>0</static>
-                    </var>
-                    <pg-code>
-                        $b[0]=10;
-                        $c[0]=floor(10**random(1.5,3.5,0.2));
-                        for my $i(1,2,3){$b[$i]=random(2,9,1);};
-                        for my $i(1,2) {do{$c[$i]=floor($b[$i]**random(0.5,4.5,0.2));}until($c[$i]&lt;100)};
-                        $c[3]=int(10*$b[3]**random(-1.9,-0.3,0.2))/10;
-                        if($envir{problemSeed}==1){@b=(10,5,2,2);@c=(120,15,18,0.7)};
-                        for my $i(0..3){$low[$i]=floor(ln($c[$i])/ln($b[$i]));$high[$i]=$low[$i]+1;};
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>For each logarithm expression below, estimate the result with an integer that is just below and an integer that is just above the result. For example, <m>\log(36)</m> is between <m>1</m> and <m>2</m> because <m>36</m> is between <m>10^1</m> and <m>10^2</m>.</p>
-                    <ol>
-                        <li><p><m>\log(<var name="$c[0]" />)</m> is between <var name="$low[0]" width="2" /> and <var name="$high[0]" width="2" />.</p></li>
-                        <li><p><m>\log_{<var name="$b[1]" />}(<var name="$c[1]" />)</m> is between <var name="$low[1]" width="2" /> and <var name="$high[1]" width="2" />.</p></li>
-                        <li><p><m>\log_{<var name="$b[2]" />}(<var name="$c[2]" />)</m> is between <var name="$low[2]" width="2" /> and <var name="$high[2]" width="2" />.</p></li>
-                        <li><p><m>\log_{<var name="$b[3]" />}(<var name="$c[3]" />)</m> is between <var name="$low[3]" width="2" /> and <var name="$high[3]" width="2" />.</p></li>
-                    </ol>
-                </statement>
-            </webwork>
-        </exercise>
-    </subsection>
-
-    <subsection>
-        <title>Domain of the Log Function</title>
-        <p>Here is a graph of <m>y=\log_2(x)</m>. Zoom in and out some, and move the graph up, down, left, and right. This is all to explore the graph and give you a fell for it.</p>
-        <todo>Insert GeoGebra here. Possibly rework with the above line into a captioned figure or something.</todo>
-        <p>Try to evaluate <m>\log(-100)</m> on your calculator. What value does your caluclator return? Your calculator should read <q>error</q> or <q>quit</q> or something indicating it cannot be done. To understand why this is true, write out the meaning of <m>\log(-100)</m> in English.</p>
+        <title>Domain of a Logarithmic Function</title>
+        <p>Try to evaluate <m>\log(-100)</m> on your calculator. Your calculator should read <q>error</q> or <q>quit</q> or something indicating it cannot complete the calculation. To understand why this is happening, write out the meaning of <m>\log(-100)</m> in English.</p>
         <exercise>
             <webwork seed="1">
                 <setup>
@@ -701,7 +741,7 @@
 
         <p>If you have a bunch of positive <m>10</m>s then how many do you have to multiply to get a <em>negative</em> <m>100</m>? In fact, you <em>can't</em> get a negative result if you only have positive <m>10</m>s! You would need at least one negative <m>10</m> and you don't have any.</p>
 
-        <p>Try to evaluate <m>\log(0)</m> on your calculator. What value does your caluclator return? Your calculator should read <q>error</q> or <q>quit</q> or something indicating it cannot be done. To understand why this is true, write out the meaning of <m>\log(0)</m> in English.</p>
+        <p>Try to evaluate <m>\log(0)</m> on your calculator. Your calculator should read <q>error</q> or <q>quit</q> or something indicating it cannot complete the calculation. To understand why this is true, write out the meaning of <m>\log(0)</m> in English.</p>
         <exercise>
             <webwork seed="1">
                 <setup>
@@ -725,242 +765,487 @@
             </webwork>
         </exercise>
 
-        <p>If you have a bunch of positive <m>10</m>s then how many do you have to multiply to get <m>0</m> as a result? In fact, you <em>can't</em> get <m>0</m> as the result if you only have positive <m>10</m>s! You would need at least one negative <m>0</m> and you don't have any.</p>
+        <p>If you have a bunch of positive <m>10</m>s then how many do you have to multiply to get <m>0</m> as a result? In fact, you <em>can't</em> get <m>0</m> as the result if you only have positive <m>10</m>s! At least one multiple would have to be <m>0</m>, but you have is <m>10</m>'s.</p>
 
-        <p>It turns out that the <m>\log</m> function (with any base) is <em>not defined for values that are less than or equal to <m>0</m></em>. Therefore the domain of the <m>\log</m> function (with any base) is <em>only positive numbers</em> (you can't use negatives or zero.</p>
-
+        <p>It turns out that the <m>\log</m> function (with any base <m>b \gt 0</m>) is <em>not defined for values that are less than or equal to <m>0</m></em>. Therefore the domain of the <m>\log</m> function (with any base <m>b \gt 0</m>) is <em>only positive numbers</em> (you can't use negatives or zero).</p>
         <exercise>
-            <webwork seed="1">
-                <setup>
-                    <var name="$b">
-                        <static>b</static>
-                    </var>
-                    <var name="$x">
-                        <static>x</static>
-                    </var>
-                    <var name="$y">
-                        <static>y</static>
-                    </var>
-                    <pg-code>
-                        Context()->variables->are(x=>'Real',y=>'Real',b=>'Real');
-                        $b=Formula("b");
-                        $x=Formula("x");
-                        $y=Formula("y");
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p><m>\log_b(x)=y</m> means:</p>
-                    <p>The power of <var name="$b" width="1"/> that gives you <var name="$x" width="2"/> is <var name="$y" width="2"/>.</p>
-                </statement>
-            </webwork>
+          <webwork seed="1">
+            <setup>
+              <var name="$domain">
+                  <static>(0,\infty)</static>
+              </var>
+              <pg-code>
+                  Context("InequalitySetBuilder");
+                  $domain=Compute("(0,inf)");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>The domain of the <m>\log_b(x)</m> function (with any base <m>b \gt 0</m>) is <var name="$domain" width="10" />. </p>
+            </statement>
+          </webwork>
         </exercise>
-
+      </subsection>
+      <subsection>
+        <title>The Range of a Logarithmic Function</title>
+        <p>Earlier we used graphs to answer the questions: <q>What power of <m>10</m> gives you <m>36</m>?</q>  and <q>What power of <m>10</m> gives you <m>0.6</m>?</q></p>
+        <p>We answered the questions using logarithm statements: <q><m>\log(36) \approx 1.556</m></q> and <q><m>\log(0.6) \approx -0.222</m></q></p>
+        <p>Notice with just a base <m>10</m> we can use positive or negative exponents to get any positive result we want.</p>
+        <p>You want to get a result of <m>36</m>? Use a power of about <m>1.556</m> as in <m>10^{1.556} \approx 36</m></p>
+        <p>You want to get a result of <m>0.6</m>? Use a power of about <m>-0.222</m> as in <m>10^{-0.222} \approx 0.6</m>.</p>
+        <p>Remember logarithms are exponents and clearly we can use both positive and negative exponents.</p>
+        <p>Logarithms tell you the power you need to get a particular result. You input the result you want, the function tells you the exponent you need. The exponent is the output.</p>
         <exercise>
-            <webwork seed="1">
-                <setup>
-                    <var name="$domain">
-                        <static>(0,\infty)</static>
-                    </var>
-                    <pg-code>
-                        Context("InequalitySetBuilder");
-                        $domain=Compute("(0,inf)");
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>The domain of the <m>\log_b(x)</m> function (with any base <m>b</m>) is <var name="$domain" width="20" />. </p>
-                </statement>
-            </webwork>
+          <webwork>
+            <statement>
+              <p>What power of <m>10</m> gives you <m>1</m>?</p>
+              <p><m>\log(1) = </m> <var name="0" width="5" /></p>
+            </statement>
+          </webwork>
         </exercise>
+        <p>Given an input from the domain of a logarithmic function, the range can be positive, negative or zero. In fact, the range is all real numbers.</p>
+        <assemblage>
+          <p>If <m>\log_{b}(x)=y</m> then <m>y</m> is any real number.</p>
+        </assemblage>
+      </subsection>
+      <subsection>
+      <title>The Graph of a Logarithmic Function</title>
+      <p>Our discoveries about the domain and range of a logarithmic function lead us to wonder what the graph might look like. So far we know</p>
+      <p>
+        <ul>
+          <li>
+            <p>The domain is limited to only positive input values. So there should be some kind of boundary that separates the inputs the function can use from the ones the function cannot use.</p>
+          </li>
+          <li>
+            <p>For a base greater than <m>1</m>, the bigger the result we want to get, the bigger the exponent needs to be. So the logarithm should be an increasing function.</p>
+          </li>
+          <li>
+            <p>The output can be any real number, so we expect the graph to exist both above and below the horizontal axis as well as having a horizontal intercept.</p>
+          </li>
+        </ul>
+      </p>
+      <exercise>
+        <title>Graph of <m>f(x)=\log_{2}(x)</m></title>
+        <webwork>
+          <statement>
+            <p><m>\log_{2}</m> is <q>Log base <m>2</m></q> which means <q>Powers of <m>2</m></q>.</p>
+            <p>The input is the value you are trying to get. The output is the exponent you need to get the desired input.</p>
+            <p>For each value of <m>x</m>, ask yourself <q>What power of <m>2</m> gives me the <m>x</m> value?</q> the answer to this question goes in the output box.</p>
+            <tabular top="medium" bottom="medium" left="medium" right="medium">
+              <col halign="center"/>
+              <col halign="center"/>
+              <row>
+                  <cell><m>x</m></cell>
+                  <cell><m>y=\log_{2}(x)</m></cell>
+              </row>
+              <row>
+                  <cell><m>0</m></cell>
+                  <cell>undefined</cell>
+              </row>
+              <row>
+                  <cell><m>1</m></cell>
+                  <cell><var name="0" width="5" /></cell>
+              </row>
+              <row>
+                  <cell><m>2</m></cell>
+                  <cell><var name="1" width="5" /></cell>
+              </row>
+              <row>
+                  <cell><m>4</m></cell>
+                  <cell><var name="2" width="5" /></cell>
+              </row>
+              <row>
+                  <cell><m>8</m></cell>
+                  <cell><var name="3" width="5" /></cell>
+              </row>
+              <row>
+                  <cell><m>16</m></cell>
+                  <cell><var name="4" width="5" /></cell>
+              </row>
+              <row>
+                  <cell><m>32</m></cell>
+                  <cell><var name="5" width="5" /></cell>
+              </row>
+            </tabular>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mJYWSCfb/width/431/height/300/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="300px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Drag the points to the coordinates from your table. The graph will become viewable when the points are placed correctly.</p>
+          </statement>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <title>Zoom in on <m>f(x)=\log_{2}(x)</m> for small values of <m>x</m></title>
+        <webwork>
+          <statement>
+            <p><m>\log_{2}</m> is <q>Log base <m>2</m></q> which means <q>Powers of <m>2</m></q>.</p>
+            <p>The input is the value you are trying to get. The output is the exponent you need to get the desired input.</p>
+            <p>For each value of <m>x</m>, ask yourself <q>What power of <m>2</m> gives me the <m>x</m> value?</q> the answer to this question goes in the output box.</p>
+            <p>Remember negative exponents mean <q>reciprocal</q>.</p>
+            <tabular top="medium" bottom="medium" left="medium" right="medium">
+              <col halign="center"/>
+              <col halign="center"/>
+              <row>
+                  <cell><m>x</m></cell>
+                  <cell><m>y=\log_{2}(x)</m></cell>
+              </row>
+              <row>
+                  <cell><m>0</m></cell>
+                  <cell>undefined</cell>
+              </row>
+              <row>
+                  <cell><m>\frac{1}{16}</m></cell>
+                  <cell><var name="-4" width="5" /></cell>
+              </row>
+              <row>
+                  <cell><m>\frac{1}{8}</m></cell>
+                  <cell><var name="-3" width="5" /></cell>
+              </row>
+              <row>
+                  <cell><m>\frac{1}{4}</m></cell>
+                  <cell><var name="-2" width="5" /></cell>
+              </row>
+              <row>
+                  <cell><m>\frac{1}{2}</m></cell>
+                  <cell><var name="-1" width="5" /></cell>
+              </row>
+            </tabular>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MrhswJHV/width/431/height/360/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="360px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Drag the points to the coordinates from your table. The graph will become viewable when the points are placed correctly.</p>
+            <p>Notice the closer the input <m>x</m> is to zero, the further down the function goes. The value <m>x=0</m> is not in the domain of the function, but we can get infinitely <q>close</q> to <m>x=0</m>. As a result the function will go down infinitely as we approach <m>x=0</m></p>
+          </statement>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <title>Comparing Graphs of Various Bases</title>
+        <webwork>
+          <setup>
+            <var name="$log2">
+              <set>
+                <member>\log(x)\</member>
+                <member correct="yes">\log_{2}(x)\}</member>
+              </set>
+            </var>
+
+            <pg-code>
+              Context('Numeric');
+              $log2 = RadioButtons(
+              ["\(\log(6.1)\)","\(\log_{2}(6.1)\)"],
+              1, labels => ["log(x)","log2(x)"],displayLabels => 0
+              );
+            </pg-code>
+          </setup>
+          <statement>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/RdRRdBJM/width/431/height/360/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="360px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>The graph shows a logarithmic function for which you can adjust the base and the input values.</p>
+            <p>For instance you can set the base to <m>2</m> and the input to <m>4</m> so you can evaluate <m>\log_{2}(4)</m></p>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>What power of <m>2</m> gives you <m>4</m>?</p>
+                  <p><m>\log_{2}(4)=</m><var name="2" width="5" /></p>
+                </li>
+                <li>
+                  <p>What power of <m>3</m> gives you <m>7</m>?</p>
+                  <p><m>\log_{3}(7) \approx</m> <var name="1.77" width="5" /></p>
+                </li>
+                <li>
+                  <p>What power of <m>4</m> that gives you <m>0.8</m>?</p>
+                  <p><m>\log_{4}(0.8) \approx</m> <var name="-0.16" width="5" /></p>
+                </li>
+                <li>
+                  <p>What power of <m>10</m> that gives you <m>1</m>?</p>
+                  <p>The power of <m>10</m> that gives you <m>\log(1)=</m> <var name="0" width="5" /></p>
+                </li>
+                <li>
+                  <p>Which value is greater <m>\log_{2}(6.1)</m> or <m>\log(6.1)</m>?</p>
+                  <p>The greater value is <var name="$log2" form="buttons" /></p>
+                </li>
+              </ol>
+            </p>
+            <p>Notice the graph only appears to the right of the y-axis. This is because the y-axis is a vertical line at <m>x=0</m> and we know the domain of a logarithmic function is <m>x \gt 0</m>.</p>
+            <p>The y-axis is a vertical asymptote. It represents that the outputs increase toward infinity as <m>x</m> decreases toward zero.</p>
+            <p>Notice the graph has negative and positive outputs and zero output. Those represent the range of the function.</p>
+            <p>Finally, notice that the bigger the base value, the more closely the graph <q>hugs</q> the horizontal axis</p>
+          </statement>
+        </webwork>
+      </exercise>
     </subsection>
 
     <subsection>
-        <title>Properties of Logarithms (how we use logs to solve equations)</title>
+    <title>Rules of Logarithms</title>
+    <p>In order for this part of the activity to make sense, we must remember what a <term>base</term> and an <term>exponent</term> are. Remember in the expression <m>b^x</m>, <m>b</m> is the <term>base</term> and <m>x</m> is the exponent. The exponent literally counts how many times you multiplied the base. For instance <m>b^7</m> means <m>\overbrace{b\cdot b\cdot b\cdot b\cdot b\cdot b\cdot b}^{7\text{ times}}</m>.</p>
+    <subsubsection>
+      <title>Definition: A logarithm is an exponent</title>
+      <p>An exponential equation <me>b^{y}=x</me> can be rewritten as a logarithmic equation.</p>  
+      <p><me>\log_b(x)=y</me></p>
+      <exercise>
+        <webwork seed="1">
+          <setup>
+              <var name="$b">
+                  <static>b</static>
+              </var>
+              <var name="$x">
+                  <static>x</static>
+              </var>
+              <var name="$y">
+                  <static>y</static>
+              </var>
+              <var name="$exp1">
+                  <static>2^3=x</static>
+              </var>
+              <var name="$exp2">
+                  <static>2^-1=x</static>
+              </var>
+              <var name="$exp1">
+                  <static>2^0=x</static>
+              </var>
+              <pg-code>
+                  Context()->variables->are(x=>'Real',y=>'Real',b=>'Real');
+                  $b=Formula("b");
+                  $x=Formula("x");
+                  $y=Formula("y");
+                  $exp1=Formula("2^{3}");
+                  $exp2=Formula("2^{-1}");
+                  $exp3=Formula("2^{0}");
+              </pg-code>
+          </setup>
+          <statement>
+            <p>An exponential equation <me>b^{y}=x</me> can be rewritten as a logarithmic equation.</p>  
+            <p><me>\log_b(x)=y</me> the logarithmic equation means:</p>
+            <p>The power of <var name="$b" width="1"/> that gives you <var name="$x" width="2"/> is <var name="$y" width="2"/>.</p>
+            <p>Rewrite each logarithmic equation as an exponential equation then evaluate your exponential expression to determine the value of <m>x</m>.</p>
+            <p>
+              <ol label="a">
+                <li>
+                  <p><m>\log_{2}(x)=3</m> as an exponential equation is <m>x=</m> <var name="$exp1" width="5" /></p>
+                  <p>The value of <m>x=</m> <var name="8" width="5" /></p>
+                </li>
+                <li>
+                  <p><m>\log_{2}(x)=-1</m> as an exponential equation is <m>x=</m> <var name="$exp2" width="5" /></p>
+                  <p>The value of <m>x=</m> <var name="0.5" width="5" /></p>
+                </li>
+                <li>
+                  <p><m>\log_{2}(x)=0</m> as an exponential equation is <m>x=</m> <var name="$exp3" width="5" /></p>
+                  <p>The value of <m>x=</m> <var name="1" width="5" /></p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+        </webwork>
+      </exercise>
+    </subsubsection>
+    <subsubsection>    
+      <title>Rule: The Log of a product</title>
+      <p>We start with a very simple property of exponents: <m>x^a\cdot x^b=x^{a+b}</m>. When you multiply numbers of the same base you add the exponents.</p>
+      <exercise>
+        <webwork seed="1">
+          <setup>
+              <var name="$b">
+                  <static>2</static>
+              </var>
+              <var name="$x">
+                  <static>3</static>
+              </var>
+              <var name="$y">
+                  <static>4</static>
+              </var>
+              <var name="$z">
+                  <static>7</static>
+              </var>
+              <var name="$bx">
+                  <static>8</static>
+              </var>
+              <var name="$by">
+                  <static>16</static>
+              </var>
+              <var name="$bz">
+                  <static>128</static>
+              </var>
+              <var name="$N">
+                  <static>2^7</static>
+              </var>
+              <pg-code>
+                Context()->operators->set(
+                    '**' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+                    '^' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+                );
+                $b = random(2,5,1);
+                $x = random(2,5,1);
+                do{$y=random(2,5,1)} until($x!=$y);
+                if($envir{problemSeed}==1){$b=2;$x=3;$y=4;};
+                $z=$x+$y;
+                Context()->flags->set(reduceConstants=>0);
+                $N=Formula("$b^$z");
+                $evaluator=$N->cmp(checker=>sub{
+                    my($c,$s,$aH)=@_;
+                    return 0 if $aH->{isPreview}||$c!=$s;
+                    $s=$aH->{student_formula};
+                    $c=$c->{original_formula} if defined $c->{original_formula};
+                    $s= Formula("$s");$c=Formula("$c");
+                    return 0 unless ($c==$s);
+                    Context()->flags->set(bizarroPow=>1);
+                    delete $c->{test_values}, $s->{test_values};
+                    my $OK = (($c==$s) or ($s==$c));
+                    Context()->flags->set(bizarroPow=>0);
+                    Value::Error("This is the right number, but right now you are being asked to write it in a certain exponential form.") unless $OK;
+                    return $OK;
+                });
+                Context("LimitedNumeric");
+                $bx=Real($b**$x);
+                $by=Real($b**$y);
+                $bz=Real($b**$z);
+              </pg-code>
+          </setup>
+          <statement>
+            <p>Simplify and rewrite the product <m><var name="$b" />^<var name="$x" />\cdot <var name="$b" />^<var name="$y" /></m> as one exponential expression.</p>
+            <p><m><var name="$b" />^<var name="$x" />\cdot <var name="$b" />^<var name="$y" />=</m> <var name="$N" evaluator="$evaluator" width="10" />.</p>
+            <p>Check that this is valid by using a calculator to find:</p>
+            <p><m><var name="$b" />^<var name="$x" />=</m><var name="$bx" width="10" /></p>
+            <p><m><var name="$b" />^<var name="$y" />=</m><var name="$by" width="10" /></p>
+            <p><m><var name="$b" />^<var name="$z" />=</m><var name="$bz" width="10" /></p>
+            <p>and checking that the first two multiply to the third.</p>
+          </statement>
+        </webwork>
+      </exercise>
+      <p>Now let's take some obvious information that you already concluded above to discover a not-so-obvious property of logarithms.</p>
 
-        <p>In order for this part of the activity to make sense, you have to remember what a <term>base</term> and an <term>expoenent</term> is. Remember that in the expression <m>b^x</m>, that <m>b</m> is the <term>base</term> and <m>x</m> is the exponent. The exponent literally counts how many times you multiplied the base. For instance <m>b^7</m> means <m>\overbrace{b\cdot b\cdot b\cdot b\cdot b\cdot b\cdot b}^{7\text{ times}}</m>.</p>
+      <p>Start with the simple equation <me>8\cdot16=128\text{.}</me>Apply the <m>\log_2(\phantom{x})</m> function to both sides of the equation to get <me>\log_2(8\cdot16)=\log_2(128)\text{.}</me> Notice on the right side we already know the answer (<init>i.e.</init> the power of <m>2</m> that gives you <m>128</m>)</p>
+      <exercise>
+        <webwork seed="1">
+          <setup>
+              <var name="$seven">
+                  <static>7</static>
+              </var>
+              <pg-code>
+                  $seven=7;
+              </pg-code>
+          </setup>
+          <statement>
+              <p>What power of <m>2</m> gives you <m>128</m>?</p>
+              <p><m>log_{2}(128)=</m> <var name="$seven" width="15" /></p>
+          </statement>
+        </webwork>
+      </exercise>
 
-        <subsubsection>
-            <title>Big Rule About Logs <hash />1</title>
+      <p>Now you can write the equation <m>\log_{2}(8\cdot16)=\log_{2}(128)</m> as <me>\log_{2}(8\cdot16)=7\text{.}</me></p>
 
-            <p>We start with a very simple rule for exponents: <m>x^a\cdot x^b=x^{a+b}</m>. When you multiply numbers of the same base you add the exponents.</p>
+      <p>Notice on the left side of the equation:
+        <ul>
+          <li>There are <m>3</m> factors of <m>2</m> in <m>8</m>. That's why <m>\log_{2}(8)=3</m>.</li>
+          <li>There are <m>4</m> factors of <m>2</m> in <m>16</m>. That's why <m>\log_{2}(8)=4</m>.</li>
+        </ul>So the simple equation <m>7=3+4</m>, can be written using logarithms
+         <md>
+          <mrow>7=3+4</mrow>
+          <mrow>7=\log_{2}(8)+\log_{2}(16)</mrow>
+          <mrow>\log_{2}(128)=\log_{2}(8)+\log_{2}(16)</mrow>
+          <mrow>\log_{2}(8 \cdot 16)=\log_{2}(8)+\log_{2}(16)</mrow>
+        </md>
+      </p>
 
-            <exercise>
-                <webwork seed="1">
-                    <setup>
-                        <var name="$b">
-                            <static>2</static>
-                        </var>
-                        <var name="$x">
-                            <static>3</static>
-                        </var>
-                        <var name="$y">
-                            <static>4</static>
-                        </var>
-                        <var name="$z">
-                            <static>7</static>
-                        </var>
-                        <var name="$bx">
-                            <static>8</static>
-                        </var>
-                        <var name="$by">
-                            <static>16</static>
-                        </var>
-                        <var name="$bz">
-                            <static>128</static>
-                        </var>
-                        <var name="$N">
-                            <static>2^7</static>
-                        </var>
-                        <pg-code>
-                            Context()->operators->set(
-                                '**' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
-                                '^' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
-                            );
-                            $b = random(2,5,1);
-                            $x = random(2,5,1);
-                            do{$y=random(2,5,1)} until($x!=$y);
-                            if($envir{problemSeed}==1){$b=2;$x=3;$y=4;};
-                            $z=$x+$y;
-                            Context()->flags->set(reduceConstants=>0);
-                            $N=Formula("$b^$z");
-                            $evaluator=$N->cmp(checker=>sub{
-                                my($c,$s,$aH)=@_;
-                                return 0 if $aH->{isPreview}||$c!=$s;
-                                $s=$aH->{student_formula};
-                                $c=$c->{original_formula} if defined $c->{original_formula};
-                                $s= Formula("$s");$c=Formula("$c");
-                                return 0 unless ($c==$s);
-                                Context()->flags->set(bizarroPow=>1);
-                                delete $c->{test_values}, $s->{test_values};
-                                my $OK = (($c==$s) or ($s==$c));
-                                Context()->flags->set(bizarroPow=>0);
-                                Value::Error("This is the right number, but right now you are being asked to write it in a certain exponential form.") unless $OK;
-                                return $OK;
-                            });
-                            Context("LimitedNumeric");
-                            $bx=Real($b**$x);
-                            $by=Real($b**$y);
-                            $bz=Real($b**$z);
-                        </pg-code>
-                    </setup>
-                    <statement>
-                        <p>What is <m>N</m> if <m>N=<var name="$b" />^<var name="$x" />\cdot <var name="$b" />^<var name="$y" /></m>?</p>
-                        <p><m>N=</m><var name="$N" evaluator="$evaluator" width="10" />.</p>
-                        <p>Check that this is valid by using a calculator to find:</p>
-                        <p><m><var name="$b" />^<var name="$x" />=</m><var name="$bx" width="10" /></p>
-                        <p><m><var name="$b" />^<var name="$y" />=</m><var name="$by" width="10" /></p>
-                        <p><m><var name="$b" />^<var name="$z" />=</m><var name="$bz" width="10" /></p>
-                        <p>and checking that the first two multiply to the third.</p>
+      <p><em>What???</em></p>
 
-                    </statement>
-                </webwork>
-            </exercise>
-            <p>Now let's take some obvious information that you already concluded above to discover a not-so-obvious property of logarithms.</p>
+      <p>Yes, you just discovered that <me>\log_2(8\cdot16)=\log_2(8)+\log_2(16)\text{.}</me> In fact this property applies to all <m>log_{b}(x)</m></p>
+      <exercise>
+        <webwork>
+          <statement>
+            <p>Can you evaluate <m>\log_{3}(243)</m> without a calculator? Of course you can.</p>
+            <p><m>243=9 \cdot 27</m> therefore <m>\log_{3}(243)=\log_{3}(9 \cdot 27)</m> so that <me>\log_{3}(243)=\log_{3}(9)+\log_{3}(27)</me></p>
+            <p>What power of <m>3</m> gives you <m>9</m>? <m>\log_{3}(9)=</m> <var name="2" width="5" /></p>
+            <p>What power of <m>3</m> gives you <m>27</m>? <m>\log_{3}(27)=</m> <var name="3" width="5" /></p>
+            <p>Therefore <m>\log_{3}(243)=</m> <var name="5" width="5" /></p>
+          </statement>
+        </webwork>
+      </exercise>
 
-            <p>Start with the simple equation <me>8\cdot16=128\text{.}</me>Apply the <m>\log_2(\phantom{x})</m> funciton to both sides of the equation to get <me>\log_2(8\cdot16)=\log_2(128)\text{.}</me> Notice on the right side we already know the answer.</p>
-            <exercise>
-                <webwork seed="1">
-                    <setup>
-                        <var name="$seven">
-                            <static>7</static>
-                        </var>
-                        <pg-code>
-                            $seven=7;
-                        </pg-code>
-                    </setup>
-                    <statement>
-                        <p>What power of <m>2</m> gives you <m>128</m>?</p>
-                        <p><var name="$seven" width="15" /></p>
-                    </statement>
-                </webwork>
-            </exercise>
+      <p>In general, <em>for any base</em></p>
+      <assemblage>
+        <p><me>\log_b(A\cdot B)=\log_b(A)+\log_b(B)\text{.}</me></p>
+      </assemblage>
+    </subsubsection>
+    <subsubsection>
+      <title>Rule: Bring Down the Exponent</title>
+      <p>We start with something obvious. You already know that instead of writing <m>8+8+8+8</m> you could just write <m>4\cdot8</m>.</p>
+      <p>Maybe you never thought about it, but multiplication is just repeated addition. It's a shortcut way to write the same thing <em>added</em> over and over.</p>
+      <p>On the other hand, exponents are just repeated multiplication. Exponents are a shortcut way to write the same thing <em>multiplied</em> over and over.</p>
 
-            <p>Now you can write the equation as <me>\log_2(8\cdot16)=7\text{.}</me></p>
+      <p>Consider the expression <m>\log(8\cdot8\cdot8\cdot8)</m>. We can use some shortcuts to write the expression in at least two different ways.<me>\log(8\cdot8\cdot8\cdot8)=\log\mathopen{}\left(8^4\right)\mathclose{}</me> and using the last rule we discovered about the log of a product <me>\log(8\cdot8\cdot8\cdot8)=\log(8)+\log(8)+\log(8)+\log(8)\text{.}</me></p>
+      <p>Since both shortcuts must give the same answer, we get<me>\log\mathopen{}\left(8^4\right)\mathclose{}=\log(8)+\log(8)+\log(8)+\log(8)</me></p>
 
-            <p>Check this out on the left side of the equation:<ul>
-                <li>There are <m>3</m> factors of <m>2</m> in <m>8</m>. That's why <m>\log_2(8)=3</m>.</li>
-                <li>There are <m>4</m> factors of <m>2</m> in <m>16</m>. That's why <m>\log_2(8)=4</m>.</li>
-            </ul>Since <m>3+4=7</m>, then we know that <me>\log_2(8)+\log_2(16)=7\text{.}</me></p>
-
-            <p><em>What???</em></p>
-
-            <p>Yes, you just discovered that <me>\log_2(8\cdot16)=\log_2(8)+\log_2(16)\text{.}</me> In fact it does not matter what the base is.</p>
-
-            <exercise>
-                <webwork seed="1">
-                    <setup>
-                        <var name="$log128">
-                            <static>2.107</static>
-                        </var>
-                        <pg-code>
-                            $log128=ln(128)/ln(10);
-                            Context("LimitedNumeric");
-                            $log128=Real($log128);
-                        </pg-code>
-                    </setup>
-                    <statement>
-                        <p>Use your calculator to find log base <m>10</m> of <m>128</m>:</p>
-                        <p><m>\log(128)=</m><var name="$log128" width="15" /></p>
-                        <p>Since <m>128=8\cdot16</m>, you can also use your calculator to find <m>\log(8)+\log(16)</m>:</p>
-                        <p><m>\log(8)+\log(16)=</m><var name="$log128" width="15" /></p>
-                    </statement>
-                </webwork>
-            </exercise>
-
-            <p>In general, <em>for any base</em>, <me>\log_b(A\cdot B)=\log_b(A)+\log_b(B)\text{.}</me> Remember this rule! Put it on a note card for your next exam.</p>
-
-        </subsubsection>
-
-        <subsubsection>
-            <title>Big Rule About Logs <hash />2</title>
-            <p>Again, let's start with something obvious. You already know that instead of writing <m>8+8+8+8</m> you could just write <m>4\cdot8</m>. Maybe you never thought about it, but multiplication is just repeated addition. It's a shortcut way to write the same thing over and over. On the other hand, exponents are just repeated multiplication. Exponents are a shortcut way to write the same thing <em>multiplied</em> over and over.</p>
-
-            <p>Consider the expression <m>\log(8\cdot8\cdot8\cdot8)</m>. We can use some shortcuts to write the expression in at least two different ways.<me>\log(8\cdot8\cdot8\cdot8)=\log\mathopen{}\left(8^4\right)\mathclose{}</me> and <me>\log(8\cdot8\cdot8\cdot8)=\log(8)+\log(8)+\log(8)+\log(8)\text{.}</me> This last equation is using Big Rule <hash />1.</p>
-
-            <exercise>
-                <webwork>
-                    <setup>
-                        <var name="$answer">
-                            <static>4\log(8)</static>
-                        </var>
-                        <pg-code>
-                            Context("LimitedRadical");
-                            $answer=Formula("4*log(8)");
-                        </pg-code>
-                    </setup>
-                    <statement>
-                        <p>Instead of writing the same term added over and over, rewrite <m>\log(8)+\log(8)+\log(8)+\log(8)</m> using multiplication:</p>
-                        <p><m>\log(8)+\log(8)+\log(8)+\log(8)=</m><var name="$answer" width="10" /></p>
-                    </statement>
-                </webwork>
-            </exercise>
-
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$answer">
+                <static>4\log(8)</static>
+            </var>
+            <var name="$c">
+                <static>4</static>
+            </var>
+            <var name="$N">
+                <static>x</static>
+            </var>
+            <pg-code>
+                Context("LimitedRadical");
+                $answer=Formula("4*log(8)");
+                $c=4;
+                $N=Formula("x");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>Multiplication is shorthand for repeated addition. So, adding <m>Q</m> four times is <me>Q+Q+Q+Q=4 \cdot Q</me> Use the same shorthand to rewrite the repeated sum</p>
+            <p><m>\log(8)+\log(8)+\log(8)+\log(8)=</m> <var name="$answer" width="10" /> (hint: how many times is <m>\log(8)</m> repeated?)</p>
             <p>So here is the big finale:</p>
-
-            <exercise>
-                <webwork>
-                    <setup>
-                        <var name="$c">
-                            <static>4</static>
-                        </var>
-                        <var name="$N">
-                            <static>N</static>
-                        </var>
-                        <pg-code>
-                            $c=4;
-                            Context()->variables->add(N=>'Real');
-                            $N=Formula("N");
-                        </pg-code>
-                    </setup>
-                    <statement>
-                        <p><m>\log(8^4)=</m><var name="$c" width="2" /><m>{}\cdot\log(8)</m></p>
-                        <p><m>\log(x^N)=</m><var name="$N" width="2" /><m>{}\cdot\log(x)</m></p>
-                    </statement>
-                </webwork>
-            </exercise>
-
-            <p>Watch these examples of how these rules are used to solve problems:</p>
-            <todo>Original Maple has links to some screencast.com videos that are 404</todo>
-
-        </subsubsection>
-    </subsection>
+            <p><m>\log(8^4)=</m><var name="$c" width="2" /><m>{}\cdot\log(8)</m></p>
+            <p>In general</p>
+            <p><m>\log(N^x)=</m><var name="$N" width="2" /><m>{}\cdot\log(N)</m></p>
+          </statement>
+        </webwork>
+      </exercise>
+      <assemblage><p>A very important rule: <me>log_{b}(N^{x})=x \log_{b}(N)</me></p></assemblage>
+    </subsubsection>
+    <subsubsection>
+      <title>Rule: Log of a Quotient</title>
+      <p>This rule you will discover using the two rules you already know.</p>
+      <p>Remember that a negative exponent means <q>reciprocal</q> so a quotient can be rewritten as a product <me>\frac{Q}{P}=Q \cdot P^{-1}</me></p>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$prod">
+                <static>log(A*B^-1)</static>
+            </var>
+            <var name="$term1">
+                <static>log(A)</static>
+            </var>
+            <var name="$term2">
+                <static>log(B^-1)</static>
+            </var>
+            <var name="$term3">
+                <static>-log(B)</static>
+            </var>
+            <pg-code>
+                Context()->variables->add(A=>'Real', B=>'Real');
+                $prod=Compute("log(A*B^-1)");
+                $term1=Compute("log(A)");
+                $term2=Compute("log(B^-1)");
+                $term3=Compute("-log(B)");
+                $N=Formula("x");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>Consider the expression <m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}</m></p>
+            <p>Use a negative exponent to rewrite the fraction inside the log function as a product.</p>
+            <p><m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=</m><var name="$prod" width="10" /></p>
+            <p>The right side of the equation is now a product of two values.</p>
+            <p>Use the rule <m>\log_b(A\cdot B)=\log_b(A)+\log_b(B)</m> to rewrite the right side as the sum of two log terms.</p>
+            <p><m><var name="$prod" />=</m><var name="$term1" width="10" /><m>+</m><var name="$term2" width="10" /></p>
+            <p>The last term on the right side has a value with a negative exponent. Use the rule <m>log_{b}(N^{x})=x \log_{b}(N)</m> to bring down the negative exponent so the second term is now <q>adding a negative</q>. Rewrite the right side after the negative exponent is brought down.</p>
+            <p><m><var name="$prod" />=</m><var name="$term1" width="10" /><m>+</m><var name="$term3" width="10" /></p>
+            <p>The entire right side can now be written as a difference (subtraction).</p>
+          </statement>
+        </webwork>
+      </exercise>
+      <assemblage>
+        <p><me>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=\log_{b}(A)-\log_{b}(B)</me></p>
+      </assemblage>
+    </subsubsection>
+  </subsection>
 </section>
