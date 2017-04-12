@@ -80,10 +80,10 @@
         </exercise>
 
       <paragraphs>
-        <p>One natural question to ask is <q>How does changing the input alter the <em>graph</em> of <m>f(x)</m>?</q> It turns out that subtracting <m>3</m> from the input would move the graph of <m>f</m> to the right by <m>3</m> units, and adding <m>4</m> to the output would move the graph to the left by <m>1</m> unit. This is called a horizontal <term>translation</term> (or horizontal <term>shift</term>).</p>
+        <p>One natural question to ask is <q>How does changing the input alter the <em>graph</em> of <m>f(x)</m>?</q> It turns out that adding a number to the input of a function will move the graph to the left or the right. This is called a <index><main>horizontal translation</main></index><index><main>translation</main><sub>horizontal</sub></index>horizontal translation (or horizontal shift).</p>
         <p>In short:
-            <blockquote>Adding a number to the input will shift the graph to the <em>left</em>.</blockquote>
-            <blockquote>Subtracting a number from the input will shift the graph to the <em>right</em>.</blockquote>
+            <blockquote>Adding a <em>positive</em> number to the input will shift the graph to the <em>left</em>.</blockquote>
+            <blockquote>Adding a <em>negative</em> number to the input will shift the graph to the <em>right</em>.</blockquote>
         </p>
         <p>In fact, whenever you do anything to the input of a function, the result is some kind of horizontal change to the graph.</p>
         <exercise>
@@ -125,10 +125,10 @@
           </webwork>
         </exercise>
 
-        <p>On the other hand, if you make changes to the output of the function, it will affect the graph <em>vertically</em>. In this section, we see that adding or subtracting from the output will produce a vertical translation of the graph up or down.</p>
+        <p>On the other hand, if you make changes to the <em>output</em> of the function, it will affect the graph <em>vertically</em>. Adding a number to the output of a function will produce a <index><main>vertical translation</main></index><index><main>translation</main><sub>vertical</sub></index>vertical translation of the graph up or down.</p>
         <p>In short:
-            <blockquote>Adding a number to the ouput will shift the graph <em>up</em>.</blockquote>
-            <blockquote>Subtracting a number from the output will shift the graph <em>down</em>.</blockquote>
+            <blockquote>Adding a <em>positive</em>number to the output will shift the graph <em>up</em>.</blockquote>
+            <blockquote>Adding a <em>negative</em>number to the output will shift the graph <em>down</em>.</blockquote>
         </p>
         <exercise>
           <webwork>
@@ -148,6 +148,55 @@
             </solution>
           </webwork>
         </exercise>
+      </paragraphs>
+      <paragraphs><title>Direction of the Translation</title>
+        <p>It should be clear why adding a positive number to the output will move the graph <em>up</em>, and adding a negative number to the output will move the graph <em>down</em> <mdash /> the output of a function is shown as the <m>y</m>-coordinate of a point on the graph, so adding to the output means adding to the <m>y</m>-coordinates. This produces a direct change in the <m>y</m>-coordinates, either upward or downward.</p>
+        <p>However, it may have surprised you to see that it was the opposite with horizontal shifts <mdash /> adding a positive number to the input moved the graph to the <em>left</em>, and a negative number moved the graph to the <em>right</em>. To see why this should be, let us first think about a particular horizontal shift in the next example.</p>
+        <example>
+          <statement>
+            <p>The function <me>f(t) = 32t</me> represents the speed, measured in feet per second, of an object that was dropped from the top of a tall building at time <m>t = 0</m> seconds. The value <me>f(2) = 64</me> means that after falling for <m>2</m> seconds, the object will be travelling at <m>64</m> feet per second.</p>
+            <p>If another object was dropped <m>1</m> second after the timer was started, then its speed at <m>2</m> seconds would only be <m>f(1) = 32</m> feet per second. It experiences the same speeds that the first object had <m>1</m> second earlier.</p>
+            <p>That is, for any time <m>t</m>, the object that was dropped <m>1</m> second late would have a speed <m>f(t - 1)</m>. See the graphs below.</p>
+            <sidebyside widths="47% 47%">
+              <figure xml:id="figure-noninvertible-function">
+                <caption><m>f(t) = 32t</m>: Dropped at time <m>t = 0</m></caption>
+                <image>
+                  <latex-image-code>
+                    <![CDATA[
+                      \begin{tikzpicture}
+                        \begin{axis}[xmax=4, xmin=-0.5,
+                                    ymax=100, ymin=-10,
+                                    ytick={},
+                                    minor ytick={}]
+                          \addplot+[domain=0:4] {32*x};
+                        \end{axis}
+                      \end{tikzpicture}
+                    ]]>
+                    </latex-image-code>
+                </image>
+              </figure>
+              <figure xml:id="figure-invertible-function">
+                <caption><m>f(t-1) = 32(t-1)</m>: Dropped at time <m>t = 1</m></caption>
+                <image>
+                  <latex-image-code>
+                    <![CDATA[
+                      \begin{tikzpicture}
+                        \begin{axis}[xmax=4, xmin=-0.5,
+                                    ymax=100, ymin=-10,
+                                    ytick={},
+                                    minor ytick={}]
+                          \addplot+[domain=1:4] {32*(x-1)};
+                        \end{axis}
+                      \end{tikzpicture}
+                    ]]>
+                  </latex-image-code>
+                </image>
+              </figure>
+            </sidebyside>
+            <p>The first speed graph would be shifted to the <em>right</em> by <m>1</m> second to make the speed graph for the object that was dropped <m>1</m> second late.</p>
+          </statement>
+        </example>
+
       </paragraphs>
 
 
@@ -393,8 +442,6 @@
             <p>By moving the slider, you can change the time at which the tea stopped heating and began to cool. For instance, if it began to cool at <m>9:20</m> A.M., then the graph would be exactly the same <mdash /> just shifted to the <em>right</em> by <m>20</m> minutes.</p>
             <p>This corresponds to subtracting <m>20</m> from the input of the function <m>f</m>.</p>
           </statement>
-          <solution>
-          </solution>
         </webwork>
       </exercise>
       <exercise>
