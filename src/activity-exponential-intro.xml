@@ -267,7 +267,7 @@
     </example>
     <example>
       <blockquote>
-        <p><em>In 2012 the average rent was $2,225. Every year it has risen roughly a hundred dollars. But in late 2016, the rental market suddenly becoming flat.</em></p>
+        <p><em>In 2012 the average rent was $<m>2,225</m>. Every year it has risen roughly a hundred dollars. But in late 2016, the rental market suddenly became flat.</em></p>
         <p><em><q>If I were to bet, I would bet that prices are on the way down. I would bet the tenants and buyers are going to have the upper hand probably for the next two or three years,</q> said real estate broker Peter Zalewski.</em></p>
         <p><mdash/><q>After Years Of Price Hikes, South Florida's Rental Market Entering New Era Of Decline</q>, David Sutta, CBS Miami, March 29, 2017</p>
       </blockquote>
@@ -447,8 +447,8 @@
             <p>The outputs are changing by repeatedly adding <var name="0.72" width="6" /></p>
           </statement>
           <solution>
-            <p>To find the added number, we calcualte the difference between the outputs. In other words, subtract.</p>
-            <p>Take any output and subtract the previous output, you always get the same number. <me>11.34-10.62=0.72</me></p></solution>
+            <p>To find the added number, we calculate the difference between the outputs. In other words, we subtract.</p>
+            <p>Take any output and subtract the previous output, and you always get the same number: <me>11.34-10.62=0.72</me></p></solution>
         </stage>
       </webwork>
     </exercise>
@@ -526,11 +526,11 @@
             </p>
           </statement>
           <solution>
-            <p>To find the mulitplied number, calculate the quotient. In other words, divide.</p>
+            <p>To find the mulitplied number (the factor), calculate the quotient. In other words, we divide.</p>
             <p>
               <ol label="a">
-                <li><p>Take any output and divide by the previous output, you always get the same number <me>\frac{11.36}{10.62} \approx 1.07</me></p>
-                <p><em>There may be some variance due to rounding of the values in the table itslef.</em></p></li>
+                <li><p>Take any output and divide by the previous output, and you will always get the same number <me>\frac{11.36}{10.62} \approx 1.07</me></p>
+                <p><em>There may be some variance due to rounding of the values in the table itself.</em></p></li>
                 <li>A growth factor of <m>1.07</m> corresponds to a <m>7 \%</m> increase.</li>
               </ol>
             </p>
@@ -657,7 +657,7 @@
         <p>
           <ol label="a" >
             <li>
-              <p>Since <m>2 \%</m> has a decimal equivalent of <me>r=0.02</me> Therefore a decrease is calculated using a growth factor of 
+              <p>Since <m>2 \%</m> has a decimal equivalent of <me>r=0.02</me>, then a decrease is calculated using a growth factor of: 
               <md alignment="gather">
                 <mrow>b \amp =1-r</mrow>
                 <mrow>b \amp =1-0.02</mrow>
@@ -750,8 +750,7 @@
       <p>You will find the word <term>compounded</term> in the exercises that follow.</p>
       <p><term>Compounding</term><index><main>compounding</main></index> is the process of repeatedly increasing or decreasing by a percent. It refers to the fact that increasing or decreasing a number by a percent is really a change by a fraction that number.</p>
       <p>Therefore consecutive percent increase (or decrease) is always based on a fraction of a number that is already greater (or lesser) than the initial number.</p>
-      <p>Compounding also tells us how often a percent change is calculated. Most often the term is used in finance, .</p>
-      <p>For instance, if the percent interest on a loan is compounded monthly it means interest is calculated every month. Compounded annually means interest is calculated each year, <init>etc.</init></p>
+      <p>Compounding also tells us how often a percent change is calculated. For instance, if the percent interest on a loan is compounded monthly, it means interest is calculated every month. Compounded annually means interest is calculated each year, <init>etc.</init></p>
       <p>In the expression <m>500\cdot 1.15\cdot 1.15\cdot 1.15</m> the value <m>500</m> has been increased by <m>15 \%</m> compounded three times.</p>
       </assemblage>
       <p>A common form for a linear equation is <m>y = mx + b</m>, although there are others. Exponential equations have their own form too. In this part of the activity we use a table of values to find a pattern in constant percent growth or decay then find a form for exponential functions.</p>
@@ -804,7 +803,7 @@
 
               <solution>
                   <p>Both patterns are exactly the same.  One shows the results and the other shows how to get the results.</p>
-                  <p>Most likely you found the second pattern to be the easiest to predict.  Because you can see <em>how</em> you got the answers.</p>
+                  <p>Most likely you found the second pattern to be the easiest to predict because you can see <em>how</em> you got the answers.</p>
                   <p>The first pattern shows only the results, so all you see is numbers without any clue how they were found.</p>
                   <p>In each case the next value is <var name="$Next1" />, but in the second pattern you can predict the calculation to be <me>5\cdot 2\cdot 2\cdot 2\cdot 2\cdot  + 5 = 165 </me></p>
               </solution>
@@ -979,12 +978,12 @@
         </webwork>
       </exercise>
       <p>Now we have general forms for both linear <me>y=mx+b</me> and exponential <me>y=ab^{x}</me> equations.</p>
-      <p>In the linear equation <me>y=mx+b</me> the variable <q><m>b</m></q> is sometimes referred to as the initial value. On a graph it represents the vertical intercept while <m>m</m> represents the rate of change (slope). The rate of change tells us the rate of increase (or decrease) <em>per unit</em> input.</p>
-      <p>The variable <q><m>x</m></q> counts how many times the rate of change is added to the initial value.</p>
-      <p>In the exponential equation <me>y = ab^{x}</me> the initial value is represent by <q><m>a</m></q> and <q><m>b</m></q> is the growth factor.</p>
-      <p>The growth factor tells us the percent increase (or decrease) <em>per unit</em> input while the variable <q><m>x</m></q> in this case counts how many times the growth factor is multiplied.</p>
-      <p>Finding the growth factor <q>per unit</q> in an exponential formula can be tricky. It may be we have been thinking in terms of constant rate of change (linear) for so long, we often think everything is linear.</p>
-      <p>We need a way to convert a statement like, <q><m>60 \%</m> over <m>3</m> years</q> into a statement about the percent growth <q>per year</q>. A good start is to remind ourselves how repeated addition is different than repeated multiplication.</p>
+      <p>In the linear equation <me>y=mx+b</me> the variable <m>b</m> is sometimes referred to as the initial value. On a graph it represents the vertical intercept while <m>m</m> represents the rate of change (slope). The rate of change tells us the rate of increase (or decrease) <em>per unit</em> input.</p>
+      <p>The variable <m>x</m> counts how many times the rate of change is added to the initial value.</p>
+      <p>In the exponential equation <me>y = ab^{x}</me> the initial value is represent by <m>a</m>, and <m>b</m> is the growth factor.</p>
+      <p>The growth factor tells us the percent increase (or decrease) <em>per unit</em> input while the variable <m>x</m> in this case counts how many times the growth factor is multiplied.</p>
+      <p>Finding the growth factor <em>per unit</em> in an exponential formula can be tricky. It may be we have been thinking in terms of constant rate of change (linear) for so long, we often think everything is linear.</p>
+      <p>We need a way to convert a phrase like <q><m>60 \%</m> over <m>3</m> years</q> into one about the percent growth <em>per year</em>. A good start is to remind ourselves how repeated addition is different than repeated multiplication.</p>
       <exercise>
         <introduction>
           <p>Is one decrease of <m>60</m> students the same as three decreases of <m>20</m> students?</p>
@@ -1104,9 +1103,9 @@
         </webwork>
       </exercise>
       <p>As we found in the last exercise, given a change of <m>60 \%</m> over three years, we cannot simply divide <m>60 \%</m> by <m>3</m> to find the annual percent change. Because of compounding, three <m>20 \%</m> increases is actually more than one <m>60 \%</m> increase.</p>
-      <p>To derive an exponential formula of the form <m>y=ab^{x}</m>, the goal is to find the values <em>a</em> and <em>b</em> for the specific problem, then you're done!</p>
+      <p>To derive an exponential formula of the form <m>y=ab^{x}</m>, the goal is to find the values <m>a</m> and <m>b</m> for the specific problem, then you're done!</p>
       <p>Practice finding exponential formulas for three different examples.</p>
-      <p>In each example we will use time, t, as the input. But, the strategy will be the same regardless of what variable we use:</p>
+    <p>In each example we will use time, <m>t</m>, as the input. But the strategy will be the same regardless of what variable we use:</p>
       <p>
         <ul>
           <li>
@@ -1128,7 +1127,7 @@
         <introduction>
           <p>Derive a formula for a population <m>P(t)</m> of bacteria that increases by a constant percent every <m>3</m> hours. Let <m>t</m> be time in hours.</p>
           <blockquote>
-            <p><term>Strategy</term>: Find the overall growth factor that spans the given span of time and use to it to find the hourly growth factor (per <m>1</m> hour).</p>
+            <p><term>Strategy</term>: Find the overall growth factor for the given span of time and use to it to find the hourly growth factor (per <m>1</m> hour).</p>
           </blockquote>
         </introduction>
         <webwork>
@@ -1161,7 +1160,7 @@
             <stage>
               <statement>
                   <p>A population <m>P(t)</m> of <m><var name="$a" /></m> bacteria increases by <m><var name="$p" />\,\%</m> every <m>3</m> hours. Let <m>t</m> be time in hours.</p>
-                  <p>The formula is going to look something like <m>P(t) = ab^{t}</m>.  Our goal is to find values for <m>a</m> and <m>b</m> then we're done!</p>
+                  <p>The formula is going to look something like: <m>P(t) = ab^{t}</m>.  Our goal is to find values for <m>a</m> and <m>b</m>.</p>
                   <p>
                     <ol label="a" >
                       <li>
@@ -1195,9 +1194,9 @@
                       <li>
                         <p>In the span of <m>3</m> hours, the <term>hourly growth factor</term> <m>b</m> has been compounded three times (multiplied by itself three times) to equal an overall growth factor of <m><var name="$b" /></m></p>
                         <p>In English, our problem can be stated like this</p>
-                        <p><em>An unknown number is multipied three times to get an overall percent increase of <m><var name="$p" />\, \%</m>. What is the unkown number?</em></p>
-                        <p>In math, that statement looks like this</p>
-                        <p>Solve for <m>b</m> if <m>b^{3} = </m> <var name="$b" /></p>
+                        <p><em>An unknown number is multipied three times to get an overall percent increase of <m><var name="$p" />\, \%</m>. What is the unknown number?</em></p>
+                        <p>In math, that statement looks like this:</p>
+                        <p>Solve for <m>b</m> if <m>b^{3} = </m> <var name="$b" />.</p>
                         <p>Solving the equation we get <m>b \approx </m> <var name="$bRoot" width="5" /> <em>(round your answer to <m>4</m> decimal places</em>).</p>
                       </li>
                       <li>
@@ -1234,7 +1233,7 @@
         <introduction>
           <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie, in degrees fahrenheit, as a function of time, <m>t</m> in hours. The initial temperature and one other ordered pair are known.</p>
           <blockquote>
-            <p><term>Strategy</term>: Find the overall growth factor that spans the given span of time and use to it to find the hourly growth factor (per <m>1</m> hour).</p>
+            <p><term>Strategy</term>: Find the overall growth factor for the given span of time and use to it to find the hourly growth factor (per <m>1</m> hour).</p>
           </blockquote>
         </introduction>
         <webwork>
@@ -1294,7 +1293,7 @@
                   <li>
                     <p>Next, we will find the overall growth factor and use it to determine the hourly growth factor <m>b</m>.</p>
                     <p>The pie decreases in temperature from <m><var name="$a" /></m> degrees to <m><var name="$finalTemp" /></m> degrees.  What is the overall growth factor associated with this temperature decrease?</p>
-                    <p>Overall growth factor is  <var name="$b" width="5" /> <em>(you can enter the exact fraction or you can enter a number rounded to <m>4</m> decimal places).</em></p>
+                    <p>The overall growth factor is: <var name="$b" width="5" /></p>
                   </li>
                 </ol>
               </p>
@@ -1303,7 +1302,7 @@
             <p>
               <ol>
                 <li>
-                  <p>What is the initial temperature of the pie? <m>a = <var name="$a" /></m> degrees fahrenheit.</p>
+                  <p>What is the initial temperature of the pie? <m>a = <var name="$a" /></m> degrees Fahrenheit.</p>
                   <p>Use the two temperatures to find the overall growth factor</p>
                   <p><m>\frac{<var name="$finalTemp" />}{<var name="$a" />} = <var name="$b" /></m></p>
                   <p>After four hours we have <m>b^{4} = <var name="$b" /></m></p>
@@ -1328,7 +1327,7 @@
                     <p>The exponential formula for temperature as a function of time is <m>f(t) = </m> <var name="$a" width="5" /><m>\cdot </m>( <var name="$bRoot" width="5" /> )<m>^t</m></p>
                   </li>
                   <li>
-                    <p>Use <m>b</m> (hourly growth factor) to determine the hourly percent loss in temperature? <var name="$pRoot" width="5" /><m>\,\%</m> <em>(round your answer to <m>2</m> decimal places.)</em></p>
+                    <p>Use <m>b</m> (hourly growth factor) to determine the hourly percent loss in temperature. Answer: <var name="$pRoot" width="5" /><m>\,\%</m></p>
                   </li>
                 </ol>
               </p>
@@ -1416,8 +1415,8 @@
         
         <stage>
           <statement>
-            <p><em>The temperature of a pie is <m><var name="$a" /></m> degrees fahrenheit <m>3</m> <units>hours</units> after being removed from the oven.  After <m>8</m> <units>hours</units> out of the oven the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</em></p>
-            <p><em>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in <units>hours</units>.</em></p>
+            <p>The temperature of a pie is <m><var name="$a" /></m> degrees Fahrenheit <m>3</m> <units>hours</units> after being removed from the oven.  After <m>8</m> <units>hours</units> out of the oven the temperature of the pie is <m><var name="$finalTemp" /></m> degrees Fahrenheit.</p>
+            <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in <units>hours</units>.</p>
             <p>The formula is going to look something like <m>f(t) = ab^{t}</m>.</p>
             <p>The pie went from an temperature of <m><var name="$a" /></m> degrees to a lower temperature of <m><var name="$finalTemp" /></m> degrees in a time span of <var name="5" width="4" /> <units>hours</units>.</p>
           </statement>
@@ -1522,11 +1521,11 @@
   </subsection>
   <subsection>
     <title>Graphs of Exponential Functions</title>
-    <p>To explore the graph of exponential functions it may help to compare them to the graphs of linear functions since we already have some experience with them.</p>
+    <p>To explore the graphs of exponential functions it may help to compare them to the graphs of linear functions since we already have some experience with them.</p>
     <p>In the following examples we track the position of an ant over time using both a linear model and an exponential model.</p>
     <exercise>
       <introduction>
-        <p>An ant is intially 150 inches from a wall.  Each minute the ant walks 25 inches towards the wall.</p>
+        <p>An ant is intially <m>150</m> inches from a wall, and each minute it walks <m>25</m> inches towards the wall.</p>
       </introduction>
         <webwork>
             <setup>
@@ -1825,7 +1824,7 @@
               </tabular>
             </p>
             <p>Notice that even at <m>t=40</m> the answer is small, but it is not zero.</p>
-            <p>In fact, there is no way to actually get to zero. No matter how much time goes by, <m>25 \%</m> of any non-zero number is always non-zero. The ant will never get to the wall.</p>
+            <p>In fact, there is no way to actually get to zero. No matter how much time goes by, <m>25 \%</m> of any non-zero number is always non-zero. The ant will never get to the wall!</p>
           </statement>
           <solution>
             <p>
@@ -1859,7 +1858,7 @@
         <stage>
           <statement>
             <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PrTES8KJ/width/431/height/330/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="330px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>The ponts from the table are plotted on the graph of the function. Though it may seem like the graph eventully touches the horizontal axis, we know from the values in the table it does not.</p>
+            <p>The points from the table are plotted on the graph of the function. Though it may seem like the graph eventually touches the horizontal axis, we know from the values in the table that it does not.</p>
             <p>In this case we say the horizontal axis is a <term>horizontal asymptote</term>.</p>
             <p>What is the equation for the horizontal axis (<init>i.e.</init> a line that is zero units high)?</p>
             <p>The equation is <m>y = </m> <var name="0" width="4" /></p>
@@ -1870,7 +1869,7 @@
         </stage>
       </webwork>
     </exercise>
-    <p>All exponential functions have horizontal asymptotes.  The equation for a horizontal asymptote is <m>y=k</m> where <m>k</m> is the height of the horizontal line the function approaches.</p>
+    <p>All exponential functions (of this form) have horizontal asymptotes.  The equation for a horizontal asymptote is <m>y=k</m> where <m>k</m> is the height of the horizontal line the function approaches.</p>
     <p>In the last example the function decreases to near zero, so <m>y=0</m> is the equation of the horizontal asymptote.</p>
   </subsection>
 </section>
