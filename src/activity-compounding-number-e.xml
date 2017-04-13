@@ -11,41 +11,39 @@
 ## ********************************************************************* ##
 -->
 <section xml:id="activity-compounding-number-e" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Introducing the number e, Continous Compounding</title>
+  <title>Compounding in Finance, Continous Compounding and the Number <m>e</m></title>
   <introduction>
-    <p>A car travels from Portland, OR to Seattle, WA (up to about <m>200</m> miles) in the span of <m>4</m> hours.  This is an average speed of <m>200/4 \approx 50</m> miles per hour. </p> 
-
-    <p>We can use this information to write equations for the distance, D miles, from Portland as functions of time, t hours, in two different ways:</p>
-    <p><m>D = 200/4 \cdot  t</m> or <m>D = 50\cdot t</m></p>
+    <p>In <xref ref="activity-exponential-intro">Activity</xref>, we learned to calculate the <q>per unit</q> growth factor using an overall percent change between two values.</p>
+    <p>In this activity we first explore the meaning of exponential notation in the context of some real situations and learn to directly communicate our observations into an equation.</p>
+    <p>By the end of this activity we develop a new form of the exponential function called the <term>continuous</term> model.</p>
+  </introduction>
+    <subsection>
+    <title>Interpreting the Exponential Form</title>
+    <p>Consider a car that travels from Portland, OR to Seattle, WA (about <m>200</m> <units>miles</units>) in the span of <m>4</m> <units>hours</units>.  The trip is completed at an average speed of <m>200/4 = 50</m> <units>miles per hour</units>. We can use this information to write equations for the distance, <m>D</m> <units>miles</units>, from Portland as functions of time, <m>t</m> <units>hours</units>, in two different ways:</p>
+    <p><m>D = \frac{200}{4} \cdot  t</m> or <m>D = 50\cdot t</m></p>
     <p>Some may argue these are the same formula. But are they?</p>
-    <p>The first equation states <m>200</m> miles were covered in the span of <m>4</m> hours.  This is something that actually happened. It’s in the data.</p>
-    <p>The second equation states <m>50</m> miles were covered in <m>1</m> hour. We don’t know if this actually happened, it’s just an average rate of change.</p>
+    <p>The first equation states <m>200</m> <units>miles</units> were covered in the span of <m>4</m> <units>hours</units>.  This is something that actually happened. It’s in the data.</p>
+    <p>The second equation states that <m>50</m> <units>miles</units> were covered in <m>1</m> <units>hour</units>. We don’t know if this actually happened <mdash /> it’s just an average rate of change. There may not have been any hour during the trip in which the car traveled exactly <m>50</m> <units>miles</units>.</p>
     <p>Both equations will give us the same results, but each one tells a different story.</p>
-    <p>In the activity, <em>Introduction to Exponential Functions</em> we learned to calculate the per unit growth factor using an overall percent change between two values.</p>
-    <p>In this activity we first explore the meaning of exponential notation in the context of some real situations and see how it can help us comunicate our observations. Later we expand on this knowledge to build a new form of the exponential function called the <q>continuous</q> model.</p>
+    <p>There is a difference between an obeserved result and a calculated result.</p>
     <example>
-      <p><q>A <m>20 \%</m> increase in the span of <m>5</m> years</q>, means the annual, <em>per year</em> growth factor <q>b</q> has been compounded <m>5</m> times for an overall <m>20 \%</m> increase (multiple of <m>1.2</m>)</p>
-      <p>Therefore, 
+      <blockquote><p><em>The value of a particular stock has increased by <m>20 \%</m> over the last <m>5</m> years.</em></p></blockquote>
+      <p>In this example the increase in stock value was actually measured as <m>20 \%</m> and it actually took <m>5</m> <units>years</units> for the increase to occur.</p>
+      <p>When we calculate the <em>per year</em> growth factor, <q>b</q></p>
+      <p> 
       <md>
         <mrow>b^{5} \amp= 1.2</mrow>
         <mrow>b \amp= 1.2^{1/5}</mrow>
         <mrow>b \amp= 1.0371</mrow>
       </md>
-      which represents an average increase of approximately a <m>3.71 \%</m> per year.</p>
-    </example>
-    <p>There is a difference between an obeservation and a calculation.  In the previous example, there really was a <m>20 \%</m> increase and it actually occurred over <m>5</m> years.  The value of <m>3.71 \%</m> annual increase is something we calculated with the given data which is an average annual percent growth.</p>
-  </introduction>
-
-  <subsection>
-    <title>Interpreting the Exponential Form</title>
+      It represents an average increase of approximately a <m>3.71 \%</m> per year. But that increase may or may not have actually happened in any one year <mdash /> again, it is only an <em>average</em> annual percent change.</p>
+    </example>    
     <p>Earlier we learned that exponents <q>count</q> how many times the growth factor is repeated.</p>
     <example>
       <p>The expression <me>296(1.013)^{5}</me> states that an initial amount of <m>296</m> is increased by <m>1.3 \%</m> compounded <m>5</m> times.</p>
     </example>
     <exercise>
-      <introduction>
-        <p><q>Counting</q> the Growth Factor</p>
-      </introduction>
+      <title><q>Counting</q> the Growth Factor</title>
       <webwork>
         <setup>
           <var name="$drop" category="set">
@@ -121,11 +119,9 @@
         </solution>
       </webwork>
     </exercise>
-    <p>This method of translating between English and Math languages is actually very useful in practice. Instead of scribbling out a bunch of algebra every time a formula is needed, we can directly translate our observations in English to expressions or equations in Math.</p>
+    <p>Translating between English and Math languages is actually very useful in practice. We can translate our observations made in English directly into expressions or equations in Math.</p>
     <exercise>
-      <introduction>
-        <p>Interpret the meaning of the fractional exponent.</p>
-      </introduction>
+      <title>Interpret the meaning of the fractional exponent</title>
       <webwork>
         <setup>
           <var name="$init">
@@ -234,6 +230,69 @@
         </solution>
       </webwork>
     </exercise>
+    <p>Think of fractional exponents as keeping track of the <q>pieces</q> of the growth factor</p>
+    <exercise>
+      <title>A decrease of <m>20 \%</m> every <m>5</m> <units>years</units></title>
+      <webwork>
+        <statement>
+          <tabular top="medium" bottom="medium" left="medium" right="medium">
+            <col halign="center"/>
+            <col halign="center"/>
+            <col halign="center"/>
+            <col halign="center"/>
+            <row>
+              <cell>t years</cell>
+              <cell>English</cell>
+              <cell><m>(0.8)^{\frac{t}{5}}</m></cell>
+              <cell><m>\%</m> Change</cell>
+            </row>
+            <row>
+              <cell><m>1</m></cell>
+              <cell><m>1</m> out of <m>5</m> years</cell>
+              <cell><m>0.9564</m></cell>
+              <cell><m>4.36 \%</m></cell>
+            </row>
+            <row>
+              <cell><m>2</m></cell>
+              <cell><var name="$2" width="3" /> out of <var name="$5" width="3" /> years</cell>
+              <cell><m>0.9146</m> </cell>
+              <cell><m>8.54 \%</m></cell>
+            </row>
+            <row>
+              <cell><m>3</m></cell>
+              <cell><m>3</m> out of <m>5</m> years</cell>
+              <cell><var name="$0.8747" width="3" /></cell>
+              <cell><m>12.53 \%</m></cell>
+            </row>
+            <row>
+              <cell><m>4</m></cell>
+              <cell><m>4</m> out of <m>5</m> years</cell>
+              <cell><m>0.8365</m></cell>
+              <cell><var name="$0.1635" width="3" /><m>\,\%</m></cell>
+            </row>
+            <row>
+              <cell><m>5</m></cell>
+              <cell><m>5</m> out of <m>5</m> years</cell>
+              <cell><var name="$0.8" width="3" /> </cell>
+              <cell><var name="$20" width="3" /><m>\,\%</m></cell>
+            </row>
+          </tabular>
+        </statement>
+        <solution>
+        <p>It is directly translated into a math expression as: <m>(0.80)^{\frac{t}{5}}</m></p>
+        <p>In one year, <m>t=1</m></p>
+        <p>The exponent in the expression <m>(0.80)^{\frac{1}{5}}</m> literally means <q><m>1</m> out of <m>5</m> <units>years.</units></q></p>
+        <p>In <m>1</m> out of <m>5</m> <units>years</units> <me>(0.8)^{\frac{1}{5}} \approx 0.9564</me>So that <me>r \approx 1-0.9564 = 0.0436</me>Which represents about <m>4.36 \%</m> in one year.</p>
+        <p>In two years, <m>t=2</m></p>
+        <p>The exponent in the expression <m>(0.80)^{\frac{2}{5}}</m> literally means <q><m>2</m> out of <m>5</m> <units>years.</units></q></p>
+        <p>In <m>2</m> out of <m>5</m> <units>years</units> <me>(0.8)^{\frac{2}{5}} \approx 0.9146</me>So that <me>r \approx 1-0.9146 = 0.0854</me>Which represents about <m>8.54 \%</m> in two years.</p>
+        <p>In three years, <m>t=3</m></p>
+        <p>The exponent in the expression <m>(0.80)^{\frac{3}{5}}</m> literally means <q><m>3</m> out of <m>5</m> <units>years.</units></q></p>
+        <p>In <m>3</m> out of <m>5</m> <units>years</units> <me>(0.8)^{\frac{3}{5}} \approx 0.8747</me>So that <me>r \approx 1-0.8747 = 0.1253</me>Which represents about <m>12.53 \%</m> in three years.</p>
+        <p>Eventually we reach <m>t=5</m> <units>years</units> and the expression <me>(0.8)^{\frac{5}{5}}=(0.8)^{1}=0.80</me>represents the actual <m>20 \%</m> loss after the <m>5</m> <units>years.</units></p>
+      </solution>
+    </webwork>
+  </exercise>
 
     <example>
       <blockquote>A chemical biologist measures the breakdown of a pollutant in a lake. She calculates a <m>4 \%</m> decrease in the amount of pollutant from the <m>4890</m> ppm (parts per million) initially measured. The decrease occurs over a time span of <m>72</m> hours.</blockquote>
@@ -431,7 +490,7 @@
     <aside><p><me>A_{0}(1+\frac{r}{12})^{12 \cdot 1}</me></p></aside>
     <p><term>Annual interest compounded <m>daily</m></term><index><main>Annual interest compounded</main><sub>daily</sub></index>: the interest is divided into <m>365</m> pieces and <m>365</m> increases are counted each year.</p>
     <aside><p><me>A_{0}(1+\frac{r}{365})^{365 \cdot 1}</me></p></aside>
-    <p>What is the maximum number of times any number can be divide? Infinity (and beyond)!</p>
+    <p>What is the maximum number of times any number can be divided? Infinity (and beyond!)</p>
     <p>In math, infinite compounding is called <term>continuous compounding</term><index><main>continuous compounding</main></index>. It means the interest is being calculated at every moment in time. In fact, there is no time at which the interest is not being calculated.</p>
     <p>When continuous compounding occurs, the general formula we came up with earlier <me>A_{0}(1+\frac{r}{n})^{nt}</me> changes form. It becomes <me>A_{0}e^{rt}</me></p>
     <todo>Talk about the language of discrete and continuous models.  Make student write equations for different scenarios.</todo>
