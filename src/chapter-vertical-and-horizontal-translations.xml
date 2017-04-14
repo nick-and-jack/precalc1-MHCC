@@ -41,27 +41,164 @@
     <section xml:id="vertical-and-horizontal-translations-gist">
       <title>Gist of Vertical and Horizontal Translations</title>
       <paragraphs>
-        <p>To <term>transform</term> a function means to change it <mdash /> either its <term>input</term> or its <term>output</term>. If the change is only in position (the graph looks the same, but is in a different location) the change is called a <term>translation</term>.</p>
+        <p>To <term>transform</term> a function means to change it <mdash /> either its <term>input</term> or its <term>output</term>. If the change is only in position (the graph looks the same, but in a different location) the change is called a <term>translation</term>.</p>
         <p>In this chapter we learn how to translate a graph or a table of values. This will involve adding or subtracting values to the input and/or the output of a function's formula.</p>
         <p>It will be important for us to distinguish between the input and the output of a function. For instance, we must understand that the function <me>f(x) = x^2 - 5x</me>
         has an input <m>x</m> and an output <m>f(x)</m>.</p>
-        <p>If the input is changed to <m>x−3</m>, then the output would be <m>f(x−3)</m>. If the input is changed to <m>w + 1</m>, the output would be <m>f(w+1)</m>.</p>
-        <p>We must also remember how a formula works. For example, if you put <m>x</m> into a formula, then the formula will have <m>x</m>’s in it. But if you substitute <m>x–3</m> into a formula, then it will have <m>(x-3)</m>’s in it.</p>
-        <p>Therefore, for the function <m>f(x) = x^2 - 5x</m>, we would have: <md><mrow>f(x−3) = (x−3)^2 − 5(x−3)</mrow></md> and <md><mrow>f(w+1) = (w+1)^2 − 5(w+1)</mrow></md></p>
+        <p>If the input is <em>decreased</em> by <m>3</m>, then the output would be <m>f(x−3)</m>. If the output is <em>increased</em> by <m>4</m>, it would become <m>f(x) + 4</m>.</p>
+        <p>If you evaluate a function by using <m>x</m>, then the output will have <m>x</m>’s in it. But if you substitute <m>x–3</m> into the function, then the output will have <m>(x-3)</m>’s in it.</p>
       </paragraphs>
+      <!--
+      <p>For the function <m>f(x) = x^2 - 5x</m>, simplify the following:</p>
+      <p><m>f(x − 3)</m></p>
+      <p>Answer:  <var name="$eqn1" /></p>
+    -->
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="$eqn1"><static>(x-3)^2-5(x-3)</static></var>
+              <var name="$eqn2"><static>x^2-5x+4</static></var>
+              <pg-code>
+                $eqn1=Compute("(x-3)^2-5(x-3)");
+                $eqn2=Compute("x^2-5x+4");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>For the function <m>f(x) = x^2 - 5x</m>, simplify the following:</p>
+              <p><ul>
+                <li><p><m>f(x - 3)</m> = <var name="$eqn1" width="15" /></p></li>
+                <li><p><m>f(x) + 4</m> = <var name="$eqn2" width="15" /></p></li>
+              </ul></p>
+            </statement>
+            <solution>
+              <p><ul>
+                <li><p><m>f(x - 3) = (x-3)^2 - 5(x-3)</m></p></li>
+                <li><p><m>f(x) + 4 = x^2 - 5x + 4</m></p></li>
+              </ul></p>
+            </solution>
+          </webwork>
+        </exercise>
+
       <paragraphs>
-        <p>Now what does changing the input do to the <em>graph</em> of <m>f(x)</m>? It turns out that subtracting <m>3</m> from the input would move the graph of <m>f</m> to the right by <m>3</m> units, or adding <m>1</m> to the input would move the graph to the left by <m>1</m> unit. This is called a horizontal <term>translation</term> (or horizontal <term>shift</term>).</p>
+        <p>One natural question to ask is <q>How does changing the input alter the <em>graph</em> of <m>f(x)</m>?</q> It turns out that adding a number to the input of a function will move the graph to the left or the right. This is called a <index><main>horizontal translation</main></index><index><main>translation</main><sub>horizontal</sub></index>horizontal translation (or horizontal shift).</p>
         <p>In short:
-            <blockquote>Adding a number to the input will shift the graph to the <em>left</em>.</blockquote>
-            <blockquote>Subtracting a number from the input will shift the graph to the <em>right</em>.</blockquote>
+            <blockquote>Adding a <em>positive</em> number to the input will shift the graph to the <em>left</em>.</blockquote>
+            <blockquote>Adding a <em>negative</em> number to the input will shift the graph to the <em>right</em>.</blockquote>
         </p>
-        <p>In fact, whenever you do anything to the input of a function, the result is some kind of horizontal change to the graph. In this section, we see that adding to the input will produce a horizontal translation of the graph to the left or the right.</p>
-        <p>On the other hand, if you make changes to the outside of the function, it will affect the graph <em>vertically</em>. In this section, we see that adding or subtracting from the output will produce a vertical translation of the graph up or down.</p>
+        <p>In fact, whenever you do anything to the input of a function, the result is some kind of horizontal change to the graph.</p>
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="$neg">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{positive}</member>
+                  <member correct="yes">\text{negative}</member>
+                </set>
+              </var>
+              <var name="$pos">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{positive}</member>
+                  <member>\text{negative}</member>
+                </set>
+              </var>
+              <pg-code>
+                $neg=PopUp(
+                ["?","positive","negative"],"negative"
+                );
+                $pos=PopUp(
+                ["?","positive","negative"],"positive"
+                );
+              </pg-code>
+            </setup>
+            <statement>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/paqqv23d/width/438/height/474/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="438px" height="474px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Use the checkboxes to graph a function <m>y = f(x)</m>. Then use the slider to add a number to the input of the function.</p>
+              <p>To move a graph to the <em>right</em>, you add a <var name="$neg" form="popup" /> number to the input.</p>
+              <p>To move a graph to the <em>left</em>, you add a <var name="$pos" form="popup" /> number to the input.</p>
+            </statement>
+            <solution>
+              <p>Adding a <em>negative</em> number to the input will move a graph to the <em>right</em>.</p>
+              <p>Adding a <em>positive</em> number to the input will move a graph to the <em>left</em>.</p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <p>On the other hand, if you make changes to the <em>output</em> of the function, it will affect the graph <em>vertically</em>. Adding a number to the output of a function will produce a <index><main>vertical translation</main></index><index><main>translation</main><sub>vertical</sub></index>vertical translation of the graph up or down.</p>
         <p>In short:
-            <blockquote>Adding a number to the ouput will shift the graph <em>up</em>.</blockquote>
-            <blockquote>Subtracting a number from the output will shift the graph <em>down</em>.</blockquote>
+            <blockquote>Adding a <em>positive</em>number to the output will shift the graph <em>up</em>.</blockquote>
+            <blockquote>Adding a <em>negative</em>number to the output will shift the graph <em>down</em>.</blockquote>
         </p>
+        <exercise>
+          <webwork>
+            <setup>
+
+              <pg-code>
+
+              </pg-code>
+            </setup>
+            <statement>
+              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/axzJ9c4S/width/438/height/474/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="438px" height="474px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>Use the checkboxes to graph a function <m>y = f(x)</m>. Then use the slider to add a number to the output of the function.</p>
+              <p>Could you explain why adding a number to the output would shift the graph up or down?</p>
+            </statement>
+            <solution>
+              <p>After a function has been evaluated, such as <m>f(x)</m>, this output represents the <m>y</m>-value of a point. So, adding a number to this output would just add to the <m>y</m>-value, causing the points to be higher or lower on the graph.</p>
+            </solution>
+          </webwork>
+        </exercise>
       </paragraphs>
+      <paragraphs><title>Direction of the Translation</title>
+        <p>It should be clear why adding a positive number to the output will move the graph <em>up</em>, and adding a negative number to the output will move the graph <em>down</em>. The output of a function is shown as the <m>y</m>-coordinate of a point on the graph, so adding to the output means adding to the <m>y</m>-coordinates. This produces a direct change in the <m>y</m>-coordinates, either upward or downward.</p>
+        <p>However, it may have surprised you to see that it was the opposite with horizontal shifts <mdash /> adding a positive number to the input moved the graph to the <em>left</em>, and a negative number moved the graph to the <em>right</em>. To see why this should be, let us first think about a particular horizontal shift in the next example.</p>
+        <example>
+          <statement>
+            <p>The function <me>f(t) = 32t</me> represents the speed, measured in feet per second, of an object that was dropped from the top of a tall building at time <m>t = 0</m> seconds. The value <me>f(2) = 64</me> means that after falling for <m>2</m> seconds, the object will be travelling at <m>64</m> feet per second.</p>
+            <p>If another object was dropped <m>1</m> second after the timer was started, then its speed at <m>2</m> seconds would only be <m>f(1) = 32</m> feet per second. It experiences the same speeds that the first object had <m>1</m> second earlier.</p>
+            <p>That is, for any time <m>t</m>, the object that was dropped <m>1</m> second late would have a speed <m>f(t - 1)</m>. See the graphs below.</p>
+            <sidebyside widths="47% 47%">
+              <figure xml:id="figure-noninvertible-function">
+                <caption><m>f(t) = 32t</m>: Dropped at time <m>t = 0</m></caption>
+                <image>
+                  <latex-image-code>
+                    <![CDATA[
+                      \begin{tikzpicture}
+                        \begin{axis}[xmax=4, xmin=-0.5,
+                                    ymax=100, ymin=-10,
+                                    ytick={},
+                                    minor ytick={}]
+                          \addplot+[domain=0:4] {32*x};
+                        \end{axis}
+                      \end{tikzpicture}
+                    ]]>
+                    </latex-image-code>
+                </image>
+              </figure>
+              <figure xml:id="figure-invertible-function">
+                <caption><m>f(t-1) = 32(t-1)</m>: Dropped at time <m>t = 1</m></caption>
+                <image>
+                  <latex-image-code>
+                    <![CDATA[
+                      \begin{tikzpicture}
+                        \begin{axis}[xmax=4, xmin=-0.5,
+                                    ymax=100, ymin=-10,
+                                    ytick={},
+                                    minor ytick={}]
+                          \addplot+[domain=1:4] {32*(x-1)};
+                        \end{axis}
+                      \end{tikzpicture}
+                    ]]>
+                  </latex-image-code>
+                </image>
+              </figure>
+            </sidebyside>
+            <p>The first speed graph would be shifted to the <em>right</em> by <m>1</m> second to make the speed graph for the object that was dropped <m>1</m> second late.</p>
+          </statement>
+        </example>
+
+      </paragraphs>
+
 
       <list>
           <title>Video Lectures</title>
@@ -79,7 +216,7 @@
 
 
       <p>In the next three exercises, you will use a verbal description of a transformation in order to write a formula, and then use the formula for a transformation to provide a verbal description.</p>
-      <exercise>
+      <example>
         <statement>
           <p>The function <m>f(x) = x^2 + 2x</m> is graphed below.</p>
           <figure>
@@ -88,7 +225,7 @@
                   <latex-image-code>
                   <![CDATA[\begin{tikzpicture}
                               \begin{axis}[]
-                                  \addplot+[domain=-4:4]{x^2+2*x};
+                                  \addplot+[domain=-4:4, samples=50]{x^2+2*x};
                                \end{axis}
                           \end{tikzpicture}
                   ]]>
@@ -105,9 +242,9 @@
           <p>The function should be: <me>f(x-3) - 2 = (x-3)^2 + 2(x-3) - 2</me></p>
           <p>Remember to substitute <m>(x-3)</m> in wherever <m>x</m> appears in the original formula, and then subtract <m>2</m> at the end.</p>
         </answer>
-      </exercise>
+      </example>
 
-      <exercise>
+      <example>
         <statement>
           <p>The function <m>g(x) = x - x^3</m> is graphed below.</p>
           <figure>
@@ -116,7 +253,7 @@
                   <latex-image-code>
                   <![CDATA[\begin{tikzpicture}
                               \begin{axis}[]
-                                  \addplot+[domain=-4:4]{x-x^3};
+                                  \addplot+[domain=-4:4, samples=50]{x-x^3};
                                \end{axis}
                           \end{tikzpicture}
                   ]]>
@@ -145,7 +282,7 @@
                     <latex-image-code>
                     <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[]
-                                    \addplot+[domain=-4:4]{x+1-(x+1)^3+2};
+                                    \addplot+[domain=-4:4, samples=50]{x+1-(x+1)^3+2};
                                  \end{axis}
                             \end{tikzpicture}
                     ]]>
@@ -154,7 +291,7 @@
                 <p>A straightforward way to sketch the transformed function is to take a known point from <m>g(x)</m>, such as <m>(0,0)</m>, and move it left <m>1</m> and up <m>2</m>. Then sketch the rest of the graph around that new point.</p>
             </figure>
         </answer>
-      </exercise>
+      </example>
 
       <exercise>
         <webwork xml:id="webwork-write-formula-for-graph-horizontal-and-vertical-shifts">
@@ -293,35 +430,52 @@
       <exercise>
         <webwork>
           <setup>
+
+            <pg-code>
+
+            </pg-code>
+          </setup>
+          <statement>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/yK8kSe2P/width/431/height/469/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="469px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>At <m>9:00</m> A.M., a cup of tea was heated to <m>200</m> degrees Fahrenheit and then left to sit in a <m>70</m> degree kitchen.</p>
+            <p>The graph of <m>T = f(t)</m> shows the temperature (in degrees Fahrenheit) of the cup of tea as it cooled down toward room temperature, where <m>t</m> is the number of minutes after <m>9:00</m> A.M.</p>
+            <p>By moving the slider, you can change the time at which the tea stopped heating and began to cool. For instance, if it began to cool at <m>9:20</m> A.M., then the graph would be exactly the same <mdash /> just shifted to the <em>right</em> by <m>20</m> minutes.</p>
+            <p>This corresponds to subtracting <m>20</m> from the input of the function <m>f</m>.</p>
+          </statement>
+        </webwork>
+      </exercise>
+      <exercise>
+        <webwork>
+          <setup>
             <var name="$first">
               <set>
                 <member>\text{?}</member>
-                <member>T(t+7)</member>
-                <member>T(t)+7</member>
-                <member correct="yes">T(t-7)</member>
-                <member>T(t)-7</member>
+                <member>T(d+7)</member>
+                <member>T(d)+7</member>
+                <member correct="yes">T(d-7)</member>
+                <member>T(d)-7</member>
               </set>
             </var>
             <var name="$second">
               <set>
                 <member>\text{?}</member>
-                <member>T(t+14)+5</member>
-                <member correct="yes">T(t-14)+5</member>
-                <member>T(t+14)-5</member>
-                <member>T(t-14)-5</member>
+                <member>T(d+14)+5</member>
+                <member correct="yes">T(d-14)+5</member>
+                <member>T(d+14)-5</member>
+                <member>T(d-14)-5</member>
               </set>
             </var>
             <pg-code>
               $first=PopUp(
-              ["?","T(t + 7)","T(t) + 7","T(t - 7)","T(t) - 7"],"T(t - 7)"
+              ["?","T(d + 7)","T(d) + 7","T(d - 7)","T(d) - 7"],"T(d - 7)"
               );
               $second=PopUp(
-              ["?","T(t + 14) + 5","T(t - 14) + 5","T(t + 14) - 5","T(t - 14) - 5"],"T(t - 14) + 5"
+              ["?","T(d + 14) + 5","T(d - 14) + 5","T(d + 14) - 5","T(d - 14) - 5"],"T(d - 14) + 5"
               );
             </pg-code>
           </setup>
           <statement>
-            <p>Suppose <m>T(t)</m> describes the average daily temperature (in degrees) this week, where <m>t</m> is the day of the year (<m>t=1</m> for January <m>1^{\text{st}}</m>, etc.).</p>
+            <p>Suppose this is the first week of the year, and <m>T(d)</m> describes the average daily temperature (in degrees) for this week, where <m>d</m> is the day of the year (<m>d=1</m> for January <m>1^{\text{st}}</m>, etc.).</p>
             <p>For each statement below, choose the correct translation which represents the temperature function for that week.</p>
             <p><ol>
               <li><p>"Next week's temperatures are expected to be an exact repeat of this week."</p>
@@ -335,8 +489,8 @@
           </hint>
           <solution>
             <p><ol>
-              <li><p>The formula we could use next week is <me>T(t-7)</me> because for any date next week, the temperature would be the same as <m>7</m> days earlier. This is the formula way of saying we're "turning back time".</p></li>
-              <li><p>In two weeks, we would use <me>T(t-14)+5</me> because the temperatures are the same as <m>14</m> days before, <em>and</em> they are <m>5</m> degrees warmer.</p></li>
+              <li><p>The formula we could use next week is <me>T(d-7)</me> because for any date next week, the temperature would be the same as <m>7</m> days earlier. This is the formula way of saying we're "turning back time".</p></li>
+              <li><p>In two weeks, we would use <me>T(d-14)+5</me> because the temperatures are the same as <m>14</m> days before, <em>and</em> they are <m>5</m> degrees warmer.</p></li>
             </ol></p>
           </solution>
         </webwork>
