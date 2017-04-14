@@ -162,11 +162,9 @@
         </webwork>
     </exercise>
     
-    <p>Sometimes a function can use any number as an input.</p>
-    <example>
-    <title>Polynomials</title>
-    <p>Consider <me>f(x) = x^2</me></p>
+    <p>Sometimes a function can use any number as an input. Consider <me>f(x) = x^2</me></p>
     <exercise>
+      <title>Polynomials</title>
       <webwork>
         <setup>
           <var name="$yes1">
@@ -296,12 +294,9 @@
         </statement>
       </webwork>
     </exercise>
-    </example>
-    <p>Sometimes a function is only defined for certain kinds of values or may produce only certain kinds of results.</p>
-    <example>
-    <title>Functions with Roots</title>
+    <p>Sometimes a function will only accept certain input values, or it may produce only certain kinds of results.</p>
     <p>Consider <me>f(x) = \sqrt{x}</me></p>
-    <p>This function will yield real number results as long as the input is not negative (you can't take the square root of a negative number).</p>
+    <p>This function will take real number inputs, as long as the input is not negative (you can't take the square root of a negative number).</p>
     <p>On the other hand, the square root function only yields results that are positive or zero.</p>
     <p>By graphing the function the domain and range become more apparent.</p>
       <figure xml:id="graph-of-root-xs">
@@ -318,7 +313,7 @@
       </figure>
       <p>The figure shows the graph of <m>f</m> exists horizontally only from the origin and to the right. Therefore the domain of <m>f</m> is <m>x \geq 0</m>.</p>
       <p>The figure also shows the graph of <m>f</m> exists vertically from the origin and up. Therefore the range of <m>f</m> is <m>y \geq 0</m>.</p>
-      <p>Note: since the vertical axis is called <m>y</m>, it means that <m>y = f(x)</m>. Think of <m>f(x)</m> as the <q>machine</q> that takes <m>x</m> values and makes <m>y</m> values.  Therefore we can use <m>f(x)</m> or <m>y</m> when referring to the range.  <m>f(x) \geq 0</m> and <m>y \geq 0</m> say the same thing.</p>
+      <p>Note: since the vertical axis is called <m>y</m>, it means that <m>y = f(x)</m>. Think of <m>f(x)</m> as the <q>machine</q> that takes <m>x</m> values and makes <m>y</m> values.  Therefore we can use <m>f(x)</m> or <m>y</m> when referring to the range.</p>
     <exercise>
       <webwork>
         <statement>
@@ -344,21 +339,22 @@
         </statement>
       </webwork>
     </exercise>
-    </example>
-    <p>Things to remember for now</p>
-    <p>
-      <ul>
-        <li>
-          <p>You can't take the square root of negative nubmers</p>
-        </li>
-        <li>
-          <p>You can't allow the denomiator of a fraction to be zero.</p>
-        </li>
-      </ul>
-    </p>
+    <assemblage>
+      <p>Things to remember for now</p>
+      <p>
+        <ul>
+          <li>
+            <p>You can't take the square root of negative numbers</p>
+          </li>
+          <li>
+            <p>You can't allow the denominator of a fraction to be zero.</p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
     <example>
       <title>The algebraic method of finding the domain of any function with a square root</title>
-      <p>Set the <q>guts</q> inside the root greater than or equal to zero and solve. The result is the domain of the function.</p>
+      <p>Set the expression under the root (the <q>guts</q>) greater than or equal to zero and solve. The result is the domain of the function.</p>
       <p>Let <m>f(x)=\sqrt{4x-9}</m>. To find the domain set <m>4x-9 \geq 0</m> and solve.</p>
       <p>
         <md>
@@ -369,10 +365,8 @@
       </p>
       <p>So the domain of <m>f</m> is <m>x \geq \frac{9}{4}</m></p>
     </example>
-    <example>
-      <title>The Algebraic Method of Finding the Domain of any Function with a Denominator</title>
-      <blockquote><p>In this example you need to know that <q>not equal to</q> is typed as <q>!=</q> when you type your answer into an answer box</p></blockquote>
-      <p>You can start by setting the denominator equal to zero and solve. Avoid these solutions since they are not part of the domain.</p>
+      
+      <p>For functions written as fractions, we want to avoid <m>0</m> in the denominator. Set the denominator equal to zero and solve. Avoid these solutions since they are not part of the domain.</p>
       <p>Let <m>f(x)=\frac{\sqrt{x}}{9-x^2}</m></p>
       <p>Set the denominator equal to zero then solve the equation.</p>
       <p>
@@ -381,7 +375,9 @@
           <mrow>(3-x)(x+3) = 0</mrow>
         </md>
       </p>
+      <blockquote><p><em>In this example you need to know that <q>not equal to</q> is typed as <q>!=</q> when you type your answer into an answer box</em></p></blockquote>
       <p>Can you solve the last equation? There are two solutions</p>
+      
       <exercise>
         <webwork>
           <statement>
@@ -424,11 +420,9 @@
         </stage>
         </webwork>
       </exercise>
-    </example>
     <p>Try some algebraic methods of finding domain on your own. If you get stuck, use your calculator to make a graph of the function.  Look to see where the graph exists.</p>
-    <example>
-      <title>Practice with Roots and Denominators</title>
       <exercise>
+        <title>Practice with Roots and Denominators</title>
         <webwork>
           <setup>
             <var name="$dom1">
@@ -500,7 +494,6 @@
           </solution>
         </webwork>
       </exercise>
-    </example>
 
     <p>Identifying the domain and range of a function just by looking at a formula can be difficult because you <q>just have to know what to look for</q> and that only comes with experience.</p>
     <p>Often, a good way to determine the domain and range of a function is to graph it. Make a graph on a calculator or any graphing tool and try to identify where the function exists horizontally, this is the domain.  Then try to identify where the funciton exists vertically, this is the range.</p>
