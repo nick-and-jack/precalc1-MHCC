@@ -14,9 +14,11 @@
 <section xml:id="activity-logarithmic-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
   
     <title>Logarithmic Functions</title>
-    <p>Logarithms can sometimes be the source of much turmoil and angst to students. To some members of the English department, the word <q>logarithms</q> is used as a joke to respond to something that is confusing, <q>Is that like logarithms?</q> (laughter ensues).</p>
-    <p>But you will not have these issues, because logarithms are not bad, they're just spelled that way. Remember this, in short, a logarithm is essentially an exponent.</p>
-    <p>This activity is an introduction to logarithms and the logarithmic function. And since logarithms are exponents, it is a good idea to review some key properties of exponents, in particular negative and fractional exponents.</p>
+    <introduction>
+        <p>Logarithms can sometimes be the source of much turmoil and angst to students. To some members of the English department, the word <q>logarithms</q> is used as a joke to respond to something that is confusing, <q>Is that like logarithms?</q> (laughter ensues).</p>
+        <p>But you will not have these issues, because logarithms are not bad, they're just spelled that way. Remember this, in short, a logarithm is essentially an exponent.</p>
+        <p>This activity is an introduction to logarithms and the logarithmic function. And since logarithms are exponents, it is a good idea to review some key properties of exponents, in particular negative and fractional exponents.</p>
+    </introduction>
 
     <subsection>
         <title>Review: Exponents</title>
@@ -537,7 +539,7 @@
                 </setup>
                 <statement>
                     <p>How would you say each expression below using logarithms?</p>
-                    <ol>
+                    <p><ol>
                         <li><p>The power of <var name="$b[0]"/> that gives you <var name="$c[0]"/></p>
                             <p><var name="$log" width="3"/> base <var name="$b[0]" width="1"/> of <var name="$c[0]" width="2"/></p></li>
                         <li><p>The power of <var name="$b[1]"/> that gives you <var name="$c[1]"/></p>
@@ -546,7 +548,7 @@
                             <p><var name="$log" width="3"/> base <var name="$b[2]" width="1"/> of <var name="$c[2]" width="2"/></p></li>
                         <li><p>The power of <var name="$b[3]"/> that gives you <var name="$c[3]"/></p>
                             <p><var name="$log" width="3"/> base <var name="$b[3]" width="1"/> of <var name="$c[3]" width="2"/></p></li>
-                    </ol>
+                    </ol></p>
                 </statement>
             </webwork>
         </exercise>
@@ -591,7 +593,7 @@
                 </setup>
                 <statement>
                     <p>Write the following English statements using the equivalent Math statements using logarithms.</p>
-                    <ol>
+                    <p><ol>
                         <li><p>The power of <m>10</m> that gives you <m><var name="$c[0]"/></m></p>
                             <p><var name="$answer[0]" width="15" /></p></li>
                         <li><p>The power of <m>10</m> that gives you <m><var name="$c[1]"/></m></p>
@@ -600,7 +602,7 @@
                             <p><var name="$answer[2]" width="15" /></p></li>
                         <li><p>The power of <m>e</m> that gives you <m><var name="$c[3]"/></m></p>
                             <p><var name="$answer[3]" width="15" /></p></li>
-                    </ol>
+                    </ol></p>
                 </statement>
             </webwork>
         </exercise>
@@ -630,12 +632,12 @@
                 </setup>
                 <statement>
                     <p>Translate each math expression below into its meaning in English.</p>
-                    <ol>
+                    <p><ol>
                         <li><p><m>\log_{<var name="$b[0]" />}<var name="$c[0]" /></m></p>
                             <p>The power of <var name="$b[0]" width="1"/> that gives you <var name="$c[0]" width="2"/>.</p></li>
                         <li><p><m>\log_{<var name="$b[1]" />}<var name="$c[1]" /></m></p>
                             <p>The power of <var name="$b[1]" width="1"/> that gives you <var name="$c[1]" width="2"/>.</p></li>
-                    </ol>
+                    </ol></p>
                 </statement>
             </webwork>
         </exercise>
@@ -702,12 +704,12 @@
                   <p>For each logarithm expression below, estimate the result with an integer that is just below and an integer that is just above the result.</p>
                   <p>For example, <m>\log(36)</m> is between <m>1</m> and <m>2</m> because <m>36</m> is between <m>10^1</m> and <m>10^2</m>.</p>
                   <p>Remember, a logarithm is an exponent.</p>
-                  <ol>
+                  <p><ol>
                       <li><p><m>\log(<var name="$c[0]" />)</m> is between <var name="$low[0]" width="2" /> and <var name="$high[0]" width="2" />.</p></li>
                       <li><p><m>\log_{<var name="$b[1]" />}(<var name="$c[1]" />)</m> is between <var name="$low[1]" width="2" /> and <var name="$high[1]" width="2" />.</p></li>
                       <li><p><m>\log_{<var name="$b[2]" />}(<var name="$c[2]" />)</m> is between <var name="$low[2]" width="2" /> and <var name="$high[2]" width="2" />.</p></li>
                       <li><p><m>\log_{<var name="$b[3]" />}(<var name="$c[3]" />)</m> is between <var name="$low[3]" width="2" /> and <var name="$high[3]" width="2" />.</p></li>
-                  </ol>
+                  </ol></p>
               </statement>
           </webwork>
       </exercise>
@@ -973,7 +975,9 @@
 
     <subsection>
     <title>Rules of Logarithms</title>
-    <p>In order for this part of the activity to make sense, we must remember what a <term>base</term> and an <term>exponent</term> are. Remember in the expression <m>b^x</m>, <m>b</m> is the <term>base</term> and <m>x</m> is the exponent. The exponent literally counts how many times you multiplied the base. For instance <m>b^7</m> means <m>\overbrace{b\cdot b\cdot b\cdot b\cdot b\cdot b\cdot b}^{7\text{ times}}</m>.</p>
+    <introduction>
+        <p>In order for this part of the activity to make sense, we must remember what a <term>base</term> and an <term>exponent</term> are. Remember in the expression <m>b^x</m>, <m>b</m> is the <term>base</term> and <m>x</m> is the exponent. The exponent literally counts how many times you multiplied the base. For instance <m>b^7</m> means <m>\overbrace{b\cdot b\cdot b\cdot b\cdot b\cdot b\cdot b}^{7\text{ times}}</m>.</p>
+    </introduction>
     <subsubsection>
       <title>Definition: A logarithm is an exponent</title>
       <p>An exponential equation <me>b^{y}=x</me> can be rewritten as a logarithmic equation.</p>  

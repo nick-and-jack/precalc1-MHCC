@@ -50,7 +50,7 @@
 
     <xi:include href="./activity-logarithmic-functions.xml" />
 
-    <conclusion>
+    <section>
 
         <title>Gist of Logarithmic Functions</title>
         <subsection>
@@ -125,7 +125,7 @@
         </exercise>
         <p>Rule <m>\# 1</m> is great, but if we want to use it as the main tool we have to know when it applies and how to deal with the situation if the rule does not apply.</p>
         <example>
-          <introduction>
+          <statement>
             <blockquote>
             <p>
               Solve the equation for <m>x</m> <me>3(2.83)^{x}=15</me>
@@ -134,8 +134,8 @@
             <p>At first glance it seems you can apply rule <m>\# 1</m>, but is that right?  Rule <m>\# 1</m> states <me>\log_{b}(N^{x})=x \log_{b}(N)</me></p>
             <p>Notice how rule <m>\# 1</m> assumes you have one side written as <m>N^{x}</m> with nothing else in front (no coefficient)? The left side of our equation has a coefficient of <m>3</m> in front of the exponential<me>3(2.83)^{x}</me> The constant <m>3</m> is keeping us from using rule <m>\# 1</m>. That constant either has to be moved or we have to use another rule (if there is one that applies).</p>
             <p>We can fix the situation by rearranging the equation to match the format of rule <m>\# 1</m> or we could use rule <m>\# 2</m> because at least it matches the format of our equation.</p>
-          </introduction>
-          <statement>
+          </statement>
+          <solution>
             <p><term><em>Rule <m>\# 1</m>:</em></term> <m>\log_{b}(N^{x})=x \log_{b}(N)</m></p>
             <p>The constant <m>3</m> needs to be moved so only the exponential remains on the left side of the equation. <me>(2.83)^{x}=\frac{15}{3}</me>
             Voil&#224;! Now we have the correct form to use rule <m>\#  1</m>. Apply your favorite logarithm to both sides. I'll use <m>\ln</m> this time because I used <m>\log</m> in the last example. <me>\ln (2.83)^{x}= \ln \big( \frac{15}{3} \big)</me> The exponent comes down and we have: <me>x \ln(2.83)= \ln \big( \frac{15}{3} \big)</me>The last step is to isolate the variable <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> so that (rounded to three decimals): <me>x \approx 1.547</me></p>
@@ -144,7 +144,7 @@
             <p>Applying <m>\ln</m> to both sides of our equation, we in fact have the log of the product <m>3</m> times <m>(2.83)^{x}</m> on the left side <me>\ln (3(2.83)^{x})=\ln(15)</me> Use rule <m>\# 2</m> to write the left side of the equation as the sum of the logs <me>\ln(3)+\ln(2.83)^{x}=\ln(15)</me> Remember the goal is to isolate the variable <m>x</m> which we can now do since, on the left side, one term has <m>x</m> and the other does not.</p>
             <p>Subtracting <m>\ln(3)</m> from both sides we get <me>\ln (2.83)^{x}=\ln(15)-\ln(3)</me> Look, we get to use rule <m>\# 1</m> anyway! On the left we bring down the exponent, <m>x</m> <me>x \ln(2.83)=\ln(15)-\ln(3)</me> Now isolate <m>x</m> <me>x=\frac{\ln(15)-\ln(3)}{\ln(2.83)}</me> We get the same answer as before <me>x \approx 1.547</me></p>
             <p>Which method did you like better?</p>            
-          </statement>
+          </solution>
         </example>
         <exercise>
           <introduction><p>Of course we could have just solved the equation <m>3(2.83)^{x}=15</m> graphically and avoided the algebra all together.</p></introduction>
@@ -155,9 +155,11 @@
               <p>Drag the output value to <m>y=15</m> to find the solution rounded to <m>2</m> decimal places.</p>
               <p><m>x \approx</m> <var name="1.55" width="5" /></p>
             </statement>
-            <conclusion><p>A note about solving. In the two algebra examples we were able to find exact solutions <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> is exact.</p>
-            <p>We then entered the exact expressions into a calculator and found approximations rounded to three decimal places. Though graphically may seem quick and easy, most often we can only get an approximation to the answer.</p></conclusion>
           </webwork>
+          <conclusion>
+            <p>A note about solving. In the two algebra examples we were able to find exact solutions <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> is exact.</p>
+            <p>We then entered the exact expressions into a calculator and found approximations rounded to three decimal places. Though graphically may seem quick and easy, most often we can only get an approximation to the answer.</p>
+          </conclusion>
         </exercise>
         <p>Finally, we could just ask a computer to solve the equation for us. Many websites have tools for solving equations such as: <m>3(2.83)\text{^x = 15}</m> You may wish to perform a web search for such a website.</p>
         <p>Technology can now do much of what only people could do in the past. The question is no longer <q>Can you solve an equation?</q>, the question is <q>Do you have the right equation?</q></p>
@@ -196,8 +198,8 @@
         </assemblage>
         <p>For the range we must consider all the possible outputs we should expect from the function. In the case of the logarithm, an output is the exponent value needed to get a particular input <me>\log_{b}(\text{input})=\text{output}</me></p>
         <example>
-          <introduction><p>Consider <m>y=log_{3}(x)</m></p></introduction>
           <statement>
+            <p>Consider <m>y=log_{3}(x)</m></p>
             <p>For any input <m>x</m> how many <m>3</m>'s does it take to get that <m>x</m> value? The answer (output) is the <m>y</m> value.</p>
             <tabular top="medium" bottom="medium" left="medium" right="medium">
               <col halign="center"/>
@@ -411,10 +413,10 @@
                 <stage>
                   <statement>
                     <p>A population increases at an annual rate of about <m><var name="$arp" />\%</m>.</p>
-                    <ol label="a">
+                    <p><ol label="a">
                       <li><p>What is the continuous annual growth rate?</p></li>
                       <li><p>How long does it take for the population to triple in size?</p></li>
-                    </ol>
+                    </ol></p>
                     <p>Solutions:</p>
                     <p>What is the continuous annual growth rate?</p>
                     <p>The opening sentence is telling us we must use an exponential model because the growth is a <q>constant percent</q>. The sentence goes on to tell us <em>what kind</em> of growth model and the percent rate of growth.</p>
@@ -480,10 +482,10 @@
             <stage>
               <statement>
                 <p>A population of mosquitoes doubles every <m><var name="$doublingdays" /> </m> days.</p>
-                <ol label="a">
+                <p><ol label="a">
                   <li><p>What is the daily percent growth of the population?</p></li>
                   <li><p>How long does it take for the population to triple in size?</p></li>
-                </ol>
+                </ol></p>
                 <p>Solutions: (time units in this problem are <q>day</q> singular.</p>
                 <p>What is the daily percent growth of the population?</p>
                 <p>A pattern of repeated doubling is the same thing as a pattern of repeated multiplication, in this case multiplication by <m>2</m>. Therefore, the growth of the population is exponential.</p>
@@ -554,10 +556,10 @@
               <stage>
                 <statement>
                   <p><var name="$isotope"/> has a half-life of <var name="$halflifemin" /> minutes.</p>
-                  <ol label="a">
+                  <p><ol label="a">
                     <li><p>What is the percent decay rate per minute?</p></li>
                     <li><p>How long will it take for any amount of <var name="$isotope"/> to decay to <m><var name="$target" />\%</m> of its original amount? </p></li>
-                  </ol>
+                  </ol></p>
                   <p>Solution:</p>
                   <p>What is the percent decay rate per minute?</p>
                   <p>A half-life is the time it takes for the chemical to decay to half its current value. We are told the half-life is <var name="$halflifemin" /> minutes, which means every <var name="$halflifemin" /> minutes the amount of chemical is halved.</p>
@@ -643,6 +645,6 @@
         </exercise>
       
       </subsection>
-    </conclusion>
+    </section>
 
 </chapter>
