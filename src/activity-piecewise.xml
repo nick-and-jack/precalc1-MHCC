@@ -27,15 +27,15 @@
             <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
                 \begin{axis}[ymin=0, ymax=20, xlabel={$hours$}, ylabel={$Cost$}, xtick={0,4,...,24}, minor xtick={0,2,...,24}, ytick={0,5,...,15}, minor ytick={1,2,...,15}, xmin=0, xmax=24, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
-                \addplot[thick, color=blue, domain=0:4,->] ({1.6*x},{x});
-                \addplot[thick, color=blue, domain=4:24,->] ({13},{x});
+                \addplot[thick, color=blue, domain=0:3.99,->] ({1.6*x},{x});
+                \addplot[thick, color=blue, domain=4:24,->] ({8*(x-4}+6.4,{x});
                 \end{axis}
                 \end{tikzpicture}]]>
             </latex-image-code>
           </image>
         </figure>
         <p>Up to and including <m>4</m> hours, the cost of parking is about <m>\$ 1.60</m> per hour.</p>
-        <p>After <m>4</m> hours, the cost of parking is a constant rate of <m>\$ 13.00</m> for the day.</p>
+        <p>After <m>4</m> hours, the cost of parking is a constant rate of <m>\$ 8.00</m> per hour.</p>
         <p>What piece of the graph do you use to calculate the cost of parking? It depends on how many hours you park.</p>
         </example>
         <p>The most difficult part of piecewise functions is the notation.  In the following set of activities you will use a skill you already know, how to evaluate a function graphically, and transition slowly into how to write and understand piecewise notation.</p>
