@@ -13,697 +13,816 @@
 
 <section xml:id="activity-vertical-and-horizontal-translations" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Vertical and Horizontal Translations Activity</title>
-    <paragraphs>
-      <title>Purpose</title>
-      <p>In this activity, we will explore how to <term>transform</term> the graph of a function by making changes to its formula in the following ways:</p>
-      <p><ul>
-        <li><p><m>f(x) + k</m></p></li>
-        <li><p><m>f(x + h)</m></p></li>
-      </ul></p>
-      <p>By the end of this activity, you will be able to:</p>
-      <p><ul>
-        <li><p>Recognize the geometric effect of these types of transformations</p></li>
-        <li><p>Write the formula for a basic function which has been changed by these transformations.</p></li>
-        <li><p>Sketch the graph of a basic function which has been changed by these transformations.</p></li>
-      </ul></p>
-    </paragraphs>
+    <objectives>
+        <title>Student Learning Outcomes</title>
+        <introduction>
+            <p>In this activity, we will explore how to <term>transform</term> the graph of a function <m>f</m> by making changes to its formula in the following ways: <m>f(x) + k</m> and <m>f(x + h)</m>. By the end of this activity, you will be able to:</p>
+        </introduction>
 
+        <ul>
+            <li>
+                <p>Recognize the geometric effect of transforming <m>f(x)</m> to <m>f(x) + k</m> and <m>f(x + h)</m>.</p>
+            </li>
+            <li>
+                <p>Write the formula for a basic function which has been changed by these transformations.</p>
+            </li>
+            <li>
+                <p>Sketch the graph of a basic function which has been changed by these transformations.</p>
+            </li>
+        </ul>
+    </objectives>
 
-    <p>In preparation for this activity, we should revisit function evaluation with an eye toward describing changes to the input or the output.</p>
     <subsection>
-      <title>Prep Activity</title>
-      <p>Each of the following problems involves something you have already learned. These are skills we will need in the rest of this activity.</p>
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$ans1"><static>(x+6)^2 + (x+6)</static></var>
-            <var name="$ans2"><static>x^2+x+6</static></var>
-            <var name="$ans3"><static>3*(x^2+x)</static></var>
-            <pg-code>
-              $ans1=Compute("(x+6)^2+x+6");
-              $ans2=Compute("x^2+x+6");
-              $ans3=Compute("3*(x^2+x)");
-            </pg-code>
-          </setup>
-          <statement>
-            <p>For the function <m>f(x) = x^2 + x</m>, simplify each expression below.</p>
-            <p><ol label="a">
-              <li><p><m>f(x+6)</m></p>
-              <p>Answer:  <var name="$ans1" width="15" /></p></li>
-              <li><p><m>f(x) + 6</m></p>
-              <p>Answer:  <var name="$ans2" width="15" /></p></li>
-              <li><p><m>3f(x)</m></p>
-              <p>Answer:  <var name="$ans3" width="15" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-            <p><ol label="a">
-              <li><p><m>f(x+6) = (x+6)^2 + (x+6)</m></p></li>
-              <li><p><m>f(x) + 6 = x^2 + x + 6</m></p></li>
-              <li><p><m>3f(x) = 3(x^2 + x)</m></p></li>
-            </ol></p>
-          </solution>
-        </webwork>
-      </exercise>
+        <title>Prep Activity</title>
+        <p>In preparation for this activity, we should revisit function evaluation with an eye toward describing changes to the input or the output.</p>
 
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$ans1"><static>5(-3t+7)</static></var>
-            <var name="$ans2"><static>5(-3(t-4)+7)</static></var>
-            <var name="$ans3"><static>-5(-3(t-4)+7)</static></var>
-            <pg-code>
-              Context()->variables->are(t=>'Real');
-              $ans1=Compute("5(-3t+7)");
-              $ans2=Compute("5(-3(t-4)+7)");
-              $ans3=Compute("-5(-3(t-4)+7)");
-            </pg-code>
-          </setup>
-          <statement>
-            <p>For the function <m>g(t) = -3t + 7</m>, simplify each expression below.</p>
-            <p><ol label="a">
-              <li><p><m>5g(t)</m></p>
-              <p>Answer:  <var name="$ans1" width="15" /></p></li>
-              <li><p><m>5g(t-4)</m></p>
-              <p>Answer:  <var name="$ans2" width="15" /></p></li>
-              <li><p><m>-5g(t-4)</m></p>
-              <p>Answer:  <var name="$ans3" width="15" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-            <p><ol label="a">
-              <li><p><m>5g(t) = 5(-3t+7)</m></p></li>
-              <li><p><m>5g(t-4) = 5(-3(t-4)+7)</m></p></li>
-              <li><p><m>-5g(t-4) = -5(-3(t-4)+7)</m></p></li>
-            </ol></p>
-          </solution>
-        </webwork>
-      </exercise>
-      <p>For any function <m>y = f(x)</m>, remember that <m>x</m>-values are inputs, and <m>y</m>-values are outputs. If we change this equation to <me>y = f(x)+10</me> then we are really just adding the number <m>10</m> to all of the outputs for the original function <m>f</m>.</p>
-      <p>In the next exercise, you will describe changes to either the input or the output of a function.</p>
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$ans1">
-              <set>
-                <member>\text{?}</member>
-                <member correct="yes">\text{adding 4 to the input}</member>
-                <member>\text{adding 4 to the output}</member>
-              </set>
-            </var>
-            <var name="$ans2">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{subtracting 2 from the input}</member>
-                <member correct="yes">\text{subtracting 2 from the input}</member>
-              </set>
-            </var>
-            <var name="$ans3">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{multiplying the input by 5}</member>
-                <member correct="yes">\text{multiplying the output by 5}</member>
-              </set>
-            </var>
-            <var name="$ans4">
-              <set>
-                <member>\text{?}</member>
-                <member correct="yes">\text{multiplying the input by 9}</member>
-                <member>text{multiplying the output by 9}</member>
-              </set>
-            </var>
-            <pg-code>
-              $ans1=PopUp(
-              ["?","adding 4 to the input","adding 4 to the output"],"adding 4 to the input"
-              );
-              $ans2=PopUp(
-              ["?","subtracting 2 from the input","subtracting 2 from the output"],"subtracting 2 from the output"
-              );
-              $ans3=PopUp(
-              ["?","multiplying the input by 5","multiplying the output by 5"],"multiplying the output by 5"
-              );
-              $ans4=PopUp(
-              ["?","multiplying the input by 9","multiplying the output by 9"],"multiplying the input by 9"
-              );
-            </pg-code>
-          </setup>
-          <statement>
-            <p>For each equation below, give a description of what we are changing (<init>e.g.</init> <q>adding 10 to the outputs</q>).</p>
-            <p><ol label="a">
-              <li><p><m>y = f(x+4)</m></p>
-              <p>Answer:  <var name="$ans1" form="popup" /></p></li>
-              <li><p><m>y = f(x) - 2</m></p>
-              <p>Answer:  <var name="$ans2" form="popup" /></p></li>
-              <li><p><m>y = 5f(x)</m></p>
-              <p>Answer:  <var name="$ans3" form="popup" /></p></li>
-              <li><p><m>y = f(9x)</m></p>
-              <p>Answer:  <var name="$ans4" form="popup" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-            <p><ol label="a">
-              <li><p>The equation <m>y = f(x+4)</m> adds <m>4</m> to the input of the function <m>f</m>.</p></li>
-              <li><p>The equation <m>y = f(x)-2</m> subtracts 2 from the input of the function <m>f</m>.</p></li>
-              <li><p>The equation <m>y = 5f(x)</m> multiplies the output of the function <m>f</m> by <m>5</m>.</p></li>
-              <li><p>The equation <m>y = f(9x)</m> multiplies the input of the function <m>f</m> by <m>9</m>.</p></li>
-            </ol></p>
-          </solution>
-        </webwork>
-      </exercise>
+        <p>Each of the following problems involves something you have already learned. These are skills we will need in the rest of this activity.</p>
 
-      <p>Finally, you will write equations which match verbal descriptions of changes to the input and/or output.</p>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$ans1"><static>(x+6)^2 + (x+6)</static></var>
+                    <var name="$ans2"><static>x^2+x+6</static></var>
+                    <var name="$ans3"><static>3\cdot(x^2+x)</static></var>
+                    <pg-code>
+                        $ans1=Compute("(x+6)^2+x+6");
+                        $ans2=Compute("x^2+x+6");
+                        $ans3=Compute("3*(x^2+x)");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Given the function <m>f(x) = x^2 + x</m>, write a formula for each expression below.</p>
+                    <p><ol label="a">
+                        <li>
+                            <p><m>f(x+6)=</m> <var name="$ans1" width="15" /></p>
+                        </li>
+                        <li>
+                            <p><m>f(x) + 6</m>=<var name="$ans2" width="15" /></p>
+                        </li>
+                        <li>
+                            <p><m>3f(x)=</m> <var name="$ans3" width="15" /></p>
+                        </li>
+                    </ol></p>
+                 </statement>
+                <solution>
+                    <p><ol label="a">
+                        <li>
+                            <p><m>f(x+6) = (x+6)^2 + (x+6)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(x) + 6 = x^2 + x + 6</m></p>
+                        </li>
+                        <li>
+                            <p><m>3f(x) = 3(x^2 + x)</m></p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
 
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$ans1"><static>g(t-5)+4</static></var>
-            <var name="$ans2"><static>g(2t)-1</static></var>
-            <var name="$ans3"><static>7g(t)</static></var>
-            <pg-code>
-              Context('Numeric');
-              Context()->variables->are(t=>'Real');
-              parserFunction("g(t)"=>"(sin(t)+2)/pi");
-              Context()->flags->set(reduceConstantFunctions=>0);
-              Context()->flags->set(formatStudentAnswer=>"parsed");
-              $ans1=Formula("g(t-5)+4");
-              $ans2=Formula("g(2*t)-1");
-              $ans3=Formula("7*g(t)");
-            </pg-code>
-          </setup>
-          <statement>
-            <p>Beginning with the function <m>y = g(t)</m>, write an equation which matches each description.</p>
-            <p><ol label="a">
-              <li><p><q>We subtracted <m>5</m> from the input and added <m>4</m> to the output.</q></p>
-              <p>Answer:  <m>y = </m><var name="$ans1" width="10" /></p></li>
-              <li><p><q>We doubled the input and then subtracted <m>1</m> from the output.</q></p>
-              <p>Answer:  <m>y = </m><var name="$ans2" width="10" /></p></li>
-              <li><p><q>We multiplied the output by 7.</q></p>
-              <p>Answer:  <m>y = </m><var name="$ans3" width="10" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-            <p><ol label="a">
-              <li><p><m>g(t-5)+4</m></p></li>
-              <li><p><m>g(2t)-1</m></p></li>
-              <li><p><m>7g(t)</m></p></li>
-            </ol></p>
-          </solution>
-        </webwork>
-      </exercise>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$ans1"><static>5(-3t+7)</static></var>
+                    <var name="$ans2"><static>5(-3(t-4)+7)</static></var>
+                    <var name="$ans3"><static>-5(-3(t-4)+7)</static></var>
+                    <pg-code>
+                        Context()->variables->are(t=>'Real');
+                        $ans1=Compute("5(-3t+7)");
+                        $ans2=Compute("5(-3(t-4)+7)");
+                        $ans3=Compute("-5(-3(t-4)+7)");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Given the function <m>g(t) = -3t + 7</m>, write a formula for each expression below.</p>
+                    <p><ol label="a">
+                        <li>
+                            <p><m>5g(t)=</m><var name="$ans1" width="15" /></p>
+                        </li>
+                        <li>
+                            <p><m>5g(t-4)=</m><var name="$ans2" width="15" /></p>
+                        </li>
+                        <li>
+                            <p><m>-5g(t-4)=</m><var name="$ans3" width="15" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p><ol label="a">
+                        <li>
+                            <p><m>5g(t) = 5(-3t+7)</m></p>
+                        </li>
+                        <li>
+                            <p><m>5g(t-4) = 5(-3(t-4)+7)</m></p>
+                        </li>
+                        <li>
+                            <p><m>-5g(t-4) = -5(-3(t-4)+7)</m></p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+        <p>For any function <m>y = f(x)</m>, remember that <m>x</m>-values are inputs, and <m>y</m>-values are outputs. If we change this equation to <me>y = f(x)+10</me> then we are really just adding the number <m>10</m> to all of the outputs for the original function <m>f</m>.</p>
+
+        <p>In the next exercise, you will describe changes to either the input or the output of a function.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$ans1">
+                        <set>
+                          <member correct="yes">\text{adding 4 to the input}</member>
+                          <member>\text{adding 4 to the output}</member>
+                        </set>
+                    </var>
+                    <var name="$ans2">
+                        <set>
+                            <member>\text{subtracting 2 from the input}</member>
+                            <member correct="yes">\text{subtracting 2 from the input}</member>
+                        </set>
+                    </var>
+                    <var name="$ans3">
+                        <set>
+                            <member>\text{multiplying the input by 5}</member>
+                            <member correct="yes">\text{multiplying the output by 5}</member>
+                        </set>
+                    </var>
+                    <var name="$ans4">
+                        <set>
+                            <member correct="yes">\text{multiplying the input by 9}</member>
+                            <member>text{multiplying the output by 9}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $ans1=PopUp(["?","adding 4 to the input","adding 4 to the output"],1);
+                        $ans2=PopUp(["?","subtracting 2 from the input","subtracting 2 from the output"],2);
+                        $ans3=PopUp(["?","multiplying the input by 5","multiplying the output by 5"],2);
+                        $ans4=PopUp(["?","multiplying the input by 9","multiplying the output by 9"],1);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>For each equation below, give a description of what we are changing (<init>e.g.</init> <q>adding 10 to the outputs</q>).</p>
+                    <p><ol label="a">
+                        <li>
+                            <p><m>y = f(x+4)</m></p>
+                            <p><var name="$ans1" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p><m>y = f(x) - 2</m></p>
+                            <p><var name="$ans2" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p><m>y = 5f(x)</m></p>
+                            <p><var name="$ans3" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p><m>y = f(9x)</m></p>
+                            <p><var name="$ans4" form="popup" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p><ol label="a">
+                        <li>
+                            <p>The equation <m>y = f(x+4)</m> adds <m>4</m> to the input of the function <m>f</m>.</p>
+                        </li>
+                        <li>
+                            <p>The equation <m>y = f(x)-2</m> subtracts 2 from the input of the function <m>f</m>.</p>
+                        </li>
+                        <li>
+                            <p>The equation <m>y = 5f(x)</m> multiplies the output of the function <m>f</m> by <m>5</m>.</p>
+                        </li>
+                        <li>
+                            <p>The equation <m>y = f(9x)</m> multiplies the input of the function <m>f</m> by <m>9</m>.</p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+        <p>Lastly, you will write equations which match verbal descriptions of changes to the input and/or output.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$ans1"><static>g(t-5)+4</static></var>
+                    <var name="$ans2"><static>g(2t)-1</static></var>
+                    <var name="$ans3"><static>7g(t)</static></var>
+                    <pg-code>
+                        Context('Numeric');
+                        Context()->variables->are(t=>'Real');
+                        parserFunction("g(t)"=>"(sin(t)+2)/pi");
+                        Context()->flags->set(reduceConstantFunctions=>0);
+                        Context()->flags->set(formatStudentAnswer=>"parsed");
+                        $ans1=Formula("g(t-5)+4");
+                        $ans2=Formula("g(2*t)-1");
+                        $ans3=Formula("7*g(t)");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Beginning with the function <m>y = g(t)</m>, write an equation which matches each description.</p>
+                    <p><ol label="a">
+                        <li>
+                            <p><q>We subtracted <m>5</m> from the input and added <m>4</m> to the output.</q></p>
+                            <p><m>y = </m><var name="$ans1" width="10" /></p>
+                        </li>
+                        <li>
+                            <p><q>We doubled the input and then subtracted <m>1</m> from the output.</q></p>
+                            <p><m>y = </m><var name="$ans2" width="10" /></p>
+                        </li>
+                        <li>
+                            <p><q>We multiplied the output by 7.</q></p>
+                            <p><m>y = </m><var name="$ans3" width="10" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p><ol label="a">
+                        <li>
+                            <p><m>g(t-5)+4</m></p>
+                        </li>
+                        <li>
+                            <p><m>g(2t)-1</m></p>
+                        </li>
+                        <li>
+                            <p><m>7g(t)</m></p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
     </subsection>
+
     <subsection>
-      <title>Vertical and Horizontal Translations</title>
-      <p>In this section, we will see the effects of changing the input or the output of a function, particularly as relates to the graph. We will follow a single example that will lead us through most of the main points of this section.</p>
-      <paragraphs><title>The Swimmer</title></paragraphs>
-      <example>
-        <statement>
-          <p>In preparation for the swimming competition, a swimmer jumped off a diving board into a swimming pool below. Below is a graph of her height above the water as a function of time.</p>
-          <figure xml:id="figure-diving-board">
-            <caption><m>h = g(t)</m></caption>
-              <image width="47%">
-                <latex-image-code>
-                <![CDATA[
-                  \begin{tikzpicture}
-                    \begin{axis}[xmax=2, xmin=0,
-                                xlabel={Time (seconds)},
-                                ylabel={Height (feet)},
-                                xtick={0,1},
-                                ymax=8, ymin=0,
-                                ytick={0,2,4,6,8}]
-                      \addplot+[domain=-.2:1.2, samples=50] {3+15*x-16*x^2};
-                    \end{axis}
-                  \end{tikzpicture}
-                ]]>
-                </latex-image-code>
-            </image>
-          </figure>
-          <p>You can see some basic information from the graph:</p>
-          <p><ol label="a">
-            <li><p>How high was the diving board?</p></li>
-            <li><p>When did the swimmer reach the water?</p></li>
-            <li><p>What was her maximum height above the water?</p></li>
-          </ol></p>
-        </statement>
-        <solution>
-          <p><ol label="a">
-            <li><p>The diving board was <m>3</m> feet high, as this is the swimmer's height above the water at <m>t = 0</m> seconds.</p></li>
-            <li><p>The swimmer reached the water at approximately <m>1.1</m> seconds, according to the graph.</p></li>
-            <li><p>Her maximum height above the water was approximately <m>6.5</m> feet, according to the graph.</p></li>
-          </ol></p>
-        </solution>
-      </example>
-      <p>After that dive, the swimmer decided to try out the high-dive board, which is <m>7</m> feet higher than the first board. See the next exercise.</p>
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$start"><static>10</static></var>
-            <var name="$max">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{It stayed the same}</member>
-                <member correct="yes">\text{It increased by 7 feet}</member>
-              </set>
-            </var>
-            <var name="$water">
-              <set>
-                <member>\text{?}</member>
-                <member correct="yes">\text{It increased slightly}</member>
-                <member>\text{It decreased slightly}</member>
-              </set>
-            </var>
-            <pg-code>
-              $start=Real(10);
-              $max=PopUp(
-              ["?","It stayed the same","It increased by 7 feet"],"It increased by 7 feet"
-              );
-              $water=PopUp(
-              ["?","It increased slightly","It decreased slightly"],"It increased slightly"
-              );
-            </pg-code>
-          </setup>
-          <statement>
-            <p>The graph below shows the swimmer's height above the water when she jumped off the regular diving board.</p>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xSDE2bnJ/width/422/height/343/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="422px" height="343px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>After this dive, she decided to jump off the high-dive board, which is <m>7</m> feet higher than the regular diving board. Click and drag the vertical intercept to move the graph to match this new situation.</p>
-            <p><ol label="a">
-              <li><p>What was the swimmer's beginning height above the water?</p>
-              <p>Answer:  <var name="$start" width="10" /> Feet</p></li>
-              <li><p>Did anything change about the swimmer's maximum height?</p>
-              <p>Answer:  <var name="$max" form="popup" /></p></li>
-              <li><p>Did anything change about the time she reached the water?</p>
-              <p>Answer:  <var name="$water" form="popup" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-            <p><ol label="a">
-              <li><p>The swimmer began <m>10</m> feet above the water.</p></li>
-              <li><p>Her maximum height also increased by <m>7</m> feet.</p></li>
-              <li><p>The time she reached the water increased slightly.</p></li>
-            </ol></p>
-          </solution>
-        </webwork>
-      </exercise>
-      <p>For the swimmer’s first jump, the function <m>h = f(t)</m> models her height above the water as a function of time. Use function notation to describe this change in height. See the next exercise.</p>
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$change">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{added 7 to the input}</member>
-                <member correct="yes">\text{added 7 to the output}</member>
-                <member>\text{subtracted 7 from the input}</member>
-                <member>\text{subtracted 7 from the output}</member>
-              </set>
-            </var>
-            <var name="$eqn">
-              <set>
-                <member>\text{?}</member>
-                <member>h = f(t + 7)</member>
-                <member correct="yes">h = f(t) + 7</member>
-                <member>h = f(t - 7)</member>
-                <member>h = f(t) - 7</member>
-              </set>
-            </var>
-            <pg-code>
-              $change=PopUp(
-              ["?","added 7 to the input","added 7 to the output","subtracted 7 from the input","subtracted 7 from the output"],"added 7 to the output"
-              );
-              $eqn=PopUp(
-              ["?","h = f(t + 7)","h = f(t) + 7","h = f(t - 7)","h = f(t) - 7"],"h = f(t) + 7"
-              );
-            </pg-code>
-          </setup>
-          <statement>
-            <p><ol label="a">
-              <li><p>For the high-dive, what did the swimmer change: the <em>input</em> or the <em>output</em> of the function? How did she change it? Choose the correct statement below.</p>
-              <p>The swimmer: <var name="$change" form="popup" /></p></li>
-              <li><p>Which equation below correctly matches the situation?</p>
-              <p>Answer: <var name="$eqn" form="popup" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-            <p><ol label="a">
-              <li><p>Because the swimmer jumped off of a board which is <m>7</m> feet higher than before, she added <m>7</m> to the output of the height function.</p></li>
-              <li><p>The correct formula is: <me>h = f(t) + 7</me></p></li>
-            </ol></p>
-          </solution>
-        </webwork>
-      </exercise>
-      <p>Now more information about that first dive: The formula for the swimmer's height above the water after diving off the regular board is given by: <me>h = f(t) = -16t^2+15t+3</me> (Note: you are not expected to know how this formula was made.)</p>
-      <p>Confirm that this formula really works by graphing it on your calculator.</p>
-      <p>In the next exercise, you will change this formula so it represents the swimmer's height when she used the high-dive board.</p>
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$eqn"><static>-16t^2+15t+10</static></var>
-            <pg-code>
-              Context('Numeric');
-              Context()->variables->are(t=>'Real');
-              $eqn=Compute("-16t^2+15t+3+7");
-            </pg-code>
-          </setup>
-          <statement>
-            <p>Jumping off the regular diving board, the swimmer's heigh above water is modeled by the function: <me>h = f(t) = -16t^2+15t+3</me></p>
-            <p>When the swimmer moves up and jumps off the high-dive board, which is <m>7</m> feet higher up, this makes the height function: <me>h = f(t) + 7</me></p>
-            <p>Use the formula given to write the formula for <m>f(t) + 7</m>, which represents increasing the <em>output</em> by <m>7</m>.</p>
-            <p>Answer:  <m>f(t) + 7 = </m><var name="$eqn" width="15" /></p>
-            <p>You should confirm that your formula is correct by graphing it on your calculator.</p>
-          </statement>
-          <solution>
-            <p>The formula is: <md>
-              <mrow>f(t) + 7 \amp= -16t^2+15t+3+7</mrow>
-              <mrow>\amp= -16t^2+15t+10</mrow></md>
-            </p>
-          </solution>
-        </webwork>
-      </exercise>
-      <p>Nice work so far, but our swimmer isn't done yet <mdash /> she has two other boards to try out. See the next exercise.</p>
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$describeup">
-              <set>
-                <member>\text{?}</member>
-                <member correct="yes">\text{go up by 25 feet}</member>
-                <member>\text{go down by 25 units}</member>
-                <member>\text{stay the same}</member>
-              </set>
-            </var>
-            <var name="$describedown">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{go up by 2 feet}</member>
-                <member correct="yes">\text{go down by 2 feet}</member>
-                <member>\text{stay the same}</member>
-              </set>
-            </var>
-            <var name="$eqn1"><static>-16t^2+15t+3+25</static></var>
-            <var name="$eqn2"><static>-16t^2+15t+3-2</static></var>
-            <pg-code>
-              $describeup=PopUp(
-              ["?","go up by 25 feet","go down by 25 feet","stay the same"],"go up by 25 feet"
-              );
-              $describedown=PopUp(
-              ["?","go up by 2 feet","go down by 2 feet","stay the same"],"go down by 2 feet"
-              );
-              Context('Numeric');
-              Context()->variables->are(t=>'Real');
-              $eqn1=Compute("-16t^2+15t+3+25");
-              $eqn2=Compute("-16t^2+15t+3-2");
-            </pg-code>
-          </setup>
-          <statement>
-            <p>Recall that the swimmer's height above the water, as she jumps from the regular diving board, is given by: <me>h = f(t) = -16t^2 + 15t + 3</me></p>
-            <p><ol label="a">
-              <li><p>If the swimmer jumped off the <em>Mega</em> high-dive board which is <m>25</m> feet higher than the regular board, how would the original graph change? What would be the new formula for her height above the water?</p>
-              <p>Answer: The graph would <var name="$describeup" form="popup" /></p>
-              <p>The formula would be: <m>h = </m><var name="$eqn1" width="15" /></p></li>
-              <li><p>If the swimmer jumped off the <em>Nano</em> board which is <m>2</m> feet lower than the regular board, how would the original graph change? What would be the new formula for her height above the water?</p>
-              <p>Answer: The graph would <var name="$describedown" form="popup" /></p>
-              <p>The formula would be: <m>h = </m><var name="$eqn2" width="15" /></p></li>
-            </ol></p>
-          </statement>
-          <hint>
-            <p>Jumping off a board of a different height will either <em>add</em> or <em>subtract</em> from the output of the original height function.</p>
-          </hint>
-          <solution>
-            <p><ol label="a">
-              <li><p>For the <em>Mega</em> high-dive, the graph of the swimmer's height function would go up by <m>25</m> feet, and the formula would be: <md>
-              <mrow>h \amp= f(t) + 25</mrow>
-              <mrow>\amp= -16t^2+15t+3+25</mrow>
-              <mrow>\amp= -16t^2+15t+28</mrow></md>
-              </p></li>
-              <li><p>For the <em>Nano</em> board, the graph of the swimmer's height function would go down by <m>2</m> feet, and the formula would be: <md>
-              <mrow>h \amp= f(t) - 2</mrow>
-              <mrow>\amp= -16t^2+15t+3-2</mrow>
-              <mrow>\amp= -16t^2+15t+1</mrow></md>
-              </p></li>
-            </ol></p>
-          </solution>
-        </webwork>
-      </exercise>
-      <p>In the next exercise, summarize what you now know about the effect of adding to, or subtracting from, the output of a function.</p>
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$eqn1"><static>f(x) + k</static></var>
-            <var name="$eqn2"><static>f(x) - k</static></var>
-            <pg-code>
-              Context('Numeric');
-              Context()->variables->are(x=>'Real',k=>'Real');
-              parserFunction("f(x)"=>"(sin(x)+2)/pi");
-              Context()->flags->set(reduceConstantFunctions=>0);
-              Context()->flags->set(formatStudentAnswer=>"parsed");
-              $eqn1=Formula("f(x)+k");
-              $eqn2=Formula("f(x)-k");
-            </pg-code>
-          </setup>
-          <statement>
-            <p>Complete each statement below.</p>
-            <p><ol label="a">
-              <li><p>To move the graph of <m>y = f(x)</m> up by <m>k</m> units, the formula becomes:</p>
-              <p><m>y = </m><var name="$eqn1" form="popup" /></p></li>
-              <li><p>To move the graph of <m>y = f(x)</m> down by <m>k</m> units, the formula becomes:</p>
-              <p><m>y = </m><var name="$eqn2" form="popup" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-          </solution>
-        </webwork>
-      </exercise>
+        <title>The Swimmer</title>
 
-      <p>On the day of the swimming competition, our swimmer was standing on the regular (<m>3</m> foot) diving board, waiting for the starting whistle. However, she was thinking so hard about her math class (which she <em>loves</em>), that she missed the sound of the whistle, and ended up jumping off the board <m>2</m> seconds late! See the next exercise.</p>
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$input">
-              <set>
-                <member>\text{?}</member>
-                <member correct="yes">\text{input}</member>
-                <member>\text{output}</member>
-              </set>
-            </var>
-            <var name="$eqn">
-              <set>
-                <member>\text{?}</member>
-                <member>h = f(t + 2)</member>
-                <member correct="yes">h = f(t - 2)</member>
-              </set>
-            </var>
-            <pg-code>
-              $input=PopUp(
-              ["?","input","outout"],"input"
-              );
-              $eqn=PopUp(
-              ["?","h = f(t + 2)","h = f(t - 2)"],"h = f(t - 2)"
-              );
-            </pg-code>
-          </setup>
-          <statement>
-            <p>The graph below shows <me>h = f(t) = -16t^2+15t+3</me> which is the swimmer's height above the water when she jumped off the regular diving board at time <m>t = 0</m> seconds.</p>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/RR2xR2aG/width/422/height/343/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="422px" height="343px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p><ol label="a">
-              <li><p>At the competition, the swimmer missed the starting whistle and jumped <m>2</m> seconds late. Click and drag the starting point to move the graph to match this new situation.</p></li>
-              <li><p>Jumping late is a change in the: <var name="$input" form="popup" /></p></li>
-              <li><p>Which equation below makes sense for this change?</p>
-              <p><m>h = f(t + 2)</m>  or  <m>h = f(t - 2)</m></p></li>
-              <li><p>If you simplify each of these formulas, the results are:<me>f(t+2) = -16(t+2)^2 + 15(t+2) + 3</me> and <me>f(t-2) = -16(t-2)^2 + 15(t-2) + 3</me></p>
-              <p>Graph these two functions on your calculator. Which one matches the graph you made above?</p>
-              <p>Answer:  <var name="$eqn" form="popup" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-            <p><ol label="a">
-              <li><p>Starting late is a change in the <em>input</em>, which is time.</p></li>
-              <li><p>The formula that moves the graph of <m>h = f(t)</m> to the right by <m>2</m> seconds is:<me>h = f(t - 2)</me></p></li>
-            </ol></p>
-          </solution>
-        </webwork>
-      </exercise>
+        <p>In this section, we will see the effects of changing the input or the output of a function, particularly as relates to the graph. We will follow a single example that will lead us through most of the main points of this section.</p>
 
-      <p>It may have surprised you to see that shifting the graph to the <em>right</em> corresponded to <em>subtracting</em> a number from the input. To make sense of this, consider one of the other swimmers in the competition who jumped when the whistle sounded. Their height function would be given by <m>h = f(t)</m>.</p>
-      <p>If we wanted to find our swimmer's height at, say, <m>3</m> seconds after the whistle sounded, it would be the same height as this other swimmer had at only <m>1</m> second after the whistle <mdash /> everything for our swimmer happened <m>2</m> seconds late. In other words, to find our swimmer's height after <m>t</m> seconds, this is the same as the other swimmer had <m>2</m> seconds before. So for our swimmer, her height is given by: <me>h = f(t - 2)</me></p>
-      <p>The next two exercises will complete our story about the swimmer. In them, you will write formulas for her height given different diving situations.</p>
-
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$eqn"><static>-16(t-3)^2 + 15(t-3) + 3 + 7</static></var>
-            <pg-code>
-              Context('Numeric');
-              Context()->variables->are(t=>'Real');
-              $eqn=Compute("-16(t-3)^2+15(t-3)+3+7");
-            </pg-code>
-          </setup>
-          <statement>
-            <p>Recall that the swimmer's height above the water, after jumping off the regular diving board, was given by: <me>h = f(t) = -16t^2 + 15t + 3</me></p>
-            <p>Suppose the swimmer jumped off the high-dive board, which is <m>7</m> feet higher than the regular board, but she did so <m>3</m> seconds after the timer started. Alter the formula for <m>f(t)</m> in order to write the formula for her height above the water in this situation.</p>
-            <p>Answer:  <m>h = </m><var name="$eqn" width="20" /></p>
-          </statement>
-          <solution>
-            <p>This new situation corresponds to shifting the graph of <m>h = f(t)</m> to the right by <m>3</m> seconds and up by <m>7</m> feet, so the formula is: <md>
-            <mrow>h \amp= f(t - 3) + 7</mrow>
-            <mrow>\amp= \left(-16(t-3)^2 + 15(t-3) + 3\right) + 7</mrow>
-            <mrow>\amp= -16(t-3)^2 + 15(t-3) + 10</mrow></md>
-            </p>
-          </solution>
-        </webwork>
-      </exercise>
-
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$early">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{late}</member>
-                <member correct="yes">\text{early}</member>
-              </set>
-            </var>
-            <var name="$board">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{high-dive}</member>
-                <member>\text{Mega high-dive}</member>
-                <member correct="yes">\text{Nano}</member>
-              </set>
-            </var>
-            <pg-code>
-              $early=PopUp(
-              ["?","late","early"],"early"
-              );
-              $board=PopUp(
-              ["?","high-dive","Mega high-dive","Nano"],"Nano"
-              );
-            </pg-code>
-          </setup>
-          <statement>
-            <p>Recall that the swimmer's height above the water, after jumping off the regular diving board, was given by: <me>h = f(t) = -16t^2 + 15t + 3</me></p>
-            <p>Suppose on a particular dive, her height above the water was given by the formula: <me>h = 1 + 15(t+1) - 16(t+1)^2</me></p>
-            <p><ol label="a">
-              <li><p>Did she jump late or early?</p>
-              <p>Answer:  She jumped <m>1</m> second <var name="$early" form="popup" /></p></li>
-              <li><p>Did she jump off the <em>high-dive</em> board (<m>7</m> feet higher than normal), the <em>Mega high-dive</em> board (<m>25</m> feet higher than normal), or the <em>Nano</em> board (<m>2</m> feet lower than normal)?</p>
-              <p>Answer:  She jumped off the <var name="$board" form="popup" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-            <p><ol label="a">
-              <li><p>Because we have added <m>1</m> to the input, this corresponds to a leftward shift of the graph by <m>1</m> second. Therefore, she jumped <m>1</m> second early.</p></li>
-              <li><p>Notice that our formula <me>h = 1 + 15(t+1) - 16(t+1)^2</me> could be written as:<me>h = \left(-16(t+1)^2 + 15(t+1) + 3\right) - 2</me></p>
-              <p>This shows that we have really subtracted <m>2</m> from the output of our original function <m>f(t)</m>, so she has jumped off the <em>Nano</em> board.</p></li>
-            </ol></p>
-          </solution>
-        </webwork>
-      </exercise>
-    <paragraphs>
-      <title>Seeing the shifts</title>
-      <p>Now we will see the effect of making a change to the <em>output</em> of a function by manipulating its formula. You will be able to describe what happens to the graph of a function after it has been changed from: <md alignment="gather">
-      <mrow>y = f(x)</mrow>
-      <mrow>\text{to}</mrow>
-      <mrow>y = f(x) + k</mrow></md></p>
-    </paragraphs>
-    <exercise>
-        <webwork xml:id="webwork-vertical-transformation-with-graph">
-            <setup>
-              <var name="$choice">
-                <set>
-                    <member>\text{The graph moves right.}</member>
-                    <member>\text{The graph moves left.}</member>
-                    <member correct="yes">\text{The graph moves up.}</member>
-                    <member>\text{The graph moves down.}</member>
-                    <member>\text{None of these}</member>
-                </set>
-              </var>
-              <var name="$point">
-                <set>
-                    <member correct="yes">y=f(x)-3=x^2-3</member>
-                    <member>y=f(x)+3=x^2+3</member>
-                    <member>\text{None of these}</member>
-                </set>
-              </var>
-              <pg-code>
-                Context('Numeric');
-                $choice = RadioButtons(
-                  ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
-                  2, labels => ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
-                  displayLabels => 0
-                );
-                $point = RadioButtons(
-                  ["\(y = f(x) - 3 = x^2 - 3\)","\(y = f(x) + 3 = x^2 + 3\)","None of these"],
-                  0, labels => ["y=f(x)-3=x^2-3","\(y=f(x)+3=x^2+3\)","None of these"],
-                  displayLabels => 0
-                );
-              </pg-code>
-            </setup>
-
+        <example>
             <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pXUT7wZS/width/431/height/313/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                <ol>
-                  <li><p>The graph starts by showing the parabola <m>f(x) = x^2</m>. Moving the slider will change the function by adding a number <m>k</m> to the output.</p>
-                  <p>Use the slider to change the value of <m>k</m> to the number <m>5</m>. What happened to the graph as you changed the formula to <m>f(x) + 5 = x^2 + 5</m>?</p>
-                  <p><var name="$choice" form="buttons" /></p></li>
-                  <li><p>Notice that the graph shows the coordinates of the lowest point (the <em>vertex</em>). Which equation below would graph as a parabola with a vertex at the point <m>(0,-3)</m>?</p>
-                  <p><var name="$point" form="buttons" /></p></li>
-                </ol>
+                <p>In preparation for the swimming competition, a swimmer jumped off a diving board into a swimming pool below. Below is a graph of her height above the water as a function of time.</p>
+
+                <figure xml:id="figure-diving-board">
+                    <caption><m>h = g(t)</m></caption>
+                    <image width="47%">
+                        <latex-image-code>
+                        <![CDATA[
+                          \begin{tikzpicture}
+                            \begin{axis}[xmax=2, xmin=0,
+                                        xlabel={Time (seconds)},
+                                        ylabel={Height (feet)},
+                                        xtick={0,1},
+                                        ymax=8, ymin=0,
+                                        ytick={0,2,4,6,8},
+                                        y axis line style = {->},
+                                        x axis line style = {->},]
+                              \addplot+[domain=-.2:1.2, samples=50] {3+15*x-16*x^2};
+                            \end{axis}
+                          \end{tikzpicture}
+                        ]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+
+                <p>You can see some basic information from the graph:</p>
+                <p><ol label="a">
+                    <li>
+                        <p>How high was the diving board?</p>
+                    </li>
+                    <li>
+                        <p>When did the swimmer reach the water?</p>
+                    </li>
+                    <li>
+                        <p>What was her maximum height above the water?</p>
+                    </li>
+                </ol></p>
             </statement>
-        </webwork>
-    </exercise>
+            <solution>
+                <p><ol label="a">
+                    <li>
+                        <p>The diving board was <m>3</m> feet high, as this is the swimmer's height above the water at <m>t = 0</m> seconds.</p>
+                    </li>
+                    <li>
+                        <p>The swimmer reached the water at approximately <m>1.1</m> seconds, according to the graph.</p>
+                    </li>
+                    <li>
+                        <p>Her maximum height above the water was approximately <m>6.5</m> feet, according to the graph.</p>
+                    </li>
+                </ol></p>
+            </solution>
+        </example>
+
+        <p>After that dive, the swimmer decided to try out the high-dive board, which is <m>7</m> feet higher than the first board. See the next exercise.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$start"><static>10</static></var>
+                    <var name="$max">
+                        <set>
+                            <member>\text{It stayed the same}</member>
+                            <member correct="yes">\text{It increased by 7 feet}</member>
+                        </set>
+                    </var>
+                    <var name="$water">
+                        <set>
+                            <member correct="yes">\text{It increased slightly}</member>
+                            <member>\text{It decreased slightly}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $start=Real(10);
+                        $max=PopUp(
+                        ["?","It stayed the same","It increased by 7 feet"],2
+                        );
+                        $water=PopUp(
+                        ["?","It increased slightly","It decreased slightly"],1
+                        );
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The graph below shows the swimmer's height above the water when she jumped off the regular diving board.</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xSDE2bnJ/width/422/height/343/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="422px" height="343px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>After this dive, she decided to jump off the high-dive board, which is <m>7</m> feet higher than the regular diving board. Click and drag the vertical intercept to move the graph to match this new situation.</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>What was the swimmer's beginning height above the water?</p>
+                            <p><var name="$start" width="10" /> Feet</p>
+                        </li>
+                        <li>
+                            <p>Did anything change about the swimmer's maximum height?</p>
+                            <p><var name="$max" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p>Did anything change about the time she reached the water?</p>
+                            <p><var name="$water" form="popup" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p><ol label="a">
+                        <li>
+                            <p>The swimmer began <m>10</m> feet above the water.</p>
+                        </li>
+                        <li>
+                            <p>Her maximum height also increased by <m>7</m> feet.</p>
+                        </li>
+                        <li>
+                            <p>The time she reached the water increased slightly.</p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+        <p>For the swimmer’s first jump, the function <m>h = f(t)</m> models her height above the water as a function of time. Use function notation to describe this change in height. See the next exercise.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$change">
+                        <set>
+                            <member>\text{added 7 to the input}</member>
+                            <member correct="yes">\text{added 7 to the output}</member>
+                            <member>\text{subtracted 7 from the input}</member>
+                            <member>\text{subtracted 7 from the output}</member>
+                        </set>
+                    </var>
+                    <var name="$eqn">
+                        <set>
+                            <member>h = f(t + 7)</member>
+                            <member correct="yes">h = f(t) + 7</member>
+                            <member>h = f(t - 7)</member>
+                            <member>h = f(t) - 7</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $change=PopUp(["?","added 7 to the input","added 7 to the output","subtracted 7 from the input","subtracted 7 from the output"],2);
+                        $eqn=PopUp(["?","h = f(t + 7)","h = f(t) + 7","h = f(t - 7)","h = f(t) - 7"],2);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p><ol label="a">
+                        <li>
+                            <p>For the high-dive, what did the swimmer change: the <em>input</em> or the <em>output</em> of the function? How did she change it? Choose the correct statement below.</p>
+                            <p>The swimmer: <var name="$change" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p>Which equation below correctly matches the situation?</p>
+                            <p><var name="$eqn" form="popup" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p><ol label="a">
+                        <li>
+                            <p>Because the swimmer jumped off of a board which is <m>7</m> feet higher than before, she added <m>7</m> to the output of the height function.</p>
+                        </li>
+                        <li>
+                            <p>The correct formula is: <me>h = f(t) + 7</me></p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+        <p>Now more information about that first dive: The formula for the swimmer's height above the water after diving off the regular board is given by: <me>h = f(t) = -16t^2+15t+3</me> (You are not expected to know how this formula was made.)</p>
+
+        <p>Confirm that this formula really works by graphing it on your calculator.</p>
+
+        <p>In the next exercise, you will change this formula so it represents the swimmer's height when she used the high-dive board.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$eqn"><static>-16t^2+15t+10</static></var>
+                    <pg-code>
+                        Context('Numeric');
+                        Context()->variables->are(t=>'Real');
+                        $eqn=Compute("-16t^2+15t+3+7");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Jumping off the regular diving board, the swimmer's heigh above water is modeled by the function: <me>h = f(t) = -16t^2+15t+3</me></p>
+                    <p>When the swimmer moves up and jumps off the high-dive board, which is <m>7</m> feet higher up, this makes the height function: <me>h = f(t) + 7</me></p>
+                    <p>Use the formula given to write the formula for <m>f(t) + 7</m>, which represents increasing the <em>output</em> by <m>7</m>.</p>
+                    <p><m>f(t) + 7 = </m><var name="$eqn" width="15" /></p>
+                    <p>You should confirm that your formula is correct by graphing it on your calculator.</p>
+                </statement>
+                <solution>
+                    <p>The formula is: <md>
+                        <mrow>f(t) + 7 \amp= -16t^2+15t+3+7</mrow>
+                        <mrow>\amp= -16t^2+15t+10</mrow>
+                    </md></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+        <p>Nice work so far, but our swimmer isn't done yet <mdash /> she has two other boards to try out. See the next exercise.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$describeup">
+                        <set>
+                            <member correct="yes">\text{go up by 25 feet}</member>
+                            <member>\text{go down by 25 units}</member>
+                            <member>\text{stay the same}</member>
+                        </set>
+                    </var>
+                    <var name="$describedown">
+                        <set>
+                            <member>\text{go up by 2 feet}</member>
+                            <member correct="yes">\text{go down by 2 feet}</member>
+                            <member>\text{stay the same}</member>
+                        </set>
+                    </var>
+                    <var name="$eqn1"><static>-16t^2+15t+3+25</static></var>
+                    <var name="$eqn2"><static>-16t^2+15t+3-2</static></var>
+                    <pg-code>
+                        $describeup=PopUp(["?","go up by 25 feet","go down by 25 feet","stay the same"],1);
+                        $describedown=PopUp(["?","go up by 2 feet","go down by 2 feet","stay the same"],2);
+                        Context('Numeric');
+                        Context()->variables->are(t=>'Real');
+                        $eqn1=Compute("-16t^2+15t+3+25");
+                        $eqn2=Compute("-16t^2+15t+3-2");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Recall that the swimmer's height above the water, as she jumps from the regular diving board, is given by: <me>h = f(t) = -16t^2 + 15t + 3</me></p>
+                    <p><ol label="a">
+                        <li>
+                            <p>If the swimmer jumped off the <em>Mega</em> high-dive board which is <m>25</m> feet higher than the regular board, how would the original graph change? What would be the new formula for her height above the water?</p>
+                            <p>The graph would <var name="$describeup" form="popup" /></p>
+                            <p>The formula would be: <m>h = </m><var name="$eqn1" width="15" /></p>
+                        </li>
+                        <li>
+                            <p>If the swimmer jumped off the <em>Nano</em> board which is <m>2</m> feet lower than the regular board, how would the original graph change? What would be the new formula for her height above the water?</p>
+                            <p>The graph would <var name="$describedown" form="popup" /></p>
+                            <p>The formula would be: <m>h = </m><var name="$eqn2" width="15" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <hint>
+                    <p>Jumping off a board of a different height will either <em>add</em> or <em>subtract</em> from the output of the original height function.</p>
+                </hint>
+                <solution>
+                    <p><ol label="a">
+                        <li>
+                            <p>For the <em>Mega</em> high-dive, the graph of the swimmer's height function would go up by <m>25</m> feet, and the formula would be: <md>
+                                <mrow>h \amp= f(t) + 25</mrow>
+                                <mrow>\amp= -16t^2+15t+3+25</mrow>
+                                <mrow>\amp= -16t^2+15t+28</mrow>
+                            </md></p>
+                        </li>
+                        <li>
+                            <p>For the <em>Nano</em> board, the graph of the swimmer's height function would go down by <m>2</m> feet, and the formula would be: <md>
+                                <mrow>h \amp= f(t) - 2</mrow>
+                                <mrow>\amp= -16t^2+15t+3-2</mrow>
+                                <mrow>\amp= -16t^2+15t+1</mrow>
+                            </md></p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+        <p>In the next exercise, summarize what you now know about the effect of adding to, or subtracting from, the output of a function.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$eqn1"><static>f(x) + k</static></var>
+                    <var name="$eqn2"><static>f(x) - k</static></var>
+                    <pg-code>
+                        Context('Numeric');
+                        Context()->variables->are(x=>'Real',k=>'Real');
+                        parserFunction("f(x)"=>"(sin(x)+2)/pi");
+                        Context()->flags->set(reduceConstantFunctions=>0);
+                        Context()->flags->set(formatStudentAnswer=>"parsed");
+                        $eqn1=Formula("f(x)+k");
+                        $eqn2=Formula("f(x)-k");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Complete each statement below.</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>To move the graph of <m>y = f(x)</m> up by <m>k</m> units, the formula becomes:</p>
+                            <p><m>y = </m><var name="$eqn1" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p>To move the graph of <m>y = f(x)</m> down by <m>k</m> units, the formula becomes:</p>
+                            <p><m>y = </m><var name="$eqn2" form="popup" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>On the day of the swimming competition, our swimmer was standing on the regular (<m>3</m> foot) diving board, waiting for the starting whistle. However, she was thinking so hard about her math class (which she <em>loves</em>), that she missed the sound of the whistle, and ended up jumping off the board <m>2</m> seconds late! See the next exercise.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$input">
+                        <set>
+                            <member correct="yes">\text{input}</member>
+                            <member>\text{output}</member>
+                        </set>
+                    </var>
+                    <var name="$eqn">
+                        <set>
+                            <member>h = f(t + 2)</member>
+                            <member correct="yes">h = f(t - 2)</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $input=PopUp(
+                        ["?","input","outout"],"input"
+                        );
+                        $eqn=PopUp(
+                        ["?","h = f(t + 2)","h = f(t - 2)"],"h = f(t - 2)"
+                        );
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The graph below shows <me>h = f(t) = -16t^2+15t+3</me> which is the swimmer's height above the water when she jumped off the regular diving board at time <m>t = 0</m> seconds.</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/RR2xR2aG/width/422/height/343/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="422px" height="343px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>At the competition, the swimmer missed the starting whistle and jumped <m>2</m> seconds late. Click and drag the starting point to move the graph to match this new situation.</p>
+                        </li>
+                        <li>
+                            <p>Jumping late is a change in the: <var name="$input" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p>Which equation below makes sense for this change?</p>
+                            <p><m>h = f(t + 2)</m>  or  <m>h = f(t - 2)</m></p>
+                        </li>
+                        <li>
+                            <p>If you simplify each of these formulas, the results are:<me>f(t+2) = -16(t+2)^2 + 15(t+2) + 3</me> and <me>f(t-2) = -16(t-2)^2 + 15(t-2) + 3</me></p>
+                            <p>Graph these two functions on your calculator. Which one matches the graph you made above?</p>
+                            <p><var name="$eqn" form="popup" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p><ol label="a">
+                        <li>
+                            <p>Starting late is a change in the <em>input</em>, which is time.</p>
+                        </li>
+                        <li>
+                            <p>The formula that moves the graph of <m>h = f(t)</m> to the right by <m>2</m> seconds is:<me>h = f(t - 2)</me></p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+      
+        <p>It may have surprised you to see that shifting the graph to the <em>right</em> corresponded to <em>subtracting</em> a number from the input. To make sense of this, consider one of the other swimmers in the competition who jumped when the whistle sounded. Their height function would be given by <m>h = f(t)</m>.</p>
+      
+        <p>If we wanted to find our swimmer's height at, say, <m>3</m> seconds after the whistle sounded, it would be the same height as this other swimmer had at only <m>1</m> second after the whistle <mdash /> everything for our swimmer happened <m>2</m> seconds late. In other words, to find our swimmer's height after <m>t</m> seconds, this is the same as the other swimmer had <m>2</m> seconds before. So for our swimmer, her height is given by: <me>h = f(t - 2)</me></p>
+      
+        <p>The next two exercises will complete our story about the swimmer. In them, you will write formulas for her height given different diving situations.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$eqn"><static>-16(t-3)^2 + 15(t-3) + 3 + 7</static></var>
+                    <pg-code>
+                        Context('Numeric');
+                        Context()->variables->are(t=>'Real');
+                        $eqn=Compute("-16(t-3)^2+15(t-3)+3+7");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Recall that the swimmer's height above the water, after jumping off the regular diving board, was given by: <me>h = f(t) = -16t^2 + 15t + 3</me></p>
+                    <p>Suppose the swimmer jumped off the high-dive board, which is <m>7</m> feet higher than the regular board, but she did so <m>3</m> seconds after the timer started. Alter the formula for <m>f(t)</m> in order to write the formula for her height above the water in this situation.</p>
+                    <p><m>h = </m><var name="$eqn" width="20" /></p>
+                </statement>
+                <solution>
+                    <p>This new situation corresponds to shifting the graph of <m>h = f(t)</m> to the right by <m>3</m> seconds and up by <m>7</m> feet, so the formula is: <md>
+                        <mrow>h \amp= f(t - 3) + 7</mrow>
+                        <mrow>\amp= \left(-16(t-3)^2 + 15(t-3) + 3\right) + 7</mrow>
+                        <mrow>\amp= -16(t-3)^2 + 15(t-3) + 10</mrow>
+                    </md></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$early">
+                        <set>
+                            <member>\text{late}</member>
+                            <member correct="yes">\text{early}</member>
+                        </set>
+                    </var>
+                    <var name="$board">
+                        <set>
+                            <member>\text{high-dive}</member>
+                            <member>\text{Mega high-dive}</member>
+                            <member correct="yes">\text{Nano}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $early=PopUp(["?","late","early"],2);
+                        $board=PopUp(["?","high-dive","Mega high-dive","Nano"],3);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Recall that the swimmer's height above the water, after jumping off the regular diving board, was given by: <me>h = f(t) = -16t^2 + 15t + 3</me></p>
+                    <p>Suppose on a particular dive, her height above the water was given by the formula: <me>h = 1 + 15(t+1) - 16(t+1)^2</me></p>
+                    <p><ol label="a">
+                        <li>
+                            <p>Did she jump late or early?</p>
+                            <p>She jumped <m>1</m> second <var name="$early" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p>Did she jump off the <em>high-dive</em> board (<m>7</m> feet higher than normal), the <em>Mega high-dive</em> board (<m>25</m> feet higher than normal), or the <em>Nano</em> board (<m>2</m> feet lower than normal)?</p>
+                            <p>She jumped off the <var name="$board" form="popup" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p><ol label="a">
+                        <li>
+                            <p>Because we have added <m>1</m> to the input, this corresponds to a leftward shift of the graph by <m>1</m> second. Therefore, she jumped <m>1</m> second early.</p>
+                        </li>
+                        <li>
+                            <p>Notice that our formula <me>h = 1 + 15(t+1) - 16(t+1)^2</me> could be written as:<me>h = \left(-16(t+1)^2 + 15(t+1) + 3\right) - 2</me></p>
+                            <p>This shows that we have really subtracted <m>2</m> from the output of our original function <m>f(t)</m>, so she has jumped off the <em>Nano</em> board.</p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+    </subsection>
+
+    <subsection>
+        <title>Seeing the shifts</title>
+
+        <p>Now we will see the effect of making a change to the <em>output</em> of a function by manipulating its formula. You will be able to describe what happens to the graph of a function after it has been changed from: <md alignment="gather">
+            <mrow>y = f(x)</mrow>
+            <mrow>\text{to}</mrow>
+            <mrow>y = f(x) + k</mrow>
+        </md></p>
+
+        <exercise>
+            <webwork xml:id="webwork-vertical-transformation-with-graph">
+                <setup>
+                    <var name="$choice">
+                        <set>
+                            <member>\text{The graph moves right.}</member>
+                            <member>\text{The graph moves left.}</member>
+                            <member correct="yes">\text{The graph moves up.}</member>
+                            <member>\text{The graph moves down.}</member>
+                            <member>\text{None of these}</member>
+                        </set>
+                    </var>
+                    <var name="$point">
+                        <set>
+                            <member correct="yes">y=f(x)-3=x^2-3</member>
+                            <member>y=f(x)+3=x^2+3</member>
+                            <member>\text{None of these}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        Context('Numeric');
+                        $choice = RadioButtons(
+                            ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
+                            2, labels => ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
+                            displayLabels => 0
+                        );
+                        $point = RadioButtons(
+                            ["\(y = f(x) - 3 = x^2 - 3\)","\(y = f(x) + 3 = x^2 + 3\)","None of these"],
+                            0, labels => ["y=f(x)-3=x^2-3","\(y=f(x)+3=x^2+3\)","None of these"],
+                            displayLabels => 0
+                        );
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pXUT7wZS/width/431/height/313/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>The graph starts by showing the parabola <m>f(x) = x^2</m>. Moving the slider will change the function by adding a number <m>k</m> to the output.</p>
+                            <p>Use the slider to change the value of <m>k</m> to the number <m>5</m>. What happened to the graph as you changed the formula to <m>f(x) + 5 = x^2 + 5</m>?</p>
+                            <p><var name="$choice" form="buttons" /></p>
+                        </li>
+                        <li>
+                            <p>Notice that the graph shows the coordinates of the lowest point (the <em>vertex</em>). Which equation below would graph as a parabola with a vertex at the point <m>(0,-3)</m>?</p>
+                            <p><var name="$point" form="buttons" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+            </webwork>
+        </exercise>
+
 <todo>This is not the best way to code this for formatting.</todo>
-    <p>Next, you will see what happens when we change the <em>input</em> of a function. You will be able to describe what happens to the graph as you change the formula from: <md alignment="gather">
-      <mrow>y = f(x)</mrow>
-      <mrow>\text{to}</mrow>
-      <mrow>y = f(x+h)</mrow></md></p>
 
-    <exercise>
-        <webwork xml:id="webwork-vertical-and-horizontal-transformation-with-graph">
-          <setup>
-            <var name="$changeH">
-              <set>
-                  <member>\text{The graph moves right.}</member>
-                  <member correct="yes">\text{The graph moves left.}</member>
-                  <member>\text{The graph moves up.}</member>
-                  <member>\text{The graph moves down.}</member>
-                  <member>\text{None of these}</member>
-              </set>
-            </var>
-            <var name="$changeHandK">
-              <set>
-                  <member>y=f(x+5)+3=(x+5)^2+3</member>
-                  <member correct="yes">y=f(x-5)+3=(x-5)^2+3</member>
-                  <member>y=f(x-3)+5=(x-3)^2+5</member>
-                  <member>y=f(x+3)-5=(x+3)^2-5</member>
-                  <member>\text{None of these}</member>
-              </set>
-            </var>
-            <pg-code>
-              Context('Numeric');
-              $changeH = RadioButtons(
-                ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
-                1, labels => ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
-                displayLabels => 0
-              );
-              $changeHandK = RadioButtons(
-                ["\(y = f(x+5) + 3 = (x+5)^2 + 3\)","\(y = f(x-5) + 3 = (x-5)^2 + 3\)","\(y = f(x-3) + 5 = (x-3)^2 + 5\)","\(y = f(x+3) - 5 = (x+3)^2 - 5\)","None of these"],
-                1, labels => ["y=f(x+5)+3=(x+5)^2+3","y=f(x-5)+3=(x-5)^2+3","y=f(x-3)+5=(x-3)^2+5","y=f(x+3)-5=(x+3)^3+5","None of these"],
-                displayLabels => 0
-              );
-            </pg-code>
-          </setup>
+        <p>Next, you will see what happens when we change the <em>input</em> of a function. You will be able to describe what happens to the graph as you change the formula from: <md alignment="gather">
+            <mrow>y = f(x)</mrow>
+            <mrow>\text{to}</mrow>
+            <mrow>y = f(x+h)</mrow>
+        </md></p>
 
-          <statement>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-              <p><ol>
-                <li><p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders will change the function by adding a number <m>k</m> to the output, and a number <m>h</m> to the input.</p>
-                <p>What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
-                <p><var name="$changeH" form="buttons" /></p></li>
-                <li><p>Which equation below would graph as a parabola with a vertex at the point <m>(5,3)</m>?</p>
-                <p><var name="$changeHandK" form="buttons" /></p></li>
-              </ol></p>
-          </statement>
-        </webwork>
-    </exercise>
+        <exercise>
+            <webwork xml:id="webwork-vertical-and-horizontal-transformation-with-graph">
+                <setup>
+                    <var name="$changeH">
+                        <set>
+                            <member>\text{The graph moves right.}</member>
+                            <member correct="yes">\text{The graph moves left.}</member>
+                            <member>\text{The graph moves up.}</member>
+                            <member>\text{The graph moves down.}</member>
+                            <member>\text{None of these}</member>
+                        </set>
+                    </var>
+                    <var name="$changeHandK">
+                        <set>
+                            <member>y=f(x+5)+3=(x+5)^2+3</member>
+                            <member correct="yes">y=f(x-5)+3=(x-5)^2+3</member>
+                            <member>y=f(x-3)+5=(x-3)^2+5</member>
+                            <member>y=f(x+3)-5=(x+3)^2-5</member>
+                            <member>\text{None of these}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        Context('Numeric');
+                        $changeH = RadioButtons(
+                            ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
+                            1, labels => ["The graph moves right.","The graph moves left.","The graph moves up.","The graph moves down.","None of these"],
+                            displayLabels => 0
+                        );
+                        $changeHandK = RadioButtons(
+                            ["\(y = f(x+5) + 3 = (x+5)^2 + 3\)","\(y = f(x-5) + 3 = (x-5)^2 + 3\)","\(y = f(x-3) + 5 = (x-3)^2 + 5\)","\(y = f(x+3) - 5 = (x+3)^2 - 5\)","None of these"],
+                            1, labels => ["y=f(x+5)+3=(x+5)^2+3","y=f(x-5)+3=(x-5)^2+3","y=f(x-3)+5=(x-3)^2+5","y=f(x+3)-5=(x+3)^3+5","None of these"],
+                            displayLabels => 0
+                        );
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>The graph starts by showing the function <m>y = f(x) = x^2</m>. Moving the sliders will change the function by adding a number <m>k</m> to the output, and a number <m>h</m> to the input.</p>
+                            <p>What happens to the graph as you change the formula to <m>y = f(x+5) = (x+5)^2</m>?</p>
+                            <p><var name="$changeH" form="buttons" /></p>
+                        </li>
+                        <li>
+                            <p>Which equation below would graph as a parabola with a vertex at the point <m>(5,3)</m>?</p>
+                            <p><var name="$changeHandK" form="buttons" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+            </webwork>
+        </exercise>
 
 <!-- Put these problems into the Gist or into a homework set.
     <p>Now, let's apply the idea of shifting a graph to a physical example in the next two exercises.</p>
@@ -810,99 +929,92 @@
     </exercise>
 -->
 
-    <p>Finally, we'll see an application of using vertical and horizontal shifts to quickly perform a familiar task: Finding the equation of a line</p>
+        <p>Finally, we'll see an application of using vertical and horizontal shifts to quickly perform a familiar task: Finding the equation of a line</p>
 
-    <exercise>
-      <webwork>
-        <setup>
-          <var name="$formulas">
-            <set>
-              <member>\text{?}</member>
-              <member>y=4(x+7)+15</member>
-              <member>y=4(x+7)-15</member>
-              <member correct="yes">y=4(x-7)+15</member>
-              <member>y=4(x-7)-15</member>
-            </set>
-          </var>
-          <pg-code>
-            $formulas=PopUp(
-            ["?","y=4(x+7)+15","y=4(x+7)-15","y=4(x-7)+15","y=4(x-7)-15"],"y=4(x-7)+15"
-            );
-          </pg-code>
-        </setup>
-        <statement>
-          <p>The linear function <me>f(x) = 4x</me> will graph as a line with slope <m>4</m>, passing through the origin <m>(0,0)</m>.</p>
-          <p>Now, using translations, it would be easy to write the equations of similar lines.</p>
-          <p>For example:</p>
-          <p>The line with slope <m>4</m>, passing through the point <m>(7,15)</m>, may be thought of as the result of shifting <m>f(x)</m> to the <em>right</em> by <m>7</m> units, and <em>up</em> by <m>15</m> units.</p>
-          <p>[In this case, we are focusing our attention on moving the old point <m>(0,0)</m> to the new point <m>(7,15)</m>.]</p>
-          <p>What would be the equation of this new line?</p>
-          <p>Answer:  <var name="$formulas" form="popup" /></p>
-        </statement>
-        <hint>
-          <p>Since <m>f(x)</m> has the point <m>(0,0)</m>, think about shifting that point to <m>(7,15)</m>. Remember that adding to the <em>input</em> will move the graph to the left, and subtracting from the input will move the graph to the right.</p>
-        </hint>
-        <solution>
-          <p>Without doing any simplification to the formula, the line would be: <md>
-            <mrow>y \amp= f(x-7) + 15</mrow>
-            <mrow>\amp= 4(x-7) + 15</mrow></md></p>
-        </solution>
-      </webwork>
-    </exercise>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$formulas">
+                        <set>
+                            <member>y=4(x+7)+15</member>
+                            <member>y=4(x+7)-15</member>
+                            <member correct="yes">y=4(x-7)+15</member>
+                            <member>y=4(x-7)-15</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $formulas=PopUp(["?","y=4(x+7)+15","y=4(x+7)-15","y=4(x-7)+15","y=4(x-7)-15"],3);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The linear function <me>f(x) = 4x</me> will graph as a line with slope <m>4</m>, passing through the origin <m>(0,0)</m>.</p>
+                    <p>Now, using translations, it would be easy to write the equations of similar lines. For example:</p>
+                    <p>The line with slope <m>4</m>, passing through the point <m>(7,15)</m>, may be thought of as the result of shifting <m>f(x)</m> to the <em>right</em> by <m>7</m> units, and <em>up</em> by <m>15</m> units.</p>
+                    <p>[In this case, we are focusing our attention on moving the old point <m>(0,0)</m> to the new point <m>(7,15)</m>.]</p>
+                    <p>What would be the equation of this new line?</p>
+                    <p><var name="$formulas" form="popup" /></p>
+                </statement>
+                <hint>
+                    <p>Since <m>f(x)</m> has the point <m>(0,0)</m>, think about shifting that point to <m>(7,15)</m>. Remember that adding to the <em>input</em> will move the graph to the left, and subtracting from the input will move the graph to the right.</p>
+                </hint>
+                <solution>
+                    <p>Without doing any simplification to the formula, the line would be: <md>
+                        <mrow>y \amp= f(x-7) + 15</mrow>
+                        <mrow>\amp= 4(x-7) + 15</mrow>
+                    </md></p>
+                </solution>
+            </webwork>
+        </exercise>
 
-    <exercise>
-      <webwork xml:id="webwork-point-slope">
-        <setup>
-          <var name="$whichLine"><static>11(x-8)-5</static></var>
-          <var name="$a[0]"><static>8</static></var>
-          <var name="$a[1]"><static>5</static></var>
+        <exercise>
+            <webwork xml:id="webwork-point-slope">
+                <setup>
+                    <var name="$whichLine"><static>11(x-8)-5</static></var>
+                    <var name="$a[0]"><static>8</static></var>
+                    <var name="$a[1]"><static>5</static></var>
 
-          <pg-code>
-            @a=map{1+$_}NchooseK(8,2);
-            $whichLine=Compute("11*(x-$a[0])-$a[1]");
-          </pg-code>
-        </setup>
-        <statement>
-          <p>The line with slope <m>11</m>, passing through the origin <m>(0,0)</m>, has the equation: <me>f(x) = 11x</me></p>
-          <p>Using translations, write the equation for the line with slope <m>11</m>, passing through the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
-          <p>Answer:  <m>y = </m><var name="$whichLine" width="15" /></p>
-        </statement>
-        <solution>
-          <p>Think of moving the point <m>(0,0)</m> to the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
-          <p>We would shift the graph to the right by <var name="$a[0]" /> units and down by <var name="$a[1]" /> units, and the equation would be: <m>y = 11(x - <var name="$a[0]" />) - <var name="$a[1]" /></m></p>
-        </solution>
-      </webwork>
-    </exercise>
+                    <pg-code>
+                        @a=map{1+$_}NchooseK(8,2);
+                        $whichLine=Compute("11*(x-$a[0])-$a[1]");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The line with slope <m>11</m>, passing through the origin <m>(0,0)</m>, has the equation: <me>f(x) = 11x</me></p>
+                    <p>Using translations, write the equation for the line with slope <m>11</m>, passing through the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
+                    <p><m>y = </m><var name="$whichLine" width="15" /></p>
+                </statement>
+                <solution>
+                    <p>Think of moving the point <m>(0,0)</m> to the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
+                    <p>We would shift the graph to the right by <var name="$a[0]" /> units and down by <var name="$a[1]" /> units, and the equation would be: <m>y = 11(x - <var name="$a[0]" />) - <var name="$a[1]" /></m></p>
+                </solution>
+            </webwork>
+        </exercise>
 
-    <exercise>
-      <webwork>
-        <setup>
-          <var name="$equation">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">y = m(x-a)+b</member>
-              <member>y = mx-a+b</member>
-              <member>y = m(x-b)+a</member>
-            </set>
-          </var>
-          <pg-code>
-            $equation=PopUp(
-            ["?","y = m(x - a) + b","y = mx - a + b","y = m(x - b) + a"],
-            "y = m(x - a) + b"
-            );
-          </pg-code>
-        </setup>
-        <statement>
-          <p>The equation of a line with slope <m>m</m>, passing through the origin, is just: <me>y = mx</me></p>
-          <p>If we wanted to change this line so it had the same slope but passed through the point <m>(a,b)</m>, what would be the equation?</p>
-          <p>Answer:  <var name="$equation" form="popup" /></p>
-          <p>This is a very useful formula for writing the equation of a line if you know the slope and any single point on its graph. This formula is called the <term>Point-Slope</term> formula for a line.</p>
-        </statement>
-        <solution>
-          <p>The equation is <me>y = m(x-a) + b</me> no matter the sign (+ or -) on the values <m>a</m> and <m>b</m>.</p>
-        </solution>
-      </webwork>
-    </exercise>
-  </subsection>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$equation">
+                        <set>
+                            <member correct="yes">y = m(x-a)+b</member>
+                            <member>y = mx-a+b</member>
+                            <member>y = m(x-b)+a</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $equation=PopUp(["?","y = m(x - a) + b","y = mx - a + b","y = m(x - b) + a"],1);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The equation of a line with slope <m>m</m>, passing through the origin, is just: <me>y = mx</me></p>
+                    <p>If we wanted to change this line so it had the same slope but passed through the point <m>(a,b)</m>, what would be the equation?</p>
+                    <p><var name="$equation" form="popup" /></p>
+                    <p>This is a very useful formula for writing the equation of a line if you know the slope and any single point on its graph. This formula is called the <term>Point-Slope</term> formula for a line.</p>
+                </statement>
+                <solution>
+                    <p>The equation is <me>y = m(x-a) + b</me> no matter the sign (+ or -) on the values <m>a</m> and <m>b</m>.</p>
+                </solution>
+            </webwork>
+        </exercise>
+    </subsection>
 
-  </section>
+</section>
