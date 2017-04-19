@@ -14,8 +14,50 @@
 <section xml:id="activity-combinations-of-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Combinations of Functions</title>
 
-    <p>These first three exercises introduce <term>combinations of functions</term> in the context of a table of values, a graph, and a formula.</p>
-    <p>In the problems that follow, remember that <m>f(x)</m> refers to the ouput of the function <m>f</m>.</p>
+    <p>There are many ways and reasons to combine two or more functions together. In the first exercise, you will combine two functions in the context of performing a familiar activity: paying bills</p>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$heat"><static>95</static></var>
+          <var name="$water"><static>35</static></var>
+          <var name="$billNumber"><static>130</static></var>
+          <var name="$billExpression">
+            <set>
+              <member>\text{?}</member>
+              <member>H(x)</member>
+              <member>W(x)</member>
+              <member>H(x) \cdot W(x)</member>
+              <member correct="yes">H(x)+W(x)</member>
+            </set>
+          </var>
+          <pg-code>
+            $heat=random(80,120,5);
+            $water=random(20,50,5);
+            $billNumber=$heat+$water;
+            parserFunction("h(x)"=>"(sin(x)+2)/pi");
+            parserFunction("w(x)"=>"(cos(5*x)+6)/pi");
+            Context()->flags->set(reduceConstantFunctions=>0);
+            Context()->flags->set(formatStudentAnswer=>"parsed");
+            parserFunction("f(x)"=>"(sin(x)+2)/pi");
+            $billExpression=Formula("h(x)+w(x)");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Suppose you are only responsible to pay the heating and water bills each month. These bills change each month, depending on how warm you keep your house and on how much water you use.</p>
+          <p>Let <m>h(x)</m> represent the heating bill (in dollars) for month <m>x</m>, and let <m>w(x)</m> represent the water bill (in dollars) for month <m>x</m>.</p>
+          <p>Let <m>x = 2</m> represent February, which is the <m>2^{\rm{nd}}</m> month of the year. Also, suppose <m>h(2) = <var name="$heat" /></m> and <m>w(2) = <var name="$water" /></m>.</p>
+          <p>Now, let <m>b(x)</m> represent the total amount you must pay in bills for month <m>x</m>. What is <m>b(2)</m>?</p>
+          <p>Answer:  <var name="$billNumber" width="10" /> dollars</p>
+          <p>For any month <m>x</m>, what is <m>b(x)</m>?</p>
+          <p>Answer:  <var name="$billExpression" form="popup" /></p>
+        </statement>
+        <solution>
+        </solution>
+      </webwork>
+    </exercise>
+    <p>If you need to add two functions together, such as <m>f(x)+g(x)</m>, this represents a <term>combination of functions</term><index><main>combination of functions</main></index><index><main>function</main><sub>combinations</sub></index>. Sometimes, you will see the combination <m>f(x)+g(x)</m> written as: <me>\left(f+g\right)(x)</me></p>
+    <p>This means that <m>f+g</m> is a new function of <m>x</m>, whose output is just the sum of the outputs of the functions <m>f</m> and <m>g</m>.</p>
+    <p>Of course, there are other ways to combine the outputs of two or more functions.</p>
 
   <exercise>
     <webwork xml:id="combinations-first-example">
@@ -41,9 +83,9 @@
 
       </setup>
       <statement>
-        <p>Now suppose we have the following facts about functions <m>M</m> and <m>N</m>:</p>
+        <p>Suppose we have the following facts about functions <m>M</m> and <m>N</m>:</p>
         <p><md><mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow><mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow></md></p>
-        <p>If we define a new function <m>s(x) = M(x) + N(x)</m>, then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.</p>
+        <p>If we define a new function <me>s(x) = M(x) + N(x)</me> then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.</p>
         <p>Answer: <m>s(<var name="$x" />)</m> = <var name="$s" width="10" /></p>
         <p>Now, we could define many other functions which are combinations of <m>M</m> and <m>N</m>, such as:</p>
         <p><md><mrow>d(x) \amp= M(x) - N(x)</mrow><mrow>p(x) \amp= M(x)*N(x)</mrow><mrow>q(x) \amp= \frac{\displaystyle{M(x)}}{\displaystyle{N(x)}}</mrow></md></p>
@@ -64,6 +106,7 @@
       </solution>
     </webwork>
   </exercise>
+  <p>Again, combining functions just means <q>doing arithmetic</q> on the outputs of functions. The next exercise gives you information about two functions, and you must use them to compute values for different function combinations.</p>
 
   <exercise>
     <webwork xml:id="combinations-of-functions-tables">
@@ -106,7 +149,7 @@
         <var name="$P[4]"><static>-144</static></var>
 
         <pg-code>
-          @x=(-4,-2,0,2,4);
+          @x=(2,4);
           @f=map{-0.5*$_**2-1}@x;
           @g=map{1.5*$_+10}@x;
           @M=map{$f[$_]+$g[$_]}0..$#f;
@@ -155,32 +198,6 @@
                   <cell><var name="$P[1]" width="5" /></cell>
                 </row>
 
-                <row>
-                  <cell><m><var name="$x[2]" /></m></cell>
-                  <cell><m><var name="$f[2]" /></m></cell>
-                  <cell><m><var name="$g[2]" /></m></cell>
-                  <cell><var name="$M[2]" width="5" /></cell>
-                  <cell><var name="$N[2]" width="5" /></cell>
-                  <cell><var name="$P[2]" width="5" /></cell>
-                </row>
-
-                <row>
-                  <cell><m><var name="$x[3]" /></m></cell>
-                  <cell><m><var name="$f[3]" /></m></cell>
-                  <cell><m><var name="$g[3]" /></m></cell>
-                  <cell><var name="$M[3]" width="5" /></cell>
-                  <cell><var name="$N[3]" width="5" /></cell>
-                  <cell><var name="$P[3]" width="5" /></cell>
-                </row>
-
-                <row>
-                  <cell><m><var name="$x[4]" /></m></cell>
-                  <cell><m><var name="$f[4]" /></m></cell>
-                  <cell><m><var name="$g[4]" /></m></cell>
-                  <cell><var name="$M[4]" width="5" /></cell>
-                  <cell><var name="$N[4]" width="5" /></cell>
-                  <cell><var name="$P[4]" width="5" /></cell>
-                </row>
           </tabular>
         </table>
         <p>The three other functions are defined as follows:</p>
@@ -462,12 +479,9 @@
       <statement>
         <p>The graph below shows the same functions <m>f</m> and <m>g</m> from the last problem.</p>
         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888/sri/true/sdz/false/" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-        <p>This time, find the formulas for each function <m>f(x)</m> and <m>g(x)</m>, and use those formulas to write a formula for the function <m>P(x)</m>.</p>
-        <p><ol label="a">
-          <li><p><m>f(x) = </m><var name="$f" width="15" /></p></li>
-          <li><p><m>g(x) = </m><var name="$g" width="15" /></p></li>
-          <li><p><m>P(x) = </m><var name="$P" width="15" /></p></li>
-        </ol></p>
+        <p>You can confirm that: <me>f(x) = -1+0.5x</me> and: <me>g(x) = 2-0.25x</me>.</p>
+        <p>Write the formula for the function combination <m>p(x) = f(x) \cdot g(x) = (f\cdot g)(x)</m>.</p>
+        <p>Answer:  <m>p(x) = </m><var name="$P" width="15" /></p>
 
       </statement>
       <hint>
