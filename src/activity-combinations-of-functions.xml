@@ -47,16 +47,16 @@
           <p>Let <m>h(x)</m> represent the heating bill (in dollars) for month <m>x</m>, and let <m>w(x)</m> represent the water bill (in dollars) for month <m>x</m>.</p>
           <p>Let <m>x = 2</m> represent February, which is the <m>2^{\rm{nd}}</m> month of the year. Also, suppose <m>h(2) = <var name="$heat" /></m> and <m>w(2) = <var name="$water" /></m>.</p>
           <p>Now, let <m>b(x)</m> represent the total amount you must pay in bills for month <m>x</m>. What is <m>b(2)</m>?</p>
-          <p>Answer:  <var name="$billNumber" width="10" /> dollars</p>
+          <p>Answer:  <var name="$billNumber" width="15" /> dollars</p>
           <p>For any month <m>x</m>, what is <m>b(x)</m>?</p>
-          <p>Answer:  <var name="$billExpression" form="popup" /></p>
+          <p>Answer:  <var name="$billExpression" width="15" /></p>
         </statement>
         <solution>
         </solution>
       </webwork>
     </exercise>
-    <p>If you need to add two functions together, such as <m>f(x)+g(x)</m>, this represents a <term>combination of functions</term><index><main>combination of functions</main></index><index><main>function</main><sub>combinations</sub></index>. Sometimes, you will see the combination <m>f(x)+g(x)</m> written as: <me>\left(f+g\right)(x)</me></p>
-    <p>This means that <m>f+g</m> is a new function of <m>x</m>, whose output is just the sum of the outputs of the functions <m>f</m> and <m>g</m>.</p>
+    <p>If you need to add two functions together, such as <m>f(x)+g(x)</m>, this represents a <term>combination of functions</term><index><main>combination of functions</main></index><index><main>function</main><sub>combinations</sub></index>.</p>
+    <p>This combination is actually a new function of <m>x</m>, whose output is just the sum of the outputs of the functions <m>f</m> and <m>g</m>.</p>
     <p>Of course, there are other ways to combine the outputs of two or more functions.</p>
 
   <exercise>
@@ -87,7 +87,7 @@
         <p><md><mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow><mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow></md></p>
         <p>If we define a new function <me>s(x) = M(x) + N(x)</me> then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.</p>
         <p>Answer: <m>s(<var name="$x" />)</m> = <var name="$s" width="10" /></p>
-        <p>Now, we could define many other functions which are combinations of <m>M</m> and <m>N</m>, such as:</p>
+        <p>Now, here are three other combinations of <m>M</m> and <m>N</m>:</p>
         <p><md><mrow>d(x) \amp= M(x) - N(x)</mrow><mrow>p(x) \amp= M(x)*N(x)</mrow><mrow>q(x) \amp= \frac{\displaystyle{M(x)}}{\displaystyle{N(x)}}</mrow></md></p>
         <p>Using these definitions, evaluate each of the following:</p>
         <p><ul>
@@ -331,7 +331,7 @@
       </setup>
 
       <statement>
-        <p>The graph shows two new functions <m>y = f(x)</m> and <m>y = g(x)</m>. Our goal is to create the function: <md><mrow>P(x) = f(x)*g(x)</mrow></md></p>
+        <p>The graph shows two new functions <m>y = f(x)</m> and <m>y = g(x)</m>. Our goal is to create the function: <md><mrow>P(x) = f(x)\cdot g(x)</mrow></md></p>
         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888/sri/true/sdz/false/" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
         <p>Use the graph to complete the table of values for the functions <m>f(x)</m>, <m>g(x)</m> and <m>P(x)</m></p>
 
@@ -410,7 +410,7 @@
                   <cell><m>x</m></cell>
                   <cell><m>f(x)</m></cell>
                   <cell><m>g(x)</m></cell>
-                  <cell><m>P(x)=f(x)g(x)</m></cell>
+                  <cell><m>P(x)=f(x)\cdot g(x)</m></cell>
                 </row>
 
                 <row>
@@ -480,7 +480,7 @@
         <p>The graph below shows the same functions <m>f</m> and <m>g</m> from the last problem.</p>
         <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888/sri/true/sdz/false/" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
         <p>You can confirm that: <me>f(x) = -1+0.5x</me> and: <me>g(x) = 2-0.25x</me>.</p>
-        <p>Write the formula for the function combination <m>p(x) = f(x) \cdot g(x) = (f\cdot g)(x)</m>.</p>
+        <p>Write the formula for the function combination <m>p(x) = f(x) \cdot g(x)</m>.</p>
         <p>Answer:  <m>p(x) = </m><var name="$P" width="15" /></p>
 
       </statement>
@@ -561,6 +561,5 @@
       </solution>
     </webwork>
   </exercise>
-
 
 </section>
