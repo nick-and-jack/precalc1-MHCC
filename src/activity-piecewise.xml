@@ -18,25 +18,23 @@
         <p>A piecewise defined function is literally a function that has been defined in pieces.  Most likely you have encountered piecewise defined functions in every day life.  Maybe you didn't know what they were called.</p>
         <p>For instance.</p>
         <example>
-          <p>A parking garage downtown has an hourly rate for the first four hours, then a constant rate for the day.  To calculate the cost of parking there are various formulas, each one is a <q>piece</q> of the whole cost function.</p>
-
-<todo>fix graph to match description</todo>
-        <figure xml:id="graph-of-cost-of-parking-piecewise">
-        <caption>Graph of Cost of Parking function (pieceswise example)</caption>
-          <image xml:id="image-graph-of-cost-of-parking-piecewise">
+          <p>A tax proposal is being considered in order to simplify income tax filing. The tax a person will pay depends on their amount of income.</p>
+        <figure xml:id="graph-income-tax-piecewise">
+        <caption>Graph of Income Tax function (pieceswise example)</caption>
+          <image xml:id="image-graph-income-tax-piecewise">
             <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
-                \begin{axis}[ymin=0, ymax=20, xlabel={$hours$}, ylabel={$Cost$}, xtick={0,4,...,24}, minor xtick={0,2,...,24}, ytick={0,5,...,15}, minor ytick={1,2,...,15}, xmin=0, xmax=24, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
-                \addplot[thick, color=blue, domain=0:3.99,->] ({1.6*x},{x});
-                \addplot[thick, color=blue, domain=4:24,->] ({8*(x-4}+6.4,{x});
+                \begin{axis}[ymin=0, ymax=25, xlabel={Income (thousands of dollars)}, ylabel={Tax (thousand of dollars)}, xtick={0,10,...,100}, minor xtick={0,2,...,100}, ytick={0,5,...,25}, minor ytick={1,2,...,25}, xmin=0, xmax=100, grid=both]
+                \addplot[thick, color=blue, domain=0:60,-] {0.15*x};
+                \addplot[thick, color=blue, domain=60:100,-] {.35*(x-60)+0.15*60};
                 \end{axis}
                 \end{tikzpicture}]]>
             </latex-image-code>
           </image>
         </figure>
-        <p>Up to and including <m>4</m> hours, the cost of parking is about <m>\$ 1.60</m> per hour.</p>
-        <p>After <m>4</m> hours, the cost of parking is a constant rate of <m>\$ 8.00</m> per hour.</p>
-        <p>What piece of the graph do you use to calculate the cost of parking? It depends on how many hours you park.</p>
+        <p>Annual incomes of less than or equal to <m>60</m> (thousand dollars) are taxed at a flat rate of <m>15 \%</m>.</p>
+        <p>Annual incomes greater than <m>60</m> (thousand dollars) are taxed at <m>15 \%</m> for the first <m>60</m> then <m>35 \%</m> for any amount over <m>60</m>.</p>
+        <p>What piece of the graph do you use to calculate the income tax? It depends on the income. Of the two line segments, use the left one to calculate income tax for incomes up to <m>60</m>.  Use the right segment to calculate the income tax for over <m>60</m></p>
         </example>
         <p>The most difficult part of piecewise functions is the notation.  In the following set of activities you will use a skill you already know, how to evaluate a function graphically, and transition slowly into how to write and understand piecewise notation.</p>
    <exercise>
