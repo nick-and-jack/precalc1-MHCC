@@ -72,10 +72,10 @@ IMAGESOUT  = $(OUTPUT)/images
 # of PCC's server in a nontrivial capacity.    <alex.jordan@pcc.edu>
 SERVER = https://webwork.pcc.edu
 
-#  Write out each WW problem as a standalone problem in PGML ready 
-#  for use on a WW server.  "def" files and "header" files are 
-#  produced. Directories and filenames are derived from titles of 
-#  chapters, sections, etc., in addition to the titles of the 
+#  Write out each WW problem as a standalone problem in PGML ready
+#  for use on a WW server.  "def" files and "header" files are
+#  produced. Directories and filenames are derived from titles of
+#  chapters, sections, etc., in addition to the titles of the
 #  problems themselves.
 #
 #  Results land in the subdirectory:  $(PGOUT)/local
@@ -85,7 +85,7 @@ pg:
 	cd $(PGOUT); \
 	xsltproc -xinclude --stringparam chunk.level 2 $(MBXSL)/mathbook-webwork-archive.xsl $(PRJSRC)/precalc1-MHCC.xml
 
-#  HTML output 
+#  HTML output
 #  Output lands in the subdirectory:  $(HTMLOUT)
 html:
 	install -d $(HTMLOUT)
@@ -93,8 +93,8 @@ html:
 	-rm $(HTMLOUT)/knowl/*.html
 	cp -a $(IMAGESOUT) $(HTMLOUT)
 	cd $(HTMLOUT); \
-	xsltproc -xinclude --stringparam  html.knowl.webwork.inline yes --stringparam webwork.server $(SERVER) --stringparam html.knowl.example no --stringparam html.knowl.exercise.inline no $(MBXSL)/mathbook-html.xsl $(PRJSRC)/precalc1-MHCC.xml
-
+	xsltproc -xinclude --stringparam  html.knowl.webwork.inline yes  --stringparam webwork.server $(SERVER) --stringparam html.knowl.example no --stringparam html.knowl.exercise.inline no $(MBXSL)/mathbook-html.xsl $(PRJSRC)/precalc1-MHCC.xml
+# Could add --stringparam html.knowl.webwork.sectional no to make problems born open in the exercisegroup at the end of section
 # make all the image files in svg format
 images:
 	install -d $(IMAGESOUT)
