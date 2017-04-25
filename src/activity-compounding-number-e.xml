@@ -13,7 +13,8 @@
 <section xml:id="activity-compounding-number-e" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Compounding in Finance, Continous Compounding and the Number <m>e</m></title>
   <introduction>
-    <p>In <xref ref="activity-exponential-intro">Activity</xref>, we learned to calculate the <q>per unit</q> growth factor using an overall percent change between two values.</p>
+    <p>In <xref ref="activity-exponential-intro">Activity</xref>, we learned to calculate the <q>per unit</q> growth factor using an overall percent change between two values. In this case the growth factor is called <term>discrete</term><index><main>discrete</main></index>. It means the percent change between values occurs in <q>chunks</q> like <m>2 \%</m> every <m>5</m> units or <m>27 \%</m> every <m>1</m> unit.</p>
+    <p>For the dicrete exponential model, a <m>2 \%</m> increase every <m>5</m> units will actually be <m>2 \%</m> greater than the previous value at the end of <m>5</m> units.</p>
     <p>In this activity we first explore the meaning of exponential notation in the context of some real situations and learn to directly communicate our observations into an equation.</p>
     <p>By the end of this activity we develop a new form of the exponential function called the <term>continuous</term> model.</p>
   </introduction>
@@ -379,7 +380,7 @@
   </subsection>
   <subsection>
     <title>Finance <mdash/> Compounded Interest</title>
-    <p>We now turn our attention towards finance where there are some variations in how exponential growth is calculated.</p>
+    <p>We now turn our attention towards finance where there are some variations in how exponential patterns are formulated.</p>
     <p>Keep in mind that financial formulas quickly get extremely complicated, so our examples are simple in order to make our point.</p>
     <exercise>
       <introduction>
@@ -477,32 +478,42 @@
         </stage>
       </webwork>
     </exercise>
-    <p>The last exercise leaves the bank with some good news and some bad news. The good news is more money is made the more often they compound the <m>12 \%</m> interest during the year. The bad news is the increase in money made is shrinking.</p>
+    <p>The last exercise leaves the bank with some good news and some bad news. The good news is more money is made the more often they compound the <m>12 \%</m> interest during the year. The bad news is the increases in money made is shrinking.</p>
     <p>In changing the compounding from once a year to <m>12</m> times a year the bank increase the loan value by about <m>3042.43-3024= \,\$ 18.43 </m></p>
     <p>But in changing the compounding from daily to hourly there was only an increase of <m>3044.24-3044.18 = \,\$ 0.06</m> which is only <m>6</m> cents!</p>
-    <p>We can extend what we concluded in the last exercise with a general form of an expression for compounded interest.<me>A_{0}(1+\frac{r}{n})^{nt}</me></p>
+    <p>We can extend what we concluded in the last exercise with a general form of an expression for compounded interest.</p>
+    <assemblage>
+      <p><me>A_{0}(1+\frac{r}{n})^{nt}</me></p>
+    </assemblage>
     <p>Here <m>A_{0}</m> is the initial amount or value, <m>r</m> is the decimal equivalent of the interest rate, <m>n</m> is the number of times the interest is compounded and <m>t</m> is the amount of time the initial amount is left to grow or decay (think stock values over time). </p>
     <p>You may already know where this is going. We have to ask, "What is the most amount of money that can be made?" The answer depends on how often the interest is compounded. So, the real question is, "What is the most compounding possible?"</p>
     <p>Let's think about that. Compounding the interest is the process of <q>chopping</q> up the interest percentage into pieces and calculating the increase or decrease for each piece until all the pieces are counted. Focus on the growth factor for <m>t=1</m> (notice the exponents in each example below have a multiple of <em>something</em><m> \cdot 1</m>) year assuming some intitial value <m>A_{0}</m>.</p>
     <p><term>Annual interest compounded <em>yearly</em></term><index><main>Annual interest compounded</main><sub>yearly</sub></index>: the interest is divided into <m>1</m> piece and <m>1</m> increase is counted each year.</p>
-    <aside><p><me>A_{0}(1+\frac{r}{1})^{1 \cdot 1}</me></p></aside>
+    <assemblage><p><me>A_{0}(1+\frac{r}{1})^{1 \cdot 1}</me></p></assemblage>
     <p><term>Annual interest compounded <em>monthly</em></term><index><main>Annual interest compounded</main><sub>monthly</sub></index>: the interest is divided into <m>12</m> pieces and <m>12</m> increases are counted each year.</p>
-    <aside><p><me>A_{0}(1+\frac{r}{12})^{12 \cdot 1}</me></p></aside>
+    <assemblage><p><me>A_{0}(1+\frac{r}{12})^{12 \cdot 1}</me></p></assemblage>
     <p><term>Annual interest compounded <m>daily</m></term><index><main>Annual interest compounded</main><sub>daily</sub></index>: the interest is divided into <m>365</m> pieces and <m>365</m> increases are counted each year.</p>
-    <aside><p><me>A_{0}(1+\frac{r}{365})^{365 \cdot 1}</me></p></aside>
+    <assemblage><p><me>A_{0}(1+\frac{r}{365})^{365 \cdot 1}</me></p></assemblage>
     <p>What is the maximum number of times any number can be divided? Infinity (and beyond!)</p>
     <p>In math, infinite compounding is called <term>continuous compounding</term><index><main>continuous compounding</main></index>. It means the interest is being calculated at every moment in time. In fact, there is no time at which the interest is not being calculated.</p>
-    <p>When continuous compounding occurs, the general formula we came up with earlier <me>A_{0}(1+\frac{r}{n})^{nt}</me> changes form. It becomes <me>A_{0}e^{rt}</me></p>
-    <todo>Talk about the language of discrete and continuous models.  Make student write equations for different scenarios.</todo>
+    <assemblage><p>When continuous compounding occurs, the general formula we came up with earlier <me>A_{0}(1+\frac{r}{n})^{nt}</me> changes form. It becomes <me>A_{0}e^{rt}</me></p></assemblage>
   </subsection>
   <subsection>
     <title>From English to Math (and back again)</title>
-    <todo>Something about language.</todo>
     <p>Compounding interest <m>12</m> times each year is the same as compounding the interest every <m>\frac{1}{12}</m> of a year. It is referred to as <q>compounded monthly</q> because <m>\frac{1}{12}</m> of a year is <m>1</m> month.</p>
     <p>Therefore another way to write the same equation would be</p>
     <p><m>V(t) = 4280(1.0401)^{\frac{t}{1/12}}</m></p>
     <p>Which means the interest is calculated every <m>\frac{1}{12}</m> of a year, but no one would do this because it is silly looking.</p>
-    <p>Instead we keep the exponent as <m>12t</m> which is the same as monthly and the equation is prettier.</p>
+    <example>
+      <p>From basic algebra, you may recall that dividing by a fraction is the same as multiplying by the reciprocal of the fraction.</p>
+      <p>
+        <md>
+          <mrow>\frac{t}{\frac{1}{12}} \amp=t \cdot \frac{12}{1}</mrow>
+          <mrow>\amp =12t</mrow>
+        </md>
+      </p>
+    </example>
+    <p>Instead of writing <m>\frac{t}{\frac{1}{12}}</m> we keep the exponent as <m>12t</m> which is the same as monthly and the equation is prettier.</p>
     <exercise>
       <introduction>
         <p>Comparing interest compounded over many years versus multiple times during a year.</p>

@@ -109,21 +109,35 @@
             <webwork>
                 <setup>
                     <var name="$Vchange">
-                        <static>16</static>
+                        <static>20</static>
                     </var>
                     <var name="$Hchange">
                         <static>1</static>
                     </var>
+                    <var name="$Rate">
+                        <static>18</static>
+                    </var>
                     <var name="$difference">
                         <static>f(5)-f(2)</static>
+                    </var>
+                    <var name="$speed" category="set">
+                      <set>
+                       <member>\text{hours}</member>
+                       <member>\text{miles}</member>
+                       <member>\text{hours per mile}</member>
+                       <member>\text{miles per hour}</member>
+                      </set>
                     </var>
 
                     <!-- Within parserFunction below the formula has nothing to do with the problem.  It's only there to be function to generate values for us -->
                     <pg-code>
+                        $speed = PopUp(["?", "hours", "miles", "hours per mile", "miles per hour"], "miles per hour");
                         Context('Numeric');
-                        $Vchange = Real(16);
+                        $Vchange = Real(36);
                         Context('Numeric');
-                        $Hchange = Real(1);
+                        $Hchange = Real(2);
+                        Context('Numeric');
+                        $Rate = Real(18);
                         parserFunction("f(x)"=>"(sin(x)+2)/pi");
                         Context()->flags->set(reduceConstantFunctions=>0);
                         Context()->flags->set(formatStudentAnswer=>"parsed");
@@ -132,24 +146,44 @@
                 </setup>
 
                 <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/gWxmhsGB/width/431/height/313/border/888888" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
                     <p>As the time changes along the horizontal axis the result is the changing position of the train measured on the vertical axis.  The key word here is <q>change</q></p>
                     <p><ol label="a">
                         <li>
-                            <p>Use the graph to estimate the change in distance between the 2nd and 3rd hours.</p>
-                            <p><m>f(3) - f(2) \approx </m> <var name="$Vchange" width="3" /> miles.</p>
+                            <p>Use the graph to estimate the change in distance between the 1st and 3rd hours.</p>
+                            <p><m>f(3) - f(1) \approx </m> <var name="$Vchange" width="3" /> miles.</p>
                         </li>
                         <li>
-                            <p>What is the change in time between the 2nd and 3rd hours?</p>
+                            <p>What is the change in time between the 1st and 3rd hours?</p>
                             <p>The change in time is <var name="$Hchange" width="3" /> hour(s).</p>
                         </li>
                         <li>
-                            <p>Use function notation to write an expression that represents the <em>change in distance</em> between the 2nd and 5th hours.</p>
+                            <p>What is the average speed (rate of change) between the 1st and 3rd hours?</p>
+                            <p>The average speed is <var name="$Rate" width="3" /><var name="$speed" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p>Use function notation (as in part a) to write an expression that represents the <em>change in distance</em> between the 2nd and 5th hours.</p>
                             <p>The change in distance can be expressed as <var name="$difference" width="10" /></p>
                         </li>
                     </ol></p>
                 </statement>
+                <solution>
+                  <p><ol label="a">
+                    <li>
+                      <p><m>f(3) - f(1) \approx </m> <var name="$Vchange" /> miles.</p>
+                    </li>
+                    <li>
+                      <p>The change in time is <var name="$Hchange" /> hour(s).</p>
+                    </li>
+                    <li>
+                      <p>The average speed is <m><var name="$Rate" /></m> <var name="$speed" form="popup" /></p>
+                    </li>
+                    <li>
+                      <p>The change in distance can be expressed as <var name="$difference" /></p>
+                    </li>
+                  </ol></p>
+                </solution>
             </webwork>
         </exercise>
 
@@ -161,7 +195,7 @@
             <webwork>
                 <setup>
                     <var name="$chngDist">
-                        <static>20</static>
+                        <static>19.5</static>
                     </var>
                     <var name="$meaning" category="set">
                         <set>
@@ -172,13 +206,13 @@
                         </set>
                     </var>
                     <pg-code>
-                        $chngDist = Real(20);
+                        $chngDist = Real(19.5);
                         $meaning = PopUp(["?", "Change in hours since 8 a.m.", "Delta t", "Delta times t", "There is no meaning to this expression"], 1);
                     </pg-code>
                 </setup>
 
                 <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/gWxmhsGB/width/431/height/313/border/888888" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
                     <p>Use your best estimate from the graph to approximate <m>\Delta f</m> during the first 2 hours of the trip</p>
                     <p><m>\Delta f \approx </m> <var name="$chngDist" width="5" /> miles</p>
@@ -423,7 +457,7 @@
                   <static>-10.3</static>
                 </var>
                 <var name="$intFeb">
-                  <static>0</static>
+                  <static>0.1</static>
                 </var>
                 <var name="$March">
                   <static>3</static>
@@ -431,7 +465,7 @@
                 <pg-code>
                   $intMay = Real(2.6);
                   $intSep = Real(-10.3);
-                  $intFeb = Real(0);
+                  $intFeb = Real(0.1);
                   $March = Real(3);
                   $units = PopUp(["?", "month", "time", "degrees Fahrenheit", "degrees Fahrenheit per month"], "degrees Fahrenheit per month");
                   Context("Inequalities");
@@ -441,7 +475,7 @@
               </setup>
     
               <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/UeZmBGvG/width/413/height/250/border/888888" width="413px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PPsZ6cgY/width/431/height/245/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="245px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                 <p>Change the length of the interval on the <q>month</q> axis to see how it affects the average rate of change of the temperature.</p>
                 <p>The questions below are all asking for basically the same thing, but they are written in different ways so you can see how the language relates to the notation.</p>
                     <p><ol label="a">

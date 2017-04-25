@@ -61,77 +61,175 @@
   </objectives>
 
   <xi:include href="./activity-exponential-intro.xml" />
-  <xi:include href="./activity-discrete-continuous-compounding.xml" />
+  <!-- <xi:include href="./activity-discrete-continuous-compounding.xml" /> -->
   <xi:include href="./activity-compounding-number-e.xml" />
   <xi:include href="./activity-review-percent-change.xml" />
 
   <section xml:id="exponential-functions-gist">
     <title>Gist of Exponential Functions</title>
 
+    <p>In this lesson we learn about a family of functions called <term>exponential</term>. Just like linear functions, exponentials have their or own distinct numerical patterns, unique graphs and general formulas.</p>
+
     <subsection>
-        <p>In this lesson we learn about a family of functions called "exponential". Just like linear functions, exponentials have their or own general shapes and basic formulas and numerical patterns.</p> 
-        <p>For instance, linear functions look like lines on a graph.</p>
-
-        <todo>Graph of a line with negative slope.</todo>
-
-        <p>While exponential functions bend in a smooth curve. In the figure below the curve is <q>concave up</q>.</p>
-        
-        <todo>Move this paragragh to gist <p>One way to distiguish between linear and exponential patterns is <term>linear</term> means <q>repeated addition.</q> Where as <term>exponential</term> means <q>repeated multiplication.</q></p>
-    <p>We can pick out patterns from language too.  For instance the statement, <q>A worker makes <m>\$ 15</m> per hour</q> is giving us information about a linear pattern. The statement indicates that for each hour that passes the worker adds <m>\$ 15</m> to their earnings.</p>
-    <p>On the other hand if the worker has a salary increase of <m>15 \%</m> each hour it means their earnings are multiplied by <m>1.15</m> for each hour they work.</p>
-    <p>We must realize that multiplication and percent change are related. To change a value by a percent we multiply that value by something.</p>    
-    </todo>
-
-  
-        <todo>Graph of an increasing exponential function.
-        </todo>
-        
-        <p>Linear formulas have a format that looks like this 
-        </p><me>f(x) = mx + b</me>
-        <p>But the formula for an exponential function may look like this</p><me>f(x) = ab^{x}</me>
-        <p>The formula can be written in various ways but we begin this lesson with what is called the discrete form.</p>
-        <p>Finally, when we look at a table of values, linear functions will always have a pattern of adding the same number repeatedly (a positive or negative constant) for constant changes in input.</p> 
-        <p>This leads to the fact that linear functions have constant rate of change (slope).</p>
-        <p>In turn, exponentials will have a pattern of repeated multiplication by the same number called a <term>growth factor</term> usually denoted by the variable <m>b</m>.  If <m>b \gt 1</m> we have exponential growth while if <m>0 \lt b \lt 1</m> we have exponential decay.</p>
-        <p>This leads to the fact that exponential functions have constant percent change where mutliplying is interpreted as a percent change.</p>
-        <p>For example, there is a big difference between adding <m>1.25</m> repeatedly versus multiplying by <m>1.25</m> repeatedly.</p>
-        <p>Click on the link of the graph below to explore some differences between linear and exponential functions.</p>
-
-        <todo>Graph of exponential and linear function differences.</todo>
-
-        <p>Consider the interactive graph you made of the exponential function. Notice that as you move to the left along the x-axis, the graph tends to drop closer and closer to the x-axis.</p>
-        <p>In fact, the farther you go to the left, the closer the graph gets to the x-axis. In truth the graph will never reach the x-axis.</p> 
-        <p>The x-axis is the horizontal line <m>y = 0</m> and the graph is <q>tending towards <m>y = 0</m></q> as the inputs move to the left.</p>
-        <p>We say that the x-axis is a horizontal asymptote with equation <m>y = 0</m>. It means that the graph is getting closer and closer to the x-axis in at least one direction.</p>
-
-        <example>
-            <title>Example Problem 3:  solution video</title>
-                <p>A biologist measures the amount of chemical spilled into a lake 6 hours after the spill has occurred to be about 350 <initial>ppm</initial> (parts per million).</p>
-                <p>She tests the water from the lake again 8 hours later and measures the chemical to be about 256 <initial>ppm</initial></p>
-                <p>Assuming a linear model, L(t), what is the average rate of change of the decay of the chemical in the lake?</p>
-                <p>Assuming an exponential model, E(t), what is the hourly percent decrease of the chemical in the lake?</p>
-                <p>What does each model predict as the initial size of the spill?</p>
-        </example>
-
-        <example>
-            <title>Example Problem 4:  solution video</title>   
-                <p>Find an exponential formula for the graph. Given the vertical intercept (initial value)</p>
-        </example>
-
-        <example>
-            <title>Example Problem 5:  solution video</title>
-                <p>Find an exponential formula for the graph shown in the figure below. Given any two points.</p>
+      <title>Exponential Patterns in Data</title>
+       <p>When looking at data, linear functions will have a pattern of adding the same number repeatedly (a positive or negative constant) for constant changes in input. This leads to the fact that linear functions have constant rate of change (slope).</p>
+       <example>
+         <title>Table of Linear Data</title>
+         <table>
+           <tabular top="medium" bottom="medium" left="medium" right="medium">
+             <col halign="center"/>
+             <col halign="center"/>
+             <row>
+                 <cell>Input</cell>
+                 <cell>Output</cell>
+             </row>
+             <row>
+                 <cell><m>0</m></cell>
+                 <cell><m>5</m></cell>
+             </row>
+             <row>
+                 <cell><m>5</m></cell>
+                 <cell><m>6.25</m></cell>
+             </row>
+             <row>
+                 <cell><m>10</m></cell>
+                 <cell><m>7.5</m></cell>
+             </row>
+             <row>
+                 <cell><m>20</m></cell>
+                 <cell><m>10</m></cell>
+             </row>
+             <row>
+                 <cell><m>35</m></cell>
+                 <cell><m>13.75</m></cell>
+             </row>
+             <row>
+                 <cell><m>40</m></cell>
+                 <cell><m>15</m></cell>
+             </row>
+           </tabular>
+         </table>
+         <p>The table shows <m>1.25</m> units added to the output for every <m>5</m> unit change in the input.</p>
        </example>
-
+      <p>In turn, exponentials have a pattern of repeated multiplication by the same number called a <term>growth factor</term>. This leads to the fact that exponential functions have constant percent change for constant changes in input. Multliplying is interpreted as a percent change.</p>
       <example>
-        <title>Example Problem 6:  solution video</title>
+        <title>Table of Exponential Data</title>
+        <table>
+          <tabular top="medium" bottom="medium" left="medium" right="medium">
+            <col halign="center"/>
+            <col halign="center"/>
+            <row>
+              <cell>Input</cell>
+              <cell>Output</cell>
+            </row>
+            <row>
+              <cell><m>0</m></cell>
+              <cell><m>5</m></cell>
+            </row>
+            <row>
+              <cell><m>5</m></cell>
+              <cell><m>6.25</m></cell>
+            </row>
+            <row>
+              <cell><m>10</m></cell>
+              <cell><m>7.8125</m></cell>
+            </row>
+            <row>
+              <cell><m>20</m></cell>
+              <cell><m>12.207</m></cell>
+            </row>
+            <row>
+              <cell><m>35</m></cell>
+              <cell><m>23.842</m></cell>
+            </row>
+            <row>
+              <cell><m>40</m></cell>
+              <cell><m>29.802</m></cell>
+            </row>
+          </tabular>
+        </table>
+        <p>The table shows the output increases by <m>25 \%</m>, multiplication by <m>1.25</m>, for every <m>5</m> unit change in the input.</p>
+      </example>
+    </subsection>
+    <subsection>
+      <title>Graph of the Exponential Function</title>
+      <p>Consider the difference graphically between the tables of data in the previous examples. In the linear table we are adding <m>1.25</m> to the output every <m>5</m> units of input. In the exponential table we are multiplying the output by <m>1.25</m> (<init>i.e.</init> a <m>25 \%</m> increase) for every <m>5</m> units of input.</p>
+      <example>
+        <p>Ploting the ordered pairs for the linear model gives us a graph of a straight line. The graph has both horizontal and vertical intercepts.</p>
+      </example>
+      <example>
+        <p>Plotting the ordered pairs for the exponential model gives us a graph of a smooth curve. In this example the curve is <em>concave up</em>.</p>
+      </example>
+    </subsection>
+    <subsection>
+      <title>General Form of Exponential Formulas</title>
+      <example>
+       <p>In the linear function <m>f(t)=mt+b</m> the <m>x</m> is a counter. It counts how many times the number <m>m</m> is repeatedly added.</p>
+       <p>If a car is traveling at <m>50</m> <units>miles per hour</units>, then we can write a linear equation to calculate the distance the car travels as a function of time, t hours. <me>f(t)=50t</me> means that each hour we add another <m>50</m> <units>miles</units> to the distance traveled by the car. After <m>6</m> <units>hours</units> of driving, the vehicle has covered <me>f(6)=50+50+50+50+50+50=50*6=300</me> <m>300</m> <units>miles</units>.</p>
+       </example>
+    </subsection>
+      <p>Consider the interactive graph you made of the exponential function. Notice that as you move to the left along the x-axis, the graph tends to drop closer and closer to the x-axis.</p>
+      <p>In fact, the farther you go to the left, the closer the graph gets to the x-axis. In truth the graph will never reach the x-axis.</p> 
+      <p>The x-axis is the horizontal line <m>y = 0</m> and the graph is <q>tending towards <m>y = 0</m></q> as the inputs move to the left.</p>
+      <p>We say that the x-axis is a horizontal asymptote with equation <m>y = 0</m>. It means that the graph is getting closer and closer to the x-axis in at least one direction.</p>        
+
+      <p>We can pick out patterns from language too.  For instance the statement, <q>A worker makes <m>\$ 15</m> per hour</q> is giving us information about a linear pattern. The statement indicates that for each hour that passes the worker adds <m>\$ 15</m> to their earnings.</p>
+      <p>On the other hand if the worker has a salary increase of <m>15 \%</m> each hour it means their earnings are multiplied by <m>1.15</m> for each hour they work.</p>
+      <p>The <q>shape</q> or form of linear and exponential formulas are unique. They each have their own characteristics.</p>
+      <p>Linear formulas look like
+      <me>f(x) = mx + b</me></p>
+      <p>While the formula for an exponential function may look like<me>f(x) = ab^{x}</me> or <me>f(x)=ae^{kx}</me></p>
+      <p>Where <m>ab^{x}</m> is called the <term>discrete</term> form of the exponential and <m>ae^{kx}</m> is called the <term>continuous</term> form.</p>
+      <p>The reason there are at least two forms of the exponential formula is there are at least two ways to derive or create an exponential model.</p>
+      <p>In practice, when we observe and measure a constant percent change we typically use the information collected to write formula directly. The result is the discrete form of the exponential formula.</p>
+      <example>
+        <title>Discrete Exponential Formula: <m>ab^{x}</m></title>
+        <p>We can measure the increase in a population over a period of time and directly apply our findings into a discrete exponential equation to model the population growth.</p>
+        <blockquote><p><em>A population of <m>500</m> grows by <m>8 \%</m> every <m>10</m> years.</em></p>
+        <p><m>P(t)=500(1.08)^{\frac{t}{10}}</m></p></blockquote>
+        <p>Notice how we went from an observation about the population growth directly to an equation without any algebra. We literally translated information from one language, English, to another, Math.</p>
+        <p>With one algebra step we can get an equation to model the annual percent increase.</p>
+        <md>
+          <mrow>P(t)=500(1.08)^{\frac{t}{10}}</mrow>
+          <mrow>P(t)=500(1.08^{\frac{1}{10}})^{t}</mrow>
+          <mrow>P(t) \approx 500(1.007726)^{t}</mrow>
+        </md>
+        <p>In this example <m>a=500</m> is the initial size of the population when the measuring began and <m>b \approx 1.007726</m> is the annual growth factor (<init>i.e.</init> the number that is multiplied repeatedly) representing an annual percent growth of about <m>0.7726 \%</m> each year.</p>
+      </example>
+      <p>Another way to arrive at an exponential model is through higher level calculus called <term>differential equations</term>. Of course we will not get too far into this subject, but here is a tiny little glimpse.</p>
+      <example>
+        <title>Continuous Exponential Formula: <m>ae^{kx}</m></title>
+        <blockquote><p><em>The rate of growth of a population is proportional to the size of the population. The bigger a population is, the faster it grows.</em></p></blockquote>
+        <p>In calculus this simple statement looks like <me>\frac{dP}{dx}=kP</me> where <m>x</m> measures time, like years, and <m>\frac{dP}{dx}</m> is called the <em>instantaneous rate of change</em>. It is similar to the average rate of change <m>\frac{\Delta P}{\Delta x}</m> we study in this course.</p>
+        <p>This equation can be solved using calculus, but instead of the solution being a number like <m>x=7</m> the solution is another formula.</p>
+        <p>Specifically, the solution is <me>P(x)=ae^{kx}</me></p>
+        <p>As a scientist or engineer, if your solution to a differential equation is <me>P(x)=300e^{0.007726x}</me> you must recognize the solution is the continuous form of exponential growth. You should know the equation is stating an initial population size of <m>300</m> and a continuous annual growth of <m>0.7726 \%</m>.</p>
+        <p>But, most importantly, you have to know the continuous <m>0.7726 \%</m> growth is NOT the actual growth of the population. We have to turn the continuous information into its discrete equivalent in order to get practical use from the solution.</p>
+        <p><me>b=e^{0.007726} \approx 1.007756</me> This represents an actual annual percent growth of about <m>0.7756 \%</m>.</p>
+      </example>
+      <example>
+      <title>Example Problem 3:  solution video</title>
+        <p>A biologist measures the amount of chemical spilled into a lake 6 hours after the spill has occurred to be about 350 <initial>ppm</initial> (parts per million).</p>
+        <p>She tests the water from the lake again 8 hours later and measures the chemical to be about 256 <initial>ppm</initial></p>
+        <p>Assuming a linear model, L(t), what is the average rate of change of the decay of the chemical in the lake?</p>
+        <p>Assuming an exponential model, E(t), what is the hourly percent decrease of the chemical in the lake?</p>
+        <p>What does each model predict as the initial size of the spill?</p>
+      </example>
+      <example>
+      <title>Example Problem 4:  solution video</title>   
+        <p>Find an exponential formula for the graph. Given the vertical intercept (initial value)</p>
+      </example>
+      <example>
+      <title>Example Problem 5:  solution video</title>
+        <p>Find an exponential formula for the graph shown in the figure below. Given any two points.</p>
+      </example>
+      <example>
+      <title>Example Problem 6:  solution video</title>
         <p>The amount <m>A(t)</m> in milligrams, of drug in the body <m>t</m> hours after taking a pill is modeled by the formula  <m>A(t) = 22(0.89)^{t}</m></p>
         <p>What is the amount of the initial dose?</p>
         <p>What percent of the drug leaves the body each hour?</p>
         <p>What is the amount of drug left after 10 hours?</p>
         <p>How many hours will it take for there to be 1 milligram of drug in the body?</p>
       </example>
-
-    </subsection>
   </section>
 </chapter>
