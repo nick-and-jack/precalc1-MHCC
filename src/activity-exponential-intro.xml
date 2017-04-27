@@ -381,7 +381,7 @@
         </solution>
       </webwork>
     </exercise> -->
-    
+
     <exercise>
       <introduction>
         <p>Repeated addition or repeated multiplication?</p>
@@ -613,7 +613,7 @@
     <webwork>
       <statement>
         <p>A patient's dosage rate of <m>250</m> <units>mg/hr</units> is reduced by <m>2 \%</m> each hour.</p>
-        <p>     
+        <p>
           <ol label="a" >
             <li>
               <p>What growth factor gives us a <m>2 \%</m> decrease?</p>
@@ -657,7 +657,7 @@
         <p>
           <ol label="a" >
             <li>
-              <p>Since <m>2 \%</m> has a decimal equivalent of <me>r=0.02</me>, then a decrease is calculated using a growth factor of: 
+              <p>Since <m>2 \%</m> has a decimal equivalent of <me>r=0.02</me>, then a decrease is calculated using a growth factor of:
               <md alignment="gather">
                 <mrow>b \amp =1-r</mrow>
                 <mrow>b \amp =1-0.02</mrow>
@@ -743,7 +743,7 @@
       </statement>
     </webwork>
   </exercise>
-  </subsection> 
+  </subsection>
   <subsection>
     <title>A General Formula for Exponential Growth/Decay: Discrete Model</title>
       <assemblage>
@@ -897,9 +897,6 @@
             </stage>
             <stage>
               <statement>
-                <p>
-                  <ol label="a" >
-                    <li>
                       <p>Use our growth factor <m><var name="$b" /></m> to continue the pattern in the table.</p>
                       <p><tabular top="major" halign="center">
                           <col halign="left" />
@@ -930,43 +927,48 @@
                           </row>
                       </tabular></p>
                       <p>Notice there is a pattern emerging. For every hour that passes there is another multiple of the same growth factor.</p>
-                      <p>Instead of writing the growth factor over and over, we can use exponents to clean up the notation.  The exponent <q>counts</q> how many times the percent has been compounded.</p>
-                    </li>
-                  <li>
-                    <p>In the next cell, let <m>t = 20</m> hours. Then use an exponent to enter the calculation (not the answer) on the right.</p>
-                    <p><tabular top="major" halign="center">
-                          <col halign="left" />
-                          <col halign="left" />
-                          <row bottom="medium">
+                    </statement>
+                  </stage>
+                  <stage>
+                    <statement>
+                      <p>Now, instead of writing the growth factor over and over, we can use exponents to clean up the notation. The exponent <q>counts</q> how many times the percent has been compounded.</p>
+                      <p>
+                        <ol label="a">
+                          <li>
+                          <p>In the next cell, let <m>t = 20</m> hours. Then use an exponent to enter the calculation (not the answer) on the right.</p>
+                          <p><tabular top="major" halign="center">
+                            <col halign="left" />
+                            <col halign="left" />
+                            <row bottom="medium">
                               <cell><m>t</m> (hours)</cell>
                               <cell><m>P(t)</m> Population Size</cell>
-                          </row>
-                          <row>
+                            </row>
+                            <row>
                               <cell><var name="$x[5]" width="2" /></cell>
                               <cell><var name="$y[5]" width="20" evaluator="$ev[5]"/></cell>
-                          </row>
-                      </tabular></p>
-                  </li>
-                  <li>
-                    <p>Finally, at any time <m>t</m>, what is the resulting formula?</p>
-                    <p><tabular top="major" halign="center">
-                          <col halign="left" />
-                          <col halign="left" />
-                          <row bottom="medium">
+                            </row>
+                          </tabular></p>
+                        </li>
+                        <li>
+                          <p>Finally, at any time <m>t</m>, what is the resulting formula?</p>
+                          <p><tabular top="major" halign="center">
+                            <col halign="left" />
+                            <col halign="left" />
+                            <row bottom="medium">
                               <cell><m>t</m> (hours)</cell>
                               <cell><m>P(t)</m> Population Size</cell>
-                          </row>
-                          <row>
+                            </row>
+                            <row>
                               <cell><var name="$x[6]" width="2" /></cell>
                               <cell><var name="$y[6]" width="20" evaluator="$ev[6]"/></cell>
-                          </row>
-                      </tabular></p>
-                    <p>This is your formula to calculate the population at any time!</p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </stage>
+                            </row>
+                          </tabular></p>
+                        <p>This is your formula to calculate the population at any time!</p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+              </stage>
           <solution>
             <p>Notice what is changing and what is not changing in the table.</p>
             <p>Every calculation is based on the initial amount, that does not change. Every calculation has multiples of <m>1.08</m>, that does not change either.</p>
@@ -1108,7 +1110,7 @@
       <p>
         <ul>
           <li>
-            <p>Assume an expoential with <m>t</m> representing time as in <m>f(t)=ab^{t}</m>.</p>
+            <p>Assume an exponential with <m>t</m> representing time as in <m>f(t)=ab^{t}</m>.</p>
           </li>
           <li>
             <p>Find the overall growth factor between to output values.</p>
@@ -1226,11 +1228,11 @@
             </stage>
           </webwork>
       </exercise>
-        
+
       <exercise>
         <todo>Make the results render as rounded to 4 decimal places.</todo>
         <introduction>
-          <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie, in degrees fahrenheit, as a function of time, <m>t</m> in hours. The initial temperature and one other ordered pair are known.</p>
+          <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie, in degrees Fahrenheit, as a function of time, <m>t</m> in hours. The initial temperature and one other ordered pair are known.</p>
           <blockquote>
             <p><term>Strategy</term>: Find the overall growth factor for the given span of time and use to it to find the hourly growth factor (per <m>1</m> hour).</p>
           </blockquote>
@@ -1276,10 +1278,10 @@
           </setup>
           <stage>
             <statement>
-              <p>The temperature of a pie is <m><var name="$a" /></m> degrees fahrenheit when it is first removed from the oven.  After <m>4</m> hours the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</p>
+              <p>The temperature of a pie is <m><var name="$a" /></m> degrees Fahrenheit when it is first removed from the oven.  After <m>4</m> hours the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</p>
               <p>Derive an exponential formula <m>f(t)</m> for the temperature of the pie as a function of time, <m>t</m> in hours. Round all your calculations to <m>4</m> decimal places.</p>
               <p>Here's how:</p>
-              <p>Since we are asked to find and exponential formula, we know the formula is going to look something like</p>
+              <p>Since we are asked to find an exponential formula, we know the formula is going to look something like</p>
               <p><m>f(t) = ab^{t}</m></p>
               <p>We know the temperature of the pie at two different times including the initial temperature.</p>
               <p>Goal: find values for <m>a</m> and <m>b</m>.</p>
@@ -1287,7 +1289,7 @@
                 <ol label="a" >
                   <li>
                     <p><q><m>a</m></q> is given in the problem.</p>
-                    <p>What is the initial temperature of the pie? <m>a =</m> <var name="$a" width="5" /> degrees fahrenheit.</p>
+                    <p>What is the initial temperature of the pie? <m>a =</m> <var name="$a" width="5" /> degrees Fahrenheit.</p>
                   </li>
                   <li>
                     <p>Next, we will find the overall growth factor and use it to determine the hourly growth factor <m>b</m>.</p>
@@ -1358,12 +1360,12 @@
         </stage>
       </webwork>
     </exercise>
-    <p>What if the initial value is not known?  Can we still find and exponential formula?</p>       
+    <p>What if the initial value is not known?  Can we still find an exponential formula?</p>
     <exercise>
       <introduction>
-        <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie, in degrees fahrenheit, as a function of time, <m>t</m> in hours. Two ordered pairs are known, not including the intitial temperature.</p>
+        <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie, in degrees Fahrenheit, as a function of time, <m>t</m> in hours. Two ordered pairs are known, not including the intitial temperature.</p>
         <blockquote>
-          <p><term>Strategy</term>: Find the overall growth factor, use it to find the hourly growth factor.</p>
+          <p><term>Strategy</term>: Find the overall growth factor, and use it to find the hourly growth factor.</p>
           <p>The initial value is found using any known ordered pair.</p>
         </blockquote>
       </introduction>
@@ -1399,8 +1401,8 @@
 
           <pg-code>
           Context()->variables->are(t=>'Real');
-            $a=random(300,375,5);
-            $finalTemp=random(95,110,1);
+            $a=random(210,220,5);
+            $finalTemp=random(75,80,1);
             $b=$finalTemp/$a;
             $bRoot=Real($b**(0.2));
             $r=1-$b;
@@ -1411,13 +1413,13 @@
             $initialTemp=$a/($bRoot**3);
           </pg-code>
         </setup>
-        
+
         <stage>
           <statement>
             <p>The temperature of a pie is <m><var name="$a" /></m> degrees Fahrenheit <m>3</m> <units>hours</units> after being removed from the oven.  After <m>8</m> <units>hours</units> out of the oven the temperature of the pie is <m><var name="$finalTemp" /></m> degrees Fahrenheit.</p>
             <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in <units>hours</units>.</p>
             <p>The formula is going to look something like <m>f(t) = ab^{t}</m>.</p>
-            <p>The pie went from an temperature of <m><var name="$a" /></m> degrees to a lower temperature of <m><var name="$finalTemp" /></m> degrees in a time span of <var name="5" width="4" /> <units>hours</units>.</p>
+            <p>The pie went from a temperature of <m><var name="$a" /></m> degrees to a lower temperature of <m><var name="$finalTemp" /></m> degrees in a time span of <var name="5" width="4" /> <units>hours</units>.</p>
           </statement>
           <solution>
             <p>The time span between <m>3</m> and <m>8</m> <units>hours</units> is <m>8-3=5</m>. Therefore, the decrease in temperature occurs over <m>5</m> <units>hours</units>.</p>
@@ -1524,7 +1526,7 @@
     <p>In the following examples we track the position of an ant over time using both a linear model and an exponential model.</p>
     <exercise>
       <introduction>
-        <p>An ant is intially <m>150</m> inches from a wall, and each minute it walks <m>25</m> inches towards the wall.</p>
+        <p>An ant is initially <m>150</m> inches from a wall, and each minute it walks <m>25</m> inches towards the wall.</p>
       </introduction>
         <webwork>
             <setup>
@@ -1567,7 +1569,7 @@
                 <var name="$time[6]">
                     <static>0</static>
                 </var>
-                
+
                 <pg-code>
                     $dInit = Real(150);
                     $lin = RadioButtons(
@@ -1582,7 +1584,7 @@
                     @time=map{$dInit-$a*$_}(0..6);
                 </pg-code>
             </setup>
-    
+
             <statement>
               <p>
                 <ol label="a" >
@@ -1639,7 +1641,7 @@
               </ol>
             </p>
         </statement>
-        
+
         <solution>
             <p> Use the formula <m>y=</m><var name="$dInit" /><m>-25t</m> to generate the values in the table. Notice the formula basically says, <q>Start with <m>150</m> and subtract <m>25</m> every minute.</q></p>
         </solution>
@@ -1647,7 +1649,7 @@
     </exercise>
     <exercise>
       <introduction>
-        <p>An ant is intially 150 inches from a wall, each minute the ant walks 25% of the distance to the wall.</p>
+        <p>An ant is initially 150 inches from a wall, each minute the ant walks 25% of the distance to the wall.</p>
       </introduction>
         <webwork>
             <setup>
@@ -1693,7 +1695,7 @@
                 <var name="$t2[6]">
                     <static>26.70</static>
                 </var>
-                
+
                 <pg-code>
                     $dInit = Real(150);
                     $lin = RadioButtons(
@@ -1709,7 +1711,7 @@
                     @t2=map{$dInit*$b**$_}(0..6);
                 </pg-code>
             </setup>
-    
+
             <statement>
               <p>
                 <ol label="a" >
@@ -1761,8 +1763,8 @@
                     </p>
                   </li>
                   <li>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/R9ubhTNd/width/431/height/325/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="325px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p> 
-                    <p>Drag the points on the graph to the coordinates you generated in the table.  Use the up/down arrows on your keyboard to fine-tune the values.</p>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/bu2AzCg2/width/361/height/330/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="361px" height="330px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>Drag the points on the graph to the coordinates you generated in the table.  You can use the up/down arrows on your keyboard to fine-tune the values.</p>
                     <p>The entire graph of the function will appear when you have placed the points in their correct positions.</p>
                   </li>
                 </ol>
@@ -1856,7 +1858,7 @@
         </stage>
         <stage>
           <statement>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PrTES8KJ/width/431/height/330/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="330px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KgnNyQjd/width/457/height/338/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="457px" height="338px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
             <p>The points from the table are plotted on the graph of the function. Though it may seem like the graph eventually touches the horizontal axis, we know from the values in the table that it does not.</p>
             <p>In this case we say the horizontal axis is a <term>horizontal asymptote</term>.</p>
             <p>What is the equation for the horizontal axis (<init>i.e.</init> a line that is zero units high)?</p>
