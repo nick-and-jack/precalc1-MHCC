@@ -72,84 +72,114 @@
 
     <subsection>
       <title>Exponential Patterns in Data</title>
-       <p>When looking at data, linear functions will have a pattern of adding the same number repeatedly (a positive or negative constant) for constant changes in input. This leads to the fact that linear functions have constant rate of change (slope).</p>
+      
+      <p>When looking at data, linear functions will have a pattern of adding the same number repeatedly (a positive or negative constant) for constant changes in input. This leads to the fact that linear functions have constant rate of change (slope).</p>
 
-       <todo>Add brackets on the left and right sides of the table to highlight the repeated addition of 1.25 every 5 units.</todo>
-       <example>
-         <title>Table of Linear Data</title>
-         <table>
-           <tabular top="medium" bottom="medium" left="medium" right="medium">
-             <col halign="center"/>
-             <col halign="center"/>
-             <row>
-                 <cell>Input</cell>
-                 <cell>Output</cell>
-             </row>
-             <row>
-                 <cell><m>0</m></cell>
-                 <cell><m>5</m></cell>
-             </row>
-             <row>
-                 <cell><m>5</m></cell>
-                 <cell><m>6.25</m></cell>
-             </row>
-             <row>
-                 <cell><m>10</m></cell>
-                 <cell><m>7.5</m></cell>
-             </row>
-             <row>
-                 <cell><m>20</m></cell>
-                 <cell><m>10</m></cell>
-             </row>
-             <row>
-                 <cell><m>35</m></cell>
-                 <cell><m>13.75</m></cell>
-             </row>
-             <row>
-                 <cell><m
-                  >40</m></cell>
-                 <cell><m>15</m></cell>
-             </row>
-           </tabular>
-         </table>
-         <p>The table shows <m>1.25</m> units added to the output for every <m>5</m> unit change in the input.</p>
-       </example>
+      <example>
+        <title>Table of Linear Data</title>
+        <table>
+          <tabular>
+            <col halign="right" right="medium"/>
+            <col halign="center" right="medium" top="medium"/>
+            <col halign="center" right="medium" top="medium"/>
+            <col halign="left"/>
+            <row>
+                <cell />
+                <cell bottom="medium">Input</cell>
+                <cell bottom="medium">Output</cell>
+                <cell />
+            </row>
+            <row>
+                <cell />
+                <cell bottom="medium"><m>0</m></cell>
+                <cell bottom="medium"><m>5</m></cell>
+                <cell />
+            </row>
+            <row>
+                <cell><m>{}+5\rightarrow</m></cell>
+                <cell bottom="medium"><m>5</m></cell>
+                <cell bottom="medium"><m>6.25</m></cell>
+                <cell><m>\leftarrow{}+1.25</m></cell>
+            </row>
+            <row>
+                <cell><m>{}+5\rightarrow</m></cell>
+                <cell bottom="medium"><m>10</m></cell>
+                <cell bottom="medium"><m>7.5</m></cell>
+                <cell><m>\leftarrow{}+1.25</m></cell>
+            </row>
+            <row>
+                <cell><m>{}+2\cdot5\rightarrow</m></cell>
+                <cell bottom="medium"><m>20</m></cell>
+                <cell bottom="medium"><m>10</m></cell>
+                <cell><m>\leftarrow{}+2\cdot1.25</m></cell>
+            </row>
+            <row>
+                <cell><m>{}+3\cdot5\rightarrow</m></cell>
+                <cell bottom="medium"><m>35</m></cell>
+                <cell bottom="medium"><m>13.75</m></cell>
+                <cell><m>\leftarrow{}+3\cdot1.25</m></cell>
+            </row>
+            <row>
+                <cell><m>{}+5\rightarrow</m></cell>
+                <cell bottom="medium"><m>40</m></cell>
+                <cell bottom="medium"><m>15</m></cell>
+                <cell><m>\leftarrow{}+1.25</m></cell>
+            </row>
+          </tabular>
+        </table>
+        <p>The table shows <m>1.25</m> units added to the output for every <m>5</m> unit change in the input.</p>
+      </example>
       <p>In turn, exponentials have a pattern of repeated multiplication by the same number called a <term>growth factor</term>. This leads to the fact that exponential functions have constant percent change for constant changes in input. Multliplying is interpreted as a percent change.</p>
 
-      <todo>Add brackets on the left and right sides of the table to highlight the repeated multiplication by 1.25 every 5 units.</todo>
       <example>
         <title>Table of Exponential Data</title>
         <table>
-          <tabular top="medium" bottom="medium" left="medium" right="medium">
-            <col halign="center"/>
-            <col halign="center"/>
+          <tabular>
+            <col halign="right" right="medium"/>
+            <col halign="center" right="medium" top="medium"/>
+            <col halign="center" right="medium" top="medium"/>
+            <col halign="left"/>
             <row>
-              <cell>Input</cell>
-              <cell>Output</cell>
+              <cell />
+              <cell bottom="medium">Input</cell>
+              <cell bottom="medium">Output</cell>
+              <cell />
             </row>
             <row>
-              <cell><m>0</m></cell>
-              <cell><m>5</m></cell>
+              <cell />
+              <cell bottom="medium"><m>0</m></cell>
+              <cell bottom="medium"><m>5</m></cell>
+              <cell />
             </row>
             <row>
-              <cell><m>5</m></cell>
-              <cell><m>6.25</m></cell>
+              <cell><m>{}+5\rightarrow</m></cell>
+              <cell bottom="medium"><m>5</m></cell>
+              <cell bottom="medium"><m>6.25</m></cell>
+              <cell><m>\leftarrow{}\times1.25</m></cell>
             </row>
             <row>
-              <cell><m>10</m></cell>
-              <cell><m>7.8125</m></cell>
+              <cell><m>{}+5\rightarrow</m></cell>
+              <cell bottom="medium"><m>10</m></cell>
+              <cell bottom="medium"><m>7.8125</m></cell>
+              <cell><m>\leftarrow{}\times1.25</m></cell>
             </row>
             <row>
-              <cell><m>20</m></cell>
-              <cell><m>12.207</m></cell>
+              <cell><m>{}+5\rightarrow</m></cell>
+              <cell bottom="medium"><m>20</m></cell>
+              <cell bottom="medium"><m>12.207</m></cell>
+              <cell><m>\leftarrow{}\times1.25</m></cell>
             </row>
             <row>
-              <cell><m>35</m></cell>
-              <cell><m>23.842</m></cell>
+              <cell><m>{}+5\rightarrow</m></cell>
+              <cell bottom="medium"><m>35</m></cell>
+              <cell bottom="medium"><m>23.842</m></cell>
+              <cell><m>\leftarrow{}\times1.25</m></cell>
             </row>
             <row>
-              <cell><m>40</m></cell>
-              <cell><m>29.802</m></cell>
+              <cell><m>{}+5\rightarrow</m></cell>
+              <cell bottom="medium"><m>40</m></cell>
+              <cell bottom="medium"><m>29.802</m></cell>
+              <cell><m>\leftarrow{}\times1.25</m></cell>
             </row>
           </tabular>
         </table>
@@ -159,19 +189,102 @@
     <subsection>
       <title>Graph of the Exponential Function</title>
       <p>Consider the difference graphically between the tables of data in the previous examples. In the linear table we are adding <m>1.25</m> to the output every <m>5</m> units of input. In the exponential table we are multiplying the output by <m>1.25</m> (<init>i.e.</init> a <m>25 \%</m> increase) for every <m>5</m> units of input.</p>
-      <todo>Create graph of linear function passing through ordered pairs (0,5) increasing by 1.25 every 5 units.  Caption: adding 1.25 every 5 units.</todo>
+
+      <figure>
+        <caption>Adding <m>1.25</m> every <m>5</m> units</caption>
+          <image width="47%">
+            <latex-image-code>
+                <![CDATA[\begin{tikzpicture}
+                \begin{axis}[
+                  xmin={-5},
+                  xmax={50},
+                  ymin={-5},
+                  ymax={30},
+                  xtick={},
+                  ytick={},
+                  minor xtick={},
+                  minor ytick={}]
+                \addplot+[mark=*,-] coordinates {(0,5) (5,6.25) (10, 7.5) (20, 10) (35,13.75) (40,15)};
+                \end{axis}
+                \end{tikzpicture}]]>
+            </latex-image-code>
+          </image>
+      </figure>
+
       <example>
         <p>Ploting the ordered pairs for the linear model gives us a graph of a straight line. The graph has both horizontal and vertical intercepts.</p>
       </example>
 
-      <todo>Create graph of exponential function passing through ordered pairs (0,5) increasing by 25% every 5 units.  Caption: Multiplying by 1.25 every 5 units.</todo>
+      <figure>
+        <caption>Multiplying by <m>1.25</m> every <m>5</m> units</caption>
+          <image width="47%">
+            <latex-image-code>
+                <![CDATA[\begin{tikzpicture}
+                \begin{axis}[
+                  xmin={-5},
+                  xmax={50},
+                  ymin={-5},
+                  ymax={30},
+                  xtick={},
+                  ytick={},
+                  minor xtick={},
+                  minor ytick={}]
+                \addplot+[mark=*,none, only marks] coordinates {(0,5) (5,5*1.25) (10, 5*1.25^2) (20, 5*1.25^4) (35,5*1.25^7) (40,5*1.25^8)};
+                \addplot[primarycurve,mark=none,-,domain=0:40] {5*1.25^(x/5)};
+                \end{axis}
+                \end{tikzpicture}]]>
+            </latex-image-code>
+          </image>
+      </figure>
+
       <example>
         <p>Plotting the ordered pairs for the exponential model gives us a graph of a smooth curve. In this example the curve is <em>concave up</em>.</p>
       </example>
 
       <p>Consider the graphs of the two exponential functions.</p>
 
-      <todo>Insert side by side graphs of exponential functions.  left is decreasing, right is increasing.  Caption: constant percent decrease and Caption: constant percent increase.</todo>
+      <sidebyside widths="47% 47%">
+        <figure>
+          <caption>Constant percent decrease</caption>
+            <image>
+              <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                  \begin{axis}[
+                    xmin={-5},
+                    xmax={50},
+                    ymin={-5},
+                    ymax={30},
+                    xtick={},
+                    ytick={},
+                    minor xtick={},
+                    minor ytick={}]
+                  \addplot[primarycurve,mark=*,-,domain=0:40,samples=9] {10*0.8^(x/5)};
+                  \end{axis}
+                  \end{tikzpicture}]]>
+              </latex-image-code>
+            </image>
+        </figure>
+        <figure>
+          <caption>Constant percent increase</caption>
+            <image>
+              <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                  \begin{axis}[
+                    xmin={-5},
+                    xmax={50},
+                    ymin={-5},
+                    ymax={30},
+                    xtick={},
+                    ytick={},
+                    minor xtick={},
+                    minor ytick={}]
+                  \addplot[primarycurve,mark=*,-,domain=0:40,samples=9] {10*1.2^(x/10)};
+                  \end{axis}
+                  \end{tikzpicture}]]>
+              </latex-image-code>
+            </image>
+        </figure>
+      </sidebyside>
       
       <p>Notice that as you move along the x-axis, each graph tends to drop closer and closer to the x-axis. The decreasing exponential approaches the x-axis as you move to the right while the increasing exponential approaches the x-axis as you move to the left.</p>
       <p>In fact, the farther you move right or left, the closer each graph gets to the x-axis. In truth neither graph will never reach the x-axis.</p> 
