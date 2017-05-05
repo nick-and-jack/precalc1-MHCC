@@ -42,17 +42,31 @@
             $billExpression=Formula("h(x)+w(x)");
           </pg-code>
         </setup>
-        <statement>
-          <p>Suppose you are only responsible to pay the heating and water bills each month. These bills change each month, depending on how warm you keep your house and on how much water you use.</p>
-          <p>Let <m>h(x)</m> represent the heating bill (in dollars) for month <m>x</m>, and let <m>w(x)</m> represent the water bill (in dollars) for month <m>x</m>.</p>
-          <p>Let <m>x = 2</m> represent February, which is the <m>2^{\rm{nd}}</m> month of the year. Also, suppose <m>h(2) = <var name="$heat" /></m> and <m>w(2) = <var name="$water" /></m>.</p>
-          <p>Now, let <m>b(x)</m> represent the total amount you must pay in bills for month <m>x</m>. What is <m>b(2)</m>?</p>
-          <p>Answer:  <var name="$billNumber" width="15" /> dollars</p>
-          <p>For any month <m>x</m>, what is <m>b(x)</m>?</p>
-          <p>Answer:  <var name="$billExpression" width="15" /></p>
-        </statement>
-        <solution>
-        </solution>
+        <stage>
+          <statement>
+            <p>Suppose you are only responsible to pay the heating and water bills each month. These bills change each month, depending on how warm you keep your house and on how much water you use.</p>
+            <p>Let <m>h(x)</m> represent the heating bill (in dollars) for month <m>x</m>, and let <m>w(x)</m> represent the water bill (in dollars) for month <m>x</m>.</p>
+            <p>Suppose <m>h(2) = <var name="$heat" /></m> and <m>w(2) = <var name="$water" /></m>.</p>
+            <p>Now, let <m>b(x)</m> represent the total amount you must pay in bills for month <m>x</m>. What is <m>b(2)</m>?</p>
+            <p>Answer:  <var name="$billNumber" width="15" /> dollars</p>
+          </statement>
+          <solution>
+            <p>The function <m>b(x)</m> is just the sum of the functions <m>h(x)</m> and <m>w(x)</m>, so: <md>
+            <mrow>b(2) \amp= h(2) + w(2)</mrow>
+            <mrow>\amp= <var name="$heat" /> + <var name="$water" /></mrow>
+            <mrow>\amp= <var name="$billNumber" /></mrow></md></p>
+          </solution>
+        </stage>
+        <stage>
+          <statement>
+            <p>The heating bill is <m>h(x)</m> and the water bill is <m>w(x)</m>.</p>
+            <p>For any month <m>x</m>, what is <m>b(x)</m>?</p>
+            <p>Answer:  <var name="$billExpression" width="15" /></p>
+          </statement>
+          <solution>
+            <p>In general, we have: <me>b(x) = h(x) + w(x)</me></p>
+          </solution>
+        </stage>
       </webwork>
     </exercise>
     <p>If you need to add two functions together, such as <m>f(x)+g(x)</m>, this represents a <term>combination of functions</term><index><main>combination of functions</main></index><index><main>function</main><sub>combinations</sub></index>.</p>
@@ -82,200 +96,143 @@
         </pg-code>
 
       </setup>
-      <statement>
-        <p>Suppose we have the following facts about functions <m>M</m> and <m>N</m>:</p>
-        <p><md><mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow><mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow></md></p>
-        <p>If we define a new function <me>s(x) = M(x) + N(x)</me> then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.</p>
-        <p>Answer: <m>s(<var name="$x" />)</m> = <var name="$s" width="10" /></p>
-        <p>Now, here are three other combinations of <m>M</m> and <m>N</m>:</p>
-        <p><md><mrow>d(x) \amp= M(x) - N(x)</mrow><mrow>p(x) \amp= M(x)*N(x)</mrow><mrow>q(x) \amp= \frac{\displaystyle{M(x)}}{\displaystyle{N(x)}}</mrow></md></p>
-        <p>Using these definitions, evaluate each of the following:</p>
-        <p><ul>
-          <li><p><m>d(</m><var name="$x" /><m>) = </m><var name="$d" width="10" /></p></li>
-          <li><p><m>p(</m><var name="$x" /><m>) = </m><var name="$p" width="10" /></p></li>
-          <li><p><m>q(</m><var name="$x" /><m>) = </m><var name="$q" width="10" /></p></li>
-        </ul></p>
-      </statement>
-      <solution>
-        <p><ul>
-          <li><p><m>s(<var name="$x" />) = </m><var name="$s" /></p></li>
-          <li><p><m>d(</m><var name="$x" /><m>) = </m><var name="$d" /></p></li>
-          <li><p><m>p(</m><var name="$x" /><m>) = </m><var name="$p" /></p></li>
-          <li><p><m>q(</m><var name="$x" /><m>) = </m><var name="$q" /></p></li>
-        </ul></p>
-      </solution>
+      <stage>
+        <statement>
+          <p>Suppose we have the following facts about functions <m>M</m> and <m>N</m>:</p>
+          <p><md><mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow><mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow></md></p>
+          <p>If we define a new function <me>s(x) = M(x) + N(x)</me> then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.</p>
+          <p>Answer: <m>s(<var name="$x" />)</m> = <var name="$s" width="10" /></p>
+        </statement>
+        <solution>
+          <p><m>s(<var name="$x" />) = </m><var name="$s" /></p>
+        </solution>
+      </stage>
+      <stage>
+        <statement>
+          <p>Again, we know that: <md><mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow><mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow></md></p>
+          <p>Now, here are three other combinations of <m>M</m> and <m>N</m>:</p>
+          <p><md><mrow>d(x) \amp= M(x) - N(x)</mrow><mrow>p(x) \amp= M(x) \cdot N(x)</mrow><mrow>q(x) \amp= \frac{M(x)}{N(x)}</mrow></md></p>
+          <p>Using these definitions, evaluate each of the following:</p>
+          <p><ul>
+            <li><p><m>d(</m><var name="$x" /><m>) = </m><var name="$d" width="10" /></p></li>
+            <li><p><m>p(</m><var name="$x" /><m>) = </m><var name="$p" width="10" /></p></li>
+            <li><p><m>q(</m><var name="$x" /><m>) = </m><var name="$q" width="10" /></p></li>
+          </ul></p>
+        </statement>
+        <solution>
+          <p><ul>
+            <li><p><md>
+              <mrow>d(<var name="$x" />) \amp= <var name="$M" /> - <var name="$N" /></mrow>
+              <mrow>\amp= <var name="$d" /></mrow>
+            </md></p></li>
+            <li><p><md>
+              <mrow>p(<var name="$x" />) \amp= <var name="$M" /> \cdot <var name="$N" /></mrow>
+              <mrow>\amp= <var name="$p" /></mrow>
+            </md></p></li>
+            <li><p><md>
+              <mrow>q(<var name="$x" />) \amp= \frac{<var name="$M" />}{<var name="$N" />}</mrow>
+              <mrow>\amp= <var name="$q" /></mrow>
+            </md></p></li>
+          </ul></p>
+        </solution>
+      </stage>
     </webwork>
   </exercise>
-  <p>Again, combining functions just means <q>doing arithmetic</q> on the outputs of functions. The next exercise gives you information about two functions, and you must use them to compute values for different function combinations.</p>
+  <p>Again, combining functions just means <q>doing arithmetic</q> on the outputs of functions.</p>
 
   <exercise>
-    <webwork xml:id="combinations-of-functions-tables">
+    <webwork>
       <setup>
-
-        <var name="$x[0]"><static>-4</static></var>
-        <var name="$x[1]"><static>-2</static></var>
-        <var name="$x[2]"><static>0</static></var>
-        <var name="$x[3]"><static>2</static></var>
-        <var name="$x[4]"><static>4</static></var>
-
-        <var name="$f[0]"><static>-9</static></var>
-        <var name="$f[1]"><static>-3</static></var>
-        <var name="$f[2]"><static>-1</static></var>
-        <var name="$f[3]"><static>-3</static></var>
-        <var name="$f[4]"><static>-9</static></var>
-
-        <var name="$g[0]"><static>4</static></var>
-        <var name="$g[1]"><static>7</static></var>
-        <var name="$g[2]"><static>10</static></var>
-        <var name="$g[3]"><static>13</static></var>
-        <var name="$g[4]"><static>16</static></var>
-
-        <var name="$M[0]"><static>-5</static></var>
-        <var name="$M[1]"><static>4</static></var>
-        <var name="$M[2]"><static>9</static></var>
-        <var name="$M[3]"><static>10</static></var>
-        <var name="$M[4]"><static>7</static></var>
-
-        <var name="$N[0]"><static>-13</static></var>
-        <var name="$N[1]"><static>-10</static></var>
-        <var name="$N[2]"><static>-11</static></var>
-        <var name="$N[3]"><static>-16</static></var>
-        <var name="$N[4]"><static>-25</static></var>
-
-        <var name="$P[0]"><static>-36</static></var>
-        <var name="$P[1]"><static>-21</static></var>
-        <var name="$P[2]"><static>-10</static></var>
-        <var name="$P[3]"><static>-39</static></var>
-        <var name="$P[4]"><static>-144</static></var>
-
+        <var name="$revenue">
+          <set>
+            <member>\text{?}</member>
+            <member>c(t)p(t)</member>
+            <member corret="yes">p(t)q(t)</member>
+            <member>c(t)q(t)</member>
+          </set>
+        </var>
+        <var name="$profit">
+          <set>
+            <member>\text{?}</member>
+            <member>c(t) - p(t)</member>
+            <member>p(t) - q(t)</member>
+            <member correctd="yes">p(t) - c(t)</member>
+          </set>
+        </var>
+        <var name="$markup">
+          <set>
+            <member>\text{?}</member>
+            <member>\text{You sell if for 40 cents more than you paid for it.}</member>
+            <member correct="yes">\text{You sell if for 40 percent more than you paid for it.}</member>
+            <member>\text{You paid $1.40 for the item.}</member>
+          </set>
+        </var>
         <pg-code>
-          @x=(2,4);
-          @f=map{-0.5*$_**2-1}@x;
-          @g=map{1.5*$_+10}@x;
-          @M=map{$f[$_]+$g[$_]}0..$#f;
-          @N=map{$f[$_]-$g[$_]}0..$#f;
-          @P=map{$f[$_]*$g[$_]}0..$#f;
-
+          $revenue=PopUp(
+          ["?","c(t)p(t)","p(t)q(t)","c(t)q(t)"],"p(t)q(t)"
+          );
+          $profit=PopUp(
+          ["?","c(t) - p(t)","p(t) - q(t)","p(t) - c(t)"],"p(t) - c(t)"
+          );
+          $markup=PopUp(
+          ["?","You sell it for 40 cents more than you paid for it.","You sell it for 40 percent more than you paid for it.","You paid 1.40 for the item."],"You sell it for 40 percent more than you paid for it."
+          );
         </pg-code>
-
       </setup>
-
-      <statement>
-        <p>The table below shows values of two functions, <m>f</m> and <m>g</m>.</p>
-        <table>
-          <tabular top="major" halign="center">
-                <col halign="left" />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-
-                <row bottom="medium">
-                  <cell><m>x</m></cell>
-                  <cell><m>f(x)</m></cell>
-                  <cell><m>g(x)</m></cell>
-                  <cell><m>M(x)</m></cell>
-                  <cell><m>N(x)</m></cell>
-                  <cell><m>P(x)</m></cell>
-                </row>
-
-                <row>
-                  <cell><m><var name="$x[0]" /></m></cell>
-                  <cell><m><var name="$f[0]" /></m></cell>
-                  <cell><m><var name="$g[0]" /></m></cell>
-                  <cell><var name="$M[0]" width="5" /></cell>
-                  <cell><var name="$N[0]" width="5" /></cell>
-                  <cell><var name="$P[0]" width="5" /></cell>
-                </row>
-
-                <row>
-                  <cell><m><var name="$x[1]" /></m></cell>
-                  <cell><m><var name="$f[1]" /></m></cell>
-                  <cell><m><var name="$g[1]" /></m></cell>
-                  <cell><var name="$M[1]" width="5" /></cell>
-                  <cell><var name="$N[1]" width="5" /></cell>
-                  <cell><var name="$P[1]" width="5" /></cell>
-                </row>
-
-          </tabular>
-        </table>
-        <p>The three other functions are defined as follows:</p>
-        <p><ul>
-          <li><p><m>M(x) = f(x) + g(x)</m></p></li>
-          <li><p><m>N(x) = f(x) - g(x)</m></p></li>
-          <li><p><m>P(x) = f(x)\cdot g(x)</m></p></li>
-        </ul></p>
-        <p>Complete the table of values for <m>M(x)</m>, <m>N(x)</m> and <m>P(x)</m>.</p>
-
-      </statement>
-
-      <solution>
-        <table>
-          <tabular top="major" halign="center">
-                <col halign="left" />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-
-                <row bottom="medium">
-                  <cell><m>x</m></cell>
-                  <cell><m>f(x)</m></cell>
-                  <cell><m>g(x)</m></cell>
-                  <cell><m>M(x)</m></cell>
-                  <cell><m>N(x)</m></cell>
-                  <cell><m>P(x)</m></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[0]" /></cell>
-                  <cell><var name="$f[0]" /></cell>
-                  <cell><var name="$g[0]" /></cell>
-                  <cell><var name="$M[0]" /></cell>
-                  <cell><var name="$N[0]" /></cell>
-                  <cell><var name="$P[0]" /></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[1]" /></cell>
-                  <cell><var name="$f[1]" /></cell>
-                  <cell><var name="$g[1]" /></cell>
-                  <cell><var name="$M[1]" /></cell>
-                  <cell><var name="$N[1]" /></cell>
-                  <cell><var name="$P[1]" /></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[2]" /></cell>
-                  <cell><var name="$f[2]" /></cell>
-                  <cell><var name="$g[2]" /></cell>
-                  <cell><var name="$M[2]" /></cell>
-                  <cell><var name="$N[2]" /></cell>
-                  <cell><var name="$P[2]" /></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[3]" /></cell>
-                  <cell><var name="$f[3]" /></cell>
-                  <cell><var name="$g[3]" /></cell>
-                  <cell><var name="$M[3]" /></cell>
-                  <cell><var name="$N[3]" /></cell>
-                  <cell><var name="$P[3]" /></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[4]" /></cell>
-                  <cell><var name="$f[4]" /></cell>
-                  <cell><var name="$g[4]" /></cell>
-                  <cell><var name="$M[4]" /></cell>
-                  <cell><var name="$N[4]" /></cell>
-                  <cell><var name="$P[4]" /></cell>
-                </row>
-          </tabular>
-        </table>
-      </solution>
+      <stage>
+        <statement>
+          <p>For your business, you buy a certain type of item from the manufacturer, and then you sell it to your customers at a mark-up. That is, you sell it for more than you bought it.</p>
+          <p>You are concerned with the following functions regarding this item. Note that these are each functions of time <m>t</m>.</p>
+          <p><ul>
+            <li><p>The function <m>c(t)</m> represents your cost to buy one of the items.</p></li>
+            <li><p>The function <m>p(t)</m> represents the price you sell the item for.</p></li>
+            <li><p>The function <m>q(t)</m> represents the quantity, or number, of the items you sell.</p></li>
+          </ul></p>
+          <p>Which function combination represents the total amount your customers paid you for all the items you sell?</p>
+          <p>Answer:  <var name="$revenue" form="popup" /></p>
+        </statement>
+        <hint>
+          <p>Suppose you paid <m>c(t) = 8</m> dollars for each item, and you sell them for <m>p(t) = 10</m> dollars per item. If you sell <m>q(t) = 50</m> items, what would you really multiply together to find how much your customers paid for all of the items?</p>
+        </hint>
+        <solution>
+          <p>Your customers paid <m>p(t)q(t)</m> for all of the items.</p>
+        </solution>
+      </stage>
+      <stage>
+        <statement>
+          <p><ul>
+            <li><p>The function <m>c(t)</m> represents your cost to buy one of the items.</p></li>
+            <li><p>The function <m>p(t)</m> represents the price you sell the item for.</p></li>
+            <li><p>The function <m>q(t)</m> represents the quantity, or number, of the items you sell.</p></li>
+          </ul></p>
+          <p>Which function combination represents the actual profit you would make from selling one item?</p>
+          <p>Answer:  <var name="$profit" form="popup" /></p>
+        </statement>
+        <hint>
+          <p>If you paid <m>c(t) = 8</m> dollars for an item, but you then sold it for <m>p(t) = 10</m> dollars, how would you find your actual profit from this one item?</p>
+        </hint>
+        <solution>
+          <p>Your profit from one item is: <m>p(t) - c(t)</m></p>
+        </solution>
+      </stage>
+      <stage>
+        <statement>
+          <p><ul>
+            <li><p>The function <m>c(t)</m> represents your cost to buy one of the items.</p></li>
+            <li><p>The function <m>p(t)</m> represents the price you sell the item for.</p></li>
+            <li><p>The function <m>q(t)</m> represents the quantity, or number, of the items you sell.</p></li>
+          </ul></p>
+          <p>Suppose <m>\frac{p(t)}{c(t)} = 1.40</m>. What does this mean?</p>
+          <p>Answer:  <var name="$markup" form="popup" /></p>
+        </statement>
+        <hint>
+          <p>Since <m>p(t)</m> is always bigger than <m>c(t)</m>, it makes sense that dividing the two would give a number larger than one.</p>
+          <p>If you made the price just double your cost, then dividing the two would give the number <m>2</m>. This would be an increase of <m>100 \%</m>.</p>
+        </hint>
+        <solution>
+          <p>This means that you increased the cost by <m>40 \%</m> to choose a selling price.</p>
+        </solution>
+      </stage>
     </webwork>
   </exercise>
 
