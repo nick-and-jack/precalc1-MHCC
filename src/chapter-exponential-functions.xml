@@ -73,6 +73,8 @@
     <subsection>
       <title>Exponential Patterns in Data</title>
        <p>When looking at data, linear functions will have a pattern of adding the same number repeatedly (a positive or negative constant) for constant changes in input. This leads to the fact that linear functions have constant rate of change (slope).</p>
+
+       <todo>Add brackets on the left and right sides of the table to highlight the repeated addition of 1.25 every 5 units.</todo>
        <example>
          <title>Table of Linear Data</title>
          <table>
@@ -104,7 +106,8 @@
                  <cell><m>13.75</m></cell>
              </row>
              <row>
-                 <cell><m>40</m></cell>
+                 <cell><m
+                  >40</m></cell>
                  <cell><m>15</m></cell>
              </row>
            </tabular>
@@ -112,6 +115,8 @@
          <p>The table shows <m>1.25</m> units added to the output for every <m>5</m> unit change in the input.</p>
        </example>
       <p>In turn, exponentials have a pattern of repeated multiplication by the same number called a <term>growth factor</term>. This leads to the fact that exponential functions have constant percent change for constant changes in input. Multliplying is interpreted as a percent change.</p>
+
+      <todo>Add brackets on the left and right sides of the table to highlight the repeated multiplication by 1.25 every 5 units.</todo>
       <example>
         <title>Table of Exponential Data</title>
         <table>
@@ -154,32 +159,39 @@
     <subsection>
       <title>Graph of the Exponential Function</title>
       <p>Consider the difference graphically between the tables of data in the previous examples. In the linear table we are adding <m>1.25</m> to the output every <m>5</m> units of input. In the exponential table we are multiplying the output by <m>1.25</m> (<init>i.e.</init> a <m>25 \%</m> increase) for every <m>5</m> units of input.</p>
+      <todo>Create graph of linear function passing through ordered pairs (0,5) increasing by 1.25 every 5 units.  Caption: adding 1.25 every 5 units.</todo>
       <example>
         <p>Ploting the ordered pairs for the linear model gives us a graph of a straight line. The graph has both horizontal and vertical intercepts.</p>
       </example>
+
+      <todo>Create graph of exponential function passing through ordered pairs (0,5) increasing by 25% every 5 units.  Caption: Multiplying by 1.25 every 5 units.</todo>
       <example>
         <p>Plotting the ordered pairs for the exponential model gives us a graph of a smooth curve. In this example the curve is <em>concave up</em>.</p>
       </example>
+
+      <p>Consider the graphs of the two exponential functions.</p>
+
+      <todo>Insert side by side graphs of exponential functions.  left is decreasing, right is increasing.  Caption: constant percent decrease and Caption: constant percent increase.</todo>
+      
+      <p>Notice that as you move along the x-axis, each graph tends to drop closer and closer to the x-axis. The decreasing exponential approaches the x-axis as you move to the right while the increasing exponential approaches the x-axis as you move to the left.</p>
+      <p>In fact, the farther you move right or left, the closer each graph gets to the x-axis. In truth neither graph will never reach the x-axis.</p> 
+      <p>The x-axis is the horizontal line <m>y = 0</m> and the graphs are <q>tending towards <m>y = 0</m></q> as the inputs move to the right or left.</p>
+      <p>We say that the x-axis is a <term>horizontal asymptote</term><index><main>horizontal asymptote</main></index> with equation <m>y = 0</m>. It means that the graph is getting closer and closer to the x-axis in at least one direction.</p> 
     </subsection>
     <subsection>
       <title>General Form of Exponential Formulas</title>
-      <example>
-       <p>In the linear function <m>f(t)=mt+b</m> the <m>x</m> is a counter. It counts how many times the number <m>m</m> is repeatedly added.</p>
-       <p>If a car is traveling at <m>50</m> <units>miles per hour</units>, then we can write a linear equation to calculate the distance the car travels as a function of time, t hours. <me>f(t)=50t</me> means that each hour we add another <m>50</m> <units>miles</units> to the distance traveled by the car. After <m>6</m> <units>hours</units> of driving, the vehicle has covered <me>f(6)=50+50+50+50+50+50=50*6=300</me> <m>300</m> <units>miles</units>.</p>
-       </example>
-    </subsection>
-      <p>Consider the interactive graph you made of the exponential function. Notice that as you move to the left along the x-axis, the graph tends to drop closer and closer to the x-axis.</p>
-      <p>In fact, the farther you go to the left, the closer the graph gets to the x-axis. In truth the graph will never reach the x-axis.</p> 
-      <p>The x-axis is the horizontal line <m>y = 0</m> and the graph is <q>tending towards <m>y = 0</m></q> as the inputs move to the left.</p>
-      <p>We say that the x-axis is a horizontal asymptote with equation <m>y = 0</m>. It means that the graph is getting closer and closer to the x-axis in at least one direction.</p>        
-
-      <p>We can pick out patterns from language too.  For instance the statement, <q>A worker makes <m>\$ 15</m> per hour</q> is giving us information about a linear pattern. The statement indicates that for each hour that passes the worker adds <m>\$ 15</m> to their earnings.</p>
-      <p>On the other hand if the worker has a salary increase of <m>15 \%</m> each hour it means their earnings are multiplied by <m>1.15</m> for each hour they work.</p>
+      <p>Patterns for linear and exponential models are found in language too.  For instance the statement, <q>A worker makes <m>\$ 15</m> per hour</q> is giving us information about a linear pattern. The statement indicates that for each hour that passes the worker adds <m>\$ 15</m> to their earnings.</p>
+      <p>On the other hand if the worker has a salary increase of <m>15 \%</m> each year it means their earnings are multiplied by <m>1.15</m> each year.</p>
+      <p>By counting how many times we add or how many times we multiply, we can interpret a pattern in language into a math pattern, usually called a formula.</p>
       <p>The <q>shape</q> or form of linear and exponential formulas are unique. They each have their own characteristics.</p>
       <p>Linear formulas look like
       <me>f(x) = mx + b</me></p>
       <p>While the formula for an exponential function may look like<me>f(x) = ab^{x}</me> or <me>f(x)=ae^{kx}</me></p>
       <p>Where <m>ab^{x}</m> is called the <term>discrete</term> form of the exponential and <m>ae^{kx}</m> is called the <term>continuous</term> form.</p>
+      <example>
+       <p>In the linear function <m>f(x)=mx+b</m> the <m>x</m> is a counter. It counts how many times the number <m>m</m> is repeatedly added.</p>
+       <p>If a car is traveling at <m>50</m> <units>miles per hour</units>, then we can write a linear equation to calculate the distance the car travels as a function of time, x hours. <me>f(x)=50x</me> means that each hour we add another <m>50</m> <units>miles</units> to the distance traveled by the car. After <m>6</m> <units>hours</units> of driving, the vehicle has covered <me>f(6)=50+50+50+50+50+50=50*6=300</me> <m>300</m> <units>miles</units>.</p>
+      </example>
       <p>The reason there are at least two forms of the exponential formula is there are at least two ways to derive or create an exponential model.</p>
       <p>In practice, when we observe and measure a constant percent change we typically use the information collected to write formula directly. The result is the discrete form of the exponential formula.</p>
       <example>
@@ -207,6 +219,9 @@
         <p>But, most importantly, you have to know the continuous <m>0.7726 \%</m> growth is NOT the actual growth of the population. We have to turn the continuous information into its discrete equivalent in order to get practical use from the solution.</p>
         <p><me>b=e^{0.007726} \approx 1.007756</me> This represents an actual annual percent growth of about <m>0.7756 \%</m>.</p>
       </example>
+    </subsection>
+    <subsection>
+      <title>Examples</title>
       <example>
       <title>Example Problem 3:  solution video</title>
         <p>A biologist measures the amount of chemical spilled into a lake 6 hours after the spill has occurred to be about 350 <initial>ppm</initial> (parts per million).</p>
@@ -231,5 +246,6 @@
         <p>What is the amount of drug left after 10 hours?</p>
         <p>How many hours will it take for there to be 1 milligram of drug in the body?</p>
       </example>
+    </subsection>
   </section>
 </chapter>
