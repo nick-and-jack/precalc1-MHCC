@@ -69,28 +69,28 @@
 
             <p>By definition, a logarithm is an exponent. In the exponential equation <me>b^{y}=x</me> The exponent <m>y</m> is the logarithm so <me>y=\log_{b}(x)</me></p>
 
+            <p>There are at least three useful rules about logarithms:</p>
+
+            <p>The first rule is often used to <q>bring the exponent down</q> <mdash /> after applying the logarithm, the exponent becomes a factor.</p>
+
+            <p>The nest two rules are sometimes used to combine two terms involving logarithms, or to split one term into two.</p>
 
             <assemblage>
-                <p>There are at least three useful rules about logarithms:</p>
-
-                <p>The first rule is often used to <q>bring the exponent down</q> <mdash /> after applying the logarithm, the exponent becomes a factor.</p>
-
-                <p>The nest two rules are sometimes used to combine two terms involving logarithms, or to split one term into two.</p>
-
-                <p><ol label="1">
-                    <li xml:id="item-logarithm-of-power-rule">
-                        <p><m>\log_{b}(N^{x})=x \log_{b}(N)</m></p>
-                    </li>
-                    <li xml:id="item-logarithm-of-product-rule">
-                        <p><m>\log_{b}(AB)=\log_{b}(A)+\log_{b}(B)</m></p>
-                    </li>
-                    <li xml:id="item-logarithm-of-quotient-rule">
-                        <p><m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=\log_{b}(A)-\log_{b}(B)</m></p>
-                    </li>
-                </ol></p>
+              <p><ol label="1">
+                <li xml:id="item-logarithm-of-power-rule">
+                    <p><m>\log_{b}(N^{x})=x \log_{b}(N)</m></p>
+                </li>
+                <li xml:id="item-logarithm-of-product-rule">
+                    <p><m>\log_{b}(AB)=\log_{b}(A)+\log_{b}(B)</m></p>
+                </li>
+                <li xml:id="item-logarithm-of-quotient-rule">
+                    <p><m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=\log_{b}(A)-\log_{b}(B)</m></p>
+                </li>
+              </ol></p>
             </assemblage>
 
-            <p>The first rule is definitely the most useful. I used to have a pocket knife with <m>10</m> different tools folded into it, but I only used one. <xref ref="item-logarithm-of-power-rule">Rule</xref> is that tool. It allows us to take an exponential expression and <q>bring down the exponent</q> so we can isolate it.</p>
+            <p>The first rule is perhaps the most useful at this level.</p>
+            <p>I used to have a pocket knife with <m>10</m> different tools folded into it, but I mostly used only one. <xref ref="item-logarithm-of-power-rule">Rule</xref> is that tool. It allows us to take an exponential expression and <q>bring down the exponent</q> so we can isolate it.</p>
 
             <p>If we end up with an equation that looks like <me>(0.337)^{\mathord{?}}=1.272</me> as in, <q>I wonder what the exponent is?,</q> we can use a logarithmic function to find the answer.</p>
 
@@ -151,7 +151,7 @@
 
                     <p>At first glance it seems you can apply <xref ref="item-logarithm-of-power-rule">Rule</xref>, but is that right? <xref ref="item-logarithm-of-power-rule">Rule</xref> states <me>\log_{b}(N^{x})=x \log_{b}(N)</me></p>
 
-                    <p>Notice how <xref ref="item-logarithm-of-power-rule">Rule</xref> assumes you have one side written as <m>N^{x}</m> with nothing else in front (no coefficient)? The left side of our equation has a coefficient of <m>3</m> in front of the exponential<me>3(2.83)^{x}</me> The constant <m>3</m> is keeping us from using <xref ref="item-logarithm-of-power-rule">Rule</xref>. That constant either has to be moved or we have to use another rule (if there is one that applies).</p>
+                    <p>Notice how <xref ref="item-logarithm-of-power-rule">Rule</xref> assumes you have one side written as <m>N^{x}</m> with nothing else in front (no coefficient). The left side of our equation has a coefficient of <m>3</m> in front of the exponential<me>3(2.83)^{x}</me> The constant <m>3</m> is keeping us from using <xref ref="item-logarithm-of-power-rule">Rule</xref>. That constant either has to be moved or we have to use another rule (if there is one that applies).</p>
 
                     <p>We can fix the situation by rearranging the equation to match the format of <xref ref="item-logarithm-of-power-rule">Rule</xref> or we could use <xref ref="item-logarithm-of-product-rule">Rule </xref> because at least it matches the format of our equation.</p>
                 </statement>
@@ -192,11 +192,11 @@
                 <p>We then entered the exact expressions into a calculator and found approximations rounded to three decimal places. Though graphically may seem quick and easy, most often we can only get an approximation to the answer.</p>
             </remark>
 
-            <p>Finally, we could just ask a computer to solve the equation for us. Many websites have tools for solving equations, where you can enter an equation like: <c>3(2.83)^x = 15</c>. You may wish to perform a web search for such a website.</p>
+            <p>Finally, we could just ask a computer to solve the equation for us. Many websites have tools for solving equations. You can enter an equation like: <c>3(2.83)^x = 15</c> and then type <em>solve</em> or click a <em>solve</em> button to see the solutions. You may wish to perform a web search for such a website.</p>
 
-            <p>Technology can now do much of what only people could do in the past. The question is no longer <q>Can you solve an equation?,</q> the question is <q>Do you have the right equation?</q></p>
+            <p>We should all be aware that technology can now do much of what only people could do in the past. And we should also be aware of the current limitations of technology.</p>
 
-            <p>Computers can solve all kinds of equations, but so far only people have the ability to set the problems up.</p>
+            <p>In fact, computers can solve all kinds of equations, but so far only people have the ability to set the problems up. So the real question is not necessarily <q>Can you solve an equation?,</q>, but <q>Do you have the right equation?</q></p>
         </subsection>
 
         <subsection>
@@ -210,11 +210,11 @@
                     <p><ul>
                         <li>
                             <p><m>\log(100)</m> means <q>The power of <m>10</m> that gives you <m>100</m>.</q></p>
-                            <p>So <m>\log(100)=2</m> which says, <q>The power of <m>10</m> that gives you <m>100</m> is <m>2</m>.</q> Since <m>10^{2}=100</m>.</p>
+                            <p>Therefore <me>\log(100)=2</me> which says, <q>The power of <m>10</m> that gives you <m>100</m> is <m>2</m>.</q> Since <m>10^{2}=100</m>.</p>
                         </li>
                         <li>
                             <p><m>\log_{3}(81)</m> means, <q>The power of <m>3</m> that gives you <m>81</m>.</q></p>
-                            <p>So <me>\log_{3}(81)=4</me> which says, <q>The power of <m>3</m> that gives you <m>81</m> is <m>4</m>.</q> Since <m>3^{4}=81</m></p>
+                            <p>Therefore <me>\log_{3}(81)=4</me> which says, <q>The power of <m>3</m> that gives you <m>81</m> is <m>4</m>.</q> Since <m>3^{4}=81</m></p>
                         </li>
                     </ul></p>
                 </statement>
@@ -230,7 +230,7 @@
                 <p><q>What power of <m>3</m> gives you <m>-9</m>?</q></p>
             </blockquote>
 
-            <p>The statement makes no sense. You cannot get a negative result if all you have is positive <m>3</m>'s multiplied together. At least one has to be negative!</p>
+            <p>The statement should make no sense. You cannot get a negative result if all you have is positive <m>3</m>'s multiplied together. At least one has to be negative!</p>
 
             <p>Since any negative input leads us to the same conclusion, it turns out logarithms cannot accept negative inputs.</p>
 
@@ -242,11 +242,11 @@
                 <p>Domain of <m>\log_{b}(x)</m>: <m>x \gt 0</m>.</p>
             </assemblage>
 
-            <p>For the range we must consider all the possible outputs we should expect from the function. In the case of the logarithm, an output is the exponent value needed to get a particular input <me>\log_{b}(\text{input})=\text{output}</me></p>
+            <p>For the range we must consider all the possible outputs of the function. In the case of the logarithm, an output is the exponent value needed to get a particular input <me>\log_{b}(\text{input})=\text{output}</me></p>
 
             <example>
                 <statement>
-                    <p>Consider <m>y=\log_{3}(x)</m>.</p>
+                    <p>Consider again <m>y=\log_{3}(x)</m>.</p>
 
                     <p>For any input <m>x</m> how many <m>3</m>'s does it take to get that <m>x</m>-value? The answer (output) is the <m>y</m>-value.</p>
 
@@ -254,42 +254,50 @@
                         <tabular top="medium" bottom="medium" left="medium" right="medium">
                             <col halign="center"/>
                             <col halign="center"/>
+                            <col halign="center"/>
                             <row>
                                 <cell>Input</cell>
                                 <cell>Output (exponent)</cell>
+                                <cell>Reason</cell>
                             </row>
                             <row>
                                 <cell><m>\frac{1}{27}</m></cell>
-                                <cell><m>-3</m> (because <m>3^{-3}=\frac{1}{27})</m></cell>
+                                <cell><m>-3</m></cell>
+                                <cell>Because <m>3^{-3}=\frac{1}{27}</m></cell>
                             </row>
                             <row>
                                 <cell><m>\frac{1}{9}</m></cell>
-                                <cell><m>-2</m> (because <m>3^{-2}=\frac{1}{9})</m></cell>
+                                <cell><m>-2</m></cell>
+                                <cell>Because <m>3^{-2}=\frac{1}{9}</m></cell>
                             </row>
                             <row>
                                 <cell><m>\frac{1}{3}</m></cell>
-                                <cell><m>-1</m> (because <m>3^{-1}=\frac{1}{3})</m></cell>
+                                <cell><m>-1</m></cell>
+                                <cell>Because <m>3^{-1}=\frac{1}{3}</m></cell>
                             </row>
                             <row>
                                 <cell><m>1</m></cell>
-                                <cell><m>0</m> (because <m>3^{0}=1)</m></cell>
+                                <cell><m>0</m></cell>
+                                <cell>Because <m>3^{0}=1</m></cell>
                             </row>
                             <row>
                                 <cell><m>3</m></cell>
-                                <cell><m>1</m> (because <m>3^{1}=3)</m></cell>
+                                <cell><m>1</m></cell>
+                                <cell>Because <m>3^{1}=3</m></cell>
                             </row>
                             <row>
                                 <cell><m>9</m></cell>
-                                <cell><m>2</m> (because <m>3^{2}=9)</m></cell>
+                                <cell><m>2</m></cell>
+                                <cell>Because <m>3^{2}=9</m></cell>
                             </row>
                         </tabular>
                     </table>
 
-                    <p>For inputs <m>0 \lt x \lt 1</m> the results are negative, so <m>y \lt 0</m>.</p>
+                    <p>For inputs between zero and one, <m>0 \lt x \lt 1</m>, the results are negative, so <m>y \lt 0</m>.</p>
 
-                    <p>For inputs <m>x \gt 1</m> the results are always positive, so <m>y \gt 0</m></p>
+                    <p>For inputs greater than one, <m>x \gt 1</m>, the results are always positive, so <m>y \gt 0</m></p>
 
-                    <p>If the input is <m>x=1</m> the result is zero (<m>\log_{3}(1)=0</m> because, <q>What power of <m>3</m> gives you <m>1</m>?</q> The <m>0</m> power.</p>
+                    <p>If the input is <m>x=1</m> the result is always zero <me>\log_{3}(1)=0</me> because, <q>The power of <m>3</m> that gives you <m>1</m></q> is the <m>0</m> power.</p>
 
                     <p>After a few tries we should begin to realize the range of <m>\log_{3}(x)</m> is all real numbers.</p>
                 </statement>
@@ -351,13 +359,13 @@
 
                 <p>We know the answer should be negative because we are trying to get <m>0.1822</m> which is less than <m>1</m>.</p>
 
-                <p>Your calculator may already have a <q>log of any base</q> option. Today, in the 21st century we can also find the answer, for free, on the web. For instance, go to <url href="https://www.desmos.com/calculator/1t5iqhqaad">Desmos.com</url>. Type <c>log_(0.1822</c> into one of the cells. You should see the answer as <m>\log_{3}(0.1822) \approx -1.5498</m> and you can get more decimal places if you want.</p>
+                <p>Your calculator may already have a <q>log of any base</q> option. Today, in the 21st century we can also find the answer, for free, on the web. For instance, go to <url href="https://www.desmos.com/calculator/1t5iqhqaad">Desmos.com</url>. Type <c>log_(0.1822)</c> into one of the cells. You should see the answer as <m>\log_{3}(0.1822) \approx -1.5498</m> and you can get more decimal places if you want.</p>
 
                 <p>But before the web, it used to be that calculators only had one or two options for logarithms, (and before calculators there were things called <q><url href="https://en.wikipedia.org/wiki/Slide_rule">slide rules</url></q> and books with pages and pages of tables of logarithms).</p>
 
                 <p>Here is an <q>old school</q> method of evaluating a logarithm expression. The method is called <q>change of base</q> which means you change the base from whatever it is to either base <m>10</m>, <m>\log</m>, or base <m>e</m>, <m>\ln</m>, because most calculators have those built in.</p>
 
-                <p>Set up an equation in which <m>y</m> is the answer you want. Use the definition of the logarithm to turn the log equation into an exponential equation. Then solve the exponential equation using any base log you want. In this example we use base <m>10</m>, <m>\log</m>.<md>
+                <p>Set up an equation in which <m>y</m> is the answer you want. Then use the definition of the logarithm to turn the <m>log_{b}</m> equation into an exponential equation. The last step is to solve the exponential equation using the most convenient logarithm at your disposal (most likely <m>log</m> or <m>ln</m>). In this example we use log-base-10, <m>\log</m>.<md>
                     <mrow>\log_{3}(0.1822)\amp=y</mrow>
                     <mrow>0.1822\amp=3^{y}</mrow>
                     <mrow>\log(0.1822)\amp=\log(3^{y})</mrow>
@@ -411,11 +419,11 @@
 
                             <p>The opening sentence is telling us we must use an exponential model because the decay rate is a <q>constant percent</q>. The sentence goes on to tell us <em>what kind</em> of decay model and the percent rate of decay.</p>
 
-                            <p>The word <q>continuous</q> is telling us to use base <m>e</m>. Therefore we can write the formula for decay as <me>Ae^{-kt}</me> where <m>k</m> is the continuous decay constant <m>k=<var name="$k" /></m>.</p>
+                            <p>The word <q>continuous</q> is telling us to use base <m>e</m>. Therefore we can write the formula for decay as <me>Ae^{kt}</me> where <m>k</m> is the continuous decay constant <m>k=<var name="$k" /></m>. This value is negative because we are told the <m>21 \%</m> is a decrease.</p>
 
                             <p>The value <m>A</m> represents the initial amount of substance, but it was not stated. So we put a variable there to hold its place.</p>
 
-                            <p>The question is about the hourly percent decay. We were given the <q>continuous</q> hourly decay. These are two different things.</p>
+                            <p>The question is about the hourly percent decay. But, we were given the <q>continuous</q> hourly decay. These are two different things.</p>
 
                             <p>A discrete model would look like <me>Ab^{t}</me> where <m>b</m> is the hourly growth factor we are trying to find. But both the discrete and continuous models have to predict the same behavior. Therefore the two formulas have to be equal <mdash /> they have to produce the same values. <me>A(b)^{t}=A(e^{-k})^t</me> Notice how the parentheses are used to show that both sides are actually the same thing. Both say <me>A(\text{something})^{t}</me>. The <q>somethings</q> must be the same number. That is: <me>b = e^{-k}</me>.</p>
 
