@@ -620,11 +620,11 @@
                 </solution>
             </webwork>
         </exercise>
-      
+
         <p>It may have surprised you to see that shifting the graph to the <em>right</em> corresponded to <em>subtracting</em> a number from the input. To make sense of this, consider one of the other swimmers in the competition who jumped when the whistle sounded. Their height function would be given by <m>h = f(t)</m>.</p>
-      
+
         <p>If we wanted to find our swimmer's height at, say, <m>3</m> seconds after the whistle sounded, it would be the same height as this other swimmer had at only <m>1</m> second after the whistle <mdash /> everything for our swimmer happened <m>2</m> seconds late. In other words, to find our swimmer's height after <m>t</m> seconds, this is the same as the other swimmer had <m>2</m> seconds before. So for our swimmer, her height is given by: <me>h = f(t - 2)</me></p>
-      
+
         <p>The next two exercises will complete our story about the swimmer. In them, you will write formulas for her height given different diving situations.</p>
 
         <exercise>
@@ -763,8 +763,6 @@
             </webwork>
         </exercise>
 
-<todo>This is not the best way to code this for formatting.</todo>
-
         <p>Next, you will see what happens when we change the <em>input</em> of a function. You will be able to describe what happens to the graph as you change the formula from: <md alignment="gather">
             <mrow>y = f(x)</mrow>
             <mrow>\text{to}</mrow>
@@ -824,110 +822,6 @@
             </webwork>
         </exercise>
 
-<!-- Put these problems into the Gist or into a homework set.
-    <p>Now, let's apply the idea of shifting a graph to a physical example in the next two exercises.</p>
-<todo>Make Tikz graphs for the options in the next problem. Maybe make four graphs in random order, options including:  h(t+1) = -4.9(t+1)^2 + 10(t+1) + 40, h(t-1) = -4.9(t-1)^2 + 10(t-1) + 40, h(t)+1 = -4.9t^2 + 10t + 41, and h(t)-1 = -4.9t^2 + 10t + 39</todo>
-    <exercise>
-      <webwork xml:id="vertical-and-horizontal-transformation-application-projectile-motion">
-        <setup>
-
-          <var name="$afterT">
-            <static>t-1</static>
-          </var>
-
-          <var name="$whichGraph">
-            <set>
-              <member correct="yes">\text{Graph 1}</member>
-              <member>\text{Graph 2}</member>
-            </set>
-          </var>
-
-          <var name="$inOut">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{Input}</member>
-              <member>\text{Output}</member>
-            </set>
-          </var>
-
-          <pg-code>
-            Context('Numeric');
-            Context()->variables->are(t=>'Real');
-            $afterT=Formula("t-1");
-            $whichGraph=PopUp(
-              ["?","Graph 1", "Graph 2"], "Graph 1"
-            );
-            $inOut=PopUp(
-              ["?","Input","Output"],"Input"
-            );
-          </pg-code>
-
-        </setup>
-
-        <statement>
-          <p>The function <m>h(t) = -4.9t^2 + 10t + 40</m> will approximate the height of an object which was thrown straight upward at a speed of 10 meters per second at time <m>t = 0</m> seconds from a height of 40 meters. See the graph below.</p>
-          <p>You can move the point to see how high the object will be at a certain time, or when the object will hit the ground.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BmHTxqW6/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Now, we can use this function to describe other situations involving such an object. For example, suppose the person had waited until <m>t = 1</m> second before throwing the object.</p>
-          <p><ol>
-            <li><p>Which graph below shows the height of the object if the person waited 1 second before throwing it?</p>
-            <p>Graph 1 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/kCE4de8p/width/421/height/260/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Graph 2 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PNeV26dS/width/421/height/226/border/888888/sri/true" width="421px" height="260px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Answer:  <var name="$whichGraph" form="popup" /></p></li>
-            <li><p>Since this is a <em>horizontal</em> translation of the original graph <m>h(t)</m>, are we changing the <em>input</em> or the <em>output</em>?</p>
-            <p><var name="$inOut" form="popup" /></p></li>
-            <li><p>In order to correctly shift the graph of <m>h(t)</m>, what will we use for the <em>input</em> in the formula for the function <m>h</m>? Type your expression below.</p>
-            <p><var name="$afterT" width="10" /></p></li>
-          </ol></p>
-        </statement>
-        <hint><p>For the input which will correctly shift the graph, recall that adding a positive number to <m>t</m> will move the graph to the left, and subtracting a positive number from <m>t</m> will move the graph to the right.</p></hint>
-        <solution><p>The correct graph is the one beginning at the point <m>(1,40)</m>. This is a horizontal shift to the right by <m>1</m> second, so the input must be changed from <m>t</m> to <m>t-1</m>.</p></solution>
-
-      </webwork>
-    </exercise>
-
-    <p>Let's build on the previous exercise by using both vertical <em>and</em> horizontal translations.</p>
-
-    <exercise>
-      <webwork xml:id="vertical-and-horizontal-transformations-application-projectile-motion-time-delay-and-hight-increase">
-        <setup>
-          <var name="$input">
-            <static>t-3</static>
-          </var>
-
-          <var name="$addOrSubtract">
-            <set>
-              <member correct="yes">\text{add}</member>
-              <member>\text{subtract}</member>
-            </set>
-          </var>
-
-          <var name="$outputChange">
-            <static>12</static>
-          </var>
-
-          <pg-code>
-            Context()->variables->are(t=>'Real');
-            $input=Compute("t-3");
-            $addOrSubtract=PopUp(["?","add","subtract"],"add");
-            $outputChange=Real(12);
-          </pg-code>
-
-        </setup>
-
-        <statement>
-          <p>Again, the function <m>f(t) = -4.9t^2 + 10t + 40</m> represents the height of an object which was thrown straight upward at a speed of 10 meters per second, from an initial height of 40 meters.</p>
-          <p>Suppose now that the person waited <m>3</m> seconds and also carried it an additional 12 meters higher in elevation before throwing it.</p>
-          <p>Waiting 3 seconds is a change to the input <m>t</m>, so the input of the function will now be: <var name="$input" width="5" /></p>
-          <p>Carrying the object an additional 12 meters upward before throwing it is a change to the output, so we will <var name="$addOrSubtract" form="popup" /> the number <m>12</m> to the outside of the function.</p>
-          <p>Putting these transformations together, the formula will now be:</p>
-          <p><m>f\big(</m><var name="$input" width="5" /><m>\big) + </m><var name="$outputChange" width="2" /></p>
-          <p><m> {}= -4.9\big(</m><var name="$input" width="5" /><m>\big)^2 + 10\big(</m><var name="$input" width="5" /><m>\big) + 40 + </m><var name="$outputChange" width="2" /></p>
-
-        </statement>
-      </webwork>
-    </exercise>
--->
 
         <p>Finally, we will see an application of using vertical and horizontal shifts to quickly perform a familiar task: Finding the equation of a line</p>
 
