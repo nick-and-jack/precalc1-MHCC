@@ -53,12 +53,10 @@
     <section xml:id="composition-and-inverse-gist">
       <title>Gist of Composition and Inverses of Functions</title>
       <subsection>
-        <title>Summary of Composition</title>
+        <title>Composition</title>
 
         <p>The <term>composition</term><index><main>function</main><sub>composition</sub></index><index><main>function composition</main></index> of functions is all about using the <em>output</em> of one function as the <em>input</em> for another.</p>
-
         <p>The notation we will use for composing two functions is <me>f(g(x))</me> which we read as "<m>f</m> of <m>g</m> of <m>x</m>".</p>
-
         <p>Working from the inside-out, this means that the function <m>g</m> is used first to get an output, and then that output is used as the <em>input</em> for the function <m>f</m>.</p>
 
         <exercise xml:id="exercise-composition-numbers">
@@ -99,6 +97,10 @@
         </exercise>
 
         <p><index><main>function</main><sub>composite</sub></index><index><main>composite function</main></index>If we use function composition with a numerical input, we will get a numerical output. However, if we just use <m>x</m> as the input and compose functions, the result will be an expression involving <m>x</m>, which is a brand new function representing the composition. This new function is called a <term>composite</term> function.</p>
+        <note>
+          <p>Often, the composite function <m>f(g(x))</m> is written as <me>(f \circ g)(x)</me> to indicate that <m>(f \circ g)</m> is a new function.</p>
+          <p>Similarly, the composite functions <m>g(f(x))</m> and <m>f(f(x))</m> would be written as <m>(g \circ f)(x)</m> and <m>(f \circ f)(x)</m>.</p>
+        </note>
 
         <exercise xml:id="exercise-composition-formulas">
           <webwork>
@@ -108,7 +110,7 @@
               </pg-code>
             </setup>
             <statement>
-              <p>Again, let <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>. This time, find the composite functions by using <m>x</m> as the input. Remember to simplify the expression inside the parentheses first.</p>
+              <p>Let <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>. Find the composite functions <m>(f \circ g)</m> and <m>(g \circ f)</m> by using <m>x</m> as the input. Remember to simplify the expression inside the parentheses first.</p>
               <p><ol label="a">
                 <li>
                   <p><m>f(g(x))</m>. We can first substitute the expression for <m>g(x)</m> inside the parentheses, and then use that expression as the input for <m>f</m>.<md>
@@ -170,7 +172,7 @@
 
         <p>If everything is working properly, from the driver's perspective, there is just one input <mdash /> depressing the accelerator <mdash /> that sets everything else in motion.</p>
 
-        <p>This is true for any composition of functions in mathematics. Even if we have something complicated like <me>f(g(h(x)))</me> there is just one input value, <m>x</m>, that is needed in order to evaluate.</p>
+        <p>This is true for any composition of functions in mathematics. Even if we have something complicated like: <me>f(g(h(x)))</me> There is just one input value, <m>x</m>, that is needed in order to evaluate the composite function.</p>
 
         <p>The next example uses function composition in the context of a patient taking blood pressure medicine.</p>
 
@@ -212,30 +214,35 @@
               </pg-code>
             </setup>
             <statement>
-              <p>The blood pressure drug <em>lisinopril</em> works best when it is consumed at an initial concentration of <quantity><mag>5</mag><unit prefix="milli" base="gram" /><per prefix="kilo" base="gram" /></quantity>, and its concentration decreases exponentially, with a half-life of <m>12</m> hours.</p>
+              <p>The blood pressure drug <em>lisinopril</em> works best when it is consumed at an initial concentration of <m>5</m> mg/Kg, and its concentration decreases exponentially, with a half-life of <m>12</m> hours.</p>
 
               <p>Therefore, the concentration can be modeled by the function <me>C = f(t) = 5e^{-0.058t}</me> where <m>t</m> represents the number of hours after it was consumed.</p>
 
-              <p>Suppose that a patient with hypertension is admitted with blood pressure at <quantity><mag>160</mag><unit prefix="milli" base="meter" /></quantity> Hg. Administering the drug at a concentration of <quantity><mag>5</mag><unit prefix="milli" base="gram" /><per prefix="kilo" base="gram" /></quantity> reduces their blood pressure to <quantity><mag>110</mag><unit prefix="milli" base="meter" /></quantity> Hg. As the drug's concentration decreases over time, their blood pressure increases linearly, returning to <quantity><mag>160</mag><unit prefix="milli" base="meter" /></quantity> Hg when the concentration drops to <quantity><mag>1</mag><unit prefix="milli" base="gram" /><per prefix="kilo" base="gram" /></quantity>.</p>
+              <p>Suppose that a patient with hypertension is admitted with blood pressure at <m>160</m> mm Hg. Administering the drug at a concentration of <m>5</m> mg/Kg reduces their blood pressure to <m>110</m> mm Hg. As the drug's concentration decreases over time, their blood pressure increases linearly, returning to <m>160</m> mm Hg when the concentration drops to <m>1</m> mg/Kg.</p>
 
               <p>Therefore, the expected blood pressure can be modeled by the function:<me>P = g(C) = -12.5C + 172.5</me></p>
 
               <p><ol label="a">
                 <li>
                   <p>What is the concentration of the drug after <m><var name="$hours" /></m> hours?</p>
-                  <p><m>C = f(<var name="$hours" />) = </m><var name="$conAtHours" width="15" /></p>
+                  <p><m>C = f(<var name="$hours" />) = </m><var name="$conAtHours" width="15" /> mg/Kg</p>
                 </li>
                 <li>
                   <p>What is the expected blood pressure after <m><var name="$hours" /></m> hours?</p>
-                  <p><m>P = g(f(<var name="$hours" />)) = </m><var name="$bpAtHours" width="15" /></p>
+                  <p><m>P = g(f(<var name="$hours" />)) = </m><var name="$bpAtHours" width="15" /> mm Hg</p>
                 </li>
               </ol></p>
             </statement>
-
+            <hint>
+              <p><ol label="a">
+                <li><p>Evaluate <m>f(20)</m> by using the formula: <me>f(20) = 5e^{0.058(<var name="$hours" />)}</me></p></li>
+                <li><p>Now take the value of <m>f(<var name="$hours" />)</m> and use it as the input for the function <m>g</m>.</p></li>
+              </ol></p>
+            </hint>
             <solution>
               <p><ol label="a">
-                <li><p>The concentration after <m><var name="$hours" /></m> hours is <m><var name="$conAtHours" /></m>, and its value is <m><var name="$conAtHours" /></m> <quantity><unit prefix="milli" base="gram" /><per prefix="kilo" base="gram" /></quantity>.</p></li>
-                <li><p>The blood pressure after <m><var name="$hours" /></m> hours is <m><var name="$bpAtHours" /></m>, and its value is <m><var name="$bpAtHours" /></m> <quantity><unit prefix="milli" base="meter" /></quantity> Hg.</p></li>
+                <li><p>The concentration after <m><var name="$hours" /></m> hours is <m><var name="$conAtHours" /></m>, and its value is <m><var name="$conAtHours" /></m> mg/Kg.</p></li>
+                <li><p>The blood pressure after <m><var name="$hours" /></m> hours is <m><var name="$bpAtHours" /></m>, and its value is <m><var name="$bpAtHours" /></m> mm Hg.</p></li>
               </ol></p>
             </solution>
           </webwork>
@@ -248,18 +255,15 @@
             <setup>
               <var name="$answer">
                 <set>
-                  <member>\text{?}</member>
                   <member correct="yes">-12.5\cdot(5\cdot e^{-0.058\cdot t})+172.5</member>
                   <member>5\cdot e^{-0.058(-12.5C+172.5)}</member>
-                  <member>\left(5\cdot e^{-0.058\cdot t}\right)\left(-12.5C+172.5\right)</member>
                 </set>
               </var>
               <pg-code>
                 Context()->variables->are(t=>'Real', C=>'Real');
                 $answer=RadioButtons(
                   ["\(-12.5\left(5e^{-0.058t}\right)+172.5\)",
-                   "\(5e^{-0.058(-12.5C+172.5)}\)",
-                   "\(\left(-12.5C+172\right)\left(5e^{-0.058t}\right)\)"],0);
+                   "\(5e^{-0.058(-12.5C+172.5)}\)"],0);
               </pg-code>
             </setup>
             <statement>
@@ -283,63 +287,56 @@
 
         <p>Even outside of a context, knowing how to write a formula for a composite function is an important skill.</p>
 
-        <p>In the next problem, practice writing formulas for <m>f(g(x))</m> and <m>g(f(x))</m>.</p>
-
-        <exercise>
-          <webwork xml:id="composition-formula-examples">
-            <setup>
-              <var name="$GofF"><static>\left(\frac{x}{x+4}\right)^2</static></var>
-              <var name="$F"><static>\frac{x}{x+4}</static></var>
-              <var name="$G"><static>x^2</static></var>
-              <var name="$FofG"><static>\frac{x^2}{x^2+4}</static></var>
-              <pg-code>
-                $GofF=Compute("(x/(x+4))^2");
-                $F=Compute("x/(x+4)");
-                $G=Compute("x^2");
-                $FofG=Compute("x^2/(x^2+4)");
-              </pg-code>
-            </setup>
-            <statement>
-              <p>Let <m>f(x) = \frac{x}{x+4}</m> and <m>g(x) = x^2</m>.</p>
-              <p><ol label="a">
-                <li>
-                  <p>Write the formula for the composite function <m>g(f(x))</m>.</p>
-                  <p>Start by substituting the formula for <m>f(x)</m> into the function <m>g</m>:</p>
-                  <p><m>g(f(x)) = g\big(</m><var name="$F" width="15" /><m>\big)</m></p>
-                  <p>Then simplify the expression you wrote above, by using the formula for <m>f(x)</m> as the input in the formula for the function <m>g</m>.</p>
-                  <p><m>g(f(x)) = </m><var name="$GofF" width="15" /></p>
-                </li>
-                <li>
-                  <p>Write the formula for the composite function <m>f(g(x))</m>.</p>
-                  <p>Start by substituting the formula for <m>g(x)</m> into the function <m>f</m>:</p>
-                  <p><m>f(g(x)) = f\big(</m><var name="$G" width="15" /><m>\big)</m></p>
-                  <p>Then simplify the expression you wrote above, by using the formula for <m>g(x)</m> as the input in the formula for the function <m>f</m>.</p>
-                  <p><m>f(g(x)) = </m><var name="$FofG" width="15" /></p>
-                </li>
-              </ol></p>
-            </statement>
-            <solution>
-              <p><ol label="a">
-                <li>
-                  <p>The formula for <m>g(f(x))</m> is:<md>
-                    <mrow>g(f(x)) \amp= g\left(\frac{x}{x+4}\right)</mrow>
-                    <mrow>\amp= \left(\frac{x}{x+4}\right)^2</mrow>
-                  </md></p>
-                </li>
-                <li>
-                  <p>The formula for <m>f(g(x))</m> is:<md>
-                    <mrow>f(g(x)) \amp= f\left(x^2\right)</mrow>
-                    <mrow>\amp= \frac{x^2}{x^2+4}</mrow>
-                  </md></p>
-                </li>
-              </ol></p>
-            </solution>
-          </webwork>
-        </exercise>
+        <example>
+          <statement>
+            <p>Let <m>f(x) = 3x^2 + 5x</m> and <m>g(x) = 8x - 1</m>.</p>
+            <p>Find and simplify formulas for each composite function.</p>
+            <p><ol label="a">
+              <li><p><m>f(g(x))</m></p></li>
+              <li><p><m>g(f(x))</m></p></li>
+              <li><p><m>g(g(x))</m></p></li>
+              <li><p><m>f(f(x))</m></p></li>
+            </ol></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li>
+              <p><md>
+                <mrow>f(g(x)) \amp= f(8x - 1)</mrow>
+                <mrow>\amp= 3(8x - 1)^2 + 5(8x - 1)</mrow>
+                <mrow>\amp= 3(8x - 1)(8x - 1) + 40x - 5</mrow>
+                <mrow>\amp= 3(64x^2 - 16x + 1) + 40x - 5</mrow>
+                <mrow>\amp= 192x^2 - 8x - 2</mrow></md>
+              </p></li>
+              <li>
+              <p><md>
+                <mrow>g(f(x)) \amp= g(3x^2 + 5x)</mrow>
+                <mrow>\amp= 8(3x^2 + 5x) - 1</mrow>
+                <mrow>\amp= 24x^2 + 40x - 1</mrow></md>
+              </p></li>
+              <li>
+              <p><md>
+                <mrow>g(g(x)) \amp= g(8x - 1)</mrow>
+                <mrow>\amp= 8(8x - 1) - 1</mrow>
+                <mrow>\amp= 64x - 8 - 1</mrow>
+                <mrow>\amp= 64x - 9</mrow></md>
+              </p></li>
+              <li>
+              <p><md>
+                <mrow>f(f(x)) \amp= f(3x^2 + 5x)</mrow>
+                <mrow>\amp= 3(3x^2 + 5x)^2 + 5(3x^2 + 5x)</mrow>
+                <mrow>\amp= 3(3x^2 + 5x)(3x^2 + 5x) + 15x^2 + 25x</mrow>
+                <mrow>\amp= 3(9x^4 + 30x^3 + 25x^2) + 15x^2 + 25x</mrow>
+                <mrow>\amp= 27x^4 + 90x^3 + 75x^2 + 15x^2 + 25x</mrow>
+                <mrow>\amp= 27x^4 + 90x^3 + 90x^2 + 25x</mrow></md>
+              </p></li>
+            </ol></p>
+          </solution>
+        </example>
       </subsection>
 
       <subsection>
-        <title>Summary of Inverses</title>
+        <title>Inverses</title>
 
         <p>Two functions are called <term>inverses</term><index><main>function</main><sub>inverse</sub></index><index><main>inverse function</main></index> if they <em>undo</em> each other. If one function has a certain process, then the other function will have the reverse process.</p>
 
@@ -350,7 +347,7 @@
 
         <p>This is because whatever the inside function did with the input <m>x</m>, the outside function <em>undid</em> that action.</p>
 
-        <p>If a function <m>f</m> has an inverse function <m>f^{-1}</m>, then we say that the function <m>f</m> is <term>invertible</term><index><main>function</main><sub>invertible</sub></index><index><main>invertible function</main></index>.</p>
+        <p>If a function <m>f</m> has an inverse function <m>f^{-1}</m>, then we say that the function <m>f</m> is <term>invertible</term><index><main>function</main><sub>invertible</sub></index><index><main>invertible function</main></index> (also called <term>one-to-one</term><index><main>one-to-one</main></index><index><main>function</main><sub>one-to-one</sub></index>).</p>
 
         <example>
           <p>The functions <m>f(x) = 2^x + 1</m> and <m>g(x) = \log_{2}(x - 1)</m> are inverses.</p>
@@ -383,7 +380,7 @@
           <p>Since a function and its inverse represent reverse processes, the input and output are similarly reversed.</p>
         </paragraphs>
 
-        <p>In the next two exercises, practice interpreting the meaning of an inverse function.</p>
+        <p>In the next exercise, practice interpreting the meaning of an inverse function.</p>
 
         <exercise>
           <webwork>
@@ -397,7 +394,7 @@
               <var name="$interpret">
                 <set>
                   <member>\text{?}</member>
-                  <member correct="yes">\text{The population was 780 in the year 2010.}</member>
+                  <member correct="yes">\text{When the population was 780, it was the year 2010.}</member>
                   <member>\text{In the year 780, the population was 10.}</member>
                 </set>
               </var>
@@ -422,24 +419,27 @@
                 $inverseInput=PopUp(["?","Years","People"],"People");
                 $inverseOutput=PopUp(["?","Years","People"],"Years");
                 $year=2000+$x[0];
-                $interpret=PopUp(["?","The population was $y[0] in the year $year","In the year $y[0], the population was $x[0]"],"The population was $y[0] in the year $year");
+                $interpret=PopUp(["?","When the population was $y[0], it was the year $year","In the year $y[0], the population was $x[0]"],"When the population was $y[0], it was the year $year");
               </pg-code>
             </setup>
             <statement>
               <p>Let <m>P(t)</m> be the function which calculates the population of a small town, where <m>t</m> is the number of years after 2000.</p>
 
-              <p>Since <m>P</m> takes <em>years</em> as input and gives <em>people</em> as ouput, we should also be able to describe the meaning of the inverse, <m>P^{-1}</m>.</p>
+              <p>Since <m>P</m> takes <em>years</em> as input and gives <em>people</em> as ouput, its inverse function, <m>P^{-1}</m>, should do the opposite thing.</p>
 
               <p><ol label="a">
                 <li>
                   <p>The function <m>P^{-1}</m> takes <var name="$inverseInput" form="popup" /> as its input, and gives an output of <var name="$inverseOutput" form="popup" /></p>
-                  <p>Suppose <m>P(<var name="$x[0]" />) = <var name="$y[0]" /></m> and <m>P(<var name="$x[1]" />) = <var name="$y[1]" /></m></p>
                 </li>
                 <li>
+                  <p>Suppose we know: <m>P(<var name="$x[1]" />) = <var name="$y[1]" /></m></p>
+                  <p>We should be able to rephrase this using the inverse function <m>P^{-1}</m>, where the input and output have switched places.</p>
                   <p>What is <m>P^{-1}(<var name="$y[1]" />)</m>?</p>
                   <p>Answer:  <var name="$x[1]" width="10" /></p>
                 </li>
                 <li>
+                  <p>Suppose we know: <m>P(<var name="$x[0]" />) = <var name="$y[0]" /></m></p>
+                  <p>The input for the inverse function <m>P^{-1}</m> is <em>people</em>, and the output is <em>years</em>.</p>
                   <p>Which statement is the same as <m>P^{-1}(<var name="$y[0]" />) = <var name="$x[0]" /></m></p>
                   <p>Answer:  <var name="$interpret" form="popup" /></p>
                 </li>
@@ -465,95 +465,16 @@
           </webwork>
         </exercise>
 
-<todo>In the next problem, the solution link shows an answer of B1, instead of giving the correct statements.</todo>
-        <exercise>
-          <webwork xml:id="webwork-windchill">
-            <setup>
-              <var name="$rand[0]"><static>0</static></var>
-              <var name="$rand[1]"><static>1</static></var>
-              <var name="$x[0]"><static>0</static></var>
-              <var name="$x[1]"><static>10</static></var>
-              <var name="$x[2]"><static>20</static></var>
-              <var name="$x[3]"><static>30</static></var>
-              <var name="$x[4]"><static>40</static></var>
-              <var name="$x[5]"><static>50</static></var>
-              <var name="$x[6]"><static>60</static></var>
-              <var name="$f[0]"><static>40</static></var>
-              <var name="$f[1]"><static>34</static></var>
-              <var name="$f[2]"><static>30</static></var>
-              <var name="$f[3]"><static>28</static></var>
-              <var name="$f[4]"><static>27</static></var>
-              <var name="$f[5]"><static>26</static></var>
-              <var name="$f[6]"><static>25</static></var>
-              <var name="$w[1]"><static>W(40)=27</static></var>
-              <var name="$i[1]"><static>W^{-1}(34)=10</static></var>
-              <var name="$statements">
-                <set>
-                  <member>W(28) = 30\text{ and }W^{-1}(50) = 26</member>
-                  <member correct="yes">W(30) = 28\text{ and }W^{-1}(26) = 50</member>
-                </set>
-              </var>
-                <pg-code>
-                  @rand=map{$_+1}NchooseK(6,4);
-                  @x=(0,10,20,30,40,50,60);
-                  @f=(40,34,30,28,27,26,25);
-                  @w=("W($f[$rand[0]])=$x[$rand[0]]", "W($x[$rand[2]])=$f[$rand[2]]");
-                  @i=("W^{-1}($x[$rand[1]])=$f[$rand[1]]","W^{-1}($f[$rand[3]])=$x[$rand[3]]");
-                  @s=("\($w[0]\) and \($i[0]\)",
-                     "\($w[1]\) and \($i[1]\)");
-                  $statements=RadioButtons(~~@s,1);
-              </pg-code>
-            </setup>
-            <statement>
-              <p>On a cold day, when the wind blows, it <em>feels</em> colder than it actually is outside. The temperature you feel is called the <em>wind chill</em> temperature.</p>
-
-              <p>The table below shows values of the function <m>W(S)</m>, which calculates the wind chill temperature when it is <quantity><mag>40</mag><unit base="degreeFahrenheit" /></quantity> outside and the wind is blowing at <m>S</m> miles per hour.</p>
-              <table>
-                <tabular top="major" halign="center">
-                      <col halign="left" />
-                      <col />
-                      <row bottom="medium">
-                        <cell><m>S</m></cell>
-                        <cell><m>W(S)</m></cell>
-                      </row>
-                      <row>
-                        <cell><m><var name="$x[0]" /></m></cell>
-                        <cell><m><var name="$f[0]" /></m></cell>
-                      </row>
-                      <row>
-                        <cell><m><var name="$x[1]" /></m></cell>
-                        <cell><m><var name="$f[1]" /></m></cell>
-                      </row>
-                      <row>
-                        <cell><m><var name="$x[2]" /></m></cell>
-                        <cell><m><var name="$f[2]" /></m></cell>
-                      </row>
-                      <row>
-                        <cell><m><var name="$x[3]" /></m></cell>
-                        <cell><m><var name="$f[3]" /></m></cell>
-                      </row>
-                      <row>
-                        <cell><m><var name="$x[4]" /></m></cell>
-                        <cell><m><var name="$f[4]" /></m></cell>
-                      </row>
-                      <row>
-                        <cell><m><var name="$x[5]" /></m></cell>
-                        <cell><m><var name="$f[5]" /></m></cell>
-                      </row>
-                      <row>
-                        <cell><m><var name="$x[6]" /></m></cell>
-                        <cell><m><var name="$f[6]" /></m></cell>
-                      </row>
-                </tabular>
-              </table>
-              <p>Which pair of statements is true?</p>
-              <p><var name="$statements" form="buttons" /></p>
-            </statement>
-            <solution>
-              <p>The true statements are: <m><var name="$w[1]" /></m> and <m><var name="$i[1]" /></m>.</p>
-            </solution>
-          </webwork>
-        </exercise>
+        <example>
+          <statement>
+            <p>The function <m>V(r)</m> represents the volume of a sphere with a radius of <m>r</m> centimeters.</p>
+            <p>It is true that <m>V(3.5) \approx 179.59</m>. In context, this means that if the radius is <m>3.5</m> cm, then the volume is approximately <m>179.59</m> cm<m>^{3}</m>.</p>
+            <p>What does the equation <me>V^{-1}(0.56) \approx 0.51</me> mean in context?</p>
+          </statement>
+          <answer>
+            <p>It means that if the volume is <m>0.56</m> cm<m>^{3}</m>, then the radius is approximately <m>0.51</m> cm.</p>
+          </answer>
+        </example>
 
         <paragraphs><title>Graphing the Inverse</title>
           <p>We can describe the inverse of a function <m>f</m> in different ways, depending on what information we need.</p>
@@ -650,11 +571,8 @@
           </setup>
           <statement>
             <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ssqjr6pZ/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-
-            <p>Three points are shown on <m>y = f(x)</m>. For each point, switch the <m>x</m>- and <m>y</m>-coordinates, and graph those points by moving the three free points.</p>
-
+            <p>Three points are shown on <m>y = f(x)</m>. For each point, switch the <m>x</m>- and <m>y</m>-coordinates, and move one of the free points to that location.</p>
             <p>If the points are correctly placed, the graph of <m>y = f^{-1}(x)</m> will appear, together with the dashed line <m>y = x</m>.</p>
-
             <p><ol label="a">
               <li>
                 <p>Did you correctly place the points?</p>
@@ -901,57 +819,17 @@
       </exercise>
 
       <p><index><main>function</main><sub>restricting the domain</sub></index>We <term>restrict</term> the domain of a function in order to make it <term>invertible</term>. We choose an interval for the input, so that the output never has repeated values <mdash /> this ensures that the inverse will pass the vertical line test.</p>
-      <exercise>
-        <webwork>
-          <setup>
-            <var name="$ans">
-              <static>[-1,1]</static>
-            </var>
-            <pg-code>
-              Context("Inequalities");
-              $gr = init_graph(-7,-2,7,2, axes=>[0,0], grid=>[14,8], size=>[400,400]);
-              $gr->lb('reset');
-              for my $i (-6..-1,1..6) {$gr->lb( new Label($i,-0.1,$i,'black','center','top'));};
-              for my $i (-1.5,-1,-0.5,0.5,1,1.5) {$gr->lb( new Label(-0.2,$i,$i,'black','right','middle'));};
-              add_functions($gr, "sin(2*pi*x/4) for x in &lt;-7,-3> using color:blue and weight:2");
-              add_functions($gr, "sin(2*pi*x/4) for x in &lt;-3,1> using color:blue and weight:2");
-              add_functions($gr, "sin(2*pi*x/4) for x in &lt;1,5> using color:blue and weight:2");
-              add_functions($gr, "sin(2*pi*x/4) for x in &lt;5,9> using color:blue and weight:2");
-              $ans=Interval("[-1,1]");
-              $evaluator=$ans->cmp(showEndpointHints => 0, showEndTypeHints => 0, checker => sub {
-                my ($correct,$student,$ansHash) = @_;
-                return 0 if ($student->type ne 'Interval');
-                my ($sa,$sb,$so,$sc) = $student->value;
-                Value->Error('Your left endpoint is not the correct type') if ($so ne '[');
-                Value->Error('Your right endpoint is not the correct type') if ($sc ne ']');
-                return 1 if (($sa % 2 == 1) and ($sb - $sa == 2));
-                return 0;
-              });
-            </pg-code>
-          </setup>
-          <statement>
-            <p>An important use of restricting the domain is in finding the inverse of a <em>periodic</em> function (one which repeats itself over-and-over). For example, consider the function <m>f</m> below.</p>
-            <figure>
-              <image pg-name="$gr" />
-            </figure>
-            <p>How could we restrict the domain so this function is invertible?</p>
-            <p>Choose an interval for <m>x</m> so <m>f^{-1}</m> is a function.</p>
-            <p><var name="$ans" evaluator="$evaluator" width="10" /></p>
-          </statement>
-          <hint>
-            <p>There are several intervals which will work here. Remember that the function <m>f</m> cannot have repeated values on the interval you choose.</p>
-          </hint>
-          <solution>
-            <p>Correct options include:<md>
-              <mrow>-1 \leqslant x \leqslant 1</mrow>
-              <mrow>-1 \leqslant x \leqslant 1</mrow>
-              <mrow>1 \leqslant x \leqslant 3</mrow>
-            </md></p>
-          </solution>
-        </webwork>
-      </exercise>
+
       <todo>Add content about one to one, onto, and the domain and range relationship between a function and its inverse.</todo>
     </subsection>
+    <subsection><title>Conclusion</title>
+    <p>We have seen that a composite function is built from using the output of one function as the input for another function.</p>
+    <p>If a function never has any repeated output values, then it is said to be <em>invertible</em> or <em>one-to-one</em>. It passes the horizontal line test.</p>
+    <p>For an invertible function <m>f</m>, its inverse function <m>f^{-1}</m> performs the opposite action as <m>f</m>. If you compose a function with its inverse <m>f^{-1}(f(x))</m> or <m>f(f^{-1}(x))</m>, the result will be <m>x</m>.</p>
+    <p>The graphs of a function and its inverse will be reflections of each other over the line <m>y = x</m>. Any point <m>(a,b)</m> on the graph of <m>y = f(x)</m> will correspond to a point <m>(b,a)</m> on the graph of <m>y = f^{-1}(x)</m>. The <m>x</m>- and <m>y</m>-coordinates will be switched.</p>
+    <p>We can make a non-invertible function invertible by restricting its domain so it doesn't have repeated values.</p>
+    <p>Because the input and output are switched for a function and its inverse, then so are the domain and range. The domain of an invertible function is the same as the range of its inverse function. Similarly, the range of an invertible function is the same as the domain of its inverse function.</p>
+   </subsection>
 
   <exercises>
 
@@ -994,6 +872,58 @@
 
 </exercisegroup>
 <exercisegroup><introduction><p>Formula of a Composite Function</p></introduction>
+
+<exercise>
+  <webwork xml:id="composition-formula-examples">
+    <setup>
+      <var name="$GofF"><static>\left(\frac{x}{x+4}\right)^2</static></var>
+      <var name="$F"><static>\frac{x}{x+4}</static></var>
+      <var name="$G"><static>x^2</static></var>
+      <var name="$FofG"><static>\frac{x^2}{x^2+4}</static></var>
+      <pg-code>
+        $GofF=Compute("(x/(x+4))^2");
+        $F=Compute("x/(x+4)");
+        $G=Compute("x^2");
+        $FofG=Compute("x^2/(x^2+4)");
+      </pg-code>
+    </setup>
+    <statement>
+      <p>Let <m>f(x) = \frac{x}{x+4}</m> and <m>g(x) = x^2</m>.</p>
+      <p><ol label="a">
+        <li>
+          <p>Write the formula for the composite function <m>g(f(x))</m>.</p>
+          <p>Start by substituting the formula for <m>f(x)</m> into the function <m>g</m>:</p>
+          <p><m>g(f(x)) = g\big(</m><var name="$F" width="15" /><m>\big)</m></p>
+          <p>Then simplify the expression you wrote above, by using the formula for <m>f(x)</m> as the input in the formula for the function <m>g</m>.</p>
+          <p><m>g(f(x)) = </m><var name="$GofF" width="15" /></p>
+        </li>
+        <li>
+          <p>Write the formula for the composite function <m>f(g(x))</m>.</p>
+          <p>Start by substituting the formula for <m>g(x)</m> into the function <m>f</m>:</p>
+          <p><m>f(g(x)) = f\big(</m><var name="$G" width="15" /><m>\big)</m></p>
+          <p>Then simplify the expression you wrote above, by using the formula for <m>g(x)</m> as the input in the formula for the function <m>f</m>.</p>
+          <p><m>f(g(x)) = </m><var name="$FofG" width="15" /></p>
+        </li>
+      </ol></p>
+    </statement>
+    <solution>
+      <p><ol label="a">
+        <li>
+          <p>The formula for <m>g(f(x))</m> is:<md>
+            <mrow>g(f(x)) \amp= g\left(\frac{x}{x+4}\right)</mrow>
+            <mrow>\amp= \left(\frac{x}{x+4}\right)^2</mrow>
+          </md></p>
+        </li>
+        <li>
+          <p>The formula for <m>f(g(x))</m> is:<md>
+            <mrow>f(g(x)) \amp= f\left(x^2\right)</mrow>
+            <mrow>\amp= \frac{x^2}{x^2+4}</mrow>
+          </md></p>
+        </li>
+      </ol></p>
+    </solution>
+  </webwork>
+</exercise>
 
 <exercise>
   <introduction>
@@ -1260,7 +1190,149 @@
 </exercise>
 
 </exercisegroup>
+
+<exercisegroup><introduction><p>Restricting the Domain</p></introduction>
+
+<exercise>
+  <webwork>
+    <setup>
+      <var name="$ans">
+        <static>[-1,1]</static>
+      </var>
+      <pg-code>
+        Context("Inequalities");
+        $gr = init_graph(-7,-2,7,2, axes=>[0,0], grid=>[14,8], size=>[400,400]);
+        $gr->lb('reset');
+        for my $i (-6..-1,1..6) {$gr->lb( new Label($i,-0.1,$i,'black','center','top'));};
+        for my $i (-1.5,-1,-0.5,0.5,1,1.5) {$gr->lb( new Label(-0.2,$i,$i,'black','right','middle'));};
+        add_functions($gr, "sin(2*pi*x/4) for x in &lt;-7,-3> using color:blue and weight:2");
+        add_functions($gr, "sin(2*pi*x/4) for x in &lt;-3,1> using color:blue and weight:2");
+        add_functions($gr, "sin(2*pi*x/4) for x in &lt;1,5> using color:blue and weight:2");
+        add_functions($gr, "sin(2*pi*x/4) for x in &lt;5,9> using color:blue and weight:2");
+        $ans=Interval("[-1,1]");
+        $evaluator=$ans->cmp(showEndpointHints => 0, showEndTypeHints => 0, checker => sub {
+          my ($correct,$student,$ansHash) = @_;
+          return 0 if ($student->type ne 'Interval');
+          my ($sa,$sb,$so,$sc) = $student->value;
+          Value->Error('Your left endpoint is not the correct type') if ($so ne '[');
+          Value->Error('Your right endpoint is not the correct type') if ($sc ne ']');
+          return 1 if (($sa % 2 == 1) and ($sb - $sa == 2));
+          return 0;
+        });
+      </pg-code>
+    </setup>
+    <statement>
+      <p>An important use of restricting the domain is in finding the inverse of a <em>periodic</em> function (one which repeats itself over-and-over). For example, consider the function <m>f</m> below.</p>
+      <figure>
+        <image pg-name="$gr" />
+      </figure>
+      <p>How could we restrict the domain so this function is invertible?</p>
+      <p>Choose an interval for <m>x</m> so <m>f^{-1}</m> is a function.</p>
+      <p><var name="$ans" evaluator="$evaluator" width="10" /></p>
+    </statement>
+    <hint>
+      <p>There are several intervals which will work here. Remember that the function <m>f</m> cannot have repeated values on the interval you choose.</p>
+    </hint>
+    <solution>
+      <p>Correct options include:<md>
+        <mrow>-1 \leqslant x \leqslant 1</mrow>
+        <mrow>-1 \leqslant x \leqslant 1</mrow>
+        <mrow>1 \leqslant x \leqslant 3</mrow>
+      </md></p>
+    </solution>
+  </webwork>
+</exercise>
+
+</exercisegroup>
 <exercisegroup><introduction><p>Additional Problems</p></introduction>
+
+<exercise>
+  <webwork xml:id="webwork-windchill">
+    <setup>
+      <var name="$rand[0]"><static>0</static></var>
+      <var name="$rand[1]"><static>1</static></var>
+      <var name="$x[0]"><static>0</static></var>
+      <var name="$x[1]"><static>10</static></var>
+      <var name="$x[2]"><static>20</static></var>
+      <var name="$x[3]"><static>30</static></var>
+      <var name="$x[4]"><static>40</static></var>
+      <var name="$x[5]"><static>50</static></var>
+      <var name="$x[6]"><static>60</static></var>
+      <var name="$f[0]"><static>40</static></var>
+      <var name="$f[1]"><static>34</static></var>
+      <var name="$f[2]"><static>30</static></var>
+      <var name="$f[3]"><static>28</static></var>
+      <var name="$f[4]"><static>27</static></var>
+      <var name="$f[5]"><static>26</static></var>
+      <var name="$f[6]"><static>25</static></var>
+      <var name="$w[1]"><static>W(40)=27</static></var>
+      <var name="$i[1]"><static>W^{-1}(34)=10</static></var>
+      <var name="$statements">
+        <set>
+          <member>W(28) = 30\text{ and }W^{-1}(50) = 26</member>
+          <member correct="yes">W(30) = 28\text{ and }W^{-1}(26) = 50</member>
+        </set>
+      </var>
+        <pg-code>
+          @rand=map{$_+1}NchooseK(6,4);
+          @x=(0,10,20,30,40,50,60);
+          @f=(40,34,30,28,27,26,25);
+          @w=("W($f[$rand[0]])=$x[$rand[0]]", "W($x[$rand[2]])=$f[$rand[2]]");
+          @i=("W^{-1}($x[$rand[1]])=$f[$rand[1]]","W^{-1}($f[$rand[3]])=$x[$rand[3]]");
+          @s=("\($w[0]\) and \($i[0]\)",
+             "\($w[1]\) and \($i[1]\)");
+          $statements=RadioButtons(~~@s,1);
+      </pg-code>
+    </setup>
+    <statement>
+      <p>On a cold day, when the wind blows, it <em>feels</em> colder than it actually is outside. The temperature you feel is called the <em>wind chill</em> temperature.</p>
+      <p>The table below shows values of the function <m>W(S)</m>, which calculates the wind chill temperature when it is <m>40</m> degrees Fahrenheit outside, and the wind is blowing at <m>S</m> miles per hour.</p>
+      <table>
+        <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <row bottom="medium">
+                <cell><m>S</m></cell>
+                <cell><m>W(S)</m></cell>
+              </row>
+              <row>
+                <cell><m><var name="$x[0]" /></m></cell>
+                <cell><m><var name="$f[0]" /></m></cell>
+              </row>
+              <row>
+                <cell><m><var name="$x[1]" /></m></cell>
+                <cell><m><var name="$f[1]" /></m></cell>
+              </row>
+              <row>
+                <cell><m><var name="$x[2]" /></m></cell>
+                <cell><m><var name="$f[2]" /></m></cell>
+              </row>
+              <row>
+                <cell><m><var name="$x[3]" /></m></cell>
+                <cell><m><var name="$f[3]" /></m></cell>
+              </row>
+              <row>
+                <cell><m><var name="$x[4]" /></m></cell>
+                <cell><m><var name="$f[4]" /></m></cell>
+              </row>
+              <row>
+                <cell><m><var name="$x[5]" /></m></cell>
+                <cell><m><var name="$f[5]" /></m></cell>
+              </row>
+              <row>
+                <cell><m><var name="$x[6]" /></m></cell>
+                <cell><m><var name="$f[6]" /></m></cell>
+              </row>
+        </tabular>
+      </table>
+      <p>Which pair of statements is true?</p>
+      <p><var name="$statements" form="buttons" /></p>
+    </statement>
+    <solution>
+      <p>The true statements are: <m><var name="$w[1]" /></m> and <m><var name="$i[1]" /></m>.</p>
+    </solution>
+  </webwork>
+</exercise>
 
 <exercise>
   <introduction>
