@@ -208,14 +208,14 @@
       <example>
         <statement>
           <p>As a business owner, you know the value in giving your customers a good deal, especially when they buy a lot from you.</p>
-          <p>This month at your pet supply store, you decide to run the following special on your most popular item, <em>My Little Deuce Scoop</em>, a shovel shaped like a <m>1932</m> Ford hotrod:</p>
-          <p>The retail price for the item is $<m>24</m>, but if a customer orders two of them, you will reduce the unit price by $<m>0{.}25</m>, so they would each cost only $<m>23{.}75</m>.</p>
-          <p>If a customer orderes three items, the unit cost would be reduced another $<m>0{.}25</m>, so they would each cost only $<m>23{.}50</m>.</p>
-          <p>Thus, as the number of items increases, the cost of each one will decrease.</p>
+          <p>This month at your pet supply store, you decide to run the following special on your most popular cat food:</p>
+          <p>The retail price for one container of the food is $<m>24</m>, but if a customer orders two of them, you will reduce the unit price by $<m>0{.}25</m>, so they would each cost only $<m>23{.}75</m>.</p>
+          <p>If a customer orders three containers, the unit cost would be reduced another $<m>0{.}25</m>, so they would each cost only $<m>23{.}50</m>.</p>
+          <p>Thus, as the number of containers increases, the cost of each one will decrease.</p>
           <p><ol label="a">
-            <li><p>Write a formula for the unit cost, <m>C(x)</m>, of each item when the customer orders <m>x</m> of the items. Note that this is a <em>linear</em> function of <m>x</m>.</p></li>
-            <li><p>If a customer ordered <m>6</m> of these items, we could evaluate <m>C(6)</m> to find how much they would be charged for each item. How much would they pay in total for all the items?</p></li>
-            <li><p>If a customer ordered <m>x</m> of these items, how much would they pay in total for all the items? Let <m>T(x)</m> represent the total they would pay for <m>x</m> items.</p></li>
+            <li><p>Write a formula for the unit cost, <m>C(x)</m>, of each container when the customer orders <m>x</m> containers. Note that this is a <em>linear</em> function of <m>x</m>.</p></li>
+            <li><p>If a customer ordered <m>6</m> containers, we could evaluate <m>C(6)</m> to find how much they would be charged for each container. How much would they pay in total for all six containers?</p></li>
+            <li><p>If a customer ordered <m>x</m> containers, how much would they pay in total for all the containers? Let <m>T(x)</m> represent the total they would pay for <m>x</m> containers.</p></li>
           </ol></p>
         </statement>
         <solution>
@@ -224,14 +224,14 @@
           <mrow>\amp= 24.25 - 0.25x</mrow></md></p>
         </solution>
         <solution>
-          <p>If a customer ordered <m>6</m> of the items, the unit cost would be:<md>
+          <p>If a customer ordered <m>6</m> containers, the unit cost would be:<md>
           <mrow>C(6) \amp= 24.25 - 0.25(6)</mrow>
           <mrow>\amp= 22.75</mrow></md></p>
-          <p>You would charge $<m>22{.}75</m> for each item, so the customer would pay <m>6(22.75) = </m>$<m>136{.}50</m> in total.</p>
+          <p>You would charge $<m>22{.}75</m> for each container, so the customer would pay <m>6(22.75) = </m> $<m>136{.}50</m> in total.</p>
         </solution>
         <solution>
-          <p>In general, if a customer ordered <m>x</m> of the items, then they would have to pay the unit cost (given by the function <m>C(x)</m>) multiplied by the number of items they ordered (which is just <m>x</m>).</p>
-          <p>Therefore, the customer's total cost for ordering <m>x</m> items is a new function: <md>
+          <p>In general, if a customer ordered <m>x</m> containers, then they would have to pay the unit cost (given by the function <m>C(x)</m>) multiplied by the number of containers they ordered (which is just <m>x</m>).</p>
+          <p>Therefore, the customer's total cost for ordering <m>x</m> containers is a new function: <md>
           <mrow>T(x) \amp= x \cdot C(x)</mrow>
           <mrow>\amp= x(24.25 - 0.25x)</mrow>
           <mrow>\amp= 24.25x - 0.25x^2</mrow></md></p>
@@ -389,6 +389,7 @@
 </subsection>
         <exercises>
 
+<exercisegroup><introduction><p>Evaluating Combinations</p></introduction>
           <exercise>
             <introduction>
               <p></p>
@@ -401,52 +402,6 @@
               <p></p>
             </introduction>
             <webwork source="Library/ASU-topics/setAlgebraFunctions/mel1.pg" seed="1" />
-          </exercise>
-
-          <exercise>
-            <introduction>
-              <p></p>
-            </introduction>
-            <webwork source="Library/Utah/Intermediate_Algebra/set5_Graphs_and_Functions/s5p36.pg" seed="1" />
-          </exercise>
-
-
-
-          <exercise>
-            <introduction>
-              <p></p>
-            </introduction>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap8Sec3/Q04.pg" seed="1" />
-          </exercise>
-
-          <exercise>
-            <introduction>
-              <p></p>
-            </introduction>
-            <webwork source="Library/Rochester/setAlgebra17FunComposition/beth1_mo.pg" seed="1" />
-          </exercise>
-
-
-
-          <exercise>
-            <introduction>
-              <p></p>
-            </introduction>
-            <webwork source="CollegeAlgebra/FunctionArithmetic/FunctionArithmeticDomains02.pg" seed="1" />
-          </exercise>
-
-          <exercise>
-            <introduction>
-              <p></p>
-            </introduction>
-            <webwork source="CollegeAlgebra/FunctionArithmetic/FunctionArithmeticDomains10.pg" seed="1" />
-          </exercise>
-
-          <exercise>
-            <introduction>
-              <p></p>
-            </introduction>
-            <webwork source="CollegeAlgebra/FunctionArithmetic/FunctionArithmeticDomains40.pg" seed="1" />
           </exercise>
 
           <exercise>
@@ -602,6 +557,71 @@
             <introduction>
               <p></p>
             </introduction>
+            <webwork source="Library/CollegeOfIdaho/setAlgebra_02_02_AlgebraOfFunctions/22IntAlg_13_functOperation.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/CollegeOfIdaho/setAlgebra_02_02_AlgebraOfFunctions/22IntAlg_07_functOperation.pg" seed="1" />
+          </exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><p>Formulas for Combinations</p></introduction>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/Utah/Intermediate_Algebra/set5_Graphs_and_Functions/s5p36.pg" seed="1" />
+          </exercise>
+
+
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/LoyolaChicago/Precalc/Chap8Sec3/Q04.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/Rochester/setAlgebra17FunComposition/beth1_mo.pg" seed="1" />
+          </exercise>
+
+
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="CollegeAlgebra/FunctionArithmetic/FunctionArithmeticDomains02.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="CollegeAlgebra/FunctionArithmetic/FunctionArithmeticDomains10.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="CollegeAlgebra/FunctionArithmetic/FunctionArithmeticDomains40.pg" seed="1" />
+          </exercise>
+
+
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
             <webwork source="Library/org.sparta/Combining_Functions/AlgofRelations_prb2.pg" seed="1" />
           </exercise>
 
@@ -616,21 +636,7 @@
             <introduction>
               <p></p>
             </introduction>
-            <webwork source="Library/CollegeOfIdaho/setAlgebra_02_02_AlgebraOfFunctions/22IntAlg_13_functOperation.pg" seed="1" />
-          </exercise>
-
-          <exercise>
-            <introduction>
-              <p></p>
-            </introduction>
             <webwork source="Library/CollegeOfIdaho/setAlgebra_02_02_AlgebraOfFunctions/22IntAlg_05_functOperation.pg" seed="1" />
-          </exercise>
-
-          <exercise>
-            <introduction>
-              <p></p>
-            </introduction>
-            <webwork source="Library/CollegeOfIdaho/setAlgebra_02_02_AlgebraOfFunctions/22IntAlg_07_functOperation.pg" seed="1" />
           </exercise>
 
           <exercise>
@@ -646,7 +652,7 @@
             </introduction>
             <webwork source="Library/LoyolaChicago/Precalc/Chap2Review/Q12.pg" seed="1" />
           </exercise>
-
+</exercisegroup>
 
 
 
