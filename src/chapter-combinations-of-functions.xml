@@ -37,7 +37,7 @@
     <section xml:id="combination-of-functions-gist">
       <title>Gist of Combinations of Functions</title>
 
-      <p>A <term>combination of functions</term><index><main>function</main><sub>combination</sub></index> is the result of performing an arithmetic operation on the outputs of two or more functions.</p>
+      <p>A <term>combination of functions</term><index><main>function</main><sub>combination</sub></index> is the result of performing arithmetic operations on the outputs of two or more functions.</p>
       <p>Examples include:</p>
       <dl>
         <title></title>
@@ -54,7 +54,8 @@
           <p>The output of one function is used as an exponent on the output of the other function.</p>
         </li>
       </dl>
-      <fn>In some books, the combination <m>f(x)+g(x)</m> is written as <me>\left(f+g\right)(x)</me> to indicate that <m>(f+g)</m> is a single function. Similarly, <m>f(x)\cdot g(x)</m> and <m>\frac{f(x)}{g(x)}</m> would be written as <m>\left(f\cdot g\right)(x)</m> and <m>\left(\frac{f}{g}\right)(x)</m>.</fn>
+      <note><p>Often, the combination <m>f(x)+g(x)</m> is written as <me>\left(f+g\right)(x)</me> to indicate that <m>(f+g)</m> is a new function.</p>
+      <p>Similarly, <m>f(x)\cdot g(x)</m> and <m>\frac{f(x)}{g(x)}</m> would be written as <m>\left(f\cdot g\right)(x)</m> and <m>\left(\frac{f}{g}\right)(x)</m>.</p></note>
       <p>Note that this is different from the composition of functions from <xref ref="chapter-composition-and-inverse">chapter</xref>, where the output of one function was used as the input of another function.</p>
       <p>Typical combinations in this course are adding, subtracting, multiplying or dividing functions, though any operation on two or more numbers would correspond to a function combination.</p>
       <example>
@@ -76,11 +77,17 @@
             <var name="$b[1]"><static>5</static></var>
             <var name="$y1"><static>42</static></var>
             <var name="$y2"><static>171</static></var>
+            <var name="$g10"><static>85</static></var>
+            <var name="$f10"><static>43</static></var>
+            <var name="$f102"><static>86</static></var>
             <pg-code>
               @a=map{$_+1}NchooseK(4,2);
               @b=map{$_+5}NchooseK(4,2);
               $y1=($b[0]*10+$b[1])-($a[0]*10+$a[1]);
               $y2=($b[0]*10+$b[1])+2*($a[0]*10+$a[1]);
+              $g10=$b[0]*10+$b[1];
+              $f10=$a[0]*10+$a[1];
+              $f102=2*($a[0]*10+$a[1]);
             </pg-code>
           </setup>
           <statement>
@@ -93,7 +100,27 @@
             </ol></p>
 
           </statement>
+          <hint>
+            <p><ol label="a">
+              <li><p>To evaluate <m>w(10)</m>, you should use <m>10</m> as the <m>x</m> value in the definition of the function: <m>w(x) = g(x) - f(x)</m></p>
+                <p>Each term, <m>g(10)</m> and <m>f(10)</m>, is a number you can compute.</p></li>
+              <li><p>To evaluate <m>u(10)</m>, do the same thing in the definition of the function: <m>u(x) = g(x) + 2f(x)</m></p>
+                <p>Each term, <m>g(10)</m> and <m>2f(10)</m>, is a number you can compute.</p></li>
+              </ol></p>
+            </hint>
           <solution>
+            <p><ol label="a">
+              <li><p><md>
+                <mrow>w(10) \amp= g(10) - f(10)</mrow>
+                <mrow>\amp= <var name="$g10" /> - <var name="$f10" /></mrow>
+                <mrow>\amp= <var name="$y1" /></mrow>
+              </md></p></li>
+              <li><p><md>
+                <mrow>u(10) \amp= g(10) + 2f(10)</mrow>
+                <mrow>\amp= <var name="$g10" /> + <var name="$f102" /></mrow>
+                <mrow>\amp= <var name="$y2" /></mrow>
+              </md></p></li>
+            </ol></p>
           </solution>
         </webwork>
       </exercise>
@@ -131,10 +158,11 @@
 
             </setup>
             <statement>
-              <p>In business, we use the equation <me>P(u) = R(u) - C(u)</me> where <m>P(u)</m> is the profit you make from selling <m>u</m> tons of some product, after you pay expenses. The function <m>R(u)</m> represents the revenue from selling the product, and <m>C(u)</m> represents the costs you must pay to manufacture the product.</p>
+              <p>In business, we use the equation <me>P(u) = R(u) - C(u)</me> where <m>P(u)</m> is the profit you make from selling <m>u</m> tons of some product, after you pay expenses. The function <m>R(u)</m> represents the revenue from selling the product, and <m>C(u)</m> represents the cost you must pay to manufacture the product.</p>
               <p>The graph below shows the <em>cost</em> and <em>revenue</em> functions, where the input, <m>u</m>, is the number of tons of the product sold.</p>
-              <p>Sliding the given point along the input axis will create a point on the profit funciton, <m>P(u)</m>.</p>
               <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/YsPBmPHE/width/434/height/440/border/888888/sri/true/sdz/false/" width="434px" height="440px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>The vertical intercept of the Cost function is at <m>(0, 100)</m>. Click and drag this point along the Cost curve <m>y = C(u)</m>.</p>
+              <p>This will move points on the graphs of the Revenue and Profit functions.</p>
               <p>Notice that the height of the point <m>P(u)</m> is equal to the difference in the heights of points on the <m>R(u)</m> and <m>C(u)</m> graphs.</p>
               <p><ol>
                 <li>
@@ -156,8 +184,18 @@
                 </li>
               </ol></p>
             </statement>
+            <hint>
+              <p><ol label="a">
+                <li><p>The profit should be <m>0</m> when <m>R(u)</m> and <m>C(u)</m> are equal. Find this on the graph.</p></li>
+                <li><p>Remember the definition of the function: <m>P(u) = R(u) - C(u)</m></p>
+                <p>So: <m>P(<var name="$u1" />) \approx R(<var name="$u1" />) - C(<var name="$u1" />)</m></p>
+                <p>Find this on the graph.</p></li>
+                <li><p><m>P(<var name="$u2" />) \approx R(<var name="$u2" />) - C(<var name="$u2" />)</m></p>
+                <p>Find this on the graph.</p></li>
+              </ol></p>
+            </hint>
             <solution>
-              <p><ol>
+              <p><ol label="a">
                 <li><p>The profit is <m>0</m> when approximately <m>5</m> tons of the product are manufactured and sold.</p></li>
                 <li><p><m>P(</m><var name="$u1" /><m>) \approx </m> <var name="$p1" /> thousand dollars.</p></li>
                 <li><p><m>P(</m><var name="$u2" /><m>) \approx </m> <var name="$p2" /> thousand dollars. A negative profit means the company lost money.</p></li>
@@ -170,13 +208,70 @@
       <example>
         <statement>
           <p>As a business owner, you know the value in giving your customers a good deal, especially when they buy a lot from you.</p>
-          <p>This month at your pet supply store, you decide to run the following special on your most popular item, <em>My Little Deuce Scoop</em>, a litter box shovel shaped like a 1932 Ford hotrod:</p>
-          <p>The retail price for the item is $24, but if a customer orders two of them, you will reduce the unit price by $0.25, so they would each cost only $23.75.</p>
-          <p>If a customer orderes three items, the unit cost would be reduced another $0.25, so they would each cost only $23.50</p>
-          <p>Thus, as the number of items increases, the cost of each one will decrease.</p>
+          <p>This month at your pet supply store, you decide to run the following special on your most popular cat food:</p>
+          <p>The retail price for one container of the food is $<m>24</m>, but if a customer orders two of them, you will reduce the unit price by $<m>0{.}25</m>, so they would each cost only $<m>23{.}75</m>.</p>
+          <p>If a customer orders three containers, the unit cost would be reduced another $<m>0{.}25</m>, so they would each cost only $<m>23{.}50</m>.</p>
+          <p>Thus, as the number of containers increases, the cost of each one will decrease.</p>
+          <p><ol label="a">
+            <li><p>Write a formula for the unit cost, <m>C(x)</m>, of each container when the customer orders <m>x</m> containers. Note that this is a <em>linear</em> function of <m>x</m>.</p></li>
+            <li><p>If a customer ordered <m>6</m> containers, we could evaluate <m>C(6)</m> to find how much they would be charged for each container. How much would they pay in total for all six containers?</p></li>
+            <li><p>If a customer ordered <m>x</m> containers, how much would they pay in total for all the containers? Let <m>T(x)</m> represent the total they would pay for <m>x</m> containers.</p></li>
+          </ol></p>
         </statement>
+        <solution>
+          <p>The Cost function is linear, beginning at <m>24</m> when <m>x = 1</m>, and with a slope of <m>-0.25</m>. So, the function can be written as: <md>
+          <mrow>C(x) \amp= 24 - 0.25(x-1)</mrow>
+          <mrow>\amp= 24.25 - 0.25x</mrow></md></p>
+        </solution>
+        <solution>
+          <p>If a customer ordered <m>6</m> containers, the unit cost would be:<md>
+          <mrow>C(6) \amp= 24.25 - 0.25(6)</mrow>
+          <mrow>\amp= 22.75</mrow></md></p>
+          <p>You would charge $<m>22{.}75</m> for each container, so the customer would pay <m>6(22.75) = </m> $<m>136{.}50</m> in total.</p>
+        </solution>
+        <solution>
+          <p>In general, if a customer ordered <m>x</m> containers, then they would have to pay the unit cost (given by the function <m>C(x)</m>) multiplied by the number of containers they ordered (which is just <m>x</m>).</p>
+          <p>Therefore, the customer's total cost for ordering <m>x</m> containers is a new function: <md>
+          <mrow>T(x) \amp= x \cdot C(x)</mrow>
+          <mrow>\amp= x(24.25 - 0.25x)</mrow>
+          <mrow>\amp= 24.25x - 0.25x^2</mrow></md></p>
+        </solution>
       </example>
-      <p>Continue the previous example in the next three exercises.</p>
+
+      <subsection><title>Graphing Combinations</title>
+      <p>Because there are an infinite number of ways to combine two functions, there is no straightforward way to describe all possible graphs we may see as a result. However, one thing <em>is</em> true for any function combination we may create: <em>We are just doing arithmetic on the outputs of the original functions.</em></p>
+      <p>This means that for a combination such as <me>W(x) = \left(g(x)+h(x)\right)^3 + 4g(x)</me> in order to evaluate a particular value such as <m>W(12)</m>, the number <m>12</m> must at least be in the domains of both functions <m>f</m> and <m>g</m>.</p>
+      <p>If <m>f(12) = 2</m> and <m>g(12) = 3</m>, then <m>W(x)</m> would be: <me>(3+2)^3 + 4(3) = 137</me></p>
+      <p>In the next exercise, you will see four different combinations of the functions <m>f(x) = x-1</m> and <m>g(x) = 2-x</m>.</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <pg-code>
+            </pg-code>
+          </setup>
+          <statement>
+            <p>The graphs of <m>f(x) = x - 1</m> and <m>g(x) = 2 - x</m> are shown below.</p>
+            <p>Before manipulating the graph, try to make the predictions that follow.</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tAcMxrpj/width/411/height/410/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="411px" height="410px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p><ol label="a">
+              <li><p>If <m>J(x) = f(x) + g(x)</m>, can you predict the value of <m>J(2)</m>?</p>
+                <p>Now click the checkbox to check your answer.</p></li>
+              <li><p>If <m>K(x) = g(x) - f(x)</m>, can you predict the value of <m>K(2)</m>?</p>
+                <p>Now click the checkbox to check your answer.</p></li>
+              <li><p>If <m>L(x) = f(x)g(x)</m>, can you predict the value of <m>L(2)</m>?</p>
+                <p>Now click the checkbox to check your answer.</p></li>
+              <li><p>If <m>M(x) = f(x)/g(x)</m>, can you predict the value of <m>M(2)</m>?</p>
+                <p>Now click the checkbox to check your answer.</p></li>
+            </ol></p>
+            <p>Notice that <m>J(2)</m> is equal to <m>2</m>, because <m>f(2) = 1</m> and <m>g(2) = 0</m>, and <m>1 + 0 = 1</m>. However, clicking to show the graph of <m>y = J(x)</m> shows that its output is <em>always</em> equal to <m>2</m>. In order to see why this is, just remember that <m>f(x) = x - 1</m> and <m>g(x) = 2 - x</m>. Now simplify the expression <m>f(x) + g(x) = (x - 1) + (2 - x)</m>.</p>
+            <p>Next, see that <m>K(2)</m> is equal to <m>-1</m> because <m>0 - 1 = -1</m>.</p>
+            <p>For <m>L(2)</m>, the output is <m>0</m> because <m>-1(0) = 0</m>. Notice the shape of this graph -- it is a <em>parabola</em>, which is the result of multiplying two linear functions.</p>
+            <p>Finally, the value of <m>M(2)</m> is <em>undefined</em>, because <m>g(2) = 0</m>, and we cannot divide anything by zero. So, the combination <m>f(x)/g(x)</m> makes sense only when the output for <m>g(x)</m> is not zero.</p>
+          </statement>
+        </webwork>
+      </exercise>
+
+<!--
         <exercise>
           <webwork xml:id="sale-cost-expression">
             <setup>
@@ -267,12 +362,297 @@
             </solution>
           </webwork>
         </exercise>
-
+      -->
+</subsection>
+<subsection><title>Combinations vs. Composition</title>
+  <p>It may have occurred to you that function combinations look very much like composite functions. For example, the expression <me>\left(f(x)\right)^2 + 3f(x)</me> is a combination of just the function <m>f(x)</m>. However, it may also be thought of as the <em>composition</em> <m>g(f(x))</m>, where <m>g(x) = x^2 + 3x</m>.</p>
+  <p>In general, this is true. A composite function is really just a <q>combination of itself</q>.</p>
+  <p>Now you would be justified to ask: If combinations and compositions are so similar, why do we have two different names for them? The answer is that, while similar, they represent different things we may do with function outputs, especially in a real context. Here is an example:</p>
+  <example>
+    <statement>
+      <p>As the temperature drops, so does the speed of sound. The function <me>v = f(T) = 740.4 + 1.34T</me> models the speed of sound (in miles-per-hour) when the temperature is <m>T</m> degrees Celsius.</p>
+      <p>On a particular day between <m>6{:}00</m> P.M. and midnight, suppose the temperature outside is modeled by the function <me>T = g(h) = 24 - 3h</me> where <m>h</m> is the number of hours after <m>6{:}00</m> P.M.</p>
+      <p>Now, we certainly could create both combinations and compositions using the functions <m>f</m> and <m>g</m>, but what would actually makes sense?</p>
+      <p>Since we know that <m>g</m> changes <em>hours</em> into <em>degrees Celsius</em>, and <m>f</m> changes <em>degrees Celsius</em> into <em>miles-per-hour</em>, it seems natural to use the composition <me>f(g(h)) = 740.4+1.34(24-3h)</me> to turn <em>hours</em> into <em>miles-per-hour</em>.</p>
+      <p>It would not be sensible to make a combination of the functions <m>f</m> and <m>g</m>, because they do not use the same input variable. We would have to use the same input value (with the same units) into both functions, but this cannot be.</p>
+      <p>However, outside of any context, the functions <m>f(x) = 740.4 + 1.34x</m> and <m>g(x) = 24 - 3x</m> could be combined in any variety of ways. These combinations, however, would have no applicable meaning.</p>
+    </statement>
+  </example>
+</subsection>
+<subsection><title>Conclusion</title>
+  <p><ul>
+    <li><p>Now you have seen that function combinations are just different ways of doing arithmetic with the outputs of different functions, provided the same input may be used for each function. Any arithmetic expression you could write with numbers could be done with function outputs.</p></li>
+    <li><p>The domain of a function combination is the set of numbers that are in both of the domains of the original functions, except for those inputs which cause the combination to be undefined (division by zero, negative number under a square root, etc.).</p></li>
+    <li><p>Even beginning with simple functions, different combinations may produce very complicated graphs. In general, though, the graph of a combination is found by combining the outputs (y-values) of the functions involved.</p></li>
+    <li><p>Composition is really just some combination of a single function.</p></li>
+  </ul></p>
+</subsection>
         <exercises>
-          
+
+<exercisegroup><introduction><p>Evaluating Combinations</p></introduction>
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec1/Q30.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/ASU-topics/setAlgebraFunctions/mel1.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <webwork xml:id="combinations-of-functions-tables">
+              <setup>
+                <var name="$x[0]"><static>-4</static></var>
+                <var name="$x[1]"><static>-2</static></var>
+                <var name="$x[2]"><static>0</static></var>
+                <var name="$x[3]"><static>2</static></var>
+                <var name="$x[4]"><static>4</static></var>
+                <var name="$f[0]"><static>-9</static></var>
+                <var name="$f[1]"><static>-3</static></var>
+                <var name="$f[2]"><static>-1</static></var>
+                <var name="$f[3]"><static>-3</static></var>
+                <var name="$f[4]"><static>-9</static></var>
+                <var name="$g[0]"><static>4</static></var>
+                <var name="$g[1]"><static>7</static></var>
+                <var name="$g[2]"><static>10</static></var>
+                <var name="$g[3]"><static>13</static></var>
+                <var name="$g[4]"><static>16</static></var>
+                <var name="$M[0]"><static>-5</static></var>
+                <var name="$M[1]"><static>4</static></var>
+                <var name="$M[2]"><static>9</static></var>
+                <var name="$M[3]"><static>10</static></var>
+                <var name="$M[4]"><static>7</static></var>
+                <var name="$N[0]"><static>-13</static></var>
+                <var name="$N[1]"><static>-10</static></var>
+                <var name="$N[2]"><static>-11</static></var>
+                <var name="$N[3]"><static>-16</static></var>
+                <var name="$N[4]"><static>-25</static></var>
+                <var name="$P[0]"><static>-36</static></var>
+                <var name="$P[1]"><static>-21</static></var>
+                <var name="$P[2]"><static>-10</static></var>
+                <var name="$P[3]"><static>-39</static></var>
+                <var name="$P[4]"><static>-144</static></var>
+                <pg-code>
+                  @x=(2,4);
+                  @f=map{-0.5*$_**2-1}@x;
+                  @g=map{1.5*$_+10}@x;
+                  @M=map{$f[$_]+$g[$_]}0..$#f;
+                  @N=map{$f[$_]-$g[$_]}0..$#f;
+                  @P=map{$f[$_]*$g[$_]}0..$#f;
+                </pg-code>
+              </setup>
+              <statement>
+                <p>The table below shows values of two functions, <m>f</m> and <m>g</m>.</p>
+                <table>
+                  <tabular top="major" halign="center">
+                        <col halign="left" />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <row bottom="medium">
+                          <cell><m>x</m></cell>
+                          <cell><m>f(x)</m></cell>
+                          <cell><m>g(x)</m></cell>
+                          <cell><m>M(x)</m></cell>
+                          <cell><m>N(x)</m></cell>
+                          <cell><m>P(x)</m></cell>
+                        </row>
+                        <row>
+                          <cell><m><var name="$x[0]" /></m></cell>
+                          <cell><m><var name="$f[0]" /></m></cell>
+                          <cell><m><var name="$g[0]" /></m></cell>
+                          <cell><var name="$M[0]" width="5" /></cell>
+                          <cell><var name="$N[0]" width="5" /></cell>
+                          <cell><var name="$P[0]" width="5" /></cell>
+                        </row>
+                        <row>
+                          <cell><m><var name="$x[1]" /></m></cell>
+                          <cell><m><var name="$f[1]" /></m></cell>
+                          <cell><m><var name="$g[1]" /></m></cell>
+                          <cell><var name="$M[1]" width="5" /></cell>
+                          <cell><var name="$N[1]" width="5" /></cell>
+                          <cell><var name="$P[1]" width="5" /></cell>
+                        </row>
+                  </tabular>
+                </table>
+                <p>The three other functions are defined as follows:</p>
+                <p><ul>
+                  <li><p><m>M(x) = f(x) + g(x)</m></p></li>
+                  <li><p><m>N(x) = f(x) - g(x)</m></p></li>
+                  <li><p><m>P(x) = f(x)\cdot g(x)</m></p></li>
+                </ul></p>
+                <p>Complete the table of values for <m>M(x)</m>, <m>N(x)</m> and <m>P(x)</m>.</p>
+              </statement>
+              <solution>
+                <table>
+                  <tabular top="major" halign="center">
+                        <col halign="left" />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <row bottom="medium">
+                          <cell><m>x</m></cell>
+                          <cell><m>f(x)</m></cell>
+                          <cell><m>g(x)</m></cell>
+                          <cell><m>M(x)</m></cell>
+                          <cell><m>N(x)</m></cell>
+                          <cell><m>P(x)</m></cell>
+                        </row>
+                        <row>
+                          <cell><var name="$x[0]" /></cell>
+                          <cell><var name="$f[0]" /></cell>
+                          <cell><var name="$g[0]" /></cell>
+                          <cell><var name="$M[0]" /></cell>
+                          <cell><var name="$N[0]" /></cell>
+                          <cell><var name="$P[0]" /></cell>
+                        </row>
+                        <row>
+                          <cell><var name="$x[1]" /></cell>
+                          <cell><var name="$f[1]" /></cell>
+                          <cell><var name="$g[1]" /></cell>
+                          <cell><var name="$M[1]" /></cell>
+                          <cell><var name="$N[1]" /></cell>
+                          <cell><var name="$P[1]" /></cell>
+                        </row>
+                        <row>
+                          <cell><var name="$x[2]" /></cell>
+                          <cell><var name="$f[2]" /></cell>
+                          <cell><var name="$g[2]" /></cell>
+                          <cell><var name="$M[2]" /></cell>
+                          <cell><var name="$N[2]" /></cell>
+                          <cell><var name="$P[2]" /></cell>
+                        </row>
+                        <row>
+                          <cell><var name="$x[3]" /></cell>
+                          <cell><var name="$f[3]" /></cell>
+                          <cell><var name="$g[3]" /></cell>
+                          <cell><var name="$M[3]" /></cell>
+                          <cell><var name="$N[3]" /></cell>
+                          <cell><var name="$P[3]" /></cell>
+                        </row>
+                        <row>
+                          <cell><var name="$x[4]" /></cell>
+                          <cell><var name="$f[4]" /></cell>
+                          <cell><var name="$g[4]" /></cell>
+                          <cell><var name="$M[4]" /></cell>
+                          <cell><var name="$N[4]" /></cell>
+                          <cell><var name="$P[4]" /></cell>
+                        </row>
+                  </tabular>
+                </table>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/CollegeOfIdaho/setAlgebra_02_02_AlgebraOfFunctions/22IntAlg_13_functOperation.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/CollegeOfIdaho/setAlgebra_02_02_AlgebraOfFunctions/22IntAlg_07_functOperation.pg" seed="1" />
+          </exercise>
+</exercisegroup>
+
+<exercisegroup><introduction><p>Formulas for Combinations</p></introduction>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/Utah/Intermediate_Algebra/set5_Graphs_and_Functions/s5p36.pg" seed="1" />
+          </exercise>
 
 
 
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/LoyolaChicago/Precalc/Chap8Sec3/Q04.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/Rochester/setAlgebra17FunComposition/beth1_mo.pg" seed="1" />
+          </exercise>
+
+
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="CollegeAlgebra/FunctionArithmetic/FunctionArithmeticDomains02.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="CollegeAlgebra/FunctionArithmetic/FunctionArithmeticDomains10.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="CollegeAlgebra/FunctionArithmetic/FunctionArithmeticDomains40.pg" seed="1" />
+          </exercise>
+
+
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/org.sparta/Combining_Functions/AlgofRelations_prb2.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/Rochester/setAlgebra17FunComposition/c0s1p9.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/CollegeOfIdaho/setAlgebra_02_02_AlgebraOfFunctions/22IntAlg_05_functOperation.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/Utah/Business_Algebra/set4_Quadratic_and_Other_Special_Functions/p16.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p></p>
+            </introduction>
+            <webwork source="Library/LoyolaChicago/Precalc/Chap2Review/Q12.pg" seed="1" />
+          </exercise>
+</exercisegroup>
 
 
 

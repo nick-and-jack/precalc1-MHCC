@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- 
+<!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
 ## Jack Green, Nick Chura                                                ##
@@ -72,7 +72,7 @@
 
     <subsection>
       <title>Exponential Patterns in Data</title>
-      
+
       <p>When looking at data, linear functions will have a pattern of adding the same number repeatedly (a positive or negative constant) for constant changes in input. This leads to the fact that linear functions have constant rate of change (slope).</p>
 
       <example xml:id="linear-data">
@@ -373,9 +373,9 @@
             </image>
         </figure>
       </sidebyside>
-      
+
       <p>Notice that as you move along the x-axis, each graph tends to drop closer and closer to the x-axis. The decreasing exponential approaches the x-axis as you move to the right while the increasing exponential approaches the x-axis as you move to the left.</p>
-      <p>In fact, the farther you move right or left, the closer each graph gets to the x-axis. In truth neither graph will ever reach the x-axis.</p> 
+      <p>In fact, the farther you move right or left, the closer each graph gets to the x-axis. In truth neither graph will ever reach the x-axis.</p>
       <p>The x-axis is the horizontal line <m>y = 0</m> and the graphs are <q>tending towards <m>y = 0</m></q> as the inputs move to the right or left.</p>
       <p>We say that the x-axis is a <term>horizontal asymptote</term><index><main>horizontal asymptote</main></index> with equation <m>y = 0</m>. It means that the graph is getting closer and closer to the x-axis in at least one direction.</p>
       <exercise>
@@ -386,7 +386,7 @@
             <p><m>y=</m><var name="10" width="5" /></p>
           </statement>
         </webwork>
-      </exercise> 
+      </exercise>
     </subsection>
     <subsection>
       <title>General Form of Exponential Formulas</title>
@@ -400,7 +400,7 @@
       <p>The formula for an exponential function may look like <m>f(x) = ab^{x}</m> or <m>f(x)=ae^{kx}</m>.</p>
       <p><m>ab^{x}</m> is called the <term>discrete</term> form of the exponential and <m>ae^{kx}</m> is called the <term>continuous</term> form.</p>
       <p>There is also the financial exponential model for compounded interest <me>f(x)=(1+\frac{r}{n})^{(n \cdot t)}</me></p>
-      
+
       <example>
        <p>In the linear function <m>f(t)=mt+b</m> the <m>t</m> is a counter. It counts how many times the number <m>m</m> is repeatedly added.</p>
        <p>If a car is traveling at <m>50</m> <units>miles per hour</units>, then we can write a linear equation to calculate the distance the car travels as a function of time, t hours. <me>f(t)=50t</me> means that each hour we add another <m>50</m> <units>miles</units> to the distance traveled by the car. After <m>6</m> <units>hours</units> of driving, the vehicle has covered <me>f(6)=50+50+50+50+50+50=50*6=300</me> <m>300</m> <units>miles</units>.</p><p>If the vehicle had already covered <m>60</m> miles when we started counting, then the equation could be written as <me>f(t)=60+50t</me> which simply says we are adding to the <m>60</m> miles that were already covered.</p>
@@ -451,7 +451,7 @@
         <p>What does each model predict as the initial size of the spill?</p>
       </example>
       <example>
-      <title>Exponential Formula</title>   
+      <title>Exponential Formula</title>
         <p>Find an exponential formula for the graph. Given the vertical intercept (initial value)</p>
       </example>
       <example>
@@ -467,5 +467,151 @@
         <p>How many hours will it take for there to be 1 milligram of drug in the body?</p>
       </example>
     </subsection> -->
+
+    <exercises>
+
+<!-- find the exponential formula -->
+<exercisegroup><introduction><p>Formulas for Exponential Functions</p></introduction>
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap9Sec7/Q03.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap3Sec2/Q11.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/Union/setFunctionExponential/srw4_1_11.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap3Sec2/Q24.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap3Sec2/Q18.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap3Sec2/Q22.pg" seed="1" />
+      </exercise>
+</exercisegroup>
+
+<!-- evaluate an exponential function -->
+<exercisegroup><introduction><p>Evaluating Exponential Functions</p></introduction>
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/Michigan/Chap1Sec2/Q38.pg" seed="1" />
+      </exercise>
+</exercisegroup>
+
+<!-- Name the parts of an exponential formula -->
+<exercisegroup><introduction><p>Building a Formula</p></introduction>
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec2/Q14V2.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap3Sec1/Connally3-3-1-13-Exponential-functions.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap3Sec1/Connally3-3-1-12-Exponential-functions.pg" seed="1" />
+      </exercise>
+</exercisegroup>
+
+<!-- Linear vs Exponential -->
+<exercisegroup><introduction><p>Exponential vs. Linear</p></introduction>
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap3Sec2/Q01.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap3Sec2/Connally3-3-2-29-Exponential-vs-linear.pg" seed="1" />
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap3Sec2/Connally3-3-2-05-Exponential-vs-linear.pg" seed="1" />
+      </exercise>
+</exercisegroup>
+
+<!-- end behavior and graphs -->
+<exercisegroup><introduction><p>Additional Problems</p></introduction>
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_3.pg" seed="1" />
+      </exercise>
+
+
+<!-- Domain -->
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_15.pg" seed="1" />
+      </exercise>
+
+
+
+
+<!-- application problems -->
+
+      <exercise>
+        <introduction>
+          <p></p>
+        </introduction>
+        <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec2/Q30.pg" seed="1" />
+      </exercise>
+</exercisegroup>
+
+    </exercises>
   </section>
 </chapter>
