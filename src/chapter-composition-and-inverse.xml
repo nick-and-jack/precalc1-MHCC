@@ -606,6 +606,80 @@
       <p>If you have the graph of a function <m>y = f(x)</m>, you can sketch a graph of its inverse <m>y = f^{-1}(x)</m> by selecting points on <m>y = f(x)</m> and reflecting them over the line <m>y = x</m>. This is actually the effect of switching the <m>x</m>- and <m>y</m>-coordinates of a point: it reflects the point over the line <m>y = x</m>.</p>
 
       <paragraphs>
+        <title>Domain and Range Connection</title>
+        <p>A function and its inverse trade inputs and outputs. Recall <xref ref="webwork-function-temperature-converter">Exercise</xref>, where the function used degrees Fahrenheit as the input, and gave degrees Celsius as the output. The inverse for this function would use degrees Celsius as the input and give degrees Fahrenheit as the output.</p>
+        <p>You probably own a trimmed-down version of this function, as seen below:</p>
+      </paragraphs>
+        <figure xml:id="figure-thermometer">
+          <caption><m>C = g(F)</m>: A Temperature Converter</caption>
+          <image>
+            <latex-image-code>
+            <![CDATA[\begin{tikzpicture}[y=0.5pt, x=0.5pt,yscale=-1, inner sep=0pt, outer sep=0pt]
+\path[draw=black,fill=white,miter limit=4,even odd rule,line width=2.5pt,fill=gray!20]
+  (280.0313,169.3125) .. controls (263.9888,169.3125) and (250.6461,179.3446) ..
+  (247.8125,192.5625) --
+  (247.3438,563.7500) .. controls (235.7346,573.2243) and (228.3438,587.6282) ..
+  (228.3438,603.7813) .. controls (228.3438,632.3161) and (251.4651,655.4688) ..
+  (280.0000,655.4688) .. controls (308.5349,655.4688) and (331.6563,632.3161) ..
+  (331.6563,603.7813) .. controls (331.6563,587.6282) and (324.2654,573.2243) ..
+  (312.6563,563.7500) --
+  (312.2500,192.5625) .. controls
+  (309.4164,179.3446) and (296.0737,169.3125) .. (280.0313,169.3125) -- cycle;
+\foreach \y/\x in {190/100,
+                   227/90,
+                   264/80,
+                   301/70,
+                   338/60,
+                   375/50,
+                   412/40,
+                   449/30,
+                   486/20,
+                   523/10,
+                   560/0%
+                   }
+    {
+    \draw (210,\y)--(190,\y) node[left](\x){\x\textdegree C~};
+    }
+\foreach \u/\v in {189.999/212,
+                   231.111/192,
+                   272.222/172,
+                   313.333/152,
+                   354.444/132,
+                   395.555/112,
+                   436.666/92,
+                   477.777/72,
+                   518.888/52,
+                   559.999/32%
+                   }
+    {
+    \draw (350,\u)--(370,\u) node[right](\v){\v\textdegree F};
+    }
+\draw (200,190)node[yshift=4ex, OrangeRed] {Celsius} --(200,560) ;
+\draw (360,190)node[yshift=4ex, Cerulean] {Fahrenheit}--(360,560);
+\draw node[xshift=-5em, OrangeRed] at (100) {Water boils};
+\draw node[xshift=5em, Cerulean] at (212) {Water boils};
+\draw node[xshift=-5em, OrangeRed] at (0) {Water freezes};
+\draw node[xshift=5em, Cerulean] at (32) {Water freezes};
+\end{tikzpicture}
+            ]]>
+              </latex-image-code>
+          </image>
+        </figure>
+        <p>This is clearly an invertible function, changing degrees Fahrenheit into degrees Celsius. We choose an input value (degrees Fahrenheit) on one side of the thermometer, and read the corresponding output (degrees Celsius) on the other side.</p>
+        <p>If we gave this function the name <m>C = g(F)</m>, then the domain is <me>-32 \leqslant F \leqslant 212</me> and the range is: <me>0 \leqslant C \leqslant 100</me></p>
+        <p>Of course, we could also read the thermometer in reverse, using degrees Celsius as the input and degrees Fahrenheit as the output. This would be the inverse function, written as: <me>F = g^{-1}(C)</me></p>
+        <p>Notice that the domain and range have been switched for the inverse function. Now <m>F = g^{-1}(C)</m> has domain <me>0 \leqslant C \leqslant 100</me> and range: <me>-32 \leqslant F \leqslant 212</me></p>
+        <p>This will be the case for all invertible functions:</p>
+        <assemblage>
+          <p>If <m>f</m> is an invertible function, then:</p>
+          <p><ul>
+            <li><p>The domain of <m>f</m> is the same as the range of <m>f^{-1}</m>, and</p></li>
+            <li><p>The range of <m>f</m> is the same as the domain of <m>f^{-1}</m>.</p></li>
+          </ul></p>
+        </assemblage>
+
+
+      <paragraphs>
         <title>The Inverse Formula</title>
         <p>If we have the formula for a function <m>f(x)</m>, we may want to use the formula for the inverse <m>f^{-1}(x)</m>.</p>
         <p>But how can we find the formula?</p>
