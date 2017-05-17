@@ -448,6 +448,85 @@
                 </solution>
               </webwork>
           </exercise>
+        <p>Finally, let's put these characteristics into context. In the next problem, you will describe the characteristics of various functions given by verbal descriptions.</p>
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="$positive">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{positive}</member>
+                  <member>\text{negative}</member>
+                </set>
+              </var>
+              <var name="$concaveDown">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{concave up}</member>
+                  <member>\text{concave down}</member>
+                </set>
+              </var>
+              <var name="$decreasing">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{increasing}</member>
+                  <member correct="yes">\text{decreasing}</member>
+                </set>
+              </var>
+              <var name="$increasing">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{increasing}</member>
+                  <member>\text{decreasing}</member>
+                </set>
+              </var>
+              <pg-code>
+                $positive=PopUp(
+                ["?","positive","negative"],"positive"
+                );
+                $decreasing=PopUp(
+                ["?","increasing","decreasing"],"decreasing"
+                );
+                $concaveDown=PopUp(
+                ["?","concave up","concave down"],"concave down"
+                );
+                $increasing=PopUp(
+                ["?","increasing","decreasing"],"increasing"
+                );
+              </pg-code>
+            </setup>
+            <stage>
+              <statement>
+                <p>A rock is dropped, and it falls for <m>10</m> seconds before hitting the ground.</p>
+                <p>The function <m>h(t)</m> represents the height of the rock in feet, where <m>t</m> represents the number of seconds it has been falling.</p>
+                <p>Choose the descriptions which match this function on the interval:  <m>0 \le t \lt 10</m></p>
+                <p>The function is:  <var name="$positive" form="popup" /> and <var name="$decreasing" form="popup" /> and <var name="$concaveDown" form="popup" /></p>
+              </statement>
+              <hint>
+                <p>Sketch a graph of this height function. Does it ever have a negative output?</p>
+                <p>The rock speeds up as it falls, so its height changes more for each second it falls. Can you show this on the graph?</p>
+              </hint>
+              <solution>
+                <p>While it falls, the function is always positive (it doesn't sink underground), but it is decreasing and concave down (curved steeper and steeper downward).</p>
+              </solution>
+            </stage>
+            <stage>
+              <statement>
+                <p>You take an item out of your freezer at <m>15^{\circ}</m> Fahrenheit, and it begins to warm up to the room temperature of <m>68^{\circ}</m> Fahrenheit. The item heats up the fastest right after you take it out, and it begins to heat more slowly as time goes on.</p>
+                <p>The function <m>T(t)</m> represents the temperature of the item in degrees Fahrenheit, where <m>t</m> represents the number of minutes it has been out of the freezer.</p>
+                <p>Choose the descriptions which match this function when <m>t \le 0</m>.</p>
+                <p>The function is:  <var name="$positive" form="popup" /> and <var name="$increasing" form="popup" /> and <var name="$concaveDown" form="popup" /></p>
+              </statement>
+              <hint>
+                <p>Sketch a graph of this temperature function. Is it ever negative?</p>
+                <p>The temperature changes the fastest immediately after <m>t = 0</m>, but then begins to slow down.</p>
+              </hint>
+              <solution>
+                <p>This function is always positive and always increasing, but it is concave down (steep to start, but then less steep as time increases).</p>
+              </solution>
+            </stage>
+          </webwork>
+        </exercise>
   </subsection>
 
 
