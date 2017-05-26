@@ -30,7 +30,7 @@
     </objectives>
 
     <introduction>
-        <p>In this activity we introduce the math symbol <m>\Delta</m> that represents change and we develop the concept of <term>average rate of change</term>.</p>
+        <p>In this activity we introduce the Greek letter <m>\Delta</m> that represents change, and we develop the concept of <term>average rate of change</term>.</p>
 
         <p>The prerequisites for this lesson are knowing how to calculate the slope of a line and understanding the meaning of slope.</p>
     </introduction>
@@ -38,7 +38,7 @@
     <subsection>
         <title>Intuitive Knowledge</title>
 
-        <p>Let's start by realizing you already understand the concept of average rate of change but maybe you have never hear the phrase before.</p>
+        <p>Let's start by realizing you already understand the concept of average rate of change, but maybe you have never heard the phrase before.</p>
 
         <exercise>
             <webwork>
@@ -84,23 +84,24 @@
             </webwork>
         </exercise>
 
-        <p>Turns out, <term>average rate of change</term><index><main>average rate of change</main></index> is just another way to talk about slope. As the name implies, it measures how quickly things change, on average.</p>
-        <p>Common examples of average rate of change are:</p>
+        <p>It turns out, <term>average rate of change</term> is just another way to talk about slope. As the name implies, it measures how quickly things change, on average.</p>
+        <p>Common examples of average rate of change:</p>
         <p>
           <ul>
             <li>
               <p>Traveling from Portland, OR to Seattle, WA (about <m>200</m> miles) in <m>4</m> hours is an average speed of <quantity><mag>50</mag><unit base="mileperhour" /></quantity>.</p>
             </li>
             <li>
-              <p>Pressure at the surface of the ocean is about <quantity><mag>14.6</mag><unit base="poundpersquareinch" /></quantity> (pounds per square inch). If you dive under water <m>20</m> feet the pressure is about <quantity><mag>23.6</mag><unit base="poundpersquareinch" /></quantity>.  That's an average rate of pressure increase of about <quantity><mag>0.45</mag><unit base="poundpersquareinch" /></quantity> per foot underwater.</p>
+              <p>Pressure at the surface of the ocean is about <quantity><mag>14.6</mag><unit base="poundpersquareinch" /></quantity> (pounds per square inch). If you dive under water <m>20</m> feet the pressure is about <quantity><mag>23.6</mag><unit base="poundpersquareinch" /></quantity>.  That's an average rate of pressure increase of about <quantity><mag>0.45</mag><unit base="poundpersquareinch" /></quantity> pounds per foot underwater.</p>
             </li>
             <li>
               <p>Earning <m>\$108</m> for <m>6</m> hours of work is an average hourly pay rate of <m>18</m> dollars per hour.</p>
             </li>
           </ul>
         </p>
-        <p>In each example there is a relation between two things: some kind of input and some resulting output.  When the input changes, like time or depth, the output changes.  The change in the output divided by the change in the input is called an <term>average rate of change</term>.</p>
-        <p>Be careful to remember we are only talking about an <q>average</q>. For instance, no one can drive to Seattle at a constant speed. There is always stop and go traffic, variations in speed limits, etc.</p>
+        <p>In each example there is a function that relates an input with an output. When the input changes by some amount, the output will also change (though usually by some other amount).</p>
+        <p>The change in the output divided by the change in the input is called an <term>average rate of change</term><index><main>average rate of change</main></index> of the function.</p>
+        <p>Be careful to remember that we are only talking about an <em>average</em>. For instance, no one can drive from Portland to Seattle at a constant speed. There is always stop and go traffic, variations in speed limits, etc.</p>
         <exercise>
             <introduction>
                 <p>The interactive graph below is that of a function <m>D = f(t)</m> where <em>D</em> is the number of miles a train is from downtown at <m>t</m> hours after 8 am.</p>
@@ -109,13 +110,13 @@
             <webwork>
                 <setup>
                     <var name="$Vchange">
-                        <static>20</static>
+                        <static>32</static>
                     </var>
                     <var name="$Hchange">
-                        <static>1</static>
+                        <static>2</static>
                     </var>
                     <var name="$Rate">
-                        <static>18</static>
+                        <static>16</static>
                     </var>
                     <var name="$difference">
                         <static>f(5)-f(2)</static>
@@ -133,11 +134,11 @@
                     <pg-code>
                         $speed = PopUp(["?", "hours", "miles", "hours per mile", "miles per hour"], "miles per hour");
                         Context('Numeric');
-                        $Vchange = Real(36);
+                        $Vchange = Real(32);
                         Context('Numeric');
                         $Hchange = Real(2);
                         Context('Numeric');
-                        $Rate = Real(18);
+                        $Rate = Real(16);
                         parserFunction("f(x)"=>"(sin(x)+2)/pi");
                         Context()->flags->set(reduceConstantFunctions=>0);
                         Context()->flags->set(formatStudentAnswer=>"parsed");
@@ -151,19 +152,19 @@
                     <p>As the time changes along the horizontal axis the result is the changing position of the train measured on the vertical axis.  The key word here is <q>change</q></p>
                     <p><ol label="a">
                         <li>
-                            <p>Use the graph to estimate the change in distance between the 1st and 3rd hours.</p>
+                            <p>Use the graph to find the change in distance between the <m>9{:}00</m> and <m>11{:}00</m> <init>A.M.</init>.</p>
                             <p><m>f(3) - f(1) \approx </m> <var name="$Vchange" width="3" /> miles.</p>
                         </li>
                         <li>
-                            <p>What is the change in time between the 1st and 3rd hours?</p>
+                            <p>What is the change in time between the <m>9{:}00</m> and <m>11{:}00</m> <init>A.M.</init>?</p>
                             <p>The change in time is <var name="$Hchange" width="3" /> hour(s).</p>
                         </li>
                         <li>
-                            <p>What is the average speed (rate of change) between the 1st and 3rd hours?</p>
+                            <p>What is the average speed (rate of change) between <m>9{:}00</m> and <m>11{:}00</m> <init>A.M.</init>?</p>
                             <p>The average speed is <var name="$Rate" width="3" /><var name="$speed" form="popup" /></p>
                         </li>
                         <li>
-                            <p>Use function notation (as in part a) to write an expression that represents the <em>change in distance</em> between the 2nd and 5th hours.</p>
+                            <p>Use function notation (as in part a) to write an expression that represents the <em>change in distance</em> between the <m>10{:}00</m> <init>A.M.</init> and <m>1{:}00</m> <init>P.M.</init>.</p>
                             <p>The change in distance can be expressed as <var name="$difference" width="10" /></p>
                         </li>
                     </ol></p>
@@ -188,8 +189,8 @@
         </exercise>
 
         <p>In math we use the Greek letter <m>\Delta</m> to mean <q>change in</q>. Change between two values is typically measured by subtracting an old value from a new value.</p>
-        <p>In our train story where <m>D = f(t)</m> the expression <m>\Delta f</m> means <q>change in miles from downtown</q>.  As the train travels away from downtown, the distance from downtown increases.  New distance is greater than old distance, so traveling away from downtown is a positive change in distance.</p>
-        <p>However, the distance from downtown decreases as the train travels towards downtown. New distance is less than old distance, therefore traveling towards downtown is a negative change in distance.</p>
+        <p>In our train story where <m>D = f(t)</m>, the expression <m>\Delta f</m> means <q>change in miles from downtown</q>. As the train travels away from downtown, the distance from downtown increases. New distance is greater than old distance, so traveling away from downtown is a positive change in distance.</p>
+        <p>However, the distance from downtown decreases as the train travels towards downtown. New distance is less than old distance, therefore traveling toward downtown is a negative change in distance.</p>
 
         <exercise>
             <webwork>
@@ -214,7 +215,7 @@
                 <statement>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
 
-                    <p>Use your best estimate from the graph to approximate <m>\Delta f</m> during the first 2 hours of the trip</p>
+                    <p>Use the graph to find the value of <m>\Delta f</m> during the first <m>2</m> hours of the trip</p>
                     <p><m>\Delta f \approx </m> <var name="$chngDist" width="5" /> miles</p>
 
                     <p>What is the meaning of the expression <m>\Delta t</m> in the context of the train story? <var name="$meaning" form="popup" /></p>
@@ -226,15 +227,52 @@
     <subsection>
         <title>Computing Average Rate of Change</title>
 
-        <p>As we move from one point to another point on a function, there are two changes that take place. The input will change, call it <m>\Delta\text{Input}</m> and the output will change, call it <m>\Delta\text{Output}</m>.</p>
+        <p>As we move from one point to another point on a function, there are two changes that take place: The change in the input is called <m>\Delta\text{Input}</m>, and the change in the output is called <m>\Delta\text{Output}</m>.</p>
 
-        <p>If we divide the two changes we get an <term>average rate of change</term>.</p>
+        <p>If we divide these two changes we get an <term>average rate of change</term>.</p>
 
         <p>An average rate of change <m>=\frac{\Delta Output}{\Delta Input}</m>.</p>
 
+        <example>
+          <statement>
+            <p>The function below shows a <em>Demand Curve</em>, which shows the relationship between the <em>price</em> at which an item is sold, and the <em>number</em> of items people will buy at that price. When the price is low, people will buy more of them <mdash /> when the price is high, people won't buy as many.</p>
+
+            <sidebyside widths="47% 47%">
+
+                <figure>
+                    <caption>Demand Curve</caption>
+                    <image>
+                        <description></description>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xlabel={price (in dollars)},
+                                        ylabel={number sold (in thousands)},
+                                        xmin=-0.5,xmax=6.5,
+                                        ymin=-0.5,ymax=5.5,
+                                        xtick={1,2,...,6},
+                                        ytick={1,2,...,5},
+                                        ]
+                                \addplot+[domain = 1.2:6.2,->]{2/(x-1)^0.5+0.5};
+                                \addplot[soliddot] coordinates {(2,2.5) (5,1.5)};
+                                \addplot[guideline,-] coordinates {(2,2.5) (2,1.5)} node[pos=0.5,above,rotate=90] {$-1$};
+                                \addplot[guideline,->] coordinates {(2,1.5) (5,1.5)} node[pos=0.5,below] {$\$3$};
+                            \end{axis}
+                    \end{tikzpicture}
+                    ]]>
+                    </latex-image-code>
+                    </image>
+                </figure>
+
+                <paragraphs>
+                    <p>The labeled slope triangle indicates that when the price of the item increases from <m>\$2</m> to <m>\$5</m>, the number sold will decrease from <m>2.5</m> thousand to <m>1.5</m> thousand. The average rate of change of <em>thousands sold</em> with respect to <em>price in dollars</em> is: <me>\frac{-1000}{3} \approx -333.33 \frac{\text{sold}}{\text{\$}}</me>.</p>
+                </paragraphs>
+            </sidebyside>
+          </statement>
+        </example>
+
         <p>Does this look familiar?  Think <q>rise over run</q>.</p>
         <p>Once again, average rate of change is just slope. You should be very familiar with the concept of slope, especially as it relates to lines and the famous equation <me>y = mx + b</me> where <m>m</m> represents the slope of the line. Now we are going to use our newly learned function notation to write slope in a different way.</p>
-        <p>Remember, the notation <m>f(3)</m> represents an output value, it's a number. It's the output when the input is <m>3</m>.</p>
+        <p>Remember, the notation <m>f(3)</m> represents an output value; it's a number. It's the output when the input is <m>3</m>.</p>
 
         <exercise>
             <webwork>
@@ -402,7 +440,7 @@
                                 <p><m>f(-8) \approx </m> <var name="$fminus8" width="2" /></p>
                             </li>
                             <li>
-                                <p>Recall the value you found for <m>f(2)</m> was <m>f(2) \approx <var name="$f2" /></m></p>
+                                <p>Recall what you already found: <m>f(2) \approx <var name="$f2" /></m></p>
                                 <p>What is the change in the output as we move from point <m>C</m> to point <m>B</m>?</p>
                                 <p><m>\Delta f \approx </m> <var name="$delf2" width="2" /></p>
                             </li>
@@ -473,7 +511,7 @@
                   $intMarch = Compute("3&lt;=m&lt;=12");
                 </pg-code>
               </setup>
-    
+
               <statement>
                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PPsZ6cgY/width/431/height/245/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="245px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                 <p>Change the length of the interval on the <q>month</q> axis to see how it affects the average rate of change of the temperature.</p>
@@ -508,7 +546,7 @@
             </webwork>
         </exercise>
 
-        
+
         <p>Earlier you found the outputs by estimating the results from a graph. Next you will find the outputs by calculating them directly using a formula.</p>
 
         <exercise>
@@ -579,7 +617,7 @@
                 </hint>
             </webwork>
         </exercise>
-        <p>One question that comes up a lot is, <q>Does it matter what order we evaluate <m>\frac{\Delta f}{\Delta x}</m> ?</q></p>
+        <p>One question that comes up a lot is, <q>Does it matter what order we evaluate <m>\Delta f</m> and <m>\Delta x</m> ?</q></p>
         <p>To answer this question recall earlier you used <m>f(x) = (x-2)(x+3)</m> to calculate <m>f(0)</m> and <m>f(-2)</m>. Use these values to calculate the average rate of change in two different directions.</p>
         <exercise>
             <webwork>
@@ -590,19 +628,19 @@
                     <var name="$backward">
                         <static>-1</static>
                     </var>
-                    
+
                     <pg-code>
                         $forward = Real(-1);
                         $backward = Real(-1);
                     </pg-code>
                 </setup>
-        
+
                 <statement>
                     <p>Previously you were given the function <m>f(x) = (x-2)(x+3)</m> and you calculated <m>f(0) = -6</m> and <m>f(-2) = -4</m>. Use these values to calculate the average rate of change of the function in two different directions.</p>
                     <p><m>\frac{f(0) - f(-2)}{0 -^{-} 2} = </m> <var name="$forward" width="5" /></p>
                     <p><m>\frac{f(-2) - f(0)}{-2 - 0} = </m> <var name="$backward" width="5" /></p>
                 </statement>
-                
+
                 <solution>
                     <p>It does not matter what direction you calculate an average rate of change.  Just keep the ordered pairs vertically aligned!</p>
                 </solution>

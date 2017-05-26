@@ -463,6 +463,13 @@
                 <set>
                   <member>\text{?}</member>
                   <member>\text{concave up}</member>
+                  <member correct="yes">\text{concave down}</member>
+                </set>
+              </var>
+              <var name="$concaveUp">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{concave up}</member>
                   <member>\text{concave down}</member>
                 </set>
               </var>
@@ -492,6 +499,9 @@
                 );
                 $increasing=PopUp(
                 ["?","increasing","decreasing"],"increasing"
+                );
+                $concaveUp=PopUp(
+                ["?","concave up","concave down"],"concave up"
                 );
               </pg-code>
             </setup>
@@ -523,6 +533,21 @@
               </hint>
               <solution>
                 <p>This function is always positive and always increasing, but it is concave down (steep to start, but then less steep as time increases).</p>
+              </solution>
+            </stage>
+            <stage>
+              <statement>
+                <p>Last year, there were <m>10</m> rabbits, this year there are <m>20</m>, and next year there will be <m>40</m>. The population is doubling in size every year!</p>
+                <p>The function <m>P(t)</m> represents the number of rabbits, where <m>t</m> represents the number of years after last year.</p>
+                <p>Choose the descriptions which match this function when <m>t \le 0</m>.</p>
+                <p>The function is:  <var name="$positive" form="popup" /> and <var name="$increasing" form="popup" /> and <var name="$concaveUp" form="popup" /></p>
+              </statement>
+              <hint>
+                <p>Sketch a graph of this population function. Is it ever negative?</p>
+                <p>The population is growing faster as time goes on.</p>
+              </hint>
+              <solution>
+                <p>This function is always positive and increasing, and it is concave up (the population grew by <m>10</m> rabbits, then <m>20</m>, then <m>40</m> and so on).</p>
               </solution>
             </stage>
           </webwork>

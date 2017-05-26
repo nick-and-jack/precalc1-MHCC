@@ -14,20 +14,20 @@
   <title>Domain and Range Activity </title>
   <subsection>
     <title>Domain and Range</title>
-    
+
     <p>
       <ul>
         <li><p>What kinds of input does a function accept?</p></li>
         <li><p>What are all the possible outputs a function will produce?</p></li>
       </ul>
     </p>
-    <p>In math we have our own vocabulary we use to ask the same questions.  The kinds of inputs a function will accept is called the <term>domain</term><index><main>domain</main></index> of the function.  All the possible outcomes is called the <term>range</term><index><main>range</main></index>.</p>
+    <p>In math we have our own vocabulary we use to ask these same questions. The set of inputs a function will accept is called the <term>domain</term><index><main>domain</main></index> of the function. The set of possible outputs is called the <term>range</term><index><main>range</main></index>.</p>
     <exercise>
       <introduction>
-      <p>Consider shopping online at a t-shirt company.  Each t-shirt costs $13.00 and each time you click on the <q>add to shopping cart</q> your account adds a charge for $13.00.</p>
-      <p>Let C be the cost in dollars of purchasing N t-shirts.  Therefore, <m>C = f(N)</m>.</p>
-      <p>What kinds of input values for N does our function accept?</p>
-      <p>What kinds of output values does C create?</p>
+      <p>Consider shopping online at a t-shirt company.  Each t-shirt costs <m>\$ 13.00</m>, and each time you click on the <q>add to shopping cart</q> button, your account adds a charge for <m>\$ 13.00</m>.</p>
+      <p>Let <m>C</m> represent the cost in dollars of purchasing <m>N</m> t-shirts. Therefore, <m>C = f(N)</m>.</p>
+      <p>What are the possible input values in this situation? In other words: what is the <em>domain</em> of the function <m>f</m>?</p>
+      <p>What are the possible output values in this situation? In other words: what is the <em>range</em> of the function <m>f</m>?</p>
       </introduction>
         <webwork>
           <setup>
@@ -73,7 +73,7 @@
             </pg-code>
           </setup>
           <statement>
-            <p>T-shirt cost function. Enter the cost of buying N t-shirts. </p>
+            <p>T-shirt cost function: Enter the cost of buying <m>N</m> t-shirts. </p>
             <table>
               <tabular top="medium" bottom="medium" left="medium" right="medium">
                 <col halign="center"/>
@@ -111,7 +111,7 @@
             <p>
               <ol label="a">
                 <li>
-                  <p>Look at the inputs for N from the table.</p>
+                  <p>Look at the inputs for <m>N</m> from the table.</p>
                   <p>Is it possible to buy <m>3.1415</m> t-shirts?</p>
                   <p><var name="$no" form="buttons" /></p>
                 </li>
@@ -120,15 +120,19 @@
                   <p><var name="$no" form="buttons" /></p>
                 </li>
                 <li>
-                  <p>How would you classify all the possible input values? <var name="$integers" form="popup" />? This is the domain of our function.</p>
+                  <p>How would you classify all the possible input values?</p>
+                  <p><var name="$integers" form="popup" />?</p>
+                  <p>This is the domain of our function.</p>
                 </li>
                 <li>
-                  <p>Now look at all the outputs C from the table.</p>
-                  <p>Is it possible that the cost will be <m>\$14</m> or <m>\$15</m> or <m>\$ 16</m>?</p>
+                  <p>Now look at all the outputs <m>C</m> from the table.</p>
+                  <p>Is it possible that the cost will be <m>\$ 14</m> or <m>\$ 15</m> or <m>\$ 16</m>?</p>
                   <p><var name="$no" form="buttons" /></p>
                 </li>
                 <li>
-                  <p>How would you classify all the output values? <var name="$thirteen" form="popup" /> This is the range of our function.</p>
+                  <p>How would you classify all the output values?</p>
+                  <p><var name="$thirteen" form="popup" /></p>
+                  <p>This is the range of our function.</p>
                 </li>
               </ol>
             </p>
@@ -137,31 +141,31 @@
             <p>
               <ol label="a">
                 <li>
-                  <p>You can buy 0 t-shirts or 1 or 2 or more, but you can't buy 1.5 t-shirts or 2.63 t-shirts.  You can only buy whole t-shirts, not fractions of shirts.</p>
+                  <p>You can buy <m>0</m> t-shirts, or <m>1</m> or <m>2</m> or more, but you can't buy <m>1.5</m> t-shirts or <m>2.63</m> t-shirts. You can only buy a whole number of t-shirts, not fractions of shirts.</p>
                 </li>
                 <li>
-                  <p>You can't choose to buy negative t-shirts so N can't be less than zero.</p>
+                  <p>You also can't buy a negative number of t-shirts, so <m>N</m> can't be less than zero.</p>
                 </li>
                 <li>
-                  <p>In math we say that the domain of our function is <em>non-negative integers</em>.  This means the domain is the numbers N = 0, 1, 2, 3, <init>etc.</init> These are the only numbers that make sense for our function, the only numbers our function accepts.</p>
+                  <p>In math we say that the domain of our function is the set of all <em>non-negative integers</em>. This means the domain is the set: <m>N = \{0, 1, 2, 3, \cdots \}</m>. These are the only numbers that make sense for our function, the only numbers our function accepts.</p>
                 </li>
                 <li>
                   <p>If you don't add t-shirts to your online shopping cart, then <m>N = 0</m>, your cart will have no t-shirst and you won't pay anything, <m>f(0) = 0</m>.</p>
-                  <p>If you choose <m>N = 1</m> t-shirts you will pay $13.00</p>
-                   <p>At <m>N = 2</m> you pay $26.00</p>
-                  <p>Notice you will never have a final checkout of $10.00 or $18.00. In fact, you will only pay in multiples of $13.00 because, again, you can't buy fractions of a t-shirt.</p>
+                  <p>If you choose <m>N = 1</m> t-shirts you will pay <m>\$ 13.00</m></p>
+                   <p>At <m>N = 2</m> you pay <m>\$ 26.00</m></p>
+                  <p>Notice you will never have a final checkout of <m>\$ 10.00</m> or <m>\$ 18.00</m>. In fact, you will only pay in multiples of <m>\$ 13.00</m> because, again, you can't buy fractions of a t-shirt.</p>
                 </li>
                 <li>
                   <p>What are all the possible output values of our function?</p>
                   <p>You can't purchase a negative amount and you can't buy fractions of a t-shirt</p>
-                  <p>Therefore the range of our function is <em>all non-negative integer multiples of <m>13</m></em>.</p>
+                  <p>Therefore the range of our function is <em>all non-negative integer multiples of <m>13</m></em>: </p>
                 </li>
               </ol>
             </p>
           </solution>
         </webwork>
     </exercise>
-    
+
     <p>Sometimes a function can use any number as an input. Consider <me>f(x) = x^2</me></p>
     <exercise>
       <title>Polynomials</title>
@@ -214,7 +218,7 @@
                 </li>
                 <li>
                   <p>Use a calculator to help you answer this next question.</p>
-                  <p>Is there any number you can't multiply by itself? <var name="$no" form="popup" /></p>
+                  <p>Is there any number you <em>can't</em> square (multiply by itself)? <var name="$no" form="popup" /></p>
                 </li>
               </ol>
             </p>
@@ -222,15 +226,15 @@
         </stage>
         <stage>
           <statement>
-            <p>Therefore what is the domain of <m>f(x)=x^2</m>?</p>
+            <p>Therefore, what is the domain of <m>f(x)=x^2</m>?</p>
             <p>The domain is <var name="$domain" form="popup" /></p>
           </statement>
         </stage>
       </webwork>
     </exercise>
 
-    <p>Once we know the domain, we can then find all the possible results</p>
-    
+    <p>Once we know the domain, we can then find all the possible results.</p>
+
     <exercise>
       <webwork>
         <setup>
@@ -294,11 +298,11 @@
         </statement>
       </webwork>
     </exercise>
-    <p>Sometimes a function will only accept certain input values, or it may produce only certain kinds of results.</p>
-    <p>Consider <me>f(x) = \sqrt{x}</me></p>
+    <p>Sometimes a function will only accept certain input values, or it may produce only certain kinds of outputs.</p>
+    <p>Consider the function: <me>f(x) = \sqrt{x}</me></p>
     <p>This function will take real number inputs, as long as the input is not negative (you can't take the square root of a negative number).</p>
-    <p>On the other hand, the square root function only yields results that are positive or zero.</p>
-    <p>By graphing the function the domain and range become more apparent.</p>
+    <p>On the other hand, the square root function only produces outputs that are positive or zero.</p>
+    <p>By graphing the function, the domain and range become more apparent.</p>
       <figure xml:id="graph-of-root-xs">
         <caption>Graph of <m>f(x)=\sqrt{x}</m></caption>
           <image xml:id="image-graph-of-root-x">
@@ -311,15 +315,15 @@
             </latex-image-code>
           </image>
       </figure>
-      <p>The figure shows the graph of <m>f</m> exists horizontally only from the origin and to the right. Therefore the domain of <m>f</m> is <m>x \geq 0</m>.</p>
-      <p>The figure also shows the graph of <m>f</m> exists vertically from the origin and up. Therefore the range of <m>f</m> is <m>y \geq 0</m>.</p>
-      <p>Note: since the vertical axis is called <m>y</m>, it means that <m>y = f(x)</m>. Think of <m>f(x)</m> as the <q>machine</q> that takes <m>x</m> values and makes <m>y</m> values.  Therefore we can use <m>f(x)</m> or <m>y</m> when referring to the range.</p>
+      <p>The figure shows the graph of <m>f</m> exists horizontally only from the origin and to the right. Therefore the domain of <m>f</m> is: <m>x \geq 0</m>.</p>
+      <p>The figure also shows the graph of <m>f</m> exists vertically from the origin and up. Therefore the range of <m>f</m> is: <m>y \geq 0</m>.</p>
+      <p>Note: Since the vertical axis is called <m>y</m>, it means that <m>y = f(x)</m>. Think of <m>f(x)</m> as the <q>machine</q> that turns <m>x</m> values into <m>y</m> values.  Therefore we can use <m>f(x)</m> or <m>y</m> when referring to the range.</p>
     <exercise>
       <webwork>
         <statement>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KeUqTgkB/width/413/height/410/border/888888" width="413px" height="410px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>The function <m>f(x)= \sqrt{x}</m> can be manipulated to change its domain and its range (wait til you get to <q>reflections!</q>)</p>
-          <p>By clicking on a checkbox you can see the domain (green dotted line) and the range (red solid line) of various forms of the function.</p>
+          <p>The function <m>f(x)= \sqrt{x}</m> can be manipulated to change its domain and its range.</p>
+          <p>By clicking on a checkbox, you can see a variation of this function. The domain is shown as an interval on the <m>x</m>-axis, and the range is shown as an interval on the <m>y</m>-axis.</p>
           <p>
             <ol label="a">
               <li>
@@ -340,7 +344,7 @@
       </webwork>
     </exercise>
     <assemblage>
-      <p>Things to remember for now</p>
+      <p>Important facts when determining the domain of a function:</p>
       <p>
         <ul>
           <li>
@@ -354,8 +358,8 @@
     </assemblage>
     <example>
       <title>The algebraic method of finding the domain of any function with a square root</title>
-      <p>Set the expression under the root (the <q>guts</q>) greater than or equal to zero and solve. The result is the domain of the function.</p>
-      <p>Let <m>f(x)=\sqrt{4x-9}</m>. To find the domain set <m>4x-9 \geq 0</m> and solve.</p>
+      <p>Because we cannot take the square root of a negative number, we can set the expression under the root (called the <q>radicand</q>) greater than or equal to zero, and then isolate the variable. The result is the domain of the function.</p>
+      <p>Let <m>f(x)=\sqrt{4x-9}</m>. To find the domain, we set <m>4x-9 \geq 0</m> and isolate <m>x</m>.</p>
       <p>
         <md>
           <mrow>4x-9 \amp \geq 0</mrow>
@@ -364,20 +368,43 @@
         </md>
       </p>
       <p>So the domain of <m>f</m> is <m>x \geq \frac{9}{4}</m></p>
+      <sidebyside widths="47% 47%">
+        <figure>
+          <caption>Graph of <m>f(x)=\sqrt{4x-9}</m></caption>
+            <image>
+              <latex-image-code>
+                  <![CDATA[\begin{tikzpicture}
+                  \begin{axis}[ymin=-2, ymax=6, xlabel={$x$}, ylabel={$y$}, xtick={2,4,...,8}, minor xtick={0,1,...,9}, ytick={-2,0,...,6}, minor ytick={-2,-1,...,6}, xmin=0, xmax=9, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
+                  \addplot[thick, color=red, domain=0:4,->] ({(x^2+9)/4},{x});
+                  \end{axis}
+                  \end{tikzpicture}]]>
+              </latex-image-code>
+            </image>
+        </figure>
+        <paragraphs>
+          <p>The domain is the set of numbers which are greater than or equal to <m>\frac{9}{4}</m>, as shown in the graph. The <m>x</m>-intercept of the graph is the point <m>\left(\frac{9}{4}, 0\right)</m>, and the graph extends to the right.</p>
+          <p>This technique is good only for determining the domain of a function. Finding the range requires other methods.</p>
+        </paragraphs>
+      </sidebyside>
     </example>
-      
-      <p>For functions written as fractions, we want to avoid <m>0</m> in the denominator. Set the denominator equal to zero and solve. Avoid these solutions since they are not part of the domain.</p>
+
+      <p>For functions written as fractions, we must avoid the number <m>0</m> in the denominator. A good way to avoid these numbers is to solve for them: Set the denominator equal to zero, and then solve that equation.</p>
       <p>Let <m>f(x)=\frac{\sqrt{x}}{9-x^2}</m></p>
       <p>Set the denominator equal to zero then solve the equation.</p>
-      <p>
-        <md>
-          <mrow>9-x^2 = 0</mrow>
-          <mrow>(3-x)(x+3) = 0</mrow>
-        </md>
-      </p>
-      <blockquote><p><em>In this example you need to know that <q>not equal to</q> is typed as <q>!=</q> when you type your answer into an answer box</em></p></blockquote>
+      <example>
+        <statement>
+          <p>Find the domain of the function: <m>f(x)=\frac{\sqrt{x}}{9-x^2}</m></p>
+          <p>
+            <md>
+              <mrow>9-x^2 \amp= 0</mrow>
+              <mrow>(3-x)(x+3) \amp= 0</mrow>
+            </md>
+          </p>
+        </statement>
+      </example>
+      <p>In this example you need to know that <q>not equal to</q> is typed as <q>!=</q> when you type your answer into an answer box</em></p></blockquote>
       <p>Can you solve the last equation? There are two solutions</p>
-      
+
       <exercise>
         <webwork>
           <statement>
@@ -446,7 +473,7 @@
               $dom3 = Compute("x!=7");
               $dom4 = Compute("x!= -3 and x!= 3");
             </pg-code>
-          </setup>  
+          </setup>
           <statement>
             <p>
               <ol label="a" >
