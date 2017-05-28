@@ -388,65 +388,85 @@
       </sidebyside>
     </example>
 
-      <p>For functions written as fractions, we must avoid the number <m>0</m> in the denominator. A good way to avoid these numbers is to solve for them: Set the denominator equal to zero, and then solve that equation.</p>
-      <p>Let <m>f(x)=\frac{\sqrt{x}}{9-x^2}</m></p>
-      <p>Set the denominator equal to zero then solve the equation.</p>
-      <example>
-        <statement>
-          <p>Find the domain of the function: <m>f(x)=\frac{\sqrt{x}}{9-x^2}</m></p>
-          <p>
-            <md>
-              <mrow>9-x^2 \amp= 0</mrow>
-              <mrow>(3-x)(x+3) \amp= 0</mrow>
-            </md>
-          </p>
-        </statement>
-      </example>
-      <p>In this example you need to know that <q>not equal to</q> is typed as <q>!=</q> when you type your answer into an answer box</em></p></blockquote>
-      <p>Can you solve the last equation? There are two solutions</p>
+      <p>For functions written as fractions, we must also avoid input values which put the number <m>0</m> in the denominator. A good way to avoid these numbers is to solve for them: Set the denominator equal to zero, and then solve that equation.</p>
 
       <exercise>
         <webwork>
           <statement>
-            <p>One solution comes from <m>3-x = 0</m>. The solution is <var name="3" width="4" /></p>
-            <p>The other solution comes from <m>3+x = 0</m>. The solution is <var name="-3" width="4" /> </p>
+            <p>For the function <me>f(x)=\frac{\sqrt{x}}{9-x^2}</me> find the input values which would cause division by zero.</p>
+            <p>To do this, we set the denominator equal to zero then solve the equation.</p>
+            <p>
+              <md>
+                <mrow>9-x^2 \amp= 0</mrow>
+                <mrow>(3-x)(x+3) \amp= 0</mrow>
+              </md>
+            </p>
+            <p>One solution comes from the factor <m>3-x = 0</m>.</p>
+            <p>Answer: <m>x</m> = <var name="3" width="5" /></p>
+            <p>The other solution comes from the factor <m>3+x = 0</m>.</p>
+            <p>Answer: <m>x</m> = <var name="-3" width="5" /></p>
           </statement>
+          <solution>
+            <p>The numbers <m>x = 3</m> and <m>x = -3</m> would cause division by zero in this function.</p>
+          </solution>
         </webwork>
       </exercise>
+
       <p>We are not done yet. What about the numerator <m>\sqrt{x}</m> ? Are there any values that might cause trouble there?</p>
+
       <exercise>
         <webwork>
           <setup>
             <var name="$dom">
-              <static>x \geq 0</static>
+              <set>
+                <member>x \geq 0 \text{ and } x \neq -3</member>
+                <member correct="yes">x \geq 0 \text{ and } x \neq 3</member>
+                <member>x \geq 0</member>
+              </set>
             </var>
-            <var name="$dom2">
-              <static>x \neq 3</static>
-            </var>
+            <var name="$domNumerator"><static>x \geq 0</static></var>
 
             <pg-code>
               Context("Inequalities");
               Context()->variables->are(x=>'Real',y=>'Real');
-              $dom = Compute("x&gt;=0");
-              $dom2 = Compute("x!=3");
+              $domNumerator=Compute("x &gt;= 0");
+              $dom=RadioButtons(
+              ["\(x \geqslant 0 \text{ and } x \neq -3\)","\(x \geqslant 0 \text{ and } x \neq 3\)", "\(x \geqslant 0\)"],1,
+              labels => ["(x >= 0) and (x !0 -3)","(x >= 0) and (x != 3)", "x >= 0"],
+              displayLabels => 0
+              );
             </pg-code>
           </setup>
         <stage>
           <statement>
-            <p>What are the only values of <m>x</m> the numberator will accept? (Use an inequality to state your answer) <var name="$dom" width="8" /></p>
+            <p>What are the only values of <m>x</m> the numerator will accept? (Use an inequality to state your answer) <var name="$domNumerator" width="8" /></p>
           </statement>
+          <hint>
+            <p>Can we take the square root of zero?</p>
+          </hint>
+          <solution>
+            <p>The domain of <m>\sqrt{x}</m> is:  <m>x \gt = 0</m></p>
+          </solution>
         </stage>
         <stage>
           <statement>
-            <p>Using the domains of the denominator you found, identify the domain of the entire function.</p>
+            <p>Using the domain of the denominator you found, identify the domain of the entire function.</p>
             <p>The denominator could not use the values <m>x = \pm 3</m>. So the domain of the denominator is <m>x \neq -3</m> and <m>x \neq 3</m>.</p>
             <p>The numerator can only use values <m>x \geq 0</m>.</p>
             <p>Think about what values the numerator and the denominator have in common.</p>
-            <p>The domain of f is <var name="$dom" width="5" /> and <var name="$dom2" width="5" /></p>
+            <p>The domain of <m>f</m> is:</p>
+            <p><var name="$dom" form="buttons" /></p>
           </statement>
+          <hint>
+            <p>The domain must be the numbers which are in common between the domains of the numerator and the denominator.</p>
+          </hint>
+          <solution>
+            <p>The domain of the function is:  <m>x \geqslant 0</m> and <m>x \neq 3</m>.</p>
+          </solution>
         </stage>
         </webwork>
       </exercise>
+
     <p>Try some algebraic methods of finding domain on your own. If you get stuck, use your calculator to make a graph of the function.  Look to see where the graph exists.</p>
       <exercise>
         <title>Practice with Roots and Denominators</title>
@@ -475,27 +495,28 @@
             </pg-code>
           </setup>
           <statement>
+            <p>Remember that typing <m>x!=a</m> means <q><m>x</m> does not equal <m>a</m></q>.</p>
             <p>
               <ol label="a" >
                 <li>
                   <p>Let <m>f(x)= \sqrt{x-4}</m></p>
-                  <p>What possible choices for x will allow the function to compute real valued outputs?</p>
+                  <p>What possible choices for <m>x</m> will allow the function to compute real valued outputs?</p>
                   <p><m>f</m> has the domain <var name="$dom1" width="8" /></p>
                 </li>
                 <li>
                   <p>Let <m>f(x) = \sqrt{4-x}</m></p>
-                  <p>What possible choices for x will allow the function to compute real valued ouptuts?</p>
+                  <p>What possible choices for <m>x</m> will allow the function to compute real valued ouptuts?</p>
                   <p><m>f</m> has the domain <var name="$dom2" width="8" /></p>
                 </li>
                 <li>
                   <p>Let <m>f(x) = \frac{1}{x-7}</m></p>
-                  <p>What possible choices for x will allow the function to compute real valued outputs?</p>
+                  <p>What possible choices for <m>x</m> will allow the function to compute real valued outputs?</p>
                  <p><m>f</m> has the domain <var name="$dom3" width="8" /></p>
                 </li>
 
                 <li>
                   <p>Let <m>f(x) = \frac{1}{x^2-9}</m></p>
-                  <p>What possible choices for x will allow the function to computer real valued outputs?</p>
+                  <p>What possible choices for <m>x</m> will allow the function to compute real valued outputs?</p>
                   <p><m>f</m> has the domain <var name="$dom4" width="8" /></p>
                 </li>
               </ol>
@@ -522,10 +543,9 @@
         </webwork>
       </exercise>
 
-    <p>Identifying the domain and range of a function just by looking at a formula can be difficult because you <q>just have to know what to look for</q> and that only comes with experience.</p>
-    <p>Often, a good way to determine the domain and range of a function is to graph it. Make a graph on a calculator or any graphing tool and try to identify where the function exists horizontally, this is the domain.  Then try to identify where the funciton exists vertically, this is the range.</p>
-
-    <p>Always be careful not to think the domain or range must be continuous intervals.  They may consist of different sections that together make up the entire domain or the entire range.</p>
+    <p>Identifying the domain and range of a function just by looking at its formula can be difficult. Knowing what to look for comes with experience.</p>
+    <p>Often, a good way to determine the domain and range of a function is to graph it. Make a graph on a graphing tool and try to identify where the function exists horizontally: this is the domain. Then try to identify where the function exists vertically: this is the range.</p>
+    <p>Be careful: the domain and range are not necessarily connected intervals. They may consist of different sections that together make up the entire domain or the entire range.</p>
 
     <exercise>
       <webwork>
@@ -560,6 +580,12 @@
             <p>Use inequalities to state the intervals that make up the domain of <m>f</m></p>
             <p>From left to right, the domain is <var name="$dom1" width="8" /> and <var name="$dom2" width="8" /></p>
           </statement>
+          <hint>
+            <p>Remember that the domain is the set of possible <m>x</m>-values, so you must use the symbol <m>x</m> here.</p>
+          </hint>
+          <solution>
+            <p>From left to right, the range is: <m>-5 \leqslant x \leqslant 0</m> and <m>2 \lt x \leqslant 5</m></p>
+          </solution>
         </stage>
         <stage>
           <statement>
@@ -568,12 +594,18 @@
             <p>Use the point on the vertical axis to drag the horizontal line across the graph. Use the line to identify all the possible outputs the function can yield. This is the range of the function.</p>
             <p>From bottom to top, the range of the function is <var name="$rng1" width="8" /> and <var name="$rng2" width="8" /></p>
           </statement>
+          <hint>
+            <p>Remember that the range is the set of possible <m>y</m>-values, so you must use the symbol <m>y</m> here.</p>
+          </hint>
+          <solution>
+            <p>From bottom to top, the range is: <m>-3 \leqslant y \leqslant -0.5</m> and <m>2 \lt y \leqslant 8</m></p>
+          </solution>
         </stage>
         <stage>
           <statement>
             <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WhcSmWsn/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>In green intervals along the horizontal axis denote the domain of the function.</p>
-            <p>The range of the function is shaded in range along the vertical axis.</p>
+            <p>The green intervals along the horizontal axis show the domain of the function.</p>
+            <p>The red intervals along the vertical axis show the range of the function.</p>
             <p>Enter a <m>1</m> in the box if you got this problem correct <var name="1" width="3" /></p>
           </statement>
         </stage>
@@ -607,10 +639,13 @@
           <stage>
             <statement>
                 <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>Drag the left boundary point on the horizontal interval (in green) to change the domain of the function.</p>
+                <p>Drag the left boundary point on the horizontal axis (in green) to change the domain of the function.</p>
                 <p>Set the domain to <m>0.4\leqslant x \lt 8</m></p>
                 <p>Under this domain, the range is <var name="$rng1" width="8" /></p>
             </statement>
+            <hint>
+              <p>Remember that the range is the set of possible <m>y</m>-values, so you must use the symbol <m>y</m> here.</p>
+            </hint>
           </stage>
           <stage>
             <statement>
@@ -619,6 +654,9 @@
               <p>Set the domain to <m>2\leqslant x \lt 8</m></p>
               <p>Under this domain, the range is <var name="$rng2" width="8" /></p>
             </statement>
+            <hint>
+              <p>Remember that the range is the set of possible <m>y</m>-values, so you must use the symbol <m>y</m> here.</p>
+            </hint>
           </stage>
           <stage>
             <statement>
@@ -627,6 +665,9 @@
               <p>Set the domain to <m>5\leqslant x \lt 8</m></p>
               <p>Under this domain, the range is <var name="$rng3" width="8" /></p>
             </statement>
+            <hint>
+              <p>Remember that the range is the set of possible <m>y</m>-values, so you must use the symbol <m>y</m> here.</p>
+            </hint>
           </stage>
           </webwork>
       </exercise>
