@@ -33,38 +33,39 @@
       <title>Gist of Domain, Range and Piecewise Defined Functions</title>
         <subsection>
           <title>Domain and Range</title>
-            <p>Sometimes a formula can only accept certain kinds of input values. For instance the square root function <me>f(x) = \sqrt x</me> can only accept values of x are NOT negative because only these inputs allow the function to yield real valued outputs.</p>
+            <p>Sometimes a formula can only accept certain kinds of input values. For instance the square root function <me>f(x) = \sqrt x</me> can only accept values of <m>x</m> that are <em>not</em> negative, because only non-negative inputs allow the function to yield real-valued outputs.</p>
             <p>In math we say</p>
             <blockquote>
               <p>The function <m>f</m> has a domain such that <m>x \geqslant 0</m></p>
             </blockquote>
             <p>meaning whatever values we choose for <m>x</m>, they must be greater than or equal to zero. That's the math way of saying <q>not negative</q>.
             </p>
-            <p>The <term>domain</term> of a function is the set of all inputs a function can or is allowed to use.</p>
-            <p>Consider another example<me>f(x) = \frac{x}{{{x^2} - 1}}</me>In this case the denominator could be zero (a big no-no) if <m>x</m> is either <m>1</m> or <m>-1</m>. So the domain if this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
-            <p>In math this is written as</p>
-            <blockquote>
-              <p>Domain is all <m>x \ne  \pm 1</m></p>
-            </blockquote>
-            <p>Once we know what inputs a function accepts, we then consider all the possible output results. This is called the <term>range</term> of the function.</p>
-            <p>Back to our example of a square root function. Consider <me>f(x) = \sqrt {x - 8}</me> This function has a domain such that whatever <m>x</m> is, then <m>x-8</m> must be positive. Solving the inequality for x we arrive with the domain of</p>
+            <p>The <term>domain</term> of a function is the set of all inputs a function is allowed to use.</p>
+            <p>Consider another example: <me>f(x) = \frac{x}{{{x^2} - 1}}</me> In this case the denominator would be zero if <m>x</m> is either <m>1</m> or <m>-1</m>, so the domain of this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
+            <p>In math this can be written many different ways.</p>
+            <p>We could use <em>set-builder</em> notation: <me>\{x \vert x \neq \pm 1 \}</me></p>
+            <p>This is read, from left-to-right, as <q>the set of all numbers <m>x</m>, such that <m>x</m> is not equal to positive or negative <m>1</m></q>.</p>
+            <p>Or, we could use <em>inequalitites</em>: <me>-\infty \lt x \lt -1 \text{ or } -1 \lt x \lt 1 \text{ or } 1 \lt x \lt \infty</me></p>
+            <p>A third choice is <em>interval</em> notation: <me>(-\infty,-1) \cup (-1,1) \cup (1,\infty)</me></p>
+            <p>Which ever notation we use, once we know what inputs a function accepts, we then consider all the possible outputs for the function. The set of all possible outputs is called the <term>range</term> of the function.</p>
+            <p>Returning to our example of a square root function, consider <me>f(x) = \sqrt {x - 8}</me>. This function has a domain such that whatever <m>x</m> is, then <m>x-8</m> must be positive. Solving the inequality for <m>x</m> we arrive at the domain of</p>
             <p><md><mrow>x - 8 \amp \geqslant 0</mrow>
-            <mrow>x \amp \geqslant 8</mrow></md></p>
+            <mrow>x \amp \geqslant 8</mrow>.</md></p>
             <p>In English we would say that our function will accept inputs that are greater than or equal to <m>8</m>.</p>
-            <p>Assuming our inputs are in the domain of f, consider all the possible output values our function can create.</p>
-            <p>The square root function always creates non-negative results.  In other words, if you put a number (from the domain) into the square root funciton, you always get a result that is greater than or equal to zero.</p>
-            <p>Under these conditions the function will never yield negative results.  Only <m>y = 0</m> or <m>y > 0</m>, positive results, will ever come out of this function. Therefore</p>
+            <p>With the domain found, we now turn to the task of finding all the possible output values our function can create; this is the range.</p>
+            <p>The square root function always creates non-negative results. In other words, if you put a number (from the domain) into the square root function, you always get a result that is greater than or equal to zero.</p>
+            <p>Under these conditions the function will never yield negative results. Only <m>y = 0</m> or <m>y > 0</m>, positive results, will ever come out of this function. Therefore:</p>
             <blockquote>
               <p>The range  of <m>f(x) = \sqrt x </m> is <m>y \geqslant 0</m></p>
             </blockquote>
-            <p>At this point it is important to notice that when we state the domain of a function, we refer to the input varialbe. So far our input has been caled <m>x</m>, so every domain we have described has <m>x</m> in it. For instance <m>f(x) = \frac{x}{{{x^2} - 1}}</m> had the domain <m>x \ne  \pm 1</m></p>
-            <p>When we state the range of a function we must refer to the output variable or the function itself. If <m>y=f(x)</m> where <m>f(x) = \frac{x}{{{x^2} - 1}}</m> then our range has to refer to <m>y</m> or to <m>f(x)</m>. In this case the range is <m>y \leqslant 0</m> or <m>y \geqslant 0</m> (graph this function on your calculator to see that the outputs all real numbers, but never zero). We could also use <m>f(x)</m> instead of <m>y</m>.</p>
+            <p>At this point it is important to notice that when we state the domain of a function, we refer to the input variable. So far our input has been caled <m>x</m>, so every domain we have described has had <m>x</m> in it. For instance, <m>f(x) = \frac{x}{{{x^2} - 1}}</m> had the domain <m>x \ne  \pm 1</m>.</p>
+            <p>When we state the range of a function we must refer to the output variable or the function itself. If <m>y=f(x)</m> where <m>f(x) = \frac{x}{{{x^2} - 1}}</m>, then our range has to refer to <m>y</m> or to <m>f(x)</m>. In this case the range is <m>y \geqslant 0</m>. We could also use <m>f(x)</m> instead of <m>y</m> when describing the range.</p>
             <p>Identifying the domain and range directly from a formula can be difficult. It is often more clear if we look at functions graphically. Below is a graph of <m>f(x) = \sqrt {x - 8}</m></p>
 
             <example>
                 <figure xml:id="graph-of-root-x-minus-8">
                   <caption>Graph of <m>f(x)=\sqrt{x-8}</m></caption>
-                    <image xml:id="image-graph-of-root-x-minus-8">
+                    <image width="47%" xml:id="image-graph-of-root-x-minus-8">
                       <latex-image-code>
                           <![CDATA[\begin{tikzpicture}
                           \begin{axis}[ymin=-5, ymax=7, xlabel={$x$}, ylabel={$y$}, xtick={4,8,...,24}, minor xtick={-3,-2,...,25}, ytick={-4,-2,...,6}, minor ytick={-5,-4,...,7}, xmin=-3, xmax=25, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
@@ -74,20 +75,17 @@
                       </latex-image-code>
                     </image>
                 </figure>
-            <p>Notice the graph only appears for input values <m>x \geqslant 8</m>. That's the domain of <m>f</m>.</p>
-            <p>Also notice the graph only appears at or above the <m>x-</m>axis.  The graph shows us the range is <m>y \geqslant 0</m></p>
+            <p>Notice the graph only appears for input values <m>x \geqslant 8</m>. That is the domain of <m>f</m>.</p>
+            <p>Also notice the graph only appears at or above the <m>x-</m>axis.  The graph shows us the range is <m>y \geqslant 0</m>.</p>
             </example>
 
-            <p>When you want to find the domain and range of a function, one option is to graph it on a calculator or any web graphing tool. Determine the intervals or boundaries on the horizontal axis where the graph exists. This is the domain.</p>
+            <p>When you want to find the domain and range of a function, one option is to graph it on a graphing tool. Determine the intervals or boundaries on the horizontal axis where the graph exists. This is the domain.</p>
             <p>Next use the graph to determine if there are vertical intervals or boundaries to how high or low the graph reaches. This is the range.</p>
             <exercise>
               <webwork>
                 <setup>
                   <var name="$dom1">
                       <static>2&lt;=x&lt;6</static>
-                  </var>
-                  <var name="$dom2">
-                      <static>3&lt;=x&lt;7</static>
                   </var>
                   <var name="$rng1">
                       <static>1.5&lt;=y&lt;3.5</static>
@@ -100,31 +98,28 @@
                     Context("Inequalities");
                     Context()->variables->are(x=>'Real',y=>'Real');
                     $dom1 = Compute("2&lt;=x&lt;6");
-                    $dom2 = Compute("3&lt;=x&lt;7");
                     $rng1 = Compute("1.5&lt;=y&lt;3.5");
                     $rng2 = Compute("3&lt;=y&lt;5");
                   </pg-code>
                 </setup>
-                <statement>
-                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/s4F4ptNM/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                  <p>The domain of the function f is shaded in green on the horizontal axis while its range is shaded in red on the vertical axis. Drag the graph to change its domain and range.</p>
-                  <p>Use <m>x</m> to describe the domain and use <m>y</m> to describe the range.</p>
-                  <p>Drag the graph from the point at the origin to the point <m>(2, 1.5)</m>.</p>
-                  <blockquote>
+                <stage>
+                  <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/s4F4ptNM/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>The domain of the function <m>f</m> is shown as an interval on the <m>x</m>-axis, while its range is shown as an interval on the <m>y</m>-axis. Click and drag the bottom-left point on the graph to change its domain and range.</p>
+                    <p>Use <m>x</m> to describe the domain and use <m>y</m> to describe the range.</p>
+                    <p>Drag the bottom-left point to the location <m>(2, 1.5)</m>.</p>
                     <p>The domain is <var name="$dom1" width="8" /></p>
                     <p>The range is <var name="$rng1" width="8" /></p>
-                  </blockquote>
-                  <p>Drag the graph from the point at the origin to the point <m>(2, 3)</m>.</p>
-                  <blockquote>
+                  </statement>
+                </stage>
+                <stage>
+                  <statement>
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/s4F4ptNM/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                    <p>Drag the graph from the point at the origin to the point <m>(2, 3)</m>.</p>
                     <p>The domain is <var name="$dom1" width="8" /></p>
                     <p>The range is <var name="$rng2" width="8" /></p>
-                  </blockquote>
-                  <p>Drag the graph from the point at the origin to the point <m>(3, 3)</m>.</p>
-                  <blockquote>
-                    <p>The domain is <var name="$dom2" width="8" /></p>
-                    <p>The range is <var name="$rng2" width="8" /></p>
-                  </blockquote>
-                </statement>
+                  </statement>
+                </stage>
               </webwork>
             </exercise>
 
