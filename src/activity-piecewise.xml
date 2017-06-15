@@ -19,12 +19,12 @@
         <p>For instance...</p>
         <example>
           <p>A tax proposal is being considered in order to simplify income tax filing. The tax a person will pay depends on their amount of income.</p>
-        <figure width="47%" xml:id="graph-income-tax-piecewise">
+        <figure xml:id="graph-income-tax-piecewise">
         <caption>Graph of Income Tax function (pieceswise example)</caption>
-          <image xml:id="image-graph-income-tax-piecewise">
+          <image width="47%" xml:id="image-graph-income-tax-piecewise">
             <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
-                \begin{axis}[ymin=0, ymax=25, xlabel={Income (thousands of dollars)}, ylabel={Tax (thousand of dollars)}, xtick={0,10,...,100}, minor xtick={0,2,...,100}, ytick={0,5,...,25}, minor ytick={1,2,...,25}, xmin=0, xmax=100, grid=both]
+                \begin{axis}[ymin=0, ymax=25, xlabel={Income (thousands of dollars)}, ylabel={Tax (thousands of dollars)}, xtick={0,10,...,100}, minor xtick={0,2,...,100}, ytick={0,5,...,25}, minor ytick={1,2,...,25}, xmin=0, xmax=100, grid=both]
                 \addplot[thick, color=blue, domain=0:60,-] {0.15*x};
                 \addplot[thick, color=blue, domain=60:100,-] {.35*(x-60)+0.15*60};
                 \end{axis}
