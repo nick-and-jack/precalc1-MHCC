@@ -41,25 +41,41 @@
             <p>meaning whatever values we choose for <m>x</m>, they must be greater than or equal to zero. That's the math way of saying <q>not negative</q>.
             </p>
             <p>The <term>domain</term> of a function is the set of all inputs a function is allowed to use.</p>
-            <p>Consider another example: <me>f(x) = \frac{x}{{{x^2} - 1}}</me> In this case the denominator would be zero if <m>x</m> is either <m>1</m> or <m>-1</m>, so the domain of this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
-            <p>In math this can be written many different ways.</p>
-            <p>We could use <em>set-builder</em> notation: <me>\{x \vert x \neq \pm 1 \}</me></p>
-            <p>This is read, from left-to-right, as <q>the set of all numbers <m>x</m>, such that <m>x</m> is not equal to positive or negative <m>1</m></q>.</p>
-            <p>Or, we could use <em>inequalitites</em>: <me>-\infty \lt x \lt -1 \text{ or } -1 \lt x \lt 1 \text{ or } 1 \lt x \lt \infty</me></p>
-            <p>A third choice is <em>interval</em> notation: <me>(-\infty,-1) \cup (-1,1) \cup (1,\infty)</me></p>
-            <p>Which ever notation we use, once we know what inputs a function accepts, we then consider all the possible outputs for the function. The set of all possible outputs is called the <term>range</term> of the function.</p>
-            <p>Returning to our example of a square root function, consider <me>f(x) = \sqrt {x - 8}</me>. This function has a domain such that whatever <m>x</m> is, then <m>x-8</m> must be positive. Solving the inequality for <m>x</m> we arrive at the domain of</p>
-            <p><md><mrow>x - 8 \amp \geqslant 0</mrow>
-            <mrow>x \amp \geqslant 8</mrow>.</md></p>
-            <p>In English we would say that our function will accept inputs that are greater than or equal to <m>8</m>.</p>
-            <p>With the domain found, we now turn to the task of finding all the possible output values our function can create; this is the range.</p>
-            <p>The square root function always creates non-negative results. In other words, if you put a number (from the domain) into the square root function, you always get a result that is greater than or equal to zero.</p>
-            <p>Under these conditions the function will never yield negative results. Only <m>y = 0</m> or <m>y > 0</m>, positive results, will ever come out of this function. Therefore:</p>
-            <blockquote>
-              <p>The range  of <m>f(x) = \sqrt x </m> is <m>y \geqslant 0</m></p>
-            </blockquote>
-            <p>At this point it is important to notice that when we state the domain of a function, we refer to the input variable. So far our input has been caled <m>x</m>, so every domain we have described has had <m>x</m> in it. For instance, <m>f(x) = \frac{x}{{{x^2} - 1}}</m> had the domain <m>x \ne  \pm 1</m>.</p>
-            <p>When we state the range of a function we must refer to the output variable or the function itself. If <m>y=f(x)</m> where <m>f(x) = \frac{x}{{{x^2} - 1}}</m>, then our range has to refer to <m>y</m> or to <m>f(x)</m>. In this case the range is <m>y \geqslant 0</m>. We could also use <m>f(x)</m> instead of <m>y</m> when describing the range.</p>
+            <example>
+              <statement>
+                <p>Find the domain of the function <me>f(x) = \frac{x}{{{x^2} - 1}}.</me></p>
+              </statement>
+              <solution>
+                <p>We know that we cannot divide by zerw. In this function, the denominator would be zero if <m>x</m> is either <m>1</m> or <m>-1</m>, so the domain of this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
+                <p>In math this can be written many different ways.</p>
+                <p>We could use <em>set-builder</em> notation: <me>\{x \vert x \neq \pm 1 \}</me></p>
+                <p>This is read, from left-to-right, as <q>the set of all numbers <m>x</m>, such that <m>x</m> is not equal to positive or negative <m>1</m></q>.</p>
+                <p>Or, we could use <em>inequalitites</em>: <me>-\infty \lt x \lt -1 \text{ or } -1 \lt x \lt 1 \text{ or } 1 \lt x \lt \infty</me></p>
+                <p>This means that the domain includes all numbers strictly less than <m>-1</m>, between <m>-1</m> and <m>1</m>, or strictly greater than <m>1</m>.</p>
+                <p>A third choice is <em>interval</em> notation: <me>(-\infty,-1) \cup (-1,1) \cup (1,\infty)</me></p>
+                <p>Here, the union symbol <m>\cup</m> means we are bringing together these three intervals.</p>
+              </solution>
+            </example>
+            <note><title>Bad Inputs</title>
+              <p>To find the domain of a function, it is sometimes easiest to find the <q>bad</q> input values <mdash /> numbers which are <em>not</em> in the domain. Then, the domain is all numbers <em>except</em> the bad ones. Typical examples of <q>bad</q> inputs are those which cause <em>division by zero</em> or <em>negatives under a radical</em>.</p>
+            </note>
+            <p>Once we find the domain of a function, we can then consider all the possible outputs for the function. The set of all possible outputs is called the <term>range</term> of the function.</p>
+            <example>
+              <statement>
+                <p>Find the domain and range of the function <me>f(x) = \sqrt {x - 8}.</me></p>
+              </statement>
+              <solution>
+                <p>Since we cannot take the square root of a negative number, we know that <m>x-8</m> must be greater than or equal to zero. Solving this inequality for <m>x</m>, we can find the domain.</p>
+                <p><md><mrow>x - 8 \amp \geqslant 0</mrow>
+                <mrow>x \amp \geqslant 8</mrow>.</md></p>
+                <p>This means that the inputs for this function must be greater than or equal to <m>8</m>.</p>
+                <p>Once the domain is found, we can turn our attention to finding all the possible output values our function can create; this is the range.</p>
+                <p>The square root function always creates non-negative results. In other words, if you put a number (from the domain) into the square root function, you always get a result that is greater than or equal to zero.</p>
+                <p>Therefore, the range of <m>f(x) = \sqrt x </m> is <m>y \geqslant 0</m></p>
+              </solution>
+            </example>
+            <p>At this point it is important to note that when we state the domain of a function, we refer to the input variable. So far our inputs have been called <m>x</m>, so every domain we have described has had <m>x</m> in it. For instance, <m>f(x) = \frac{x}{{{x^2} - 1}}</m> had the domain <m>\{x \vert x \neq \pm 1 \}</m>.</p>
+            <p>When we state the range of a function, we must refer to the output. If <m>y=f(x)</m> where <m>f(x) = \frac{x}{{{x^2} - 1}}</m>, then our range has to refer to <m>y</m> or to <m>f(x)</m>, both of which represent the output. In this case the range could be written <m>y \geqslant 0</m> or <m>f(x) \geqslant 0</m>.</p>
             <p>Identifying the domain and range directly from a formula can be difficult. It is often more clear if we look at functions graphically. Below is a graph of <m>f(x) = \sqrt {x - 8}</m></p>
 
             <example>
@@ -80,7 +96,39 @@
             </example>
 
             <p>When you want to find the domain and range of a function, one option is to graph it on a graphing tool. Determine the intervals or boundaries on the horizontal axis where the graph exists. This is the domain.</p>
-            <p>Next use the graph to determine if there are vertical intervals or boundaries to how high or low the graph reaches. This is the range.</p>
+            <p>Next, use the graph to determine if there are vertical intervals or boundaries to how high or low the graph reaches. This is the range.</p>
+            <example>
+              <statement>
+                <p>Find the domain and range of the function <m>f(x)</m> graphed below.</p>
+                <figure>
+                  <caption>A graph of <m>y = f(x)</m>.</caption>
+                  <image width="47%">
+                    <description></description>
+                    <latex-image-code>
+                      <![CDATA[
+                        \begin{tikzpicture}
+                          \begin{axis}[xmin=-2,xmax=5.7,ymin=-33,ymax=31,ytick={},
+                          minor ytick={}]
+                          \addplot+[-,domain=-1:5, samples=40] {2*x^3-9*x^2};
+                          \addplot[holdot] coordinates{(-1,-11)} node[below] {$(-1,-11)$};
+                          \addplot[soldot] coordinates{(0,0)} node[above right] {$(0,0)$};
+                          \addplot[soldot] coordinates{(3,-27)} node[below] {$(3,-27)$};
+                          \addplot[soldot] coordinates{(5,25)} node[above] {$(5,25)$};
+                          \end{axis}
+                        \end{tikzpicture}
+                      ]]>
+                    </latex-image-code>
+                  </image>
+                </figure>
+              </statement>
+              <solution>
+                <p>According to the graph, the graph only exists when <m>x</m> is greater than <m>-1</m> and less than or equal to <m>5</m>. This is the domain, and it can be written as an inequality <me>-1 \lt x \leq 5</me> or an interval <me>(-1,5].</me></p>
+                <p>The graph curves up and down, but it reaches every output value where <m>y</m> is greater than <m>-27</m> and less than or equal to <m>25</m>. This is the range, and it can be written as an inequality <me>-27 \lt y \leq 25</me> or an interval <me>(-27,25].</me></p>
+              </solution>
+            </example>
+
+            <p>In the next exercise, you will manipulate a graph to change its domain and range.</p>
+
             <exercise>
               <webwork>
                 <setup>
@@ -127,17 +175,47 @@
         <subsection>
           <title>Piecewise Defined Functions</title>
           <p>A piecewise defined function is actually a collection of two or more functions that tell us how to use an input to get an output. Each function must state the domain on which it is defined, that way you know when to use it.</p>
-          <p>Easy, everyday examples of piecewise defined functions are:</p>
+          <p>We start with some easy, everyday examples of piecewise defined functions.</p>
           <example>
-            <p>The cost of renting a snowboard is <m>$25</m> per day or <m>$60</m> for three days or <m>$75</m> for a week.</p>
+            <p>The cost of renting a snowboard is <m>$25</m> per day, or <m>$60</m> for three days, or <m>$75</m> for a week.</p>
             <p>The first cost function is <m>$25</m> per day and is good for <m>1</m> or <m>2</m> days. The domain of this function is the <q><m>1</m> or <m>2</m> days</q>. It tells you when to use this cost function.</p>
             <p>On the third day is a new cost function, a simple constant <m>$60</m></p>
-            <p>Finally the last cost function is for more than 3 days, <m>$75</m> per week.</p>
-            <p>Each rule has its own domain that tells us when to use the rule.</p>
+            <p>Finally, the last cost function, <m>$75</m>, is used between <m>4</m> and <m>7</m> days.</p>
+            <p>Each rule has its own domain that tells us when to use the rule. In <xref ref="figure-snowboard-graph" >Figure</xref>, we see the graph of the price function. Notice the graph has a constant output of <m>50</m> when <m>1 \lt x \leq 2</m>, but it immediately changes to <m>60</m> when <m>x \gt 2</m>.</p>
+            <figure xml:id="figure-snowboard-graph">
+              <caption>A piecewise defined cost function.</caption>
+              <image width="47%">
+                <description></description>
+                <latex-image-code>
+                  <![CDATA[
+                    \begin{tikzpicture}
+                      \begin{axis}[xmin=-0.8,xmax=7.8,ymin=-10,ymax=85,ytick={},
+                      minor ytick={}]
+                      \addplot[holdot] coordinates{(0,25)};
+                      \addplot[soldot] coordinates{(1,25)};
+                      \addplot[holdot] coordinates{(1,50)};
+                      \addplot[soldot] coordinates{(2,50)};
+                      \addplot[holdot] coordinates{(2,60)};
+                      \addplot[soldot] coordinates{(3,60)};
+                      \addplot[holdot] coordinates{(3,75)};
+                      \addplot[soldot] coordinates{(4,75)};
+                      \addplot[soldot] coordinates{(5,75)};
+                      \addplot[soldot] coordinates{(6,75)};
+                      \addplot[soldot] coordinates{(7,75)};
+                      \addplot[-,domain=0:1] {25};
+                      \addplot[-,domain=1:2] {50};
+                      \addplot[-,domain=2:3] {60};
+                      \addplot[-,domain=3:7] {75};
+                      \end{axis}
+                    \end{tikzpicture}
+                  ]]>
+                </latex-image-code>
+              </image>
+            </figure>
           </example>
           <example>
-            <p>The rate at which your coffee cools on the counter is related to the temperature in the room (there's actually a formula for that). The formula is good for as long the situation in the room remains the same.</p>
-            <p>If you suddenly change the room conditions by turning on the air conditioner, then the rate at which the coffee cools will also change.  There is a new formula to model the cooling coffee after the air conditioner is swithed on.</p>
+            <p>The rate at which your coffee cools on the counter is related to the temperature of the coffee and the temperature in the room (there's actually a formula for that). The formula is good for as long the situation in the room remains the same.</p>
+            <p>If you suddenly change the room conditions by turning on the air conditioner, then the rate at which the coffee cools will also change. There would be a new formula to model the coffee's temperature after the air conditioner is switched on.</p>
             <p>One formula is good from the time you make your coffee up until you switch on the air conditioner. Then the other forumla takes over after the air conditioner has been turned on.</p>
           </example>
           <example>
@@ -235,8 +313,8 @@
                 <p>
                   <me>\text{C: } f(x) = \left\{
                   \begin{array}{ll}
-                  x^2 \amp -2 \leqslant x \leqslant 0 \\
-                  x \amp 1 \leqslant x \leqslant 3 \\
+                  x^2 \amp -2 \leqslant x \lt 0 \\
+                  x \amp 1 \lt x \leqslant 3 \\
                   \end{array}
                   \right.</me>
                 </p>
