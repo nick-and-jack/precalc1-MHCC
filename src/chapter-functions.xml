@@ -337,24 +337,27 @@
               <webwork>
                   <setup>
                       <var name="$sol1">
-                          <static>45</static>
+                          <static>45.2</static>
                       </var>
                       <var name="$sol2">
-                          <static>70</static>
+                          <static>70.4</static>
                       </var>
 
                       <pg-code>
-                          $sol1 = Real(45);
-                          $sol2 = Real(70);
+                          $sol1 = Real(45.2);
+                          $sol2 = Real(70.4);
                       </pg-code>
                 </setup>
 
                 <statement>
                   <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/shNZ7dsh/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
                   <p>Drag the horizontal (dotted) line to the desired height for the output. The solutions (if any) are shown on the horizontal axis.</p>
-                  <p>Solving the equation <m>f(s) = 35</m> graphically we find two solutions. Round your answers to the nearest integer.</p>
+                  <p>Solving the equation <m>f(s) = 35</m> graphically we find two solutions.</p>
                   <p>In increasing order, the solutions are <m>s = </m><var name="$sol1" width="5" /> , <var name="$sol2" width="5" /></p>
                 </statement>
+                <solution>
+                  <p>The answers are: <m>45.2</m> and <m>70.4</m></p>
+                </solution>
               </webwork>
           </exercise>
           <p>Using the graph of the efficiency function we see that the equation <m>f(s)=35</m> has two solutions. There are two speeds at which the car has an efficiency of <quantity><mag>35</mag><unit base="milepergallon"/></quantity>.</p>
@@ -409,11 +412,11 @@
 
           <p>Using function notation we write<md>
               <mrow>\frac{\Delta f}{\Delta s}\amp=\frac{f(10)-f(20)}{10-20}</mrow>
-              <mrow>\frac{\Delta f}{\Delta s}\amp=1.1</mrow>
+              <mrow>\amp=1.1</mrow>
           </md>The number <m>1.1</m> (notice it is positive) means that between speeds of <quantity><mag>10</mag><unit base="mileperhour"/></quantity> and <quantity><mag>20</mag><unit base="mileperhour"/></quantity>, the car's efficiency is increasing at an average rate of <quantity><mag>1.1</mag><unit base="milepergallon"/></quantity> per <quantity><mag>1</mag><unit base="mileperhour"/></quantity>.</p>
           <p>On a different interval we could write<md>
               <mrow>\frac{\Delta f}{\Delta s}\amp=\frac{f(60)-f(72)}{60-72}</mrow>
-              <mrow>\frac{\Delta f}{\Delta s}\amp=-0.8</mrow>
+              <mrow>\amp=-0.8</mrow>
           </md>The number <m>-0.8</m> (notice it is negative) means that between speeds of <quantity><mag>60</mag><unit base="mileperhour"/></quantity> and <quantity><mag>72</mag><unit base="mileperhour"/></quantity>, the car's efficiency is decreasing at an average rate of <quantity><mag>-0.8</mag><unit base="milepergallon"/></quantity> per <quantity><mag>1</mag><unit base="mileperhour"/></quantity>.</p>
 
           <p>The little triangle symbol <m>\Delta</m> is also very important. It means, <q>change in</q>. Therefore based on our example, <m>\Delta f</m> means <q>change in efficiency</q> and <m>\Delta s</m> means <q>change in speed</q>. Together the symbol <m>\frac{\Delta f}{\Delta s}</m> is called <q>average rate of change</q>.</p>
@@ -422,11 +425,11 @@
         <subsection>
           <title>Units</title>
             <p>Units are the <q>names</q> of the quantities we are counting.  They give meaning to the numbers or values we use in an expression.</p>
-            <p>When you measure the width of a room the tape measure might count <quantity><mag>10.5</mag><unit base="foot" /></quantity>.  The number <m>10.5</m> is the value and <q><quantity><unit base="foot" /></quantity></q> is the unit.</p>
+            <p>When you measure the width of a room, the tape measure might count <quantity><mag>10.5</mag><unit base="foot" /></quantity>.  The number <m>10.5</m> is the value and <q><quantity><unit base="foot" /></quantity></q> is the unit.</p>
 
             <p>In car efficiency example the units of efficiency are <q><quantity><unit base="milepergallon" /></quantity></q> (miles per gallon) and the units of speed are <q><quantity><unit base="mileperhour" /></quantity></q> (miles per hour).  Therefore the average rate of change for this example will have units of <quantity><unit base="milepergallon" /><per base="mileperhour" /></quantity>.</p>
 
-            <p>Because slope is just <q>rise over run</q>, a fraction, the units of the average rate of change are also a fraction.</p>
+            <p>Because slope is just <q>rise over run</q> <mdash /> a fraction, the units of the average rate of change are also a fraction.</p>
 
 
             <!-- <todo>The exercise below needs context.</todo>

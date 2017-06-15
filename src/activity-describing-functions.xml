@@ -42,11 +42,12 @@
 
         <p>In the exercise below, practice writing inequalities to describe the shaded intervals on each number line.</p>
 
-        <todo>The plots in this exercise need not be GeoGebra</todo>
+        <p>Information for <url href="http://webwork.uwyo.edu/webworkdocs/IntervalNotation.html">how to input interval or inequality notation from your keyboard</url>. </p>
+
+<!--
         <exercise>
             <title>Intervals: Review of Compound Inequalities</title>
             <introduction><p>You may use inequality or interval notation to answer the questions below.</p>
-            <p><url href="http://webwork.uwyo.edu/webworkdocs/IntervalNotation.html">How to input interval or inequality notation from your keyboard.</url> </p>
             </introduction>
             <webwork>
                 <setup>
@@ -70,7 +71,6 @@
 
                 <statement>
                     <p>Remember that open circles mean <q>include</q> while closed circles mean <q>not include</q>.</p>
-
                     <p><ol label="a">
                         <li>
                             <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/XT6ddYvA/width/431/height/100/border/888888" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
@@ -91,14 +91,114 @@
                 </statement>
             </webwork>
         </exercise>
+-->
+        <exercise>
+          <webwork>
+            <setup>
+                <var name="$in[0]">
+                  <static>-2\lt x\leq 1</static>
+                </var>
+                <var name="$in[1]">
+                  <static>x\lt -2 or x\geq 1</static>
+                </var>
+                <var name="$in[2]">
+                  <static>x\leq -2 or x\geq 1</static>
+                </var>
+              <pg-code>
+                        @ticks = ();
+                        for my $j (-5..5) {push(@ticks,$j);};
+                        for my$i(0,1,2){
+                        $nl[$i]=init_graph(-6,-50,6,50,size=>[400,50]);
+                        $nl[$i]->moveTo(0,0);
+                        $nl[$i]->arrowTo(5.5,0,'black',1);
+                        $nl[$i]->moveTo(0,0);
+                        $nl[$i]->arrowTo(-5.5,0,'black',1);
+                        for my$j(@ticks){$nl[$i]->lb(new Label($j,-10,$j,'black','center','top'));};
+                        $nl[$i]->h_ticks(0,"black",@ticks);
+                        };
+
+                        $nl[0]->moveTo(-2,0);
+                        $nl[0]->lineTo(1,0,'blue',5);
+                        $nl[0]->stamps( open_circle(-2,0,'blue'));
+                        $nl[0]->stamps( closed_circle(1,0,'blue'));
+
+                        $nl[1]->moveTo(-5.25,0);
+                        $nl[1]->lineTo(-2,0,'blue',5);
+                        $nl[1]->moveTo(-4,0);
+                        $nl[1]->arrowTo(-5.5,0,'blue',3);
+                        $nl[1]->moveTo(1,0);
+                        $nl[1]->lineTo(5.25,0,'blue',5);
+                        $nl[1]->moveTo(5,0);
+                        $nl[1]->arrowTo(5.5,0,'blue',3);
+                        $nl[1]->stamps( open_circle(-2,0,'blue'));
+                        $nl[1]->stamps( closed_circle(1,0,'blue'));
+
+                        $nl[2]->moveTo(-2,0);
+                        $nl[2]->lineTo(-5.25,0,'blue',5);
+                        $nl[2]->moveTo(-5,0);
+                        $nl[2]->arrowTo(-5.5,0,'blue',3);
+                        $nl[2]->moveTo(1,0);
+                        $nl[2]->lineTo(5.25,0,'blue',5);
+                        $nl[2]->moveTo(5,0);
+                        $nl[2]->arrowTo(5.5,0,'blue',3);
+                        $nl[2]->stamps( closed_circle(-2,0,'blue'));
+                        $nl[2]->stamps( closed_circle(1,0,'blue'));
+
+                        Context("Inequalities");
+                        $in[0] = Compute("-2&lt;x&lt;=1");
+                        $in[1] = Compute("x&lt;-2orx&gt;=1");
+                        $in[2] = Compute("x&lt;=-2orx&gt;=1");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>Remember that open circles mean <q>include</q> while closed circles mean <q>not include</q>.</p>
+                    <p><ol label="a">
+                        <li>
+                            <image pg-name="$nl[0]" height="50"/>
+                            <p>Represent the shaded region above with an inequality, using the variable <m>x</m>.</p>
+                            <p>Answer:  <var name="$in[0]" width="20" /></p>
+                        </li>
+                        <li>
+                            <image pg-name="$nl[1]" height="50"/>
+                            <p>Represent the shaded region above with an inequality, using the variable <m>x</m>.</p>
+                            <p>Answer:  <var name="$in[1]" width="20" /></p>
+                        </li>
+                        <li>
+                            <image pg-name="$nl[2]" height="50"/>
+                            <p>Represent the shaded region above with an inequality, using the variable <m>x</m>.</p>
+                            <p>Answer:  <var name="$in[2]" width="20" /></p>
+                        </li>
+                </ol></p>
+            </statement>
+            <hint>
+              <p>If a set includes two intervals, such as <m>[2, 3)</m> and <m>[4, \infty)</m>, then you can use either <em>inequality</em> or <em>interval</em> notation.</p>
+              <p>With inequality notation, we would use the word <q>or</q> to join the two disconnected intervals. With interval notation, we use the <em>union</em> symbol <m>\cup</m> (the capital letter <em>U</em>).</p>
+              <p>So, that set could be written in either of the following ways:</p>
+              <p><ul>
+                <li><p>Inequality notation:  <m>2\lt = x \lt 3</m> or <m>4\lt = x</m></p></li>
+                <li><p>Interval notation:  <m>[2,3) \cup [4,inf)</m></p></li>
+              </ul></p>
+            </hint>
+            <solution>
+              <p><ol label="a">
+                <li><p>Inequality notation:  <m>-2&lt;x&lt;=1</m></p>
+                <p>Interval notation:  <m>(-2,1]</m></p></li>
+                <li><p>Inequality notation:  <m>x \lt -2</m> or <m>x \gt = 1</m></p>
+                <p>Interval notation:  <m>(-inf,-2) \cup [1,inf]</m></p></li>
+                <li><p>Inequality notation:  <m>x \lt = -2</m> or <m>x \gt = 1</m></p>
+                <p>Interval notation:  <m>(-inf,-2] \cup [1,inf]</m></p></li>
+              </ol></p>
+            </solution>
+          </webwork>
+        </exercise>
     </subsection>
 
     <subsection>
         <title>Function Characteristics</title>
 
-        <p>A function can be <term>Positive</term> or <term>Negative</term>.</p>
-        
-        <p>On a graph, if the output values of a function are above the horizontal axis, we say the function is <term>positive</term>.  If the output values of a function are below the horizontal axis, we say the function is <term>negative</term>.<index><main>positive function</main></index><index><main>function</main><sub>positive</sub></index><index><main>negative function</main></index><index><main>function</main><sub>negative</sub></index>. If the output value is zero, touching the horizontal axis, we say the function is zero (neither positive nor negative). </p>
+        <p>A function can be <em>positive</em> or <em>negative</em>.</p>
+
+        <p>On a graph, if the output values of a function are above the horizontal axis, we say the function is <term>positive</term>. If the output values of a function are below the horizontal axis, we say the function is <term>negative</term>.<index><main>positive function</main></index><index><main>function</main><sub>positive</sub></index><index><main>negative function</main></index><index><main>function</main><sub>negative</sub></index>. If the output value is zero, touching the horizontal axis, we say the function is <em>zero</em> (neither positive nor negative).</p>
 
         <exercise xml:id="exercise-pos-neg">
             <title>Positive or Negative</title>
@@ -138,10 +238,10 @@
             </webwork>
         </exercise>
 
-        <p>A function can be <term>Increasing</term> or <term>Decreasing</term>.</p>
+        <p>A function can be <em>increasing</em> or <em>decreasing</em>.</p>
 
-        <p>If the values of the function (output) increase as the input increases, we say the function is <term>increasing</term>.  If the values of the function decrease as the input increases, we say the function is <term>decreasing</term><index><main>increasing function</main></index><index><main>function</main><sub>increasing</sub></index><index><main>decreasing function</main></index><index><main>function</main><sub>decreasing</sub></index>.</p>
-        <p>Graphically, reading from left to right, a function is increasing if its graph goes up and decreasing if its graph goes down.</p>
+        <p>If the output values of the function <em>increase</em> as the input increases, we say the function is <term>increasing</term>. If the output values of the function <em>decrease</em> as the input increases, we say the function is <term>decreasing</term><index><main>increasing function</main></index><index><main>function</main><sub>increasing</sub></index><index><main>decreasing function</main></index><index><main>function</main><sub>decreasing</sub></index>.</p>
+        <p>Reading the graph from left-to-right, a function is increasing if its graph goes up and decreasing if its graph goes down.</p>
 
         <exercise xml:id="exercise-inc-dec">
             <title>Increasing or Decreasing</title>
@@ -202,10 +302,8 @@
             </webwork>
         </exercise>
 
-        <p>A function can be <term>Concave Up</term> or <term>Concave Down</term>.</p>
-
-        <p>If a function bends upwards (like a cup that holds water), we say the function is <term>concave up</term>.  If a function bends downwards (like an inverted cup that does not hold water), we say the function is <term>concave down</term>.<index><main>concave up function</main></index><index><main>function</main><sub>concave up</sub></index><index><main>concave down function</main></index><index><main>function</main><sub>concave down</sub></index><index><main>concavity</main></index></p>
-
+        <p>A function can be <em>concave up</em> or <em>concave down</em>.</p>
+        <p>If a function curves upward (like a cup that holds water), we say the function is <term>concave up</term>. If a function curves downward (like an inverted cup that does not hold water), we say the function is <term>concave down</term>.<index><main>concave up function</main></index><index><main>function</main><sub>concave up</sub></index><index><main>concave down function</main></index><index><main>function</main><sub>concave down</sub></index><index><main>concavity</main></index></p>
         <p>Another way to think about concavity is to imagine a straight metal wire. While one end of the wire is fixed, if the other end is pushed up the wire is now concave up. If that other end is pushed down the wire is concave down.</p>
 
         <exercise xml:id="exercise-concavity">
@@ -296,11 +394,12 @@
 
                 <statement>
                     <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tmanmNPG/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>The temperature <m>T</m> in degrees Fahrenheit throughout the day is a function of the time of day <m>t</m> in hours.  In function notation would could write:<me>T = f(t)</me></p>
 
-                    <p>Adjust the position of the points <m>A</m> and <m>B</m> on the horizontal axis to identify the intervals on which the function has the given properties. Include the ends of the intervals for increasing/decreasing and concave up/down.</p>
+                    <p>During one day, the temperature <m>T</m> (degrees Fahrenheit) is a function of the time <m>t</m> (hours after midnight).  In function notation, would could write:<me>T = f(t)</me></p>
 
-                    <p>Best to keep the time between <m>0</m> and <m>24</m> hours and round your answers to the nearest integer. In other words, don't go out to infinity, time is between <m>0</m> and <m>24</m> hours only.</p>
+                    <p>Adjust the position of the points <m>A</m> and <m>B</m> on the horizontal axis to identify the interval(s) on which the function has the given properties. Include the ends of the intervals for increasing/decreasing and concave up/down.</p>
+
+                    <p>Keep the time between <m>0</m> and <m>24</m> hours and round your answers to the nearest integer. In other words, don't go out to infinity, time is between <m>0</m> and <m>24</m> hours only.</p>
 
                     <p>Remember, the input variable is <m>t</m>!</p>
 
@@ -349,6 +448,110 @@
                 </solution>
               </webwork>
           </exercise>
+        <p>Finally, let's put these characteristics into context. In the next problem, you will describe the characteristics of various functions given by verbal descriptions.</p>
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="$positive">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{positive}</member>
+                  <member>\text{negative}</member>
+                </set>
+              </var>
+              <var name="$concaveDown">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{concave up}</member>
+                  <member correct="yes">\text{concave down}</member>
+                </set>
+              </var>
+              <var name="$concaveUp">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{concave up}</member>
+                  <member>\text{concave down}</member>
+                </set>
+              </var>
+              <var name="$decreasing">
+                <set>
+                  <member>\text{?}</member>
+                  <member>\text{increasing}</member>
+                  <member correct="yes">\text{decreasing}</member>
+                </set>
+              </var>
+              <var name="$increasing">
+                <set>
+                  <member>\text{?}</member>
+                  <member correct="yes">\text{increasing}</member>
+                  <member>\text{decreasing}</member>
+                </set>
+              </var>
+              <pg-code>
+                $positive=PopUp(
+                ["?","positive","negative"],"positive"
+                );
+                $decreasing=PopUp(
+                ["?","increasing","decreasing"],"decreasing"
+                );
+                $concaveDown=PopUp(
+                ["?","concave up","concave down"],"concave down"
+                );
+                $increasing=PopUp(
+                ["?","increasing","decreasing"],"increasing"
+                );
+                $concaveUp=PopUp(
+                ["?","concave up","concave down"],"concave up"
+                );
+              </pg-code>
+            </setup>
+            <stage>
+              <statement>
+                <p>A rock is dropped, and it falls for <m>10</m> seconds before hitting the ground.</p>
+                <p>The function <m>h(t)</m> represents the height of the rock in feet, where <m>t</m> represents the number of seconds it has been falling.</p>
+                <p>Choose the descriptions which match this function on the interval:  <m>0 \le t \lt 10</m></p>
+                <p>The function is:  <var name="$positive" form="popup" /> and <var name="$decreasing" form="popup" /> and <var name="$concaveDown" form="popup" /></p>
+              </statement>
+              <hint>
+                <p>Sketch a graph of this height function. Does it ever have a negative output?</p>
+                <p>The rock speeds up as it falls, so its height changes more for each second it falls. Can you show this on the graph?</p>
+              </hint>
+              <solution>
+                <p>While it falls, the function is always positive (it doesn't sink underground), but it is decreasing and concave down (curved steeper and steeper downward).</p>
+              </solution>
+            </stage>
+            <stage>
+              <statement>
+                <p>You take an item out of your freezer at <m>15^{\circ}</m> Fahrenheit, and it begins to warm up to the room temperature of <m>68^{\circ}</m> Fahrenheit. The item heats up the fastest right after you take it out, and it begins to heat more slowly as time goes on.</p>
+                <p>The function <m>T(t)</m> represents the temperature of the item in degrees Fahrenheit, where <m>t</m> represents the number of minutes it has been out of the freezer.</p>
+                <p>Choose the descriptions which match this function when <m>t \le 0</m>.</p>
+                <p>The function is:  <var name="$positive" form="popup" /> and <var name="$increasing" form="popup" /> and <var name="$concaveDown" form="popup" /></p>
+              </statement>
+              <hint>
+                <p>Sketch a graph of this temperature function. Is it ever negative?</p>
+                <p>The temperature changes the fastest immediately after <m>t = 0</m>, but then begins to slow down.</p>
+              </hint>
+              <solution>
+                <p>This function is always positive and always increasing, but it is concave down (steep to start, but then less steep as time increases).</p>
+              </solution>
+            </stage>
+            <stage>
+              <statement>
+                <p>Last year, there were <m>10</m> rabbits, this year there are <m>20</m>, and next year there will be <m>40</m>. The population is doubling in size every year!</p>
+                <p>The function <m>P(t)</m> represents the number of rabbits, where <m>t</m> represents the number of years after last year.</p>
+                <p>Choose the descriptions which match this function when <m>t \le 0</m>.</p>
+                <p>The function is:  <var name="$positive" form="popup" /> and <var name="$increasing" form="popup" /> and <var name="$concaveUp" form="popup" /></p>
+              </statement>
+              <hint>
+                <p>Sketch a graph of this population function. Is it ever negative?</p>
+                <p>The population is growing faster as time goes on.</p>
+              </hint>
+              <solution>
+                <p>This function is always positive and increasing, and it is concave up (the population grew by <m>10</m> rabbits, then <m>20</m>, then <m>40</m> and so on).</p>
+              </solution>
+            </stage>
+          </webwork>
+        </exercise>
   </subsection>
 
 
