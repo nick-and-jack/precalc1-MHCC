@@ -12,19 +12,19 @@
 -->
 
 <section xml:id="activity-logarithmic-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
-  
+
     <title>Logarithmic Functions</title>
     <introduction>
         <p>Logarithms can sometimes be the source of much turmoil and angst to students. To some members of the English department, the word <q>logarithms</q> is used as a joke to respond to something that is confusing, <q>Is that like logarithms?</q> (laughter ensues).</p>
 
-        <p>But you will not have these issues, because logarithms are not bad, they're just spelled that way. Remember this, in short, a logarithm is essentially an exponent.</p>
+        <p>But you will not have these issues, because logarithms are not bad, they're just spelled that way. Remember this: A logarithm is an exponent.</p>
 
-        <p>This activity is an introduction to logarithms and the logarithmic function. And since logarithms are exponents, it is a good idea to review some key properties of exponents, in particular negative and fractional exponents.</p>
+        <p>This activity is an introduction to logarithms and the logarithmic function. Since logarithms are exponents, it is a good idea to review some key properties of exponents, particularly negative and fractional exponents.</p>
     </introduction>
 
     <subsection>
         <title>Review of Exponents</title>
-        
+
         <p>Remember that negative exponents mean <q>reciprocal</q> and fractional exponents mean <q>roots</q>.</p>
 
         <example>
@@ -437,18 +437,18 @@
                 </row>
                 <row>
                     <cell>The power of <m>10</m> that gives you <m>36</m></cell>
-                    <cell><m>\log(36)</m></cell>
-                    <cell>log base 10 of 36</cell>
+                    <cell><m>\log_{10}(36)</m></cell>
+                    <cell>log base <m>10</m> of <m>36</m></cell>
                 </row>
                 <row>
                     <cell>The power of <m>10</m> that gives you <m>0.6</m></cell>
-                    <cell><m>\log(0.6)</m></cell>
-                    <cell>log base 10 of 0.6</cell>
+                    <cell><m>\log_{10}(0.6)</m></cell>
+                    <cell>log base <m>10</m> of <m>0.6</m></cell>
                 </row>
             </tabular>
         </table>
 
-        <p>For example, <m>\log(100)</m> means <q>The power of <m>10</m> that gives you <m>100</m>.</q></p>
+        <p>For example, <m>\log_{10}(100)</m> means <q>The power of <m>10</m> that gives you <m>100</m>.</q></p>
 
         <exercise>
             <webwork seed="1">
@@ -467,8 +467,8 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>The <q>power of <m>10</m> that gives you <m>100</m></q> is written in math as <m>\log(100)</m>. With that in mind, what power of <m>10</m> gives you <m>100</m>?</p>
-                    <p><m>\log(<var name="$c"/>) = </m> <var name="$b" width="15" /></p>
+                    <p>The power of <m>10</m> that gives you <m>100</m> is written in math as: <me>\log(100)</me> With that in mind, what power of <m>10</m> gives you <m>100</m>?</p>
+                    <p><m>\log_{10}(<var name="$c"/>) = </m> <var name="$b" width="15" /></p>
                 </statement>
             </webwork>
         </exercise>
@@ -477,7 +477,7 @@
 
         <p>Since <m>\log</m> is base <m>10</m> (powers of <m>10</m>) we technically should write <m>\log_{10}</m>, but base <m>10</m> is so often used, we leave out the <m>10</m> for convenience.</p>
 
-        <p>Another often used logarithm is base <m>e</m>. It's called the <term>natural logarithm</term> and is written <m>\ln</m>. Again, technically we should write <m>\log_e</m>, but we write <m>\ln</m> for convenience.</p>
+        <p>Another commonly used logarithm is base <m>e</m>. It's called the <term>natural logarithm</term> and is written <m>\ln</m>. Again, technically we should write <m>\log_e</m>, but we write <m>\ln</m> for convenience.</p>
 
         <p>All other logarithms are written in standard format. The base, <m>b</m>, indicates what number is being multiplied over and over. So if <m>2</m> is the base, we write <m>\log_2</m> which indicates powers of <m>2</m>.</p>
 
@@ -808,7 +808,13 @@
     <subsection>
         <title>The Range of a Logarithmic Function</title>
 
-        <p>Earlier we used graphs to answer the questions: <q>What power of <m>10</m> gives you <m>36</m>?</q>  and <q>What power of <m>10</m> gives you <m>0.6</m>?</q></p>
+        <p>Earlier we used graphs to answer the questions:</p>
+        <p>
+          <ol label="a">
+            <li><p>What power of <m>10</m> gives you <m>36</m>?</p></li>
+            <li><p>What power of <m>10</m> gives you <m>0.6</m>?</p></li>
+          </ol>
+        </p>
 
         <p>We answered the questions using logarithm statements: <q><m>\log(36) \approx 1.556</m></q> and <q><m>\log(0.6) \approx -0.222</m></q></p>
 
@@ -1022,7 +1028,7 @@
         </introduction>
         <subsubsection>
             <title>Definition: A logarithm is an exponent</title>
-            <p>An exponential equation <me>b^{y}=x</me> can be rewritten as a logarithmic equation.</p>  
+            <p>An exponential equation <me>b^{y}=x</me> can be rewritten as a logarithmic equation.</p>
             <p><me>\log_b(x)=y</me></p>
             <exercise>
                 <webwork seed="1">
@@ -1056,7 +1062,7 @@
                         </pg-code>
                     </setup>
                     <statement>
-                        <p>An exponential equation <me>b^{y}=x</me> can be rewritten as a logarithmic equation.</p>  
+                        <p>An exponential equation <me>b^{y}=x</me> can be rewritten as a logarithmic equation.</p>
                         <p><me>\log_b(x)=y</me> the logarithmic equation means:</p>
                         <p>The power of <var name="$b" width="1"/> that gives you <var name="$x" width="2"/> is <var name="$y" width="2"/>.</p>
                         <p>Rewrite each logarithmic equation as an exponential equation then evaluate your exponential expression to determine the value of <m>x</m>.</p>
@@ -1079,7 +1085,7 @@
             </exercise>
         </subsubsection>
 
-        <subsubsection>    
+        <subsubsection>
             <title>Rule: The Log of a product</title>
             <p>We start with a very simple property of exponents: <m>x^a\cdot x^b=x^{a+b}</m>. When you multiply numbers of the same base you add the exponents.</p>
             <exercise>
@@ -1259,7 +1265,7 @@
         <subsubsection>
             <title>Rule: Log of a Quotient</title>
 
-            <p>This rule you will discover using the two rules you already know.</p>
+            <p>You will discover this rule by using the two rules you already know.</p>
 
             <p>Remember that a negative exponent means <q>reciprocal</q> so a quotient can be rewritten as a product <me>\frac{Q}{P}=Q \cdot P^{-1}</me></p>
 
@@ -1290,7 +1296,7 @@
                     <statement>
                         <p>Consider the expression <m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}</m></p>
                         <p>Use a negative exponent to rewrite the fraction inside the log function as a product.</p>
-                        <p><m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=</m><var name="$prod" width="10" /></p>
+                        <p><m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=\log_{b}\left(</m><var name="$prod" width="10" /><m>\right)</m></p>
                         <p>The right side of the equation is now a product of two values.</p>
                         <p>Use the rule <m>\log_b(A\cdot B)=\log_b(A)+\log_b(B)</m> to rewrite the right side as the sum of two log terms.</p>
                         <p><m><var name="$prod" />=</m><var name="$term1" width="10" /><m>+</m><var name="$term2" width="10" /></p>

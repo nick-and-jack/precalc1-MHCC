@@ -60,7 +60,7 @@
       <p>Typical combinations in this course are adding, subtracting, multiplying or dividing functions, though any operation on two or more numbers would correspond to a function combination.</p>
       <example>
         <statement>
-          <p>Let <m>w</m> and <m>h</m> be two different functions, and suppose <m>w(4) = 9</m> and <m>h(4) = 2</m>. We can create a new function <m>S(x) = w(x) + h(x)</m>, which is just the sum of the functions <m>w(x)</m> and <m>h(x)</m>.</p>
+          <p>Let <m>w</m> and <m>h</m> be two different functions, and suppose <m>w(4) = 9</m> and <m>h(4) = 2</m>. We can create a new function <m>S(x) = (w + h)(x)</m>, which is just the sum of the functions <m>w(x)</m> and <m>h(x)</m>.</p>
           <p>This new function <m>S</m> can be evaluated, provided that we can evaluate each of the functions <m>w</m> and <m>h</m>.</p>
           <p>For instance, <md>
             <mrow>S(4) \amp= w(4) + h(4)</mrow>
@@ -208,7 +208,7 @@
       <example>
         <statement>
           <p>As a business owner, you know the value in giving your customers a good deal, especially when they buy a lot from you.</p>
-          <p>This month at your pet supply store, you decide to run the following special on your most popular cat food:</p>
+          <p>This month at your pet supply store, you decide to run the following special on your most popular cat food.</p>
           <p>The retail price for one container of the food is $<m>24</m>, but if a customer orders two of them, you will reduce the unit price by $<m>0{.}25</m>, so they would each cost only $<m>23{.}75</m>.</p>
           <p>If a customer orders three containers, the unit cost would be reduced another $<m>0{.}25</m>, so they would each cost only $<m>23{.}50</m>.</p>
           <p>Thus, as the number of containers increases, the cost of each one will decrease.</p>
@@ -240,8 +240,8 @@
 
       <subsection><title>Graphing Combinations</title>
       <p>Because there are an infinite number of ways to combine two functions, there is no straightforward way to describe all possible graphs we may see as a result. However, one thing <em>is</em> true for any function combination we may create: <em>We are just doing arithmetic on the outputs of the original functions.</em></p>
-      <p>This means that for a combination such as <me>W(x) = \left(g(x)+h(x)\right)^3 + 4g(x)</me> in order to evaluate a particular value such as <m>W(12)</m>, the number <m>12</m> must at least be in the domains of both functions <m>f</m> and <m>g</m>.</p>
-      <p>If <m>f(12) = 2</m> and <m>g(12) = 3</m>, then <m>W(x)</m> would be: <me>(3+2)^3 + 4(3) = 137</me></p>
+      <p>This means that for a combination such as <me>W(x) = \left(g(x)+h(x)\right)^3 + 4g(x)</me> in order to evaluate a particular value such as <m>W(12)</m>, the number <m>12</m> must at least be in the domains of both functions <m>g</m> and <m>h</m>.</p>
+      <p>If <m>g(12) = 3</m> and <m>h(12) = 2</m>, then <m>W(x)</m> would be: <me>(3+2)^3 + 4(3) = 137</me></p>
       <p>In the next exercise, you will see four different combinations of the functions <m>f(x) = x-1</m> and <m>g(x) = 2-x</m>.</p>
       <exercise>
         <webwork>
@@ -263,11 +263,19 @@
               <li><p>If <m>M(x) = f(x)/g(x)</m>, can you predict the value of <m>M(2)</m>?</p>
                 <p>Now click the checkbox to check your answer.</p></li>
             </ol></p>
-            <p>Notice that <m>J(2)</m> is equal to <m>2</m>, because <m>f(2) = 1</m> and <m>g(2) = 0</m>, and <m>1 + 0 = 1</m>. However, clicking to show the graph of <m>y = J(x)</m> shows that its output is <em>always</em> equal to <m>2</m>. In order to see why this is, just remember that <m>f(x) = x - 1</m> and <m>g(x) = 2 - x</m>. Now simplify the expression <m>f(x) + g(x) = (x - 1) + (2 - x)</m>.</p>
-            <p>Next, see that <m>K(2)</m> is equal to <m>-1</m> because <m>0 - 1 = -1</m>.</p>
-            <p>For <m>L(2)</m>, the output is <m>0</m> because <m>-1(0) = 0</m>. Notice the shape of this graph -- it is a <em>parabola</em>, which is the result of multiplying two linear functions.</p>
-            <p>Finally, the value of <m>M(2)</m> is <em>undefined</em>, because <m>g(2) = 0</m>, and we cannot divide anything by zero. So, the combination <m>f(x)/g(x)</m> makes sense only when the output for <m>g(x)</m> is not zero.</p>
           </statement>
+            <hint>
+              <p>Notice that <m>J(2)</m> is equal to <m>1</m>, because <m>f(2) = 1</m> and <m>g(2) = 0</m>, and <m>1 + 0 = 1</m>. However, clicking to show the graph of <m>y = J(x)</m> shows that its output is <em>always</em> equal to <m>1</m>. In order to see why this is, just remember that <m>f(x) = x - 1</m> and <m>g(x) = 2 - x</m>. Now simplify the expression <m>f(x) + g(x) = (x - 1) + (2 - x)</m>.</p>
+            </hint>
+            <hint>
+              <p>Next, see that <m>K(2)</m> is equal to <m>-1</m> because <m>0 - 1 = -1</m>.</p>
+            </hint>
+            <hint>
+              <p>For <m>L(2)</m>, the output is <m>0</m> because <m>-1(0) = 0</m>. Notice the shape of this graph -- it is a <em>parabola</em>, which is the result of multiplying two linear functions.</p>
+            </hint>
+            <hint>
+              <p>Finally, the value of <m>M(2)</m> is <em>undefined</em>, because <m>g(2) = 0</m>, and we cannot divide anything by zero. So, the combination <m>f(x)/g(x)</m> makes sense only when the output for <m>g(x)</m> is not zero.</p>
+            </hint>
         </webwork>
       </exercise>
 
@@ -366,7 +374,7 @@
 </subsection>
 <subsection><title>Combinations vs. Composition</title>
   <p>It may have occurred to you that function combinations look very much like composite functions. For example, the expression <me>\left(f(x)\right)^2 + 3f(x)</me> is a combination of just the function <m>f(x)</m>. However, it may also be thought of as the <em>composition</em> <m>g(f(x))</m>, where <m>g(x) = x^2 + 3x</m>.</p>
-  <p>In general, this is true. A composite function is really just a <q>combination of itself</q>.</p>
+  <p>In general, this is true: A composite function is really just a <q>combination of itself</q>.</p>
   <p>Now you would be justified to ask: If combinations and compositions are so similar, why do we have two different names for them? The answer is that, while similar, they represent different things we may do with function outputs, especially in a real context. Here is an example:</p>
   <example>
     <statement>
@@ -375,7 +383,7 @@
       <p>Now, we certainly could create both combinations and compositions using the functions <m>f</m> and <m>g</m>, but what would actually makes sense?</p>
       <p>Since we know that <m>g</m> changes <em>hours</em> into <em>degrees Celsius</em>, and <m>f</m> changes <em>degrees Celsius</em> into <em>miles-per-hour</em>, it seems natural to use the composition <me>f(g(h)) = 740.4+1.34(24-3h)</me> to turn <em>hours</em> into <em>miles-per-hour</em>.</p>
       <p>It would not be sensible to make a combination of the functions <m>f</m> and <m>g</m>, because they do not use the same input variable. We would have to use the same input value (with the same units) into both functions, but this cannot be.</p>
-      <p>However, outside of any context, the functions <m>f(x) = 740.4 + 1.34x</m> and <m>g(x) = 24 - 3x</m> could be combined in any variety of ways. These combinations, however, would have no applicable meaning.</p>
+      <p>However, outside of any context, the functions <m>f(x) = 740.4 + 1.34x</m> and <m>g(x) = 24 - 3x</m> could be combined in any variety of ways. These combinations, however, would have no applicable meaning in the given story about temperature and the speed of sound.</p>
     </statement>
   </example>
 </subsection>

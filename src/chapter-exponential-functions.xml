@@ -129,7 +129,7 @@
         </table>
         <p>The table shows <m>1.25</m> units added to the output for every <m>5</m> unit change in the input.</p>
       </example>
-      <p>In turn, exponentials have a pattern of repeated multiplication by the same number called a <term>growth factor</term>. This leads to the fact that exponential functions have constant percent change for constant changes in input. Multliplying is interpreted as a percent change.</p>
+      <p>In turn, exponentials have a pattern of repeated multiplication by the same number called a <term>growth factor</term>. This leads to the fact that exponential functions have constant percent change for constant changes in input. Multiplying is interpreted as a percent change.</p>
 
       <example xml:id="exponential-data">
         <title>Table of Exponential Data</title>
@@ -183,33 +183,35 @@
             </row>
           </tabular>
         </table>
-        <p>The table shows the output increases by <m>25 \%</m>, multiplication by <m>1.25</m>, for every <m>5</m> unit change in the input.</p>
+        <p>The table shows the output increases by <m>25 \%</m> (multiplication by <m>1.25</m>) for every <m>5</m> unit change in the input.</p>
       </example>
-      <p>Two standard ways of communicating exponetial information are through the measures of <term>half-life</term> and <term>doubling time</term>.</p>
+      <p>Two standard ways of communicating exponential information are through the measures of <em>half-life</em> and <em>doubling time</em>.</p>
       <assemblage>
       <p>The <term>half-life</term><index><main>half-life</main></index> is defined as <em>the time it takes to reduce a quantity by <m>50 \%</m></em> or by <m>\frac{1}{2}</m>.</p></assemblage>
       <assemblage>
       <p>The <term>doubling-time</term><index><main>doubling-time</main></index> is defined as the time it takes for something to double.</p></assemblage>
-      <p>The units of half-life or doubling-time are therefore time units like hours, days or even years.</p>
+      <p>The units of half-life or doubling-time are therefore time units, like hours, days or even years.</p>
       <p>Since half-life and doubling times are assumed to be constants, anything that has a half-life or doubling-time is therefore modeled exponentially. In other words, only exponential functions have a half-life or a doubling time.</p>
       <example>
         <title>Half-life</title>
-        <p>A certain pain relieving drug has a half-life of about <m>3</m> hours. If a person has this drug in their system, how long will it take for the drug to reduce to <m>10 \%</m> of the drug in the body?</p>
-        <p><term>Solution:</term></p>
-        <p>We use an exponential model <m>ab^{t}</m> because of the repeated <m>50 \%</m> loss. The problem states it takes <m>3</m> hours to reduce by <m>50 \%</m>. Therefore the hourly growth factor, <m>b</m> occurs <m>3</m> times for a total of <m>50 \%</m> loss. In math we say <me>b^{3}=0.5</me> Solving for <m>b</m> we get</p>
-        <md>
-          <mrow>b^{3} \amp=0.5</mrow>
-          <mrow>\left(b^{3}\right)^{1/3} \amp=(0.5)^{1/3}</mrow>
-          <mrow>b \amp=(0.5)^{1/3}</mrow>
-        </md>
-        <p>Knowing the hourly percent loss, we can write a fromula <m>D(t)=(0.5)^{t/3}</m> where <m>D(t)</m> is the amount of drug in the body in <quantity><unit prefix="milli" base="gram" /></quantity> and <m>t</m> is time in hours.</p>
-        <p>We use the formula to determine how many hours it takes to reduce to <m>10 \%</m>.</p>
-        <p>In this example we solve the equation <me>(0.5)^{t/3}=0.1</me> graphically.</p>
+        <statement>
+          <p>A certain pain relieving drug has a half-life of about <m>3</m> hours. If a person has this drug in their system, how long will it take for the drug to reduce to <m>10 \%</m> of the drug in the body?</p>
+        </statement>
+        <solution>
+          <p>We use an exponential model <m>ab^{t}</m> because of the repeated <m>50 \%</m> loss. The problem states it takes <m>3</m> hours to reduce by <m>50 \%</m>. Therefore the hourly growth factor, <m>b</m> occurs <m>3</m> times for a total of <m>50 \%</m> loss. In math we say <me>b^{3}=0.5</me> and solving for <m>b</m> we get</p>
+            <md>
+            <mrow>b^{3} \amp=0.5</mrow>
+            <mrow>\left(b^{3}\right)^{1/3} \amp=(0.5)^{1/3}</mrow>
+            <mrow>b \amp=(0.5)^{1/3}.</mrow>
+          </md>
+          <p>Because the problem does not tell us exactly how much of the drug was in the system to begin with, for simplicity we will imagine that beginning amount was <m>1</m> <quantity><unit prefix="milli" base="gram" /></quantity>. Now, knowing the hourly percent loss, we can write a formula <md><mrow>D(t) \amp= ab^t</mrow><mrow>\amp= 1 \left((0.5)^{1/3}\right)^t</mrow><mrow>\amp= (0.5)^{t/3}</mrow></md> where <m>D(t)</m> is the amount of drug in the body in <quantity><unit prefix="milli" base="gram" /></quantity> and <m>t</m> is time in hours.</p>
+          <p>We use the formula to determine how many hours it takes to reduce to <m>10 \%</m>.</p>
+          <p>In this example we solve the equation <me>(0.5)^{t/3}=0.1</me> graphically.</p>
 
-        <figure>
-          <caption></caption>
-            <image width="47%">
-              <latex-image-code>
+          <figure>
+            <caption></caption>
+              <image width="47%">
+                <latex-image-code>
                   <![CDATA[\begin{tikzpicture}
                     \begin{axis}[
                         axis line style={->},
@@ -231,31 +233,34 @@
                   \end{tikzpicture}]]>
               </latex-image-code>
             </image>
-        </figure>
+          </figure>
+        </solution>
       </example>
 
       <example>
         <title>Doubling-time</title>
-        <p>The cost of renting an apartment in a growing town has increased by <m>4.2 \%</m> over the last <m>5</m> years.  If this trend continues, in how many years will rental prices double?</p>
-        <p><term>Solution:</term></p>
-        <p>We use an exponential model <m>ab^{t}</m> because of the repeated <m>4.2 \%</m> growth each year. The annual growth factor <m>b</m> is found by realizing it occurs <m>5</m> times for a total growth of <m>4.2 \%</m> so that <me>b^{5}=1.042</me> Solving this equation we get</p>
-        <md>
-          <mrow>b^{5} \amp=1.042</mrow>
-          <mrow>(b^{5})^{\frac{1}{5}} \amp=(1.042)^{\frac{1}{5}}</mrow>
-        </md>
-        <p>Our model is therefore <m>ab^{\frac{t}{5}}</m> where <m>a</m> is the current cost of renting an appartment. We want to find the time it takes for the cost of renting to double, in other words twice as much, as in <m>2a</m></p>
-        <p>In math we say <me>ab^{\frac{t}{5}}=2a</me> but since <m>a</m> cancels on both sides we can just write <me>b^{\frac{t}{5}}=2</me></p>
-        <p>Solving this equation for <m>t</m> gives us the doubling time</p>
-        <p>In this example we solve the equation graphically</p>
-        <figure>
-          <caption></caption>
-            <image width="47%">
-              <latex-image-code>
+        <statement>
+          <p>The cost of renting an apartment in a growing town has increased by <m>21.4 \%</m> over the last <m>5</m> years.  If this trend continues, in how many years will rental prices double?</p>
+        </statement>
+        <solution>
+          <p>We use an exponential model <m>ab^{t}</m> because of the repeated <m>21.4 \%</m> growth every <m>5</m> years. The annual growth factor <m>b</m> is found by realizing it occurs <m>5</m> times for a total growth of <m>21.4 \%</m>. This means that <me>b^{5}=1.214</me> and solving this equation we get</p>
+          <md>
+            <mrow>b^{5} \amp=1.214</mrow>
+            <mrow>(b^{5})^{\frac{1}{5}} \amp=(1.214)^{\frac{1}{5}}.</mrow>
+          </md>
+          <p>Our model is therefore <m>ab^{\frac{t}{5}}</m> where <m>a</m> is the current cost of renting an appartment. We want to find the time it takes for the cost of renting to double. Since the cost of renting an apartment now is <m>a</m> dollars, then we want to know when the price will be <m>2a</m>.</p>
+          <p>In math we would write <me>ab^{\frac{t}{5}}=2a</me> but since <m>a</m> cancels on both sides we can just write <me>b^{\frac{t}{5}}=2</me>.</p>
+          <p>Solving this equation for <m>t</m> gives us the doubling time.</p>
+          <p>In this example we solve the equation graphically</p>
+          <figure>
+            <caption></caption>
+              <image width="47%">
+                <latex-image-code>
                   <![CDATA[\begin{tikzpicture}
                     \begin{axis}[
                         axis line style={->},
                         xmin={0},
-                        xmax={100},
+                        xmax={25},
                         ymin={0},
                         ymax={2.5},
                         x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
@@ -265,14 +270,16 @@
                         ytick={},
                         minor xtick={},
                         minor ytick={}]
-                      \addplot+[->,domain=0:100] {1.042^(x/5)};
-                      \addplot[guideline,domain=0:100] {2};
-                      \addplot[mark=*] coordinates {(84.24, 2)} node[above left] {$t\approx84$};
+                      \addplot+[->,domain=0:25] {1.214^(x/5)};
+                      \addplot[guideline,domain=0:25] {2};
+                      \addplot[mark=*] coordinates {(18, 2)} node[above left] {$t\approx18$};
                     \end{axis}
                   \end{tikzpicture}]]>
               </latex-image-code>
             </image>
-        </figure>
+          </figure>
+          <p>If the current rate of increase continues, rental prices will double in approximately 18 years.</p>
+        </solution>
       </example>
     </subsection>
     <subsection>
