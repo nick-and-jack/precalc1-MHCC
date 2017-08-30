@@ -339,11 +339,14 @@
         <title>Inverses</title>
 
         <p>Two functions are called <term>inverses</term><index><main>function</main><sub>inverse</sub></index><index><main>inverse function</main></index> if they <em>undo</em> each other. If one function has a certain process, then the other function will have the reverse process.</p>
-
-        <p>This means that if <m>f</m> and <m>g</m> are inverses, then both of the following will be true:<md>
-          <mrow>f(g(x)) \amp= x</mrow>
-          <mrow>g(f(x)) \amp= x</mrow>
-        </md></p>
+        <p>Using function notation, this means the following:</p>
+        <assemblage>
+          <p>If <m>f</m> and <m>g</m> are inverses, then both of the following will be true:</p>
+          <p>
+            <ul><li><m>f(g(x)) = x</m></li>
+            <li><m>g(f(x)) = x</m></li></ul>
+          </p>
+        </assemblage>
 
         <p>This is because whatever the inside function did with the input <m>x</m>, the outside function <em>undid</em> that action.</p>
 
@@ -471,9 +474,9 @@
             <p>It is true that <m>V(3.5) \approx 179.59</m>. In context, this means that if the radius is <m>3.5</m> cm, then the volume is approximately <m>179.59</m> cm<m>^{3}</m>.</p>
             <p>What does the equation <me>V^{-1}(0.56) \approx 0.51</me> mean in context?</p>
           </statement>
-          <answer>
+          <solution>
             <p>It means that if the volume is <m>0.56</m> cm<m>^{3}</m>, then the radius is approximately <m>0.51</m> cm.</p>
-          </answer>
+          </solution>
         </example>
 
         <paragraphs><title>Graphing the Inverse</title>
@@ -666,10 +669,10 @@
           </image>
         </figure>
         <p>This is clearly an invertible function, changing degrees Fahrenheit into degrees Celsius. We choose an input value (degrees Fahrenheit) on one side of the thermometer, and read the corresponding output (degrees Celsius) on the other side.</p>
-        <p>If we gave this function the name <m>C = g(F)</m>, then the domain is <me>-32 \leqslant F \leqslant 212</me> and the range is: <me>0 \leqslant C \leqslant 100</me></p>
+        <p>If we gave this function the name <m>C = g(F)</m>, then the domain is <me>32 \leqslant F \leqslant 212</me> and the range is <me>0 \leqslant C \leqslant 100.</me></p>
         <p>Of course, we could also read the thermometer in reverse, using degrees Celsius as the input and degrees Fahrenheit as the output. This would be the inverse function, written as: <me>F = g^{-1}(C)</me></p>
-        <p>Notice that the domain and range have been switched for the inverse function. Now <m>F = g^{-1}(C)</m> has domain <me>0 \leqslant C \leqslant 100</me> and range: <me>-32 \leqslant F \leqslant 212</me></p>
-        <p>This will be the case for all invertible functions:</p>
+        <p>Notice that the domain and range have been switched for the inverse function. Now <m>F = g^{-1}(C)</m> has domain <me>0 \leqslant C \leqslant 100</me> and range: <me>32 \leqslant F \leqslant 212</me></p>
+        <p>This observation will be true for all invertible functions:</p>
         <assemblage>
           <p>If <m>f</m> is an invertible function, then:</p>
           <p><ul>
@@ -764,7 +767,7 @@
         <title>What makes a function invertible</title>
         <p>Remember the defining characteristic of a function:</p>
         <blockquote><p>For each input, there is only one output.</p></blockquote>
-        <p>Thinking about the graph, this means that there can be only <em>one</em> point with any given <m>x</m>-coordinate. That is, no two points on the graph of a function can be directly above or below each other.</p>
+        <p>Thinking about the graph, this means that there can be at most <em>one</em> point with any given <m>x</m>-coordinate. That is, no two points on the graph of a function can be directly above or below each other.</p>
         <p>Now, if an inverse <m>f^{-1}</m> is <em>really</em> a function, then it must also obey this rule. No two points on the graph of <m>y = f^{-1}(x)</m> can sit directly above or below each other.</p>
         <p>So if <m>f^{-1}</m> is a function, this has an implication for the original function <m>f</m>.</p>
         <p>To see this, remember that the graphs of a function and its inverse are reflections of each other over the line <m>y = x</m>. If no two points on the graph of an inverse function can sit <em>above</em> or <em>below</em> each other, then reflecting these points over <m>y = x</m> means that no two points on the graph of <m>f(x)</m> can sit directly <em>left</em> or <em>right</em> of each other.</p>

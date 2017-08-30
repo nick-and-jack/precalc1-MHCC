@@ -172,12 +172,12 @@
             </figure>
             <p>Notice the slight curve to this graph and that it is concave <em>up</em>. Is there a horizontal asymptote for this function? Why?</p>
           </statement>
-          <answer>
+          <solution>
             <p>Notice that: <me>\frac{295495200}{L^3} = 295495200\cdot \frac{1}{L^3}</me></p>
             <p>Even with a large coefficient, the power function <m>\frac{1}{L^3}</m> still goes to <em>zero</em> as <m>L \to \infty</m>.</p>
             <p>This makes sense, because as the length of the board gets longer and longer, it would require a smaller and smaller weight in order to deflect the board by <m>6</m> inches.</p>
             <p>[However, the weight of the board itself would tend to cause significant deflection as the length increased. This function would work to model only boards of moderate length, and it should not be used for boards which are extremely long.]</p>
-          </answer>
+          </solution>
         </example>
       </subsection>
 
@@ -316,8 +316,6 @@
         <paragraphs>
           <title>Repeated Roots</title>
           <p>Linear factors may be repeated, as in: <md>
-            <mrow>y \amp= (x-3)^2</mrow>
-            <mrow>\amp= (x-3)(x-3)</mrow></md>and<md>
             <mrow>y \amp= x(x+1)^2(x-6)^4</mrow>
             <mrow>\amp= x(x+1)(x+1)(x-6)(x-6)(x-6)(x-6)</mrow>
           </md></p>
@@ -330,7 +328,7 @@
         </example>
 
         <p>How does a repeated root affect the graph? We know that a root will appear as an <m>x</m>-intercept on the graph, but will repeating a root in a formula mean the <m>x</m>-intercept is somehow also repeated?</p>
-        <p>In <xref ref="chapter-vertical-and-horizontal-translations">Chapter</xref>, we learned to shift a parabola <em>left</em> or <em>right</em>, just by adding a number to the input. For example:<me>y = (x+3)^2</me>is the parabola <m>x^2</m>moved to the left by <m>3</m> units.</p>
+        <p>In <xref ref="chapter-vertical-and-horizontal-translations">Chapter</xref>, we learned to shift a parabola <em>left</em> or <em>right</em>, just by adding a number to the input. For example:<me>y = (x+3)^2</me>is the parabola <m>x^2</m> moved to the left by <m>3</m> units.</p>
         <p>This parabola has just one root which has been repeated twice, and the graph appears to <em>bounce</em> off of the <m>x</m>-axis at the root.</p>
         <todo>Insert a graph here.</todo>
         <p>This phenomenon of <em>bouncing</em> remains a characteristic of the graph, even if we give a polynomial more linear factors, such as: <me>y = (x+3)^2(x-1)</me></p>
@@ -501,7 +499,7 @@
             </tabular>
           </table>
 
-          <p>The function initially was decreasing very quickly, but eventually began to increase (even faster). In fact, this function will eventually increase <em>forever</em> as <m>x \to \infty</m>.</p>
+          <p>Initially, the function was decreasing very quickly, but eventually it turned around and began to increase (even faster). In fact, this function will eventually increase <em>forever</em> as <m>x \to \infty</m>.</p>
           <p>We can make sense of this by considering the formula for <m>f(x)</m> and imagining substituting a very large value of <m>x</m>.</p>
           <p>If <m>x</m> was large, say <em>one million</em>, evaluating the function would look like:<md>
             <mrow>f(1000000) \amp= (1000000)^3 - 45(1000000)^2 + 12(1000000) - 20</mrow>
@@ -512,7 +510,7 @@
           <p>(In fact, the output is <m>999{,}955{,}000{,}011{,}999{,}980</m>.)</p>
         </example>
 
-          <p>The point is that raising a large value to the power of <m>3</m> is much more significant than raising it to the power of <m>2</m> (or any smaller power). As another piece of math terminology, we would say that the term <m>x^3</m> <em>dominates</em> the other terms. The highest power of <m>x</m> is most significant in the end, so we can just focus our attention on the leading term of a polynomial to determine the end-behavior.</p>
+          <p>The point here is that raising a large value to the power of <m>3</m> is much more significant than raising it to the power of <m>2</m> (or any smaller power). As another piece of math terminology, we would say that the term <m>x^3</m> <em>dominates</em> the other terms. The highest power of <m>x</m> is most significant in the end, so we can just focus our attention on the leading term of a polynomial to determine the end-behavior.</p>
           <p>In summary:</p>
           <assemblage>
             <p>A polynomial has the same end-behavior as its leading term.</p>

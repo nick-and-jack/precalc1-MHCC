@@ -22,23 +22,23 @@
     <title>Interpreting the Exponential Form</title>
     <p>Consider a car that travels from Portland, OR to Seattle, WA (about <m>200</m> <units>miles</units>) in the span of <m>4</m> <units>hours</units>.  The trip is completed at an average speed of <m>200/4 = 50</m> <units>miles per hour</units>. We can use this information to write equations for the distance, <m>D</m> <units>miles</units>, from Portland as functions of time, <m>t</m> <units>hours</units>, in two different ways:</p>
     <p><m>D = \frac{200}{4} \cdot  t</m> or <m>D = 50\cdot t</m></p>
-    <p>Some may argue these are the same formula. But are they?</p>
-    <p>The first equation states <m>200</m> <units>miles</units> were covered in the span of <m>4</m> <units>hours</units>.  This is something that actually happened. It’s in the data.</p>
+    <p>Some may argue that these both represent the same formula. But do they?</p>
+    <p>The first equation states that <m>200</m> <units>miles</units> were covered in the span of <m>4</m> <units>hours</units>.  This is something that actually happened. It’s in the data.</p>
     <p>The second equation states that <m>50</m> <units>miles</units> were covered in <m>1</m> <units>hour</units>. We don’t know if this actually happened <mdash /> it’s just an average rate of change. There may not have been any hour during the trip in which the car traveled exactly <m>50</m> <units>miles</units>.</p>
     <p>Both equations will give us the same results, but each one tells a different story.</p>
-    <p>There is a difference between an obeserved result and a calculated result.</p>
+    <p>There is a difference between an <em>observed</em> result and a <em>calculated</em> result.</p>
     <example>
       <blockquote><p><em>The value of a particular stock has increased by <m>20 \%</m> over the last <m>5</m> years.</em></p></blockquote>
       <p>In this example the increase in stock value was actually measured as <m>20 \%</m> and it actually took <m>5</m> <units>years</units> for the increase to occur.</p>
       <p>When we calculate the <em>per year</em> growth factor, <q>b</q></p>
-      <p> 
+      <p>
       <md>
         <mrow>b^{5} \amp= 1.2</mrow>
         <mrow>b \amp= 1.2^{1/5}</mrow>
         <mrow>b \amp= 1.0371</mrow>
-      </md>
-      It represents an average increase of approximately a <m>3.71 \%</m> per year. But that increase may or may not have actually happened in any one year <mdash /> again, it is only an <em>average</em> annual percent change.</p>
-    </example>    
+      </md></p>
+      <p>This represents an average increase of approximately <m>3.71 \%</m> per year. But that increase may or may not have actually happened in any one year <mdash /> again, it is only an <em>average</em> annual percent change.</p>
+    </example>
     <p>Earlier we learned that exponents <q>count</q> how many times the growth factor is repeated.</p>
     <example>
       <p>The expression <me>296(1.013)^{5}</me> states that an initial amount of <m>296</m> is increased by <m>1.3 \%</m> compounded <m>5</m> times.</p>
@@ -55,7 +55,7 @@
              <member>\text{none of the above}</member>
             </set>
           </var>
-        
+
           <pg-code>
             $drop = PopUp(["?", "is constant", "increases", "decreases", "none of the above"], "decreases");
           </pg-code>
@@ -296,14 +296,14 @@
   </exercise>
 
     <example>
-      <blockquote>A chemical biologist measures the breakdown of a pollutant in a lake. She calculates a <m>4 \%</m> decrease in the amount of pollutant from the <m>4890</m> ppm (parts per million) initially measured. The decrease occurs over a time span of <m>72</m> hours.</blockquote>
+      <p>A chemical biologist measures the breakdown of a pollutant in a lake. She calculates a <m>4 \%</m> decrease in the amount of pollutant from the <m>4890</m> ppm (parts per million) initially measured. The decrease occurs over a time span of <m>72</m> hours.</p>
       <p>Without missing a beat, or the need for any algebra, the biologist can immediately write a simple exponential formula as a function of time to model what she just measured.</p>
       <p>Using the initial amount of pollutant and letting <m>t</m> represent the time in hours since her first measurement, she writes <me>P(t)=4890(0.96)^{\frac{t}{72}}</me></p>
-      <p>The formula literally says, <q>An initial amount <m>4890</m> ppm of pollutant decreases by <m>4 \%</m> every <m>72</m> hours.</q></p>
-      <p>Of course, she doesn't know if the breakdown is actually exponential, it's just an assumption. She could have assumed a linear breakdown of the pollutant in which the <m>4 \%</m> decrease of the initial amount is the same amount each hour. A linear formula would therefore be, <me>P(t)=4890-4890(0.4 \cdot t)</me></p>
-      <p>Nobody knows what the correct formula should be. There are many possible formulas that could model the breakdown of the pollutant. But one model may predict past or future data better than others and knowing what model to choose and why is the reason the biologist gets paid the big bucks.</p>
+      <p>The formula says, <q>An initial amount <m>4890</m> ppm of pollutant decreases by <m>4 \%</m> every <m>72</m> hours.</q></p>
+      <p>Of course, she doesn't know if the breakdown is actually exponential <mdash /> it's just an assumption. She could have assumed a linear breakdown of the pollutant in which the <m>4 \%</m> decrease of the initial amount is the same amount each hour. A linear formula would therefore be, <me>P(t)=4890-4890(0.04t)</me></p>
+      <p>Nobody knows what the correct formula should be. There are many possible formulas that could model the breakdown of the pollutant, but one model may predict past or future data better than others, and knowing <em>what</em> model to choose and <em>why</em> is the reason the biologist gets paid the big bucks.</p>
     </example>
-    <p>By developing the connection between our literal understanding of a situation and the math notation used to describe it we afford ourselves great flexibility in how we interpret and how we model <q>real-life</q> data.</p>
+    <p>By developing the connection between our literal understanding of a situation and the math notation used to describe it, we afford ourselves great flexibility in how we interpret and model <q>real-life</q> data.</p>
     <example>
       <p>A population of <m>300</m> bacteria doubles every <m>5</m> hours. Write an exponential formula for the population size as a function of time, <m>t</m> hours.</p>
       <p>We can write a formula by choosing an algebaic technique.</p>
@@ -317,9 +317,9 @@
           <mrow>b \approx 1.1487</mrow>
         </md>
         so our formula is <m>P(t) \approx 300(1.1487)^{t}</m></p>
-      <p>On the other hand, if you can <q>speak math</q>, you can write a formula in about two seconds <me>P(t)=300(2)^{\frac{t}{5}}</me></p>
-      <p>The formula literally says, <q>Start with <m>300</m> and multiply by <m>2</m> every <m>5</m> hours.</q></p>
-      <p>With some knowlege of the properties of exponents we see how the two formulas are actually the same</p>
+      <p>On the other hand, if you can <q>speak math</q>, you can write a formula in about two seconds: <me>P(t)=300(2)^{\frac{t}{5}}</me></p>
+      <p>The formula says, <q>Start with <m>300</m> and multiply by <m>2</m> every <m>5</m> hours.</q></p>
+      <p>With some knowlege of the properties of exponents, we can see how the two formulas are actually the same:</p>
       <p>
         <md>
         <mrow>300(2)^{\frac{t}{5}}</mrow>
@@ -327,7 +327,7 @@
         <mrow>\approx 300(1.1487)^{t}</mrow>
       </md>
       </p>
-      <p>Either way we arrive at an hourly percent increase of about <m>14.87 \%</m> per hour.</p>
+      <p>Either way, we arrive at an hourly percent increase of about <m>14.87 \%</m> per hour.</p>
     </example>
 <!-- Not sure if I want this next exercise. Let me think about it. -->
     <!-- <exercise>
@@ -380,15 +380,15 @@
   </subsection>
   <subsection>
     <title>Finance <mdash/> Compounded Interest</title>
-    <p>We now turn our attention towards finance where there are some variations in how exponential patterns are formulated.</p>
+    <p>We now turn our attention toward finance where there are some variations in how exponential patterns are formulated.</p>
     <p>Keep in mind that financial formulas quickly get extremely complicated, so our examples are simple in order to make our point.</p>
     <exercise>
       <introduction>
-        <p>An bank loan of <m>\$ 2700</m> is charged an annual interest of <m>12 \%</m></p>
+        <p>A bank loan of <m>\$ 2700</m> is charged <m>12 \%</m> annual interest.</p>
       </introduction>
       <webwork>
         <statement>
-          <p>Assuming nothing is paid back during the year, what is the size of the loan at the end of <m>1</m> year,  if interest is compounded annually (meaning calculated only once at the end of the year)?</p>
+          <p>Assuming nothing is paid back during the year, what is the size of the loan at the end of <m>1</m> year, if <m>12 \%</m> interest is compounded annually (meaning calculated only once at the end of the year)?</p>
           <p>Value <m>= \$</m><var name="3024" width="5" />.</p>
           <p>Now consider the <m>12 \%</m> interest split over <m>12</m> months so each month you only get a small piece of the <m>12 \%</m>. In fact, the loan is charged only <m>\frac{12 \%}{12}=1 \%</m> each month.</p>
           <p>What growth factor is associated with a <m>1 \%</m> growth? <m>b=</m> <var name="1.01" width="4" /></p>
@@ -399,7 +399,8 @@
         </statement>
       </webwork>
     </exercise>
-    <p>Is there a way for the bank to make even more money? The bank already made more money by dividing the interest into <m>12</m> pieces. What if the interest is divided into smaller pieces and compounded more often during the year?</p>
+    <p>This may seem like a strange situation <mdash /> the same <m>12 \%</m> was used in both calculations, but by breaking it up into <m>12</m> successive increases of <m>1 \%</m>, the resulting amount was greater than just calculating a single <m>12 \%</m> increase.</p>
+    <p>Well, is there a way for the bank to make even more money? The bank already made more money by dividing the interest into <m>12</m> pieces. What if the interest is divided into even smaller pieces and compounded more often during the year?</p>
     <exercise>
       <webwork>
         <setup>
@@ -409,7 +410,7 @@
               <member correct="yes">\text{false}</member>
             </set>
           </var>
-          
+
           <pg-code>
             $true = RadioButtons(
             ["true","false"],
@@ -420,7 +421,7 @@
         <stage>
           <statement>
             <p>Let's compare different final values of a loan at the end of one year as we increase the number of times we compound the interest throughout the year.</p>
-            <p>Consider <m>12 \%</m> annual interest on a <m>\$ 2700</m> loan at the end of one year. Remember <m>12 \%</m> has a decimal equivalent of <m>0.12</m></p>
+            <p>Consider <m>12 \%</m> annual interest on a <m>\$ 2700</m> loan at the end of one year. Remember <m>12 \%</m> has a decimal equivalent of <m>0.12</m>, so the associated growth factor is <m>1 + 0.12</m>.</p>
             <p>Compounded annually (one big piece), the loan value is <m>2700(1+\frac{0.12}{1})^{1}=\,\$ 3024</m></p>
             <p>Compounded monthly (<m>12</m> pieces in a year), the loan value is <m>2700(1+\frac{0.12}{12})^{12}=\,\$ 3042.43</m></p>
             <p>Compounded weekly.</p>
@@ -439,7 +440,7 @@
                 </li>
                 <li>
                 <blockquote>
-                  <p>At this point we need a reminder in using calculators to get the most accurate results. Rule 1: Do not round any values until the final answer. Rule 2: Enter your calculations in one step.</p>
+                  <p>At this point we need a reminder for using calculators to get the most accurate results. Rule 1: Do not round any values until the final answer. Rule 2: Enter your calculations in one step.</p>
                   <p>For example, the value of the loan compounded monthly was caclulated using the expression <m>2700(1+\frac{0.12}{12})^{12}=\,\$ 3042.43</m>. The entire expression on the left of the equation is entered into the calculator in one step, then press <em>Enter</em> only once. The final answer is the only time rounding occurs.</p>
                   <p>Not following these instructions will result in wrong answers.</p>
                 </blockquote>
@@ -554,28 +555,28 @@
                   $times3 = PopUp(["?", "Investment is compounded continously thoughout the year", "Investment is compounded every 12 years", "Investment is compounded 12 times each year", "Investment grows by 12 percent"], "Investment is compounded continously thoughout the year");
               </pg-code>
         </setup>
-        
+
         <statement>
           <p>The value of an investment is modeled by the equation <me>V(t) = 4280(1.0401)^{12t}</me></p>
           <p>Where <m>V(t)</m> is the value of the investment in dollars and <m>t</m> is the number of years since the investment was made.</p>
-          <p>The growth factor <m>1.0401</m> represents a <m>4.01 \, \
-          %</m> increase on the investment which is sometimes called the <q>return</q> on the investment.</p>
+          <p>The growth factor <m>1.0401</m> represents a <m>4.01 \%</m> increase on the investment, which is sometimes called the <q>return</q> on the investment.</p>
           <p>
             <ol label="a" >
               <li>
-                <p>In one year <m>t=1</m> what is the value of the exponent?</p>
+                <p>For one year, <m>t=1</m>. What is the value of the exponent?</p>
                 <p>The exponent is <var name="12" width="3" /> after one year.</p>
               </li>
               <li>
-                <p>For each year that goes by, how often is the interest compounded?</p>
+                <p>For each year that goes by, how often is the <m>4.01 \%</m>interest compounded?</p>
                 <p><var name="$num" width="3" /> times each year.</p>
               </li>
               <li>
-                <p>In <m>3</m> years, how many times will the interest be compounded?</p>
+                <p>In <m>3</m> years, how many times will the <m>4.01 \%</m> interest be compounded?</p>
                 <p>Interest is compounded <var name="36" width="3" /> times.</p>
               </li>
               <li>
                 <p>What is the meaning of each formula listed below?</p>
+                <p>[In each formula, <m>t</m> represents <em>years</em>.]</p>
                 <p>
                   <ol label="i" >
                     <li>
