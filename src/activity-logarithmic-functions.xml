@@ -178,6 +178,37 @@
                         </li>
                     </ol></p>
                 </statement>
+                <solution>
+                  <p><ol label="a">
+                      <li>
+                          <p><var name="$answer[0]" /></p>
+                      </li>
+
+                      <li>
+                          <p><var name="$b[1]" /></p>
+                      </li>
+
+                      <li>
+                          <p><var name="$minusb[2]" /></p>
+                      </li>
+
+                      <li>
+                          <p><var name="$answer[3]" /></p>
+                      </li>
+
+                      <li>
+                          <p><var name="$answer[4]" /></p>
+                      </li>
+
+                      <li>
+                          <p><var name="$answer[5]" /></p>
+                      </li>
+
+                      <li>
+                          <p><var name="$answer[6]" /></p>
+                      </li>
+                  </ol></p>
+                </solution>
             </webwork>
         </exercise>
 
@@ -249,6 +280,38 @@
                         </tabular>
                     </table>
                 </statement>
+                <solution>
+                  <table>
+                      <tabular top="medium" bottom="medium" left="medium" right="medium">
+                          <col halign="center"/>
+                          <col halign="center"/>
+                          <row>
+                              <cell><m>x</m></cell>
+                              <cell><m>y</m></cell>
+                          </row>
+                          <row>
+                              <cell><m>-2</m></cell>
+                              <cell><var name="$tabout[0]" /></cell>
+                          </row>
+                          <row>
+                              <cell><m>-1</m></cell>
+                              <cell><var name="$tabout[1]" /></cell>
+                          </row>
+                          <row>
+                              <cell><m>0</m></cell>
+                              <cell><var name="$tabout[2]" /></cell>
+                          </row>
+                          <row>
+                              <cell><m>1</m></cell>
+                              <cell><var name="$tabout[3]" /></cell>
+                          </row>
+                          <row>
+                              <cell><m>2</m></cell>
+                              <cell><var name="$tabout[4]" /></cell>
+                          </row>
+                      </tabular>
+                  </table>
+                </solution>
             </webwork>
         </exercise>
 
@@ -348,12 +411,21 @@
                     <p>Since the exponent <m>x=1.6</m> is too big we now know a better answer is <m>1.5 \lt x \lt 1.6</m></p>
                     <p>To get better accuracy, we need to keep guessing. As we suspected, guess-and-check is a slow, clunky way of solving equations.</p>
                 </statement>
+                <solution>
+                  <p><var name="$low" /> <m>\lt <var name="$b"/> \lt</m> <var name="$high" /></p>
+                  <p>Therefore, the exponent must be <var name="$lowx" /> <m>\lt x \lt</m> <var name="$highx" /></p>
+                  <p>Checking <m>x=1.5</m> gives:</p>
+                  <p><m>10^{1.5} \approx</m> <var name="31.623" /><em>(rounded to <m>3</m> decimal places)</em></p>
+                  <p>This means <m>x=1.5</m> is too small, so trying <m>x=1.6</m> gives:</p>
+                  <p><m>10^{1.6} \approx</m> <var name="39.811" /><em>(rounded to <m>3</m> decimal places)</em></p>
+                  <p>Since the exponent <m>x=1.6</m> is too big, we now know a better answer is that <m>1.5 \lt x \lt 1.6</m></p>
+                </solution>
             </webwork>
         </exercise>
 
         <p>Next, we can try a graphical approach.</p>
 
-        <exercise>
+        <exercise xml:id="exercise-logarithm-estimation">
             <title>Solving Graphically</title>
             <introduction>
                 <p>So far the Geogebra graphing tool has been sufficient in helping us create and manipulate graphs. However, to get more accuracy in our solution we can use another free, online graphing tool, Desmos. Although you may also use your graphing calculator.</p>
@@ -393,15 +465,19 @@
                     <p>Use the same method to solve <m><var name="$a"/>^x=<var name="$c"/></m></p>
                     <p><m>x \approx</m> <var name="$answer2" width="10"/></p>
                 </statement>
+                <solution>
+                  <p>If <m><var name="$a"/>^x=<var name="$b"/></m>, then <m>x \approx</m> <var name="$answer" />.</p>
+                  <p>If <m><var name="$a"/>^x=<var name="$c"/></m>, then <m>x \approx</m> <var name="$answer2" />.</p>
+                </solution>
             </webwork>
         </exercise>
 
         <p>As you experienced in the last two exercises, different powers of <m>10</m> give us different results. In fact, we can get any positive result we want using only powers of <m>10</m> (or any positive base for that matter).</p>
 
-        <p>One use for logarithms is to answer the question,</p>
+        <p>Since logarithms <em>are</em> exponents, then finding a logarithm is like asking:</p>
 
         <blockquote>
-            <p>I wonder what power of (choose a base) I need to get (whatever result you want)</p>
+            <p><q>What power of (choose a base) do I need to get (whatever result you want)?</q></p>
         </blockquote>
 
         <example>
@@ -418,12 +494,15 @@
                 </blockquote>
             </statement>
         </example>
+        <assemblage>
+            <p><m>log_a(b)</m> represents the power we raise the base <m>a</m> to, in order to get <m>b</m>.</p>
+        </assemblage>
 
         <p>The structure of a logarithm is that it must tell the reader the base number and it has to state what value you are trying to get.</p>
 
         <p>Base <m>10</m> means you are using powers of <m>10</m> as in <m>10^{x}</m>. Base <m>3</m> means you are using powers of <m>3</m> as in <m>3^{x}</m> etc.</p>
 
-        <p>Below is a table that shows how our previous example using base <m>10</m> looks when written in English versus what the same statement looks like in Math.</p>
+        <p>Below is a table that shows how <xref ref="exercise-logarithm-estimation">Exercise</xref>, which used base <m>10</m>, looks when written in both English and Math.</p>
 
         <table>
             <tabular>
@@ -470,6 +549,10 @@
                     <p>The power of <m>10</m> that gives you <m>100</m> is written in math as: <me>\log(100)</me> With that in mind, what power of <m>10</m> gives you <m>100</m>?</p>
                     <p><m>\log_{10}(<var name="$c"/>) = </m> <var name="$b" width="15" /></p>
                 </statement>
+                <solution>
+                  <p><m>\log_{10}(<var name="$c"/>) = </m> <var name="$b" /></p>
+                  <p>This is because the power of <m>10</m> that will give <var name="$c"/> is <var name="$b" />.</p>
+                </solution>
             </webwork>
         </exercise>
 
@@ -542,6 +625,22 @@
                         </li>
                     </ol></p>
                 </statement>
+                <solution>
+                  <p><ol label="a">
+                      <li>
+                          <p><var name="$log" /> base <var name="$b[0]" /> of <var name="$c[0]" /></p>
+                      </li>
+                      <li>
+                          <p><var name="$log" /> base <var name="$b[1]" /> of <var name="$c[1]" /></p>
+                      </li>
+                      <li>
+                          <p><var name="$log" /> base <var name="$b[2]" /> of <var name="$c[2]" /></p>
+                      </li>
+                      <li>
+                          <p><var name="$log" /> base <var name="$b[3]" /> of <var name="$c[3]" /></p>
+                      </li>
+                  </ol></p>
+                </solution>
             </webwork>
         </exercise>
 
@@ -604,6 +703,22 @@
                         </li>
                     </ol></p>
                 </statement>
+                <solution>
+                  <p><ol label="a">
+                      <li>
+                          <p><var name="$answer[0]" /></p>
+                      </li>
+                      <li>
+                          <p><var name="$answer[1]" /></p>
+                      </li>
+                      <li>
+                          <p><var name="$answer[2]" /></p>
+                      </li>
+                      <li>
+                          <p><var name="$answer[3]" /></p>
+                      </li>
+                  </ol></p>
+                </solution>
             </webwork>
         </exercise>
 
@@ -643,6 +758,16 @@
                         </li>
                     </ol></p>
                 </statement>
+                <solution>
+                  <p><ol label="a">
+                      <li>
+                          <p>The power of <var name="$b[0]" /> that gives you <var name="$c[0]" />.</p>
+                      </li>
+                      <li>
+                          <p>The power of <var name="$b[1]" /> that gives you <var name="$c[1]" />.</p>
+                      </li>
+                  </ol></p>
+                </solution>
             </webwork>
         </exercise>
 
@@ -725,6 +850,22 @@
                         </li>
                     </ol></p>
                 </statement>
+                <solution>
+                  <p><ol label="a">
+                      <li>
+                          <p><m>\log(<var name="$c[0]" />)</m> is between <var name="$low[0]" /> and <var name="$high[0]" />.</p>
+                      </li>
+                      <li>
+                          <p><m>\log_{<var name="$b[1]" />}(<var name="$c[1]" />)</m> is between <var name="$low[1]" /> and <var name="$high[1]" />.</p>
+                      </li>
+                      <li>
+                          <p><m>\log_{<var name="$b[2]" />}(<var name="$c[2]" />)</m> is between <var name="$low[2]" /> and <var name="$high[2]" />.</p>
+                      </li>
+                      <li>
+                          <p><m>\log_{<var name="$b[3]" />}(<var name="$c[3]" />)</m> is between <var name="$low[3]" /> and <var name="$high[3]" />.</p>
+                      </li>
+                  </ol></p>
+                </solution>
             </webwork>
         </exercise>
     </subsection>
