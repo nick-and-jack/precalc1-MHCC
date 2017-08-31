@@ -873,7 +873,7 @@
     <subsection>
         <title>Domain of a Logarithmic Function</title>
 
-        <p>Try to evaluate <m>\log(-100)</m> on your calculator. Your calculator should read <c>error</c> or <c>quit</c> or something indicating it cannot complete the calculation. To understand why this is happening, write out the meaning of <m>\log(-100)</m> in English.</p>
+        <p>Try to evaluate <m>\log(-100)</m> on your calculator. Your calculator should read <c>error</c> or <c>quit</c> or something indicating it cannot complete the calculation. To understand why this is happening, we could try writing out the meaning of <m>\log(-100)</m> in English.</p>
 
         <exercise>
             <webwork seed="1">
@@ -895,12 +895,16 @@
                     <p><m>\log(<var name="$c" />)</m></p>
                     <p>The power of <var name="$b" width="1"/> that gives you <var name="$c" width="2"/>.</p>
                 </statement>
+                <solution>
+                  <p><m>\log(<var name="$c" />)</m> means:</p>
+                  <p>The power of <var name="$b" /> that gives you <var name="$c" />.</p>
+                </solution>
             </webwork>
         </exercise>
 
-        <p>If you have a bunch of positive <m>10</m>s then how many do you have to multiply to get a <em>negative</em> <m>100</m>? In fact, you <em>can't</em> get a negative result if you only have positive <m>10</m>s! You would need at least one negative <m>10</m> and you don't have any.</p>
+        <p>If you have a bunch of positive <m>10</m>s then how many do you have to multiply to get a <em>negative</em> <m>100</m>? Of course, you <em>can't</em> get a negative result if you only have positive <m>10</m>s! You would need at least one negative <m>10</m> and you don't have any.</p>
 
-        <p>Try to evaluate <m>\log(0)</m> on your calculator. Your calculator should read <c>error</c> or <c>quit</c> or something indicating it cannot complete the calculation. To understand why this is true, write out the meaning of <m>\log(0)</m> in English.</p>
+        <p>Try to evaluate <m>\log(0)</m> on your calculator. Your calculator should read <c>error</c> or <c>quit</c> or something indicating it cannot complete the calculation. To understand why this is happening, we could again write out the meaning of <m>\log(0)</m> in English.</p>
         <exercise>
             <webwork seed="1">
                 <setup>
@@ -921,12 +925,16 @@
                     <p><m>\log(<var name="$c" />)</m></p>
                     <p>The power of <var name="$b" width="1"/> that gives you <var name="$c" width="2"/>.</p>
                 </statement>
+                <solution>
+                  <p><m>\log(<var name="$c" />)</m> means:</p>
+                  <p>The power of <var name="$b" /> that gives you <var name="$c" />.</p>
+                </solution>
             </webwork>
         </exercise>
 
-        <p>If you have a bunch of positive <m>10</m>s then how many do you have to multiply to get <m>0</m> as a result? In fact, you <em>can't</em> get <m>0</m> as the result if you only have positive <m>10</m>s! At least one multiple would have to be <m>0</m>, but you have is <m>10</m>'s.</p>
+        <p>If you have a bunch of positive <m>10</m>s then how many do you have to multiply to get <m>0</m> as a result? Of course, you <em>can't</em> get <m>0</m> as the result if you only have positive <m>10</m>s! At least one factor would have to be <m>0</m>, but all you have is <m>10</m>'s.</p>
 
-        <p>It turns out that the <m>\log</m> function (with any base <m>b \gt 0</m>) is <em>not defined for values that are less than or equal to <m>0</m></em>. Therefore the domain of the <m>\log</m> function (with any base <m>b \gt 0</m>) is <em>only positive numbers</em> (you can't use negatives or zero).</p>
+        <p>It turns out that the <m>\log</m> function (with any base <m>b \gt 0</m>) is <em>not defined for inputs that are less than or equal to <m>0</m></em>. Therefore the domain of the <m>\log</m> function (with any base <m>b \gt 0</m>) is <em>only positive numbers</em>.</p>
 
         <exercise>
             <webwork seed="1">
@@ -940,8 +948,12 @@
                     </pg-code>
                 </setup>
                 <statement>
+                    <p>Use an inequality or an interval to complete the statement below:</p>
                     <p>The domain of the <m>\log_b(x)</m> function (with any base <m>b \gt 0</m>) is <var name="$domain" width="10" />.</p>
                 </statement>
+                <solution>
+                  <p>The domain is  <m>x>0</m>, which can also be written as <m>(0,\infty)</m>.</p>
+                </solution>
             </webwork>
         </exercise>
     </subsection>
@@ -959,13 +971,13 @@
 
         <p>We answered the questions using logarithm statements: <q><m>\log(36) \approx 1.556</m></q> and <q><m>\log(0.6) \approx -0.222</m></q></p>
 
-        <p>Notice with just a base <m>10</m> we can use positive or negative exponents to get any positive result we want.</p>
+        <p>Notice with base <m>10</m>, we can use positive or negative exponents to get any positive result we want.</p>
 
-        <p>You want to get a result of <m>36</m>? Use a power of about <m>1.556</m> as in <m>10^{1.556} \approx 36</m></p>
+        <p>Do you want to get a result of <m>36</m>? Use a power of about <m>1.556</m> as in <m>10^{1.556} \approx 36</m></p>
 
-        <p>You want to get a result of <m>0.6</m>? Use a power of about <m>-0.222</m> as in <m>10^{-0.222} \approx 0.6</m>.</p>
+        <p>Do you want to get a result of <m>0.6</m>? Use a power of about <m>-0.222</m> as in <m>10^{-0.222} \approx 0.6</m>.</p>
 
-        <p>Remember logarithms are exponents and clearly we can use both positive and negative exponents.</p>
+        <p>Remember that logarithms are exponents, and clearly an exponent can be positive, negative or zero.</p>
 
         <p>Logarithms tell you the power you need to get a particular result. You input the result you want, the function tells you the exponent you need. The exponent is the output.</p>
 
@@ -975,6 +987,9 @@
                     <p>What power of <m>10</m> gives you <m>1</m>?</p>
                     <p><m>\log(1) = </m> <var name="0" width="5" /></p>
                 </statement>
+                <solution>
+                  <p>The power of <m>10</m> that gives <m>1</m> is <m>0</m>.</p>
+                </solution>
             </webwork>
         </exercise>
 
@@ -1005,11 +1020,11 @@
             <title>Graph of <m>f(x)=\log_{2}(x)</m></title>
             <webwork>
                 <statement>
-                    <p><m>\log_{2}</m> is <q>Log base <m>2</m></q> which means <q>Powers of <m>2</m></q>.</p>
+                    <p><m>\log_{2}</m> is <q>Log base <m>2</m></q> which means <q>Exponents we put on <m>2</m> to make various outputs</q>.</p>
 
-                    <p>The input is the value you are trying to get. The output is the exponent you need to get the desired input.</p>
+                    <p>The input is the value you are trying to get. The output is the exponent you need to put on <m>2</m> to get the desired input.</p>
 
-                    <p>For each value of <m>x</m>, ask yourself <q>What power of <m>2</m> gives me the <m>x</m> value?</q> the answer to this question goes in the output box.</p>
+                    <p>For each value of <m>x</m>, ask yourself <q>What power of <m>2</m> gives me the <m>x</m> value?</q> The answer to this question goes in the output box.</p>
 
                     <table>
                         <tabular top="medium" bottom="medium" left="medium" right="medium">
