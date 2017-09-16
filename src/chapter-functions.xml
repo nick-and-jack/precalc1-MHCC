@@ -60,13 +60,13 @@
         <title>Gist of Functions: Definition and Notation</title>
         <subsection>
             <title>Defining a Function</title>
-            <p>A <term>function</term> <index><main>function</main></index> is a rule that may be in the form of a graph, or a table of values or a formula.  It may even be a sentence or a set of instructions.  A function takes an input value and uses the rule to create an output value.</p>
+            <p>A <term>function</term> <idx><h>function</h></idx> is a rule that may be in the form of a graph, or a table of values or a formula.  It may even be a sentence or a set of instructions.  A function takes an input value and uses the rule to create an output value.</p>
 
-            <p>Function notation <index><main>function</main><sub>notation</sub></index><index><main>notation</main><sub>for functions</sub></index> looks like this: <me>f(\text{input})=\text{output}</me></p>
+            <p>Function notation <idx><h>function</h><h>notation</h></idx><idx><h>notation</h><h>for functions</h></idx> looks like this: <me>f(\text{input})=\text{output}</me></p>
 
             <p>But, instead of writing the words <q>input</q> and <q>output</q> we usually use variables, like <m>x</m> and <m>y</m>. Then we define in words what the variables actually mean or represent.  Most often the notation will look something like this: <me>f(x)=y</me></p>
 
-            <p>Inside the parentheses is the <term>independent variable</term><index><main>variable</main><sub>independent</sub></index><index><main>independent variable</main></index>, in this example it is <m>x</m>. Outside the parentheses, on the other side of the equals sign, is the <term>dependent variable</term><index><main>variable</main><sub>dependent</sub></index><index><main>dependent variable</main></index>. In this case ours is <m>y</m>.</p>
+            <p>Inside the parentheses is the <term>independent variable</term><idx><h>variable</h><h>independent</h></idx><idx><h>independent variable</h></idx>, in this example it is <m>x</m>. Outside the parentheses, on the other side of the equals sign, is the <term>dependent variable</term><idx><h>variable</h><h>dependent</h></idx><idx><h>dependent variable</h></idx>. In this case ours is <m>y</m>.</p>
 
             <exercise>
                 <title>Using Function Notation</title>
@@ -244,7 +244,7 @@
               <p>However, it is possible there are multiple inputs that give you the same output.  From the graph we see that a fuel efficiency of <quantity><mag>25</mag><unit base="milepergallon" /></quantity> can be attained by traveling at a speed of about <quantity><mag>16</mag><unit base="mileperhour"/></quantity> and also at about <quantity><mag>70</mag><unit base="mileperhour"/></quantity>.</p>
           </example>
 
-          <p>Graphically, a relation must pass the <xref ref="exercise-vertical-line-test">vertical line test</xref><index><main>vertical line test</main></index> to be a function. When the test is <q>passed</q>, we say the function is <term>well defined</term><index><main>well defined</main></index>.</p>
+          <p>Graphically, a relation must pass the <xref ref="exercise-vertical-line-test">vertical line test</xref><idx><h>vertical line test</h></idx> to be a function. When the test is <q>passed</q>, we say the function is <term>well defined</term><idx><h>well defined</h></idx>.</p>
 
           <exercise>
               <title>Well-Defined</title>
@@ -286,13 +286,13 @@
               <li><p>The outputs may be positive or negative.</p></li>
             </ul>
           </p>
-          <p>When describing these characteristics for a function, we typically refer to an <term>interval</term><index><main>interval</main></index> (connected section) of the input axis, or to a particular value of the input where something interesting occurs.
+          <p>When describing these characteristics for a function, we typically refer to an <term>interval</term><idx><h>interval</h></idx> (connected section) of the input axis, or to a particular value of the input where something interesting occurs.
           <xref ref="speed-vs-efficiency">Figure</xref>
           </p>
 
-          <p>We can use <term>inequality</term><index><main>inequality</main></index> symbols to describe an interval where a function has a particular property, like <xref ref="exercise-inc-dec">increasing</xref> for <m>5\lt s\lt55</m>.  This means the function values are getting bigger as the inputs change from <m>5</m> to <m>55</m>.</p>
+          <p>We can use <term>inequality</term><idx><h>inequality</h></idx> symbols to describe an interval where a function has a particular property, like <xref ref="exercise-inc-dec">increasing</xref> for <m>5\lt s\lt55</m>.  This means the function values are getting bigger as the inputs change from <m>5</m> to <m>55</m>.</p>
 
-          <p>Another characteristic we can describe with inequalities is <term>concavity</term><index><main>concavity</main></index>. We say a function is <term>concave up</term> if its graph curves upward from left to right, and that it is <term>concave down</term> if it curves downward from left to right.</p>
+          <p>Another characteristic we can describe with inequalities is <term>concavity</term><idx><h>concavity</h></idx>. We say a function is <term>concave up</term> if its graph curves upward from left to right, and that it is <term>concave down</term> if it curves downward from left to right.</p>
           <example>
             <p>The <xref ref="speed-vs-efficiency" text="title">efficiency graph</xref> has varying <xref ref="exercise-concavity">concavity</xref> depending on what section of inputs we use:<ul>
                 <li>
@@ -308,7 +308,7 @@
         <subsection>
           <title>Evaluate versus Solve</title>
 
-          <p>The word <term>evaluate</term><index><main>evaluate</main></index> means to use a known input value to find the output value. Evaluating a function looks like this:<me>f(35)</me>It means, <q>Find the result of choosing <quantity><mag>35</mag><unit base="mileperhour"/></quantity></q> as the input. The expression <m>f(35)</m> represents the output, which we can see from the graph.</p>
+          <p>The word <term>evaluate</term><idx><h>evaluate</h></idx> means to use a known input value to find the output value. Evaluating a function looks like this:<me>f(35)</me>It means, <q>Find the result of choosing <quantity><mag>35</mag><unit base="mileperhour"/></quantity></q> as the input. The expression <m>f(35)</m> represents the output, which we can see from the graph.</p>
           <exercise>
               <webwork>
                   <setup>
@@ -330,7 +330,7 @@
               </webwork>
           </exercise>
 
-          <p><term>Solve</term><index><main>solve</main></index> means the output is already known and we are trying to find all the possible inputs that give us that output. These input values are called <term>solutions</term><index><main>solution</main></index> of the equation. For instance, we may be asked to <q>Solve <m>f(s)=35</m>.</q></p>
+          <p><term>Solve</term><idx><h>solve</h></idx> means the output is already known and we are trying to find all the possible inputs that give us that output. These input values are called <term>solutions</term><idx><h>solution</h></idx> of the equation. For instance, we may be asked to <q>Solve <m>f(s)=35</m>.</q></p>
 
           <p>This means that we are to find all input values (solutions) that would give us the output <m>35</m>.</p>
           <exercise>
@@ -368,7 +368,7 @@
 
         <subsection>
           <title>Average Rate of Change</title>
-          <index><main>average rate of change</main></index><index><main>rate of change</main><sub>average</sub></index>
+          <idx><h>average rate of change</h></idx><idx><h>rate of change</h><h>average</h></idx>
 
           <p>Average rate of change is <em>very</em> important topic of this course. You will see it over and over again in various forms. Basically it means slope, but it's more than that. It's also a notation and a concept that sets the stage for calculus.</p>
 

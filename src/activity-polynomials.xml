@@ -17,11 +17,11 @@
     <title>Degree and Roots</title>
     <p>In this activity, we will explore <term>polynomial</term> functions by building on our knowledge of power functions.</p>
 
-    <p>A <term>polynomial</term><index><main>polynomial</main></index><index><main>function</main><sub>polynomial</sub></index> is a function of the form <me>f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n</me> where the numbers <m>a_0</m> through <m>a_n</m> are constant values, called <term>coefficients</term><index><main>coefficient</main></index>. A polynomial is a sum of <term>power</term> functions.</p>
+    <p>A <term>polynomial</term><idx><h>polynomial</h></idx><idx><h>function</h><h>polynomial</h></idx> is a function of the form <me>f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n</me> where the numbers <m>a_0</m> through <m>a_n</m> are constant values, called <term>coefficients</term><idx><h>coefficient</h></idx>. A polynomial is a sum of <term>power</term> functions.</p>
 
     <p>First, we will introduce two important terms associated with polynomials: <em>degree</em> and <em>root</em></p>
 
-    <p>The <term>degree</term><index><main>polynomial</main><sub>degree</sub></index> of a polynomial is the highest exponent on the variable.</p>
+    <p>The <term>degree</term><idx><h>polynomial</h><h>degree</h></idx> of a polynomial is the highest exponent on the variable.</p>
     <example>
       <p>Some polynomials and their degrees:</p>
       <table>
@@ -58,7 +58,7 @@
       </table>
     </example>
 
-    <p>A <term>root</term><index><main>polynomial</main><sub>root</sub></index> of a polynomial is a value of the input which gives an output of <em>zero</em>.</p>
+    <p>A <term>root</term><idx><h>polynomial</h><h>root</h></idx> of a polynomial is a value of the input which gives an output of <em>zero</em>.</p>
     <p>Test your understanding of these definitions in the next two exercises.</p>
     <exercise>
       <webwork>
@@ -479,7 +479,7 @@
     </exercise>
 
     <p>One important note should be made here: Not every polynomial can be written as just a product of linear factors.<fn>The function <m>f(x) = x^2 + 1</m> is an easy example, as it has <em>no</em> <m>x</m>-intercepts. Can you think of other examples?</fn> But in this section, we will focus primarily on polynomials which <em>can</em> be written as a product of linear factors.</p>
-    <p>One skill we will develop here is being able to determine a formula for a polynomial if we have its graph. However, before we can do that, we need to discuss the end-behavior of a polynomial. The <term>end-behavior</term><index><main>end-behavior</main></index><index><main>function</main><sub>end-behavior</sub></index> of a function is what its outputs tend to do as <m>x</m> gets (infinitely) far from zero.</p>
+    <p>One skill we will develop here is being able to determine a formula for a polynomial if we have its graph. However, before we can do that, we need to discuss the end-behavior of a polynomial. The <term>end-behavior</term><idx><h>end-behavior</h></idx><idx><h>function</h><h>end-behavior</h></idx> of a function is what its outputs tend to do as <m>x</m> gets (infinitely) far from zero.</p>
     <p>End-behavior is one thing we <em>can</em> tell about the graph of a polynomial, even if it is <em>not</em> written as a product of linear factors, such as: <md>
       <mrow>y = 3x - 5x^2 + 17</mrow>
       <mrow>\text{or}</mrow>
@@ -489,7 +489,7 @@
 
   <subsection>
     <title>End Behavior</title>
-    <p>Recall that a <term>horizontal asymptote</term><index><main>horizontal asymptote</main></index><index><main>asymptote</main><sub>horizontal</sub></index>, <m>y = a</m>, is a horizontal line which a function <m>f(x)</m> seems to <em>resemble</em>, as either <m>x \to \infty</m> or <m>x \to -\infty</m>.</p>
+    <p>Recall that a <term>horizontal asymptote</term><idx><h>horizontal asymptote</h></idx><idx><h>asymptote</h><h>horizontal</h></idx>, <m>y = a</m>, is a horizontal line which a function <m>f(x)</m> seems to <em>resemble</em>, as either <m>x \to \infty</m> or <m>x \to -\infty</m>.</p>
     <p>Put another way, if the function <m>f</m> has a horizontal asymptote <m>y = a</m>, then as we evaluate <m>f(x)</m> at <m>x</m> values which are farther and farther from zero, the ouputs will eventually get very close to the number <m>a</m>.</p>
     <p>In calculus language, we would write <me>\lim_{x\to\pm\infty}f(x)=a</me> and in words, we would say</p>
     <blockquote>
@@ -578,7 +578,7 @@
       </webwork>
     </exercise>
 
-    <p><index><main>end-behavior</main></index><index><main>long-run behavior</main></index>This behavior can be seen in the graph, as the function <m>f(x)</m> appears to <q>flatten out</q> to the left and the right. This is an example of what is called <term>end-behavior</term> (or <term>long-run behavior</term>). From a graphical perspective, end-behavior is what the graph tends to do as the input <m>x</m> gets far from zero.</p>
+    <p><idx><h>end-behavior</h></idx><idx><h>long-run behavior</h></idx>This behavior can be seen in the graph, as the function <m>f(x)</m> appears to <q>flatten out</q> to the left and the right. This is an example of what is called <term>end-behavior</term> (or <term>long-run behavior</term>). From a graphical perspective, end-behavior is what the graph tends to do as the input <m>x</m> gets far from zero.</p>
 
     <sidebyside widths="48% 48%">
       <figure>
@@ -1308,7 +1308,7 @@
 
       </webwork>
     </exercise>
-    <p>When a polynomial has a linear factor <me>(x - a)^k</me> we say that the root <m>x = a</m> has <term>multiplicity</term><index><main>multiplicity of a root</main></index><index><main>root</main><sub>multiplicity</sub></index> <m>k</m>.</p>
+    <p>When a polynomial has a linear factor <me>(x - a)^k</me> we say that the root <m>x = a</m> has <term>multiplicity</term><idx><h>multiplicity of a root</h></idx><idx><h>root</h><h>multiplicity</h></idx> <m>k</m>.</p>
     <p>What is important for us to know, is how the multiplicity of a root affects the graph.</p>
 
     <exercise>

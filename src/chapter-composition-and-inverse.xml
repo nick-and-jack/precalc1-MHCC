@@ -55,7 +55,7 @@
       <subsection>
         <title>Composition</title>
 
-        <p>The <term>composition</term><index><main>function</main><sub>composition</sub></index><index><main>function composition</main></index> of functions is all about using the <em>output</em> of one function as the <em>input</em> for another.</p>
+        <p>The <term>composition</term><idx><h>function</h><h>composition</h></idx><idx><h>function composition</h></idx> of functions is all about using the <em>output</em> of one function as the <em>input</em> for another.</p>
         <p>The notation we will use for composing two functions is <me>f(g(x))</me> which we read as "<m>f</m> of <m>g</m> of <m>x</m>".</p>
         <p>Working from the inside-out, this means that the function <m>g</m> is used first to get an output, and then that output is used as the <em>input</em> for the function <m>f</m>.</p>
 
@@ -96,7 +96,7 @@
           </webwork>
         </exercise>
 
-        <p><index><main>function</main><sub>composite</sub></index><index><main>composite function</main></index>If we use function composition with a numerical input, we will get a numerical output. However, if we just use <m>x</m> as the input and compose functions, the result will be an expression involving <m>x</m>, which is a brand new function representing the composition. This new function is called a <term>composite</term> function.</p>
+        <p><idx><h>function</h><h>composite</h></idx><idx><h>composite function</h></idx>If we use function composition with a numerical input, we will get a numerical output. However, if we just use <m>x</m> as the input and compose functions, the result will be an expression involving <m>x</m>, which is a brand new function representing the composition. This new function is called a <term>composite</term> function.</p>
         <note>
           <p>Often, the composite function <m>f(g(x))</m> is written as <me>(f \circ g)(x)</me> to indicate that <m>(f \circ g)</m> is a new function.</p>
           <p>Similarly, the composite functions <m>g(f(x))</m> and <m>f(f(x))</m> would be written as <m>(g \circ f)(x)</m> and <m>(f \circ f)(x)</m>.</p>
@@ -338,7 +338,7 @@
       <subsection>
         <title>Inverses</title>
 
-        <p>Two functions are called <term>inverses</term><index><main>function</main><sub>inverse</sub></index><index><main>inverse function</main></index> if they <em>undo</em> each other. If one function has a certain process, then the other function will have the reverse process.</p>
+        <p>Two functions are called <term>inverses</term><idx><h>function</h><h>inverse</h></idx><idx><h>inverse function</h></idx> if they <em>undo</em> each other. If one function has a certain process, then the other function will have the reverse process.</p>
         <p>Using function notation, this means the following:</p>
         <assemblage>
           <p>If <m>f</m> and <m>g</m> are inverses, then both of the following will be true:</p>
@@ -350,7 +350,7 @@
 
         <p>This is because whatever the inside function did with the input <m>x</m>, the outside function <em>undid</em> that action.</p>
 
-        <p>If a function <m>f</m> has an inverse function <m>f^{-1}</m>, then we say that the function <m>f</m> is <term>invertible</term><index><main>function</main><sub>invertible</sub></index><index><main>invertible function</main></index> (also called <term>one-to-one</term><index><main>one-to-one</main></index><index><main>function</main><sub>one-to-one</sub></index>).</p>
+        <p>If a function <m>f</m> has an inverse function <m>f^{-1}</m>, then we say that the function <m>f</m> is <term>invertible</term><idx><h>function</h><h>invertible</h></idx><idx><h>invertible function</h></idx> (also called <term>one-to-one</term><idx><h>one-to-one</h></idx><idx><h>function</h><h>one-to-one</h></idx>).</p>
 
         <example>
           <p>The functions <m>f(x) = 2^x + 1</m> and <m>g(x) = \log_{2}(x - 1)</m> are inverses.</p>
@@ -543,7 +543,7 @@
           </tabular>
       </sidebyside>
 
-      <p><index><main>inverse function</main><sub>the graph</sub></index>From a graphical standpoint, taking a set of points from the table of <m>y = f(x)</m>, and switching the <m>x</m>- and <m>y</m>-coordinates, will give us points on the graph of <m>y = f^{-1}(x)</m>.</p>
+      <p><idx><h>inverse function</h><h>the graph</h></idx>From a graphical standpoint, taking a set of points from the table of <m>y = f(x)</m>, and switching the <m>x</m>- and <m>y</m>-coordinates, will give us points on the graph of <m>y = f^{-1}(x)</m>.</p>
 
       <exercise>
         <webwork>
@@ -800,7 +800,7 @@
         </li>
         <li>
           <title>Horizontal Line Test</title>
-          <p><index><main>horizontal line test</main></index>If a function is invertible, then its graph may only intersect a horizontal line at most once. If a horizontal line could intersect the graph more than once, then the graph is not invertible.</p>
+          <p><idx><h>horizontal line test</h></idx>If a function is invertible, then its graph may only intersect a horizontal line at most once. If a horizontal line could intersect the graph more than once, then the graph is not invertible.</p>
         </li>
       </dl></p>
       <example>
@@ -891,7 +891,7 @@
         </webwork>
       </exercise>
 
-      <p><index><main>function</main><sub>restricting the domain</sub></index>We <term>restrict</term> the domain of a function in order to make it <term>invertible</term>. We choose an interval for the input, so that the output never has repeated values <mdash /> this ensures that the inverse will pass the vertical line test.</p>
+      <p><idx><h>function</h><h>restricting the domain</h></idx>We <term>restrict</term> the domain of a function in order to make it <term>invertible</term>. We choose an interval for the input, so that the output never has repeated values <mdash /> this ensures that the inverse will pass the vertical line test.</p>
 
       <todo>Add content about one to one, onto, and the domain and range relationship between a function and its inverse.</todo>
     </subsection>
