@@ -46,7 +46,7 @@
 
         <p>Start by remembering this: one input, one output.</p>
 
-        <p>A <term>function</term><index><main>function</main></index> is a rule that takes a piece of <q>usable</q> information that you choose (input) and gives you some kind of result (output).  By <q>usable</q> we mean information that has meaning for the function.</p>
+        <p>A <term>function</term><idx><h>function</h></idx> is a rule that takes a piece of <q>usable</q> information that you choose (input) and gives you some kind of result (output).  By <q>usable</q> we mean information that has meaning for the function.</p>
         <p>Think of a function as a sort of machine.  Using some input, the machine does something to the input and then out pops a result.  In this course our inputs will be mostly numbers and the process will yield numbers as results.</p>
          <exercise xml:id="webwork-function-temperature-converter">
             <introduction><p>A simple example of a function is a temperature converter. It converts a temperature from degrees Fahrenheit to degrees Celsius.</p>
@@ -95,9 +95,9 @@
                   <p>Our function is a graph, but it could have been a table of values or a formula.</p>
                   <p>The graph illustrates that the temperature in degrees Celsius is a <term>function</term> of the temperature in degrees Fahrenheit.</p>
                     <p>The temperature in degrees Fahrenheit, <m>F</m>, is the input while the temperature in degrees Celsius, <m>C</m>, is the output.</p>
-                    <figure>
+                    <sidebyside>
                         <image pg-name="$gr[0]" />
-                    </figure>
+                    </sidebyside>
                     <p>Use the graph to estimate your answers below:<ol>
                         <li>
                             <p>The temperature of <m>77</m> degrees Fahrenheit to degrees Celsius</p>
@@ -118,9 +118,9 @@
                 <solution>
                     <p>To graphically find these answers, visualize arrows and guidelines on the graph. To find the Celsius equivalent of <m>77</m> degrees Fahrenheit, recognize that <m>77</m> is an input value, and so you must identify it on the horizontal axis. From there, move up, then left to the vertical axis, where you land at about <m>25</m> degrees Celsius. So <m>77 \text{degrees Fahrenheit} \approx25 \text{degrees Celsius}</m>.</p>
 
-                    <figure>
+                    <sidebyside>
                         <image pg-name="$gr[1]" />
-                    </figure>
+                    </sidebyside>
 
                     <p>A similar process in reverse is used to determine the Fahrenheit temperature equivalent of <m>-22</m> degrees Celsius. Recognize that <m>-22</m> is an output, and so you must identify it on the vertical axis. From there, move left, then up to the horizontal axis, where you land at about <m>-8</m> degrees Fahrenheit. So the answer is <m>F\approx-8</m>.</p>
                 </solution>
@@ -235,18 +235,18 @@
     <subsection>
         <title>The Grammar of Function Notation</title>
 
-        <p>The math <q>sentence</q> above is actually an equation and it uses <term>function notation</term><index><main>function</main><sub>notation</sub></index><index><main>notation</main><sub>for functions</sub></index> to express the information about the train's position at a particular time.</p>
+        <p>The math <q>sentence</q> above is actually an equation and it uses <term>function notation</term><idx><h>function</h><h>notation</h></idx><idx><h>notation</h><h>for functions</h></idx> to express the information about the train's position at a particular time.</p>
 
         <p>In math we don't really have subjects or verbs or objects. Instead we have input values (numbers) and we have output values. The function is the <q>machine</q> or the rule that tells us how to use the input to make an output.</p>
 
-        <p><index><main>variable</main></index><term>Variables</term> are used to represent values we don't know or that may change. For a function, the input is called the <term>independent variable</term>, and the output is called the <term>dependent variable</term>. This is because the output depends on the input.</p>
+        <p><idx><h>variable</h></idx><term>Variables</term> are used to represent values we don't know or that may change. For a function, the input is called the <term>independent variable</term>, and the output is called the <term>dependent variable</term>. This is because the output depends on the input.</p>
 
         <p>The distance from downtown is constantly changing with time, so we can let the dependent variable <m>D</m> represent the <q>Train's distance in miles from downtown</q>. Similarly, we can use the independent variable <m>t</m> to represent the <q>number of hours after <m>8</m> <init>a.m.</init></q>.</p>
 
         <p>Typically, we use variables that have something to do with the context of the problem, but sometimes we generalize an expression or equation with <m>x</m>'s and <m>y's</m> when we have nothing specific in mind.</p>
         <paragraphs>
             <title>Variables have units</title>
-                <p>If the variables represent actual things or events, we must define them to include the <term>units</term><index><main>units</main></index> we used to measure the event. This allows us to extract meaning from the values or expressions.</p>
+                <p>If the variables represent actual things or events, we must define them to include the <term>units</term><idx><h>units</h></idx> we used to measure the event. This allows us to extract meaning from the values or expressions.</p>
                 <p>If you know Spanish you can <em>interpret</em> the meaning of a Spanish article you read by translating it into English.  Likewise, if you know <q>math</q>, you can interpret the meaning of function notation by translating it into English, provided you know what the variables in the notation mean or what they are measuring.</p>
 
                 <blockquote>
@@ -325,7 +325,7 @@
         <p>In our train example we chose some input, a time, and the function gave us an output of distance.  The notation tells the reader what the input is by showing it in the parentheses:<me>f(\text{input}) = \mathit{output}</me> The function notation <m>f(0)</m> is telling us the input is <m>0</m>.  That means, <q><m>0</m> hours after <m>8</m> <init>a.m.</init></q> In other words, it's <m>8</m> <init>a.m.</init></p>
 
         <p>On the other hand, <m>f(0)</m> represents an output. It is <q>the train's distance from downtown, <m>0</m> hours after <m>8</m> <init>a.m.</init></q> But we don't know what that distance actually is yet. In this case, the notation <m>f(0)</m> means <q>Whatever the distance is at t = 0</q>.</p>
-        <p>Nonetheless, the input and output create an <term>ordered pair</term><index><main>ordered pair</main></index> <m>(0, f(0))</m>.  On a graph the ordered pair is a <term>point</term><index><main>point</main></index>.</p>
+        <p>Nonetheless, the input and output create an <term>ordered pair</term><idx><h>ordered pair</h></idx> <m>(0, f(0))</m>.  On a graph the ordered pair is a <term>point</term><idx><h>point</h></idx>.</p>
 
         <exercise>
             <webwork>
@@ -505,7 +505,7 @@
                 </statement>
             </webwork>
         </exercise>
-        <p>A <index><main>table of values</main></index><term>table of values</term> is one way to express the inputs and outputs of a relation. In a vertical table, the inputs are on the left, and the outputs are on the right. In a horizontal table, the top row is the input, and the bottom row is the output.</p>
+        <p>A <idx><h>table of values</h></idx><term>table of values</term> is one way to express the inputs and outputs of a relation. In a vertical table, the inputs are on the left, and the outputs are on the right. In a horizontal table, the top row is the input, and the bottom row is the output.</p>
 
         <table>
           <caption>Vertical Table</caption>
@@ -577,6 +577,7 @@
                 <p><ol label="A">
                     <li>
                         <p>In this table, is it possible that <m>y</m> is a function of <m>x</m>?</p>
+                        <sidebyside>
                         <tabular top="medium" bottom="medium" left="medium" right="medium">
                             <col halign="center"/>
                             <col halign="center"/>
@@ -601,10 +602,12 @@
                                 <cell><m>0</m></cell>
                             </row>
                         </tabular>
+                        </sidebyside>
                         <p><var name="$table1" form="buttons" /></p>
                     </li>
                     <li>
                         <p>In this table, is it possible that <m>y</m> is a function of <m>x</m>?</p>
+                        <sidebyside>
                         <tabular top="medium" bottom="medium" left="medium" right="medium">
                             <col halign="center"/>
                             <col halign="center"/>
@@ -629,6 +632,7 @@
                                 <cell><m>5</m></cell>
                             </row>
                         </tabular>
+                        </sidebyside>
                         <p><var name="$table2" form="buttons" /></p>
                     </li>
                 </ol></p>
@@ -744,7 +748,7 @@
           </webwork>
         </exercise>
 
-        <p>The previous example leads us to a simple test we can use to determine if a graph is a function or not: The <term>vertical line test</term><index><main>vertical line test</main></index>.</p>
+        <p>The previous example leads us to a simple test we can use to determine if a graph is a function or not: The <term>vertical line test</term><idx><h>vertical line test</h></idx>.</p>
 
         <p>Given a graph, draw a vertical line through any place on the graph. If the vertical line crosses the graph at most one time (no matter where you draw the line), then the graph is a function. If the vertical line crosses the graph anywhere at more than one point, then the graph is not a function.</p>
 
@@ -795,7 +799,7 @@
     <subsection>
         <title>Evaluate</title>
         <p>It is one thing to talk about <q>The train's distance from downtown <m>2</m> hours after <m>8</m> <init>a.m.</init></q> and a completely different thing to say what that distance actually is.</p>
-        <p><term>Evaluate</term><index><main>evaluate</main></index><index><main>function</main><sub>evaluation</sub></index> means <q>use an input value in order to find an output value.</q> Therefore, evaluating <m>f(2)</m> in our train example means <q>Find the value of the train's distance from downtown <m>2</m> hours after <m>8</m> <init>a.m.</init></q></p>
+        <p><term>Evaluate</term><idx><h>evaluate</h></idx><idx><h>function</h><h>evaluation</h></idx> means <q>use an input value in order to find an output value.</q> Therefore, evaluating <m>f(2)</m> in our train example means <q>Find the value of the train's distance from downtown <m>2</m> hours after <m>8</m> <init>a.m.</init></q></p>
         <p>To evaluate <m>f(2)</m> we can use a graph, a table or a formula if they are available.</p>
         <p>The important thing is we need some input value (time) to determine the output value for the train's distance from downtown. Remember: each individual input always gives the same single result.</p>
         <exercise>
@@ -818,7 +822,7 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <table>
+                    <sidebyside>
                         <tabular top="medium" bottom="medium" left="medium" right="medium">
                             <col halign="center"/>
                             <col halign="center"/>
@@ -851,7 +855,7 @@
                                 <cell><m>47</m></cell>
                             </row>
                         </tabular>
-                    </table>
+                    </sidebyside>
                     <p>Remember that in a vertical table, the inputs are found in the left column (independent variable) while outputs are found in the right column (dependent variable)</p>
                     <p>Use the table to evaluate <m>f(2.5)</m></p>
                     <p><m>f(2.5)= </m><var name="$dist" width="5" /> <var name="$miles" form="popup" /></p>
@@ -1085,7 +1089,7 @@
     <subsection>
         <title>Solve</title>
 
-        <p>What if the output, the result, is already known and we want to know all the inputs that give us this result?  This is called <term>solve</term><index><main>solve</main></index>.</p>
+        <p>What if the output, the result, is already known and we want to know all the inputs that give us this result?  This is called <term>solve</term><idx><h>solve</h></idx>.</p>
         <p>If you live in Oregon in the winter, you might ask, <q>What time will the temperature outside be <m>37</m> degrees Fahrenheit?</q> Typically there might be two answers to this question, one time in the morning and another time in the afternoon.</p>
         <p>You could answer the question with actual times if you had a <em>time <init>vs.</init> temperature</em> graph, or a formula, or a table of times and temperatures.</p>
         <p>Solving means to work backward from a known <em>output</em> value, in order to determine all the inputs that give us the desired output.</p>

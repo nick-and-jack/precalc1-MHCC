@@ -41,7 +41,7 @@
         </li>
     </ul>
      <!--  <list>
-      <title>Video Lectures</title>
+      <caption>Video Lectures</caption>
           <dl>
               <li>
                   <title>Percent and the Decimal Equivalent</title>
@@ -68,7 +68,7 @@
   <section xml:id="exponential-functions-gist">
     <title>Gist of Exponential Functions</title>
 
-    <p>In this lesson we learn about a family of functions called <term>exponential</term>. Just like linear functions, exponentials have their or own distinct numerical patterns, unique graphs and general formulas.</p>
+    <introduction><p>In this lesson we learn about a family of functions called <term>exponential</term>. Just like linear functions, exponentials have their or own distinct numerical patterns, unique graphs and general formulas.</p></introduction>
 
     <subsection>
       <title>Exponential Patterns in Data</title>
@@ -77,7 +77,7 @@
 
       <example xml:id="linear-data">
         <title>Table of Linear Data</title>
-        <table>
+        <sidebyside>
           <tabular>
             <col halign="right" right="medium"/>
             <col halign="center" right="medium" top="medium"/>
@@ -126,14 +126,14 @@
                 <cell><m>\leftarrow{}+1.25</m></cell>
             </row>
           </tabular>
-        </table>
+        </sidebyside>
         <p>The table shows <m>1.25</m> units added to the output for every <m>5</m> unit change in the input.</p>
       </example>
       <p>In turn, exponentials have a pattern of repeated multiplication by the same number called a <term>growth factor</term>. This leads to the fact that exponential functions have constant percent change for constant changes in input. Multiplying is interpreted as a percent change.</p>
 
       <example xml:id="exponential-data">
         <title>Table of Exponential Data</title>
-        <table>
+        <sidebyside>
           <tabular>
             <col halign="right" right="medium"/>
             <col halign="center" right="medium" top="medium"/>
@@ -182,14 +182,14 @@
               <cell><m>\leftarrow{}\times1.25</m></cell>
             </row>
           </tabular>
-        </table>
+        </sidebyside>
         <p>The table shows the output increases by <m>25 \%</m> (multiplication by <m>1.25</m>) for every <m>5</m> unit change in the input.</p>
       </example>
       <p>Two standard ways of communicating exponential information are through the measures of <em>half-life</em> and <em>doubling time</em>.</p>
       <assemblage>
-      <p>The <term>half-life</term><index><main>half-life</main></index> is defined as <em>the time it takes to reduce a quantity by <m>50 \%</m></em> or by <m>\frac{1}{2}</m>.</p></assemblage>
+      <p>The <term>half-life</term><idx><h>half-life</h></idx> is defined as <em>the time it takes to reduce a quantity by <m>50 \%</m></em> or by <m>\frac{1}{2}</m>.</p></assemblage>
       <assemblage>
-      <p>The <term>doubling-time</term><index><main>doubling-time</main></index> is defined as the time it takes for something to double.</p></assemblage>
+      <p>The <term>doubling-time</term><idx><h>doubling-time</h></idx> is defined as the time it takes for something to double.</p></assemblage>
       <p>The units of half-life or doubling-time are therefore time units, like hours, days or even years.</p>
       <p>Since half-life and doubling times are assumed to be constants, anything that has a half-life or doubling-time is therefore modeled exponentially. In other words, only exponential functions have a half-life or a doubling time.</p>
       <example>
@@ -384,7 +384,7 @@
       <p>Notice that as you move along the x-axis, each graph tends to drop closer and closer to the x-axis. The decreasing exponential approaches the x-axis as you move to the right while the increasing exponential approaches the x-axis as you move to the left.</p>
       <p>In fact, the farther you move right or left, the closer each graph gets to the x-axis. In truth neither graph will ever reach the x-axis.</p>
       <p>The x-axis is the horizontal line <m>y = 0</m> and the graphs are <q>tending towards <m>y = 0</m></q> as the inputs move to the right or left.</p>
-      <p>We say that the x-axis is a <term>horizontal asymptote</term><index><main>horizontal asymptote</main></index> with equation <m>y = 0</m>. It means that the graph is getting closer and closer to the x-axis in at least one direction.</p>
+      <p>We say that the x-axis is a <term>horizontal asymptote</term><idx><h>horizontal asymptote</h></idx> with equation <m>y = 0</m>. It means that the graph is getting closer and closer to the x-axis in at least one direction.</p>
       <exercise>
          <webwork>
           <statement>
@@ -410,7 +410,7 @@
 
       <example>
        <p>In the linear function <m>f(t)=mt+b</m> the <m>t</m> is a counter. It counts how many times the number <m>m</m> is repeatedly added.</p>
-       <p>If a car is traveling at <m>50</m> <units>miles per hour</units>, then we can write a linear equation to calculate the distance the car travels as a function of time, t hours. <me>f(t)=50t</me> means that each hour we add another <m>50</m> <units>miles</units> to the distance traveled by the car. After <m>6</m> <units>hours</units> of driving, the vehicle has covered <me>f(6)=50+50+50+50+50+50=50*6=300</me> <m>300</m> <units>miles</units>.</p><p>If the vehicle had already covered <m>60</m> miles when we started counting, then the equation could be written as <me>f(t)=60+50t</me> which simply says we are adding to the <m>60</m> miles that were already covered.</p>
+       <p>If a car is traveling at <m>50</m> miles per hour, then we can write a linear equation to calculate the distance the car travels as a function of time, t hours. <me>f(t)=50t</me> means that each hour we add another <m>50</m> miles to the distance traveled by the car. After <m>6</m> hours of driving, the vehicle has covered <me>f(6)=50+50+50+50+50+50=50*6=300</me> <m>300</m> miles.</p><p>If the vehicle had already covered <m>60</m> miles when we started counting, then the equation could be written as <me>f(t)=60+50t</me> which simply says we are adding to the <m>60</m> miles that were already covered.</p>
       </example>
       <p>The reason there are at least two forms of the exponential formula is there are at least two ways to derive or create an exponential model.</p>
       <p>In practice, when we observe or measure a constant percent change we typically use the information collected to write a formula directly from the data. The result is the discrete form of the exponential formula.</p>

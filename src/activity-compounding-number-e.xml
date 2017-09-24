@@ -13,23 +13,23 @@
 <section xml:id="activity-compounding-number-e" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Compounding in Finance, Continous Compounding and the Number <m>e</m></title>
   <introduction>
-    <p>In <xref ref="activity-exponential-intro">Activity</xref>, we learned to calculate the <q>per unit</q> growth factor using an overall percent change between two values. In this case the growth factor is called <term>discrete</term><index><main>discrete</main></index>. It means the percent change between values occurs in <q>chunks</q> like <m>2 \%</m> every <m>5</m> units or <m>27 \%</m> every <m>1</m> unit.</p>
+    <p>In <xref ref="activity-exponential-intro">Activity</xref>, we learned to calculate the <q>per unit</q> growth factor using an overall percent change between two values. In this case the growth factor is called <term>discrete</term><idx><h>discrete</h></idx>. It means the percent change between values occurs in <q>chunks</q> like <m>2 \%</m> every <m>5</m> units or <m>27 \%</m> every <m>1</m> unit.</p>
     <p>For the dicrete exponential model, a <m>2 \%</m> increase every <m>5</m> units will actually be <m>2 \%</m> greater than the previous value at the end of <m>5</m> units.</p>
     <p>In this activity we first explore the meaning of exponential notation in the context of some real situations and learn to directly communicate our observations into an equation.</p>
     <p>By the end of this activity we develop a new form of the exponential function called the <term>continuous</term> model.</p>
   </introduction>
     <subsection>
     <title>Interpreting the Exponential Form</title>
-    <p>Consider a car that travels from Portland, OR to Seattle, WA (about <m>200</m> <units>miles</units>) in the span of <m>4</m> <units>hours</units>.  The trip is completed at an average speed of <m>200/4 = 50</m> <units>miles per hour</units>. We can use this information to write equations for the distance, <m>D</m> <units>miles</units>, from Portland as functions of time, <m>t</m> <units>hours</units>, in two different ways:</p>
+    <p>Consider a car that travels from Portland, OR to Seattle, WA (about <m>200</m> miles) in the span of <m>4</m> hours.  The trip is completed at an average speed of <m>200/4 = 50</m> miles per hour. We can use this information to write equations for the distance, <m>D</m> miles, from Portland as functions of time, <m>t</m> hours, in two different ways:</p>
     <p><m>D = \frac{200}{4} \cdot  t</m> or <m>D = 50\cdot t</m></p>
     <p>Some may argue that these both represent the same formula. But do they?</p>
-    <p>The first equation states that <m>200</m> <units>miles</units> were covered in the span of <m>4</m> <units>hours</units>.  This is something that actually happened. It’s in the data.</p>
-    <p>The second equation states that <m>50</m> <units>miles</units> were covered in <m>1</m> <units>hour</units>. We don’t know if this actually happened <mdash /> it’s just an average rate of change. There may not have been any hour during the trip in which the car traveled exactly <m>50</m> <units>miles</units>.</p>
+    <p>The first equation states that <m>200</m> miles were covered in the span of <m>4</m> hours.  This is something that actually happened. It’s in the data.</p>
+    <p>The second equation states that <m>50</m> miles were covered in <m>1</m> hour. We don’t know if this actually happened <mdash /> it’s just an average rate of change. There may not have been any hour during the trip in which the car traveled exactly <m>50</m> miles.</p>
     <p>Both equations will give us the same results, but each one tells a different story.</p>
     <p>There is a difference between an <em>observed</em> result and a <em>calculated</em> result.</p>
     <example>
       <blockquote><p><em>The value of a particular stock has increased by <m>20 \%</m> over the last <m>5</m> years.</em></p></blockquote>
-      <p>In this example the increase in stock value was actually measured as <m>20 \%</m> and it actually took <m>5</m> <units>years</units> for the increase to occur.</p>
+      <p>In this example the increase in stock value was actually measured as <m>20 \%</m> and it actually took <m>5</m> years for the increase to occur.</p>
       <p>When we calculate the <em>per year</em> growth factor, <q>b</q></p>
       <p>
       <md>
@@ -47,7 +47,7 @@
       <title><q>Counting</q> the Growth Factor</title>
       <webwork>
         <setup>
-          <var name="$drop" category="set">
+          <var name="$drop">
             <set>
              <member>\text{is constant}</member>
              <member>\text{increases}</member>
@@ -129,7 +129,7 @@
               <static>1350</static>
           </var>
 
-          <var name="$m1" category="set">
+          <var name="$m1">
               <set>
                 <member>\text{the growth factor}</member>
                 <member>\text{the initial value}</member>
@@ -142,7 +142,7 @@
               <static>1.082</static>
           </var>
 
-          <var name="$m2" category="set">
+          <var name="$m2">
             <set>
               <member>\text{the growth factor}</member>
               <member>\text{the initial value}</member>
@@ -155,7 +155,7 @@
             <static>8.02</static>
           </var>
 
-          <var name="$m3" category="set">
+          <var name="$m3">
             <set>
               <member>\text{An 8.2 percent increase occurs every five years}</member>
               <member>\text{An 8.2 percent increase occurs five times each year}</member>
@@ -233,7 +233,7 @@
     </exercise>
     <p>Think of fractional exponents as keeping track of the <q>pieces</q> of the growth factor</p>
     <exercise>
-      <title>A decrease of <m>20 \%</m> every <m>5</m> <units>years</units></title>
+      <title>A decrease of <m>20 \%</m> every <m>5</m> years</title>
       <webwork>
         <statement>
           <tabular top="medium" bottom="medium" left="medium" right="medium">
@@ -282,15 +282,15 @@
         <solution>
         <p>It is directly translated into a math expression as: <m>(0.80)^{\frac{t}{5}}</m></p>
         <p>In one year, <m>t=1</m></p>
-        <p>The exponent in the expression <m>(0.80)^{\frac{1}{5}}</m> literally means <q><m>1</m> out of <m>5</m> <units>years.</units></q></p>
-        <p>In <m>1</m> out of <m>5</m> <units>years</units> <me>(0.8)^{\frac{1}{5}} \approx 0.9564</me>So that <me>r \approx 1-0.9564 = 0.0436</me>Which represents about <m>4.36 \%</m> in one year.</p>
+        <p>The exponent in the expression <m>(0.80)^{\frac{1}{5}}</m> literally means <q><m>1</m> out of <m>5</m> years.</q></p>
+        <p>In <m>1</m> out of <m>5</m> years <me>(0.8)^{\frac{1}{5}} \approx 0.9564</me>So that <me>r \approx 1-0.9564 = 0.0436</me>Which represents about <m>4.36 \%</m> in one year.</p>
         <p>In two years, <m>t=2</m></p>
-        <p>The exponent in the expression <m>(0.80)^{\frac{2}{5}}</m> literally means <q><m>2</m> out of <m>5</m> <units>years.</units></q></p>
-        <p>In <m>2</m> out of <m>5</m> <units>years</units> <me>(0.8)^{\frac{2}{5}} \approx 0.9146</me>So that <me>r \approx 1-0.9146 = 0.0854</me>Which represents about <m>8.54 \%</m> in two years.</p>
+        <p>The exponent in the expression <m>(0.80)^{\frac{2}{5}}</m> literally means <q><m>2</m> out of <m>5</m> years.</q></p>
+        <p>In <m>2</m> out of <m>5</m> years <me>(0.8)^{\frac{2}{5}} \approx 0.9146</me>So that <me>r \approx 1-0.9146 = 0.0854</me>Which represents about <m>8.54 \%</m> in two years.</p>
         <p>In three years, <m>t=3</m></p>
-        <p>The exponent in the expression <m>(0.80)^{\frac{3}{5}}</m> literally means <q><m>3</m> out of <m>5</m> <units>years.</units></q></p>
-        <p>In <m>3</m> out of <m>5</m> <units>years</units> <me>(0.8)^{\frac{3}{5}} \approx 0.8747</me>So that <me>r \approx 1-0.8747 = 0.1253</me>Which represents about <m>12.53 \%</m> in three years.</p>
-        <p>Eventually we reach <m>t=5</m> <units>years</units> and the expression <me>(0.8)^{\frac{5}{5}}=(0.8)^{1}=0.80</me>represents the actual <m>20 \%</m> loss after the <m>5</m> <units>years.</units></p>
+        <p>The exponent in the expression <m>(0.80)^{\frac{3}{5}}</m> literally means <q><m>3</m> out of <m>5</m> years.</q></p>
+        <p>In <m>3</m> out of <m>5</m> years <me>(0.8)^{\frac{3}{5}} \approx 0.8747</me>So that <me>r \approx 1-0.8747 = 0.1253</me>Which represents about <m>12.53 \%</m> in three years.</p>
+        <p>Eventually we reach <m>t=5</m> years and the expression <me>(0.8)^{\frac{5}{5}}=(0.8)^{1}=0.80</me>represents the actual <m>20 \%</m> loss after the <m>5</m> years.</p>
       </solution>
     </webwork>
   </exercise>
@@ -449,7 +449,7 @@
                 </li>
                 <li>
                   <p>Complete the table below for various values of <m>n</m>, the number of of times the interest is compounded during the year, and <m>V</m> the value of the loan in dollars after one year.(round the money values to the nearest cent)</p>
-                  <tabular top="medium" bottom="medium" left="medium" right="medium">
+                  <sidebyside><tabular top="medium" bottom="medium" left="medium" right="medium">
                     <col halign="center"/>
                     <col halign="center"/>
                     <row>
@@ -464,7 +464,7 @@
                         <cell>Hourly, <m>n=</m> <var name="8760" width="4" /></cell>
                         <cell><var name="3044.24" width="8" /></cell>
                     </row>
-                  </tabular>
+                  </tabular></sidebyside>
                 </li>
               </ol>
             </p>
@@ -489,14 +489,14 @@
     <p>Here <m>A_{0}</m> is the initial amount or value, <m>r</m> is the decimal equivalent of the interest rate, <m>n</m> is the number of times the interest is compounded and <m>t</m> is the amount of time the initial amount is left to grow or decay (think stock values over time). </p>
     <p>You may already know where this is going. We have to ask, "What is the most amount of money that can be made?" The answer depends on how often the interest is compounded. So, the real question is, "What is the most compounding possible?"</p>
     <p>Let's think about that. Compounding the interest is the process of <q>chopping</q> up the interest percentage into pieces and calculating the increase or decrease for each piece until all the pieces are counted. Focus on the growth factor for <m>t=1</m> (notice the exponents in each example below have a multiple of <em>something</em><m> \cdot 1</m>) year assuming some intitial value <m>A_{0}</m>.</p>
-    <p><term>Annual interest compounded <em>yearly</em></term><index><main>Annual interest compounded</main><sub>yearly</sub></index>: the interest is divided into <m>1</m> piece and <m>1</m> increase is counted each year.</p>
+    <p><term>Annual interest compounded <em>yearly</em></term><idx><h>Annual interest compounded</h><h>yearly</h></idx>: the interest is divided into <m>1</m> piece and <m>1</m> increase is counted each year.</p>
     <assemblage><p><me>A_{0}(1+\frac{r}{1})^{1 \cdot 1}</me></p></assemblage>
-    <p><term>Annual interest compounded <em>monthly</em></term><index><main>Annual interest compounded</main><sub>monthly</sub></index>: the interest is divided into <m>12</m> pieces and <m>12</m> increases are counted each year.</p>
+    <p><term>Annual interest compounded <em>monthly</em></term><idx><h>Annual interest compounded</h><h>monthly</h></idx>: the interest is divided into <m>12</m> pieces and <m>12</m> increases are counted each year.</p>
     <assemblage><p><me>A_{0}(1+\frac{r}{12})^{12 \cdot 1}</me></p></assemblage>
-    <p><term>Annual interest compounded <m>daily</m></term><index><main>Annual interest compounded</main><sub>daily</sub></index>: the interest is divided into <m>365</m> pieces and <m>365</m> increases are counted each year.</p>
+    <p><term>Annual interest compounded <m>daily</m></term><idx><h>Annual interest compounded</h><h>daily</h></idx>: the interest is divided into <m>365</m> pieces and <m>365</m> increases are counted each year.</p>
     <assemblage><p><me>A_{0}(1+\frac{r}{365})^{365 \cdot 1}</me></p></assemblage>
     <p>What is the maximum number of times any number can be divided? Infinity (and beyond!)</p>
-    <p>In math, infinite compounding is called <term>continuous compounding</term><index><main>continuous compounding</main></index>. It means the interest is being calculated at every moment in time. In fact, there is no time at which the interest is not being calculated.</p>
+    <p>In math, infinite compounding is called <term>continuous compounding</term><idx><h>continuous compounding</h></idx>. It means the interest is being calculated at every moment in time. In fact, there is no time at which the interest is not being calculated.</p>
     <assemblage><p>When continuous compounding occurs, the general formula we came up with earlier <me>A_{0}(1+\frac{r}{n})^{nt}</me> changes form. It becomes <me>A_{0}e^{rt}</me></p></assemblage>
   </subsection>
   <subsection>
@@ -524,7 +524,7 @@
               <var name="$num">
                   <static>12</static>
               </var>
-              <var name="$times1" category="set">
+              <var name="$times1">
                   <set>
                        <member>\text{Investment is compounded continously thoughout the year}</member>
                        <member>\text{Investment is compounded every 12 years}</member>
@@ -532,7 +532,7 @@
                        <member>\text{Investment grows by 12 percent}</member>
                   </set>
               </var>
-              <var name="$times2" category="set">
+              <var name="$times2">
                   <set>
                        <member>\text{Investment is compounded continously thoughout the year}</member>
                        <member correct="yes" >\text{Investment is compounded every 12 years}</member>
@@ -540,7 +540,7 @@
                        <member>\text{Investment grows by 12 percent}</member>
                   </set>
               </var>
-              <var name="$times3" category="set">
+              <var name="$times3">
                   <set>
                        <member correct="yes" >\text{Investment is compounded continously thoughout the year}</member>
                        <member>\text{Investment is compounded every 12 years}</member>

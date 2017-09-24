@@ -51,6 +51,9 @@ include Makefile.paths
 PRJSRC    = $(PRJ)/src
 OUTPUT    = $(PRJ)/output
 
+# The project's main hub file
+MAINFILE  = $(PRJSRC)/precalc1-MHCC.xml
+
 # These paths are subdirectories of
 # the Mathbook XML distribution
 # MBUSR is where extension files get copied
@@ -83,7 +86,7 @@ SERVER = https://webwork.pcc.edu
 pg:
 	install -d $(PGOUT)
 	cd $(PGOUT); \
-	xsltproc -xinclude --stringparam chunk.level 2 $(MBXSL)/mathbook-webwork-archive.xsl $(PRJSRC)/precalc1-MHCC.xml
+	xsltproc -xinclude --stringparam chunk.level 2 $(MBXSL)/mathbook-webwork-archive.xsl $(MAINFILE)
 
 #  HTML output
 #  Output lands in the subdirectory:  $(HTMLOUT)
@@ -93,13 +96,13 @@ html:
 	-rm $(HTMLOUT)/knowl/*.html
 	cp -a $(IMAGESOUT) $(HTMLOUT)
 	cd $(HTMLOUT); \
-	xsltproc -xinclude --stringparam  html.knowl.webwork.inline yes  --stringparam webwork.server $(SERVER) --stringparam html.knowl.example no --stringparam html.knowl.exercise.inline no $(MBXSL)/mathbook-html.xsl $(PRJSRC)/precalc1-MHCC.xml
+	xsltproc -xinclude --stringparam  html.knowl.webwork.inline yes  --stringparam webwork.server $(SERVER) --stringparam html.knowl.example no --stringparam html.knowl.exercise.inline no $(MBXSL)/mathbook-html.xsl $(MAINFILE)
 # Could add --stringparam html.knowl.webwork.sectional no to make problems born open in the exercisegroup at the end of section
 # make all the image files in svg format
 images:
 	install -d $(IMAGESOUT)
 	-rm $(IMAGESOUT)/*.svg
-	$(MB)/script/mbx -c latex-image -f svg -d $(IMAGESOUT) $(PRJSRC)/precalc1-MHCC.xml
+	$(MB)/script/mbx -c latex-image -f svg -d $(IMAGESOUT) $(MAINFILE)
 
 # for pdf output, a one-time prerequisite for LaTeX conversion of
 # problems living on a server, and image construction at server
@@ -107,7 +110,7 @@ images:
 # -s specifies an existing WW server to use (ignore security warnings)
 webwork-server-tex:
 	install -d $(PDFOUT)/webwork-tex
-	$(MB)/script/mbx -v -c webwork-tex -s $(SERVER) -d $(PDFOUT)/webwork-tex $(PRJSRC)/precalc1-MHCC.xml
+	$(MB)/script/mbx -v -c webwork-tex -s $(SERVER) -d $(PDFOUT)/webwork-tex $(MAINFILE)
 
 # LaTeX for print
 # see prerequisite just above
@@ -117,7 +120,7 @@ latex:
 	install -d $(PDFOUT)
 	-rm $(PDFOUT)/*.tex
 	cd $(PDFOUT); \
-	xsltproc -xinclude --stringparam webwork.server.latex $(PDFOUT)/webwork-tex/ $(MBXSL)/mathbook-latex.xsl $(PRJSRC)/precalc1-MHCC.xml; \
+	xsltproc -xinclude --stringparam webwork.server.latex $(PDFOUT)/webwork-tex/ $(MBXSL)/mathbook-latex.xsl $(MAINFILE); \
 
 # PDF for print
 # see prerequisite just above
@@ -127,7 +130,7 @@ pdf:
 	install -d $(PDFOUT)
 	-rm $(PDFOUT)/*.tex
 	cd $(PDFOUT); \
-	xsltproc -xinclude --stringparam webwork.server.latex $(PDFOUT)/webwork-tex/ $(MBXSL)/mathbook-latex.xsl $(PRJSRC)/precalc1-MHCC.xml; \
+	xsltproc -xinclude --stringparam webwork.server.latex $(PDFOUT)/webwork-tex/ $(MBXSL)/mathbook-latex.xsl $(MAINFILE); \
 	xelatex precalc1-MHCC.tex; \
 	xelatex precalc1-MHCC.tex
 
@@ -136,15 +139,10 @@ pdf:
 ###########
 
 # Verify Source integrity
-#   Leaves "dtderrors.txt" in OUTPUT
-#   can then grep on, e.g.
-#     "element XXX:"
-#     "does not follow"
-#     "Element XXXX content does not follow"
-#     "No declaration for"
+#   Leaves "jingreport.txt" in OUTPUT
 #   Automatically invokes the "less" pager, could configure as $(PAGER)
 check:
 	install -d $(OUTPUT)
-	-rm $(OUTPUT)/dtderrors.*
-	-xmllint --xinclude --postvalid --noout --dtdvalid $(DTD)/mathbook.dtd $(PRJSRC)/precalc1-MHCC.xml 2> $(OUTPUT)/dtderrors.txt
-	less $(OUTPUT)/dtderrors.txt
+	-rm $(OUTPUT)/jingreport.txt
+	-java -classpath ~/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar ~/jing-trang/build/jing.jar $(MB)/schema/pretext.rng $(MAINFILE) > $(OUTPUT)/jingreport.txt
+	less $(OUTPUT)/jingreport.txt
