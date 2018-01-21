@@ -333,6 +333,12 @@
             </ol></p>
           </solution>
         </example>
+        <paragraphs>
+          <title>Transformations are Compositions</title>
+          <p>In <xref ref="chapter-vertical-and-horizontal-translations">chapter</xref>, you studied transformations of a function. There, you took a function <m>f(x)</m> and shifted its graph left or right by adding a number to the input of the function. For instance, <m>f(x – 3)</m> represented shifting the graph <m>y = f(x)</m> to the right by <m>3</m> units.</p>
+          <p>However, this may also be thought of as the <term>composition</term> of two functions:  <m>f(x)</m> and <m>g(x) = x - 3</m></p>
+          <p>As a composition, this transformation occurs by substituting the function <m>g(x) = x - 3</m> into the function <m>f(x)</m>:<me>f(x - 3) = f(g(x))</me>So, we have already been using function composition, though we have waited until now to give it that name.</p>
+        </paragraphs>
       </subsection>
 
       <subsection>
@@ -907,6 +913,158 @@
   <exercises>
 
 <exercisegroup><introduction><p>Evaluating Composite Functions</p></introduction>
+
+
+<exercise>
+  <webwork xml:id="function-composition-table2">
+    <setup>
+      <var name="$x[0]"><static>0</static></var>
+      <var name="$x[1]"><static>1</static></var>
+      <var name="$x[2]"><static>2</static></var>
+      <var name="$x[3]"><static>3</static></var>
+      <var name="$x[4]"><static>4</static></var>
+      <var name="$x[5]"><static>5</static></var>
+      <var name="$P[0]"><static>1</static></var>
+      <var name="$P[1]"><static>0</static></var>
+      <var name="$P[2]"><static>5</static></var>
+      <var name="$P[3]"><static>2</static></var>
+      <var name="$P[4]"><static>3</static></var>
+      <var name="$P[5]"><static>4</static></var>
+      <var name="$Q[0]"><static>5</static></var>
+      <var name="$Q[1]"><static>2</static></var>
+      <var name="$Q[2]"><static>3</static></var>
+      <var name="$Q[3]"><static>1</static></var>
+      <var name="$Q[4]"><static>4</static></var>
+      <var name="$Q[5]"><static>8</static></var>
+      <var name="$QofP[0]"><static>2</static></var>
+      <var name="$QofP[1]"><static>5</static></var>
+      <var name="$QofP[2]"><static>8</static></var>
+      <var name="$QofP[3]"><static>3</static></var>
+      <var name="$QofP[4]"><static>1</static></var>
+      <var name="$QofP[5]"><static>4</static></var>
+      <pg-code>
+        @x=(0,1,2,3,4,5);
+        @P=NchooseK(6,6);
+        @Q=NchooseK(6,6);
+        $QofP[0]=$Q[$P[0]];
+        $QofP[1]=$Q[$P[1]];
+        $QofP[2]=$Q[$P[2]];
+        $QofP[3]=$Q[$P[3]];
+        $QofP[4]=$Q[$P[4]];
+        $QofP[5]=$Q[$P[5]];
+      </pg-code>
+    </setup>
+    <statement>
+      <p>The table below has values for functions <m>P(x)</m> and <m>Q(x)</m>. Use those values to determine the values of the composition <m>Q(P(x))</m>.</p>
+      <p>Remember to evaluate first inside the parentheses.</p>
+      <sidebyside>
+        <tabular top="major" halign="center">
+          <col halign="left" />
+          <col />
+          <col />
+          <col />
+          <row bottom="medium">
+            <cell><m>x</m></cell>
+            <cell><m>P(x)</m></cell>
+            <cell><m>Q(x)</m></cell>
+            <cell><m>Q(P(x))</m></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[0]" /></m></cell>
+            <cell><m><var name="$P[0]" /></m></cell>
+            <cell><m><var name="$Q[0]" /></m></cell>
+            <cell><var name="$QofP[0]" width="15" /></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[1]" /></m></cell>
+            <cell><m><var name="$P[1]" /></m></cell>
+            <cell><m><var name="$Q[1]" /></m></cell>
+            <cell><var name="$QofP[1]" width="15" /></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[2]" /></m></cell>
+            <cell><m><var name="$P[2]" /></m></cell>
+            <cell><m><var name="$Q[2]" /></m></cell>
+            <cell><var name="$QofP[2]" width="15" /></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[3]" /></m></cell>
+            <cell><m><var name="$P[3]" /></m></cell>
+            <cell><m><var name="$Q[3]" /></m></cell>
+            <cell><var name="$QofP[3]" width="15" /></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[4]" /></m></cell>
+            <cell><m><var name="$P[4]" /></m></cell>
+            <cell><m><var name="$Q[4]" /></m></cell>
+            <cell><var name="$QofP[4]" width="15" /></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[5]" /></m></cell>
+            <cell><m><var name="$P[5]" /></m></cell>
+            <cell><m><var name="$Q[5]" /></m></cell>
+            <cell><var name="$QofP[5]" width="15" /></cell>
+          </row>
+        </tabular>
+      </sidebyside>
+    </statement>
+    <hint>
+      <p>Remember to work inside parentheses first. For instance, in order to evaluate <m>Q(P(3))</m>, you must first evaluate <m>P(3) = <var name="$P[3]" /></m> and then use <m><var name="$P[3]" /></m> as the input for <m>Q(x)</m>.</p>
+    </hint>
+    <solution>
+      <sidebyside>
+        <tabular top="major" halign="center">
+          <col halign="left" />
+          <col />
+          <col />
+          <col />
+          <row bottom="medium">
+            <cell><m>x</m></cell>
+            <cell><m>Q(x)</m></cell>
+            <cell><m>P(x)</m></cell>
+            <cell><m>Q(P(x))</m></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[0]" /></m></cell>
+            <cell><m><var name="$P[0]" /></m></cell>
+            <cell><m><var name="$Q[0]" /></m></cell>
+            <cell><m><var name="$QofP[0]" /></m></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[1]" /></m></cell>
+            <cell><m><var name="$P[1]" /></m></cell>
+            <cell><m><var name="$Q[1]" /></m></cell>
+            <cell><m><var name="$QofP[1]" /></m></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[2]" /></m></cell>
+            <cell><m><var name="$P[2]" /></m></cell>
+            <cell><m><var name="$Q[2]" /></m></cell>
+            <cell><m><var name="$QofP[2]" /></m></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[3]" /></m></cell>
+            <cell><m><var name="$P[3]" /></m></cell>
+            <cell><m><var name="$Q[3]" /></m></cell>
+            <cell><m><var name="$QofP[3]" /></m></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[4]" /></m></cell>
+            <cell><m><var name="$P[4]" /></m></cell>
+            <cell><m><var name="$Q[4]" /></m></cell>
+            <cell><m><var name="$QofP[4]" /></m></cell>
+          </row>
+          <row bottom="medium">
+            <cell><m><var name="$x[5]" /></m></cell>
+            <cell><m><var name="$P[5]" /></m></cell>
+            <cell><m><var name="$Q[5]" /></m></cell>
+            <cell><m><var name="$QofP[5]" /></m></cell>
+          </row>
+        </tabular>
+      </sidebyside>
+    </solution>
+  </webwork>
+</exercise>
 
 <exercise>
   <webwork source="Library/LoyolaChicago/Precalc/Chap8Sec1/Q25.pg" seed="1" />
