@@ -22,14 +22,14 @@
         <figure xml:id="graph-income-tax-piecewise">
         <caption>Graph of Income Tax function (pieceswise example)</caption>
           <image width="47%" xml:id="image-graph-income-tax-piecewise">
-            <latex-image-code>
+            <latex-image>
                 <![CDATA[\begin{tikzpicture}
                 \begin{axis}[ymin=0, ymax=25, xlabel={Income (thousands of dollars)}, ylabel={Tax (thousands of dollars)}, xtick={0,10,...,100}, minor xtick={0,2,...,100}, ytick={0,5,...,25}, minor ytick={1,2,...,25}, xmin=0, xmax=100, grid=both]
                 \addplot[thick, color=blue, domain=0:60,-] {0.15*x};
                 \addplot[thick, color=blue, domain=60:100,-] {.35*(x-60)+0.15*60};
                 \end{axis}
                 \end{tikzpicture}]]>
-            </latex-image-code>
+            </latex-image>
           </image>
         </figure>
         <p>Annual incomes of less than or equal to <m>60</m> (thousand dollars) are taxed at a flat rate of <m>15 \%</m>.</p>
