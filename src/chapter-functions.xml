@@ -219,7 +219,7 @@
               <figure xml:id="speed-vs-efficiency">
                   <caption>Graph of <m>f(s)</m>: Fuel Economy versus Speed</caption>
                   <image width="47%">
-                      <latex-image-code>
+                      <latex-image>
                           <![CDATA[
                               \begin{tikzpicture}
                                   \begin{axis}[xmin=5,xmax=75,
@@ -235,7 +235,7 @@
                               \end{axis}
                               \end{tikzpicture}
                           ]]>
-                      </latex-image-code>
+                      </latex-image>
                   </image>
               </figure>
               <p>The input is the speed, <m>s</m>, and the output is the efficiency, <m>E</m> so we can write an ordered pair <m>(s, E)</m> or <m>(s, f(s))</m>.</p>
@@ -485,8 +485,111 @@
               </webwork>
             </exercise>-->
         </subsection>
+
         <exercises>
 
+        <exercisegroup><introduction><p>Interpretating Function Notation</p></introduction>
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$ans">
+                  <set>
+                    <member>\text{Eight workers painted 7 houses.}</member>
+                    <member>\text{It will take 7 workers 8 hours to paint a house.}</member>
+                    <member correct="yes">\text{It will take 8 workers 7 hours to paint a house.}</member>
+                    <member>\text{For 8 houses, 7 workers will paint them.}</member>
+                  </set>
+                </var>
+                <pg-code>
+                  $ans=PopUp(["?","Eight workers painted 7 houses.","It will take 7 workers 8 hours to paint a house.","It will take 8 workers 7 hours to paint a house.","For 8 houses, 7 workers will paint them."],"It will take 8 workers 7 hours to paint a house.");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>Suppose the function <m>h = f(w)</m> represents the hours of labor it will take for <m>w</m> workers to paint a house.</p>
+                <p>What is the best interpretation of the statement <m>f(8) = 7</m>?</p>
+                <p>Answer:  <var name="$ans" form="popup" /></p>
+              </statement>
+              <solution>
+                <p>The input of the function is <em>the number of workers</em>, represented by the variable <m>w</m>, and the output is <em>the number of hours to paint a house</em>, represented by the variable <m>h</m>. Therefore, the statement <me>f(8) = 7</me> means that for <m>8</m> workers, it will take <m>7</m> hours to paint a house.</p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$ans">
+                  <set>
+                    <member correct="yes">f(2010)=2015</member>
+                    <member>f(2015)=2010</member>
+                  </set>
+                </var>
+                <pg-code>
+                  $ans=PopUp(["?","f(2010) = 2015","f(2015) = 2010"],"f(2010) = 2015");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>Suppose the function <m>p = f(t)</m> represents the population of a certain town, where <m>p</m> represents the population and <m>t</m> represents the year.</p>
+                <p>Choose the function statement that means: "<em>There were <m>2015</m> people in the town in <m>2010</m>.</em>"</p>
+                <p>Answer:  <var name="$ans" form="popup" /></p>
+              </statement>
+              <solution>
+                <p>In the function <m>p = f(t)</m>, remember that the variable <m>t</m> represents the year. So, the function statement should be: <m>f(2010) = 2015</m></p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$ans1">
+                  <set>
+                    <member correct="yes">f(8) = 8131</member>
+                    <member>f(2018)=8131</member>
+                    <member>f(8131)=2018</member>
+                  </set>
+                </var>
+                <var name="$ans2">
+                  <set>
+                    <member>f(2013)</member>
+                    <member correct="yes">f(3)</member>
+                  </set>
+                </var>
+                <var name="$ans3">
+                  <set>
+                    <member correct="yes">\text{After 8 years, the value has decreased by $13929.}</member>
+                    <member>\text{After 8 years, the value is -$13929.}</member>
+                  </set>
+                </var>
+                <pg-code>
+                  $ans1=PopUp(["?","f(8)=8131","f(2018)=8131","f(8131)=2018"],"f(8)=8131");
+                  $ans2=PopUp(["?","f(2013)","f(3)"],"f(3)");
+                  $ans3=PopUp(["?","After 8 years, the value has decreased by 13929 dollars.","After 8 years, the value is -13929 dollars."],"After 8 years, the value has decreased by 13929 dollars.");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>A base model <m>2010</m> Ford F-150 had a new list price of <m>\$ 22{,}060</m>. By <m>2018</m>, the value was <m>\$ 8{,}131</m>.</p>
+                <p>Suppose the function <m>v = g(y)</m> represents the value (in dollars) of a <m>2010</m> Ford F-150, where <m>y</m> represents the <em>number of years after <m>2010</m>.</em></p>
+                <p><ol label="a">
+                  <li><p>Which function statement means "<em>In <m>2018</m>, the value was <m>\$ 8131</m></em>"?</p>
+                  <p><var name="$ans1" form="popup" /></p></li>
+                  <li><p>What option represents <em>the value of the vehicle in the year <m>2013</m></em>?</p>
+                  <p><var name="$ans2" form="popup" /></p></li>
+                  <li><p>What is the meaning of the function statement <m>f(8) - f(0) = -13{,}929</m>?</p>
+                  <p><var name="$ans3" form="popup" /></p></li>
+                </ol></p>
+              </statement>
+              <solution>
+                <p><ol label="a">
+                  <li><p><var name="$ans1" /></p></li>
+                  <li><p><var name="$ans2" /></p></li>
+                  <li><p><var name="$ans3" /></p></li>
+                </ol></p>
+              </solution>
+            </webwork>
+          </exercise>
+
+        </exercisegroup>
 <!-- evaluating functions -->
 
         <exercisegroup><introduction><p>Evaluating Functions</p></introduction>
@@ -579,6 +682,186 @@
 
 <!-- average rate of change and difference quotient -->
 <exercisegroup><introduction><p>Average Rate of Change and Difference Quotient</p></introduction>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$aroc_num1"><static>71</static></var>
+                <var name="$aroc_num2"><static>3.8</static></var>
+                <var name="$aroc_unit1">
+                  <set>
+                    <member>\text{students}</member>
+                    <member>\text{years}</member>
+                    <member correct="yes">\text{students/year}</member>
+                    <member>\text{years/student}</member>
+                  </set>
+                </var>
+                <var name="$aroc_unit2">
+                  <set>
+                    <member>\text{teachers}</member>
+                    <member>\text{years}</member>
+                    <member>\text{years/teacher}</member>
+                    <member correct="yes">\text{teachers/year}</member>
+                  </set>
+                </var>
+                <pg-code>
+                  $aroc_num1=Compute("(400-45)/5");
+                  $aroc_num2=Compute("(23-4)/5");
+                  $aroc_unit1=PopUp(["?","students","years","students/year","years/student"],"students/year");
+                  $aroc_unit2=PopUp(["?","teachers","years","years/teacher","teachers/year"],"teachers/year");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>In <m>2012</m> the new school had <m>45</m> students and <m>4</m> teachers, and by <m>2017</m> it had grown to <m>400</m> students and <m>23</m> teachers.</p>
+                <p>Let <m>S = f(y)</m> represent the number of students in the school, and let <m>T = g(y)</m> represent the number of teachers in the school. In both functions, the input variable <m>y</m> represents the number of years after <m>2012</m>.</p>
+                <p><ol label="a">
+                  <li><p>Calculate the average rate of change of the function <m>f</m> between <m>t=0</m> and <m>t=5</m>.</p>
+                  <p>Answer:  <var name="$aroc_num1" width="10" /> <var name="$aroc_unit1" form="popup" /></p></li>
+                  <li><p>Calculate the average rate of change of the function <m>g</m> between <m>t=0</m> and <m>t=5</m>.</p>
+                  <p>Answer:  <var name="$aroc_num2" width="10" /> <var name="$aroc_unit2" form="popup" /></p></li>
+                </ol></p>
+              </statement>
+              <solution>
+                <p><ol label="a">
+                  <li><p><var name="$aroc_num1" /> <var name="$aroc_unit1" /></p></li>
+                  <li><p><var name="$aroc_num2" /> <var name="$aroc_unit2" /></p></li>
+                </ol></p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$aroc"><static>-2</static></var>
+                <var name="$arocm"><static>m</static></var>
+                <pg-code>
+                  $aroc=Real(-2);
+                  Context()->variables->are(m=>'Real');
+                  $arocm=Formula("m");
+                </pg-code>
+              </setup>
+              <statement>
+                <p><ol label="a">
+                  <li><p>What is the average rate of change for the function <m>g(x) = -2x + 7</m> on the interval <m>0\leq x \leq 5</m>?</p>
+                  <p>Answer:  <var name="$aroc" width="10" /></p></li>
+                  <li><p>What is the average rate of change for the function <m>g(x) = -2x + 7</m> on the interval <m>12\leq x \leq 20</m>?</p>
+                  <p>Answer:  <var name="$aroc" width="10" /></p></li>
+                  <li><p>What is the average rate of change for the function <m>h(x) = mx + b</m> on <em>any</em> interval?</p>
+                  <p>Answer:  <var name="$arocm" width="10" /></p></li>
+                </ol></p>
+              </statement>
+              <solution>
+                <p><ol label="a">
+                  <li><p>The average rate of change is <m><var name="$aroc" /></m></p></li>
+                  <li><p>The average rate of change is <m><var name="$aroc" /></m></p></li>
+                  <li><p>The average rate of change is <m><var name="$arocm" /></m></p></li>
+                </ol></p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$form"><static>5x+3</static></var>
+                <pg-code>
+                  Context()->variables->are(x=>'Real');
+                  $form=Formula("5*x+3");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>For a certain linear function <m>f(x)</m>, suppose we know that <m>f(0) = 3</m> and the average rate of change of <m>f</m> is <m>5</m> on the interval <m>1 \leq x \leq 8</m>.</p>
+                <p>Find the formula for the function <m>f(x)</m>.</p>
+                <p>Answer:  <m>f(x) = </m><var name="$form" width="15" /></p>
+              </statement>
+              <hint>
+                <p>Remember that the <em>average rate of change</em> of a function <m>f</m> on an interval <m>[a,b]</m> is just the slope of the line segment connecting the points <m>\left(a,f(a)\right)</m> and <m>\left(b,f(b)\right)</m>. And, the function in this problem is actually a line.</p>
+              </hint>
+              <solution>
+                <p>Since the function <m>f</m> is actually a line, then the average rate of change on <em>any</em> interval will be the slope of the line.</p>
+                <p>Also, since it is linear, we can write the formula as: <m>f(x) = mx + b</m></p>
+                <p>Therefore, the formula is just: <m>f(x) = 5x + 3</m></p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$b"><static>3</static></var>
+                <var name="$c"><static>4</static></var>
+                <var name="$d"><static>14</static></var>
+                <pg-code>
+                  $b=random(3,7,1);
+                  $c=random(8,12,1);
+                  $d=Compute("$c + 5*($b-1)");
+                  $run=Compute("$b-1");
+                  $rise=Compute("5*$run");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>Suppose the average rate of change of a function <m>g</m> on the interval <m>1 \leq x \leq <var name="$b" /></m> is <m>5</m>. If <m>g(1) = <var name="$c" /></m>, what is <m>g\left(<var name="$b" />\right)</m>?</p>
+                <p>Answer:  <m>g\left(<var name="$b" />\right) = </m><var name="$d" width="10" /></p>
+              </statement>
+              <solution>
+                <p>Remember that the average rate of change is the slope connecting two points on the function, and this <em>slope</em> is just <m>\frac{\text{rise}}{\text{run}} = 5</m>. The horizontal change, or "run", between <m>x=1</m> and <m>x=<var name="$b" /></m> is <m><var name="$run" /></m>. With this, we can solve for the vertical change, or "rise":</p>
+                <p><md>
+                  <mrow>\frac{\text{rise}}{\text{run}} \amp= 5</mrow>
+                  <mrow>\frac{\text{rise}}{<var name="$run" />} \amp= 5</mrow>
+                  <mrow>\text{rise} \amp= <var name="$rise" /></mrow>
+                </md></p>
+                <p>Finally, we can find <m>f(<var name="$b" />)</m> by adding <m><var name="$rise" /></m> to the output <m>f(1) = <var name="$c" /></m>.</p>
+                <p>Answer:  <md>
+                  <mrow>f(<var name="$b" />) \amp= <var name="$c" /> + <var name="$rise" /></mrow>
+                  <mrow>\amp= <var name="$d" /></mrow>
+                </md></p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$false">
+                  <set>
+                    <member>\text{True}</member>
+                    <member correct="yes">\text{False}</member>
+                  </set>
+                </var>
+                <var name="$true">
+                  <set>
+                    <member correct="yes">\text{True}</member>
+                    <member>\text{False}</member>
+                  </set>
+                </var>
+                <pg-code>
+                  $false=PopUp(["?","True","False"],"False");
+                  $true=PopUp(["?","True","False"],"True");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>True or False:</p>
+                <p><ol label="a">
+                  <li><p>If the average rate of change of a function <m>y = f(x)</m> is <m>3</m> on an interval, then for every increase of <m>1</m> in <m>x</m> in that interval, <m>y</m> will increase by <m>3</m>.</p>
+                  <p>Answer:  <var name="$false" form="popup" /></p></li>
+                  <li><p>If the average rate of change of a <em>linear</em> function <m>y = g(x)</m> is <m>4</m> on an interval, then for every increase of <m>1</m> in <m>x</m> in that interval, <m>y</m> will increase by <m>4</m>.</p>
+                  <p>Answer:  <var name="$true" form="popup" /></p></li>
+                </ol></p>
+              </statement>
+              <hint>
+                <p>Notice that <m>f</m> is not assumed to be linear, but <m>g</m> is. Also, remember that the average rate of change represents a <em>slope</em>.</p>
+              </hint>
+              <solution>
+                <p><ol label="a">
+                  <li><p>This is <var name="$false" /> because the function <m>f</m> may be curved on that interval, so the average rate of change is just the slope connecting the points at the endpoints of that interval.</p>
+                  <p>An example would be the function <m>f(x) = x^2</m> on the interval <m>0 \leq x \leq 3</m>. Even though the average rate of change on that interval is <m>\frac{9-0}{3} = 3</m>, increasing from <m>x=2</m> to <m>x=3</m> only sees an increase in the output of <m>f(3) - f(2) = 9 - 4 = 5</m>.</p></li>
+                  <li><p>This <var name="$true" /> because the function <m>g</m> was assumed to be linear. A linear function has a constant slope, no matter what the interval.</p></li>
+                </ol></p>
+              </solution>
+            </webwork>
+          </exercise>
+
           <exercise>
             <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_19.pg" seed="1" />
           </exercise>

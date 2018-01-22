@@ -211,7 +211,7 @@
           <figure>
             <caption></caption>
               <image width="47%">
-                <latex-image-code>
+                <latex-image>
                   <![CDATA[\begin{tikzpicture}
                     \begin{axis}[
                         axis line style={->},
@@ -231,7 +231,7 @@
                       \addplot[mark=*] coordinates {(9.97, 0.1)} node[above right] {$t\approx10$};
                     \end{axis}
                   \end{tikzpicture}]]>
-              </latex-image-code>
+              </latex-image>
             </image>
           </figure>
         </solution>
@@ -255,7 +255,7 @@
           <figure>
             <caption></caption>
               <image width="47%">
-                <latex-image-code>
+                <latex-image>
                   <![CDATA[\begin{tikzpicture}
                     \begin{axis}[
                         axis line style={->},
@@ -275,7 +275,7 @@
                       \addplot[mark=*] coordinates {(18, 2)} node[above left] {$t\approx18$};
                     \end{axis}
                   \end{tikzpicture}]]>
-              </latex-image-code>
+              </latex-image>
             </image>
           </figure>
           <p>If the current rate of increase continues, rental prices will double in approximately 18 years.</p>
@@ -290,7 +290,7 @@
         <figure>
         <caption>Adding <m>1.25</m> every <m>5</m> units</caption>
           <image width="47%">
-            <latex-image-code>
+            <latex-image>
                 <![CDATA[\begin{tikzpicture}
                 \begin{axis}[
                   xmin={-5},
@@ -304,7 +304,7 @@
                 \addplot+[mark=*,-] coordinates {(0,5) (5,6.25) (10, 7.5) (20, 10) (35,13.75) (40,15)};
                 \end{axis}
                 \end{tikzpicture}]]>
-            </latex-image-code>
+            </latex-image>
           </image>
       </figure>
         <p>Ploting the ordered pairs for the linear model gives us a graph of a straight line. The graph has both horizontal and vertical intercepts.</p>
@@ -315,7 +315,7 @@
         <figure>
         <caption>Multiplying by <m>1.25</m> every <m>5</m> units</caption>
           <image width="47%">
-            <latex-image-code>
+            <latex-image>
                 <![CDATA[\begin{tikzpicture}
                 \begin{axis}[
                   xmin={-5},
@@ -330,7 +330,7 @@
                 \addplot[primarycurve,mark=none,-,domain=0:40] {5*1.25^(x/5)};
                 \end{axis}
                 \end{tikzpicture}]]>
-            </latex-image-code>
+            </latex-image>
           </image>
       </figure>
         <p>Plotting the ordered pairs for the exponential model gives us a graph of a smooth curve. In this example the curve is <em>concave up</em>.</p>
@@ -342,7 +342,7 @@
         <figure>
           <caption>Constant percent decrease</caption>
             <image>
-              <latex-image-code>
+              <latex-image>
                   <![CDATA[\begin{tikzpicture}
                   \begin{axis}[
                     xmin={-10},
@@ -356,13 +356,13 @@
                   \addplot[primarycurve,mark=*,-,domain=-10:50,samples=10] {20*0.8^(x/2)};
                   \end{axis}
                   \end{tikzpicture}]]>
-              </latex-image-code>
+              </latex-image>
             </image>
         </figure>
         <figure>
           <caption>Constant percent increase</caption>
             <image>
-              <latex-image-code>
+              <latex-image>
                   <![CDATA[\begin{tikzpicture}
                   \begin{axis}[
                     xmin={-40},
@@ -376,7 +376,7 @@
                   \addplot[primarycurve,mark=*,-,domain=-40:10,samples=10] {20*1.2^(x/2)};
                   \end{axis}
                   \end{tikzpicture}]]>
-              </latex-image-code>
+              </latex-image>
             </image>
         </figure>
       </sidebyside>

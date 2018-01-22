@@ -161,7 +161,7 @@
                     <figure>
                         <caption><m>f(t) = 32t</m>: Dropped at time <m>t = 0</m></caption>
                         <image>
-                            <latex-image-code>
+                            <latex-image>
                                 <![CDATA[
                                 \begin{tikzpicture}
                                     \begin{axis}[xmax=4, xmin=-0.5,
@@ -172,13 +172,13 @@
                                     \end{axis}
                                 \end{tikzpicture}
                                 ]]>
-                            </latex-image-code>
+                            </latex-image>
                         </image>
                     </figure>
                     <figure>
                         <caption><m>f(t-1) = 32(t-1)</m>: Dropped at time <m>t = 1</m></caption>
                         <image>
-                            <latex-image-code>
+                            <latex-image>
                                 <![CDATA[
                                 \begin{tikzpicture}
                                     \begin{axis}[xmax=4, xmin=-0.5,
@@ -189,7 +189,7 @@
                                     \end{axis}
                                 \end{tikzpicture}
                                 ]]>
-                            </latex-image-code>
+                            </latex-image>
                         </image>
                     </figure>
                 </sidebyside>
@@ -216,14 +216,14 @@
                 <figure>
                     <caption><m>f(x) = x^2 + 2x</m></caption>
                     <image width="47%">
-                        <latex-image-code>
+                        <latex-image>
                             <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[]
                                     \addplot+[domain=-3.75:1.75, samples=50]{x^2+2*x};
                                 \end{axis}
                             \end{tikzpicture}
                             ]]>
-                        </latex-image-code>
+                        </latex-image>
                     </image>
                 </figure>
                 <p>If you wanted to move this graph so it had the same shape, but it was <m>3</m> units to the right and <m>2</m> units down, what would be its formula?</p>
@@ -241,14 +241,14 @@
                 <figure>
                     <caption><m>g(x) = x - x^3</m></caption>
                     <image width="47%">
-                        <latex-image-code>
+                        <latex-image>
                             <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[]
                                     \addplot+[domain=-2:2, samples=50]{x-x^3};
                                 \end{axis}
                             \end{tikzpicture}
                             ]]>
-                        </latex-image-code>
+                        </latex-image>
                     </image>
                 </figure>
                 <p>A different function, <m>h(x) = (x+1) - (x+1)^3 + 2</m>, is a certain transformation of <m>g(x)</m>.</p>
@@ -270,14 +270,14 @@
                 <figure>
                     <caption><m>h(x) = (x+1) - (x+1)^3 + 2</m></caption>
                     <image width="47%">
-                        <latex-image-code>
+                        <latex-image>
                             <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[]
                                     \addplot+[domain=-2.8:1.2, samples=50]{x+1-(x+1)^3+2};
                                  \end{axis}
                             \end{tikzpicture}
                             ]]>
-                        </latex-image-code>
+                        </latex-image>
                     </image>
                 </figure>
                 <p>A straightforward way to sketch the transformed function is to take a known point from <m>g(x)</m>, such as <m>(0,0)</m>, and move it left <m>1</m> and up <m>2</m>. Then sketch the rest of the graph around that new point.</p>
