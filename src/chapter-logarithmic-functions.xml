@@ -894,6 +894,241 @@
       </exercise>
 </exercisegroup>
 
+<exercisegroup><introduction><p>Applications</p></introduction>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$digit"><static>7</static></var>
+            <var name="$prob"><static>5</static></var>
+            <var name="$rounded"><static>5.8</static></var>
+            <pg-code>
+              $digit=random(3,8,1);
+              $prob=int(log(2)/log(1+1/$digit)+0.5);
+              $rounded=100*sprintf("%.3f",log(1+1/$digit)/log(10));
+            </pg-code>
+          </setup>
+          <statement>
+            <p><url href="https://en.wikipedia.org/wiki/Benford%27s_law">Benford's Law</url> (discovered by astronomer Simon Newcomb) is an observation about large sets of multi-digit numbers. In particular, it says that the first digit of a number is more likely to be a <m>1</m> than a <m>2</m>, more likely to be <m>2</m> than <m>3</m>, etc.</p>
+            <p>Newcomb modeled this phenomenon by the function <me>p(n) = 100 \log_{10} \left(1+\frac{1}{n}\right)</me> which gives the percent of numbers that begin with the digit <m>n</m>. Here, the domain of <m>p</m> is just the set of whole numbers <m>\{1,2,3, \cdots , 9\}</m>.</p>
+            <p>According to Benford's Law, about how many times as likely is it for a number to begin with the digit <m>1</m> as it is to begin with the digit <var name="$digit" />? Round your answer to the nearest whole number.</p>
+            <p>Answer: <var name="$prob" width="10" /></p>
+          </statement>
+          <solution>
+            <p>About <m>100 \log_{10}\left(1 + \frac{1}{1}\right) \approx 30.1 \%</m> of numbers begin with the digit <m>1</m>, and about <m>100 \log_{10} \left(1 + \frac{1}{<var name="$digit" />}\right) \approx <var name="$rounded" /> \%</m> of numbers begin with the digit <var name="$digit" />.</p>
+            <p>So, it is about <m>\frac{30.1}{<var name="$rounded" />} \approx <var name="$prob" /></m> times as likely to begin with <m>1</m> than with <m><var name="$digit" /></m>.</p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$percent"><static>1.3</static></var>
+            <var name="$formula"><static>1500(1.03)^t</static></var>
+            <var name="$years"><static>21.1</static></var>
+            <var name="$b"><static>1.013</static></var>
+            <pg-code>
+              $percent=random(12,16,1)/10;
+              Context()->variables->are(t=>'Real');
+              $formula=Compute("1500*(1+$percent/100)^t");
+              $b=Compute("1+$percent/100");
+              $years=sprintf("%.1f",log(2800/1500)/log(1+$percent/100));
+              $t=Compute("log(2800/1500)/log($b)");
+            </pg-code>
+          </setup>
+          <stage>
+            <statement>
+              <p>You deposit <m>1500</m> dollars into a savings account that earns <var name="$percent" /> percent interest per year.</p>
+              <p>Write a formula to model the amount of money, <m>B(t)</m>, in the account after <m>t</m> years.</p>
+              <p>Answer:  <m>B(t) = </m><var name="$formula" width="15" /></p>
+            </statement>
+            <hint><p>An exponential function can be written in the form: <m>B(t) = a(b)^t</m></p></hint>
+            <solution>
+              <p><m>B(t) = <var name="$formula" /></m></p>
+            </solution>
+          </stage>
+          <stage>
+            <statement>
+              <p>The formula <me>B(t) = <var name="$formula" /></me> calculates the balance in your account. Determine how many years until the balance is <m>2800</m> dollars. Round your answer to the nearest tenth of a year.</p>
+              <p>Answer: <var name="$years" width="10" /> years</p>
+            </statement>
+            <hint><p>You must solve the equation: <m>2800 = <var name="$formula" /></m></p></hint>
+            <solution>
+              <p><md>
+                <mrow>t \amp= \frac{\log\left(\frac{2800}{1500}\right)}{\log(<var name="$b" />)}</mrow>
+                <mrow>\amp\approx <var name="$years" />\text{ years}</mrow>
+              </md></p>
+            </solution>
+          </stage>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$percent"><static>7</static></var>
+            <var name="$formula"><static>40000(0.93)^t</static></var>
+            <var name="$years"><static>9.6</static></var>
+            <var name="$b"><static>0.93</static></var>
+            <pg-code>
+              $percent=random(6,9,1);
+              Context()->variables->are(t=>'Real');
+              $formula=Compute("40000*(1-$percent/100)^t");
+              $b=Compute("1-$percent/100");
+              $years=sprintf("%.1f",log(0.5)/log($b));
+            </pg-code>
+          </setup>
+          <stage>
+            <statement>
+              <p>The population of a city begins at <m>40000</m> people, and it is expected to decrease by <var name="$percent" /> percent per year.</p>
+              <p>Write a formula to model the population, <m>P(t)</m>, in the city after <m>t</m> years.</p>
+              <p>Answer:  <m>P(t) = </m><var name="$formula" width="15" /></p>
+            </statement>
+            <hint><p>An exponential function can be written in the form: <m>B(t) = a(b)^t</m></p></hint>
+            <solution>
+              <p><m>P(t) = <var name="$formula" /></m></p>
+            </solution>
+          </stage>
+          <stage>
+            <statement>
+              <p>The formula <me>P(t) = <var name="$formula" /></me> calculates the projected population of the city. Determine how many years until the projected population is <m>20000</m> people. Round your answer to the nearest tenth of a year.</p>
+              <p>Answer: <var name="$years" width="10" /> years</p>
+            </statement>
+            <hint><p>You must solve the equation: <m>20000 = <var name="$formula" /></m></p></hint>
+            <solution>
+              <p><md>
+                <mrow>t \amp= \frac{\log\left(\frac{20000}{40000}\right)}{\log(<var name="$b" />)}</mrow>
+                <mrow>\amp\approx <var name="$years" />\text{ years}</mrow>
+              </md></p>
+            </solution>
+          </stage>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$bRounded"><static>1.26</static></var>
+            <var name="$options"><static>26</static></var>
+            <pg-code>
+              $bRounded=sprintf("%.2f",4/(log(9)/log(2)));
+              $options=Real(26);
+            </pg-code>
+          </setup>
+          <stage>
+            <statement>
+              <p><url href="https://en.wikipedia.org/wiki/Hick%27s_law">Hick's Law</url> (named for psychologist William Edmund Hick) says that when people must make a choice from a set of options, the time it takes them increases <em>logarithmically</em> as the number of possible options increases.</p>
+              <p>In particular, the law says that the time, <m>T</m>, it takes to make a choice can be modeled by the equation <me>T = b \log_2(n+1)</me> where <m>n</m> represents the number of options from which to choose, and <m>b</m> is a constant number related to factors such as the type of decision being made.</p>
+              <p>Suppose a software program has a drop-down menu with <m>8</m> different command options. Suppose it takes a user <m>4</m> seconds to make their choice from the drop-down menu. What is the value of the constant <m>b</m>? Give your answer to the nearest hundredth.</p>
+              <p>Answer:  <m>b \approx </m><var name="$bRounded" width="10" /></p>
+            </statement>
+            <solution>
+              <p>Solve for <m>b</m>:<md>
+              <mrow>b \log_2(8+1) \amp= 4</mrow>
+              <mrow>b \amp= \frac{4}{\log_2(8+1)}</mrow>
+              <mrow>\amp \approx 1.26</mrow></md></p>
+            </solution>
+          </stage>
+          <stage>
+            <statement>
+              <p>Using the value <m>b = <var name="$bRounded" /></m>, suppose the software designers decided that users should spend no more than <m>6</m> seconds to make their choice on the drop-down menu. How many choices can they put in the menu without going over the <m>6</m> second maximum?</p>
+              <p>Answer: <var name="$options" width="10" /> options.</p>
+            </statement>
+            <solution>
+              <p>We can solve for <m>n</m> by setting <m>T = 6</m>: <md>
+              <mrow>6 \amp= 1.26 \log_2(n+1)</mrow>
+              <mrow>\frac{6}{1.26} \amp= log_2(n+1)</mrow>
+              <mrow>2^{\frac{6}{1.26}} \amp= n + 1</mrow>
+              <mrow>n \amp= 2^{\frac{6}{1.26}}-1</mrow>
+              <mrow>\amp\approx 26</mrow></md></p>
+            </solution>
+          </stage>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$note">
+              <set>
+                <member>\text{A}</member>
+                <member>\text{B}</member>
+                <member correct="yes">\text{C}</member>
+                <member>\text{D}</member>
+                <member>\text{E}</member>
+                <member>\text{F}</member>
+              </set>
+            </var>
+            <pg-code>
+              $note=PopUp(["?","A","B","C","D","E","F"],"C");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>The frequency of a musical tone defines the pitch we hear, which we may give a note value (such as G or D<hash />). Mathematically, frequency is measured in <em>hertz</em>. A higher number of hertz for a tone means the tone sounds higher.</p>
+            <p>On a piano, we have the following notes: <em>A, A<hash />, B, C, C<hash />, D, D<hash />, E, F, F<hash />, G, G<hash />, A</em>. This is called one <em>octave</em> of notes, and these same notes repeat in the next octave (just at higher frequencies). We call the distance between successive notes in an octave a <em>semitone</em>. So, the distance from <em>A</em> to <em>C</em> is <m>3</m> semitones, and the distance between <em>A</em> and the next <em>A</em> is <m>12</m> semitones.</p>
+            <p>Now, the note <em>middle A</em> has a frequency of <m>440</m> Hertz. To calculate the frequency of a note, we use the formula <me>F(x) = 440(2)^{x/12}</me> where <m>x</m> is the number of semitones a note is above middle <em>A</em>.</p>
+            <p>What note has a frequency of <m>1046.5</m> Hertz?</p>
+            <p>Answer: <var name="$note" form="popup" /></p>
+          </statement>
+          <solution>
+            <p>Setting the frequency equal to <m>1046.5</m>, we can solve for <m>x</m>: <md>
+            <mrow>1046.5 \amp= 440(2)^{x/12}</mrow>
+            <mrow>\frac{1046.5}{440} \amp= 2^{x/12}</mrow>
+            <mrow>\ln\left(\frac{1046.5}{440}\right) \amp= \frac{x}{12}\ln(2)</mrow>
+            <mrow>x \amp= \frac{12}{\ln(2)}\ln\left(\frac{1046.5}{440}\right)</mrow>
+            <mrow>\amp \approx 15</mrow></md></p>
+            <p>The note is <m>15</m> semitones above middle <em>A</em>. Since the next <em>A</em> is <em>12</em> semitones above middle <em>A</em>, those extra <m>3</m> semitones mean we are at the note <em>C</em>.</p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$people[0]"><static>30</static></var>
+            <var name="$people[1]"><static>38</static></var>
+            <var name="$people[2]"><static>41</static></var>
+            <var name="$people[3]"><static>49</static></var>
+            <var name="$people[4]"><static>57</static></var>
+            <var name="$people[5]"><static>68</static></var>
+            <var name="$index"><static>4</static></var>
+            <var name="$choices"><static>57</static></var>
+            <var name="$rejected"><static>21</static></var>
+            <pg-code>
+              @people=(30,38,41,49,57,68);
+              $index=random(1,5,1);
+              $choices=$people[$index];
+              $rejected=$choices/2.718281828459045;
+              $rejectedRounded=sprintf("%.0f",$rejected);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>A famous application involving the number <m>e</m> comes from <url href="https://en.wikipedia.org/wiki/Optimal_stopping">Optimal Stopping</url> theory. Known as the <url href="https://en.wikipedia.org/wiki/Secretary_problem">Best Choice Problem</url>, it concerns hiring someone for a job under the following conditions:</p>
+            <p><ul>
+              <li><p>You have <m>n</m> people to interview.</p></li>
+              <li><p>You interview them one-by-one.</p></li>
+              <li><p>After each person is interviewed, you must immediately make the decision of whether to hire them or not. If you hire them, you're done and you cannot interview anymore candidates.</p></li>
+              <li><p>If you reject a candidate (decide <em>not</em> to hire them), you can't change your mind later.</p></li>
+            </ul></p>
+            <p>Under these conditions, you may wonder how to actually choose the best person for the job. If you choose a good candidate early on, you may miss the opportunity to hire a really <em>great</em> candidate later down the line. If you wait too long, you may only be left with mediocre candidates from which to choose.</p>
+            <p>The solution is to interview the first <m>\frac{n}{e}</m> candidates but reject <em>all</em> of them, regardless of their qualifications. Then, continue interviewing candidates until you find the first one that is <q>better</q> than the first group you rejected. Hire this person.</p>
+            <p>Interestingly, this simple rule has been shown to find the best candidate in a group approximately <m>37 \%</m> of the time, no matter the size of the group!</p>
+            <p>Question: Suppose a group of people line up to be chosen as an <url href="https://en.wikipedia.org/wiki/Extra_(acting)">extra</url> in a movie. The casting director only has time to interview people one at a time and make a decision: yes or no.</p>
+            <p>Suppose the casting director is familiar with the <em>Best Choice Problem</em>, and she interviews and rejects the first <m><var name="$rejectedRounded" /></m> people in line. How many people are in line? Round your answer to the closest whole number.</p>
+            <p>Answer: There were <var name="$choices" width="10" /> total people.</p>
+          </statement>
+          <solution>
+            <p>Because she rejected <var name="$rejectedRounded" /> people, we solve the equation: <md>
+            <mrow>\text{Rejected} \amp= \frac{\text{Total}}{e}</mrow>
+            <mrow><var name="$rejectedRounded" /> \amp= \frac{\text{Total}}{e}</mrow>
+            <mrow>\text{Total} \amp= <var name="$rejectedRounded" />e</mrow>
+            <mrow>\amp\approx <var name="$choices" /></mrow></md></p>
+          </solution>
+        </webwork>
+      </exercise>
+
+</exercisegroup>
+
     </exercises>
     </section>
 </chapter>

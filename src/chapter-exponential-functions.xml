@@ -566,6 +566,36 @@
 <!-- application problems -->
 
       <exercise>
+        <webwork>
+          <setup>
+            <var name="$bounce"><static>4</static></var>
+            <var name="$formula"><static>15*(0.80)^x</static></var>
+            <var name="$height"><static>6.144</static></var>
+            <pg-code>
+              $bounce=random(3,5,1);
+              $formula=Compute("15*0.8**x");
+              $height=Compute("15*0.8**$bounce");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>A ball is dropped from a height of <m>15</m> feet and begins bouncing on the ground. Every time it bounces, it only reaches <m>80 \%</m> of the height from the previous bounce.</p>
+            <p><ol label="a">
+              <li><p>Write a formula for the height the ball reaches, where the input, <m>x</m>, is the number of times it has bounced.</p>
+              <p>Answer:  <m>H(x) = </m><var name="$formula" width="15" /></p></li>
+              <li><p>How high above the ground will the ball reach on its <m><var name="$bounce" />^\text{th}</m> bounce?</p>
+              <p>Answer:  <var name="$height" width="15" /> feet</p></li>
+            </ol></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p><m>H(x) = <var name="$formula" /></m></p></li>
+              <li><p><m>H(<var name="$bounce" />) = <var name="$height" /></m></p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec2/Q30.pg" seed="1" />
       </exercise>
 </exercisegroup>
