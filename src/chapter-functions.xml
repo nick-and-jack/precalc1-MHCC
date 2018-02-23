@@ -589,6 +589,63 @@
             </webwork>
           </exercise>
 
+<todo>Fix the next exercise as it won't accept a list of numbers as the answer.</todo>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <var name="$solve2"><static>-2,0,3</static></var>
+                <var name="$fof2"><static>4</static></var>
+                <pg-code>
+                  $fof2=Real(4);
+                  $solve2=Set(-2,0,3);
+                  $gr=init_graph(-6,-6,6,6,
+                  axes=>[0,0],
+                  grid=>[12,12],
+                  size=>[400,400]
+                  );
+                  add_functions($gr, "-0.25*x*(x+2)*(x-3)+2 for x in &lt;-3.5,4.5&gt; using color:red and weight:2");
+                  $gr->stamps( closed_circle(-2,2,'blue') );
+                  $gr->stamps( closed_circle(0,2,'blue') );
+                  $gr->stamps( closed_circle(3,2,'blue') );
+                  $gr->stamps( closed_circle(-1,1,'blue') );
+                  $gr->stamps( closed_circle(2,4,'blue') );
+                  $gr->stamps( closed_circle(4,-4,'blue') );
+                  $gr -> lb(new Label (-2.2,1.9,'(-2, 2)','red','right','bottom'));
+                  $gr -> lb(new Label (0.2,2,'(0, 2)','red','left','bottom'));
+                  $gr -> lb(new Label (3.1,2.1,'(3, 2)','red','left','bottom'));
+                  $gr -> lb(new Label (-0.9,0.5,'(-1, 1)','red','right','bottom'));
+                  $gr -> lb(new Label (2.1,4.1,'(2, 4)','red','left','bottom'));
+                  $gr -> lb(new Label (4.1,-3.9,'(4, -4)','red','left','bottom'));
+                  $gr -> lb(new Label (5.5,0.3,'x','black','left','bottom'));
+                  $gr -> lb(new Label (0.5,5.5,'y','black','left','bottom'));
+                </pg-code>
+              </setup>
+              <statement>
+                <p>The graph below shows the function <m>y=f(x)</m>.</p>
+                <figure>
+                  <image pg-name="$gr" />
+                </figure>
+                <p><ol label="a">
+                  <li><p>Evaluate <m>f(2)</m>.</p>
+                  <p>Answer:  <m>f(2) = </m><var name="$fof2" width="10" /></p></li>
+                  <li><p>Solve <m>f(x) = 2</m>, separating values with a comma.</p>
+                  <p>Answer:  <m>x = </m><var name="$solve2" width="15" /></p></li>
+                </ol></p>
+              </statement>
+              <hint>
+                <p>Remember that <em>evaluating</em> means finding the output of the function, which in this case is the <m>y</m>-value.</p>
+                <p>When solving, you must find all <m>x</m>-values that make the equation true.</p>
+              </hint>
+              <solution>
+                <p><ol label="a">
+                  <li><p><m>f(2) = 4</m></p></li>
+                  <li><p><m>x = -2</m> or <m>x = 0</m> or <m>x = 3</m></p></li>
+                </ol></p>
+              </solution>
+            </webwork>
+          </exercise>
+
         </exercisegroup>
 <!-- evaluating functions -->
 
@@ -792,6 +849,8 @@
                 <var name="$b"><static>3</static></var>
                 <var name="$c"><static>4</static></var>
                 <var name="$d"><static>14</static></var>
+                <var name="$run"><static>2</static></var>
+                <var name="$rise"><static>10</static></var>
                 <pg-code>
                   $b=random(3,7,1);
                   $c=random(8,12,1);
