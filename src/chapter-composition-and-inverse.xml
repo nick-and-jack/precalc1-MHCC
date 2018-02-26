@@ -1355,6 +1355,56 @@
 <exercisegroup><introduction><p>Additional Problems</p></introduction>
 
 <exercise>
+  <webwork>
+    <setup>
+      <var name="$totalCost">
+        <set>
+          <member correct="yes">A(V(w)) + B(T(w))</member>
+          <member>V(w) + T(w)</member>
+          <member>T(V(w)) + B(A(m))</member>
+          <member>V(w)T(w)</member>
+        </set>
+      </var>
+      <var name="$totalMiles">
+        <set>
+          <member>V(T(w)) + T(V(w))</member>
+          <member>V(A(m))</member>
+          <member>V(w)T(w)</member>
+          <member correct="yes">V(w) + T(w)</member>
+        </set>
+      </var>
+      <pg-code>
+        $totalCost=PopUp(["?","A(V(w)) + B(T(w))","V(w) + T(w)","T(V(w)) + B(A(m))","V(w)T(w)"],"A(V(w)) + B(T(w))");
+        $totalMiles=PopUp(["?","V(T(w)) + T(V(w))","V(A(m))","V(w)T(w)","V(w) + T(w)"],"V(w) + T(w)");
+      </pg-code>
+    </setup>
+    <statement>
+      <p>Your company has a fleet of vehicles that transport goods around the metropolitan area. You use the following functions:</p>
+      <p><ul>
+        <li><p><m>V(w)</m> represents the number of miles your moving vans drive in week <m>w</m></p></li>
+        <li><p><m>T(w)</m> represents the number of miles your moving trucks drive in week <m>w</m></p></li>
+        <li><p><m>A(m)</m> represents the cost of fuel for driving your moving vans <m>m</m> miles</p></li>
+        <li><p><m>B(m)</m> represents the cost of fuel for driving your moving trucks <m>m</m> miles</p></li>
+      </ul></p>
+      <p><ol label="a">
+        <li><p>Which expression represents the total cost of fuel for your moving vans and trucks in week <m>w</m>?</p>
+        <p>Answer: <var name="$totalCost" form="popup" /></p></li>
+        <li><p>Which expression represents the total number of miles driven for your moving vans and trucks in week <m>w</m>?</p>
+        <p>Answer: <var name="$totalMiles" form="popup" /></p></li>
+      </ol></p>
+    </statement>
+    <solution>
+      <p><ol label="a">
+        <li><p>Answer:  <var name="$totalCost" /></p>
+        <p>First, <m>V(w)</m> and <m>T(w)</m> calculate the number of miles driven by the vans and trucks in week <m>w</m>. Then, using those as the inputs for the functions <m>A</m> and <m>B</m> will give the total cost for each type of vehicle.</p></li>
+        <li><p>Answer:  <var name="$totalMiles" /></p>
+        <p>The functions <m>V(w)</m> and <m>T(w)</m> calculate the number of miles for the vans and trucks, so we just add them together.</p></li>
+      </ol></p>
+    </solution>
+  </webwork>
+</exercise>
+
+<exercise>
   <webwork xml:id="webwork-windchill">
     <setup>
       <var name="$rand[0]"><static>0</static></var>
