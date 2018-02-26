@@ -406,7 +406,7 @@
       <me>y = mx + b</me> or <me>ax+by=k</me> or <me>y=m(x-h)+k</me> There are many forms, but most likely the first one is most familiar.</p>
       <p>The formula for an exponential function may look like <m>f(x) = ab^{x}</m> or <m>f(x)=ae^{kx}</m>.</p>
       <p><m>ab^{x}</m> is called the <term>discrete</term> form of the exponential and <m>ae^{kx}</m> is called the <term>continuous</term> form.</p>
-      <p>There is also the financial exponential model for compounded interest <me>f(x)=(1+\frac{r}{n})^{(n \cdot t)}</me></p>
+      <p>There is also the financial exponential model for compounded interest <me>f(x)=\left(1+\frac{r}{n}\right)^{(n \cdot t)}</me></p>
 
       <example>
        <p>In the linear function <m>f(t)=mt+b</m> the <m>t</m> is a counter. It counts how many times the number <m>m</m> is repeatedly added.</p>
@@ -443,8 +443,8 @@
         <title>Compounded Interest Formula</title>
         <p>In the <q>Compounding and the Number e</q> activity we learned that frequent, low interest charges or payments can cost or make more money over time than charging a larger interest rate just once.</p>
         <p>For instance, consider a <m>\$ 2300</m> investment that earns <m>8 \%</m> annual interest.</p>
-        <p>Waiting to the end of each year to recieve an <m>8 \%</m> increase will result in <me>2300(1+\frac{0.08}{1})^{1 \cdot 1} \approx  \$ 2484</me> at the end of one year.</p>
-        <p>Over a period of <m>5</m> years the same investment would earn <me>2300(1+\frac{0.08}{1})^{1 \cdot 5} \approx  \$ 3379.45</me> However, by compounding the same <m>15 \%</m>interest monthly, with <m>12</m> months in a year, the investment would collect <me>2300(1+\frac{0.08}{12})^{12 \cdot 1} \approx \$ 2490.90</me> with <me>2300(1+\frac{0.08}{12})^{12 \cdot 5} \approx \$ 3426.65</me> over <m>5</m> years.</p>
+        <p>Waiting to the end of each year to recieve an <m>8 \%</m> increase will result in <me>2300\left(1+\frac{0.08}{1}\right)^{1 \cdot 1} \approx  \$ 2484</me> at the end of one year.</p>
+        <p>Over a period of <m>5</m> years the same investment would earn <me>2300\left(1+\frac{0.08}{1}\right)^{1 \cdot 5} \approx  \$ 3379.45</me> However, by compounding the same <m>15 \%</m>interest monthly, with <m>12</m> months in a year, the investment would collect <me>2300\left(1+\frac{0.08}{12}\right)^{12 \cdot 1} \approx \$ 2490.90</me> with <me>2300\left(1+\frac{0.08}{12}\right)^{12 \cdot 5} \approx \$ 3426.65</me> over <m>5</m> years.</p>
       </example>
     </subsection>
     <!-- <subsection>
@@ -598,6 +598,71 @@
       <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec2/Q30.pg" seed="1" />
       </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$nominal"><static>1.8</static></var>
+            <var name="$years"><static>5</static></var>
+            <var name="$effective"><static>9.32988</static></var>
+            <var name="$fiveYearGrowthFactor"><static>1.0933</static></var>
+            <var name="$effectiveRounded"><static>9.33</static></var>
+            <pg-code>
+              $nominal=random(12,25,1)/10;
+              $years=random(4,9,1);
+              $effective=Compute("100*(((1+$nominal/100)^$years)-1)");
+              $fiveYearGrowthFactor=Compute("(1+$nominal/100)^$years");
+              $effectiveRounded=sprintf("%.2f",$effective);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>An investment grows by <m><var name="$nominal" /> \%</m> each year. By what percent will it increase after <m><var name="$years" /></m> years? Round your answer to the nearest hundredth of a percent.</p>
+            <p>Answer:  <var name="$effective" width="10" /> <m>\%</m></p>
+          </statement>
+          <hint>
+            <p>Remember <mdash /> you are looking for the percent change after <var name="$years" /> years. This <var name="$nominal" /> percent growth is calculated each year.</p>
+            <p>Also, you are not given the initial amount in the account, which means that your answer will not depend on this number.</p>
+          </hint>
+          <solution>
+            <p>We Calculate the percent change between two values by dividing the final amount by the initial amount. In this case, we don't know how much the account started with, so we are free to make that value up.</p>
+            <p>If we begin with <m>\$ 500</m>, then dividing final by initial will give:<me>\frac{500(1 + \frac{<var name="$nominal" />}{100})^<var name="$years" />}{500} \approx <var name="$fiveYearGrowthFactor" /></me></p>
+            <p>This means the account grew by approximately <var name="$effectiveRounded" /><m>\%</m> after <var name="$years" /> years.</p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$lengthPercent"><static>5</static></var>
+            <var name="$hours"><static>3</static></var>
+            <var name="$effectiveArea"><static>34.0095641</static></var>
+            <var name="$effectiveRounded"><static>34.01</static></var>
+            <var name="$threeHourGrowthFactor"><static>1.340095641</static></var>
+            <pg-code>
+              $lengthPercent=random(3,8,1);
+              $hours=random(2,5,1);
+              $effectiveArea=Compute("100*((1+$lengthPercent/100)^(2*$hours)-1)");
+              $effectiveRounded=sprintf("%.2f",$effectiveArea);
+              $threeHourGrowthFactor=Compute("(1+$lengthPercent/100)^(2*$hours)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>If the side lengths of a square are each increasing by <var name="$lengthPercent" /><m>\%</m> per hour, by what percent will the <em>area</em> of the square increase after <var name="$hours" /> hours? Give your answer to the nearest hundredth of a percent.</p>
+            <p>Answer:  <var name="$effectiveRounded" width="10" /> <m>\%</m></p>
+          </statement>
+          <hint>
+            <p>The problem doesn't tell us what the initial side length was, so we can just make one up. Use what you know about the length to find the area after <var name="$hours" /> hours. Compare this to the initial area.</p>
+          </hint>
+          <solution>
+            <p>If the length starts at some number <m>L</m> and increases by <var name="$lengthPercent" /> percent per hour, it will be <m>L\left(1 + \frac{<var name="$lengthPercent" />}{100}\right)^<var name="$hours" /></m> after <var name="$hours" /> hours.</p>
+            <p>The area of a square is just the square of its length, so the area will be <m>\left(L\left(1 + \frac{<var name="$lengthPercent" />}{100}\right)^<var name="$hours" />\right)^2</m>  after <var name="$hours" /> hours.</p>
+            <p>Dividing the final area by the initial area will give: <me>\frac{\left(L\left(1 + \frac{<var name="$lengthPercent" />}{100}\right)^<var name="$hours" />\right)^2}{L^2} \approx <var name="$threeHourGrowthFactor" /></me></p>
+            <p>This means the area will increase by about <var name="$effectiveRounded" /><m>\%</m> after <var name="$hours" /> hours.</p>
+          </solution>
+        </webwork>
+      </exercise>
+
 </exercisegroup>
 
     </exercises>
