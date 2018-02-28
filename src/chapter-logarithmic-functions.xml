@@ -1119,11 +1119,126 @@
             <p>Answer: There were <var name="$choices" width="10" /> total people.</p>
           </statement>
           <solution>
-            <p>Because she rejected <var name="$rejectedRounded" /> people, we solve the equation: <md>
-            <mrow>\text{Rejected} \amp= \frac{\text{Total}}{e}</mrow>
-            <mrow><var name="$rejectedRounded" /> \amp= \frac{\text{Total}}{e}</mrow>
-            <mrow>\text{Total} \amp= <var name="$rejectedRounded" />e</mrow>
-            <mrow>\amp\approx <var name="$choices" /></mrow></md></p>
+            <p>Because she rejected <var name="$rejectedRounded" /> people, we solve the equation:
+              <md>
+                <mrow>\text{Rejected} \amp= \frac{\text{Total}}{e}</mrow>
+                <mrow><var name="$rejectedRounded" /> \amp= \frac{\text{Total}}{e}</mrow>
+                <mrow>\text{Total} \amp= <var name="$rejectedRounded" />e</mrow>
+                <mrow>\amp\approx <var name="$choices" /></mrow>
+              </md>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$initial"><static>4000</static></var>
+            <var name="$rate"><static>0.03</static></var>
+            <var name="$years"><static>ln(2)/0.03</static></var>
+            <pg-code>
+              $rate=random(3,8,1)/100;
+              $initial=random(3,7,1)*1000;
+              $years=Compute("ln(2)/$rate");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>Suppose a population is given by
+              <me>
+                P(t) = <var name="$initial" />e^{<var name="$rate" />t}
+              </me>
+              where <m>t</m> is measured in years from now. Determine when the population doubles.
+            </p>
+            <p>Answer: <var name="$years" width="10" /> years</p>
+          </statement>
+          <solution>
+            <p>We will solve the equation: <m><var name="$initial" />e^{<var name="$rate" />t} = 2\cdot<var name="$initial" /></m></p>
+            <p>
+              <md>
+                <mrow>e^{<var name="$rate" />t} \amp= 2</mrow>
+                <mrow><var name="$rate" />t \amp= ln(2)</mrow>
+                <mrow>t \amp= \frac{ln(2)}{<var name="$rate" />}</mrow>
+                <mrow>\amp\approx <var name="$years" /></mrow>
+              </md>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$rateF"><static>7</static></var>
+            <var name="$rateG"><static>4</static></var>
+            <var name="$solution"><static>\frac{\ln\left(\frac{450}{700}\right)}{\ln\left(\frac{1.04}{1.07}\right)}</static></var>
+            <pg-code>
+              $rateF=random(6,9,1);
+              $rateG=random(3,5,1);
+              $solution=Compute("ln(450/700)/ln((1+$rateG/100)/(1+$rateF/100))");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Suppose <m>f(t)</m> has an initial value of <m>450</m> and increases by <var name="$rateF" /> <m>\%</m> per year, and <m>g(t)</m> has an initial value of <m>700</m> and increases at only <var name="$rateG" /> <m>\%</m> per year. Determine when the two functions are equal.
+            </p>
+            <p>
+              Answer: <m>t = </m><var name="$solution" width="10" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              What is the equation for each function? You must find these formulas and set them equal.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              <m>\frac{\ln\left(\frac{450}{700}\right)}{\ln\left((1+<var name="$rateG" />/100)/(1+<var name="$rateF" />/100)\right)} \approx <var name="$solution" /></m>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$rate"><static>6.2</static></var>
+            <var name="$initial"><static>6500</static></var>
+            <var name="$k"><static>\ln\left(1+1.062\right)</static></var>
+            <pg-code>
+              $rate=random(55,75,1)/10;
+              $initial=random(55,85,1)*100;
+              $k=Compute("ln(1+$rate/100)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              The value of an asset is increasing by <var name="$rate" /><m>\%</m> per year and has an intial value of <m>\$</m><var name="$initial" />.
+            </p>
+            <p>
+              The value of the asset can be written in the form <m>Ae^{kt}</m>. Find the value of <m>k</m>.
+            </p>
+            <p>
+              Answer: <m>k = </m><var name="$k" width="10" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              The equation for the asset's value is:  <m><var name="$initial" />\left(1 + \frac{<var name="$rate" />}{100}\right)^t</m>
+            </p>
+            <p>
+              We must rewrite this as <m>Ae^{kt}</m>, so we set these expressions equal and solve for <m>k</m>:
+            </p>
+            <p>
+              <md>
+                <mrow><var name="$initial" />e^{kt} \amp= <var name="$initial" />\left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
+                <mrow>e^{kt} \amp= \left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
+                <mrow>\left(e^k\right)^t \amp= \left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
+                <mrow>e^k \amp= 1 + \frac{<var name="$rate" />}{100}</mrow>
+                <mrow>k \amp= \ln\left(\frac{<var name="$rate" />}{100}\right)</mrow>
+                <mrow>\amp\approx <var name="$k" /></mrow>
+              </md>
+            </p>
           </solution>
         </webwork>
       </exercise>
