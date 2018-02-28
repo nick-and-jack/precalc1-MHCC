@@ -1243,6 +1243,135 @@
         </webwork>
       </exercise>
 
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$left"><static>35</static></var>
+            <var name="$k"><static>\ln\left(\frac{0.35}{1000}\right)</static></var>
+            <pg-code>
+              $left=random(30,50,1);
+              $k=Compute("ln($left/100)/1000");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Suppose a value is decaying, and <var name="$left" /><m>\%</m> remains after <m>1000</m> years. The amount of the substance can be modeled by the function
+              <me>
+                f(t) = Ae^{kt}
+              </me>
+              where <m>A</m> is the initial amount, <m>t</m> is the number of years, and the constant <m>k</m> is the <em>continuous rate of decay</em>. Find the value of <m>k</m>.
+            </p>
+            <p>
+              Answer: <m>k = </m><var name="$k" width="10" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <md>
+                <mrow>k \amp= \ln\left(\frac{0.<var name="$left" />}{1000}\right)</mrow>
+                <mrow>\amp\approx <var name="$k" /></mrow>
+              </md>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+<!-- This problem returns the error: Can't generate enough valid points for comparison
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$a"><static>2100</static></var>
+            <var name="$b"><static>0.08</static></var>
+            <var name="$c"><static>200</static></var>
+            <var name="$inverse"><static>\frac{\ln\left(\frac{x-200}{2100}\right)}{0.08}</static></var>
+            <pg-code>
+              $a=random(19,35,1)*100;
+              $b=random(3,9,1)/100;
+              $c=random(2,9,1)*100;
+              Context()->variables->are(x=>'Real');
+              Context()->variables->set(x=>{limits=>[40.01,40.99]});
+              $inverse=Compute("ln((x-$c)/$a)/$b");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Determine a formula for the inverse function of <m>f(x) = <var name="$a" />e^{<var name="$b" />x} + <var name="$c" /></m>.
+            </p>
+            <p>
+              Answer:  <m>f^{-1}(x) = </m><var name="$inverse" width="15" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              The inverse is:  <m>f^{-1}(x) = <var name="$inverse" /></m>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+-->
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$halfLife"><static>42</static></var>
+            <var name="$initial"><static>120</static></var>
+            <var name="$formula"><static>120\left(0.5\right)^{t/42}</static></var>
+            <var name="$hours"><static>\frac{\ln(\frac{10}{120})}{ln(0.5)}\cdot 42</static></var>
+            <pg-code>
+              $halfLife=random(25,45,1);
+              $initial=random(50,150,1);
+              Context()->variables->are(t=>'Real');
+              $formula=Compute("$initial*(0.5)^(t/$halfLife)");
+              $hours=Compute("ln(10/$initial)/ln(0.5)*$halfLife");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              A highly unstable element has a half-life of <var name="$halfLife" /> hours. This means that every <var name="$halfLife" /> hours, half of the element decays, leaving only half of the previous amount.
+            </p>
+            <p>
+              Suppose we start with <var name="$initial" /> grams of the element.
+            </p>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Write a function, <m>f(t)</m>, for the amount of the element left after <m>t</m> hours.
+                  </p>
+                  <p>
+                    Answer:  <m>f(t) = </m><var name="$formula" width="15" />
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Determine when the amount of the element remaining drops below <m>10</m> grams.
+                  </p>
+                  <p>
+                    Answer:  <var name="$hours" width="10" /> hours
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>f(t) = <var name="$formula" /></m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m><var name="$hours" /></m> hours
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
 </exercisegroup>
 
     </exercises>
