@@ -1405,6 +1405,50 @@
 </exercise>
 
 <exercise>
+  <webwork>
+    <setup>
+      <var name="$revenue">
+        <set>
+          <member>f(g(5))</member>
+          <member>g(f(5))</member>
+          <member>f(5)+g(5)</member>
+          <member correct="yes">f(5)g(5)</member>
+        </set>
+      </var>
+      <var name="$taxes">
+        <set>
+          <member>h(5)</member>
+          <member correct="yes">h\left(f(5)g(5)\right)</member>
+          <member>h\left(f(5)\right)</member>
+          <member>h\left(g\left(f(5)\right)\right)</member>
+        </set>
+      </var>
+      <pg-code>
+        $revenue=PopUp(["?","f(g(5))","g(f(5))","f(5) + g(5)","f(5)g(5)"],"f(5)g(5)");
+        $taxes=PopUp(["?","h(5)","h(f(5)g(5))","h(f(5))","h(g(f(5)))"],"h(f(5)g(5))");
+      </pg-code>
+    </setup>
+    <statement>
+      <p>On your popular YouTube channel, you earn a small amount of money (due to advertising) for each time your only video is viewed.</p>
+      <p>Suppose the function <m>f(x)</m> represents how many times your video is viewed on the <m>x^{\text{th}}</m> day of the month, and <m>g(x)</m> represents how much you earn per view on the <m>x^{\text{th}}</m> day of the month.</p>
+      <p>Finally, suppose the function <m>h(x)</m> represents how much you must pay in taxes for earning <m>x</m> dollars from your YouTube channel.</p>
+      <p><ol label="a">
+        <li><p>Which expression represents how much money you earn on the <m>5^{\text{th}}</m> day of the month?</p>
+        <p>Answer: <var name="$revenue" form="popup" /></p></li>
+        <li><p>Which expression represents how much you must pay in your taxes from your earnings on the <m>5^{\text{th}}</m> day of the month?</p>
+        <p>Answer: <var name="$taxes" form="popup" /></p></li>
+      </ol></p>
+    </statement>
+    <solution>
+      <p><ol label="a">
+        <li><p><var name="$revenue" /></p></li>
+        <li><p><var name="$taxes" /></p></li>
+      </ol></p>
+    </solution>
+  </webwork>
+</exercise>
+
+<exercise>
   <webwork xml:id="webwork-windchill">
     <setup>
       <var name="$rand[0]"><static>0</static></var>

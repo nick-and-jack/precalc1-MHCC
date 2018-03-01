@@ -1119,11 +1119,345 @@
             <p>Answer: There were <var name="$choices" width="10" /> total people.</p>
           </statement>
           <solution>
-            <p>Because she rejected <var name="$rejectedRounded" /> people, we solve the equation: <md>
-            <mrow>\text{Rejected} \amp= \frac{\text{Total}}{e}</mrow>
-            <mrow><var name="$rejectedRounded" /> \amp= \frac{\text{Total}}{e}</mrow>
-            <mrow>\text{Total} \amp= <var name="$rejectedRounded" />e</mrow>
-            <mrow>\amp\approx <var name="$choices" /></mrow></md></p>
+            <p>Because she rejected <var name="$rejectedRounded" /> people, we solve the equation:
+              <md>
+                <mrow>\text{Rejected} \amp= \frac{\text{Total}}{e}</mrow>
+                <mrow><var name="$rejectedRounded" /> \amp= \frac{\text{Total}}{e}</mrow>
+                <mrow>\text{Total} \amp= <var name="$rejectedRounded" />e</mrow>
+                <mrow>\amp\approx <var name="$choices" /></mrow>
+              </md>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$initial"><static>4000</static></var>
+            <var name="$rate"><static>0.03</static></var>
+            <var name="$years"><static>ln(2)/0.03</static></var>
+            <pg-code>
+              $rate=random(3,8,1)/100;
+              $initial=random(3,7,1)*1000;
+              $years=Compute("ln(2)/$rate");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>Suppose a population is given by
+              <me>
+                P(t) = <var name="$initial" />e^{<var name="$rate" />t}
+              </me>
+              where <m>t</m> is measured in years from now. Determine when the population doubles.
+            </p>
+            <p>Answer: <var name="$years" width="10" /> years</p>
+          </statement>
+          <solution>
+            <p>We will solve the equation: <m><var name="$initial" />e^{<var name="$rate" />t} = 2\cdot<var name="$initial" /></m></p>
+            <p>
+              <md>
+                <mrow>e^{<var name="$rate" />t} \amp= 2</mrow>
+                <mrow><var name="$rate" />t \amp= ln(2)</mrow>
+                <mrow>t \amp= \frac{ln(2)}{<var name="$rate" />}</mrow>
+                <mrow>\amp\approx <var name="$years" /></mrow>
+              </md>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$rateF"><static>7</static></var>
+            <var name="$rateG"><static>4</static></var>
+            <var name="$solution"><static>\frac{\ln\left(\frac{450}{700}\right)}{\ln\left(\frac{1.04}{1.07}\right)}</static></var>
+            <pg-code>
+              $rateF=random(6,9,1);
+              $rateG=random(3,5,1);
+              $solution=Compute("ln(450/700)/ln((1+$rateG/100)/(1+$rateF/100))");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Suppose <m>f(t)</m> has an initial value of <m>450</m> and increases by <var name="$rateF" /> <m>\%</m> per year, and <m>g(t)</m> has an initial value of <m>700</m> and increases at only <var name="$rateG" /> <m>\%</m> per year. Determine when the two functions are equal.
+            </p>
+            <p>
+              Answer: <m>t = </m><var name="$solution" width="10" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              What is the equation for each function? You must find these formulas and set them equal.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              <m>\frac{\ln\left(\frac{450}{700}\right)}{\ln\left((1+<var name="$rateG" />/100)/(1+<var name="$rateF" />/100)\right)} \approx <var name="$solution" /></m>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$rate"><static>6.2</static></var>
+            <var name="$initial"><static>6500</static></var>
+            <var name="$k"><static>\ln\left(1+1.062\right)</static></var>
+            <pg-code>
+              $rate=random(55,75,1)/10;
+              $initial=random(55,85,1)*100;
+              $k=Compute("ln(1+$rate/100)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              The value of an asset is increasing by <var name="$rate" /><m>\%</m> per year and has an intial value of <m>\$</m><var name="$initial" />.
+            </p>
+            <p>
+              The value of the asset can be written in the form <m>Ae^{kt}</m>. Find the value of <m>k</m>.
+            </p>
+            <p>
+              Answer: <m>k = </m><var name="$k" width="10" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              The equation for the asset's value is:  <m><var name="$initial" />\left(1 + \frac{<var name="$rate" />}{100}\right)^t</m>
+            </p>
+            <p>
+              We must rewrite this as <m>Ae^{kt}</m>, so we set these expressions equal and solve for <m>k</m>:
+            </p>
+            <p>
+              <md>
+                <mrow><var name="$initial" />e^{kt} \amp= <var name="$initial" />\left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
+                <mrow>e^{kt} \amp= \left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
+                <mrow>\left(e^k\right)^t \amp= \left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
+                <mrow>e^k \amp= 1 + \frac{<var name="$rate" />}{100}</mrow>
+                <mrow>k \amp= \ln\left(\frac{<var name="$rate" />}{100}\right)</mrow>
+                <mrow>\amp\approx <var name="$k" /></mrow>
+              </md>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$left"><static>35</static></var>
+            <var name="$k"><static>\ln\left(\frac{0.35}{1000}\right)</static></var>
+            <pg-code>
+              $left=random(30,50,1);
+              $k=Compute("ln($left/100)/1000");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Suppose a value is decaying, and <var name="$left" /><m>\%</m> remains after <m>1000</m> years. The amount of the substance can be modeled by the function
+              <me>
+                f(t) = Ae^{kt}
+              </me>
+              where <m>A</m> is the initial amount, <m>t</m> is the number of years, and the constant <m>k</m> is the <em>continuous rate of decay</em>. Find the value of <m>k</m>.
+            </p>
+            <p>
+              Answer: <m>k = </m><var name="$k" width="10" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <md>
+                <mrow>k \amp= \ln\left(\frac{0.<var name="$left" />}{1000}\right)</mrow>
+                <mrow>\amp\approx <var name="$k" /></mrow>
+              </md>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+<!-- This problem returns the error: Can't generate enough valid points for comparison
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$a"><static>2100</static></var>
+            <var name="$b"><static>0.08</static></var>
+            <var name="$c"><static>200</static></var>
+            <var name="$inverse"><static>\frac{\ln\left(\frac{x-200}{2100}\right)}{0.08}</static></var>
+            <pg-code>
+              $a=random(19,35,1)*100;
+              $b=random(3,9,1)/100;
+              $c=random(2,9,1)*100;
+              Context()->variables->are(x=>'Real');
+              Context()->variables->set(x=>{limits=>[40.01,40.99]});
+              $inverse=Compute("ln((x-$c)/$a)/$b");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Determine a formula for the inverse function of <m>f(x) = <var name="$a" />e^{<var name="$b" />x} + <var name="$c" /></m>.
+            </p>
+            <p>
+              Answer:  <m>f^{-1}(x) = </m><var name="$inverse" width="15" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              The inverse is:  <m>f^{-1}(x) = <var name="$inverse" /></m>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+-->
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$halfLife"><static>42</static></var>
+            <var name="$initial"><static>120</static></var>
+            <var name="$formula"><static>120\left(0.5\right)^{t/42}</static></var>
+            <var name="$hours"><static>\frac{\ln(\frac{10}{120})}{ln(0.5)}\cdot 42</static></var>
+            <pg-code>
+              $halfLife=random(25,45,1);
+              $initial=random(50,150,1);
+              Context()->variables->are(t=>'Real');
+              $formula=Compute("$initial*(0.5)^(t/$halfLife)");
+              $hours=Compute("ln(10/$initial)/ln(0.5)*$halfLife");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              A highly unstable element has a half-life of <var name="$halfLife" /> hours. This means that every <var name="$halfLife" /> hours, half of the element decays, leaving only half of the previous amount.
+            </p>
+            <p>
+              Suppose we start with <var name="$initial" /> grams of the element.
+            </p>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Write a function, <m>f(t)</m>, for the amount of the element left after <m>t</m> hours.
+                  </p>
+                  <p>
+                    Answer:  <m>f(t) = </m><var name="$formula" width="15" />
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Determine when the amount of the element remaining drops below <m>10</m> grams.
+                  </p>
+                  <p>
+                    Answer:  <var name="$hours" width="10" /> hours
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>f(t) = <var name="$formula" /></m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m><var name="$hours" /></m> hours
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$cells"><static>10^6*e^(0.495105)</static></var>
+            <var name="$cellsRounded"><static>1640670</static></var>
+            <var name="$true">
+              <set>
+                <member correct="yes">\text{True}</member>
+                <member>\text{False}</member>
+              </set>
+            </var>
+            <var name="$concern">
+              <set>
+                <member>\text{Yes, because her equation is different from yours.}</member>
+                <member correct="yes">\text{No, because your formulas are equivalent.}</member>
+              </set>
+            </var>
+            <pg-code>
+              $cells=Compute("10^6*e^(0.495105)");
+              $cellsRounded=sprintf("%.0f",$cells);
+              $true=PopUp(["?","True","False"],"True");
+              $concern=PopUp(["?","Yes, because her equation is different from yours.","No, because your formulas are equivalent."],"No, because your formulas are equivalent.");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              A colony of yeast cells is estimated to contain <m>10^6</m> cells at time <m>t = 0</m>. After collecting data in the lab, you decide that the population of cells after <m>t</m> hours can be modeled by the function
+              <me>
+                P(t) = 10^6e^{0.495105t}
+              </me>
+            </p>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    How many cells should be present after <m>1</m> hour? Round your answer to the nearest whole number of cells.
+                  </p>
+                  <p>
+                    Answer: <var name="$cellsRounded" width="10" /> cells
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    True or False: The population of cells will double after <m>1.4</m> hours.
+                  </p>
+                  <p>
+                    Answer: <var name="$true" form="popup" />
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Your lab partner, Latania, looks at your notebook and says...<em>Your equation is wrong. My calculations show that the population could be modeled by the equation:</em>
+                    <me>
+                      P(t) = 10^6(2.042727)^{0.693147t}
+                    </me>
+                  </p>
+                  <p>
+                    Should you be worried by Latania's comment?
+                  </p>
+                  <p>
+                    Answer: <var name="$concern" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    There will be about <var name="$cellsRounded" /> cells.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    True, because after <m>1.4</m> hours there will be <m>10^6*e^{0.495105*1.4} \approx 2*10^6</m> cells.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    No, you shouldn't be concerned, because your formulas are equivalent. Check this by evaluating Latania's formula at <m>t=1.4</m>. The result is still about <m>2*10^6</m> cells.
+                  </p>
+                </li>
+              </ol>
+            </p>
           </solution>
         </webwork>
       </exercise>
