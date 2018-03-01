@@ -1372,6 +1372,96 @@
         </webwork>
       </exercise>
 
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$cells"><static>10^6*e^(0.495105)</static></var>
+            <var name="$cellsRounded"><static>1640670</static></var>
+            <var name="$true">
+              <set>
+                <member correct="yes">\text{True}</member>
+                <member>\text{False}</member>
+              </set>
+            </var>
+            <var name="$concern">
+              <set>
+                <member>\text{Yes, because her equation is different from yours.}</member>
+                <member correct="yes">\text{No, because your formulas are equivalent.}</member>
+              </set>
+            </var>
+            <pg-code>
+              $cells=Compute("10^6*e^(0.495105)");
+              $cellsRounded=sprintf("%.0f",$cells);
+              $true=PopUp(["?","True","False"],"True");
+              $concern=PopUp(["?","Yes, because her equation is different from yours.","No, because your formulas are equivalent."],"No, because your formulas are equivalent.");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              A colony of yeast cells is estimated to contain <m>10^6</m> cells at time <m>t = 0</m>. After collecting data in the lab, you decide that the population of cells after <m>t</m> hours can be modeled by the function
+              <me>
+                P(t) = 10^6e^{0.495105t}
+              </me>
+            </p>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    How many cells should be present after <m>1</m> hour? Round your answer to the nearest whole number of cells.
+                  </p>
+                  <p>
+                    Answer: <var name="$cellsRounded" width="10" /> cells
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    True or False: The population of cells will double after <m>1.4</m> hours.
+                  </p>
+                  <p>
+                    Answer: <var name="$true" form="popup" />
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Your lab partner, Latania, looks at your notebook and says...<em>Your equation is wrong. My calculations show that the population could be modeled by the equation:</em>
+                    <me>
+                      P(t) = 10^6(2.042727)^{0.693147t}
+                    </me>
+                  </p>
+                  <p>
+                    Should you be worried by Latania's comment?
+                  </p>
+                  <p>
+                    Answer: <var name="$concern" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    There will be about <var name="$cellsRounded" /> cells.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    True, because after <m>1.4</m> hours there will be <m>10^6*e^{0.495105*1.4} \approx 2*10^6</m> cells.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    No, you shouldn't be concerned, because your formulas are equivalent. Check this by evaluating Latania's formula at <m>t=1.4</m>. The result is still about <m>2*10^6</m> cells.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
 </exercisegroup>
 
     </exercises>
