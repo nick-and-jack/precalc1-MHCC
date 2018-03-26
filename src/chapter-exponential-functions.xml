@@ -198,12 +198,12 @@
           <p>A certain pain relieving drug has a half-life of about <m>3</m> hours. If a person has this drug in their system, how long will it take for the drug to reduce to <m>10 \%</m> of the drug in the body?</p>
         </statement>
         <solution>
-          <p>We use an exponential model <m>ab^{t}</m> because of the repeated <m>50 \%</m> loss. The problem states it takes <m>3</m> hours to reduce by <m>50 \%</m>. Therefore the hourly growth factor, <m>b</m> occurs <m>3</m> times for a total of <m>50 \%</m> loss. In math we say <me>b^{3}=0.5</me> and solving for <m>b</m> we get</p>
+          <p>We use an exponential model <m>ab^{t}</m> because of the repeated <m>50 \%</m> loss. The problem states it takes <m>3</m> hours to reduce by <m>50 \%</m>. Therefore the hourly growth factor, <m>b</m> occurs <m>3</m> times for a total of <m>50 \%</m> loss. In math we say <me>b^{3}=0.5</me> and solving for <m>b</m> we get
             <md>
             <mrow>b^{3} \amp=0.5</mrow>
             <mrow>\left(b^{3}\right)^{1/3} \amp=(0.5)^{1/3}</mrow>
             <mrow>b \amp=(0.5)^{1/3}.</mrow>
-          </md>
+          </md></p>
           <p>Because the problem does not tell us exactly how much of the drug was in the system to begin with, for simplicity we will imagine that beginning amount was <m>1</m> <quantity><unit prefix="milli" base="gram" /></quantity>. Now, knowing the hourly percent loss, we can write a formula <md><mrow>D(t) \amp= ab^t</mrow><mrow>\amp= 1 \left((0.5)^{1/3}\right)^t</mrow><mrow>\amp= (0.5)^{t/3}</mrow></md> where <m>D(t)</m> is the amount of drug in the body in <quantity><unit prefix="milli" base="gram" /></quantity> and <m>t</m> is time in hours.</p>
           <p>We use the formula to determine how many hours it takes to reduce to <m>10 \%</m>.</p>
           <p>In this example we solve the equation <me>(0.5)^{t/3}=0.1</me> graphically.</p>
