@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+
+<chapter xml:id="activity-periodic-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Periodic Functions</title>
+    <section><title>Introduction to Periodic Functions</title>
+      <p>A function is called <term>periodic</term> if it repeats itself regularly. In this section, we will explore the basics of periodic functions by considering real-world examples.</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$timeToCharge"><static>6</static></var>
+            <var name="$beginCharging">
+              <set>
+                <member>\text{?}</member>
+                <member>\text{12:00 A.M.}</member>
+                <member>\text{6:00 A.M.}</member>
+                <member>\text{12:00 P.M.}</member>
+                <member correct="yes">\text{6:00 P.M.}</member>
+              </set>
+            </var>
+            <var name="$period"><static>24</static></var>
+            <pg-code>
+              $timeToCharge=Real(6);
+              $beginCharging=PopUp(
+              ["?","12:00 A.M.","6:00 A.M.","12:00 P.M.","6:00 P.M."],"6:00 P.M."
+              );
+              $period=Real(24);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>The following graph shows the &#37; battery charge on a cell phone as a function of the number of hours after midnight. The owner keeps the phone charging while she sleeps at night.</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/P6hCb2sn/width/425/height/343/border/888888/sri/true/sdz/false/" width="425px" height="343px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p><ol label="a">
+              <li><p>How many hours does it take to charge the phone?</p>
+              <p>Answer:  <var name="$timeToCharge" width="10" /></p></li>
+              <li><p>What time does the user begin recharging the phone each day?</p>
+              <p>Answer:  <var name="$beginCharging" form="popup" /></p></li>
+              <li><p>This function is <em>periodic</em>, meaning that it repeats itself over and over.</p>
+              <p>How many hours does it take to repeat itself completely?</p>
+              <p>Answer:  <var name="$period" width="10" /></p></li>
+            </ol></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p>It takes <m>6</m> hours to fully rechage the phone.</p></li>
+              <li><p>The user begins recharging the phone at <m>6:00</m> P.M. each day.</p></li>
+              <li><p>It takes <m>24</m> hours for this function to repeat itself.</p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+      <p>In the last exercise, the function repeated itself every <m>24</m> hours. This is called the <term>period</term> of the function <mdash /> the smallest value <m>k</m> such that <me>f(x + k) = f(x)</me> for all <m>x</m> in the domain.</p>
+      <p>Note that the cell phone function also repeats itself every <m>48</m> hours, but that isn't the smallest number for which it repeats. The period is defined as the <em>smallest</em> such number.</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$per"><static>4</static></var>
+            <var name="$per1"><static>5</static></var>
+            <var name="$per2"><static>3</static></var>
+            <pg-code>
+              $per=Real(4);
+              $per1=Real(5);
+              $per2=Real(3);
+
+              $gr=init_graph(-1,-5,12,5,
+              axes=>[0,0],
+              grid=>[13,10],
+              size=>[400,400]
+              );
+              add_functions($gr, "2*cos(pi*x/2)+1 for x in &lt;-1,12&gt; using color:red and weight:2");
+
+              $gr1=init_graph(-1,-5,12,5,
+              axes=>[0,0],
+              grid=>[13,10],
+              size=>[400,400]
+              );
+              add_functions($gr1, "-2x for x in &lt;-1,1&gt; using color:red and weight:2");
+              add_functions($gr1, "-6+4x for x in &lt;1,2&gt; using color:red and weight:2");
+              add_functions($gr1, "6-2x for x in &lt;2,3&gt; using color:red and weight:2");
+              add_functions($gr1, "-6+2x for x in &lt;3,4&gt; using color:red and weight:2");
+              add_functions($gr1, "10-2x for x in &lt;4,6&gt; using color:red and weight:2");
+              add_functions($gr1, "-26+4x for x in &lt;6,7&gt; using color:red and weight:2");
+              add_functions($gr1, "16-2x for x in &lt;7,8&gt; using color:red and weight:2");
+              add_functions($gr1, "-16+2x for x in &lt;8,9&gt; using color:red and weight:2");
+              add_functions($gr1, "20-2x for x in &lt;9,11&gt; using color:red and weight:2");
+              add_functions($gr1, "-46+4x for x in &lt;11,12&gt; using color:red and weight:2");
+              add_functions($gr1, "26-2x for x in &lt;12,13&gt; using color:red and weight:2");
+
+              $gr2=init_graph(-2,-6,12,6,
+              axes=>[0,0],
+              grid=>[14,12],
+              size=>[400,400]
+              );
+              add_functions($gr2, "2*sin(2*pi/3*x)-2*cos(2*pi/1.5*x)-2 for x in &lt;-2,12&gt; using color:red and weight:2");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>The period of each function below is a whole number. Find the period of each function.</p>
+            <figure>
+              <image pg-name="$gr" />
+            </figure>
+            <p>Period = <var name="$per" width="10" /></p>
+            <figure>
+              <image pg-name="$gr1" />
+            </figure>
+            <p>Period = <var name="$per1" width="10" /></p>
+            <figure>
+              <image pg-name="$gr2" />
+            </figure>
+            <p>Period = <var name="$per2" width="10" /></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p>The period is <var name="$per" />.</p></li>
+              <li><p>The period is <var name="$per1" />.</p></li>
+              <li><p>The period is <var name="$per2" />.</p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+      <p>The next exercise shows an important example of a periodic function <mdash /> one we will return to many times. It involves a person riding a <url href="https://simple.wikipedia.org/wiki/Ferris_wheel">Ferris Wheel</url>.</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$vertStretch">
+              <set>
+                <member correct="yes">\text{Changing the radius of the wheel}</member>
+                <member>\text{Changing the platform height}</member>
+                <member>\text{Changing the period}</member>
+              </set>
+            </var>
+            <var name="$vertShift">
+              <set>
+                <member>\text{Changing the radius of the wheel}</member>
+                <member correct="yes">\text{Changing the platform height}</member>
+                <member>\text{Changing the period}</member>
+              </set>
+            </var>
+            <var name="$horizontalStretch">
+              <set>
+                <member>\text{Changing the radius of the wheel}</member>
+                <member>\text{Changing the platform height}</member>
+                <member correct="yes">\text{Changing the period}</member>
+              </set>
+            </var>
+            <pg-code>
+              $vertStretch=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the radius of the wheel");
+              $vertShift=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the platform height");
+              $horizontalStretch=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the period");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>Suppose a person boards at the bottom of a Ferris Wheel and rides around for <m>35</m> seconds. See the graph below.</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/CKBXG9gF/width/425/height/429/border/888888/sri/true/sdz/false/" width="425px" height="429px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>At bottom left is a diagram of the Ferris Wheel, where the triangle shows the position of rider. Using the sliders at right, you can adjust things like: <ul>
+              <li><p>the wheel's <em>radius</em></p></li>
+              <li><p>the <em>height</em> of the loading platform (which moves the wheel up or down)</p></li>
+              <li><p>the <em>period</em> of the wheel.</p></li>
+            </ul></p>
+            <p>The graph above shows the rider's height above the ground (in meters) as they ride on the wheel for <m>35</m> seconds.</p>
+            <p><ol label="a">
+              <li><p>For a person riding a Ferris Wheel, what causes a vertical stretch for the graph?</p>
+              <p>Answer: <var name="$vertStretch" form="popup" /></p></li>
+              <li><p>What causes a vertical shift for the graph?</p>
+              <p>Answer: <var name="$vertShift" form="popup" /></p></li>
+              <li><p>What causes a horizontal stretch for the graph?</p>
+              <p>Answer: <var name="$horizontalStretch" form="popup" /></p></li>
+            </ol></p>
+          </statement>
+          <hint>
+            <p>Use the slider to increase the time completely. Then change the sliders for the <em>radius</em>, <em>platform height</em> and <em>period</em> and see what happens to the graph.</p>
+          </hint>
+          <solution>
+            <p><ol label="a">
+              <li><p>A vertical stretch occurs when the radius of the wheel changes. This should make sense because if the wheel is larger, the rider will reach a different maximum height.</p></li>
+              <li><p>A vertical shift occurs when the boarding height is increased. The whole wheel moves <em>up</em>, causing the graph to shift vertically.</p></li>
+              <li><p>A horizontal stretch occurs when the period of the wheel changes. If it takes longer for the wheel to make a complete rotation, then the rider's height function will be stretched horizontally.</p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+      <p>In the Ferris Wheel problem, there are a few other things to notice.</p>
+      <p>First, the height of the person as they go around the circle has nice symmetry <mdash /> the graph on the way <em>up</em> is a reflection of the graph on the way down.</p>
+      <p>Next, the graph oscillates up and down around a <q>middle height</q>. For periodic functions, this height is called the <term>midline</term>. For example, when the radius was <m>20</m> meters and the loading platform was <m>10</m> meters, the <term>midline</term> was the height <m>y = 30</m> meters.</p>
+      <p>In fact, the midline is usually given in equation form, such as: <m>y = b</m></p>
+      <p>Finally, the radius of the wheel is easily seen on the graph, as the distance between the midline and either the highest point, or the lowest point.</p>
+      <p>Because not every periodic function involves movement around a circle, we give this distance a more general term: The <term>Amplitude</term></p>
+      <p>In general, the <term>amplitude</term> of a periodic function is the difference (along the output axis) between the maximum output and <term>midline</term> (or between the midline and the minimum output).</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$period"><static>4</static></var>
+            <var name="$amplitude"><static>1.5</static></var>
+            <var name="$midline"><static>-3.5</static></var>
+            <pg-code>
+              $period=Real(4);
+              $amplitude=Real(1.5);
+              $midline=Real(-3.5);
+              $gr=init_graph(-2,-6,12,6,
+              axes=>[0,0],
+              grid=>[14,12],
+              size=>[400,400]
+              );
+              add_functions($gr, "-1.5*cos(2*pi/4*x)-3.5 for x in &lt;-2,12&gt; using color:red and weight:2");
+            </pg-code>
+          </setup>
+          <statement>
+            <figure>
+              <image pg-name="$gr" />
+            </figure>
+            <p>The graph above shows a periodic function. Use it to determine the values below.</p>
+            <p>Period = <var name="$period" width="10" /></p>
+            <p>Amplitude = <var name="$amplitude" width="10" /></p>
+            <p>Midline:  <m>y = </m><var name="$midline" width="10" /></p>
+          </statement>
+          <solution>
+            <p><ol>
+              <li><p>Period = <var name="$period" /></p></li>
+              <li><p>Amplitude = <var name="$amplitude" /></p></li>
+              <li><p>Midline:  <m>y = </m><var name="$midline" /></p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+      <p>In the next exercise, you'll plot points on the graph of a periodic function.</p>
+        <p>As we see examples of periodic functions which describe motion around a circle (such as a Ferris Wheel), we often use the language of analog clocks to describe certain positions on the circle.</p>
+        <p>For example, if a person begins at the bottom of the circle, we may refer to this as the <m>6</m> <em>O'clock</em> position.</p>
+        <p>For reference, our naming of points on a circle will be as follows:</p>
+        <figure>
+          <caption></caption>
+            <image width="48%">
+              <latex-image>
+                <![CDATA[
+                \begin{tikzpicture}[line cap=rect,line width=3pt]
+                \filldraw [fill=cyan] (0,0) circle [radius=2cm];
+                \foreach \angle [count=\xi] in {60,30,...,-270}
+                  {
+                  \draw[line width=1pt] (\angle:1.8cm) -- (\angle:2cm);
+                  \node[font=\large] at (\angle:1.36cm) {\textsf{\xi}};
+                  }
+                \foreach \angle in {0,90,180,270}
+                \draw[line width=2pt] (\angle:1.6cm) -- (\angle:2cm);
+                \draw (0,0) -- (120:0.8cm);
+                \draw (0,0) -- (90:1cm);
+                \end{tikzpicture}
+                ]]>
+              </latex-image>
+            </image>
+        </figure>
+        <example>
+          <statement>
+            <p>Imagine riding a Ferris wheel where you board at the <m>6</m> <em>O'clock</em> position, and suppose it takes <m>30</m> seconds to make one complete revolution.</p>
+            <p><ol label="a">
+              <li><p>At what times do you reach your maximum height above the ground?</p></li>
+              <li><p>At what times will your height be the same as the center of the wheel?</p></li>
+            </ol></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p>Notice that this question is the same as asking <q>When will you be at the <m>12</m> <em>O'clock</em> position?</q></p>
+              <p>This will occur at <m>15</m> seconds, <m>30 + 15 = 45</m> seconds, <m>2(30) + 15 = 75</m> seconds, etc.</p>
+              <p>In general, this is <m>15</m> seconds after any multiple of the period (<m>30</m> seconds), or:  <m>15 + 30k</m>, where <m>k</m> is any whole number.</p></li>
+              <li><p>This question is just like asking <q>When will you be at the <m>3</m> <em>O'clock</em> or <m>9</m> <em>O'clock</em> positions?</q></p>
+              <p>You will be at the same height as the center of the circle after <m>7.5</m> seconds, <m>15 + 7.5 = 22.5</m> seconds, <m>30 + 7.5 = 37.5</m> seconds, etc.</p>
+              <p>In general, this is <m>7.5</m> seconds after any multiple of <em>half</em> the period (<m>15</m> seconds), or:  <m>7.5 + 15k</m>, where <m>k</m> is any whole number.</p></li>
+            </ol></p>
+          </solution>
+        </example>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$midline"><static>y=10</static></var>
+            <var name="$amplitude"><static>25</static></var>
+            <var name="$period"><static>20</static></var>
+            <var name="$h[0]"><static>10</static></var>
+            <var name="$h[1]"><static>40</static></var>
+            <var name="$h[2]"><static>70</static></var>
+            <var name="$h[3]"><static>40</static></var>
+            <var name="$h[4]"><static>10</static></var>
+            <var name="$diditgraph">
+              <set>
+                <member>\text{?}</member>
+                <member correct="yes">\text{yes}</member>
+                <member>\text{no}</member>
+              </set>
+            </var>
+            <pg-code>
+              $amplitude=Real(30);
+              $period=Real(20);
+              $h[0]=Real(10);
+              $h[1]=Real(40);
+              $h[2]=Real(70);
+              $h[3]=Real(40);
+              $h[4]=Real(10);
+              $diditgraph=PopUp(
+              ["?","yes","no"],"yes"
+              );
+              Context()->variables->are(y=>'Real');
+              parser::Assignment->Allow;
+              $midline=Formula("y=40");
+            </pg-code>
+          </setup>
+          <stage>
+          <statement>
+            <p>A person rides a Ferris Wheel, boarding it at a height of <m>10</m> feet at the <m>6</m> <em>O'clock</em> position. The wheel has a <em>diameter</em> of <m>60</m> feet, and it completes a revolution every 20 minutes.</p>
+            <p>Let <m>f(t)</m> represent the person's height (in feet) above the ground, as a function of <m>t</m>, the number of minutes they've been riding.</p>
+            <p>Complete the table of values below for the function <m>f</m>.</p>
+            <table>
+            <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <row bottom="medium">
+                <cell><m>t</m></cell>
+                <cell><m>f(t)</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>0</m></cell>
+                <cell><var name="$h[0]" width="10" /></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>5</m></cell>
+                <cell><var name="$h[1]" width="10" /></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>10</m></cell>
+                <cell><var name="$h[2]" width="10" /></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>15</m></cell>
+                <cell><var name="$h[3]" width="10" /></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>20</m></cell>
+                <cell><var name="$h[4]" width="10" /></cell>
+              </row>
+            </tabular>
+            </table>
+          </statement>
+          <solution>
+            <table>
+            <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <row bottom="medium">
+                <cell><m>t</m></cell>
+                <cell><m>f(t)</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>0</m></cell>
+                <cell><m>10</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>5</m></cell>
+                <cell><m>40</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>10</m></cell>
+                <cell><m>70</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>15</m></cell>
+                <cell><m>40</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>20</m></cell>
+                <cell><m>10</m></cell>
+              </row>
+            </tabular>
+          </table>
+          </solution>
+        </stage>
+        <stage>
+          <statement>
+            <p>You found the heights in the following table:</p>
+            <table>
+            <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <row bottom="medium">
+                <cell><m>t</m></cell>
+                <cell><m>f(t)</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>0</m></cell>
+                <cell><m>10</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>5</m></cell>
+                <cell><m>40</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>10</m></cell>
+                <cell><m>70</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>15</m></cell>
+                <cell><m>40</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell><m>20</m></cell>
+                <cell><m>10</m></cell>
+              </row>
+            </tabular>
+            </table>
+            <p>In the graph below, move the points to match those from your table above. If the points are placed correctly, the graph of <m>y = f(t)</m> will appear.</p>
+            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tm9RnWCc/width/425/height/373/border/888888/sri/true/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>Did the graph appear? <var name="$diditgraph" form="popup" /></p>
+            <p>What is the amplitude of the function?</p>
+            <p>Answer:  <var name="$amplitude" width="5" /> feet</p>
+            <p>What is the period of the function?</p>
+            <p>Answer:  <var name="$period" width="5" /> minutes</p>
+            <p>What is the equation of the midline?</p>
+            <p>Answer:  <var name="$midline" width="10" /></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p>The amplitude is <m>30</m> feet.</p></li>
+              <li><p>The period is <m>20</m> minutes.</p></li>
+              <li><p>The midline is: <m>y = 40</m></p></li>
+            </ol></p>
+          </solution>
+        </stage>
+        </webwork>
+      </exercise>
+      <exercise>
+        <webwork>
+          <setup>
+            <var name="$radius"><static>60</static></var>
+            <var name="$midline"><static>80</static></var>
+            <var name="$period"><static>15</static></var>
+            <pg-code>
+              $radius=Real(60);
+              $midline=Real(80);
+              $period=Real(15);
+              $gr=init_graph(-5,-20,45,200,
+              axes=>[0,0],
+              grid=>[10,11],
+              size=>[400,400]
+              );
+              add_functions($gr, "-60*cos(2*pi/15*x)+80 for x in &lt;0,45&gt; using color:red and weight:2");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>A person boards a Ferris Wheel at the <m>6</m> <em>O'clock</em> position. The graph shows the person's height above the ground (in feet) as they ride the Ferris Wheel. Here, the horizontal axis represents time (in minutes).</p>
+            <p>Use the graph to help answer the questions that follow.</p>
+            <figure>
+              <image pg-name="$gr" />
+            </figure>
+            <p><ol label="a">
+              <li><p>What is the radius of the wheel?</p>
+              <p>Answer:  <var name="$radius" width="10" /> feet</p></li>
+              <li><p>How high is the center of the wheel?</p>
+              <p>Answer:  <var name="$midline" width="10" /> feet</p></li>
+              <li><p>How long does it take to make one complete revolution on the wheel?</p>
+              <p>Answer:  <var name="$period" width="10" /> minutes</p></li>
+            </ol></p>
+          </statement>
+          <solution>
+            <p><ol label="a">
+              <li><p>The radius is <var name="$radius" /> feet.</p></li>
+              <li><p>The center of the wheel is <var name="$midline" /> feet above the ground.</p></li>
+              <li><p>It takes <var name="$period" /> minutes to make a complete revolution.</p></li>
+            </ol></p>
+          </solution>
+        </webwork>
+      </exercise>
+  </section>
+
+</chapter>
