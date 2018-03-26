@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+
+<chapter xml:id="activity-transformations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Transformations</title>
+  <section>
+    <title>Review Material</title>
+    <p>In this activity, you will review some basics from previous courses:
+      <ul>
+        <li><p>Vertical and Horizontal Translations</p></li>
+        <li><p>Vertical Stretches and Compressions</p></li>
+      </ul>
+    </p>
+    <p>In the first exercise below, you will encounter your first of many <em>WeBWorK</em> problems. Click to open the <em>WeBWorK</em> exercise, and you will see a graph that you can manipulate. Answer the questions that follow, and click to submit your answers.</p>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$up">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{It went up by 5 units.}</member>
+              <member>\text{It went down by 5 units.}</member>
+            </set>
+          </var>
+          <var name="$down">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{It went up by 3 units.}</member>
+              <member correct="yes">\text{It went down by 3 units.}</member>
+            </set>
+          </var>
+          <pg-code>
+            $up=PopUp(
+            ["?","It went up by 5 units.","It went down by 5 units."],"It went up by 5 units."
+            );
+            $down=PopUp(
+            ["?","It went up by 3 units.","It went down by 3 units."],"It went down by 3 units."
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Let <m>f(x) = x^2</m>. This problem involves <em>vertical</em> translations of the graph of <m>f</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pXUT7wZS/width/431/height/313/border/888888/sri/true/sdz/false/" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>The graph above shows the function <me>f(x) + k = x^2 + k</me> where <m>k</m> is a constant number.</p>
+          <p>You can use the slider to change the value of <m>k</m>, and observe how the graph changes.</p>
+          <p><ol label="a">
+            <li><p>Change <m>k</m> so the function is <m>y = x^2 + 5</m>.</p>
+            <p>How did this change the original graph?</p>
+            <p>Answer: <var name="$up" form="popup" /></p></li>
+            <li><p>Change <m>k</m> so the function is <m>y = x^2 - 3</m>.</p>
+            <p>How did this change the original graph?</p>
+            <p>Answer: <var name="$down" form="popup" /></p></li>
+          </ol></p>
+        </statement>
+      </webwork>
+    </exercise>
+    <p>Next, recall how a graph changes when we either <em>add</em> or <em>subtract</em> from the <em>input</em> of the function.</p>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$left4">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{right 4 units}</member>
+              <member correct="yes">\text{left 4 units}</member>
+            </set>
+          </var>
+          <var name="$right5down4">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{right 5, and down 4}</member>
+              <member>\text{right 5, and up 4}</member>
+              <member>\text{left 5, and down 4}</member>
+              <member>\text{left 5, and up 4}</member>
+            </set>
+          </var>
+          <pg-code>
+            $left4=PopUp(
+            ["?","right 4 units","left 4 units"],"left 4 units"
+            );
+            $right5down4=PopUp(
+            ["?","right 5, and down 4","right 5, and up 4","left 5, and down 4","left 5, and up 4"],"right 5, and down 4"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Again, let <m>f(x) = x^2</m>. This problem involves both <em>vertical</em> and <em>horizontal</em> translations of the graph of <m>f</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/430/height/272/border/888888/sri/true/sdz/false/" width="430px" height="272px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>The graph above shows the function <me>y = f(x + h) + k = (x + h)^2 + k</me> where <m>h</m> and <m>k</m> are constant numbers.</p>
+          <p>You can use the sliders to change the values of <m>h</m> and <m>k</m>, and observe how the graph changes.</p>
+          <p><ol label="a">
+            <li><p>Change <m>h</m> so the function is <m>y = (x + 4)^2</m>.</p>
+            <p>How did this change the original graph?</p>
+            <p>Answer: The graph of <m>y = x^2</m> moved <var name="$left4" form="popup" /></p></li>
+            <li><p>Change <m>h</m> and <m>k</m> so the function is <m>y = (x - 5)^2 - 4</m>.</p>
+            <p>How did this change the original graph?</p>
+            <p>Answer: The graph of <m>y = x^2</m> moved <var name="$right5down4" form="popup" /></p></li>
+          </ol></p>
+        </statement>
+      </webwork>
+    </exercise>
+    <p>Finally, explore the effect of multiplying the <em>output</em> of a function by a constant number.</p>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$stretched">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{stretched}</member>
+              <member>\text{compressed}</member>
+            </set>
+          </var>
+          <var name="$compressed">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{stretched away from}</member>
+              <member correct="yes">\text{compressed toward}</member>
+            </set>
+          </var>
+          <var name="$xaxis">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{x-axis}</member>
+              <member>\text{y-axis}</member>
+              <member>\text{line }y = x</member>
+            </set>
+          </var>
+          <pg-code>
+            $stretched=PopUp(
+            ["?","stretched away from","compressed toward"],"stretched away from"
+            );
+            $compressed=PopUp(
+            ["?","stretched away from","compressed toward"],"compressed toward"
+            );
+            $xaxis=PopUp(
+            ["?","x-axis","y-axis","line y = x"],"x-axis"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graph below shows a function <m>y = af(x)</m>, where <m>a</m> is a constant number.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aSr3RBYV/width/432/height/438/border/888888/sri/true/sdz/false/" width="432px" height="438px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Use the slider to change the value of the constant <m>a</m>, and observe changes to the graph.</p>
+          <p>Notice that <m>a</m> is being multiplied by the <em>output</em> of the function <m>f</m>.</p>
+          <p><ol label="a">
+            <li><p>Change <m>a</m> to a number greater than <m>1</m>. What happened to the graph?</p>
+            <p>Answer: The graph of <m>f</m> was vertically <var name="$stretched" form="popup" /> the <m>x</m><ndash /> axis.</p></li>
+            <li><p>Change <m>a</m> to a number between <m>0</m> and <m>1</m>. What happened to the graph?</p>
+            <p>Answer: The graph of <m>f</m> was vertically <var name="$compressed" form="popup" /> <m>x</m><ndash /> axis.</p></li>
+          </ol></p>
+          <p>Next, the graph of a different function <m>y = af(x)</m> is shown.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/b2KYhMZS/width/433/height/518/border/888888/sri/true/sdz/false/" width="433px" height="518px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>This time, you can change <m>a</m> to positive or negative values.</p>
+          <p><ol label="a">
+            <li><p>Change <m>a</m> to the value <m>-2</m>. What happened to the graph?</p>
+            <p>Answer: The graph of <m>f</m> was vertically <var name="$stretched" form="popup" /> by a factor of <m>2</m>, and it was reflected over the <var name="$xaxis" form="popup" />.</p></li>
+          </ol></p>
+
+        </statement>
+      </webwork>
+    </exercise>
+    <p>Questions you should be able to answer:
+      <ol>
+        <li><p>In general, how does the graph change when you <em>add</em> a number to the <em>output</em> of a function?</p></li>
+        <li><p>In general, how does the graph change when you <em>subtract</em> a number from the <em>output</em> of a function?</p></li>
+      </ol>
+    </p>
+    <p>Practice using these ideas in the next two exercises.</p>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$shift[0]"><static>0</static></var>
+          <var name="$shift[1]"><static>1</static></var>
+          <var name="$grans1">
+            <static>(x-3)^2 + 4</static>
+          </var>
+          <var name="$grans2">
+            <static>(x-1)^2 + 3</static>
+          </var>
+          <pg-code>
+            $gr=init_graph(-3,-3,3,3,
+            axes=>[0,0],
+            grid=>[6,6],
+            size=>[400,400]
+            );
+            add_functions($gr, "x**2 for x in &lt;-3,3&gt; using color:red and weight:2");
+            @shift=map{$_+1}NchooseK(4,4);
+            $gr1=init_graph(-1,-1,6,6,
+            axes=>[0,0],
+            grid=>[7,7],
+            size=>[400,400]
+            );
+            add_functions($gr1, "(x-$shift[0])**2+$shift[1] for x in &lt;-1,6&gt; using color:blue and weight:2");
+            $gr2=init_graph(-1,-1,6,6,
+            axes=>[0,0],
+            grid=>[7,7],
+            size=>[400,400]
+            );
+            add_functions($gr2, "(x-$shift[2])**2+$shift[3] for x in &lt;-1,6&gt; using color:blue and weight:2");
+            $grans1=Compute("(x-$shift[0])**2+$shift[1]");
+            $grans2=Compute("(x-$shift[2])**2+$shift[3]");
+          </pg-code>
+        </setup>
+        <statement>
+          <figure>
+            <image pg-name="$gr" />
+          </figure>
+          <p>The graph above shows <m>f(x) = x^2</m>.</p>
+          <p>The next two graphs below are transformations of <m>f</m>. Determine how <m>f</m> was transformed, and write the formula for each graph.</p>
+          <figure>
+            <image pg-name="$gr1" />
+          </figure>
+          <p>The formula is:  <m>y = </m><var name="$grans1" width="15" /></p>
+          <figure>
+            <image pg-name="$gr2" />
+          </figure>
+          <p>The formula is:  <m>y = </m><var name="$grans2" width="15" /></p>
+        </statement>
+        <hint>
+          <p>You must use the formula for <m>f</m> to write a transformation of the form <m>f(x+h)+k</m>, for appropriate numbers <m>h</m> and <m>k</m>.</p>
+          <p>Remember that the inside change involves a horizontal shift, and an outside change involves a vertical shift.</p>
+        </hint>
+        <solution>
+          <p><ol>
+            <li><p>The first graph is: <me>y = <var name="$grans1" /></me></p></li>
+            <li><p>The second graph is: <me>y = <var name="$grans2" /></me></p></li>
+          </ol></p>
+        </solution>
+      </webwork>
+    </exercise>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$ans">
+            <set>
+              <member>\text{Graph 1}</member>
+              <member>\text{Graph 2}</member>
+              <member correct="yes">\text{Graph 3}</member>
+              <member>\text{Graph 4}</member>
+            </set>
+          </var>
+          <var name="$shift[0]"><static>0</static></var>
+          <var name="$shift[1]"><static>1</static></var>
+          <pg-code>
+            @shift=map{$_+1}NchooseK(2,2);
+            for my $i(0..4){$gr[$i] = init_graph(-5,-5,5,5,axes=>[0,0],grid=>[10,10],size=>[200,200]);};
+            foreach my $j(1..4){$gr[$j] -> lb(new Label ( -3.75,3.2,$j,'red','left','bottom'));};
+            foreach my $k(1..4){$gr[$k] -> lb(new Label ( -4.5,4,'Graph','red','left','bottom'));};
+            add_functions($gr[0], "x*(x-1)*(x-2)+1 for x in &lt;-5,5> using color:red and weight:2");
+            add_functions($gr[1], "(x-$shift[0])*(x-$shift[0]-1)*(x-$shift[0]-2)+1-$shift[1] for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[2], "(x-$shift[0])*(x-$shift[0]-1)*(x-$shift[0]-2)+1+$shift[1] for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[3], "(x+$shift[0])*(x+$shift[0]-1)*(x+$shift[0]-2)+1+$shift[1] for x in &lt;-5,5> using color:blue and weight:2");
+            add_functions($gr[4], "(x+$shift[0])*(x+$shift[0]-1)*(x+$shift[0]-2)+1-$shift[1] for x in &lt;-5,5> using color:blue and weight:2");
+            $ans=PopUp(
+            ["?","Graph 1","Graph 2","Graph 3","Graph 4"],"Graph 3"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The function <m>y = f(x)</m> is shown below.</p>
+          <figure><image pg-name="$gr[0]" width="50%" height="200" tex_size="200"/></figure>
+          <p>Which of the following graphs shows <m>y = f(x + <var name="$shift[0]" />) + <var name="$shift[1]" /></m>?</p>
+          <figure><image pg-name="$gr[1]" width="60%" height="200" tex_size="200"/></figure>
+          <figure><image pg-name="$gr[2]" width="60%" height="200" tex_size="200"/></figure>
+          <figure><image pg-name="$gr[3]" width="60%" height="200" tex_size="200"/></figure>
+          <figure><image pg-name="$gr[4]" width="60%" height="200" tex_size="200"/></figure>
+          <p>Answer:  <var name="$ans" form="popup" /></p>
+        </statement>
+        <solution>
+          <p>The transformation <me>f(x + <var name="$shift[0]" />) + <var name="$shift[1]" /></me> involves moving the graph of <m>f</m> to the <em>left</em> by <var name="$shift[0]" /> units, and <em>up</em> by <var name="$shift[1]" /> unit.</p>
+          <p>Focusing your attention on a particular point on the graph of <m>f</m>, say <m>(1,1)</m>, notice which option has that point on the graph, but moved by the correct number of units left and up.</p>
+          <p>Only Graph <m>3</m> does this.</p>
+        </solution>
+      </webwork>
+    </exercise>
+    <p>Finally, we'll review an application of using vertical and horizontal <term>translations</term> to quickly perform a familiar task: Finding the equation of a line</p>
+
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$formulas">
+            <set>
+              <member>\text{?}</member>
+              <member>y=4(x+7)+15</member>
+              <member>y=4(x+7)-15</member>
+              <member correct="yes">y=4(x-7)+15</member>
+              <member>y=4(x-7)-15</member>
+            </set>
+          </var>
+          <pg-code>
+            $formulas=PopUp(
+            ["?","y=4(x+7)+15","y=4(x+7)-15","y=4(x-7)+15","y=4(x-7)-15"],"y=4(x-7)+15"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The linear function <me>f(x) = 4x</me> will graph as a line with slope <m>4</m>, passing through the origin <m>(0,0)</m>.</p>
+          <p>Now, using translations, it would be easy to write the equations of similar lines.</p>
+          <p>For example:</p>
+          <p>The line with slope <m>4</m>, passing through the point <m>(7,15)</m>, may be thought of as the result of shifting <m>f(x)</m> to the <em>right</em> by <m>7</m> units, and <em>up</em> by <m>15</m> units.</p>
+          <p>[In this case, we are focusing our attention on moving the old point <m>(0,0)</m> to the new point <m>(7,15)</m>.]</p>
+          <p>What would be the equation of this new line?</p>
+          <p>Answer:  <var name="$formulas" form="popup" /></p>
+        </statement>
+        <hint>
+          <p>Since <m>f(x)</m> has the point <m>(0,0)</m>, think about shifting that point to <m>(7,15)</m>. Remember that adding to the <em>input</em> will move the graph to the left, and subtracting from the input will move the graph to the right.</p>
+        </hint>
+        <solution>
+          <p>Without doing any simplification to the formula, the line would be: <md>
+            <mrow>y \amp= f(x-7) + 15</mrow>
+            <mrow>\amp= 4(x-7) + 15</mrow></md></p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <webwork xml:id="webwork-point-slope">
+        <setup>
+          <var name="$whichLine"><static>11(x-8)-5</static></var>
+          <var name="$a[0]"><static>8</static></var>
+          <var name="$a[1]"><static>5</static></var>
+
+          <pg-code>
+            @a=map{1+$_}NchooseK(8,2);
+            $whichLine=Compute("11*(x-$a[0])-$a[1]");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The line with slope <m>11</m>, passing through the origin <m>(0,0)</m>, has the equation: <me>f(x) = 11x</me></p>
+          <p>Using translations, write the equation for the line with slope <m>11</m>, passing through the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
+          <p>Answer:  <m>y = </m><var name="$whichLine" width="15" /></p>
+        </statement>
+        <solution>
+          <p>Think of moving the point <m>(0,0)</m> to the point <m>(<var name="$a[0]" />,-<var name="$a[1]" />)</m>.</p>
+          <p>We would shift the graph to the right by <var name="$a[0]" /> units and down by <var name="$a[1]" /> units, and the equation would be: <m>y = 11(x - <var name="$a[0]" />) - <var name="$a[1]" /></m></p>
+        </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$equation">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">y = m(x-a)+b</member>
+              <member>y = mx-a+b</member>
+              <member>y = m(x-b)+a</member>
+            </set>
+          </var>
+          <pg-code>
+            $equation=PopUp(
+            ["?","y = m(x - a) + b","y = mx - a + b","y = m(x - b) + a"],
+            "y = m(x - a) + b"
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The equation of a line with slope <m>m</m>, passing through the origin, is just: <me>y = mx</me></p>
+          <p>If we wanted to change this line so it had the same slope but passed through the point <m>(a,b)</m>, what would be the equation?</p>
+          <p>Answer:  <var name="$equation" form="popup" /></p>
+          <p>This is a very useful formula for writing the equation of a line if you know the slope and any single point on its graph. This formula is called the <term>Point-Slope</term> formula for a line.</p>
+        </statement>
+        <solution>
+          <p>The equation is <me>y = m(x-a) + b</me> no matter the sign (+ or -) on the values <m>a</m> and <m>b</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
+  </section>
+  <section>
+    <title>Horizontal Stretches/Compressions</title>
+    <p>We have already seen that the graph of a function may be stretched or compressed <em>vertically</em> by multiplying the output of the function by a constant number <m>a</m>.</p>
+    <p><ul>
+      <li><p>If <m>a&gt;1</m>, then graphing <m>y = af(x)</m> would be the result of stretching <m>y = f(x)</m> vertically, away from the <m>x</m><ndash />axis. All of the <m>y</m> values on the graph of <m>f(x)</m> would be multiplied by this number <m>a</m>, so they would now be larger in magnitude (either positive or negative). Thus, the points would be stretched <em>farther away</em> from the <m>x</m><ndash />axis.</p></li>
+      <li><p>If <m>0&lt;a&lt;1</m>, then the graph of <m>y = af(x)</m> would be like compressing the graph of <m>y = f(x)</m> vertically, toward the <m>x</m><ndash />axis. All of the <m>y</m> values on the graph of <m>f(x)</m> would be multiplied by the number <m>a</m>, so they would become smaller in magnitude. Thus, the points would be compressed <em>toward</em> the <m>x</m><ndash />axis.</p></li>
+    </ul></p>
+    <p>Finally, we know that adding or subtracting a number from the input of a function will shift the graph either left or right.</p>
+    <paragraphs><title>Horizontal Stretches and Compressions</title>
+    <p>Now, we will complete the story by investigating how to stretch or compress a function <em>horizontally</em>.</p></paragraphs>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$answer">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{yes}</member>
+              <member>\text{no}</member>
+            </set>
+          </var>
+          <var name="$point">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{the x-intercepts}</member>
+              <member correct="yes">\text{the y-intercept}</member>
+            </set>
+          </var>
+          <var name="$f2"><static>f(2x)</static></var>
+          <pg-code>
+            $answer=PopUp(
+            ["?","yes","no"],"yes"
+            );
+            $point=PopUp(
+            ["?","the x-intercepts","the y-intercept"],"the y-intercept"
+            );
+            parserFunction("f(x)"=>"(sin(x)+2)/pi");
+            $f2=Formula("f(2x)");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>The graph below shows a function <m>y = f(x)</m>, together with four fixed points on the graph.</p>
+          <p>Also shown are four free points for you to click and drag to other locations.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/V52gqJSs/width/425/height/373/border/888888/sri/true/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>Suppose we wanted to <em>compress</em> the graph of <m>f</m> <em>horizontally</em> toward the <m>y</m><ndash />axis, so that each point on the curve was exactly <em>half</em> its current distance from the <m>y</m><ndash />axis.</p>
+          <p>Move the four free points to show where the fixed points would be if they were compressed toward the <m>y</m><ndash />axis. If you place them correctly, a complete, compressed graph will appear.</p>
+          <p>Did you correctly place the points?</p>
+          <p>Answer:  <var name="$answer" form="popup" /></p>
+          <p>[If you move the points to their correct locations, the complete compressed graph would be displayed.]</p>
+          <p>There was one point on the graph of <m>f</m> that did not move when the graph was compressed.</p>
+          <p>Which point was it? <var name="$point" form="popup" /></p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/sGJWwWxF/width/425/height/373/border/888888/sri/true/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>The graph above shows the same function <m>f</m> as before. This time, you can use a slider to graph a transformation of the form <me>y = f(ax)</me> where <m>a</m> is a constant number. Notice that the formula for the transformation is shown using function notation.</p>
+          <p>Use the slider until the transformed graph is exactly <em>half</em> as wide as the original graph of <m>f</m>.</p>
+          <p>Then use function notation to write the formula for the transformation.</p>
+          <p>Answer:  <m>y = </m><var name="$f2" width="15" /></p>
+        </statement>
+        <hint>
+          <p>Remember, you are just compressing the points so they are half as far away from the <m>y</m><ndash />axis. For example, a point like <m>(12,15)</m> would go to <m>(6,15)</m>.</p>
+        </hint>
+      </webwork>
+    </exercise>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$compressed">
+            <set>
+              <member>\text{?}</member>
+              <member>\text{It was stretched}</member>
+              <member correct="yes">\text{It was compressed}</member>
+            </set>
+          </var>
+          <var name="$stretched">
+            <set>
+              <member>\text{?}</member>
+              <member correct="yes">\text{It was stretched}</member>
+              <member>\text{It was compressed}</member>
+            </set>
+          </var>
+          <var name="$half">
+            <set>
+              <member correct="yes">y = f(2x)</member>
+              <member>y = f(0.5x)</member>
+            </set>
+          </var>
+          <var name="$twice">
+            <set>
+              <member>y = f(2x)</member>
+              <member correct="yes">y = f(0.5x)</member>
+            </set>
+          </var>
+          <pg-code>
+            $compressed=PopUp(
+            ["?","It was stretched","It was compressed"],"It was compressed"
+            );
+            $stretched=PopUp(
+            ["?","It was stretched","It was compresses"],"It was stretched"
+            );
+            $half=RadioButtons(
+            ["y = f(2x)","y = f(0.5x)"],0
+            );
+            $twice=RadioButtons(
+            ["y = f(2x)","y = f(0.5x)"],1
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pwsX4d5W/width/425/height/373/border/888888/sri/true/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>The graph above shows a function <m>y = f(ax)</m>, where <m>a</m> is a constant number.</p>
+          <p>Use the slider to change <m>a</m> to a number greater than <m>1</m>, and notice the change to the graph.</p>
+          <p>Answer: <var name="$compressed" form="popup" /></p>
+          <p>Now use the slider to change <m>a</m> to a number between <m>0</m> and <m>1</m>, and notice the change to the graph.</p>
+          <p>Answer: <var name="$stretched" form="popup" /></p>
+          <p>If you wanted to <em>compress</em> the graph of <m>f</m> so that it was exactly <em>half</em> as wide as it started out, you would use which transformation below?</p>
+          <p><var name="$half" form="buttons" /></p>
+          <p>If you wanted to <em>stretch</em> the graph of <m>f</m> so that it was exactly <em>twice</em> as wide as it started out, you would use which transformation below?</p>
+          <p><var name="$twice" form="buttons" /></p>
+        </statement>
+        <solution>
+          <p><ol>
+            <li><p>To compress the graph to half its original width, use the transformation <me>y = f(2x)</me></p></li>
+            <li><p>To stretch the graph to twice its original width, use the transformation <me>y = f(0.5x)</me></p></li>
+          </ol></p>
+        </solution>
+      </webwork>
+    </exercise>
+    <p>It may have surprised you to see that multiplying the input of a function by a number larger than <m>1</m> actually made the graph <em>compress</em> horizontally.</p>
+    <p>Why did this happen? Let's <q>crunch some numbers</q> for a function and one of its transformations.</p>
+<todo>This problem does not recognize when answers have been submitted.</todo>
+    <exercise>
+        <statement>
+          <p>The table below shows some values for the function <m>f(x)</m> and its transformation <m>f(2x)</m>.</p>
+          <table>
+              <tabular>
+                  <col right="medium"/>
+                  <col right="medium"/>
+                  <col />
+                  <row bottom="medium">
+                      <cell><m>x</m></cell>
+                      <cell><m>f(x)</m></cell>
+                      <cell><m>f(2x)</m></cell>
+                  </row>
+                  <row bottom="medium">
+                      <cell><m>1</m></cell>
+                      <cell><m>8</m></cell>
+                      <cell></cell>
+                  </row>
+                  <row bottom="medium">
+                      <cell><m>2</m></cell>
+                      <cell><m>13</m></cell>
+                      <cell><m>23</m></cell>
+                  </row>
+                  <row bottom="medium">
+                      <cell><m>3</m></cell>
+                      <cell><m>18</m></cell>
+                      <cell></cell>
+                  </row>
+                  <row bottom="medium">
+                      <cell><m>4</m></cell>
+                      <cell><m>23</m></cell>
+                      <cell></cell>
+                  </row>
+                  <row bottom="medium">
+                      <cell><m>5</m></cell>
+                      <cell><m>28</m></cell>
+                      <cell></cell>
+                  </row>
+                  <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>33</m></cell>
+                      <cell></cell>
+                  </row>
+              </tabular>
+          </table>
+          <p>Complete the values for the transformation <m>f(2x)</m>.</p>
+        </statement>
+        <answer>
+          <p>For any value of the input <m>x</m>, evaluating <m>f(2x)</m> means you're looking at the output of <m>f</m> farther down the table, where the input is <m>2x</m>.</p>
+          <p>So, when <m>x = 2</m>, the output of <m>f(2x)</m> is the same as <m>f(4) = 23</m>.</p>
+          <p>The completed table looks like:
+            <table>
+                <tabular>
+                    <col right="medium"/>
+                    <col right="medium"/>
+                    <col />
+                    <row bottom="medium">
+                        <cell><m>x</m></cell>
+                        <cell><m>f(x)</m></cell>
+                        <cell><m>f(2x)</m></cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell><m>1</m></cell>
+                        <cell><m>8</m></cell>
+                        <cell>13</cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell><m>2</m></cell>
+                        <cell><m>13</m></cell>
+                        <cell><m>23</m></cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell><m>3</m></cell>
+                        <cell><m>18</m></cell>
+                        <cell>33</cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell><m>4</m></cell>
+                        <cell><m>23</m></cell>
+                        <cell>43</cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell><m>5</m></cell>
+                        <cell><m>28</m></cell>
+                        <cell>53</cell>
+                    </row>
+                    <row>
+                        <cell><m>6</m></cell>
+                        <cell><m>33</m></cell>
+                        <cell>63</cell>
+                    </row>
+                </tabular>
+            </table>
+          </p>
+          <p>[The function <m>f</m> is linear, and its pattern can be used to determine values of the table.]</p>
+        </answer>
+    </exercise>
+    <p>Notice that the output values for <m>f(x)</m>, which occur later in the table, now happen earlier for the transformation <m>f(2x)</m>. This makes sense graphically, as the points at certain heights now occur earlier, at smaller <m>x</m><ndash />values for <m>f(2x)</m>.</p>
+    <note xml:id="note-horizontal-stretch-compress">
+      <p>It is useful to realize that a transformation like <m>f(0.25x)</m> may be written as: <me>f\left(\frac{x}{4}\right)</me> Any transformation of the type <m>f(ax)</m> may be rewritten as <m>f\left(\dfrac{x}{\sfrac{1}{a}}\right)</m>, where one of the numbers, <m>a</m> or <m>\frac{1}{a}</m>, is greater than <m>1</m>.</p>
+      <p>Therefore, another way to remember what this type of transformation does is the following.</p>
+      <p>If you rewrite the transformation so that <m>a&gt;1</m>, then:
+        <dl>
+          <li><title><m>f(ax)</m></title>
+          <p>Compresses the graph of <m>f</m> by a factor of <m>a</m></p></li>
+          <li><title></title>
+          <p><q>Multiplying the input variable by a number greater than <m>1</m> will compress the graph.</q></p>
+          <p>Example:  <m>f(3x)</m> is only <m>1/3</m> as wide as <m>f(x)</m>.</p></li>
+          <li><title><m>f\big(\frac{x}{a}\big)</m></title>
+          <p>Stretches the graph of <m>f</m> by a factor of <m>a</m></p>
+          <p>Example?  <m>f\left(\frac{x}{4}\right)</m> is <m>4</m> times as wide as <m>f(x)</m>.</p></li>
+        </dl></p>
+    </note>
+    <p>Often, we will want to horizontally stretch or compress a function by a certain factor. Or, if we already have a transformed function's graph, we may need to determine what the stretching/compressing factor was.</p>
+    <example>
+      <statement>
+        <p>The graph at left shows <m>y = f(x)</m>. This graph was horizontally stretched to make the graph <m>y = f(ax)</m> at right.</p>
+        <sidebyside widths="48% 48%">
+          <figure>
+            <caption><m>y = f(x)</m></caption>
+              <image>
+                <latex-image>
+                  <![CDATA[
+                  \begin{tikzpicture}
+                                \begin{axis}[]
+                                \addplot+[smooth,domain=-2:3] {(x-2)*x*(x+1)};
+                                \addplot[soldot] (2,0);
+                                \end{axis}
+                            \end{tikzpicture}
+                  ]]>
+                </latex-image>
+              </image>
+          </figure>
+          <figure>
+            <caption><m>y = g(x)</m></caption>
+              <image>
+                <latex-image>
+                  <![CDATA[
+                  \begin{tikzpicture}
+                                \begin{axis}[]
+                                \addplot+[smooth,domain=-5:6.5] {(0.4*x-2)*0.4*x*(0.4*x+1)};
+                                \addplot[soldot] (5,0);
+                                \end{axis}
+                            \end{tikzpicture}
+                  ]]>
+                </latex-image>
+              </image>
+          </figure>
+        </sidebyside>
+        <p>The objective is to find what value of <m>a</m> caused the horizontal <em>stretch</em> to the graph of <m>f</m>.</p>
+        <p><ol>
+          <li><p>Since this transformation stretches points away from the <m>x</m><ndash />axis, fix your attention on the point <m>(2, 0)</m> on the graph of <m>f</m>.</p>
+          <p>Its corresponding point <m>(5, 0)</m> on the graph of <m>g</m> has been stretched by what factor away from the <m>x</m><ndash />axis?
+          <fn>That is, how many times larger is the <m>x</m><ndash />value of the stretched point?</fn></p></li>
+          <li><p>Using the idea from <xref ref="note-horizontal-stretch-compress">Note</xref>, determine the value of <m>a</m> if the stretched graph is <m>f\left(\frac{x}{a}\right)</m>.</p></li>
+        </ol></p>
+      </statement>
+      <solution>
+        <p>The points on <m>g(x)</m> are <m>\frac{5}{2}=2.5</m> times as far from the <m>x</m><ndash />axis as those on the graph of <m>f(x)</m>.</p>
+        <p>Since the graph was <em>stretched</em>, then we know that the transformation is <m>f\left(\frac{x}{a}\right)</m> where <m>a = 2.5</m>. So, the transformation could be written as either: <me>y = f\left(\frac{x}{2.5}\right)</me> Or <me>y = f\left(0.4x\right)</me></p>
+      </solution>
+    </example>
+    <paragraphs><title>Stretching or Compressing a standard function</title>
+    <p>You are already familiar with many basic functions:</p>
+    <p><table>
+      <tabular>
+        <col />
+        <row><cell><m>y = x</m></cell></row>
+        <row><cell><m>y = x^2</m></cell></row>
+        <row><cell><m>y = e^x</m></cell></row>
+        <row><cell><m>y = log_{10}(x)</m></cell></row>
+        <row><cell><m>y = \frac{1}{x}</m></cell></row>
+      </tabular>
+    </table></p>
+    <p>If you know these basic shapes, you can create infinite variations by using appropriate transformations.</p>
+    <p>In the next exercise, you will be given a function and its formula. Then use what you know about transformations in order to choose the correct formula for the transformed graph.</p>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$formula">
+            <static>1/(0.625x)</static>
+          </var>
+          <pg-code>
+            $gr=init_graph(-1,-1,10,2,
+            axes=>[0,0],
+            grid=>[11,3],
+            size=>[400,400]
+            );
+            $gr1=init_graph(-1,-1,10,2,
+            axes=>[0,0],
+            grid=>[11,3],
+            size=>[400,400]
+            );
+            add_functions($gr, "1/x for x in &lt;0.1,10&gt; using color:red and weight:2");
+            $gr->lb(new Label ( 8,0.15,'(8,0.125)','red','left','bottom'));
+            $gr->stamps( closed_circle(8,0.125,'blue'));
+            add_functions($gr1, "1/(1.625*x) for x in &lt;0.1,10&gt; using color:red and weight:2");
+            $gr1->lb(new Label ( 5,0.15,'(5,0.125)','red','left','bottom'));
+            $gr1->stamps( closed_circle(5,0.125,'blue'));
+            $formula=Compute("1/(0.625*x)");
+          </pg-code>
+        </setup>
+        <statement>
+          <figure>
+            <image pg-name="$gr" />
+          </figure>
+          <p>Above is the function <m>f(x) = \frac{1}{x}</m>.</p>
+          <p>Below, the graph shows a horizontal compression of <m>f</m>.</p>
+          <figure>
+            <image pg-name="$gr1" />
+          </figure>
+          <p>Use what you know about compressions in order to write the formula for <m>g(x)</m>.</p>
+          <p>Answer:  <m>y = </m><var name="$formula" width="15" /></p>
+        </statement>
+        <hint>
+          <p>Notice the point on the graph of <m>f</m> and the corresponding point on the compressed graph <m>y = g(x)</m>.</p>
+          <p>By what factor was it compressed toward the <m>y</m><ndash />axis?</p>
+        </hint>
+        <solution>
+          <p>The <m>x</m><ndash />coordinate of the point was multiplied by <m>\frac{5}{8} = 0.625</m> in order to make the compressed graph, so the formula is: <me>g(x) = \frac{1}{0.625x}</me></p>
+        </solution>
+      </webwork>
+    </exercise>
+    <exercise>
+      <webwork>
+        <setup>
+          <var name="$formula">
+            <set>
+              <member>2\log_2(x-4)</member>
+              <member>\frac{1}{2}\log_2(x-4)</member>
+              <member correct="yes">\log_2(2x-4)</member>
+              <member>\log_2\left(\frac{1}{2}x-4\right)</member>
+            </set>
+          </var>
+          <pg-code>
+            $formula=RadioButtons(
+            ["\(2\log_2(x-4)\)","\(\frac{1}{2}\log_2(x-4)\)","\(\log_2(2x-4)\)","\(\log_2\left(\frac{x}{2}-4\right)\)"],2
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/hkbdwXA3/width/425/height/373/border/888888/sri/true/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>The graph above shows <m>f(x) = \log_{2}(x-4)</m>.</p>
+          <p>Below is <m>g(x)</m>, which is a horizontal compression of <m>f</m>.</p>
+          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Pbu8g3NG/width/425/height/373/border/888888/sri/true/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+          <p> Determine the factor by which <m>f</m> was compressed, and then choose the correct formula for this new graph.</p>
+          <p>Answer:  <m>y = </m><var name="$formula" form="buttons" /></p>
+        </statement>
+        <hint>
+          <p>Remember that horizontally compressing (or stretching) happens by multiplying (or dividing) the input <m>x</m> by a number.</p>
+        </hint>
+        <solution>
+          <p>Since the graph is compressed to half its original width, we must <em>multiply</em> the input <m>x</m> by a number greater than <m>1</m> <mdash /> in this case, that number is <m>2</m>.</p>
+        </solution>
+      </webwork>
+    </exercise>
+    </paragraphs>
+
+
+
+<!--
+<exercise>
+            <title>Solve using a graph</title>
+
+            <webwork>
+
+                <setup>
+                    <var name="$answer" category="number"><static>3</static></var>
+                    <var name="$second_x" category="number"><static>3.8</static></var>
+                    <pg-code>
+                        $answer = random(1,3,1);
+                        $gr = init_graph(-1,-1,4,4,
+                        axes=>[0,0],
+                        grid=>[5,5],
+                        size=>[400,400]
+                        );
+                        add_functions($gr, "x^3/$answer^3 for x in &lt;-1,4&gt; using color:blue and weight:2");
+                        $second_x = Real($answer*2**(1/3));
+
+                        $solgr = init_graph(-1,-1,4,4,
+                        axes=>[0,0],
+                        grid=>[5,5],
+                        size=>[400,400]
+                        );
+                        add_functions($solgr, "x^3/$answer^3 for x in &lt;-1,4&gt; using color:blue and weight:2");
+                        $solgr->moveTo(0,1);
+                        $solgr->lineTo($answer,1,'black',3);
+                        $solgr->arrowTo($answer,0,'black',3);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The graph below is a graph of <m>y=f(x)</m>. Use the graph to solve the equation <m>f(x)=1</m>.</p>
+                    <figure>
+                        <image pg-name="$gr">
+                            <description>a plot of a curve on a cartesian set of axes; the x axis ranges from -1 to 4, and the y-axis ranges from -1 to 4; the curve enters from the left, below the x-axis, and curves upward and to the right until it reaches the point (0,0); from here it continues predominantly rightward for a bit, bending slightly upward more and more as it progresses; it passes through the points (<var name="$answer"/>,1) and (<var name="$second_x"/>,2) before leaving the graph moving more and more upward and to the right.</description>
+                        </image>
+                    </figure>
+                    <p><m>x=</m> <var name="$answer" width="10"/></p>
+                </statement>
+                <solution>
+                    <p>The graph reveals that the only solution to <m>f(x)=1</m> is <m>x=<var name="$answer"/></m>.</p>
+                    <figure>
+                        <image pg-name="$solgr">
+                            <description>a plot of a curve on a cartesian set of axes; the x axis ranges from -1 to 4, and the y-axis ranges from -1 to 4; the curve enters from the left, below the x-axis, and curves upward and to the right until it reaches the point (0,0); from here it continues predominantly rightward for a bit, bending slightly upward more and more as it progresses; it passes through the points (<var name="$answer" />,1) and (<var name="$second_x" />,2) before leaving the graph moving more and more upward and to the right; a horizontal line segment moves rightward from y=1 on the y-axis until it reaches a point on the curve; a vertical line segment moves down from this point to x=$answer on the x-axis.</description>
+                        </image>
+                    </figure>
+                </solution>
+            </webwork>
+        </exercise>
+      -->
+
+      </section>
+    </chapter>
