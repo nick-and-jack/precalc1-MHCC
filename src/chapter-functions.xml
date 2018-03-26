@@ -602,7 +602,7 @@
                   $gr=init_graph(-6,-6,6,6,
                   axes=>[0,0],
                   grid=>[12,12],
-                  size=>[400,400]
+                  size=>[240,240]
                   );
                   add_functions($gr, "-0.25*x*(x+2)*(x-3)+2 for x in &lt;-3.5,4.5&gt; using color:red and weight:2");
                   $gr->stamps( closed_circle(-2,2,'blue') );
@@ -623,9 +623,9 @@
               </setup>
               <statement>
                 <p>The graph below shows the function <m>y=f(x)</m>.</p>
-                <figure>
+                <sidebyside widths="40%">
                   <image pg-name="$gr" />
-                </figure>
+                </sidebyside>
                 <p><ol label="a">
                   <li><p>Evaluate <m>f(2)</m>.</p>
                   <p>Answer:  <m>f(2) = </m><var name="$fof2" width="10" /></p></li>

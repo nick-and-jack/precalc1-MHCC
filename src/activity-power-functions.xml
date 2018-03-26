@@ -213,7 +213,7 @@
             $negEven=PopUp(["?","A","B","C","D"],"C");
             $negOdd=PopUp(["?","A","B","C","D"],"A");
 
-            for my $i(0..4){$gr[$i] = init_graph(-5,-5,5,5,axes=>[0,0],grid=>[10,10],size=>[200,200]);};
+            for my $i(0..4){$gr[$i] = init_graph(-5,-5,5,5,axes=>[0,0],grid=>[10,10],size=>[240,240]);};
             $gr[0] -> lb(new Label ( -4.5,4,'A','red','left','bottom'));
             $gr[1] -> lb(new Label ( -4.5,4,'B','red','left','bottom'));
             $gr[2] -> lb(new Label ( -4.5,4,'C','red','left','bottom'));
@@ -227,10 +227,10 @@
         </setup>
 
         <statement>
-          <figure><image pg-name="$gr[0]" width="200" height="200" tex-size="200"/></figure>
-          <figure><image pg-name="$gr[1]" width="200" height="200" tex-size="200"/></figure>
-          <figure><image pg-name="$gr[2]" width="200" height="200" tex-size="200"/></figure>
-          <figure><image pg-name="$gr[3]" width="200" height="200" tex-size="200"/></figure>
+          <figure><image pg-name="$gr[0]" width="40%" /></figure>
+          <figure><image pg-name="$gr[1]" width="40%" /></figure>
+          <figure><image pg-name="$gr[2]" width="40%" /></figure>
+          <figure><image pg-name="$gr[3]" width="40%" /></figure>
 
           <p>The graphs show the following functions:<md>
             <mrow>y \amp= -x^2\amp y \amp= -x^3\amp y \amp= x^4\amp y = x^5</mrow>
@@ -462,7 +462,7 @@
             $negEven=PopUp(["?","A","B","C","D"],"A");
             $negOdd=PopUp(["?","A","B","C","D"],"D");
 
-            for my $i(0..4){$gr[$i] = init_graph(-5,-5,5,5,axes=>[0,0],grid=>[10,10],size=>[200,200]);};
+            for my $i(0..4){$gr[$i] = init_graph(-5,-5,5,5,axes=>[0,0],grid=>[10,10],size=>[240,240]);};
             $gr[0] -> lb(new Label ( -4.5,4,'A','red','left','bottom'));
             $gr[1] -> lb(new Label ( -4.5,4,'B','red','left','bottom'));
             $gr[2] -> lb(new Label ( -4.5,4,'C','red','left','bottom'));
@@ -479,10 +479,10 @@
         </setup>
 
         <statement>
-          <figure><image pg-name="$gr[0]" width="200" height="200" tex-size="200" /></figure>
-          <figure><image pg-name="$gr[1]" width="200" height="200" tex-size="200" /></figure>
-          <figure><image pg-name="$gr[2]" width="200" height="200" tex-size="200" /></figure>
-          <figure><image pg-name="$gr[3]" width="200" height="200" tex-size="200" /></figure>
+          <figure><image pg-name="$gr[0]" width="40%" /></figure>
+          <figure><image pg-name="$gr[1]" width="40%" /></figure>
+          <figure><image pg-name="$gr[2]" width="40%" /></figure>
+          <figure><image pg-name="$gr[3]" width="40%" /></figure>
           <p>Select the graph for each formula:</p>
           <p><ol label="a">
             <li>

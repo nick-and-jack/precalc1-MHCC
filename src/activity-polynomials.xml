@@ -297,7 +297,7 @@
             $gr[0]=init_graph(-3,-16,5,16,
             axes=>[0,0],
             grid=>[8,8],
-            size=>[200,200]
+            size=>[240,240]
             );
             add_functions($gr[0], "(x+2)*(x-1)*(x-3) for x in &lt;-3,4&gt; using color:red and weight:2");
             $gr[0] -> lb(new Label ( 4,-12,'Graph A','red','right','bottom'));
@@ -305,7 +305,7 @@
             $gr[1]=init_graph(-2,-6,4,8,
             axes=>[0,0],
             grid=>[6,7],
-            size=>[200,200]
+            size=>[240,240]
             );
             add_functions($gr[1], "(x-1)*(x-2)*(x-3) for x in &lt;0,5&gt; using color:red and weight:2");
             $gr[1] -> lb(new Label ( 3.2,-4.4,'Graph B','red','right','bottom'));
@@ -313,7 +313,7 @@
             $gr[2]=init_graph(-3,-35,4,15,
             axes=>[0,0],
             grid=>[7,10],
-            size=>[200,200]
+            size=>[240,240]
             );
             add_functions($gr[2], "(x+2)*(x+1)*(x-3) for x in &lt;-3,4&gt; using color:red and weight:2");
             $gr[2] -> lb(new Label ( 3.2,-30,'Graph C','red','right','bottom'));
@@ -321,7 +321,7 @@
             $gr[3]=init_graph(-3,-16,5,16,
             axes=>[0,0],
             grid=>[8,8],
-            size=>[200,200]
+            size=>[240,240]
             );
             add_functions($gr[3], "(x+1)*(x-2)*(x-3) for x in &lt;-2,5&gt; using color:red and weight:2");
             $gr[3] -> lb(new Label ( 4,-12,'Graph D','red','right','bottom'));
@@ -330,10 +330,10 @@
         <statement>
           <p>Let <m>p(x) = (x-2)(x+1)(2x-6)</m>.</p>
           <p>Thinking about the linear factors of <m>p</m> as lines, each with its own root, choose which option below could be the graph of <m>p(x)</m>.</p>
-          <figure><image pg-name="$gr[0]" width="200" height="200"/></figure>
-          <figure><image pg-name="$gr[1]" width="200" height="200"/></figure>
-          <figure><image pg-name="$gr[2]" width="200" height="200"/></figure>
-          <figure><image pg-name="$gr[3]" width="200" height="200"/></figure>
+          <figure><image pg-name="$gr[0]" width="40%" /></figure>
+          <figure><image pg-name="$gr[1]" width="40%" /></figure>
+          <figure><image pg-name="$gr[2]" width="40%" /></figure>
+          <figure><image pg-name="$gr[3]" width="40%" /></figure>
           <p>Answer:  <var name="$graph" form="popup" /></p>
         </statement>
         <hint>
@@ -1039,11 +1039,11 @@
               </set>
             </var>
             <pg-code>
-              $gr[0]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[200,200]);
+              $gr[0]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[240,240]);
               add_functions($gr[0], "(x-1)*(x-3)*(x-4) for x in &lt;-2,7&gt; using color:red and weight:2");
-              $gr[1]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[200,200]);
+              $gr[1]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[240,240]);
               add_functions($gr[1], "2*(x-1)*(x-3)*(x-4) for x in &lt;-2,7&gt; using color:red and weight:2");
-              $gr[2]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[200,200]);
+              $gr[2]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[240,240]);
               add_functions($gr[2], "1.5*(x-1)*(x-3)*(x-4) for x in &lt;-2,7&gt; using color:red and weight:2");
               $gr[0] -> lb(new Label ( 3,-5,'Graph A','red','left','bottom'));
               $gr[1] -> lb(new Label ( 3,-5,'Graph B','red','left','bottom'));
@@ -1055,9 +1055,9 @@
           </setup>
           <statement>
             <p>Our guess for the formula, <m>f(x) = (x-1)(x-3)(x-4)</m>, actually matches one of the graphs. Use the input value <m>x = 2</m> to decide which of the graphs matches our formula.</p>
-            <figure><image pg-name="$gr[0]" width="200" height="200"/></figure>
-            <figure><image pg-name="$gr[1]" width="200" height="200"/></figure>
-            <figure><image pg-name="$gr[2]" width="200" height="200"/></figure>
+            <figure><image pg-name="$gr[0]" width="40%" /></figure>
+            <figure><image pg-name="$gr[1]" width="40%" /></figure>
+            <figure><image pg-name="$gr[2]" width="40%" /></figure>
             <p>Answer: <var name="$graph" form="popup" /></p>
           </statement>
           <hint>
