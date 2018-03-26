@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+## ********************************************************************* ##
+## Copyright 2016                                                        ##
+## Jack Green, Nick Chura                                                ##
+##                                                                       ##
+## This file is part of the Mount Hood Community College                 ##
+## Precalculus Project                                                   ##
+##                                                                       ##
+## ********************************************************************* ##
+-->
+
+<section xml:id="activity-rational-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+ <title>Rational Functions</title>
+  <objectives>
+   <title>Student Learning Outcomes</title>
+    <introduction>
+     <p>After completing this activity you will be able to:</p>
+    </introduction>
+    <ol>
+     <li>
+      <p>
+       Determine the domain, range, intercepts, holes, end behavior, vertical and horizontal asymptotes (if they exist) of a rational function.
+      </p>
+     </li>
+     <li>
+      <p>
+       Create a graph by hand and on the calculator of a rational function (given in factored form).
+      </p>
+     </li>
+    </ol>
+   </objectives>
+ <subsection>
+  <title>What is a Rational Function?</title>
+   <paragraphs>
+    <p>Basically, a <term>rational funciton</term><idx><h>rational funciton</h></idx> is a fraction. It is composed of a numerator and a denominator in which both are polynomials. For instance, all of the functions listed below are rational functions.</p>
+   </paragraphs>
+    <example>
+     <statement>
+       <p>
+        <ol>
+         <li>
+          <p><m>\frac{x^{2}-5x}{10-3x^{3}+22x^{7}</m></p>
+         </li>
+         <li>
+          <p><m>\frac{4}{x}</m></p>
+         </li>
+          <p><m>\frac{100x^{10}-x}{x+1}</m></p>
+         </li>
+       </ol>
+      </p>
+     </statement>
+    </example>
+      <exercise xml:id="webwork-function-temperature-converter">
+         <introduction><p>A simple example of a function is a temperature converter. It converts a temperature from degrees Fahrenheit to degrees Celsius.</p>
+         <p>The function is the rule or process used to convert from one unit of temperature to the other.</p>
+         </introduction>
+         <webwork>
+             <setup>
+                 <var name="$evaluate">
+                     <static>25</static>
+                 </var>
+                 <var name="$solve">
+                     <static>F=-7.6</static>
+                 </var>
+                 <pg-code>
+                     for my $i (0,1) {
+                         $gr[$i] = init_graph(-60,-60,110,110,axes=>[0,0],grid=>[17,17],size=>[400,400]);
+                         $gr[$i]->lb('reset');
+                         for my $j (-40,-20,20,40,60,80,100) {
+                             $gr[$i]->moveTo($j,-3);
+                             $gr[$i]->lineTo($j,3,'black',3);
+                             $gr[$i]->lb(new Label($j,-3,$j,'black','center','top'));
+                             $gr[$i]->moveTo(-5,$j);
+                             $gr[$i]->lineTo(5,$j,'black',3);
+                             $gr[$i]->lb(new Label(7,$j,$j,'black','left','middle'));
+                         };
+                         $gr[$i]->lb(new Label(105,5,'Temp (deg F)','black','right','bottom'));
+                         $gr[$i]->lb(new Label(5,105,'Temp (deg C)','black','left','middle'));
+                         add_functions($gr[$i], "5/9*(x-32) for x in &lt;-160,110> using color:blue and weight:2");
+                     };
+                     $gr[1]->moveTo(77,0);
+                     $gr[1]->lineTo(77,25,'black',1);
+                     $gr[1]->arrowTo(0,25,'black',1);
+                     $gr[1]->moveTo(0,-22);
+                     $gr[1]->lineTo(-7.6,-22,'black',1);
+                     $gr[1]->arrowTo(-7.6,0,'black',1);
+                     Context()->flags->set(tolType=>'absolute',tolerance=>'3');
+                     $evaluate=Compute("25");
+                     Context("Numeric");
+                     Context()->flags->set(tolType=>'absolute',tolerance=>'3');
+                     Context()->variables->are(C=>'Real',F=>'Real');
+                     parser::Assignment->Allow;
+                     $solve=Formula("F=-7.6");
+                 </pg-code>
+             </setup>
+             <statement>
+               <p>Our function is a graph, but it could have been a table of values or a formula.</p>
+               <p>The graph illustrates that the temperature in degrees Celsius is a <term>function</term> of the temperature in degrees Fahrenheit.</p>
+                 <p>The temperature in degrees Fahrenheit, <m>F</m>, is the input while the temperature in degrees Celsius, <m>C</m>, is the output.</p>
+                 <sidebyside>
+                     <image pg-name="$gr[0]" />
+                 </sidebyside>
+                 <p>Use the graph to estimate your answers below:<ol>
+                     <li>
+                         <p>The temperature of <m>77</m> degrees Fahrenheit to degrees Celsius</p>
+                         <p><m>C=</m> <var name="$evaluate" width="15" /></p>
+                     </li>
+                     <li>
+                         <p>What temperature in Fahrenheit is the same as <m>-22</m> degrees Celsius? (Type your answer as <q><m>F=\ldots</m></q>.)</p>
+                         <p><var name="$solve" width="15" /></p>
+                     </li>
+                 </ol></p>
+             </statement>
+             <hint>
+               <p><ol>
+                 <li><p>Locate the input value of <m>77</m> degrees Fahrenheit along the horizontal axis, and find the point on the graph directly above this input value. What is the output value when the input is <m>77</m>?</p></li>
+                 <li><p>Locate the output value of <m>-22</m> degrees Celsius along the vertical axis, and find the point on the graph directly to the left of this output value. What is the input value which gives the output of <m>-22</m>?</p></li>
+               </ol></p>
+             </hint>
+             <solution>
+                 <p>To graphically find these answers, visualize arrows and guidelines on the graph. To find the Celsius equivalent of <m>77</m> degrees Fahrenheit, recognize that <m>77</m> is an input value, and so you must identify it on the horizontal axis. From there, move up, then left to the vertical axis, where you land at about <m>25</m> degrees Celsius. So <m>77 \text{degrees Fahrenheit} \approx25 \text{degrees Celsius}</m>.</p>
+
+                 <sidebyside>
+                     <image pg-name="$gr[1]" />
+                 </sidebyside>
+
+                 <p>A similar process in reverse is used to determine the Fahrenheit temperature equivalent of <m>-22</m> degrees Celsius. Recognize that <m>-22</m> is an output, and so you must identify it on the vertical axis. From there, move left, then up to the horizontal axis, where you land at about <m>-8</m> degrees Fahrenheit. So the answer is <m>F\approx-8</m>.</p>
+             </solution>
+         </webwork>
+     </exercise>    
+ </subsection>
+
+    <subsection>
+        <title>Math as a Language</title>
+        <exercise>
+            <webwork seed="1">
+                <setup>
+                    <var name="$time">
+                        <static>2</static>
+                    </var>
+                    <var name="$position">
+                        <static>30</static>
+                    </var>
+                    <var name="$units">
+                        <set>
+                             <member correct="yes">\text{miles}</member>
+                             <member>\text{hours}</member>
+                             <member>\text{miles per hour}</member>
+                             <member>\text{hours per mile}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $time = Real(random(2,7,1));
+                        if($envir{problemSeed}==1){$time=2;};
+                        $position = Real(40*exp(2.6*($time-2))/(1+exp(2.6*($time-2)))+10);
+                        $units = PopUp(["?", "miles", "hours", "miles per hour", "hours per mile"], "miles");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Consider the graph below.</p>
+
+                    <p>The dot on the graph represents the position of a train at a particular time. The cross-hairs represent the time.</p>
+
+                    <p>Adjust the time by sliding cross-hairs left and right.  Notice that the train's distance, in miles, from downtown depends on the time, in hours, after <m>8</m> <init>a.m.</init></p>
+
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/D4s2v4ft/width/450/height/459/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="450px" height="459px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+                    <p>How far from downtown is the train <m><var name="$time" /></m> hours after <m>8</m> <init>a.m.</init>?</p>
+
+                    <p><var name="$position" width="5" /> <var name="$units" form="popup" /></p>
+
+                    <p>Without knowing anything about function notation, you can still use a language you already know, English, to describe information about the train.</p>
+
+                    <p>For instance:<ul>
+                        <li>
+                            <p>The train can only be in one place at any particular time.</p>
+                        </li>
+                        <li>
+                            <p>As time passes the train gets farther from downtown.</p>
+                        </li>
+                        <li>
+                            <p>The speed of the train changes during its trip.</p>
+                        </li>
+                    </ul></p>
+
+                    <p>There are also some characteristics of the graph itself you can also describe in English:<ul>
+                        <li>
+                            <p>The graph rises as we read it from left to right.</p>
+                        </li>
+                        <li>
+                            <p>Sometimes the graph is curved upwards.</p>
+                        </li>
+                        <li>
+                            <p>Sometimes the graph curves downwards.</p>
+                        </li>
+                        <li>
+                            <p>Some parts of the graph are steeper than others.</p>
+                        </li>
+                    </ul></p>
+                </statement>
+            </webwork>
+        </exercise>
+        <blockquote>
+            <p><m>f(2) = 30</m></p>
+        </blockquote>
+    </subsection>
+    <subsection>
+        <title>The Grammar of Function Notation</title>
+        <paragraphs>
+            <title>Variables have units</title>
+        </paragraphs>
+        <note>
+          <p>The word <q>function</q> usually refers to the actual <em>rule</em> which turns the input into the output. Sometimes, however, we will use it to describe the output of the relationship.</p>
+        </note>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$tarzan">
+                        <set>
+                            <member>\text{Tarzan times the jungle}</member>
+                            <member>\text{Tarzan jungle}</member>
+                            <member correct="yes">\text{Tarzan of the jungle}</member>
+                            <member>\text{jungle after Tarzan}</member>
+                        </set>
+                    </var>
+                    <var name="$helen">
+                        <set>
+                            <member>\text{Helen loves Troy}</member>
+                            <member>\text{Helen multiplied by Troy}</member>
+                            <member>\text{Helen Troy}</member>
+                            <member correct="yes">\text{Helen of Troy}</member>
+                        </set>
+                    </var>
+                    <var name="$f">
+                        <set>
+                            <member correct="yes">\text{f of x}</member>
+                            <member>\text{f times x}</member>
+                            <member>\text{f parentheses x}</member>
+                            <member>\text{f x}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $tarzan = PopUp(["?","Tarzan times the jungle","Tarzan jungle","Tarzan of the jungle","Jungle after Tarzan"],"Tarzan of the jungle");
+                        $helen = PopUp(["?","Helen loves Troy","Helen multiplied by Troy","Helen next to Troy","Helen of Troy"],"Helen of Troy");
+                        $f = PopUp(["?","f of x","f times x","f parentheses x","f x"],"f of x");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>How would you say the function notation in each statement below?<ol>
+                        <li>
+                            <p>Tarzan(the jungle) <var name="$tarzan" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p>Helen(Troy) <var name="$helen" form="popup" /></p>
+                        </li>
+                        <li>
+                            <p><m>f(x)</m> <var name="$f" form="popup" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+            </webwork>
+        </exercise>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$distance">
+                        <static>10</static>
+                    </var>
+                    <var name="$units">
+                        <set>
+                             <member correct="yes">\text{miles}</member>
+                             <member>\text{hours}</member>
+                             <member>\text{miles per hour}</member>
+                             <member>\text{hours per mile}</member>
+                        </set>
+                    </var>
+                    <var name="$start">
+                        <static>8</static>
+                    </var>
+                    <var name="$ampm">
+                        <set>
+                             <member correct="yes">\text{a.m.}</member>
+                             <member>\text{p.m.}</member>
+                        </set>
+                    </var>
+                    <var name="$meanings">
+                        <set>
+                             <member correct="yes">\text{the initial position of the train}</member>
+                             <member>\text{the final position of the train}</member>
+                             <member>\text{the distance is zero}</member>
+                             <member>\text{the distance times zero}</member>
+                        </set>
+                    </var>
+                    <var name="$f2">
+                        <static>f(2)</static>
+                    </var>
+                    <pg-code>
+                        $distance = Real(10);
+                        $units = PopUp(["?", "miles", "hours", "miles per hour", "hours per mile"], "miles");
+                        $start = 8;
+                        $ampm = PopUp(["?", "a.m.", "p.m."], "a.m.");
+                        $meanings = PopUp(["?", "the initial position of the train", "the final position of the train", "the distance is zero", "the distance times zero"], 1);
+                        parserFunction("f(x)"=>"(sin(x)+2)/pi");
+                        Context()->flags->set(reduceConstantFunctions=>0);
+                        Context()->flags->set(formatStudentAnswer=>"parsed");
+                        $f2=Formula("f(2)");
+                        $evf2=$f2->cmp()->withPostFilter(AnswerHints(Compute("30") => "That's the actual value, but respond by using function notation."));
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>The graph below is a function that illustrates a train's distance from downtown, in miles,  as a function of time in hours after <m>8</m> <init>a.m.</init>  When using a graph the best you can do is estimate. Since <m>f(0)</m> represents a distance at <m>8</m> <init>a.m.</init>, we can use the graph to find what the distance is.</p>
+
+                    <p>Move the point onto <m>(0,f(0))</m>.</p>
+
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/P6uUYQqH/width/402/height/499/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="402px" height="499px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+                    <p><m>f(0)\approx</m> <var name="$distance" width="5" /> <var name="$units" form="popup" /></p>
+
+                    <p>What time is the function notation <m>f(0)</m> referring to?</p>
+                    <p><var name="$start" width="5" />:00 <var name="$ampm" form="popup" /></p>
+
+                    <p>The notation <m>f(0)</m> is read as <q><m>f</m> of zero.</q> What do you think <m>f(0)</m> means in the context of the train story?</p>
+                    <p><var name="$meanings" form="popup" /></p>
+
+                    <p>How would you represent the statement, <q>train's distance at <m>10</m> <init>a.m.</init></q> using function notation?</p>
+                    <p><var name="$f2" width="10" evaluator="$evf2"/></p>
+
+                </statement>
+            </webwork>
+        </exercise>
+
+
+    </subsection>
+    <subsection>
+        <title>How to Determine if a Relation is a Function or Not</title>
+        <p>When two or more variables are related to each other, the formula or rule that relates them is called a <term>relation</term>. For people, there is a relation between age and height. You can make ordered pairs of <m>(\text{age}, \text{height})</m> for different people and plot the points on a graph. You might even find a formula that predicts height based on age (or vice versa?)</p>
+        <p>In every relation you have encountered so far in this chapter, each input gives you only one output. For the train example we saw earlier, we had the function <m>D = f(t)</m>. At any given time, like <m>t = 10</m>, the train can only be in one place, <m>f(10)</m>. It's not possible for the train to be in two or more places at the same time.</p>
+        <p>Also, notice that each input has its own unique output. Every day at <m>t = 10</m>, the train is always in the same place: <m>f(10) = 30</m> (it's a very dependable train). These two conditions make the relation a function. Position is a function of time.</p>
+        <p>But not all relations are functions. Just because two things are related does not mean one is a function of the other.</p>
+        <p>Twice each day, the train is <m>30</m> miles away from downtown <mdash /> once in the morning on its way out, then later in the afternoon on the way back into town. If we choose position as input and time as output, we realize that the input <m>D = 30</m> gives us two answers: one time in the morning and another in the afternoon.  Thus time is not a function of position. All we have is a relation.</p>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$situation1">
+                        <set>
+                            <member>\text{yes}</member>
+                            <member correct="yes">\text{no}</member>
+                        </set>
+                    </var>
+                    <var name="$situation2">
+                        <set>
+                            <member correct="yes">\text{yes}</member>
+                            <member>\text{no}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $situation1 = RadioButtons(
+                            ["yes","no"],
+                            1,
+                        );
+                        $situation2 = RadioButtons(
+                            ["yes","no"],
+                             0,
+                        );
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>In this problem, we have the function <m>y = f(x)</m>, where <m>x</m> and <m>y</m> are just generic variables (no units). Decide if each situation below is possible.</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>Is it possible that <m>f(3)=10</m> and <m>f(3) = 17</m>?</p>
+                            <p><var name="$situation1" form="buttons" /></p>
+                        </li>
+                        <li>
+                            <p>Is it possible that <m>f(3)=10</m> and <m>f(8) = 10</m>?</p>
+                            <p><var name="$situation2" form="buttons" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+            </webwork>
+        </exercise>
+        <p>A <idx><h>table of values</h></idx><term>table of values</term> is one way to express the inputs and outputs of a relation. In a vertical table, the inputs are on the left, and the outputs are on the right. In a horizontal table, the top row is the input, and the bottom row is the output.</p>
+
+        <table>
+          <caption>Vertical Table</caption>
+            <tabular>
+                <col right="medium"/>
+                <col />
+                <row bottom="medium">
+                    <cell><em>Input</em></cell>
+                    <cell><em>Output</em></cell>
+                </row>
+                <row>
+                    <cell>input</cell>
+                    <cell>output</cell>
+                </row>
+                <row>
+                    <cell>input</cell>
+                    <cell>output</cell>
+                </row>
+                <row>
+                    <cell>input</cell>
+                    <cell>output</cell>
+                </row>
+            </tabular>
+        </table>
+
+        <table>
+          <caption>Horizontal Table</caption>
+            <tabular>
+                <col right="medium"/>
+                <col />
+                <col />
+                <col />
+                <row bottom="medium">
+                    <cell><em>Input</em></cell>
+                    <cell>input</cell>
+                    <cell>input</cell>
+                    <cell>input</cell>
+                </row>
+                <row>
+                    <cell><em>Output</em></cell>
+                    <cell>output</cell>
+                    <cell>output</cell>
+                    <cell>output</cell>
+                </row>
+            </tabular>
+        </table>
+        <exercise>
+          <title>Determine if the relation in each table is a function or not</title>
+          <webwork>
+            <setup>
+              <var name="$table1">
+                <set>
+                  <member>\text{y is a function of x}</member>
+                  <member correct="yes">\text{y is not a function of x}</member>
+                </set>
+              </var>
+              <var name="$table2">
+                <set>
+                  <member correct="yes">\text{y is a function of x}</member>
+                  <member>\text{y is not a function of x</member>
+                </set>
+              </var>
+              <pg-code>
+                $table1 = RadioButtons(["y is a function of x","y is not a function of x"],1);
+                $table2 = RadioButtons(["y is a function of x","y is not a function of x"],0);
+              </pg-code>
+            </setup>
+            <statement>
+                <p><ol label="A">
+                    <li>
+                        <p>In this table, is it possible that <m>y</m> is a function of <m>x</m>?</p>
+                        <sidebyside>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row>
+                                <cell><m>x</m></cell>
+                                <cell><m>y</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>8</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>10</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>-8</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>0</m></cell>
+                            </row>
+                        </tabular>
+                        </sidebyside>
+                        <p><var name="$table1" form="buttons" /></p>
+                    </li>
+                    <li>
+                        <p>In this table, is it possible that <m>y</m> is a function of <m>x</m>?</p>
+                        <sidebyside>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row>
+                                <cell><m>x</m></cell>
+                                <cell><m>y</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>8</m></cell>
+                                <cell><m>5</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>10</m></cell>
+                                <cell><m>5</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-8</m></cell>
+                                <cell><m>5</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>0</m></cell>
+                                <cell><m>5</m></cell>
+                            </row>
+                        </tabular>
+                        </sidebyside>
+                        <p><var name="$table2" form="buttons" /></p>
+                    </li>
+                </ol></p>
+            </statement>
+            <hint>
+              <p>Remember that if <m>y</m> is a function of <m>x</m>, then each value you choose for <m>x</m> can correspond to only one output value <m>y</m>.</p>
+            </hint>
+            <solution>
+              <p>In table A, it is <em>not</em> possible that <m>y</m> is a function of <m>x</m> because the input <m>x = 5</m> yields more than one output.</p>
+              <p>In table B, <m>y</m> <em>is</em> a function of <m>x</m> because each input yields only one output. It does not matter that the results are all the same.</p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <title>Determine if each equation makes <m>y</m> a function of <m>x</m></title>
+          <webwork>
+            <setup>
+              <var name="$eq1">
+                <set>
+                  <member>y\text{ is a function of }x</member>
+                  <member correct="yes">y\text{ is not a function of }x</member>
+                </set>
+              </var>
+              <var name="$eq2">
+                <set>
+                  <member correct="yes">y\text{ is a function of }x</member>
+                  <member>y\text{ is not a function of }x</member>
+                </set>
+              </var>
+              <pg-code>
+                $eq1 = RadioButtons(["y is a function of x","y is not a function of x"],0);
+                $eq2 = RadioButtons(["y is a function of x","y is not a function of x"],1);
+              </pg-code>
+            </setup>
+            <statement>
+                <p><ol label="a">
+                    <li>
+                        <p>If <m>y = x^2</m>, then is <m>y</m> a function of <m>x</m>?</p>
+                        <p><var name="$eq1" form="buttons" /></p>
+                    </li>
+                    <li>
+                        <p>If <m>y^2 = x</m>, then is <m>y</m> a function of <m>x</m>?</p>
+                        <p><var name="$eq2" form="buttons" /></p>
+                    </li>
+                </ol></p>
+            </statement>
+            <hint>
+              <p>In each case, ask yourself what happens when you choose a value for the input <m>x</m>.  Do you get one output or do you get more than one output?</p>
+              <p>If the relation is a function, then choosing a value of <m>x</m> will give you only <em>one</em> output value, <m>y</m>.</p>
+            </hint>
+            <solution>
+                <p><ol label="a">
+                    <li>
+                        <p>If <m>y = x^2</m>, then is <m>y</m> a function of <m>x</m>?</p>
+                        <p>Yes, <m>y</m> is a function of <m>x</m>, because for any value of <m>x</m> you choose, there is only one possible <m>y</m> as a result.</p>
+                    </li>
+                    <li>
+                        <p>If <m>y^2 = x</m>, then is <m>y</m> a function of <m>x</m>?</p>
+                        <p>No, <m>y</m> is not function of <m>x</m>. When you choose a value for <m>x</m>, solving for <m>y</m> gives <m>y = \pm \sqrt{x}</m>.</p>
+                        <p>This means that a single input will give you two outputs <mdash /> impossible for a function.</p>
+                    </li>
+                </ol></p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <p>It is easy to tell whether a graph represents a function or not. Remember that the inputs are found along the horizontal axis, and the outputs are found along the vertical axis. When deciding whether the graph is a function, the rule is the same: one input, one unique output.</p>
+
+        <exercise>
+          <title>Determine if the graph is a function</title>
+          <webwork>
+            <setup>
+              <var name="$nopass">
+                <set>
+                  <member>\text{This graph is a function}</member>
+                  <member correct="yes">\text{This graph is not a function}</member>
+                </set>
+              </var>
+              <var name="$pass">
+                <set>
+                  <member correct="yes">\text{This graph is a function}</member>
+                  <member>\text{This graph is not a function}</member>
+                </set>
+              </var>
+              <pg-code>
+                $nopass = RadioButtons(["This graph is a function","This graph is not a function"],1);
+                $pass = RadioButtons(["This graph is a function","This graph is not a function"],0);
+              </pg-code>
+            </setup>
+            <statement>
+                <p>Drag the input left or right to see the results on each graph. Think about how many outputs each input yields.</p>
+                <p><ol label="a">
+                    <li>
+                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QTfyBkEb/width/413/height/266/border/888888" width="413px" height="266px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                        <p><var name="$nopass" form="buttons" /></p>
+                    </li>
+                    <li>
+                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Req8ZfCM/width/413/height/290/border/888888" width="413px" height="290px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                        <p><var name="$pass" form="buttons" /></p>
+                    </li>
+                </ol></p>
+            </statement>
+            <hint>
+                <p>Think about how many outputs each input yields. Remember that if any input value corresponds to more than one output value, then the graph cannot be a function.</p>
+            </hint>
+            <solution>
+              <p><ol label="a">
+                <li><p>The graph is <em>not</em> a function. The input value <m>x = 0</m>, for instance, corresponds to two different output values: <m>y = 2</m> and <m>y = -2</m></p></li>
+                <li><p>The graph <em>is</em> a function. Each input value corresponds to only one output value.</p></li>
+              </ol></p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <p>The previous example leads us to a simple test we can use to determine if a graph is a function or not: The <term>vertical line test</term><idx><h>vertical line test</h></idx>.</p>
+
+        <p>Given a graph, draw a vertical line through any place on the graph. If the vertical line crosses the graph at most one time (no matter where you draw the line), then the graph is a function. If the vertical line crosses the graph anywhere at more than one point, then the graph is not a function.</p>
+
+        <exercise xml:id="exercise-vertical-line-test">
+            <webwork>
+                <setup>
+                    <var name="$none">
+                        <static>1</static>
+                    </var>
+                    <var name="$no">
+                      <set>
+                        <member>\text{Passes Vertical Line Test}</member>
+                        <member correct="yes">\text{Does not pass Vertical Line Test}</member>
+                      </set>
+                    </var>
+                    <var name="$yes">
+                      <set>
+                        <member>\text{Passes Vertical Line Test}</member>
+                        <member correct="yes">\text{Does not pass Vertical Line Test}</member>
+                      </set>
+                    </var>
+
+                    <pg-code>
+                        $none = Real(1);
+                        $no = RadioButtons(["Passes Vertical Line Test","Does not pass Vertical Line Test"],1);
+                        $yes = RadioButtons(["Passes Vertical Line Test","Does not pass Vertical Line Test"],0);
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>Drag the input to change the position of the vertical line.</p>
+                    <p>Does the line intersect the graph more than once?  If so, it does not pass the vertical line test and the graph is not a function.</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tqS4kTMd/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                            <p><var name="$no" form="buttons" /></p>
+                        </li>
+                        <li>
+                            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zepNEn3W/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                            <p><var name="$yes" form="buttons" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+            </webwork>
+        </exercise>
+    </subsection>
+
+    <subsection>
+        <title>Evaluate</title>
+        <p>It is one thing to talk about <q>The train's distance from downtown <m>2</m> hours after <m>8</m> <init>a.m.</init></q> and a completely different thing to say what that distance actually is.</p>
+        <p><term>Evaluate</term><idx><h>evaluate</h></idx><idx><h>function</h><h>evaluation</h></idx> means <q>use an input value in order to find an output value.</q> Therefore, evaluating <m>f(2)</m> in our train example means <q>Find the value of the train's distance from downtown <m>2</m> hours after <m>8</m> <init>a.m.</init></q></p>
+        <p>To evaluate <m>f(2)</m> we can use a graph, a table or a formula if they are available.</p>
+        <p>The important thing is we need some input value (time) to determine the output value for the train's distance from downtown. Remember: each individual input always gives the same single result.</p>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$dist">
+                        <static>40</static>
+                    </var>
+                    <var name="$miles">
+                        <set>
+                             <member>\text{feet}</member>
+                             <member correct="yes">\text{miles}</member>
+                             <member>\text{light years}</member>
+                             <member>\text{meters}</member>
+                        </set>
+                    </var>
+                    <pg-code>
+                        $dist= Real(40);
+                        $miles = PopUp(["?", "feet", "miles", "light years", "meters"], "miles");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <sidebyside>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row>
+                                <cell><m>t</m> (hours after <m>8</m> <init>a.m.</init>)</cell>
+                                <cell><m>D = f(t)</m> (miles from downtown)</cell>
+                            </row>
+                            <row>
+                                <cell><m>0</m></cell>
+                                <cell><m>10</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>0.5</m></cell>
+                                <cell><m>12</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>1.5</m></cell>
+                                <cell><m>20</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>2.5</m></cell>
+                                <cell><m>40</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>3.0</m></cell>
+                                <cell><m>46</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>3.5</m></cell>
+                                <cell><m>47</m></cell>
+                            </row>
+                        </tabular>
+                    </sidebyside>
+                    <p>Remember that in a vertical table, the inputs are found in the left column (independent variable) while outputs are found in the right column (dependent variable)</p>
+                    <p>Use the table to evaluate <m>f(2.5)</m></p>
+                    <p><m>f(2.5)= </m><var name="$dist" width="5" /> <var name="$miles" form="popup" /></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <p>In general when the inputs and outputs are nothing in particular, we use <m>x</m> as input and <m>y</m> as output so that <m>y = f(x)</m>.  We use <q><m>x</m></q> as a placeholder for the actual input value, while <q><m>y</m></q> is a placeholder for whatever the output value will be. The <m>x</m> basically says, <q>When you get the input, put it here</q> in all the places where the <m>x</m> is found.</p>
+
+        <p>Consider the function <m>f(x) = 50x + 10</m>.  The function has no context (no story), so we won't bother using units for either <m>x</m> or <m>y</m>.</p>
+
+        <p>If <m>x = 1</m>, then we can evaluate <m>f(1)</m>  by replacing the <m>x</m> in the formula with a <m>1</m>. Literally, <m>f(1)</m> means <q>what you get when you put <m>1</m> in the place of <m>x</m></q>.</p>
+        <p>Similarly, if you change the input to <m>x = 2</m>, then you can evaluate the expression <m>f(2)</m>, which is <q>what you get when you put <m>2</m> in the place of <m>x</m></q>.</p>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$in1">
+                        <static>1</static>
+                    </var>
+                    <var name="$in2">
+                        <static>2</static>
+                    </var>
+                    <var name="$output1">
+                        <static>60</static>
+                    </var>
+                    <var name="$output2">
+                        <static>110</static>
+                    </var>
+                    <pg-code>
+                        $in1 = Real(1);
+                        $in2 = Real(2);
+                        $output1 = Real(60);
+                        $output2 = Real(110);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Let <m>f(x) = 50x + 10</m>.  Evaluate the expressions below:</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>What do you get when you put <m>1</m> into the formula?</p>
+                            <p><m>f(1) = 50 \big(</m><var name="$in1" width="2" /><m>\big)+ 10</m></p>
+                            <p><m>f(1) = </m> <var name="$output1" width="5" /></p>
+                        </li>
+                        <li>
+                            <p>What do you get when you put <m>2</m> into the formula?</p>
+                            <p><m>f(2) = 50\big(</m><var name="$in2" width="2" /><m>\big)+ 10</m></p>
+                            <p><m>f(2) = </m> <var name="$output2" width="5" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+            </webwork>
+        </exercise>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$output1">
+                        <static>0</static>
+                    </var>
+                    <var name="$output2">
+                        <static>0</static>
+                    </var>
+                    <var name="$output3">
+                        <static>0</static>
+                    </var>
+                    <var name="$output4">
+                        <static>-1.54</static>
+                    </var>
+
+                    <pg-code>
+                        $output1 = Real(0);
+                        $output2 = Real(0);
+                        $output3 = Real(0);
+                        $output4 = Real(-1.54);
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>The graph the the function <m>y = f(x)</m> is shown below.</p>
+                    <p>To evaluate the function, drag the cross-hair (green) on the horizontal axis to the desired input value. Then measure the height of the graph from the vertical axis (red) to find the output value.</p>
+
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/AKbM4T7B/width/431/height/415/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="415px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+                    <p><ol label="a">
+                        <li>
+                            <p>Evaluate <m>f(-4)</m></p>
+                            <p><m>f(-4) = </m> <var name="$output1" width="5" /></p>
+                        </li>
+                        <li>
+                            <p>Evaluate <m>f(-1)</m></p>
+                            <p><m>f(-1) = </m> <var name="$output2" width="5" /></p>
+                        </li>
+                        <li>
+                            <p>Evaluate <m>f(0)</m></p>
+                            <p><m>f(0) = </m> <var name="$output4" width="5" /></p>
+                        </li>
+                        <li>
+                            <p>Evaluate <m>f(2)</m></p>
+                            <p><m>f(2) = </m> <var name="$output3" width="5" /></p>
+                        </li>
+                    </ol></p>
+                    <p>Notice how each input yields only one result (there is only one answer for each input) but some inputs have the same output value.  It's no coincidence: the graph passes the vertical line test!</p>
+                </statement>
+            </webwork>
+        </exercise>
+    </subsection>
+
+    <subsection>
+        <title>The Secret to Evaluating Anything (The <q>Blank</q> Method)</title>
+
+        <p>Function notation is a way to tell the reader information about the input and how to use it to generate an output. Again, the way it works is: <me>f(\text{input})=\text{output}</me> Whatever is in the parenthesis is the input.</p>
+
+        <p>The input can be a simple number like <m>2</m> or <m>-4</m>, or it can be a complicated expression like <m>x^2 - x</m>.</p>
+
+        <p>Your success in this course is almost entirely dependent on your understanding of this simple concept: <em>The <q>blank</q> method.</em></p>
+
+        <p>When you see a formula like <m>f(x) = x^2 - x</m>. It means this:<me>f(\text{blank}) = (\text{blank})^2 - (\text{blank})</me></p>
+
+        <p>At least, that's the way formulas really work.</p>
+
+        <p>Using this function as an example, <m>f(5)</m> means <q>The formula with a <m>5</m> in it</q>. Literally, it means place number <m>5</m> in all the blanks.</p>
+
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$five">
+                        <static>5</static>
+                    </var>
+                    <var name="$out">
+                        <static>20</static>
+                    </var>
+                    <var name="$M">
+                        <static>M</static>
+                    </var>
+                    <var name="$Mexp">
+                        <static>M^2-M</static>
+                    </var>
+                    <var name="$Q">
+                        <static>Q</static>
+                    </var>
+                    <var name="$Qexp">
+                        <static>Q^2-Q</static>
+                    </var>
+                    <var name="$P">
+                        <static>x-12</static>
+                    </var>
+                    <var name="$expression">
+                        <static>(x-12)^2-(x-12)</static>
+                    </var>
+                    <pg-code>
+                        $five = Real(5);
+                        $out = Real(20);
+                        Context()->variables->are(M=>'Real', Q=>'Real', x=>'Real');
+                        $M=Compute("M");
+                        $Q=Compute("Q");
+                        $P=Compute("x-12");
+                        $Mexp=Compute("M**2-M");
+                        $Qexp=Compute("Q**2-Q");
+                        $expression=Compute("(x-12)**2-(x-12)");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Use the function <m>f(x) = x^2 - x</m> to evaluate <m>f(5)</m>.</p>
+                    <p>If you need to write an exponent like <m>x^{2}</m> use your keyboard and type <m>x \text{^} 2</m> the symbol ^ is above the number <m>6</m> on your keyboard.</p>
+                    <p><ol label="a">
+                        <li>
+                            <p>Replace all the <m>x</m>'s in the formula with parentheses to create blank spaces. As in</p>
+                            <p><m>f(\text{blank}) = (\text{blank})^2 - (\text{blank})</m>.</p>
+                        </li>
+                        <li>
+                            <p>Identify the input.</p>
+                            <p>In this case the given input is <var name="$five" width="2" /></p>
+                        </li>
+                        <li>
+                        <p>Place the input into all the blank spaces.</p>
+                            <p><m>f(5) = \big(</m> <var name="$five" width="2" /><m>\big)^2 - \big(</m> <var name="$five" width="2" /><m>\big)</m></p>
+                        </li>
+                        <li>
+                           <p>Evaluate the function.</p>
+                            <p><m>f(5) = </m><var name="$out" width="2" /></p>
+                        </li>
+                    </ol></p>
+                    <p>Using the same method, evaluate each of the following expressions (do not simplify):</p>
+                    <p>Keep in mind that mathematics is case-sensitive, so the variable <m>M</m> is completely different than <m>m</m>. Be careful to distinguish between lower case and capital variables!</p>
+                    <p><ol label="a">
+                        <li>
+                            <p><m>f(M) = \big(</m> <var name="$M" width="2" /><m>\big)^2 - \big(</m> <var name="$M" width="2" /><m>\big)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(M) = </m> <var name="$Mexp" width="5" /></p>
+                        </li>
+                        <li>
+                            <p><m>f(Q) = \big(</m> <var name="$Q" width="2" /><m>\big)^2 - \big(</m> <var name="$Q" width="2" /><m>\big)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(Q) = </m> <var name="$Qexp" width="5" /></p>
+                        </li>
+                        <li>
+                            <p><m>f(x-12) = \big(</m> <var name="$P" width="2" /><m>\big)^2 - \big(</m> <var name="$P" width="2" /><m>\big)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(x-12) = </m> <var name="$expression" width="20" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <hint>
+                  <p>No matter what the input is, the function <m>f</m> will do the same thing: It will square the output, and then subtract from that the original output.</p>
+                  <p>For example: <m>f(H) = H^2 - H</m></p>
+                </hint>
+                <solution>
+                  <p><ol label="a">
+                    <li><p><m>f(M) = M^2 - M</m></p></li>
+                    <li><p><m>f(Q) = Q^2 - Q</m></p></li>
+                    <li><p><m>f(x - 12) = (x - 12)^2 - (x - 12)</m></p>
+                    <p>Simplifying this would give: <me>x^2-12x+156</me></p></li>
+                  </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+    </subsection>
+
+    <subsection>
+        <title>Solve</title>
+        <exercise>
+          <webwork>
+              <title>Solving Graphically</title>
+              <setup>
+                  <var name="$numZeros">
+                      <static>3</static>
+                  </var>
+                  <var name="$zeros">
+                      <static>-4,-1,2</static>
+                  </var>
+                  <var name="$numSolutions1">
+                      <static>2</static>
+                  </var>
+                  <var name="$solutions">
+                      <static>-2.7,2.46</static>
+                  </var>
+                  <var name="$numSolutions2">
+                      <static>1</static>
+                  </var>
+                  <var name="$solutions2">
+                      <static>2.64</static>
+                  </var>
+                  <var name="$maxNumSolutions">
+                      <static>3</static>
+                  </var>
+                   <var name="$minNumSolutions">
+                      <static>1</static>
+                  </var>
+
+
+                  <pg-code>
+                      $numZeros = 3;
+                      $zeros = List(-4,-1,2);
+                      $numSolutions1 = 2;
+                      $solutions = List(-2.7,2.46);
+                      $numSolutions2 = 1;
+                      $solutions2 = List(2.64);
+                      $maxNumSolutions = 3;
+                      $minNumSolutions = 1;
+
+                  </pg-code>
+              </setup>
+
+              <stage>
+                  <statement>
+                      <p>On a graph, the output is the height of the graph.</p>
+                      <p>Therefore, <q>Solve <m>f(x) = 0</m></q> on a graph means, <q>Find all the input values on the <m>x</m>-axis where the graph reaches a height of <m>y = 0</m></q></p>
+                      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/CPtFHaPP/width/431/height/355/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="355px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                      <p>Drag the point on the vertical axis (black cross symbol) to the desired output value.  The graph will show all the places (red points) where the function reaches the chosen output value.</p>
+                      <p>The solutions (if any) are shown on the horizontal axis in green.</p>
+                      <p><ol label="a">
+                        <li><p>To solve the equation <m>f(x) = 0</m> graphically, move the height of the horizontal line to <m>y = 0</m></p>
+                        <p>The horizontal line intersects with <m>f(x)</m> <var name="$numZeros" width="5" /> times.</p></li>
+                        <li><p>The solutions to <m>f(x) = 0</m> are <m>x=</m><var name="$zeros" width="15" />. (Use commas.)</p></li>
+                      </ol></p>
+                      <p>Notice that all the <m>y</m>-values are <m>0</m>, but the <m>x</m>-values are different.  The <m>x</m>-values are the <em>solutions to the equation <m>f(x) = 0</m></em>.</p>
+                  </statement>
+              </stage>
+
+              <stage>
+                <statement>
+                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/CPtFHaPP/width/431/height/355/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="355px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                  <p>Move the horizontal line to <m>y = 2</m>. Use this line to solve the equation <m>f(x) = 2</m></p>
+                  <p>How many solutions does the equation have? If there are none, type <q>none</q>.</p>
+                  <p>The equation has <var name="$numSolutions1" width="5" /> solution(s).</p>
+                  <p>Use the <m>x</m>-coordinates of the points on the horizontal axis to determine all the solutions to the equation.</p>
+                  <p>The solution(s) to <m>f(x) = 2</m> is/are: <m>x=</m><var name="$solutions" width="15" />. (Use commas to separate multiple answers.)</p>
+                </statement>
+              </stage>
+
+              <stage>
+                <statement>
+                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/CPtFHaPP/width/431/height/355/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="355px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                  <p>Adjust the height of the horizontal line to solve <m>f(x) = 3</m></p>
+                  <p>How many solutions does this equation have?</p>
+                  <p>There is/are <var name="$numSolutions2" width="5" /> solution(s).</p>
+                  <p>The solution(s) to <m>f(x) = 3</m> is/are: <m>x=</m><var name="$solutions2" width="15" />. (Use commas to separate multiple answers.)</p>
+                </statement>
+              </stage>
+
+              <stage>
+                <statement>
+                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/CPtFHaPP/width/431/height/355/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="355px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+                  <p>Suppose the value of <m>y</m> could be anything.  Using the graph and the adjustable horizontal line, what is the maximum number of possible solutions for the equation <m>f(x) = y</m>?</p>
+                  <p>The maximum number of solutions is <var name="$maxNumSolutions" width="5" /> </p>
+                  <p>What is the minimum number of possible solutions for the equation?</p>
+                  <p>The minimum number of solutions is <var name="$minNumSolutions" width="5" /> </p>
+                </statement>
+              </stage>
+          </webwork>
+        </exercise>
+        <blockquote>
+            <p>What input makes the output equal to <m>0</m>?</p>
+        </blockquote>
+        <blockquote>
+            <p>Solve <m>f(x) = 0</m></p>
+        </blockquote>
+        <blockquote>
+            <p>Solve <m>f(x) = 0</m></p>
+        </blockquote>
+        <blockquote>
+          <p>Solve the equation <m>f(x) = K</m></p>
+        </blockquote>
+        <exercise>
+            <webwork>
+                <setup>
+                    <var name="$answer1">
+                        <static>1.5</static>
+                    </var>
+                    <var name="$answer2">
+                        <static>0</static>
+                    </var>
+                    <var name="$answer3">
+                        <static>1</static>
+                    </var>
+
+                    <pg-code>
+                        $b = 0.55/ln(2) - 0.55*ln(0.5/ln(2)) / ln(2);
+                        $answer1 = Real(1.5);
+                        $evaluator1 = $answer1->cmp(checker => sub {
+                           my ($correct,$student,$ansHash) = @_;
+                           return (($student &gt; $b)?1:0);
+                         });
+                        $answer2 = Real(0);
+                        $evaluator2 = $answer2->cmp(checker => sub {
+                           my ($correct,$student,$ansHash) = @_;
+                           return (($student &lt; $b)?1:0);
+                         });
+                         $answer3 = Real(1);
+                        $evaluator3 = $answer3->cmp(checker => sub {
+                           my ($correct,$student,$ansHash) = @_;
+                           return (($student = $b)?1:0);
+                         });
+                    </pg-code>
+                </setup>
+
+                <statement>
+                    <p>The graphs of two functions are shown. One is linear: <me>y = 0.55x - 0.3</me> and the other is called <em>exponential</em>: <me>f(x)=2^x + 0.025</me> Solving the equation <me>2^x + 0.025 = 0.55x -0.3</me> would not be possible using our current algebra techniques. But in English, solving the equation means to find where the functions intersect. That we can do quite easily using graphs.</p>
+
+                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rZySMTyJ/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.");@]*</p>
+
+                    <p><ol label="a">
+                        <li>
+                            <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025 = 0.55x + b</me>has two solutions.</p>
+                            <p>If <m>b = </m><var name="$answer1" evaluator="$evaluator1" width="3" /> then the equation would have two solutions.</p>
+                        </li>
+                        <li>
+                            <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025= 0.55x + b</me>has no solutions.</p>
+                            <p>If <m>b = </m><var name="$answer2" evaluator="$evaluator2" width="3" /> then the equation would have no solutions.</p>
+                        </li>
+                        <li>
+                            <p>Find a value for <m>b</m> such that the equation<me>2^x + 0.025= 0.55x + b</me>has only one solution.</p>
+                            <p>If <m>b = </m><var name="$answer3" evaluator="$evaluator3" width="3" /> then the equation would have no solutions.</p>
+                        </li>
+                    </ol></p>
+                </statement>
+            </webwork>
+        </exercise>
+        <example>
+          <statement>
+            <p>Consider the function <m>h(x) = 4x + 10</m>, answering the questions that follow.</p>
+            <p><ol label="a">
+              <li><p>Solve <m>h(x) = 0</m></p></li>
+              <li><p>Solve <m>h(x) = 10</m></p></li>
+              <li><p>Evaluate <m>h(0)</m></p></li>
+            </ol></p>
+          </statement>
+          <answer>
+            <p>We <em>solve</em> the equation <m>h(x) = 0</m> by setting the output of the function <m>h</m> equal to zero. This is written:<me>4x + 10 = 0</me></p>
+            <p>Solving this equation gives the solution: <m>x = -2.5</m></p>
+          </answer>
+          <answer>
+            <p>Solving <m>h(x) = 10</m> works similarly:<md>
+              <mrow>4x + 10 \amp= 10</mrow>
+              <mrow>4x \amp= 0</mrow>
+              <mrow>x \amp= 0</mrow></md>
+            </p>
+          </answer>
+          <answer>
+            <p><m>h(0) = 4(0) + 10 = 0</m></p>
+            <p>Notice that we just solved for this value in the previous problem. That is, we already found that <m>x = 0</m> is the input that gives <m>10</m> as the output.</p>
+          </answer>    
+        </example>
+        <exercise>
+          <webwork>
+            <setup>
+              <var name="$m"><static>5</static></var>
+              <var name="$b"><static>6</static></var>
+              <var name="$out1"><static>1</static></var>
+              <var name="$out2"><static>-8</static></var>
+              <var name="$in"><static>2</static></var>
+              <var name="$soln1"><static>-1</static></var>
+              <var name="$soln2"><static>-14/8</static></var>
+              <var name="$soln3"><static>16</static></var>
+              <pg-code>
+                Context('Numeric');
+                $m = random(2,6,1);
+                do{$b=random(2,6,1)} until($m!=$b);
+                $out1 = random(0,10,1);
+                $out2 = random(-10,-1,1);
+                $in = random(0,10,1);
+                $soln1 = Compute("($out1-$b)/$m");
+                $soln2 = Compute("($out2-$b)/$m");
+                $soln3 = Compute("$m*$in+$b");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>For the function <m>f(x) = <var name="$m" />x + <var name="$b" /></m>, answer the following questions.</p>
+              <p><ol label="a">
+                <li><p>Solve <m>f(x) = <var name="$out1" /></m></p>
+                <p>Answer:  <m>x = </m><var name="$soln1" width="10" /></p></li>
+                <li><p>Solve <m>f(x) = <var name="$out2" /></m></p>
+                <p>Answer:  <m>x = </m><var name="$soln2" width="10" /></p></li>
+                <li><p>Evaluate <m>f(<var name="$in" />)</m></p>
+                <p>Answer:  <var name="$soln3" width="10" /></p></li>
+              </ol></p>
+            </statement>
+            <solution>
+              <p><ol label="a">
+                <li><p><md>
+                  <mrow><var name="$m" />x + <var name="$b" /> \amp= <var name="$out1" /></mrow>
+                  <mrow>\amp\vdots</mrow>
+                  <mrow>x \amp= <var name="$soln1" /></mrow></md></p>
+                </li>
+                <li><p><md>
+                  <mrow><var name="$m" />x + <var name="$b" /> \amp= <var name="$out2" /></mrow>
+                  <mrow>\amp\vdots</mrow>
+                  <mrow>x \amp= <var name="$soln2" /></mrow></md></p>
+                </li>
+                <li><p><md>
+                  <mrow>f\left(<var name="$in" />\right) \amp= <var name="$m" />\left(<var name="$in" />\right) + <var name="$b" /></mrow>
+                  <mrow> \amp= <var name="$soln3" /></mrow></md></p>
+                </li>
+              </ol></p>
+            </solution>
+          </webwork>
+        </exercise>
+        <p>Often equations are too difficult or even impossible to solve using algebra. But if you can graph the equations on a graphing calculator or on the web, you can solve graphically to get at least approximate solutions.</p>
+    </subsection>
+</section>
