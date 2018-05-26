@@ -127,12 +127,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$grans1">
-            <static>(x-3)^2 + 4</static>
-          </var>
-          <var name="$grans2">
-            <static>(x-1)^2 + 3</static>
-          </var>
           <pg-code>
             $gr=init_graph(-3,-3,3,3,
             axes=>[0,0],
@@ -559,9 +553,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$formula">
-            <static>1/(0.625x)</static>
-          </var>
           <pg-code>
             $gr=init_graph(-1,-1,10,2,
             axes=>[0,0],

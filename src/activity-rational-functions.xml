@@ -163,12 +163,6 @@
         </introduction>
         <webwork>
           <setup>
-            <var name="$copper0">
-              <static>0</static>
-            </var>
-            <var name="$copper50">
-              <static>50</static>
-            </var>
             <pg-code>
               $copper0 = Real(0);
               $copper50 = Real(50);
@@ -212,15 +206,6 @@
         </introduction>
         <webwork>
           <setup>
-            <var name="$f">
-              <static>x</static>
-            </var>
-            <var name="$g">
-              <static>x+50</static>
-            </var>
-            <var name="$h">
-              <static>x/(x+50)</static>
-            </var>
             <pg-code>
   <!-- Put this at the top of the problem setup -->
   Context("Numeric");

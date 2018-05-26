@@ -51,15 +51,6 @@
             </introduction>
             <webwork>
                 <setup>
-                    <var name="$answer1">
-                        <static>-2\lt x\leq 1</static>
-                    </var>
-                    <var name="$answer2">
-                        <static>x\lt -2 or x\geq 1</static>
-                    </var>
-                    <var name="$answer3">
-                        <static>x\leq -2 or x\geq 1</static>
-                    </var>
 
                     <pg-code>
                         Context("Inequalities");
@@ -95,15 +86,6 @@
         <exercise>
           <webwork>
             <setup>
-                <var name="$in[0]">
-                  <static>-2\lt x\leq 1</static>
-                </var>
-                <var name="$in[1]">
-                  <static>x\lt -2 or x\geq 1</static>
-                </var>
-                <var name="$in[2]">
-                  <static>x\leq -2 or x\geq 1</static>
-                </var>
               <pg-code>
                         @ticks = ();
                         for my $j (-5..5) {push(@ticks,$j);};
@@ -235,18 +217,6 @@
             <title>Increasing or Decreasing</title>
             <webwork>
                 <setup>
-                    <var name="$inc1">
-                        <static>0\leq x \leq 2</static>
-                    </var>
-                    <var name="$inc2">
-                        <static>4\leq x \leq 6</static>
-                    </var>
-                    <var name="$dec1">
-                        <static>2\leq x \leq 4</static>
-                    </var>
-                    <var name="$dec2">
-                        <static>6\leq x \leq 8</static>
-                    </var>
                     <pg-code>
                       $Increasing = RadioButtons(["as input increases, output increases.","as input increases, output decreases."],0);
                       $Decreasing = RadioButtons(["as input increases, output increases.","as input increases, output decreases."],1);
@@ -314,33 +284,6 @@
         <exercise xml:id="exercise-increasing-decreasing">
             <webwork>
                 <setup>
-                    <var name="$pos">
-                        <static>11\lt t\lt 19</static>
-                    </var>
-                    <var name="$neg1">
-                        <static>0\lt t\lt 11</static>
-                    </var>
-                    <var name="$neg2">
-                        <static>19\lt t\lt 24</static>
-                    </var>
-                    <var name="$inc">
-                        <static>3\leq t\leq 15</static>
-                    </var>
-                    <var name="$dec1">
-                        <static>0\leq t\leq 3</static>
-                    </var>
-                    <var name="$dec2">
-                        <static>15\leq t\leq 24</static>
-                    </var>
-                    <var name="$cUp">
-                        <static>0\leq t\leq 9</static>
-                    </var>
-                    <var name="$cUp2">
-                        <static>21\leq t\leq 24</static>
-                    </var>
-                    <var name="$cDwn">
-                        <static>9\leq t\leq 21</static>
-                    </var>
                     <pg-code>
                         Context("Inequalities");
                         Context()->variables->are(t => "Real");

@@ -41,63 +41,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$a[0]">
-                        <static>2</static>
-                    </var>
-                    <var name="$bth[0]">
-                        <static>\text{third}</static>
-                    </var>
-                    <var name="$answer[0]" category="number">
-                        <static>8</static>
-                    </var>
-                    <var name="$a[1]">
-                        <static>2</static>
-                    </var>
-                    <var name="$b[1]" category="number">
-                        <static>3</static>
-                    </var>
-                    <var name="$c[1]">
-                        <static>8</static>
-                    </var>
-                    <var name="$a[2]">
-                        <static>2</static>
-                    </var>
-                    <var name="$minusb[2]" category="number">
-                        <static>-3</static>
-                    </var>
-                    <var name="$c[2]">
-                        <static>8</static>
-                    </var>
-                    <var name="$a[3]">
-                        <static>2</static>
-                    </var>
-                    <var name="$radical[3]">
-                        <static>\sqrt{2}</static>
-                    </var>
-                    <var name="$answer[3]" category="number">
-                        <static>\frac{1}{2}</static>
-                    </var>
-                    <var name="$a[4]">
-                        <static>2</static>
-                    </var>
-                    <var name="$radical[4]">
-                        <static>\sqrt{2}</static>
-                    </var>
-                    <var name="$answer[4]" category="number">
-                        <static>-\frac{1}{2}</static>
-                    </var>
-                    <var name="$a[5]">
-                        <static>2</static>
-                    </var>
-                    <var name="$answer[5]" category="number">
-                        <static>0</static>
-                    </var>
-                    <var name="$a[6]">
-                        <static>2</static>
-                    </var>
-                    <var name="$answer[6]" category="number">
-                        <static>\text{DNE}</static>
-                    </var>
                     <pg-code>
                         $a[0]=random(2,4,1);
                         do{$b[0]=random(3,5,1)}until($a[0]!=$b[0] and $a[0]**$b[0]&lt;100);
@@ -223,24 +166,6 @@
             <title>Powers of <m>10</m></title>
             <webwork seed="1">
                 <setup>
-                    <var name="$a">
-                        <static>10</static>
-                    </var>
-                    <var name="$tabout[0]">
-                        <static>0.01</static>
-                    </var>
-                    <var name="$tabout[1]">
-                        <static>0.1</static>
-                    </var>
-                    <var name="$tabout[2]">
-                        <static>1</static>
-                    </var>
-                    <var name="$tabout[3]">
-                        <static>10</static>
-                    </var>
-                    <var name="$tabout[4]">
-                        <static>100</static>
-                    </var>
                     <pg-code>
                         $a=list_random(2,4,5,10,20);
                         if($envir{problemSeed}==1){$a=10;};
@@ -325,39 +250,6 @@
             <title>Guess-and-Check</title>
             <webwork seed="1">
                 <setup>
-                    <var name="$a">
-                        <static>10</static>
-                    </var>
-                    <var name="$b">
-                        <static>36</static>
-                    </var>
-                    <var name="$tabout[0]">
-                        <static>0.01</static>
-                    </var>
-                    <var name="$tabout[1]">
-                        <static>0.1</static>
-                    </var>
-                    <var name="$tabout[2]">
-                        <static>1</static>
-                    </var>
-                    <var name="$tabout[3]">
-                        <static>10</static>
-                    </var>
-                    <var name="$tabout[4]">
-                        <static>100</static>
-                    </var>
-                    <var name="$low">
-                        <static>10</static>
-                    </var>
-                    <var name="$high">
-                        <static>100</static>
-                    </var>
-                    <var name="$lowx">
-                        <static>1</static>
-                    </var>
-                    <var name="$highx">
-                        <static>2</static>
-                    </var>
                     <pg-code>
                         $a=list_random(2,4,5,10,20);
                         $b=int($a**random(-1.7,1.8,0.5));
@@ -432,21 +324,6 @@
             </introduction>
             <webwork seed="1">
                 <setup>
-                    <var name="$a">
-                        <static>10</static>
-                    </var>
-                    <var name="$b">
-                        <static>36</static>
-                    </var>
-                    <var name="$answer">
-                        <static>1.556</static>
-                    </var>
-                    <var name="$answer2">
-                        <static>-0.222</static>
-                    </var>
-                    <var name="$c">
-                        <static>0.6</static>
-                    </var>
                     <pg-code>
                         $a=10;
                         $b=list_random(18,25,32,49,56,67,73,89);
@@ -532,12 +409,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$b">
-                        <static>2</static>
-                    </var>
-                    <var name="$c">
-                        <static>100</static>
-                    </var>
                     <pg-code>
                         Context("LimitedNumeric");
                         $b=random(1,4,1);
@@ -567,33 +438,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$b[0]">
-                        <static>2</static>
-                    </var>
-                    <var name="$c[0]">
-                        <static>10</static>
-                    </var>
-                    <var name="$b[1]">
-                        <static>3</static>
-                    </var>
-                    <var name="$c[1]">
-                        <static>10</static>
-                    </var>
-                    <var name="$b[2]">
-                        <static>7</static>
-                    </var>
-                    <var name="$c[2]">
-                        <static>10</static>
-                    </var>
-                    <var name="$b[3]">
-                        <static>10</static>
-                    </var>
-                    <var name="$c[3]">
-                        <static>7</static>
-                    </var>
-                    <var name="$log">
-                        <static>\log</static>
-                    </var>
                     <pg-code>
                         do{@b=map{$_+2}NchooseK(7,4);
                         @c=map{floor($_**random(1.9,6.5,0.2))}@b;
@@ -647,30 +491,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$c[0]">
-                        <static>23</static>
-                    </var>
-                    <var name="$c[1]">
-                        <static>42</static>
-                    </var>
-                    <var name="$c[2]">
-                        <static>17</static>
-                    </var>
-                    <var name="$c[3]">
-                        <static>100</static>
-                    </var>
-                    <var name="$answer[0]">
-                        <static>\log(23)</static>
-                    </var>
-                    <var name="$answer[1]">
-                        <static>\log(42)</static>
-                    </var>
-                    <var name="$answer[2]">
-                        <static>\ln(17)</static>
-                    </var>
-                    <var name="$answer[3]">
-                        <static>\ln(100)</static>
-                    </var>
                     <pg-code>
                         Parser::Number::NoDecimals();
                         @c=map{$_+11}NchooseK(88,4);
@@ -725,18 +545,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$b[0]">
-                        <static>3</static>
-                    </var>
-                    <var name="$c[0]">
-                        <static>9</static>
-                    </var>
-                    <var name="$b[1]">
-                        <static>5</static>
-                    </var>
-                    <var name="$c[1]">
-                        <static>\frac{1}{25}</static>
-                    </var>
                     <pg-code>
                         @b=map{$_+2}NchooseK(7,2);
                         $c[0]=$b[0]**random(2,4,1);
@@ -776,51 +584,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$c[0]">
-                        <static>120</static>
-                    </var>
-                    <var name="$c[1]">
-                        <static>15</static>
-                    </var>
-                    <var name="$c[2]">
-                        <static>18</static>
-                    </var>
-                    <var name="$c[3]">
-                        <static>0.7</static>
-                    </var>
-                    <var name="$b[1]">
-                        <static>5</static>
-                    </var>
-                    <var name="$b[2]">
-                        <static>2</static>
-                    </var>
-                    <var name="$b[3]">
-                        <static>2</static>
-                    </var>
-                    <var name="$low[0]">
-                        <static>2</static>
-                    </var>
-                    <var name="$low[1]">
-                        <static>1</static>
-                    </var>
-                    <var name="$low[2]">
-                        <static>4</static>
-                    </var>
-                    <var name="$low[3]">
-                        <static>-1</static>
-                    </var>
-                    <var name="$high[0]">
-                        <static>3</static>
-                    </var>
-                    <var name="$high[1]">
-                        <static>2</static>
-                    </var>
-                    <var name="$high[2]">
-                        <static>5</static>
-                    </var>
-                    <var name="$high[3]">
-                        <static>0</static>
-                    </var>
                     <pg-code>
                         $b[0]=10;
                         $c[0]=floor(10**random(1.5,3.5,0.2));
@@ -878,12 +641,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$c">
-                        <static>-100</static>
-                    </var>
-                    <var name="$b">
-                        <static>10</static>
-                    </var>
                     <pg-code>
                         $b=10;
                         $c=-$b**random(-2,4,1);
@@ -908,12 +665,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$c">
-                        <static>0</static>
-                    </var>
-                    <var name="$b">
-                        <static>10</static>
-                    </var>
                     <pg-code>
                         $b=10;
                         $c=-$b**random(-2,4,1);
@@ -939,9 +690,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$domain">
-                        <static>(0,\infty)</static>
-                    </var>
                     <pg-code>
                         Context("InequalitySetBuilder");
                         $domain=Compute("(0,inf)");
@@ -1183,24 +931,6 @@
             <exercise>
                 <webwork seed="1">
                     <setup>
-                        <var name="$b">
-                            <static>b</static>
-                        </var>
-                        <var name="$x">
-                            <static>x</static>
-                        </var>
-                        <var name="$y">
-                            <static>y</static>
-                        </var>
-                        <var name="$exp1">
-                            <static>2^3=x</static>
-                        </var>
-                        <var name="$exp2">
-                            <static>2^-1=x</static>
-                        </var>
-                        <var name="$exp3">
-                            <static>2^0=x</static>
-                        </var>
                         <pg-code>
                             Context()->variables->are(x=>'Real',y=>'Real',b=>'Real');
                             $b=Formula("b");
@@ -1241,30 +971,6 @@
             <exercise>
                 <webwork seed="1">
                     <setup>
-                        <var name="$b">
-                            <static>2</static>
-                        </var>
-                        <var name="$x">
-                            <static>3</static>
-                        </var>
-                        <var name="$y">
-                            <static>4</static>
-                        </var>
-                        <var name="$z">
-                            <static>7</static>
-                        </var>
-                        <var name="$bx">
-                            <static>8</static>
-                        </var>
-                        <var name="$by">
-                            <static>16</static>
-                        </var>
-                        <var name="$bz">
-                            <static>128</static>
-                        </var>
-                        <var name="$N">
-                            <static>2^7</static>
-                        </var>
                         <pg-code>
                             Context()->operators->set(
                                 '**' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
@@ -1316,9 +1022,6 @@
             <exercise>
                 <webwork seed="1">
                     <setup>
-                        <var name="$seven">
-                            <static>7</static>
-                        </var>
                         <pg-code>
                             $seven=7;
                         </pg-code>
@@ -1380,15 +1083,6 @@
             <exercise>
                 <webwork>
                     <setup>
-                        <var name="$answer">
-                            <static>4\log(8)</static>
-                        </var>
-                        <var name="$c">
-                            <static>4</static>
-                        </var>
-                        <var name="$N">
-                            <static>x</static>
-                        </var>
                         <pg-code>
                             Context("LimitedRadical");
                             $answer=Formula("4*log(8)");
@@ -1422,18 +1116,6 @@
             <exercise>
                 <webwork>
                     <setup>
-                        <var name="$prod">
-                            <static>log(A*B^-1)</static>
-                        </var>
-                        <var name="$term1">
-                            <static>log(A)</static>
-                        </var>
-                        <var name="$term2">
-                            <static>log(B^-1)</static>
-                        </var>
-                        <var name="$term3">
-                            <static>-log(B)</static>
-                        </var>
                         <pg-code>
                             Context()->variables->add(A=>'Real', B=>'Real');
                             $prod=Compute("log(A*B^-1)");

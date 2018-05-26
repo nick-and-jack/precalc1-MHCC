@@ -130,15 +130,6 @@
             <exercise>
               <webwork>
                 <setup>
-                  <var name="$dom1">
-                      <static>2&lt;=x&lt;6</static>
-                  </var>
-                  <var name="$rng1">
-                      <static>1.5&lt;=y&lt;3.5</static>
-                  </var>
-                  <var name="$rng2">
-                      <static>3&lt;=y&lt;5</static>
-                  </var>
 
                   <pg-code>
                     Context("Inequalities");
@@ -229,18 +220,6 @@
           <exercise>
             <webwork>
               <setup>
-                  <var name="$blueLine">
-                     <static>y=0.5(x+3)-2</static>
-                  </var>
-                  <var name="$greenLine">
-                     <static>y=3</static>
-                  </var>
-                  <var name="$answer1">
-                      <static>-5&lt;=x&lt;0</static>
-                  </var>
-                  <var name="$answer2">
-                      <static>1&lt;=x&lt;=4</static>
-                  </var>
 
                   <pg-code>
                       Context()->variables->are(x=>'Real',y=>'Real');

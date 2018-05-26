@@ -94,18 +94,6 @@
 
             <webwork>
                 <setup>
-                    <var name="$Vchange">
-                        <static>32</static>
-                    </var>
-                    <var name="$Hchange">
-                        <static>2</static>
-                    </var>
-                    <var name="$Rate">
-                        <static>16</static>
-                    </var>
-                    <var name="$difference">
-                        <static>f(5)-f(2)</static>
-                    </var>
 
                     <!-- Within parserFunction below the formula has nothing to do with the problem.  It's only there to be function to generate values for us -->
                     <pg-code>
@@ -172,9 +160,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$chngDist">
-                        <static>19.5</static>
-                    </var>
                     <pg-code>
                         $chngDist = Real(19.5);
                         $meaning = PopUp(["?", "Change in hours since 8 a.m.", "Delta t", "Delta times t", "There is no meaning to this expression"], 1);
@@ -246,18 +231,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$f7">
-                        <static>f(7)</static>
-                    </var>
-                    <var name="$f2">
-                        <static>f(2)</static>
-                    </var>
-                    <var name="$in1">
-                        <static>7</static>
-                    </var>
-                    <var name="$in2">
-                        <static>2</static>
-                    </var>
                     <pg-code>
                       $in1=Real(7);
                       $in2=Real(2);
@@ -320,39 +293,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$slope1">
-                        <static>-1</static>
-                    </var>
-                    <var name="$slope2">
-                        <static>2</static>
-                    </var>
-                    <var name="$f7">
-                        <static>0</static>
-                    </var>
-                    <var name="$f2">
-                        <static>5</static>
-                    </var>
-                    <var name="$fminus8">
-                        <static>-15</static>
-                    </var>
-                    <var name="$delf1">
-                      <static>-5</static>
-                    </var>
-                    <var name="$delf2">
-                      <static>20</static>
-                    </var>
-                    <var name="$delx1">
-                      <static>5</static>
-                    </var>
-                    <var name="$delx2">
-                      <static>10</static>
-                    </var>
-                    <var name="$lineA">
-                       <static>y=-x+7</static>
-                    </var>
-                    <var name="$lineB">
-                       <static>y=2x+1</static>
-                    </var>
                     <pg-code>
                         $slope1 = Real(-1);
                         $slope2 = Real(2);
@@ -448,21 +388,6 @@
             </introduction>
             <webwork>
               <setup>
-                <var name="$intMarch">
-                  <static>3&lt;=m&lt;=12</static>
-                </var>
-                <var name="$intMay">
-                  <static>2.6</static>
-                </var>
-                <var name="$intSep">
-                  <static>-10.3</static>
-                </var>
-                <var name="$intFeb">
-                  <static>0.1</static>
-                </var>
-                <var name="$March">
-                  <static>3</static>
-                </var>
                 <pg-code>
                   $intMay = Real(2.6);
                   $intSep = Real(-10.3);
@@ -515,27 +440,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$deltaInput">
-                        <static>2</static>
-                    </var>
-                    <var name="$deltaF">
-                        <static>-2</static>
-                    </var>
-                    <var name="$aveRate">
-                        <static>-1</static>
-                    </var>
-                    <var name="$aveRate1">
-                        <static>-1</static>
-                    </var>
-                    <var name="$aveRate2">
-                        <static>-1</static>
-                    </var>
-                    <var name="$fzero">
-                        <static>-6</static>
-                    </var>
-                    <var name="$ftwo">
-                        <static>-4</static>
-                    </var>
 
                     <pg-code>
                         $deltaInput = Real(2);
@@ -585,12 +489,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$forward">
-                        <static>-1</static>
-                    </var>
-                    <var name="$backward">
-                        <static>-1</static>
-                    </var>
 
                     <pg-code>
                         $forward = Real(-1);
@@ -617,18 +515,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$delDist">
-                        <static>10</static>
-                    </var>
-                    <var name="$delTime">
-                        <static>0.5</static>
-                    </var>
-                    <var name="$avRate">
-                        <static>20</static>
-                    </var>
-                    <var name="$speed">
-                        <static>45</static>
-                    </var>
                     <pg-code>
                         $delDist = Real(10);
                         $delTime = Real(0.5);

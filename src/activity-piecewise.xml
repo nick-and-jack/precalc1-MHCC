@@ -40,42 +40,6 @@
    <exercise>
      <webwork>
        <setup>
-         <var name="$eval1">
-             <static>6</static>
-         </var>
-         <var name="$eval2">
-             <static>0</static>
-         </var>
-         <var name="$eval3">
-             <static>-4</static>
-         </var>
-         <var name="$eval4">
-             <static>-1</static>
-         </var>
-         <var name="$eval5">
-             <static>1</static>
-         </var>
-         <var name="$eval6">
-             <static>2</static>
-         </var>
-         <var name="$lineA">
-             <static>y=-2x-10</static>
-         </var>
-         <var name="$lineB">
-             <static>y=x-1</static>
-         </var>
-         <var name="$lineC">
-             <static>y=-0.25x+3.5</static>
-         </var>
-         <var name="$answer1">
-           <static>-8&lt;=x&lt;=-3</static>
-         </var>
-         <var name="$answer2">
-             <static>-3&lt;=x&lt;=2</static>
-         </var>
-         <var name="$answer3">
-             <static>2&lt;x&lt;=8</static>
-         </var>
 
          <pg-code>
           $A = RadioButtons(
@@ -175,33 +139,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$answer1">
-           <static>-8 \leq x \leq -3</static>
-          </var>
-          <var name="$answer2">
-             <static>-3 \lt x \leq 2</static>
-          </var>
-          <var name="$answer3">
-             <static>2 \lt x \leq 8</static>
-          </var>
-          <var name="$lineA">
-             <static>y=-2x-10</static>
-         </var>
-         <var name="$lineB">
-             <static>y=x-1</static>
-         </var>
-         <var name="$lineC">
-             <static>y=-0.25x+3.5</static>
-         </var>
-         <var name="$output1">
-             <static>2</static>
-         </var>
-         <var name="$output2">
-             <static>0</static>
-         </var>
-         <var name="$output3">
-             <static>1.75</static>
-         </var>
 
           <pg-code>
             Context()->variables->are(x=>'Real',y=>'Real');
@@ -332,9 +269,6 @@
     <exercise>
       <webwork>
           <setup>
-            <var name="$answer1">
-              <static>1</static>
-            </var>
 
             <pg-code>
               $answer1 = Real(1);

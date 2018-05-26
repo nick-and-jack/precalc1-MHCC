@@ -117,17 +117,6 @@
       <title>Interpret the meaning of the fractional exponent</title>
       <webwork>
         <setup>
-          <var name="$init">
-              <static>1350</static>
-          </var>
-
-          <var name="$b">
-              <static>1.082</static>
-          </var>
-
-          <var name="$per">
-            <static>8.02</static>
-          </var>
 
           <pg-code>
               $init= Real(1350);
@@ -462,9 +451,6 @@
       </introduction>
       <webwork>
           <setup>
-              <var name="$num">
-                  <static>12</static>
-              </var>
               <pg-code>
                   $num= Real(12);
                   $times1 = PopUp(["?", "Investment is compounded continously thoughout the year", "Investment is compounded every 12 years", "Investment is compounded 12 times each year", "Investment grows by 12 percent"], "Investment is compounded 12 times each year");

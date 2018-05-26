@@ -124,15 +124,6 @@
                 <title>Function Notation Application</title>
                 <webwork xml:id="exercise-function-birch-tree">
                     <setup>
-                        <var name="$height">
-                            <static>78</static>
-                        </var>
-                        <var name="$age">
-                            <static>2</static>
-                        </var>
-                        <var name="$height2">
-                            <static>60</static>
-                        </var>
                         <pg-code>
                             $height=Real(78);
                             $units=PopUp(["?","inches","years","none of these"],"inches");
@@ -263,9 +254,6 @@
           <exercise>
               <webwork>
                   <setup>
-                      <var name="$f35">
-                          <static>37</static>
-                      </var>
 
                       <pg-code>
                           $f35 = Real(36.5);
@@ -287,12 +275,6 @@
           <exercise>
                 <webwork>
                     <setup>
-                        <var name="$sol1">
-                            <static>45.2</static>
-                        </var>
-                        <var name="$sol2">
-                            <static>70.4</static>
-                        </var>
 
                         <pg-code>
                             $sol1 = Real(45.2);
@@ -329,12 +311,6 @@
           <exercise>
               <webwork>
                   <setup>
-                      <var name="$avrt1">
-                          <static>1.1</static>
-                      </var>
-                      <var name="$avrt2">
-                          <static>-0.8</static>
-                      </var>
 
                       <pg-code>
                           $avrt1 = Real(1.1);
@@ -389,12 +365,6 @@
               <title>Name the Units of Average Rate of Change</title>
               <webwork>
                 <setup>
-                  <var name="$numer">
-                    <static>psi</static>
-                  </var>
-                  <var name="$denom">
-                    <static>ft</static>
-                  </var>
                   <pg-code>
                     $output = RadioButtons(
                     ["psi","feet"],

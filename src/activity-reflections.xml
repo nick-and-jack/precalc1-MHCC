@@ -19,9 +19,6 @@
     <exercise>
         <webwork xml:id="webwork-interpreting-a-transformation-1">
           <setup>
-            <var name="$withNumbers">
-              <static>42</static>
-            </var>
             <pg-code>
               Context('Numeric');
               $withSymbols = RadioButtons(
@@ -112,29 +109,6 @@
         <exercise>
           <webwork xml:id="writing-algebraic-expressions-for-outputs">
             <setup>
-              <var name="$input1">
-                <static>0</static>
-              </var>
-
-              <var name="$input2">
-                <static>4</static>
-              </var>
-
-              <var name="$output1">
-                <static>3*f(0)</static>
-              </var>
-
-              <var name="$output2">
-                <static>-f(4)</static>
-              </var>
-
-              <var name="$output3">
-                <static>f(-x)</static>
-              </var>
-
-              <var name="$output4">
-                <static>-f(x)</static>
-              </var>
 
               <pg-code>
                 Context('Numeric');
@@ -380,69 +354,6 @@
         <exercise>
           <webwork xml:id="table-example-test">
             <setup>
-              <var name="$a[0]">
-                <static>\text{DNE}</static>
-              </var>
-              <var name="$a[1]">
-                <static>\text{DNE}</static>
-              </var>
-              <var name="$a[2]">
-                <static>\text{DNE}</static>
-              </var>
-              <var name="$a[3]">
-                <static>0</static>
-              </var>
-              <var name="$a[4]">
-                <static>1</static>
-              </var>
-              <var name="$a[5]">
-                <static>2</static>
-              </var>
-              <var name="$a[6]">
-                <static>3</static>
-              </var>
-              <var name="$b[0]">
-                <static>\text{DNE}</static>
-              </var>
-              <var name="$b[1]">
-                <static>\text{DNE}</static>
-              </var>
-              <var name="$b[2]">
-                <static>\text{DNE}</static>
-              </var>
-              <var name="$b[3]">
-                <static>0</static>
-              </var>
-              <var name="$b[4]">
-                <static>-1</static>
-              </var>
-              <var name="$b[5]">
-                <static>-2</static>
-              </var>
-              <var name="$b[6]">
-                <static>-3</static>
-              </var>
-              <var name="$c[0]">
-                <static>3</static>
-              </var>
-              <var name="$c[1]">
-                <static>2</static>
-              </var>
-              <var name="$c[2]">
-                <static>1</static>
-              </var>
-              <var name="$c[3]">
-                <static>0</static>
-              </var>
-              <var name="$c[4]">
-                <static>\text{DNE}</static>
-              </var>
-              <var name="$c[5]">
-                <static>\text{DNE}</static>
-              </var>
-              <var name="$c[6]">
-                <static>\text{DNE}</static>
-              </var>
 
               <pg-code>
                 @x=(-9,-4,-1,0,1,4,9);

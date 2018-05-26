@@ -270,24 +270,6 @@
           <exercise>
             <webwork xml:id="webwork-write-formula-for-graph-horizontal-and-vertical-shifts">
                 <setup>
-                    <var name="$f">
-                        <static>(x-4)^2+1</static>
-                    </var>
-                    <var name="$h1">
-                        <static>4</static>
-                    </var>
-                    <var name="$h2">
-                        <static>-2</static>
-                    </var>
-                    <var name="$k1">
-                        <static>1</static>
-                    </var>
-                    <var name="$k2">
-                        <static>3</static>
-                    </var>
-                    <var name="$g">
-                        <static>(x+2)^2+3</static>
-                    </var>
                     <pg-code>
                         $h1 = Real(random(1, 9, 1));
                         $h2 = Real(random(-9, -1, 1));
@@ -439,9 +421,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$afterT">
-                  <static>t-1</static>
-                </var>
                 <pg-code>
                   Context('Numeric');
                   Context()->variables->are(t=>'Real');
@@ -478,12 +457,6 @@
           <exercise>
             <webwork xml:id="vertical-and-horizontal-transformations-application-projectile-motion-time-delay-and-hight-increase">
               <setup>
-                <var name="$input">
-                  <static>t-3</static>
-                </var>
-                <var name="$outputChange">
-                  <static>12</static>
-                </var>
                 <pg-code>
                   Context()->variables->are(t=>'Real');
                   $input=Compute("t-3");

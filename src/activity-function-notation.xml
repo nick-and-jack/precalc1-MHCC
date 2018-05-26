@@ -54,12 +54,6 @@
             </introduction>
             <webwork>
                 <setup>
-                    <var name="$evaluate">
-                        <static>25</static>
-                    </var>
-                    <var name="$solve">
-                        <static>F=-7.6</static>
-                    </var>
                     <pg-code>
                         for my $i (0,1) {
                             $gr[$i] = init_graph(-60,-60,110,110,axes=>[0,0],grid=>[17,17],size=>[400,400]);
@@ -147,12 +141,6 @@
         <exercise>
             <webwork seed="1">
                 <setup>
-                    <var name="$time">
-                        <static>2</static>
-                    </var>
-                    <var name="$position">
-                        <static>30</static>
-                    </var>
                     <pg-code>
                         $time = Real(random(2,7,1));
                         if($envir{problemSeed}==1){$time=2;};
@@ -298,15 +286,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$distance">
-                        <static>10</static>
-                    </var>
-                    <var name="$start">
-                        <static>8</static>
-                    </var>
-                    <var name="$f2">
-                        <static>f(2)</static>
-                    </var>
                     <pg-code>
                         $distance = Real(10);
                         $units = PopUp(["?", "miles", "hours", "miles per hour", "hours per mile"], "miles");
@@ -347,12 +326,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$squarefeet">
-                        <static>900</static>
-                    </var>
-                    <var name="$HouseValue">
-                        <static>209700</static>
-                    </var>
                     <pg-code>
                         $squarefeet= Real(900);
                         $sqft = PopUp(["?", "square inches", "dollars", "square feet", "cubic yards"], "square feet");
@@ -629,9 +602,6 @@
         <exercise xml:id="exercise-vertical-line-test">
             <webwork>
                 <setup>
-                    <var name="$none">
-                        <static>1</static>
-                    </var>
 
                     <pg-code>
                         $none = Real(1);
@@ -667,9 +637,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$dist">
-                        <static>40</static>
-                    </var>
                     <pg-code>
                         $dist= Real(40);
                         $miles = PopUp(["?", "feet", "miles", "light years", "meters"], "miles");
@@ -726,18 +693,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$in1">
-                        <static>1</static>
-                    </var>
-                    <var name="$in2">
-                        <static>2</static>
-                    </var>
-                    <var name="$output1">
-                        <static>60</static>
-                    </var>
-                    <var name="$output2">
-                        <static>110</static>
-                    </var>
                     <pg-code>
                         $in1 = Real(1);
                         $in2 = Real(2);
@@ -766,18 +721,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$output1">
-                        <static>0</static>
-                    </var>
-                    <var name="$output2">
-                        <static>0</static>
-                    </var>
-                    <var name="$output3">
-                        <static>0</static>
-                    </var>
-                    <var name="$output4">
-                        <static>-1.54</static>
-                    </var>
 
                     <pg-code>
                         $output1 = Real(0);
@@ -835,30 +778,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$five">
-                        <static>5</static>
-                    </var>
-                    <var name="$out">
-                        <static>20</static>
-                    </var>
-                    <var name="$M">
-                        <static>M</static>
-                    </var>
-                    <var name="$Mexp">
-                        <static>M^2-M</static>
-                    </var>
-                    <var name="$Q">
-                        <static>Q</static>
-                    </var>
-                    <var name="$Qexp">
-                        <static>Q^2-Q</static>
-                    </var>
-                    <var name="$P">
-                        <static>x-12</static>
-                    </var>
-                    <var name="$expression">
-                        <static>(x-12)^2-(x-12)</static>
-                    </var>
                     <pg-code>
                         $five = Real(5);
                         $out = Real(20);
@@ -952,30 +871,6 @@
           <webwork>
               <title>Solving Graphically</title>
               <setup>
-                  <var name="$numZeros">
-                      <static>3</static>
-                  </var>
-                  <var name="$zeros">
-                      <static>-4,-1,2</static>
-                  </var>
-                  <var name="$numSolutions1">
-                      <static>2</static>
-                  </var>
-                  <var name="$solutions">
-                      <static>-2.7,2.46</static>
-                  </var>
-                  <var name="$numSolutions2">
-                      <static>1</static>
-                  </var>
-                  <var name="$solutions2">
-                      <static>2.64</static>
-                  </var>
-                  <var name="$maxNumSolutions">
-                      <static>3</static>
-                  </var>
-                   <var name="$minNumSolutions">
-                      <static>1</static>
-                  </var>
 
 
                   <pg-code>
@@ -1075,15 +970,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$answer1">
-                        <static>1.5</static>
-                    </var>
-                    <var name="$answer2">
-                        <static>0</static>
-                    </var>
-                    <var name="$answer3">
-                        <static>1</static>
-                    </var>
 
                     <pg-code>
                         $b = 0.55/ln(2) - 0.55*ln(0.5/ln(2)) / ln(2);
