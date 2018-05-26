@@ -19,14 +19,6 @@
     <exercise>
         <webwork xml:id="webwork-interpreting-a-transformation-1">
           <setup>
-            <var name="$withSymbols">
-              <set>
-                  <member>18</member>
-                  <member>6\text{ times the input of }3</member>
-                  <member correct="yes">6\text{ times the output when the input is }3</member>
-                  <member>f(18)</member>
-              </set>
-            </var>
             <var name="$withNumbers">
               <static>42</static>
             </var>
@@ -92,12 +84,6 @@
       <exercise>
           <webwork xml:id="webwork-opposite-of-with-function-notation">
             <setup>
-              <var name="$isNegative">
-                <set>
-                    <member>\text{True}</member>
-                    <member correct="yes">\text{False}</member>
-                </set>
-              </var>
               <pg-code>
                 Context('Numeric');
                 $isNegative = RadioButtons(
@@ -203,24 +189,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$pointOnH">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">(-4,5)</member>
-                  <member>(-4,-5)</member>
-                  <member>(4,5)</member>
-                  <member>(4,-5)</member>
-                </set>
-              </var>
-              <var name="$pointOnNegH">
-                <set>
-                  <member>\text{?}</member>
-                  <member>(-4,5)</member>
-                  <member correct="yes">(-4,-5)</member>
-                  <member>(4,5)</member>
-                  <member>(4,-5)</member>
-                </set>
-              </var>
               <pg-code>
                 $pointOnH=PopUp(
                 ["?","(-4,5)","(-4,-5)","(4,5)","(4,-5)"],"(-4,5)"
@@ -254,12 +222,6 @@
             <setup>
               <var name="$fof1"><static>2</static></var>
               <var name="$negfof1"><static>-2</static></var>
-              <var name="$xaxis">
-                <set>
-                  <member correct="yes">\text{x-axis}</member>
-                  <member>\text{y-axis}</member>
-                </set>
-              </var>
 
               <pg-code>
                 $fof1=Real(2);
@@ -293,19 +255,6 @@
         <exercise>
           <webwork xml:id="points-on-opposite-f-of-x">
             <setup>
-              <var name="$didItGraph">
-                <set>
-                  <member>\text{?}</member>
-                  <member>\text{no}</member>
-                  <member correct="yes">\text{yes}</member>
-                </set>
-              </var>
-              <var name="$formula">
-                <set>
-                  <member correct="yes">y = -\sqrt{x}</member>
-                  <member>y = \sqrt{-x}</member>
-                </set>
-              </var>
               <pg-code>
                 $didItGraph=PopUp(
                 ["?","No","Yes"],"Yes"
@@ -337,20 +286,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$point">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">(5,9)</member>
-                  <member>(5,13)</member>
-                </set>
-              </var>
-              <var name="$pointHNeg">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">(-5,9)</member>
-                  <member>(-5,13)</member>
-                </set>
-              </var>
               <pg-code>
                 $point=PopUp(
                 ["?","(5, 9)","(5, 13)"],"(5, 9)"
@@ -384,29 +319,8 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$gofneg2notation">
-                <set>
-                  <member>\text{?}</member>
-                  <member>g(2)</member>
-                  <member correct="yes">g(-2)</member>
-                </set>
-              </var>
               <var name="$gofneg2value"><static>0</static></var>
-              <var name="$gof1notation">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">g(1)</member>
-                  <member>g(-1)</member>
-                </set>
-              </var>
               <var name="$gof1value"><static>3</static></var>
-              <var name="$yaxis">
-                <set>
-                  <member>\text{?}</member>
-                  <member>\text{x-axis}</member>
-                  <member correct="yes">\text{y-axis}</member>
-                </set>
-              </var>
               <pg-code>
                 $gofneg2notation=PopUp(
                 ["?","g(2)","g(-2)"],"g(-2)"
@@ -447,19 +361,6 @@
         <exercise>
           <webwork xml:id="points-on-f-of-opposite-x">
             <setup>
-              <var name="$didItGraph">
-                <set>
-                  <member>\text{?}</member>
-                  <member>\text{no}</member>
-                  <member correct="yes">\text{yes}</member>
-                </set>
-              </var>
-              <var name="$formula">
-                <set>
-                  <member>y = -\sqrt{x}</member>
-                  <member correct="yes">y = \sqrt{-x}</member>
-                </set>
-              </var>
               <pg-code>
                 $didItGraph=PopUp(
                 ["?","No","Yes"],"Yes"
@@ -637,20 +538,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$g">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">-f(x)</member>
-                  <member>f(-x)</member>
-                </set>
-              </var>
-              <var name="$h">
-                <set>
-                  <member>\text{?}</member>
-                  <member>-f(x)</member>
-                  <member correct="yes">f(-x)</member>
-                </set>
-              </var>
               <pg-code>
                 $g=PopUp(
                 ["?","-f(x)","f(-x)"],"-f(x)"

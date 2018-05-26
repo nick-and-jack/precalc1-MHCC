@@ -1049,16 +1049,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$note">
-              <set>
-                <member>\text{A}</member>
-                <member>\text{B}</member>
-                <member correct="yes">\text{C}</member>
-                <member>\text{D}</member>
-                <member>\text{E}</member>
-                <member>\text{F}</member>
-              </set>
-            </var>
             <pg-code>
               $note=PopUp(["?","A","B","C","D","E","F"],"C");
             </pg-code>
@@ -1377,18 +1367,6 @@
           <setup>
             <var name="$cells"><static>10^6*e^(0.495105)</static></var>
             <var name="$cellsRounded"><static>1640670</static></var>
-            <var name="$true">
-              <set>
-                <member correct="yes">\text{True}</member>
-                <member>\text{False}</member>
-              </set>
-            </var>
-            <var name="$concern">
-              <set>
-                <member>\text{Yes, because her equation is different from yours.}</member>
-                <member correct="yes">\text{No, because your formulas are equivalent.}</member>
-              </set>
-            </var>
             <pg-code>
               $cells=Compute("10^6*e^(0.495105)");
               $cellsRounded=sprintf("%.0f",$cells);

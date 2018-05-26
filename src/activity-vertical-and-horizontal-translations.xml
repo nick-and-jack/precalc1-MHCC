@@ -130,30 +130,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$ans1">
-                        <set>
-                          <member correct="yes">\text{adding 4 to the input}</member>
-                          <member>\text{adding 4 to the output}</member>
-                        </set>
-                    </var>
-                    <var name="$ans2">
-                        <set>
-                            <member>\text{subtracting 2 from the input}</member>
-                            <member correct="yes">\text{subtracting 2 from the input}</member>
-                        </set>
-                    </var>
-                    <var name="$ans3">
-                        <set>
-                            <member>\text{multiplying the input by 5}</member>
-                            <member correct="yes">\text{multiplying the output by 5}</member>
-                        </set>
-                    </var>
-                    <var name="$ans4">
-                        <set>
-                            <member correct="yes">\text{multiplying the input by 9}</member>
-                            <member>text{multiplying the output by 9}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $ans1=PopUp(["?","adding 4 to the input","adding 4 to the output"],1);
                         $ans2=PopUp(["?","subtracting 2 from the input","subtracting 2 from the output"],2);
@@ -319,18 +295,6 @@
             <webwork>
                 <setup>
                     <var name="$start"><static>10</static></var>
-                    <var name="$max">
-                        <set>
-                            <member>\text{It stayed the same}</member>
-                            <member correct="yes">\text{It increased by 7 feet}</member>
-                        </set>
-                    </var>
-                    <var name="$water">
-                        <set>
-                            <member correct="yes">\text{It increased slightly}</member>
-                            <member>\text{It decreased slightly}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $start=Real(10);
                         $max=PopUp(
@@ -381,22 +345,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$change">
-                        <set>
-                            <member>\text{added 7 to the input}</member>
-                            <member correct="yes">\text{added 7 to the output}</member>
-                            <member>\text{subtracted 7 from the input}</member>
-                            <member>\text{subtracted 7 from the output}</member>
-                        </set>
-                    </var>
-                    <var name="$eqn">
-                        <set>
-                            <member>h = f(t + 7)</member>
-                            <member correct="yes">h = f(t) + 7</member>
-                            <member>h = f(t - 7)</member>
-                            <member>h = f(t) - 7</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $change=PopUp(["?","added 7 to the input","added 7 to the output","subtracted 7 from the input","subtracted 7 from the output"],2);
                         $eqn=PopUp(["?","h = f(t + 7)","h = f(t) + 7","h = f(t - 7)","h = f(t) - 7"],2);
@@ -464,20 +412,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$describeup">
-                        <set>
-                            <member correct="yes">\text{go up by 25 feet}</member>
-                            <member>\text{go down by 25 units}</member>
-                            <member>\text{stay the same}</member>
-                        </set>
-                    </var>
-                    <var name="$describedown">
-                        <set>
-                            <member>\text{go up by 2 feet}</member>
-                            <member correct="yes">\text{go down by 2 feet}</member>
-                            <member>\text{stay the same}</member>
-                        </set>
-                    </var>
                     <var name="$eqn1"><static>-16t^2+15t+3+25</static></var>
                     <var name="$eqn2"><static>-16t^2+15t+3-2</static></var>
                     <pg-code>
@@ -566,18 +500,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$input">
-                        <set>
-                            <member correct="yes">\text{input}</member>
-                            <member>\text{output}</member>
-                        </set>
-                    </var>
-                    <var name="$eqn">
-                        <set>
-                            <member>h = f(t + 2)</member>
-                            <member correct="yes">h = f(t - 2)</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $input=PopUp(
                         ["?","input","outout"],"input"
@@ -655,19 +577,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$early">
-                        <set>
-                            <member>\text{late}</member>
-                            <member correct="yes">\text{early}</member>
-                        </set>
-                    </var>
-                    <var name="$board">
-                        <set>
-                            <member>\text{high-dive}</member>
-                            <member>\text{Mega high-dive}</member>
-                            <member correct="yes">\text{Nano}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $early=PopUp(["?","late","early"],2);
                         $board=PopUp(["?","high-dive","Mega high-dive","Nano"],3);
@@ -715,22 +624,6 @@
         <exercise>
             <webwork xml:id="webwork-vertical-transformation-with-graph">
                 <setup>
-                    <var name="$choice">
-                        <set>
-                            <member>\text{The graph moves right.}</member>
-                            <member>\text{The graph moves left.}</member>
-                            <member correct="yes">\text{The graph moves up.}</member>
-                            <member>\text{The graph moves down.}</member>
-                            <member>\text{None of these}</member>
-                        </set>
-                    </var>
-                    <var name="$point">
-                        <set>
-                            <member correct="yes">y=f(x)-3=x^2-3</member>
-                            <member>y=f(x)+3=x^2+3</member>
-                            <member>\text{None of these}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         Context('Numeric');
                         $choice = RadioButtons(
@@ -772,24 +665,6 @@
         <exercise>
             <webwork xml:id="webwork-vertical-and-horizontal-transformation-with-graph">
                 <setup>
-                    <var name="$changeH">
-                        <set>
-                            <member>\text{The graph moves right.}</member>
-                            <member correct="yes">\text{The graph moves left.}</member>
-                            <member>\text{The graph moves up.}</member>
-                            <member>\text{The graph moves down.}</member>
-                            <member>\text{None of these}</member>
-                        </set>
-                    </var>
-                    <var name="$changeHandK">
-                        <set>
-                            <member>y=f(x+5)+3=(x+5)^2+3</member>
-                            <member correct="yes">y=f(x-5)+3=(x-5)^2+3</member>
-                            <member>y=f(x-3)+5=(x-3)^2+5</member>
-                            <member>y=f(x+3)-5=(x+3)^2-5</member>
-                            <member>\text{None of these}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         Context('Numeric');
                         $changeH = RadioButtons(
@@ -828,14 +703,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$formulas">
-                        <set>
-                            <member>y=4(x+7)+15</member>
-                            <member>y=4(x+7)-15</member>
-                            <member correct="yes">y=4(x-7)+15</member>
-                            <member>y=4(x-7)-15</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $formulas=PopUp(["?","y=4(x+7)+15","y=4(x+7)-15","y=4(x-7)+15","y=4(x-7)-15"],3);
                     </pg-code>
@@ -887,13 +754,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$equation">
-                        <set>
-                            <member correct="yes">y = m(x-a)+b</member>
-                            <member>y = mx-a+b</member>
-                            <member>y = m(x-b)+a</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $equation=PopUp(["?","y = m(x - a) + b","y = mx - a + b","y = m(x - b) + a"],1);
                     </pg-code>

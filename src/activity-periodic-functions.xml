@@ -19,15 +19,6 @@
         <webwork>
           <setup>
             <var name="$timeToCharge"><static>6</static></var>
-            <var name="$beginCharging">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{12:00 A.M.}</member>
-                <member>\text{6:00 A.M.}</member>
-                <member>\text{12:00 P.M.}</member>
-                <member correct="yes">\text{6:00 P.M.}</member>
-              </set>
-            </var>
             <var name="$period"><static>24</static></var>
             <pg-code>
               $timeToCharge=Real(6);
@@ -132,27 +123,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$vertStretch">
-              <set>
-                <member correct="yes">\text{Changing the radius of the wheel}</member>
-                <member>\text{Changing the platform height}</member>
-                <member>\text{Changing the period}</member>
-              </set>
-            </var>
-            <var name="$vertShift">
-              <set>
-                <member>\text{Changing the radius of the wheel}</member>
-                <member correct="yes">\text{Changing the platform height}</member>
-                <member>\text{Changing the period}</member>
-              </set>
-            </var>
-            <var name="$horizontalStretch">
-              <set>
-                <member>\text{Changing the radius of the wheel}</member>
-                <member>\text{Changing the platform height}</member>
-                <member correct="yes">\text{Changing the period}</member>
-              </set>
-            </var>
             <pg-code>
               $vertStretch=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the radius of the wheel");
               $vertShift=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the platform height");
@@ -288,13 +258,6 @@
             <var name="$h[2]"><static>70</static></var>
             <var name="$h[3]"><static>40</static></var>
             <var name="$h[4]"><static>10</static></var>
-            <var name="$diditgraph">
-              <set>
-                <member>\text{?}</member>
-                <member correct="yes">\text{yes}</member>
-                <member>\text{no}</member>
-              </set>
-            </var>
             <pg-code>
               $amplitude=Real(30);
               $period=Real(20);

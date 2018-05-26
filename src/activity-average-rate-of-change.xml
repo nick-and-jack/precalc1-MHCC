@@ -43,21 +43,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$train">
-                        <set>
-                            <member correct="yes">\text{Blue Train (dotted line)}</member>
-                            <member>\text{Red Train (dashed line)}</member>
-                            <member>\text{Green Train (solid line)}</member>
-                        </set>
-                    </var>
-                    <var name="$slope">
-                        <set>
-                            <member>\text{mope}</member>
-                            <member>\text{dope}</member>
-                            <member correct="yes">\text{slope}</member>
-                            <member>\text{scope}</member>
-                        </set>
-                    </var>
 
                     <pg-code>
                         $train = RadioButtons(["Blue Train (dotted line)","Red Train (dashed line)","Green Train (solid line)"],0);
@@ -120,14 +105,6 @@
                     </var>
                     <var name="$difference">
                         <static>f(5)-f(2)</static>
-                    </var>
-                    <var name="$speed">
-                      <set>
-                       <member>\text{hours}</member>
-                       <member>\text{miles}</member>
-                       <member>\text{hours per mile}</member>
-                       <member>\text{miles per hour}</member>
-                      </set>
                     </var>
 
                     <!-- Within parserFunction below the formula has nothing to do with the problem.  It's only there to be function to generate values for us -->
@@ -197,14 +174,6 @@
                 <setup>
                     <var name="$chngDist">
                         <static>19.5</static>
-                    </var>
-                    <var name="$meaning">
-                        <set>
-                             <member correct="yes">\text{Change in hours since 8 a.m.}</member>
-                             <member>\text{Delta t}</member>
-                             <member>\text{Delta times t}</member>
-                             <member>\text{There is no meaning to this expression}</member>
-                        </set>
                     </var>
                     <pg-code>
                         $chngDist = Real(19.5);
@@ -479,14 +448,6 @@
             </introduction>
             <webwork>
               <setup>
-                <var name="$units">
-                  <set>
-                    <member>\text{month}</member>
-                    <member>\text{time}</member>
-                    <member>\text{degrees Fahrenheit}</member>
-                    <member>\text{degrees Fahrenheit per month}</member>
-                  </set>
-                </var>
                 <var name="$intMarch">
                   <static>3&lt;=m&lt;=12</static>
                 </var>
@@ -662,67 +623,11 @@
                     <var name="$delTime">
                         <static>0.5</static>
                     </var>
-                    <var name="$distUnits">
-                        <set>
-                             <member correct="yes">\text{miles}</member>
-                             <member>\text{units}</member>
-                             <member>\text{hours}</member>
-                             <member>\text{miles per hour}</member>
-                        </set>
-                    </var>
-                    <var name="$timeUnits">
-                        <set>
-                             <member>\text{hours per mile}</member>
-                             <member>\text{miles}</member>
-                             <member correct="yes">\text{hours}</member>
-                             <member>\text{units}</member>
-                        </set>
-                    </var>
                     <var name="$avRate">
                         <static>20</static>
                     </var>
-                    <var name="$avrtUnits">
-                        <set>
-                             <member>\text{hours}</member>
-                             <member>\text{hours per mile}</member>
-                             <member correct="yes">\text{miles per hour}</member>
-                             <member>\text{miles}</member>
-                        </set>
-                    </var>
-                    <var name="$avrtMeaning">
-                        <set>
-                             <member>\text{distance of the train from downtown}</member>
-                             <member correct="yes">\text{average speed of the train}</member>
-                             <member>\text{time train has traveled}</member>
-                             <member>\text{triangle D over triangle t}</member>
-                        </set>
-                    </var>
                     <var name="$speed">
                         <static>45</static>
-                    </var>
-                    <var name="$meaning">
-                        <set>
-                             <member>\text{distance of the train from downtown}</member>
-                             <member>\text{time the train has traveled}</member>
-                             <member correct="yes">\text{average speed of the train}</member>
-                             <member>\text{triangle D divided by triangle t}</member>
-                        </set>
-                    </var>
-                    <var name="$lastUnit">
-                        <set>
-                             <member>\text{miles}</member>
-                             <member>\text{hours per mile}</member>
-                             <member>\text{hours}</member>
-                             <member correct="yes">\text{miles per hour}</member>
-                        </set>
-                    </var>
-                    <var name="$interval">
-                        <set>
-                             <member>\text{2 p.m. and 5 p.m.}</member>
-                             <member correct="yes">\text{10 a.m. and 1 p.m.}</member>
-                             <member>\text{2 and 5}</member>
-                             <member>\text{2 mph and 5 mph}</member>
-                        </set>
                     </var>
                     <pg-code>
                         $delDist = Real(10);

@@ -1125,12 +1125,6 @@
             <title>Comparing Graphs of Various Bases</title>
             <webwork>
                 <setup>
-                    <var name="$log2">
-                        <set>
-                            <member>\log(x)\</member>
-                            <member correct="yes">\log_{2}(x)\}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         Context('Numeric');
                         $log2 = RadioButtons(

@@ -57,22 +57,6 @@
   <exercise>
     <webwork>
       <setup>
-        <var name="$interpret1">
-          <set>
-            <member>\text{?}</member>
-            <member correct="yes">\text{3 times the output, when the input is 5}</member>
-            <member>\text{an input of 3 and an output of 5}</member>
-            <member>\text{15}</member>
-          </set>
-        </var>
-        <var name="$interpret2">
-          <set>
-            <member>\text{?}</member>
-            <member>\text{the output divided by 3}</member>
-            <member>\text{the output multiplied by }\frac{1}{3}</member>
-            <member correct="yes">\text{all of the above}</member>
-          </set>
-        </var>
         <pg-code>
           $interpret1=PopUp(
           ["?","3 times the output, when the input is 5","an input of 3 and an output of 5","15"],"3 times the output, when the input is 5"
@@ -104,13 +88,6 @@
   <exercise>
     <webwork>
       <setup>
-        <var name="$exp">
-          <set>
-            <member>\text{?}</member>
-            <member>f(0.5x)</member>
-            <member correct="yes">0.5f(x)</member>
-          </set>
-        </var>
         <pg-code>
           $exp=PopUp(
           ["?","f(0.5x)","0.5f(x)"],"0.5f(x)"
@@ -229,13 +206,6 @@
   <exercise>
     <webwork xml:id="points-on-a-times-f-of-x">
       <setup>
-        <var name="$didItGraph">
-          <set>
-            <member>\text{?}</member>
-            <member>\text{no}</member>
-            <member correct="yes">\text{yes}</member>
-          </set>
-        </var>
         <pg-code>
           $didItGraph=PopUp(
           ["?","no","yes"],"yes"
@@ -274,20 +244,6 @@
   <exercise>
     <webwork xml:id="formulas-for-a-times-f-of-x">
       <setup>
-        <var name="$verticalStretch">
-          <set>
-            <member>\text{?}</member>
-            <member correct="yes">\text{stretch it away from}</member>
-            <member>\text{compress it toward}</member>
-          </set>
-        </var>
-        <var name="$verticalCompression">
-          <set>
-            <member>\text{?}</member>
-            <member>\text{stretch it away from}</member>
-            <member correct="yes">\text{compress it toward}</member>
-          </set>
-        </var>
         <pg-code>
           $verticalStretch = PopUp(
           ["?","stretch it away from","compress it toward"],"stretch it away from"
@@ -316,18 +272,6 @@
   <exercise>
     <webwork xml:id="graphs-of-a-times-f-of-x-positive-values">
       <setup>
-        <var name="$reflection">
-          <set>
-            <member correct="yes">\text{reflected over the x-axis}</member>
-            <member>\text{reflected over the y-axis}</member>
-          </set>
-        </var>
-        <var name="$stretch">
-          <set>
-            <member>\text{vertically compressed by a factor of 1/2}</member>
-            <member>\text{vertically stretched by a factor of 2}</member>
-          </set>
-        </var>
         <pg-code>
           $reflection=PopUp(["?","reflected over the x-axis","reflected over the y-axis"],"reflected over the x-axis");
           $stretch=PopUp(["?","vertically compressed by a factor of 1/2","vertically stretched by a factor of 2"],"vertically stretched by a factor of 2");
@@ -379,14 +323,6 @@
   <exercise>
     <webwork xml:id="contrast-a-times-f-and-a-plus-f">
       <setup>
-        <var name="$description">
-          <set>
-            <member>\text{The transformations <m>a\cdot f(x)</m> and <m>f(x) + a</m> are really the same thing.}</member>
-            <member correct="yes">\text{The transformation <m>a\cdot f(x)</m> stretches or compresses the graph vertically, but <m>f(x) + a</m> shifts the graph up or down.}</member>
-            <member>\text{The transformation <m>a\cdot f(x)</m> shifts the graph up or down, but <m>f(x) + a</m> stretches or compresses the graph vertically.}</member>
-            <member>\text{The transformation <m>a\cdot f(x)</m> changes the graph vertically, but <m>f(x) + a</m> changes the graph horizontally.}</member>
-          </set>
-        </var>
 
         <pg-code>
           $description=RadioButtons(["The transformations \(a*f(x)\) and \(f(x) + a\) are really the same thing.","The transformation \(a*f(x)\) stretches or compresses the graph vertically, but \(f(x) + a\) shifts the graph up or down.","The transformation \(a*f(x)\) shifts the graph up or down, but \(f(x) + a\) stretches or compresses the graph vertically.","The transformation \(a*f(x)\) changes the graph vertically, but \(f(x) + a\) changes the graph horizontally."],1,labels => ["Same","af(x) stretches, f(x)+a shifts","af(x) shifts, f(x)+a stretches","af(x) vertical change, f(x)+a horizontal change"],displayLabels => 0);

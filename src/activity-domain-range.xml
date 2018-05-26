@@ -31,34 +31,6 @@
       </introduction>
         <webwork>
           <setup>
-            <var name="$yes">
-              <set>
-                <member>\text{yes}</member>
-                <member correct="yes">\text{no}</member>
-              </set>
-            </var>
-            <var name="$no">
-              <set>
-                <member>\text{yes}</member>
-                <member correct="yes">\text{no}</member>
-              </set>
-            </var>
-            <var name="$integers">
-              <set>
-                <member>\text{all integers}</member>
-                <member>\text{all real numbers}</member>
-                <member correct="yes">\text{only non-negative integers}</member>
-                <member>\text{only zero to 100}</member>
-              </set>
-            </var>
-            <var name="$thirteen">
-              <set>
-                <member>\text{only positive numbers}</member>
-                <member>\text{all real numbers}</member>
-                <member>\text{only whole numbers}</member>
-                <member correct="yes">\text{non-negative integer multiples of 13}</member>
-              </set>
-            </var>
             <pg-code>
               $yes = RadioButtons(
               ["yes","no"],
@@ -171,32 +143,6 @@
       <title>Polynomials</title>
       <webwork>
         <setup>
-          <var name="$yes1">
-            <set>
-              <member correct="yes">\text{yes}</member>
-              <member>\text{no}</member>
-            </set>
-          </var>
-          <var name="$yes2">
-            <set>
-              <member correct="yes">\text{yes}</member>
-              <member>\text{no}</member>
-            </set>
-          </var>
-          <var name="$no">
-            <set>
-              <member>\text{yes}</member>
-              <member correct="yes">\text{no}</member>
-            </set>
-          </var>
-          <var name="$domain">
-            <set>
-              <member>\text{only positive numbers}</member>
-              <member correct="yes">\text{all real numbers}</member>
-              <member>\text{only negative numbers}</member>
-              <member>\text{only numbers ending in C}</member>
-            </set>
-          </var>
           <pg-code>
             $yes1 = PopUp(["?","yes","no"],"yes");
             $yes2 = PopUp(["?","yes","no"],"yes");
@@ -238,32 +184,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$pos1">
-            <set>
-              <member correct="yes">\text{positive}</member>
-              <member>\text{negative}</member>
-            </set>
-          </var>
-          <var name="$pos2">
-            <set>
-              <member correct="yes">\text{positive}</member>
-              <member>\text{negative}</member>
-            </set>
-          </var>
-          <var name="$no">
-            <set>
-              <member>\text{yes}</member>
-              <member correct="yes">\text{no}</member>
-            </set>
-          </var>
-          <var name="$range">
-            <set>
-              <member>\text{only positive numbers}</member>
-              <member>\text{all real numbers}</member>
-              <member>\text{only negative numbers}</member>
-              <member correct="yes">\text{all real numbers greater than or equal to zero}</member>
-            </set>
-          </var>
           <pg-code>
             $pos1 = PopUp(["?","positive","negative"],"positive");
             $pos2 = PopUp(["?","positive","negative"],"positive");
@@ -417,13 +337,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$dom">
-              <set>
-                <member>x \geq 0 \text{ and } x \neq -3</member>
-                <member correct="yes">x \geq 0 \text{ and } x \neq 3</member>
-                <member>x \geq 0</member>
-              </set>
-            </var>
             <var name="$domNumerator"><static>x \geq 0</static></var>
 
             <pg-code>

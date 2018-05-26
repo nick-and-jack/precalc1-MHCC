@@ -397,15 +397,6 @@
         <exercise>
           <webwork xml:id="webwork-repeated-root-graph-guess-formula">
             <setup>
-              <var name="$formulaOptions">
-                <set>
-                  <member>(x+1)(x-1)(x-3)</member>
-                  <member>(x+1)^2(x-1)(x-3)</member>
-                  <member correct="yes">(x+1)^2(x-1)(x-3)^2</member>
-                  <member>(x+1)^2(x-1)^2(x-3)^2</member>
-                  <member>\text{None of these}</member>
-                </set>
-              </var>
               <pg-code>
                 $formulaOptions = RadioButtons(
                   ["\((x+1)(x-1)(x-3)\)","\((x+1)^2(x-1)(x-3)\)","\((x+1)^2(x-1)(x-3)^2\)","\((x+1)^2(x-1)^2(x-3)^2\)","None of these"],

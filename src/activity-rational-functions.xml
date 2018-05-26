@@ -93,30 +93,6 @@
         <title>Determine if each Function is Rational or Not</title>
         <webwork>
           <setup>
-            <var name="$eq1">
-              <set>
-                <member correct="yes">\text{Rational}</member>
-                <member>\text{Not Rational}</member>
-              </set>
-            </var>
-            <var name="$eq2">
-              <set>
-                <member>\text{Rational}</member>
-                <member correct="yes">\text{Not Rational}</member>
-              </set>
-            </var>
-            <var name="$eq3">
-              <set>
-                <member>\text{Rational}</member>
-                <member correct="yes">\text{Not Rational}</member>
-              </set>
-            </var>
-            <var name="$eq4">
-              <set>
-                <member correct="yes">\text{Rational}</member>
-                <member>\text{Not Rational}</member>
-              </set>
-            </var>
             <pg-code>
               $eq1 = RadioButtons(["Rational","Not Rational"],0);
               $eq2 = RadioButtons(["Rational","Not Rational"],1);

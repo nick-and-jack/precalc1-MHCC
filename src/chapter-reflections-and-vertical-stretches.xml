@@ -189,28 +189,6 @@
       <exercise>
         <webwork xml:id="transformation-formulas">
           <setup>
-            <var name="$description1">
-              <set>
-                <member>\text{horizontal axis}</member>
-                <member correct="yes">\text{vertical axis}</member>
-              </set>
-            </var>
-
-            <var name="$description2">
-              <set>
-                <member>\text{up}</member>
-                <member>\text{down}</member>
-                <member>\text{to the left}</member>
-                <member correct="yes">\text{to the right}</member>
-              </set>
-            </var>
-
-            <var name="$description3">
-              <set>
-                <member correct="yes">\text{horizontal axis}</member>
-                <member>\text{vertical axis}</member>
-              </set>
-            </var>
 
             <var name="$a"><static>3</static></var>
             <var name="$b"><static>8</static></var>
@@ -773,18 +751,6 @@
 <exercise>
   <webwork xml:id="reflection-graphs-square-root-function">
     <setup>
-      <var name="$reflectXAxis">
-        <set>
-          <member correct="yes">\text{To make the graph of }-f(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the x-axis.}</member>
-          <member>\text{To make the graph of }-f(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the y-axis.}</member>
-        </set>
-      </var>
-      <var name="$reflectYAxis">
-        <set>
-          <member>\text{To make the graph of }f(-x)\text{, you reflect (flip) the graph of }f(x)\text{ over the x-axis.}</member>
-          <member correct="yes">\text{To make the graph of }f-(x)\text{, you reflect (flip) the graph of }f(x)\text{ over the y-axis.}</member>
-        </set>
-      </var>
       <pg-code>
         Context('Numeric');
         $reflectXAxis = RadioButtons(

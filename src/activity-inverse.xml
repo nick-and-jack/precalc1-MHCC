@@ -243,20 +243,6 @@
   <exercise>
     <webwork xml:id="webwork-inverse-notation-interpretation-paint">
       <setup>
-        <var name="$interpretF">
-          <set>
-            <member>\text{?}</member>
-            <member correct="yes">\text{If the area is 1500 square feet, then the price is \$4600.}</member>
-            <member>\text{If the area is 4600 square feet, then the price is \$1500.}</member>
-          </set>
-        </var>
-        <var name="$interpretFInverse">
-          <set>
-            <member>\text{?}</member>
-            <member>\text{If the price is \$1000, then the area is 3500 square feet.}</member>
-            <member correct="yes">\text{If the price is \$3500, then the area is 1000 square feet.}</member>
-          </set>
-        </var>
         <pg-code>
           $interpretF=PopUp(["?",'If the area is 1500 square feet, then the price is $4600.','If the area is 4600 square feet, then the price is $1500.'],1);
           $interpretFInverse=PopUp(["?",'If the price is $3500, then the area is 1000 square feet.','If the price is $1000, then the area is 3500 square feet.'],1);
@@ -293,18 +279,6 @@
   <exercise>
     <webwork xml:id="webwork-inverse-notation-interpretation-salary">
       <setup>
-        <var name="$interpretG">
-          <set>
-            <member correct="yes">G(160) = 2900</member>
-            <member>G(2900) = 160</member>
-          </set>
-        </var>
-        <var name="$interpretGInverse">
-          <set>
-            <member>G^{-1}(1500) = 90</member>
-            <member correct="yes">G^{-1}(90) = 1500</member>
-          </set>
-        </var>
         <pg-code>
           Context('Numeric');
           $interpretG=RadioButtons(
@@ -436,24 +410,6 @@
   <exercise>
     <webwork xml:id="webwork-inverse-graph">
       <setup>
-        <var name="$point1">
-          <set>
-            <member>(0, 3)</member>
-            <member correct="yes">(3, 0)</member>
-          </set>
-        </var>
-        <var name="$point2">
-          <set>
-            <member correct="yes">(-1, -2)</member>
-            <member>(-2, -1)</member>
-          </set>
-        </var>
-        <var name="$correct">
-          <set>
-            <member correct="yes">\text{Yes}</member>
-            <member>\text{No}</member>
-          </set>
-        </var>
         <pg-code>
           $point1=PopUp(["?",'(0, 3)','(3, 0)'],2);
           $point2=PopUp(["?",'(-1, -2)','(-2, -1)'],1);
@@ -500,13 +456,6 @@
   <exercise>
     <webwork xml:id="webwork-inverse-graph-reflection">
       <setup>
-        <var name="$interpretation">
-          <set>
-            <member>\text{Reflect the graph of $f(x)$ over the $x$-axis.}</member>
-            <member>\text{Reflect the graph of $f(x)$ over the $y$-axis.}</member>
-            <member correct="yes">\text{Reflect the graph of $f(x)$ over the line $y = x$.}</member>
-          </set>
-        </var>
         <pg-code>
           $interpretation=RadioButtons(
               ["Reflect the graph of \(f(x)\) over the \(x\)-axis.", "Reflect the graph of \(f(x)\) over the \(y\)-axis.","Reflect the graph of \(f(x)\) over the line \(y = x\)."],
@@ -563,12 +512,6 @@
         <var name="$f[1]"><static>11</static></var>
         <var name="$f[2]"><static>-1</static></var>
         <var name="$f[3]"><static>31</static></var>
-        <var name="$why">
-          <set>
-            <member>f\text{ should never have that output}</member>
-            <member correct="yes">f\text{ had that output twice}</member>
-          </set>
-        </var>
         <pg-code>
           $a=random(1,6,1);
           $h=random(1,6,1);
@@ -632,18 +575,6 @@
   <exercise>
     <webwork xml:id="webwork-rule-for-inverse">
       <setup>
-        <var name="$non">
-          <set>
-            <member correct="yes">\text{At least one output value is repeated}</member>
-            <member>\text{No output values are repeated}</member>
-          </set>
-        </var>
-        <var name="$inv">
-          <set>
-            <member>\text{At least one output value is repeated}</member>
-            <member correct="yes">\text{No output values are repeated}</member>
-          </set>
-        </var>
         <pg-code>
           $non=PopUp(["?","At least one output value is repeated","No output values are repeated"],1);
           $inv=PopUp(["?","At least one output value is repeated","No output values are repeated"],2);
@@ -714,18 +645,6 @@
   <exercise>
     <webwork xml:id="webwork-horizontal-line-test">
       <setup>
-        <var name="$non">
-          <set>
-            <member>\text{A horizontal line only intersects the graph at one point.}</member>
-            <member correct="yes">\text{A horizontal line may intersect the graph at more than one point.}</member>
-          </set>
-        </var>
-        <var name="$inv">
-          <set>
-            <member correct="yes">\text{A horizontal line only intersects the graph at one point.}</member>
-            <member>\text{A horizontal line may intersect the graph at more than one point.}</member>
-          </set>
-        </var>
         <pg-code>
           $non=PopUp(['?','A horizontal line never intersects the graph more than once.','A horizontal line may intersect the graph more than once.'],2);
           $inv=PopUp(['?','A horizontal line never intersects the graph more than once.','A horizontal line may intersect the graph more than once.'],1);

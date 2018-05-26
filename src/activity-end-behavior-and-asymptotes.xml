@@ -24,13 +24,6 @@
           <var name="$a"><static>18</static></var>
           <var name="$b"><static>13</static></var>
           <var name="$c"><static>6</static></var>
-          <var name="$variable">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{x}</member>
-              <member correct="yes">\text{y}</member>
-            </set>
-          </var>
           <var name="$value"><static>3</static></var>
           <var name="$x[0]"><static>1</static></var>
           <var name="$x[1]"><static>10</static></var>
@@ -109,26 +102,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-end-behavior">
         <setup>
-          <var name="$compare">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{very different}</member>
-              <member correct="yes">\text{very similar}</member>
-            </set>
-          </var>
-          <var name="$endBehavior">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{end behavior}</member>
-            </set>
-          </var>
-          <var name="$power">
-            <set>
-              <member>\text{?}</member>
-              <member>x^2</member>
-              <member correct="yes">x^3</member>
-            </set>
-          </var>
           <var name="$term"><static>x^3</static></var>
 
           <pg-code>
@@ -159,15 +132,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-end-behavior-2">
         <setup>
-          <var name="$function">
-            <set>
-              <member>\text{?}</member>
-              <member>x^2</member>
-              <member>x^3</member>
-              <member correct="yes">x^4</member>
-              <member>x^5</member>
-            </set>
-          </var>
 
           <pg-code>
             $function=PopUp(["?","x^2","x^3","x^4","x^5"],"x^4");
@@ -215,30 +179,6 @@
           <var name="$a[8]"><static>9</static></var>
           <var name="$mina8"><static>-9</static></var>
           <var name="$a4a5"><static>70</static></var>
-          <var name="$vars2">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">x^2</member>
-              <member>x^3</member>
-              <member>x^4</member>
-            </set>
-          </var>
-          <var name="$vars4">
-            <set>
-              <member>\text{?}</member>
-              <member>x^2</member>
-              <member>x^3</member>
-              <member correct="yes">x^4</member>
-            </set>
-          </var>
-          <var name="$vars3">
-            <set>
-              <member>\text{?}</member>
-              <member>x^2</member>
-              <member correct="yes">x^3</member>
-              <member>x^4</member>
-            </set>
-          </var>
 
           <pg-code>
             @a=map{2+$_}NchooseK(15,9);
@@ -275,28 +215,6 @@
     <exercise>
       <webwork xml:id="polynomial-end-behavior-arrows">
         <setup>
-          <var name="$left">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{Up}</member>
-              <member correct="yes">\text{Down}</member>
-            </set>
-          </var>
-          <var name="$right">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{Up}</member>
-              <member>\text{Down}</member>
-            </set>
-          </var>
-          <var name="$end">
-            <set>
-              <member>\text{?}</member>
-              <member>x</member>
-              <member>x^2</member>
-              <member correct="yes">x^3</member>
-            </set>
-          </var>
 
           <pg-code>
             $left=PopUp(["?","Up","Down"],"Down");

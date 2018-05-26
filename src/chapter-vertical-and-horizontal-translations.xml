@@ -94,20 +94,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$neg">
-                        <set>
-                            <member>\text{?}</member>
-                            <member>\text{positive}</member>
-                            <member correct="yes">\text{negative}</member>
-                        </set>
-                    </var>
-                    <var name="$pos">
-                        <set>
-                            <member>\text{?}</member>
-                            <member correct="yes">\text{positive}</member>
-                            <member>\text{negative}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $neg=PopUp(["?","positive","negative"],2);
                         $pos=PopUp(["?","positive","negative"],1);
@@ -334,15 +320,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$formula1">
-                        <set>
-                            <member>y = (x+3)^2 - \sqrt{x}</member>
-                            <member>y = x^2 - \sqrt{x+3}</member>
-                            <member correct="yes">y = (x+3)^2 - \sqrt{x+3}</member>
-                            <member>y = x^2 - \sqrt{x} - 3</member>
-                            <member>\text{None of these}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         Context('Numeric');
                         $formula1 = RadioButtons(
@@ -375,15 +352,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$formula2">
-                        <set>
-                            <member correct="yes">g(x) = 5\left\lvert x-2\right\rvert - (x-2)^2 - 1</member>
-                            <member>g(x) = 5\left\lvert x-1\right\rvert - (x-1)^2 - 2</member>
-                            <member>g(x) = 5\left\lvert x-1\right\rvert - (x-1)^2</member>
-                            <member>g(x) = 5\left\lvert x-2\right\rvert - (x-2)^2</member>
-                            <member>\text{None of these}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $formula2 = RadioButtons(
                             ["\(g(x) = 5\left|x-2\right| - (x-2)^2 - 1\)","\(g(x) = 5\left|x-1\right| - (x-1)^2 - 2\)","\(g(x) = 5\left|x-2\right| - (x-2)^2\)","\(g(x) = 5\left|x-2\right| - (x-1)^2\)","None of these"],
@@ -429,23 +397,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$first">
-                        <set>
-                            <member>T(d+7)</member>
-                            <member>T(d)+7</member>
-                            <member correct="yes">T(d-7)</member>
-                            <member>T(d)-7</member>
-                        </set>
-                    </var>
-                    <var name="$second">
-                        <set>
-                            <member>\text{?}</member>
-                            <member>T(d+14)+5</member>
-                            <member correct="yes">T(d-14)+5</member>
-                            <member>T(d+14)-5</member>
-                            <member>T(d-14)-5</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $first=PopUp(
                         ["?","T(d + 7)","T(d) + 7","T(d - 7)","T(d) - 7"],"T(d - 7)"
@@ -493,19 +444,6 @@
                 <var name="$afterT">
                   <static>t-1</static>
                 </var>
-                <var name="$whichGraph">
-                  <set>
-                    <member correct="yes">\text{Graph 1}</member>
-                    <member>\text{Graph 2}</member>
-                  </set>
-                </var>
-                <var name="$inOut">
-                  <set>
-                    <member>\text{?}</member>
-                    <member correct="yes">\text{Input}</member>
-                    <member>\text{Output}</member>
-                  </set>
-                </var>
                 <pg-code>
                   Context('Numeric');
                   Context()->variables->are(t=>'Real');
@@ -544,12 +482,6 @@
               <setup>
                 <var name="$input">
                   <static>t-3</static>
-                </var>
-                <var name="$addOrSubtract">
-                  <set>
-                    <member correct="yes">\text{add}</member>
-                    <member>\text{subtract}</member>
-                  </set>
                 </var>
                 <var name="$outputChange">
                   <static>12</static>

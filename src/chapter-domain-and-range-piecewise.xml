@@ -276,13 +276,6 @@
             <title>Match the Graph to the Piecewise Formula</title>
             <webwork xml:id="exercise-match-piecewise">
               <setup>
-                <var name="$one">
-                  <set>
-                    <member>\text{Function A}</member>
-                    <member>\text{Function B}</member>
-                    <member correct="yes">\text{Function C}</member>
-                  </set>
-                </var>
                 <pg-code>
                   $one = RadioButtons(
                   ["Function A","Function B","Function C"],
@@ -365,12 +358,6 @@
           <webwork>
             <setup>
               <var name="$cost"><static>60</static></var>
-              <var name="$units">
-                <set>
-                  <member>\text{dollars}</member>
-                  <member>\text{hours}</member>
-                </set>
-              </var>
               <pg-code>
                 $cost=Real(60);
                 $units=PopUp(["?","dollars","hours"],"dollars");
@@ -391,20 +378,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$output1units">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">\text{dollars}</member>
-                  <member>\text{shirts}</member>
-                </set>
-              </var>
-              <var name="$input2units">
-                <set>
-                  <member>\text{?}</member>
-                  <member>\text{dollars}</member>
-                  <member correct="yes">\text{shirts}</member>
-                </set>
-              </var>
               <var name="$input1"><static>13</static></var>
               <var name="$output1"><static>162.50</static></var>
               <var name="$input2"><static>35</static></var>
@@ -442,12 +415,6 @@
             <setup>
               <var name="$height1"><static>0</static></var>
               <var name="$height2"><static>8</static></var>
-              <var name="$units">
-                <set>
-                  <member correct="yes">\text{feet}</member>
-                  <member>\text{seconds}</member>
-                </set>
-              </var>
               <pg-code>
                 $height1=Real(0);
                 $height2=Real(8);
@@ -485,12 +452,6 @@
               <var name="$height1"><static>12</static></var>
               <var name="$time1"><static>\frac{1}{2}\text{ seconds}</static></var>
               <var name="$time2"><static>2.5\text{ seconds}</static></var>
-              <var name="$units">
-                <set>
-                  <member>\text{feet}</member>
-                  <member correct="yes">\text{seconds}</member>
-                </set>
-              </var>
               <pg-code>
                 $height1=random(10,15,1);
                 $time1=Compute("($height1/-16+1)^(1/2)");

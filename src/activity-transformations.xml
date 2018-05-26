@@ -25,20 +25,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$up">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{It went up by 5 units.}</member>
-              <member>\text{It went down by 5 units.}</member>
-            </set>
-          </var>
-          <var name="$down">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{It went up by 3 units.}</member>
-              <member correct="yes">\text{It went down by 3 units.}</member>
-            </set>
-          </var>
           <pg-code>
             $up=PopUp(
             ["?","It went up by 5 units.","It went down by 5 units."],"It went up by 5 units."
@@ -68,22 +54,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$left4">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{right 4 units}</member>
-              <member correct="yes">\text{left 4 units}</member>
-            </set>
-          </var>
-          <var name="$right5down4">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{right 5, and down 4}</member>
-              <member>\text{right 5, and up 4}</member>
-              <member>\text{left 5, and down 4}</member>
-              <member>\text{left 5, and up 4}</member>
-            </set>
-          </var>
           <pg-code>
             $left4=PopUp(
             ["?","right 4 units","left 4 units"],"left 4 units"
@@ -113,28 +83,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$stretched">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{stretched}</member>
-              <member>\text{compressed}</member>
-            </set>
-          </var>
-          <var name="$compressed">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{stretched away from}</member>
-              <member correct="yes">\text{compressed toward}</member>
-            </set>
-          </var>
-          <var name="$xaxis">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{x-axis}</member>
-              <member>\text{y-axis}</member>
-              <member>\text{line }y = x</member>
-            </set>
-          </var>
           <pg-code>
             $stretched=PopUp(
             ["?","stretched away from","compressed toward"],"stretched away from"
@@ -241,14 +189,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$ans">
-            <set>
-              <member>\text{Graph 1}</member>
-              <member>\text{Graph 2}</member>
-              <member correct="yes">\text{Graph 3}</member>
-              <member>\text{Graph 4}</member>
-            </set>
-          </var>
           <var name="$shift[0]"><static>0</static></var>
           <var name="$shift[1]"><static>1</static></var>
           <pg-code>
@@ -288,15 +228,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$formulas">
-            <set>
-              <member>\text{?}</member>
-              <member>y=4(x+7)+15</member>
-              <member>y=4(x+7)-15</member>
-              <member correct="yes">y=4(x-7)+15</member>
-              <member>y=4(x-7)-15</member>
-            </set>
-          </var>
           <pg-code>
             $formulas=PopUp(
             ["?","y=4(x+7)+15","y=4(x+7)-15","y=4(x-7)+15","y=4(x-7)-15"],"y=4(x-7)+15"
@@ -350,14 +281,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$equation">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">y = m(x-a)+b</member>
-              <member>y = mx-a+b</member>
-              <member>y = m(x-b)+a</member>
-            </set>
-          </var>
           <pg-code>
             $equation=PopUp(
             ["?","y = m(x - a) + b","y = mx - a + b","y = m(x - b) + a"],
@@ -390,20 +313,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$answer">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{yes}</member>
-              <member>\text{no}</member>
-            </set>
-          </var>
-          <var name="$point">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{the x-intercepts}</member>
-              <member correct="yes">\text{the y-intercept}</member>
-            </set>
-          </var>
           <var name="$f2"><static>f(2x)</static></var>
           <pg-code>
             $answer=PopUp(
@@ -441,32 +350,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$compressed">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{It was stretched}</member>
-              <member correct="yes">\text{It was compressed}</member>
-            </set>
-          </var>
-          <var name="$stretched">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{It was stretched}</member>
-              <member>\text{It was compressed}</member>
-            </set>
-          </var>
-          <var name="$half">
-            <set>
-              <member correct="yes">y = f(2x)</member>
-              <member>y = f(0.5x)</member>
-            </set>
-          </var>
-          <var name="$twice">
-            <set>
-              <member>y = f(2x)</member>
-              <member correct="yes">y = f(0.5x)</member>
-            </set>
-          </var>
           <pg-code>
             $compressed=PopUp(
             ["?","It was stretched","It was compressed"],"It was compressed"
@@ -731,14 +614,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$formula">
-            <set>
-              <member>2\log_2(x-4)</member>
-              <member>\frac{1}{2}\log_2(x-4)</member>
-              <member correct="yes">\log_2(2x-4)</member>
-              <member>\log_2\left(\frac{1}{2}x-4\right)</member>
-            </set>
-          </var>
           <pg-code>
             $formula=RadioButtons(
             ["\(2\log_2(x-4)\)","\(\frac{1}{2}\log_2(x-4)\)","\(\log_2(2x-4)\)","\(\log_2\left(\frac{x}{2}-4\right)\)"],2

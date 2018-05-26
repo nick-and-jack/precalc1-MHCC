@@ -47,14 +47,6 @@
       <title><q>Counting</q> the Growth Factor</title>
       <webwork>
         <setup>
-          <var name="$drop">
-            <set>
-             <member>\text{is constant}</member>
-             <member>\text{increases}</member>
-             <member>\text{decreases}</member>
-             <member>\text{none of the above}</member>
-            </set>
-          </var>
 
           <pg-code>
             $drop = PopUp(["?", "is constant", "increases", "decreases", "none of the above"], "decreases");
@@ -129,39 +121,12 @@
               <static>1350</static>
           </var>
 
-          <var name="$m1">
-              <set>
-                <member>\text{the growth factor}</member>
-                <member>\text{the initial value}</member>
-                <member>\text{the percent change}</member>
-                <member>\text{the time for investment to mature}</member>
-              </set>
-          </var>
-
           <var name="$b">
               <static>1.082</static>
           </var>
 
-          <var name="$m2">
-            <set>
-              <member>\text{the growth factor}</member>
-              <member>\text{the initial value}</member>
-              <member>\text{the percent change}</member>
-              <member>\text{the time for investment to mature}</member>
-            </set>
-          </var>
-
           <var name="$per">
             <static>8.02</static>
-          </var>
-
-          <var name="$m3">
-            <set>
-              <member>\text{An 8.2 percent increase occurs every five years}</member>
-              <member>\text{An 8.2 percent increase occurs five times each year}</member>
-              <member>\text{An 8.2 percent increase is divided into five equal parts}</member>
-              <member>\text{An 8.2 percent increase is multiplied by 5}</member>
-            </set>
           </var>
 
           <pg-code>
@@ -334,24 +299,6 @@
       <title>Review of Fractional Exponents</title>
       <webwork xml:id="fractional-exponent-review">
         <setup>
-          <var name="$fifth">
-            <set>
-              <member>\text{False}</member>
-              <member correct="yes">\text{True}</member>
-            </set>
-          </var>
-          <var name="$cinco">
-            <set>
-              <member>\text{False}</member>
-              <member correct="yes">\text{True}</member>
-            </set>
-          </var>
-          <var name="$quinto">
-            <set>
-              <member>\text{False}</member>
-              <member correct="yes">\text{True}</member>
-            </set>
-          </var>
           <pg-code>
             $fifth = RadioButtons(
             ["False","True"],
@@ -404,12 +351,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$true">
-            <set>
-              <member>\text{true}</member>
-              <member correct="yes">\text{false}</member>
-            </set>
-          </var>
 
           <pg-code>
             $true = RadioButtons(
@@ -523,30 +464,6 @@
           <setup>
               <var name="$num">
                   <static>12</static>
-              </var>
-              <var name="$times1">
-                  <set>
-                       <member>\text{Investment is compounded continously thoughout the year}</member>
-                       <member>\text{Investment is compounded every 12 years}</member>
-                       <member correct="yes" >\text{Investment is compounded 12 times each year}</member>
-                       <member>\text{Investment grows by 12 percent}</member>
-                  </set>
-              </var>
-              <var name="$times2">
-                  <set>
-                       <member>\text{Investment is compounded continously thoughout the year}</member>
-                       <member correct="yes" >\text{Investment is compounded every 12 years}</member>
-                       <member>\text{Investment is compounded 12 times each year}</member>
-                       <member>\text{Investment grows by 12 percent}</member>
-                  </set>
-              </var>
-              <var name="$times3">
-                  <set>
-                       <member correct="yes" >\text{Investment is compounded continously thoughout the year}</member>
-                       <member>\text{Investment is compounded every 12 years}</member>
-                       <member>\text{Investment is compounded 12 times each year}</member>
-                       <member>\text{Investment grows by 12 percent}</member>
-                  </set>
               </var>
               <pg-code>
                   $num= Real(12);

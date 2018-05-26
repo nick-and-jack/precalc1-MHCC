@@ -21,15 +21,6 @@
           <var name="$heat"><static>95</static></var>
           <var name="$water"><static>35</static></var>
           <var name="$billNumber"><static>130</static></var>
-          <var name="$billExpression">
-            <set>
-              <member>\text{?}</member>
-              <member>H(x)</member>
-              <member>W(x)</member>
-              <member>H(x) \cdot W(x)</member>
-              <member correct="yes">H(x)+W(x)</member>
-            </set>
-          </var>
           <pg-code>
             $heat=random(80,120,5);
             $water=random(20,50,5);
@@ -141,30 +132,6 @@
   <exercise>
     <webwork>
       <setup>
-        <var name="$revenue">
-          <set>
-            <member>\text{?}</member>
-            <member>c(t)p(t)</member>
-            <member corret="yes">p(t)q(t)</member>
-            <member>c(t)q(t)</member>
-          </set>
-        </var>
-        <var name="$profit">
-          <set>
-            <member>\text{?}</member>
-            <member>c(t) - p(t)</member>
-            <member>p(t) - q(t)</member>
-            <member correctd="yes">p(t) - c(t)</member>
-          </set>
-        </var>
-        <var name="$markup">
-          <set>
-            <member>\text{?}</member>
-            <member>\text{You sell if for 40 cents more than you paid for it.}</member>
-            <member correct="yes">\text{You sell if for 40 percent more than you paid for it.}</member>
-            <member>\text{You paid $1.40 for the item.}</member>
-          </set>
-        </var>
         <pg-code>
           $revenue=PopUp(
           ["?","c(t)p(t)","p(t)q(t)","c(t)q(t)"],"p(t)q(t)"
@@ -267,14 +234,6 @@
         <var name="$P[3]"><static>1</static></var>
         <var name="$P[4]"><static>1</static></var>
         <var name="$P[5]"><static>0</static></var>
-
-        <var name="$didItGraph">
-          <set>
-            <member>\text{?}</member>
-            <member correct="yes">\text{yes}</member>
-            <member>\text{no}</member>
-          </set>
-        </var>
 
         <pg-code>
           @x=(-4,0,2,4,6,8);

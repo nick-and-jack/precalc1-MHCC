@@ -253,12 +253,6 @@
         <exercise>
           <webwork xml:id="heart-rate-formula">
             <setup>
-              <var name="$answer">
-                <set>
-                  <member correct="yes">-12.5\cdot(5\cdot e^{-0.058\cdot t})+172.5</member>
-                  <member>5\cdot e^{-0.058(-12.5C+172.5)}</member>
-                </set>
-              </var>
               <pg-code>
                 Context()->variables->are(t=>'Real', C=>'Real');
                 $answer=RadioButtons(
@@ -400,27 +394,6 @@
               <var name="$y[0]"><static>780</static></var>
               <var name="$y[1]"><static>945</static></var>
               <var name="$year"><static>10</static></var>
-              <var name="$interpret">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">\text{When the population was 780, it was the year 2010.}</member>
-                  <member>\text{In the year 780, the population was 10.}</member>
-                </set>
-              </var>
-              <var name="$inverseInput">
-                <set>
-                  <member>\text{?}</member>
-                  <member>\text{Years}</member>
-                  <member correct="yes">\text{People}</member>
-                </set>
-              </var>
-              <var name="$inverseOutput">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">\text{Years}</member>
-                  <member>\text{People}</member>
-                </set>
-              </var>
               <pg-code>
                 $m=random(25,35,1);
                 @x=map{$_+2}NchooseK(14,2);
@@ -554,21 +527,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$didItGraph">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{No}</member>
-                <member correct="yes">\text{Yes}</member>
-              </set>
-            </var>
-            <var name="$reflection">
-              <set>
-                <member>\text{?}</member>
-                <member correct="yes">\text{line }y = x</member>
-                <member>x\text{-axis}</member>
-                <member>y\text{-axis}</member>
-              </set>
-            </var>
             <pg-code>
               $didItGraph=PopUp(["?","No","Yes"],2);
               $reflection=PopUp(["?","line y = x","x-axis","y-axis"],1);
@@ -778,14 +736,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$reason">
-              <set>
-                <member>\text{?}</member>
-                <member>\text{A horizontal line would cross the graph of }y=f(x)\text{ twice.}</member>
-                <member>\text{A vertical line would cross the graph of the inverse twice.}</member>
-                <member correct="yes">\text{All of the above.}</member>
-              </set>
-            </var>
             <pg-code>
               $reason=PopUp(["?","A horizontal line would cross the graph of y=f(x) twice.","A vertical line would cross the graph of the inverse twice.","All of the above."],3);
             </pg-code>
@@ -865,13 +815,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$interval">
-              <set>
-                <member>\text{?}</member>
-                <member correct="yes">x \geq 0</member>
-                <member>x \geq -2</member>
-              </set>
-            </var>
             <pg-code>
               $interval=PopUp(["?","x >= 0","x >= -2"],1);
             </pg-code>
@@ -1357,22 +1300,6 @@
 <exercise>
   <webwork>
     <setup>
-      <var name="$totalCost">
-        <set>
-          <member correct="yes">A(V(w)) + B(T(w))</member>
-          <member>V(w) + T(w)</member>
-          <member>T(V(w)) + B(A(m))</member>
-          <member>V(w)T(w)</member>
-        </set>
-      </var>
-      <var name="$totalMiles">
-        <set>
-          <member>V(T(w)) + T(V(w))</member>
-          <member>V(A(m))</member>
-          <member>V(w)T(w)</member>
-          <member correct="yes">V(w) + T(w)</member>
-        </set>
-      </var>
       <pg-code>
         $totalCost=PopUp(["?","A(V(w)) + B(T(w))","V(w) + T(w)","T(V(w)) + B(A(m))","V(w)T(w)"],"A(V(w)) + B(T(w))");
         $totalMiles=PopUp(["?","V(T(w)) + T(V(w))","V(A(m))","V(w)T(w)","V(w) + T(w)"],"V(w) + T(w)");
@@ -1407,22 +1334,6 @@
 <exercise>
   <webwork>
     <setup>
-      <var name="$revenue">
-        <set>
-          <member>f(g(5))</member>
-          <member>g(f(5))</member>
-          <member>f(5)+g(5)</member>
-          <member correct="yes">f(5)g(5)</member>
-        </set>
-      </var>
-      <var name="$taxes">
-        <set>
-          <member>h(5)</member>
-          <member correct="yes">h\left(f(5)g(5)\right)</member>
-          <member>h\left(f(5)\right)</member>
-          <member>h\left(g\left(f(5)\right)\right)</member>
-        </set>
-      </var>
       <pg-code>
         $revenue=PopUp(["?","f(g(5))","g(f(5))","f(5) + g(5)","f(5)g(5)"],"f(5)g(5)");
         $taxes=PopUp(["?","h(5)","h(f(5)g(5))","h(f(5))","h(g(f(5)))"],"h(f(5)g(5))");
@@ -1469,12 +1380,6 @@
       <var name="$f[6]"><static>25</static></var>
       <var name="$w[1]"><static>W(40)=27</static></var>
       <var name="$i[1]"><static>W^{-1}(34)=10</static></var>
-      <var name="$statements">
-        <set>
-          <member>W(28) = 30\text{ and }W^{-1}(50) = 26</member>
-          <member correct="yes">W(30) = 28\text{ and }W^{-1}(26) = 50</member>
-        </set>
-      </var>
         <pg-code>
           @rand=map{$_+1}NchooseK(6,4);
           @x=(0,10,20,30,40,50,60);

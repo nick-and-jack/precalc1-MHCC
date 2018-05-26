@@ -204,18 +204,6 @@
             <title>Positive or Negative</title>
             <webwork>
                 <setup>
-                    <var name="$positive">
-                        <set>
-                            <member correct="yes">\text{above the horizontal axis.}</member>
-                            <member>\text{below the horizontal axis.}</member>
-                        </set>
-                    </var>
-                    <var name="$negative">
-                        <set>
-                            <member>\text{above the horizontal axis.}</member>
-                            <member correct="yes">\text{below the horizontal axis.}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $positive = RadioButtons(["below the horizontal axis.","above the horizontal axis."],1);
                         $negative = RadioButtons(["below the horizontal axis.","above the horizontal axis."],0);
@@ -259,18 +247,6 @@
                     <var name="$dec2">
                         <static>6\leq x \leq 8</static>
                     </var>
-                    <var name="$Increasing">
-                      <set>
-                        <member correct="yes">\text{as input increases, output increases.}</member>
-                        <member>\text{as input increases, output decreases.}</member>
-                      </set>
-                    </var>
-                    <var name="$Decreasing">
-                      <set>
-                        <member>\text{as input increases, output increases.}</member>
-                        <member correct="yes">\text{as input increases, output decreases.}</member>
-                      </set>
-                    </var>
                     <pg-code>
                       $Increasing = RadioButtons(["as input increases, output increases.","as input increases, output decreases."],0);
                       $Decreasing = RadioButtons(["as input increases, output increases.","as input increases, output decreases."],1);
@@ -310,18 +286,6 @@
             <title>Concave Up or Concave Down</title>
             <webwork>
                 <setup>
-                    <var name="$cUp">
-                        <set>
-                            <member>\text{concave up.}</member>
-                            <member correct="yes">\text{concave down.}</member>
-                        </set>
-                    </var>
-                    <var name="$cDwn">
-                        <set>
-                            <member>\text{concave up.}</member>
-                            <member correct="yes">\text{concave down.}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $cUp = RadioButtons(["concave up.","concave down."],0);
                         $cDwn = RadioButtons(["concave up.","concave down."],1);
@@ -452,41 +416,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$positive">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">\text{positive}</member>
-                  <member>\text{negative}</member>
-                </set>
-              </var>
-              <var name="$concaveDown">
-                <set>
-                  <member>\text{?}</member>
-                  <member>\text{concave up}</member>
-                  <member correct="yes">\text{concave down}</member>
-                </set>
-              </var>
-              <var name="$concaveUp">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">\text{concave up}</member>
-                  <member>\text{concave down}</member>
-                </set>
-              </var>
-              <var name="$decreasing">
-                <set>
-                  <member>\text{?}</member>
-                  <member>\text{increasing}</member>
-                  <member correct="yes">\text{decreasing}</member>
-                </set>
-              </var>
-              <var name="$increasing">
-                <set>
-                  <member>\text{?}</member>
-                  <member correct="yes">\text{increasing}</member>
-                  <member>\text{decreasing}</member>
-                </set>
-              </var>
               <pg-code>
                 $positive=PopUp(
                 ["?","positive","negative"],"positive"

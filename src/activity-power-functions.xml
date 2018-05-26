@@ -22,20 +22,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$positive">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{positive}</member>
-              <member>\text{negative}</member>
-            </set>
-          </var>
-          <var name="$negative">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{positive}</member>
-              <member correct="yes">\text{negative}</member>
-            </set>
-          </var>
           <var name="$ans[0]"><static>16</static></var>
           <var name="$ans[1]"><static>16</static></var>
           <var name="$ans[2]"><static>32</static></var>
@@ -79,25 +65,6 @@
     <exercise>
       <webwork xml:id="webwork-power-function-intro">
         <setup>
-          <var name="$evenExponent">
-            <set>
-              <member>\text{points upward on the right and downward on the left}</member>
-              <member correct="yes">\text{points upward on the right and the left}</member>
-            </set>
-          </var>
-          <var name="$oddExponent">
-            <set>
-              <member correct="yes">\text{points upward on the right and downward on the left}</member>
-              <member>\text{points upward on the right and the left}</member>
-            </set>
-          </var>
-          <var name="$commonPoints">
-            <set>
-              <member>(-1,1)}</member>
-              <member correct="yes">(0,0)\text{ and }(1,1)</member>
-              <member correct="yes">(-1,-1)\text{ and }(0,0)\text{ and }(1,1)</member>
-            </set>
-          </var>
           <pg-code>
             $evenExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],2);
             $oddExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],1);
@@ -130,13 +97,6 @@
     <exercise>
       <webwork xml:id="webwork-name-the-power-function">
         <setup>
-          <var name="$formula">
-            <set>
-              <member>f(x) = x^4</member>
-              <member correct="yes">f(x) = x^5</member>
-              <member>\text{None of these}</member>
-            </set>
-          </var>
           <pg-code>
             $formula=RadioButtons(
                 ["\(f(x) = x^4\)", "\(f(x) = x^5\)","None of these."],
@@ -174,38 +134,6 @@
     <exercise>
       <webwork xml:id="webwork-power-function-flipped">
         <setup>
-          <var name="$posEven">
-            <set>
-              <member>\text{A}</member>
-              <member>\text{B}</member>
-              <member>\text{C}</member>
-              <member correct="yes">\text{D}</member>
-            </set>
-          </var>
-          <var name="$posOdd">
-            <set>
-              <member>\text{A}</member>
-              <member correct="yes">\text{B}</member>
-              <member>\text{C}</member>
-              <member>\text{D}</member>
-            </set>
-          </var>
-          <var name="$negEven">
-            <set>
-              <member>\text{A}</member>
-              <member>\text{B}</member>
-              <member correct="yes">\text{C}</member>
-              <member>\text{D}</member>
-            </set>
-          </var>
-          <var name="$negOdd">
-            <set>
-              <member correct="yes">\text{A}</member>
-              <member>\text{B}</member>
-              <member>\text{C}</member>
-              <member>\text{D}</member>
-            </set>
-          </var>
 
           <pg-code>
             $posEven=PopUp(["?","A","B","C","D"],"D");
@@ -281,20 +209,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$true">
-            <set>
-              <member>\text{?}</member>
-              <member correct="yes">\text{True}</member>
-              <member>\text{False}</member>
-            </set>
-          </var>
-          <var name="$false">
-            <set>
-              <member>\text{?}</member>
-              <member>\text{True}</member>
-              <member correct="yes">\text{False}</member>
-            </set>
-          </var>
           <pg-code>
             $false=PopUp(
             ["?","True","False"],"False"
@@ -325,24 +239,6 @@
     <exercise>
       <webwork xml:id="webwork-power-function-negative-exponents">
         <setup>
-          <var name="$evenExponent">
-            <set>
-              <member correct="yes">\text{points upward on both sides}</member>
-              <member>\text{points in opposite directions}</member>
-            </set>
-          </var>
-          <var name="$oddExponent">
-            <set>
-              <member>\text{points upward on both sides}</member>
-              <member correct="yes">\text{points in opposite directions}</member>
-            </set>
-          </var>
-          <var name="$commonPoints">
-            <set>
-              <member correct="yes">\text{(1,1)}</member>
-              <member>\text{(1,1) and (-1,1)}</member>
-            </set>
-          </var>
           <pg-code>
             $evenExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],1);
             $oddExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],2);
@@ -379,15 +275,6 @@
     <exercise>
       <webwork xml:id="webwork-power-function-with-even-negative-exponent">
         <setup>
-          <var name="$formula">
-            <set>
-              <member>f(x) = x^4</member>
-              <member>f(x) = x^3</member>
-              <member correct="yes">f(x) = x^{-4}</member>
-              <member>f(x) = x^{-3}</member>
-              <member>\text{None of these}</member>
-            </set>
-          </var>
           <pg-code>
             $formula=RadioButtons(
                 ["\(f(x) = x^4\)","\(f(x) = x^3\)","\(f(x) = x^{-4}\)", "\(f(x) = x^{-3}\)","None of these."],
@@ -423,38 +310,6 @@
     <exercise>
       <webwork xml:id="webwork-power-function-flipped-negexp">
         <setup>
-          <var name="$posEven">
-            <set>
-              <member>\text{A}</member>
-              <member correct="yes">\text{B}</member>
-              <member>\text{C}</member>
-              <member>\text{D}</member>
-            </set>
-          </var>
-          <var name="$posOdd">
-            <set>
-              <member>\text{A}</member>
-              <member>\text{B}</member>
-              <member correct="yes">\text{C}</member>
-              <member>\text{D}</member>
-            </set>
-          </var>
-          <var name="$negEven">
-            <set>
-              <member correct="yes">\text{A}</member>
-              <member>\text{B}</member>
-              <member>\text{C}</member>
-              <member>\text{D}</member>
-            </set>
-          </var>
-          <var name="$negOdd">
-            <set>
-              <member>\text{A}</member>
-              <member>\text{B}</member>
-              <member>\text{C}</member>
-              <member correct="yes">\text{D}</member>
-            </set>
-          </var>
 
           <pg-code>
             $posEven=PopUp(["?","A","B","C","D"],"B");
@@ -542,24 +397,6 @@
     <exercise>
       <webwork xml:id="webwork-power-function-positive-fraction">
         <setup>
-          <var name="$evenExponent">
-            <set>
-              <member>\text{all real numbers}</member>
-              <member correct="yes">x\text{ greater than or equal to }0</member>
-            </set>
-          </var>
-          <var name="$oddExponent">
-            <set>
-              <member correct="yes">\text{all real numbers}</member>
-              <member>x\text{ greater than or equal to }0</member>
-            </set>
-          </var>
-          <var name="$commonPoints">
-            <set>
-              <member>\text{(-1,-1) and (0,0)}</member>
-              <member correct="yes">\text{(0,0) and (1,1)}</member>
-            </set>
-          </var>
 
           <pg-code>
             $evenExponent=PopUp(["?",'all real numbers',"x greater than or equal to 0"],2);

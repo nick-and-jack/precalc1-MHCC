@@ -153,14 +153,6 @@
                     <var name="$position">
                         <static>30</static>
                     </var>
-                    <var name="$units">
-                        <set>
-                             <member correct="yes">\text{miles}</member>
-                             <member>\text{hours}</member>
-                             <member>\text{miles per hour}</member>
-                             <member>\text{hours per mile}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $time = Real(random(2,7,1));
                         if($envir{problemSeed}==1){$time=2;};
@@ -270,30 +262,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$tarzan">
-                        <set>
-                            <member>\text{Tarzan times the jungle}</member>
-                            <member>\text{Tarzan jungle}</member>
-                            <member correct="yes">\text{Tarzan of the jungle}</member>
-                            <member>\text{jungle after Tarzan}</member>
-                        </set>
-                    </var>
-                    <var name="$helen">
-                        <set>
-                            <member>\text{Helen loves Troy}</member>
-                            <member>\text{Helen multiplied by Troy}</member>
-                            <member>\text{Helen Troy}</member>
-                            <member correct="yes">\text{Helen of Troy}</member>
-                        </set>
-                    </var>
-                    <var name="$f">
-                        <set>
-                            <member correct="yes">\text{f of x}</member>
-                            <member>\text{f times x}</member>
-                            <member>\text{f parentheses x}</member>
-                            <member>\text{f x}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $tarzan = PopUp(["?","Tarzan times the jungle","Tarzan jungle","Tarzan of the jungle","Jungle after Tarzan"],"Tarzan of the jungle");
                         $helen = PopUp(["?","Helen loves Troy","Helen multiplied by Troy","Helen next to Troy","Helen of Troy"],"Helen of Troy");
@@ -333,30 +301,8 @@
                     <var name="$distance">
                         <static>10</static>
                     </var>
-                    <var name="$units">
-                        <set>
-                             <member correct="yes">\text{miles}</member>
-                             <member>\text{hours}</member>
-                             <member>\text{miles per hour}</member>
-                             <member>\text{hours per mile}</member>
-                        </set>
-                    </var>
                     <var name="$start">
                         <static>8</static>
-                    </var>
-                    <var name="$ampm">
-                        <set>
-                             <member correct="yes">\text{a.m.}</member>
-                             <member>\text{p.m.}</member>
-                        </set>
-                    </var>
-                    <var name="$meanings">
-                        <set>
-                             <member correct="yes">\text{the initial position of the train}</member>
-                             <member>\text{the final position of the train}</member>
-                             <member>\text{the distance is zero}</member>
-                             <member>\text{the distance times zero}</member>
-                        </set>
                     </var>
                     <var name="$f2">
                         <static>f(2)</static>
@@ -404,32 +350,8 @@
                     <var name="$squarefeet">
                         <static>900</static>
                     </var>
-                    <var name="$sqft">
-                        <set>
-                             <member>\text{square inches}</member>
-                             <member>\text{dollars}</member>
-                             <member correct="yes">\text{square feet}</member>
-                             <member>\text{cubic yards}</member>
-                        </set>
-                    </var>
                     <var name="$HouseValue">
                         <static>209700</static>
-                    </var>
-                    <var name="$units">
-                        <set>
-                             <member>\text{cents}</member>
-                             <member>\text{turtles}</member>
-                             <member>\text{yen}</member>
-                             <member correct="yes">\text{dollars}</member>
-                        </set>
-                    </var>
-                    <var name="$meaning">
-                        <set>
-                             <member>\text{900 houses have 209,700 dollars}</member>
-                             <member>\text{A 900 dollar house is 209,700 sq. feet}</member>
-                             <member correct="yes">\text{A 900 sq. ft. house has a value of 209,700 dollars}</member>
-                             <member>\text{Multiply the sq. ft. by 900 to get the value of 209,700 dollars}</member>
-                        </set>
                     </var>
                     <pg-code>
                         $squarefeet= Real(900);
@@ -467,18 +389,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$situation1">
-                        <set>
-                            <member>\text{yes}</member>
-                            <member correct="yes">\text{no}</member>
-                        </set>
-                    </var>
-                    <var name="$situation2">
-                        <set>
-                            <member correct="yes">\text{yes}</member>
-                            <member>\text{no}</member>
-                        </set>
-                    </var>
                     <pg-code>
                         $situation1 = RadioButtons(
                             ["yes","no"],
@@ -556,18 +466,6 @@
           <title>Determine if the relation in each table is a function or not</title>
           <webwork>
             <setup>
-              <var name="$table1">
-                <set>
-                  <member>\text{y is a function of x}</member>
-                  <member correct="yes">\text{y is not a function of x}</member>
-                </set>
-              </var>
-              <var name="$table2">
-                <set>
-                  <member correct="yes">\text{y is a function of x}</member>
-                  <member>\text{y is not a function of x</member>
-                </set>
-              </var>
               <pg-code>
                 $table1 = RadioButtons(["y is a function of x","y is not a function of x"],1);
                 $table2 = RadioButtons(["y is a function of x","y is not a function of x"],0);
@@ -651,18 +549,6 @@
           <title>Determine if each equation makes <m>y</m> a function of <m>x</m></title>
           <webwork>
             <setup>
-              <var name="$eq1">
-                <set>
-                  <member>y\text{ is a function of }x</member>
-                  <member correct="yes">y\text{ is not a function of }x</member>
-                </set>
-              </var>
-              <var name="$eq2">
-                <set>
-                  <member correct="yes">y\text{ is a function of }x</member>
-                  <member>y\text{ is not a function of }x</member>
-                </set>
-              </var>
               <pg-code>
                 $eq1 = RadioButtons(["y is a function of x","y is not a function of x"],0);
                 $eq2 = RadioButtons(["y is a function of x","y is not a function of x"],1);
@@ -706,18 +592,6 @@
           <title>Determine if the graph is a function</title>
           <webwork>
             <setup>
-              <var name="$nopass">
-                <set>
-                  <member>\text{This graph is a function}</member>
-                  <member correct="yes">\text{This graph is not a function}</member>
-                </set>
-              </var>
-              <var name="$pass">
-                <set>
-                  <member correct="yes">\text{This graph is a function}</member>
-                  <member>\text{This graph is not a function}</member>
-                </set>
-              </var>
               <pg-code>
                 $nopass = RadioButtons(["This graph is a function","This graph is not a function"],1);
                 $pass = RadioButtons(["This graph is a function","This graph is not a function"],0);
@@ -758,18 +632,6 @@
                     <var name="$none">
                         <static>1</static>
                     </var>
-                    <var name="$no">
-                      <set>
-                        <member>\text{Passes Vertical Line Test}</member>
-                        <member correct="yes">\text{Does not pass Vertical Line Test}</member>
-                      </set>
-                    </var>
-                    <var name="$yes">
-                      <set>
-                        <member>\text{Passes Vertical Line Test}</member>
-                        <member correct="yes">\text{Does not pass Vertical Line Test}</member>
-                      </set>
-                    </var>
 
                     <pg-code>
                         $none = Real(1);
@@ -807,14 +669,6 @@
                 <setup>
                     <var name="$dist">
                         <static>40</static>
-                    </var>
-                    <var name="$miles">
-                        <set>
-                             <member>\text{feet}</member>
-                             <member correct="yes">\text{miles}</member>
-                             <member>\text{light years}</member>
-                             <member>\text{meters}</member>
-                        </set>
                     </var>
                     <pg-code>
                         $dist= Real(40);

@@ -110,22 +110,6 @@
             <var name="$FortyFour">
                 <static>44</static>
             </var>
-            <var name="$Increase">
-                <set>
-                     <member>\text{Increase}</member>
-                     <member>\text{Decrease}</member>
-                     <member>\text{None of the above}</member>
-                     <member>\text{All of the above}</member>
-                </set>
-            </var>
-            <var name="$Decrease">
-                <set>
-                     <member>\text{Increase}</member>
-                     <member>\text{Decrease}</member>
-                     <member>\text{None of the above}</member>
-                     <member>\text{All of the above}</member>
-                </set>
-            </var>
 
             <pg-code>
                 $thirtyNine = Real(39);
@@ -329,22 +313,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$mult">
-            <set>
-               <member>\text{subtract}</member>
-               <member>\text{multiply}</member>
-               <member>\text{square root}</member>
-               <member>\text{add}</member>
-            </set>
-          </var>
-          <var name="$add">
-            <set>
-               <member>\text{subtract}</member>
-               <member>\text{multiply}</member>
-               <member>\text{square root}</member>
-               <member>\text{add}</member>
-            </set>
-          </var>
 
           <pg-code>
             $mult = PopUp(["?", "multiply", "subtract", "add", "square root"], "multiply");
@@ -437,12 +405,6 @@
       </introduction>
       <webwork>
         <setup>
-          <var name="$add">
-            <set>
-              <member>\text{repeated multiplication}</member>
-              <member correct="yes">\text{repeated addition}</member>
-            </set>
-          </var>
           <pg-code>
             $add = RadioButtons(
             ["repeated multiplication","repeated addition"],
@@ -507,12 +469,6 @@
       </introduction>
       <webwork>
         <setup>
-          <var name="$mult">
-            <set>
-              <member correct="yes">\text{repeated multiplication}</member>
-              <member>\text{repeated addition}</member>
-            </set>
-          </var>
           <pg-code>
             $mult = RadioButtons(
             ["repeated multiplication","repeated addition"],
@@ -1040,12 +996,6 @@
       </introduction>
       <webwork>
         <setup>
-          <var name="$same">
-            <set>
-              <member correct="yes">\text{yes}</member>
-              <member>\text{no}</member>
-            </set>
-          </var>
           <pg-code>
             $same = RadioButtons(
             ["yes","no"],
@@ -1080,12 +1030,6 @@
       </introduction>
       <webwork>
         <setup>
-          <var name="$same">
-            <set>
-              <member>\text{yes}</member>
-              <member correct="yes">\text{no}</member>
-            </set>
-          </var>
 
           <pg-code>
             $same = RadioButtons(
@@ -1576,18 +1520,6 @@
                 <var name="$dInit">
                     <static>150</static>
                 </var>
-                <var name="$lin">
-                    <set>
-                      <member correct="yes">\text{linear}</member>
-                      <member>\text{exponential}</member>
-                    </set>
-                </var>
-                <var name="$exp">
-                    <set>
-                      <member>\text{linear}</member>
-                      <member correct="yes">\text{exponential}</member>
-                    </set>
-                </var>
                 <var name="$a">
                     <static>-25</static>
                 </var>
@@ -1698,18 +1630,6 @@
             <setup>
                 <var name="$dInit">
                     <static>150</static>
-                </var>
-                <var name="$lin">
-                    <set>
-                      <member correct="yes">\text{linear}</member>
-                      <member>\text{exponential}</member>
-                    </set>
-                </var>
-                <var name="$exp">
-                    <set>
-                      <member>\text{linear}</member>
-                      <member correct="yes">\text{exponential}</member>
-                    </set>
                 </var>
                 <var name="$r">
                     <static>0.25</static>

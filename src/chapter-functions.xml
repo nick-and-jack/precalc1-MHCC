@@ -72,27 +72,6 @@
                 <title>Using Function Notation</title>
                 <webwork xml:id="exercise-function-notation-circle">
                     <setup>
-                    <var name="$notation">
-                        <set>
-                            <member>f(\text{radius}) = \text{area}</member>
-                            <member correct="yes">f(\text{area}) = \text{radius}</member>
-                            <member>\text{None of these}</member>
-                        </set>
-                    </var>
-                    <var name="$independentVariable">
-                        <set>
-                            <member>\text{Radius}</member>
-                            <member correct="yes">\text{Area}</member>
-                            <member>\text{None of these}</member>
-                        </set>
-                    </var>
-                    <var name="$interpretation">
-                        <set>
-                            <member correct="yes">5.64\text{ ft}</member>
-                            <member>5.64\text{ ft}^2</member>
-                            <member>5.64\text{ ft}^3</member>
-                        </set>
-                    </var>
                         <pg-code>
                         Context('Numeric');
                         $notation = RadioButtons(
@@ -147,27 +126,6 @@
                     <setup>
                         <var name="$height">
                             <static>78</static>
-                        </var>
-                        <var name="$units">
-                            <set>
-                                <member correct="yes">\text{inches}</member>
-                                <member>\text{years}</member>
-                                <member>\text{none of these}</member>
-                            </set>
-                        </var>
-                        <var name="$timeunits">
-                            <set>
-                                <member>\text{months}</member>
-                                <member correct="yes">\text{years}</member>
-                                <member>\text{none of these}</member>
-                            </set>
-                        </var>
-                        <var name="$heightunits">
-                            <set>
-                                <member correct="yes">\text{inches}</member>
-                                <member>\text{feet}</member>
-                                <member>\text{none of these}</member>
-                            </set>
                         </var>
                         <var name="$age">
                             <static>2</static>
@@ -250,13 +208,6 @@
               <title>Well-Defined</title>
               <webwork xml:id="exercise-well-defined">
                   <setup>
-                      <var name="$choice">
-                          <set>
-                              <member>f(3) = 5 \text{ and } f(10) = 5</member>
-                              <member correct="yes">f(3) = 5 \text{ and } f(3) = 7</member>
-                              <member>\text{None of these}</member>
-                          </set>
-                      </var>
                       <pg-code>
                           $choice = RadioButtons(
                               ["\(f(3) = 5\) and \(f(10) = 5\)","\(f(3) = 5\) and \(f(3) = 7\)", "None of these"],
@@ -438,18 +389,6 @@
               <title>Name the Units of Average Rate of Change</title>
               <webwork>
                 <setup>
-                  <var name="$output">
-                    <set>
-                      <member>\text{feet}</member>
-                      <member correct="yes">\text{psi}</member>
-                    </set>
-                  </var>
-                  <var name="$input">
-                    <set>
-                      <member>\text{psi}</member>
-                      <member correct="yes">\text{feet}</member>
-                    </set>
-                  </var>
                   <var name="$numer">
                     <static>psi</static>
                   </var>
@@ -492,14 +431,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$ans">
-                  <set>
-                    <member>\text{Eight workers painted 7 houses.}</member>
-                    <member>\text{It will take 7 workers 8 hours to paint a house.}</member>
-                    <member correct="yes">\text{It will take 8 workers 7 hours to paint a house.}</member>
-                    <member>\text{For 8 houses, 7 workers will paint them.}</member>
-                  </set>
-                </var>
                 <pg-code>
                   $ans=PopUp(["?","Eight workers painted 7 houses.","It will take 7 workers 8 hours to paint a house.","It will take 8 workers 7 hours to paint a house.","For 8 houses, 7 workers will paint them."],"It will take 8 workers 7 hours to paint a house.");
                 </pg-code>
@@ -518,12 +449,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$ans">
-                  <set>
-                    <member correct="yes">f(2010)=2015</member>
-                    <member>f(2015)=2010</member>
-                  </set>
-                </var>
                 <pg-code>
                   $ans=PopUp(["?","f(2010) = 2015","f(2015) = 2010"],"f(2010) = 2015");
                 </pg-code>
@@ -542,25 +467,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$ans1">
-                  <set>
-                    <member correct="yes">f(8) = 8131</member>
-                    <member>f(2018)=8131</member>
-                    <member>f(8131)=2018</member>
-                  </set>
-                </var>
-                <var name="$ans2">
-                  <set>
-                    <member>f(2013)</member>
-                    <member correct="yes">f(3)</member>
-                  </set>
-                </var>
-                <var name="$ans3">
-                  <set>
-                    <member correct="yes">\text{After 8 years, the value has decreased by $13929.}</member>
-                    <member>\text{After 8 years, the value is -$13929.}</member>
-                  </set>
-                </var>
                 <pg-code>
                   $ans1=PopUp(["?","f(8)=8131","f(2018)=8131","f(8131)=2018"],"f(8)=8131");
                   $ans2=PopUp(["?","f(2013)","f(3)"],"f(3)");
@@ -745,22 +651,6 @@
               <setup>
                 <var name="$aroc_num1"><static>71</static></var>
                 <var name="$aroc_num2"><static>3.8</static></var>
-                <var name="$aroc_unit1">
-                  <set>
-                    <member>\text{students}</member>
-                    <member>\text{years}</member>
-                    <member correct="yes">\text{students/year}</member>
-                    <member>\text{years/student}</member>
-                  </set>
-                </var>
-                <var name="$aroc_unit2">
-                  <set>
-                    <member>\text{teachers}</member>
-                    <member>\text{years}</member>
-                    <member>\text{years/teacher}</member>
-                    <member correct="yes">\text{teachers/year}</member>
-                  </set>
-                </var>
                 <pg-code>
                   $aroc_num1=Compute("(400-45)/5");
                   $aroc_num2=Compute("(23-4)/5");
@@ -882,18 +772,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$false">
-                  <set>
-                    <member>\text{True}</member>
-                    <member correct="yes">\text{False}</member>
-                  </set>
-                </var>
-                <var name="$true">
-                  <set>
-                    <member correct="yes">\text{True}</member>
-                    <member>\text{False}</member>
-                  </set>
-                </var>
                 <pg-code>
                   $false=PopUp(["?","True","False"],"False");
                   $true=PopUp(["?","True","False"],"True");

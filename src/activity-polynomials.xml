@@ -63,18 +63,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$true">
-            <set>
-              <member correct="yes">\text{True}</member>
-              <member>\text{False}</member>
-            </set>
-          </var>
-          <var name="$false">
-            <set>
-              <member>\text{True}</member>
-              <member correct="yes">\text{False}</member>
-            </set>
-          </var>
           <pg-code>
             $true=PopUp(
             ["?","True","False"],"True"
@@ -210,13 +198,6 @@
     <exercise>
       <webwork xml:id="webwork-roots-linear-to-quadratic1">
         <setup>
-          <var name="$rootsWhere">
-            <set>
-              <member correct="yes">\text{It has both roots of the linear functions.}</member>
-              <member>\text{It has different roots than the linear functions.}</member>
-              <member>\text{Roots? There are no roots.}</member>
-            </set>
-          </var>
           <pg-code>
             $rootsWhere=PopUp(["?","It has both roots of the linear functions.","It has different roots than the linear functions.","Roots? There are no roots."],1);
           </pg-code>
@@ -238,22 +219,9 @@
     <exercise>
       <webwork xml:id="webwork-roots-linear-to-cubic">
         <setup>
-          <var name="$variable">
-            <set>
-              <member correct="yes">x</member>
-              <member>y</member>
-            </set>
-          </var>
           <var name="$root3"><static>3</static></var>
           <var name="$root1"><static>1</static></var>
           <var name="$root0"><static>0</static></var>
-          <var name="$rootsAll">
-            <set>
-              <member correct="yes">\text{All the roots of $f$, $g$ and $h$.}</member>
-              <member>\text{None of the roots of $f$, $g$ or $h$.}</member>
-              <member>\text{Roots? There are no roots!}</member>
-            </set>
-          </var>
 
           <pg-code>
             $variable=PopUp(["?","x","y"],"x");
@@ -283,14 +251,6 @@
     <exercise>
       <webwork xml:id="webwork-roots-graph-guess">
         <setup>
-          <var name="$graph">
-            <set>
-              <member>\text{Graph A}</member>
-              <member>\text{Graph B}</member>
-              <member>\text{Graph C}</member>
-              <member correct="yes">\text{Graph D}</member>
-            </set>
-          </var>
           <pg-code>
             $graph=PopUp(["?","Graph A","Graph B","Graph C","Graph D"],4);
 
@@ -362,13 +322,6 @@
           <var name="$a[1]"><static>3</static></var>
           <var name="$a[2]"><static>10</static></var>
           <var name="$howManyRoots"><static>3</static></var>
-          <var name="$roots">
-            <set>
-              <member>5/4, 3, 10</member>
-              <member correct="yes">5/4, -3, 10</member>
-              <member>-5/4, 3, -10</member>
-            </set>
-          </var>
           <pg-code>
             $c=4;
             @a=map{$_+5}NchooseK(14,3);
@@ -404,12 +357,6 @@
     <exercise>
       <webwork xml:id="webwork-roots-linear-to-quartic">
         <setup>
-          <var name="$didItGraph">
-            <set>
-              <member correct="yes">\text{yes}</member>
-              <member>\text{no}</member>
-            </set>
-          </var>
           <pg-code>
             $didItGraph=PopUp(["?","yes","no"],"yes");
           </pg-code>
@@ -444,21 +391,6 @@
         <setup>
           <var name="$rootsN">
             <static>N</static>
-          </var>
-          <var name="$linearFactors">
-            <set>
-              <member>\text{variables}</member>
-              <member correct="yes">\text{linear factors}></member>
-              <member>\text{terms}></member>
-            </set>
-          </var>
-          <var name="$intercepts">
-            <set>
-              <member correct="yes">(a,0)</member>
-              <member>(0,a)</member>
-              <member>(-a,0)</member>
-              <member>(0,-a)</member>
-            </set>
           </var>
           <pg-code>
             $rootsN=PopUp(["?","2","N"],"N");
@@ -502,12 +434,6 @@
           <var name="$a"><static>18</static></var>
           <var name="$b"><static>13</static></var>
           <var name="$c"><static>6</static></var>
-          <var name="$variable">
-            <set>
-              <member>\text{x}</member>
-              <member correct="yes">\text{y}</member>
-            </set>
-          </var>
           <var name="$value"><static>3</static></var>
           <var name="$x[0]"><static>1</static></var>
           <var name="$x[1]"><static>10</static></var>
@@ -618,23 +544,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-end-behavior">
         <setup>
-          <var name="$compare">
-            <set>
-              <member>\text{very different}</member>
-              <member correct="yes">\text{very similar}</member>
-            </set>
-          </var>
-          <var name="$endBehavior">
-            <set>
-              <member correct="yes">\text{end behavior}</member>
-            </set>
-          </var>
-          <var name="$power">
-            <set>
-              <member>x^2</member>
-              <member correct="yes">x^3</member>
-            </set>
-          </var>
           <var name="$term"><static>x^3</static></var>
 
           <pg-code>
@@ -665,14 +574,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-end-behavior-2">
         <setup>
-          <var name="$function">
-            <set>
-              <member>x^2</member>
-              <member>x^3</member>
-              <member correct="yes">x^4</member>
-              <member>x^5</member>
-            </set>
-          </var>
 
           <pg-code>
             $function=PopUp(["?","x^2","x^3","x^4","x^5"],"x^4");
@@ -724,27 +625,6 @@
           <var name="$a[8]"><static>9</static></var>
           <var name="$mina8"><static>-9</static></var>
           <var name="$a4a5"><static>70</static></var>
-          <var name="$vars2">
-            <set>
-              <member correct="yes">x^2</member>
-              <member>x^3</member>
-              <member>x^4</member>
-            </set>
-          </var>
-          <var name="$vars4">
-            <set>
-              <member>x^2</member>
-              <member>x^3</member>
-              <member correct="yes">x^4</member>
-            </set>
-          </var>
-          <var name="$vars3">
-            <set>
-              <member>x^2</member>
-              <member correct="yes">x^3</member>
-              <member>x^4</member>
-            </set>
-          </var>
 
           <pg-code>
             @a=map{2+$_}NchooseK(15,9);
@@ -789,25 +669,6 @@
     <exercise>
       <webwork xml:id="polynomial-end-behavior-arrows">
         <setup>
-          <var name="$left">
-            <set>
-              <member>\text{Up}</member>
-              <member correct="yes">\text{Down}</member>
-            </set>
-          </var>
-          <var name="$right">
-            <set>
-              <member correct="yes">\text{Up}</member>
-              <member>\text{Down}</member>
-            </set>
-          </var>
-          <var name="$end">
-            <set>
-              <member>x</member>
-              <member>x^2</member>
-              <member correct="yes">x^3</member>
-            </set>
-          </var>
 
           <pg-code>
             $left=PopUp(["?","Up","Down"],"Down");
@@ -1031,13 +892,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$graph">
-              <set>
-                <member correct="yes">\text{Graph A}</member>
-                <member>\text{Graph B}</member>
-                <member>\text{Graph C}</member>
-              </set>
-            </var>
             <pg-code>
               $gr[0]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[240,240]);
               add_functions($gr[0], "(x-1)*(x-3)*(x-4) for x in &lt;-2,7&gt; using color:red and weight:2");
@@ -1191,31 +1045,7 @@
     <exercise>
       <webwork xml:id="webwork-repeated-roots-introduction">
         <setup>
-          <var name="$variable">
-            <set>
-              <member correct="yes">\text{x}</member>
-              <member>\text{y}</member>
-            </set>
-          </var>
           <var name="$root"><static>1</static></var>
-          <var name="$cross">
-            <set>
-              <member correct="yes">\text{crosses over}</member>
-              <member>\text{bounces off}</member>
-            </set>
-          </var>
-          <var name="$bounce">
-            <set>
-              <member>\text{crosses over}</member>
-              <member correct="yes">\text{bounces off}</member>
-            </set>
-          </var>
-          <var name="$horizontal">
-            <set>
-              <member correct="yes">\text{more horizontal}</member>
-              <member>\text{more vertical}</member>
-            </set>
-          </var>
 
             <pg-code>
             $variable=PopUp(["?","x","y"],"x");
@@ -1255,40 +1085,6 @@
     <exercise>
       <webwork xml:id="webwork-repeated-roots-1">
         <setup>
-          <var name="$bounces">
-            <set>
-              <member>\text{crosses over}</member>
-              <member correct="yes">\text{bounces off}</member>
-            </set>
-          </var>
-          <var name="$crosses">
-            <set>
-              <member correct="yes">\text{crosses over}</member>
-              <member>\text{bounces off}</member>
-            </set>
-          </var>
-          <var name="$end2">
-            <set>
-              <member>x</member>
-              <member>x^2</member>
-              <member>x^3</member>
-              <member correct="yes">x^4</member>
-            </set>
-          </var>
-          <var name="$end5">
-            <set>
-              <member>5</member>
-              <member>x^6</member>
-              <member correct="yes">x^7</member>
-              <member>x^8</member>
-            </set>
-          </var>
-          <var name="$horizontal">
-            <set>
-              <member>\text{vertical}</member>
-              <member correct="yes">\text{horizontal}</member>
-            </set>
-          </var>
           <pg-code>
             $bounces=PopUp(["?","crosses over","bounces off"],"bounces off");
             $end2=PopUp(["?","x","x^2","x^3","x^4"],"x^4");
@@ -1314,30 +1110,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$cross">
-            <set>
-              <member>\text{graph bounces off of the x-axis}</member>
-              <member correct="yes">\text{graph crosses over the x-axis}</member>
-            </set>
-          </var>
-          <var name="$bounce">
-            <set>
-              <member correct="yes">\text{graph bounces off of the x-axis}</member>
-              <member>\text{graph crosses over the x-axis}</member>
-            </set>
-          </var>
-          <var name="$flat">
-            <set>
-              <member>\text{graph is very curved}</member>
-              <member correct="yes">\text{graph is nearly horizontal}</member>
-            </set>
-          </var>
-          <var name="$curved">
-            <set>
-              <member correct="yes">\text{graph is very curved}</member>
-              <member>\text{graph is nearly horizontal}</member>
-            </set>
-          </var>
           <pg-code>
             $cross=PopUp(["?","graph bounces off of the x-axis","graph crosses over the x-axis"],2);
             $bounce=PopUp(["?","graph bounces off of the x-axis","graph crosses over the x-axis"],1);
