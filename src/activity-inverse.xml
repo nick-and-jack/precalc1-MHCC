@@ -24,11 +24,6 @@
   <exercise>
     <webwork xml:id="webwork-inverse-notation">
       <setup>
-        <var name="$increase"><static>4</static></var>
-        <var name="$f"><static>x + 4</static></var>
-        <var name="$fInverse"><static>x - 4</static></var>
-        <var name="$x"><static>15</static></var>
-        <var name="$y"><static>19</static></var>
         <pg-code>
           $increase=random(3,7,1);
           $f=Compute("x+$increase");
@@ -87,14 +82,6 @@
   <exercise>
     <webwork xml:id="webwork-inverse-evaluation">
       <setup>
-        <var name="$x[0]"><static>7</static></var>
-        <var name="$x[1]"><static>3</static></var>
-        <var name="$x[2]"><static>5</static></var>
-        <var name="$x[3]"><static>4</static></var>
-        <var name="$y[0]"><static>16</static></var>
-        <var name="$y[1]"><static>18</static></var>
-        <var name="$y[2]"><static>13</static></var>
-        <var name="$y[3]"><static>19</static></var>
         <pg-code>
           @x=map{$_+2}NchooseK(8,4);
           @y=map{$_+12}NchooseK(8,4);
@@ -146,13 +133,6 @@
   <exercise>
     <webwork xml:id="inverse-composition">
       <setup>
-        <var name="$num"><static>12</static></var>
-        <var name="$letters[0]"><static>\text{a}</static></var>
-        <var name="$letters[1]"><static>\text{b}</static></var>
-        <var name="$letters[2]"><static>\text{c}</static></var>
-        <var name="$letters[3]"><static>\text{d}</static></var>
-        <var name="$total"><static>4</static></var>
-        <var name="$var"><static>\text{d}</static></var>
         <pg-code>
           Context()->variables->are(a=>'Real', b=>'Real', c=>'Real', d=>'Real');
           $num=random(3,20,1);
@@ -198,10 +178,6 @@
   <exercise>
     <webwork xml:id="webwork-inverse-composition">
       <setup>
-        <var name="$x[0]"><static>2</static></var>
-        <var name="$x[1]"><static>1</static></var>
-        <var name="$fInverse[0]"><static>4</static></var>
-        <var name="$fInverse[1]"><static>10</static></var>
         <pg-code>
           @x=map{$_+1}NchooseK(4,2);
           @fInverse=map{(12-2*$_)/($_)}@x;
@@ -343,9 +319,6 @@
   <exercise>
     <webwork xml:id="webwork-inverse-formula">
       <setup>
-        <var name="$m"><static>6</static></var>
-        <var name="$b"><static>2</static></var>
-        <var name="$fInverse"><static>\frac{x+4}{3}</static></var>
         <pg-code>
           $m=random(6,10,1);
           $b=random(1,5,1);
@@ -377,7 +350,6 @@
   <exercise>
     <webwork>
       <setup>
-        <var name="$hInverse"><static>\frac{5x}{7}-3</static></var>
         <pg-code>
           $hInverse=Compute("5*x/7-3");
         </pg-code>
@@ -497,21 +469,6 @@
   <exercise>
     <webwork xml:id="webwork-inverse-not-a-function">
       <setup>
-        <var name="$formula"><static>4(x-3)^2-5</static></var>
-        <var name="$a"><static>4</static></var>
-        <var name="$h"><static>3</static></var>
-        <var name="$k"><static>5</static></var>
-        <var name="$diff[0]"><static>-3</static></var>
-        <var name="$diff[1]"><static>-2</static></var>
-        <var name="diff[2]"><static>1</static></var>
-        <var name="$x[0]"><static>0</static></var>
-        <var name="$x[1]"><static>1</static></var>
-        <var name="$x[2]"><static>4</static></var>
-        <var name="$x[3]"><static>6</static></var>
-        <var name="$f[0]"><static>31</static></var>
-        <var name="$f[1]"><static>11</static></var>
-        <var name="$f[2]"><static>-1</static></var>
-        <var name="$f[3]"><static>31</static></var>
         <pg-code>
           $a=random(1,6,1);
           $h=random(1,6,1);

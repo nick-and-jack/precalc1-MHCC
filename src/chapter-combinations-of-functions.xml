@@ -72,15 +72,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$a[0]"><static>4</static></var>
-            <var name="$a[1]"><static>3</static></var>
-            <var name="$b[0]"><static>8</static></var>
-            <var name="$b[1]"><static>5</static></var>
-            <var name="$y1"><static>42</static></var>
-            <var name="$y2"><static>171</static></var>
-            <var name="$g10"><static>85</static></var>
-            <var name="$f10"><static>43</static></var>
-            <var name="$f102"><static>86</static></var>
             <pg-code>
               @a=map{$_+1}NchooseK(4,2);
               @b=map{$_+5}NchooseK(4,2);
@@ -135,15 +126,6 @@
         <exercise>
           <webwork xml:id="profit-and-loss">
             <setup>
-              <var name="$profitIsZero"><static>5</static></var>
-              <var name="$u1"><static>10</static></var>
-              <var name="$u2"><static>4</static></var>
-              <var name="$c1"><static>270</static></var>
-              <var name="$c2"><static>187.2</static></var>
-              <var name="$r1"><static>400</static></var>
-              <var name="$r2"><static>160</static></var>
-              <var name="$p1"><static>130</static></var>
-              <var name="$p2"><static>-27.2</static></var>
 
               <pg-code>
                 $profitIsZero=Real(5);
@@ -285,7 +267,6 @@
         <exercise>
           <webwork xml:id="sale-cost-expression">
             <setup>
-              <var name="$itemCost"><static>24 - 0.25(x-1)</static></var>
               <pg-code>
                 $itemCost=Compute("24-0.25*(x-1)");
               </pg-code>
@@ -307,9 +288,6 @@
         <exercise>
           <webwork xml:id="total-cost-computed">
             <setup>
-              <var name="$x"><static>12</static></var>
-              <var name="$itemCost"><static>21.25</static></var>
-              <var name="$totalCost"><static>255</static></var>
               <pg-code>
                 $x=random(10,20,1);
                 $itemCost=24-0.25*($x-1);
@@ -337,9 +315,6 @@
         <exercise>
           <webwork xml:id="total-cost-formula">
             <setup>
-              <var name="$sold"><static>x</static></var>
-              <var name="$unitCost"><static>24 - 0.25(x - 1)</static></var>
-              <var name="$totalCost"><static>x(24 - 0.25(x - 1))</static></var>
 
               <pg-code>
                 $sold=Compute("x");
@@ -411,36 +386,6 @@
           <exercise>
             <webwork xml:id="combinations-of-functions-tables">
               <setup>
-                <var name="$x[0]"><static>-4</static></var>
-                <var name="$x[1]"><static>-2</static></var>
-                <var name="$x[2]"><static>0</static></var>
-                <var name="$x[3]"><static>2</static></var>
-                <var name="$x[4]"><static>4</static></var>
-                <var name="$f[0]"><static>-9</static></var>
-                <var name="$f[1]"><static>-3</static></var>
-                <var name="$f[2]"><static>-1</static></var>
-                <var name="$f[3]"><static>-3</static></var>
-                <var name="$f[4]"><static>-9</static></var>
-                <var name="$g[0]"><static>4</static></var>
-                <var name="$g[1]"><static>7</static></var>
-                <var name="$g[2]"><static>10</static></var>
-                <var name="$g[3]"><static>13</static></var>
-                <var name="$g[4]"><static>16</static></var>
-                <var name="$M[0]"><static>-5</static></var>
-                <var name="$M[1]"><static>4</static></var>
-                <var name="$M[2]"><static>9</static></var>
-                <var name="$M[3]"><static>10</static></var>
-                <var name="$M[4]"><static>7</static></var>
-                <var name="$N[0]"><static>-13</static></var>
-                <var name="$N[1]"><static>-10</static></var>
-                <var name="$N[2]"><static>-11</static></var>
-                <var name="$N[3]"><static>-16</static></var>
-                <var name="$N[4]"><static>-25</static></var>
-                <var name="$P[0]"><static>-36</static></var>
-                <var name="$P[1]"><static>-21</static></var>
-                <var name="$P[2]"><static>-10</static></var>
-                <var name="$P[3]"><static>-39</static></var>
-                <var name="$P[4]"><static>-144</static></var>
                 <pg-code>
                   @x=(2,4);
                   @f=map{-0.5*$_**2-1}@x;

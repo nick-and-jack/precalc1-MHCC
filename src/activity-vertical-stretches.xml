@@ -21,11 +21,6 @@
   <exercise>
     <webwork>
       <setup>
-        <var name="$num[0]"><static>11</static></var>
-        <var name="$num[1]"><static>9</static></var>
-        <var name="$num[2]"><static>10</static></var>
-        <var name="$output"><static>11g(9)</static></var>
-        <var name="$output1"><static>10f(x)</static></var>
         <pg-code>
           Context('Numeric');
           @num=map{$_+2}NchooseK(10,3);
@@ -115,29 +110,6 @@
   <exercise>
     <webwork xml:id="vertical-stretch-and-compress-table">
       <setup>
-        <var name="$x[0]"><static>0</static></var>
-        <var name="$x[1]"><static>1</static></var>
-        <var name="$x[2]"><static>4</static></var>
-        <var name="$x[3]"><static>7</static></var>
-        <var name="$x[4]"><static>11</static></var>
-
-        <var name="$a[0]"><static>0</static></var>
-        <var name="$a[1]"><static>3</static></var>
-        <var name="$a[2]"><static>6</static></var>
-        <var name="$a[3]"><static>5</static></var>
-        <var name="$a[4]"><static>3</static></var>
-
-        <var name="$b[0]"><static>0</static></var>
-        <var name="$b[1]"><static>6</static></var>
-        <var name="$b[2]"><static>12</static></var>
-        <var name="$b[3]"><static>10</static></var>
-        <var name="$b[4]"><static>6</static></var>
-
-        <var name="$c[0]"><static>0</static></var>
-        <var name="$c[1]"><static>1.5</static></var>
-        <var name="$c[2]"><static>3</static></var>
-        <var name="$c[3]"><static>2.5</static></var>
-        <var name="$c[4]"><static>1.5</static></var>
 
         <pg-code>
           @x=(0,1,4,7,11);
@@ -290,9 +262,6 @@
 <exercise>
   <webwork>
     <setup>
-      <var name="$val"><static>1.5</static></var>
-      <var name="$height"><static>12</static></var>
-      <var name="$formula"><static>1.5x^3</static></var>
       <pg-code>
         $val=random(1.5,2.5,3.5,4.5);
         $height=$val*8;

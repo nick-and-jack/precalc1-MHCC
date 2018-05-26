@@ -106,11 +106,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-roots">
         <setup>
-          <var name="$m"><static>5</static></var>
-          <var name="$b"><static>8</static></var>
-          <var name="$variable"><static>x</static></var>
-          <var name="$root"><static>x=-8/5</static></var>
-          <var name="$degree"><static>1</static></var>
           <pg-code>
             $m=random(1,9,1);
             $b=random(1,9,1);
@@ -144,9 +139,6 @@
           <macro-file>contextLimitedPolynomial.pl</macro-file>
         </pg-macros>
         <setup>
-          <var name="$degree1"><static>1</static></var>
-          <var name="$degree2"><static>2</static></var>
-          <var name="$formula"><static>x^2-x-2</static></var>
           <pg-code>
             $degree1=Real(1);
             $degree2=Real(2);
@@ -219,9 +211,6 @@
     <exercise>
       <webwork xml:id="webwork-roots-linear-to-cubic">
         <setup>
-          <var name="$root3"><static>3</static></var>
-          <var name="$root1"><static>1</static></var>
-          <var name="$root0"><static>0</static></var>
 
           <pg-code>
             $variable=PopUp(["?","x","y"],"x");
@@ -317,11 +306,6 @@
     <exercise>
       <webwork xml:id="webwork-guess-the-number-of-roots">
         <setup>
-          <var name="$c"><static>4</static></var>
-          <var name="$a[0]"><static>5</static></var>
-          <var name="$a[1]"><static>3</static></var>
-          <var name="$a[2]"><static>10</static></var>
-          <var name="$howManyRoots"><static>3</static></var>
           <pg-code>
             $c=4;
             @a=map{$_+5}NchooseK(14,3);
@@ -431,20 +415,6 @@
     <exercise>
       <webwork xml:id="webwork-horizontal-asymptote-numerical">
         <setup>
-          <var name="$a"><static>18</static></var>
-          <var name="$b"><static>13</static></var>
-          <var name="$c"><static>6</static></var>
-          <var name="$value"><static>3</static></var>
-          <var name="$x[0]"><static>1</static></var>
-          <var name="$x[1]"><static>10</static></var>
-          <var name="$x[2]"><static>100</static></var>
-          <var name="$x[3]"><static>100</static></var>
-          <var name="$x[4]"><static>10000</static></var>
-          <var name="$y[0]"><static>19.5</static></var>
-          <var name="$y[1]"><static>15.45</static></var>
-          <var name="$y[2]"><static>15.045</static></var>
-          <var name="$y[3]"><static>15.0045</static></var>
-          <var name="$y[4]"><static>15.00045</static></var>
           <pg-code>
             @x=(1, 10, 100, 1000, 10000);
             $a=12*random(2, 5, 1);
@@ -544,7 +514,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-end-behavior">
         <setup>
-          <var name="$term"><static>x^3</static></var>
 
           <pg-code>
             $compare=PopUp(["?","very different","very similar"],"very similar");
@@ -614,17 +583,6 @@
     <exercise>
       <webwork xml:id="polynomial-end-behavior-leading-term">
         <setup>
-          <var name="$a[0]"><static>3</static></var>
-          <var name="$a[1]"><static>7</static></var>
-          <var name="$a[2]"><static>11</static></var>
-          <var name="$a[3]"><static>4</static></var>
-          <var name="$a[4]"><static>5</static></var>
-          <var name="$a[5]"><static>14</static></var>
-          <var name="$a[6]"><static>16</static></var>
-          <var name="$a[7]"><static>10</static></var>
-          <var name="$a[8]"><static>9</static></var>
-          <var name="$mina8"><static>-9</static></var>
-          <var name="$a4a5"><static>70</static></var>
 
           <pg-code>
             @a=map{2+$_}NchooseK(15,9);
@@ -709,8 +667,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-write-formula">
         <setup>
-          <var name="$num"><static>3</static></var>
-          <var name="$formula"><static>(x+1)(x-2)(x-3)</static></var>
           <pg-code>
             $num=Real(3);
             $formula=Compute("(x+1)(x-2)(x-3)");
@@ -753,11 +709,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-write-formula-1">
         <setup>
-          <var name="$factor[0]"><static>(x+4)\text{ or }-(x+4)</static></var>
-          <var name="$factor[1]"><static>(x+1)\text{ or }-(x+1)</static></var>
-          <var name="$factor[2]"><static>(x-2)\text{ or }-(x-2)</static></var>
-          <var name="$power"><static>x^3</static></var>
-          <var name="$formula"><static>-(x+4)(x+1)(x-2)</static></var>
           <pg-code>
             @root=(-4,-1,2);
             @factor=map{Formula("x-$_")->reduce}(@root);
@@ -933,7 +884,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$formula"><static>2(x-1)(x-3)(x-4)</static></var>
             <pg-code>
               $gr[1]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[400,400]);
               add_functions($gr[1], "2*(x-1)*(x-3)*(x-4) for x in &lt;-2,7&gt; using color:red and weight:2");
@@ -962,7 +912,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$formula"><static>\frac{3}{2}(x-1)(x-3)(x-4)</static></var>
             <pg-code>
               $formula=Compute("1.5*(x-1)*(x-3)*(x-4)");
               $gr[2]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[400,400]);
@@ -992,9 +941,6 @@
       <exercise>
         <webwork xml:id="webwork-polynomial-formula-stretched">
           <setup>
-            <var name="$form"><static>x(x+3)(x-4)</static></var>
-            <var name="$m"><static>0.25</static></var>
-            <var name="$formula"><static>0.25x(x-4)(x+3)</static></var>
             <pg-code>
               $m=Real(0.25);
               $formula=Compute("0.25x(x+3)(x-4)");
@@ -1045,7 +991,6 @@
     <exercise>
       <webwork xml:id="webwork-repeated-roots-introduction">
         <setup>
-          <var name="$root"><static>1</static></var>
 
             <pg-code>
             $variable=PopUp(["?","x","y"],"x");
@@ -1151,7 +1096,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-multiplicity-formula">
         <setup>
-          <var name="$formula"><static>(x+2)(x-1)^2(x-3)^2</static></var>
           <pg-code>
             $formula=Compute("(x+2)(x-1)^2(x-3)^2");
             $gr=init_graph(-4,-10,4,80,axes=>[0,0],grid=>[8,9],size=>[400,400]);

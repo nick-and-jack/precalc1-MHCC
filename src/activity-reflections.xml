@@ -55,10 +55,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$x"><static>14</static></var>
-              <var name="$y"><static>-8</static></var>
-              <var name="$oppX"><static>-14</static></var>
-              <var name="$oppY"><static>8</static></var>
               <pg-code>
                 $x=random(3,30,1);
                 $y=random(-30,-3,1);
@@ -220,8 +216,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$fof1"><static>2</static></var>
-              <var name="$negfof1"><static>-2</static></var>
 
               <pg-code>
                 $fof1=Real(2);
@@ -319,8 +313,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$gofneg2value"><static>0</static></var>
-              <var name="$gof1value"><static>3</static></var>
               <pg-code>
                 $gofneg2notation=PopUp(
                 ["?","g(2)","g(-2)"],"g(-2)"
@@ -388,13 +380,6 @@
         <exercise>
           <webwork xml:id="table-example-test">
             <setup>
-              <var name="$x[0]"><static>-9</static></var>
-              <var name="$x[1]"><static>-4</static></var>
-              <var name="$x[2]"><static>-1</static></var>
-              <var name="$x[3]"><static>0</static></var>
-              <var name="$x[4]"><static>1</static></var>
-              <var name="$x[5]"><static>4</static></var>
-              <var name="$x[6]"><static>9</static></var>
               <var name="$a[0]">
                 <static>\text{DNE}</static>
               </var>
@@ -563,9 +548,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$a"><static>5</static></var>
-              <var name="$g"><static>-(x+5)^4></static></var>
-              <var name="$h"><static>(-x+5)^4</static></var>
               <pg-code>
                 $a=random(3,12,1);
                 $g=Compute("-(x+$a)^4");

@@ -18,9 +18,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$heat"><static>95</static></var>
-          <var name="$water"><static>35</static></var>
-          <var name="$billNumber"><static>130</static></var>
           <pg-code>
             $heat=random(80,120,5);
             $water=random(20,50,5);
@@ -67,13 +64,6 @@
   <exercise>
     <webwork xml:id="combinations-first-example">
       <setup>
-        <var name="$x"><static>7</static></var>
-        <var name="$M"><static>3</static></var>
-        <var name="$N"><static>4</static></var>
-        <var name="$s"><static>7</static></var>
-        <var name="$d"><static>-1</static></var>
-        <var name="$p"><static>16</static></var>
-        <var name="$q"><static>4</static></var>
         <pg-code>
           $x=random(2,4,1);
           $M=random(5,8,1);
@@ -206,34 +196,6 @@
   <exercise>
     <webwork xml:id="points-on-f-times-g">
       <setup>
-
-        <var name="$x[0]"><static>-4</static></var>
-        <var name="$x[1]"><static>0</static></var>
-        <var name="$x[2]"><static>2</static></var>
-        <var name="$x[3]"><static>4</static></var>
-        <var name="$x[4]"><static>6</static></var>
-        <var name="$x[5]"><static>8</static></var>
-
-        <var name="$f[0]"><static>-3</static></var>
-        <var name="$f[1]"><static>-1</static></var>
-        <var name="$f[2]"><static>0</static></var>
-        <var name="$f[3]"><static>1</static></var>
-        <var name="$f[4]"><static>2</static></var>
-        <var name="$f[5]"><static>3</static></var>
-
-        <var name="$g[0]"><static>3</static></var>
-        <var name="$g[1]"><static>2</static></var>
-        <var name="$g[2]"><static>1.5</static></var>
-        <var name="$g[3]"><static>1</static></var>
-        <var name="$g[4]"><static>0.5</static></var>
-        <var name="$g[5]"><static>0</static></var>
-
-        <var name="$P[0]"><static>-9</static></var>
-        <var name="$P[1]"><static>-2</static></var>
-        <var name="$P[2]"><static>0</static></var>
-        <var name="$P[3]"><static>1</static></var>
-        <var name="$P[4]"><static>1</static></var>
-        <var name="$P[5]"><static>0</static></var>
 
         <pg-code>
           @x=(-4,0,2,4,6,8);
@@ -415,9 +377,6 @@
   <exercise>
     <webwork xml:id="formula-for-f-times-g">
       <setup>
-        <var name="$f"><static>-1 + 0.5x</static></var>
-        <var name="$g"><static>2 - 0.25x</static></var>
-        <var name="$P"><static>(-1 + 0.5x)(2 - 0.25x)</static></var>
 
         <pg-code>
           $f=Compute("-1+0.5*x");
@@ -457,9 +416,6 @@
   <exercise>
     <webwork xml:id="graph-and-formula-of-f-minus-g">
       <setup>
-        <var name="$hZero"><static>4.4</static></var>
-        <var name="$hPositive"><static>0\text{ or }2.1</static></var>
-        <var name="$hNegative"><static>-2\text{ or }7</static></var>
 
         <pg-code>
           $hZero=Real(4.4);

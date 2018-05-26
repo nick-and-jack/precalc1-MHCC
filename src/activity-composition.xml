@@ -22,8 +22,6 @@
     <exercise xml:id="area-of-spill">
       <webwork>
         <setup>
-          <var name="$radiusNum"><static>42</static></var>
-          <var name="$areaNum"><static>\pi\cdot22^2</static></var>
           <pg-code>
             Context()->variables->are(t=>'Real', r=>'Real');
             $radiusNum=Real(38);
@@ -64,9 +62,6 @@
     <exercise xml:id="exercise-oil-spill-formulas">
       <webwork>
         <setup>
-          <var name="$hoursNum"><static>3</static></var>
-          <var name="$radiusForm"><static>10+4t</static></var>
-          <var name="$areaComposed"><static>\pi (10+4t)^2</static></var>
           <pg-code>
             Context()->variables->are(t=>'Real', r=>'Real');
             $hoursNum=Real(7);
@@ -102,8 +97,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$goff"><static>24</static></var>
-          <var name="$fofg"><static>6</static></var>
           <pg-code>
             $goff=Real(24);
             $fofg=Real(6);
@@ -133,14 +126,6 @@
     <exercise>
       <webwork xml:id="function-composition-table1">
         <setup>
-          <var name="$x[0]"><static>4</static></var>
-          <var name="$x[1]"><static>1</static></var>
-          <var name="$x[2]"><static>6</static></var>
-          <var name="$x[3]"><static>2</static></var>
-          <var name="$f[0]"><static>6</static></var>
-          <var name="$f[1]"><static>5</static></var>
-          <var name="$g[0]"><static>7</static></var>
-          <var name="$g[1]"><static>1</static></var>
           <pg-code>
             @x=map{$_+1}NchooseK(8,4);
             $f[0]=$x[2];
@@ -192,9 +177,6 @@
     <exercise>
       <webwork>
         <setup>
-          <var name="$input"><static>6</static></var>
-          <var name="$g"><static>18</static></var>
-          <var name="$fofg"><static>306</static></var>
           <pg-code>
             $input=random(1,10,1);
             $g=Compute("3*$input");
@@ -275,12 +257,6 @@
     <exercise>
       <webwork xml:id="function-composition-formulas">
         <setup>
-          <var name="$a"><static>3</static></var>
-          <var name="$b"><static>2</static></var>
-          <var name="$B"><static>x + 3</static></var>
-          <var name="$L"><static>x^2</static></var>
-          <var name="$BofL"><static>x^2 + 3</static></var>
-          <var name="$LofB"><static>(x + 3)^2</static></var>
           <pg-code>
             $a=random(5,9,1);
             $b=random(2,4,1);
@@ -326,18 +302,6 @@
     <exercise>
       <webwork xml:id="function-composition-graph">
         <setup>
-          <var name="$xg[0]"><static>0</static></var>
-          <var name="$xg[1]"><static>5</static></var>
-          <var name="$xf[0]"><static>-4</static></var>
-          <var name="$xf[1]"><static>-1</static></var>
-          <var name="$G[0]"><static>2</static></var>
-          <var name="$FofG"><static>-3</static></var>
-          <var name="$F[0]"><static>1</static></var>
-          <var name="$GofF"><static>1</static></var>
-          <var name="$G[1]"><static>-3</static></var>
-          <var name="$GofG"><static>-1</static></var>
-          <var name="$F[1]"><static>-2</static></var>
-          <var name="$FofF"><static>-1</static></var>
           <pg-code>
             @xg=map{($_-6)}NchooseK(14,2);
             @xf=map{($_-6)}NchooseK(14,2);

@@ -41,9 +41,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$ans1"><static>(x+6)^2 + (x+6)</static></var>
-                    <var name="$ans2"><static>x^2+x+6</static></var>
-                    <var name="$ans3"><static>3\cdot(x^2+x)</static></var>
                     <pg-code>
                         $ans1=Compute("(x+6)^2+x+6");
                         $ans2=Compute("x^2+x+6");
@@ -83,9 +80,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$ans1"><static>5(-3t+7)</static></var>
-                    <var name="$ans2"><static>5(-3(t-4)+7)</static></var>
-                    <var name="$ans3"><static>-5(-3(t-4)+7)</static></var>
                     <pg-code>
                         Context()->variables->are(t=>'Real');
                         $ans1=Compute("5(-3t+7)");
@@ -182,9 +176,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$ans1"><static>g(t-5)+4</static></var>
-                    <var name="$ans2"><static>g(2t)-1</static></var>
-                    <var name="$ans3"><static>7g(t)</static></var>
                     <pg-code>
                         Context('Numeric');
                         Context()->variables->are(t=>'Real');
@@ -294,7 +285,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$start"><static>10</static></var>
                     <pg-code>
                         $start=Real(10);
                         $max=PopUp(
@@ -384,7 +374,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$eqn"><static>-16t^2+15t+10</static></var>
                     <pg-code>
                         Context('Numeric');
                         Context()->variables->are(t=>'Real');
@@ -412,8 +401,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$eqn1"><static>-16t^2+15t+3+25</static></var>
-                    <var name="$eqn2"><static>-16t^2+15t+3-2</static></var>
                     <pg-code>
                         $describeup=PopUp(["?","go up by 25 feet","go down by 25 feet","stay the same"],1);
                         $describedown=PopUp(["?","go up by 2 feet","go down by 2 feet","stay the same"],2);
@@ -467,8 +454,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$eqn1"><static>f(x) + k</static></var>
-                    <var name="$eqn2"><static>f(x) - k</static></var>
                     <pg-code>
                         Context('Numeric');
                         Context()->variables->are(x=>'Real',k=>'Real');
@@ -552,7 +537,6 @@
         <exercise>
             <webwork>
                 <setup>
-                    <var name="$eqn"><static>-16(t-3)^2 + 15(t-3) + 3 + 7</static></var>
                     <pg-code>
                         Context('Numeric');
                         Context()->variables->are(t=>'Real');
@@ -730,9 +714,6 @@
         <exercise>
             <webwork xml:id="webwork-point-slope">
                 <setup>
-                    <var name="$whichLine"><static>11(x-8)-5</static></var>
-                    <var name="$a[0]"><static>8</static></var>
-                    <var name="$a[1]"><static>5</static></var>
 
                     <pg-code>
                         @a=map{1+$_}NchooseK(8,2);

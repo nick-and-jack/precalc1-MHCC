@@ -357,7 +357,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$cost"><static>60</static></var>
               <pg-code>
                 $cost=Real(60);
                 $units=PopUp(["?","dollars","hours"],"dollars");
@@ -378,10 +377,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$input1"><static>13</static></var>
-              <var name="$output1"><static>162.50</static></var>
-              <var name="$input2"><static>35</static></var>
-              <var name="$output2"><static>415</static></var>
               <pg-code>
                 $input1=random(5,19,1);
                 $output1=Compute("$input1*12.5");
@@ -413,8 +408,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$height1"><static>0</static></var>
-              <var name="$height2"><static>8</static></var>
               <pg-code>
                 $height1=Real(0);
                 $height2=Real(8);
@@ -449,9 +442,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$height1"><static>12</static></var>
-              <var name="$time1"><static>\frac{1}{2}\text{ seconds}</static></var>
-              <var name="$time2"><static>2.5\text{ seconds}</static></var>
               <pg-code>
                 $height1=random(10,15,1);
                 $time1=Compute("($height1/-16+1)^(1/2)");

@@ -201,11 +201,6 @@
         <exercise>
           <webwork xml:id="heart-rate-evaluate">
             <setup>
-              <var name="$hours"><static>20</static></var>
-              <var name="$conExpression"><static>f(20)</static></var>
-              <var name="$bpOfConExpression"><static>g(f(20))</static></var>
-              <var name="$conAtHours"><static>5\cdot e^{-0.058\cdot20}</static></var>
-              <var name="$bpAtHours"><static>-12.5\cdot(20-1)+160</static></var>
               <pg-code>
                 Context('Numeric');
                 $hours = random(15,20,1);
@@ -388,12 +383,6 @@
         <exercise>
           <webwork>
             <setup>
-              <var name="$m"><static>33</static></var>
-              <var name="$x[0]"><static>10</static></var>
-              <var name="$x[1]"><static>15</static></var>
-              <var name="$y[0]"><static>780</static></var>
-              <var name="$y[1]"><static>945</static></var>
-              <var name="$year"><static>10</static></var>
               <pg-code>
                 $m=random(25,35,1);
                 @x=map{$_+2}NchooseK(14,2);
@@ -861,30 +850,6 @@
 <exercise>
   <webwork xml:id="function-composition-table2">
     <setup>
-      <var name="$x[0]"><static>0</static></var>
-      <var name="$x[1]"><static>1</static></var>
-      <var name="$x[2]"><static>2</static></var>
-      <var name="$x[3]"><static>3</static></var>
-      <var name="$x[4]"><static>4</static></var>
-      <var name="$x[5]"><static>5</static></var>
-      <var name="$P[0]"><static>1</static></var>
-      <var name="$P[1]"><static>0</static></var>
-      <var name="$P[2]"><static>5</static></var>
-      <var name="$P[3]"><static>2</static></var>
-      <var name="$P[4]"><static>3</static></var>
-      <var name="$P[5]"><static>4</static></var>
-      <var name="$Q[0]"><static>5</static></var>
-      <var name="$Q[1]"><static>2</static></var>
-      <var name="$Q[2]"><static>3</static></var>
-      <var name="$Q[3]"><static>1</static></var>
-      <var name="$Q[4]"><static>4</static></var>
-      <var name="$Q[5]"><static>8</static></var>
-      <var name="$QofP[0]"><static>2</static></var>
-      <var name="$QofP[1]"><static>5</static></var>
-      <var name="$QofP[2]"><static>8</static></var>
-      <var name="$QofP[3]"><static>3</static></var>
-      <var name="$QofP[4]"><static>1</static></var>
-      <var name="$QofP[5]"><static>4</static></var>
       <pg-code>
         @x=(0,1,2,3,4,5);
         @P=NchooseK(6,6);
@@ -1035,10 +1000,6 @@
 <exercise>
   <webwork xml:id="composition-formula-examples">
     <setup>
-      <var name="$GofF"><static>\left(\frac{x}{x+4}\right)^2</static></var>
-      <var name="$F"><static>\frac{x}{x+4}</static></var>
-      <var name="$G"><static>x^2</static></var>
-      <var name="$FofG"><static>\frac{x^2}{x^2+4}</static></var>
       <pg-code>
         $GofF=Compute("(x/(x+4))^2");
         $F=Compute("x/(x+4)");
@@ -1362,24 +1323,6 @@
 <exercise>
   <webwork xml:id="webwork-windchill">
     <setup>
-      <var name="$rand[0]"><static>0</static></var>
-      <var name="$rand[1]"><static>1</static></var>
-      <var name="$x[0]"><static>0</static></var>
-      <var name="$x[1]"><static>10</static></var>
-      <var name="$x[2]"><static>20</static></var>
-      <var name="$x[3]"><static>30</static></var>
-      <var name="$x[4]"><static>40</static></var>
-      <var name="$x[5]"><static>50</static></var>
-      <var name="$x[6]"><static>60</static></var>
-      <var name="$f[0]"><static>40</static></var>
-      <var name="$f[1]"><static>34</static></var>
-      <var name="$f[2]"><static>30</static></var>
-      <var name="$f[3]"><static>28</static></var>
-      <var name="$f[4]"><static>27</static></var>
-      <var name="$f[5]"><static>26</static></var>
-      <var name="$f[6]"><static>25</static></var>
-      <var name="$w[1]"><static>W(40)=27</static></var>
-      <var name="$i[1]"><static>W^{-1}(34)=10</static></var>
         <pg-code>
           @rand=map{$_+1}NchooseK(6,4);
           @x=(0,10,20,30,40,50,60);

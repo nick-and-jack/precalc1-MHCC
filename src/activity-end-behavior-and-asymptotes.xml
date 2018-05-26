@@ -21,20 +21,6 @@
     <exercise>
       <webwork xml:id="webwork-horizontal-asymptote-numerical">
         <setup>
-          <var name="$a"><static>18</static></var>
-          <var name="$b"><static>13</static></var>
-          <var name="$c"><static>6</static></var>
-          <var name="$value"><static>3</static></var>
-          <var name="$x[0]"><static>1</static></var>
-          <var name="$x[1]"><static>10</static></var>
-          <var name="$x[2]"><static>10</static></var>
-          <var name="$x[3]"><static>10</static></var>
-          <var name="$x[4]"><static>10</static></var>
-          <var name="$y[0]"><static>10</static></var>
-          <var name="$y[1]"><static>10</static></var>
-          <var name="$y[2]"><static>10</static></var>
-          <var name="$y[3]"><static>10</static></var>
-          <var name="$y[4]"><static>10</static></var>
           <pg-code>
             @x=(1, 10, 100, 1000, 10000);
             $a=12*random(2, 5, 1);
@@ -102,7 +88,6 @@
     <exercise>
       <webwork xml:id="webwork-polynomial-end-behavior">
         <setup>
-          <var name="$term"><static>x^3</static></var>
 
           <pg-code>
             $compare=PopUp(["?","very different","very similar"],"very similar");
@@ -168,17 +153,6 @@
     <exercise>
       <webwork xml:id="polynomial-end-behavior-leading-term">
         <setup>
-          <var name="$a[0]"><static>3</static></var>
-          <var name="$a[1]"><static>7</static></var>
-          <var name="$a[2]"><static>11</static></var>
-          <var name="$a[3]"><static>4</static></var>
-          <var name="$a[4]"><static>5</static></var>
-          <var name="$a[5]"><static>14</static></var>
-          <var name="$a[6]"><static>16</static></var>
-          <var name="$a[7]"><static>10</static></var>
-          <var name="$a[8]"><static>9</static></var>
-          <var name="$mina8"><static>-9</static></var>
-          <var name="$a4a5"><static>70</static></var>
 
           <pg-code>
             @a=map{2+$_}NchooseK(15,9);

@@ -898,9 +898,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$digit"><static>7</static></var>
-            <var name="$prob"><static>5</static></var>
-            <var name="$rounded"><static>5.8</static></var>
             <pg-code>
               $digit=random(3,8,1);
               $prob=int(log(2)/log(1+1/$digit)+0.5);
@@ -923,10 +920,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$percent"><static>1.3</static></var>
-            <var name="$formula"><static>1500(1.03)^t</static></var>
-            <var name="$years"><static>21.1</static></var>
-            <var name="$b"><static>1.013</static></var>
             <pg-code>
               $percent=random(12,16,1)/10;
               Context()->variables->are(t=>'Real');
@@ -966,10 +959,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$percent"><static>7</static></var>
-            <var name="$formula"><static>40000(0.93)^t</static></var>
-            <var name="$years"><static>9.6</static></var>
-            <var name="$b"><static>0.93</static></var>
             <pg-code>
               $percent=random(6,9,1);
               Context()->variables->are(t=>'Real');
@@ -1008,8 +997,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$bRounded"><static>1.26</static></var>
-            <var name="$options"><static>26</static></var>
             <pg-code>
               $bRounded=sprintf("%.2f",4/(log(9)/log(2)));
               $options=Real(26);
@@ -1075,16 +1062,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$people[0]"><static>30</static></var>
-            <var name="$people[1]"><static>38</static></var>
-            <var name="$people[2]"><static>41</static></var>
-            <var name="$people[3]"><static>49</static></var>
-            <var name="$people[4]"><static>57</static></var>
-            <var name="$people[5]"><static>68</static></var>
-            <var name="$index"><static>4</static></var>
-            <var name="$choices"><static>57</static></var>
-            <var name="$rejected"><static>21</static></var>
-            <var name="$rejectedRounded"><static>21</static></var>
             <pg-code>
               @people=(30,38,41,49,57,68);
               $index=random(1,5,1);
@@ -1124,9 +1101,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$initial"><static>4000</static></var>
-            <var name="$rate"><static>0.03</static></var>
-            <var name="$years"><static>ln(2)/0.03</static></var>
             <pg-code>
               $rate=random(3,8,1)/100;
               $initial=random(3,7,1)*1000;
@@ -1159,9 +1133,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$rateF"><static>7</static></var>
-            <var name="$rateG"><static>4</static></var>
-            <var name="$solution"><static>\frac{\ln\left(\frac{450}{700}\right)}{\ln\left(\frac{1.04}{1.07}\right)}</static></var>
             <pg-code>
               $rateF=random(6,9,1);
               $rateG=random(3,5,1);
@@ -1192,9 +1163,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$rate"><static>6.2</static></var>
-            <var name="$initial"><static>6500</static></var>
-            <var name="$k"><static>\ln\left(1+1.062\right)</static></var>
             <pg-code>
               $rate=random(55,75,1)/10;
               $initial=random(55,85,1)*100;
@@ -1236,8 +1204,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$left"><static>35</static></var>
-            <var name="$k"><static>\ln\left(\frac{0.35}{1000}\right)</static></var>
             <pg-code>
               $left=random(30,50,1);
               $k=Compute("ln($left/100)/1000");
@@ -1270,10 +1236,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$a"><static>2100</static></var>
-            <var name="$b"><static>0.08</static></var>
-            <var name="$c"><static>200</static></var>
-            <var name="$inverse"><static>\frac{\ln\left(\frac{x-200}{2100}\right)}{0.08}</static></var>
             <pg-code>
               $a=random(19,35,1)*100;
               $b=random(3,9,1)/100;
@@ -1303,10 +1265,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$halfLife"><static>42</static></var>
-            <var name="$initial"><static>120</static></var>
-            <var name="$formula"><static>120\left(0.5\right)^{t/42}</static></var>
-            <var name="$hours"><static>\frac{\ln(\frac{10}{120})}{ln(0.5)}\cdot 42</static></var>
             <pg-code>
               $halfLife=random(25,45,1);
               $initial=random(50,150,1);
@@ -1365,8 +1323,6 @@
       <exercise>
         <webwork>
           <setup>
-            <var name="$cells"><static>10^6*e^(0.495105)</static></var>
-            <var name="$cellsRounded"><static>1640670</static></var>
             <pg-code>
               $cells=Compute("10^6*e^(0.495105)");
               $cellsRounded=sprintf("%.0f",$cells);

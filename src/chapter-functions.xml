@@ -500,8 +500,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$solve2"><static>-2,0,3</static></var>
-                <var name="$fof2"><static>4</static></var>
                 <pg-code>
                   $fof2=Real(4);
                   $solve2=Set(-2,0,3);
@@ -649,8 +647,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$aroc_num1"><static>71</static></var>
-                <var name="$aroc_num2"><static>3.8</static></var>
                 <pg-code>
                   $aroc_num1=Compute("(400-45)/5");
                   $aroc_num2=Compute("(23-4)/5");
@@ -680,8 +676,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$aroc"><static>-2</static></var>
-                <var name="$arocm"><static>m</static></var>
                 <pg-code>
                   $aroc=Real(-2);
                   Context()->variables->are(m=>'Real');
@@ -711,7 +705,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$form"><static>5x+3</static></var>
                 <pg-code>
                   Context()->variables->are(x=>'Real');
                   $form=Formula("5*x+3");
@@ -736,11 +729,6 @@
           <exercise>
             <webwork>
               <setup>
-                <var name="$b"><static>3</static></var>
-                <var name="$c"><static>4</static></var>
-                <var name="$d"><static>14</static></var>
-                <var name="$run"><static>2</static></var>
-                <var name="$rise"><static>10</static></var>
                 <pg-code>
                   $b=random(3,7,1);
                   $c=random(8,12,1);
