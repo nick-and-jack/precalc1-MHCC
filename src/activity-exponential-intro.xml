@@ -946,209 +946,209 @@
             </stage>
             <stage>
               <statement>
-                      <p>Use our growth factor <m><var name="$b" /></m> to continue the pattern in the table.</p>
-                      <sidebyside><tabular top="major" halign="center">
-                          <col halign="left" />
-                          <col halign="left" />
-                          <row bottom="medium">
-                              <cell><m>t</m> (hours)</cell>
-                              <cell><m>P(t)</m> Population Size</cell>
-                          </row>
-                          <row>
-                              <cell><m><var name="$x[0]" /></m></cell>
-                              <cell><m><var name="$y[0]" /></m></cell>
-                          </row>
-                          <row>
-                              <cell><m><var name="$x[1]" /></m></cell>
-                              <cell><m><var name="$y[1]" /></m></cell>
-                          </row>
-                          <row>
-                              <cell><m><var name="$x[2]" /></m></cell>
-                              <cell><m><var name="$y[2]" /></m></cell>
-                          </row>
-                          <row>
-                              <cell><var name="$x[3]" width="2" /></cell>
-                              <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
-                          </row>
-                          <row>
-                              <cell><var name="$x[4]" width="2" /></cell>
-                              <cell><var name="$y[4]" width="20" evaluator="$ev[4]"/></cell>
-                          </row>
-                      </tabular></sidebyside>
-                      <p>Notice there is a pattern emerging. For every hour that passes there is another multiple of the same growth factor.</p>
-                    </statement>
-                  </stage>
-                  <stage>
-                    <statement>
-                      <p>Now, instead of writing the growth factor over and over, we can use exponents to clean up the notation. The exponent <q>counts</q> how many times the percent has been compounded.</p>
-                      <p>
-                        <ol label="a">
-                          <li>
-                          <p>In the next cell, let <m>t = 20</m> hours. Then use an exponent to enter the calculation (not the answer) on the right.</p>
-                          <sidebyside><tabular top="major" halign="center">
-                            <col halign="left" />
-                            <col halign="left" />
-                            <row bottom="medium">
-                              <cell><m>t</m> (hours)</cell>
-                              <cell><m>P(t)</m> Population Size</cell>
-                            </row>
-                            <row>
-                              <cell><var name="$x[5]" width="2" /></cell>
-                              <cell><var name="$y[5]" width="20" evaluator="$ev[5]"/></cell>
-                            </row>
-                          </tabular></sidebyside>
-                        </li>
-                        <li>
-                          <p>Finally, at any time <m>t</m>, what is the resulting formula?</p>
-                          <sidebyside><tabular top="major" halign="center">
-                            <col halign="left" />
-                            <col halign="left" />
-                            <row bottom="medium">
-                              <cell><m>t</m> (hours)</cell>
-                              <cell><m>P(t)</m> Population Size</cell>
-                            </row>
-                            <row>
-                              <cell><var name="$x[6]" width="2" /></cell>
-                              <cell><var name="$y[6]" width="20" evaluator="$ev[6]"/></cell>
-                            </row>
-                          </tabular></sidebyside>
-                        <p>This is your formula to calculate the population at any time!</p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-                <solution>
-                  <p>Notice what is changing and what is not changing in the table.</p>
-                  <p>Every calculation is based on the initial amount, that does not change. Every calculation has multiples of <m>1.08</m>, that does not change either.</p>
-                  <p>However, the number of times <m>1.08</m> is repeated does change.  We have to figure out how the input numbers on the left affect the output values on the right.</p>
-                  <p>In this case the input is the same as the number of repeated <m>1.08</m> factors. This is not always the case.</p>
-                  <p>Notice how the formula <m>390(1.08)^{t}</m>shows what changes and what does not change.  The initial value and the growth factor are both constants.  The only thing that changes is the exponent which counts <em>how many</em> times the growth factor is repeated.</p>
-                </solution>
-              </stage>
-        </webwork>
-      </exercise>
-      <p>Now we have general forms for both linear <me>y=mx+b</me> and exponential <me>y=ab^{x}</me> equations.</p>
-      <p>In the linear equation <me>y=mx+b</me> the variable <m>b</m> is sometimes referred to as the initial value. On a graph it represents the vertical intercept while <m>m</m> represents the rate of change (slope). The rate of change tells us the rate of increase (or decrease) <em>per unit</em> input.</p>
-      <p>The variable <m>x</m> counts how many times the rate of change is added to the initial value.</p>
-      <p>In the exponential equation <me>y = ab^{x}</me> the initial value is represented by <m>a</m>, and <m>b</m> is the growth factor. This equation, or model, is called the <term>discrete exponential</term> model.</p>
-      <p>The growth factor tells us the percent increase (or decrease) <em>per unit</em> input while the variable <m>x</m> in this case counts how many times the growth factor is multiplied.</p>
-      <p>Finding the growth factor <em>per unit</em> in an exponential formula can be tricky. We have been thinking in terms of linear (constant rate of change)for so long, we often think everything is linear.</p>
-      <p>We need a way to convert a statement like <q><m>60 \%</m> over <m>3</m> years</q> into one about the percent growth <em>per year</em>. A good start is to remind ourselves how repeated addition is different than repeated multiplication.</p>
-      <exercise>
-        <introduction>
-          <p>Is one decrease of <m>60</m> students the same as three decreases of <m>20</m> students?</p>
-        </introduction>
-        <webwork>
-          <setup>
-            <var name="$same">
-              <set>
-                <member correct="yes">\text{yes}</member>
-                <member>\text{no}</member>
-              </set>
-            </var>
-            <pg-code>
-                $same = RadioButtons(
-                ["yes","no"],
-                0, labels => ["yes","no"],displayLabels => 0
-                );
-            </pg-code>
-          </setup>
-          <statement>
-            <p>
-              <ol label="a" >
-                <li>
-                  <p>If we start with <m>300</m> students and subtract 60 students, how many students remain? <m>300 - 60 = </m><var name="240" width="5" /> students.</p>
-                </li>
-                <li>
-                  <p>If we start with <m>300</m> students and subtract <m>20</m> students three consecutive times, how many students remain?</p>
-                  <p><m>300-</m> <var name="20" width="5" /> <m>-</m> <var name="20" width="5" /> <m>-</m> <var name="20" width="5" /></p>
-                  <p><m>=300-3\cdot </m> <var name="20" width="5" /></p>
-                  <p><m>=</m> <var name="240" width="5" /></p>
-                </li>
-                <li>
-                  <p>Is one decrease of <m>60</m> students the same as three decreases of <m>20</m> students?</p>
-                  <p><var name="$same" form="buttons" /></p>
+                <p>Use our growth factor <m><var name="$b" /></m> to continue the pattern in the table.</p>
+                <sidebyside><tabular top="major" halign="center">
+                    <col halign="left" />
+                    <col halign="left" />
+                    <row bottom="medium">
+                        <cell><m>t</m> (hours)</cell>
+                        <cell><m>P(t)</m> Population Size</cell>
+                    </row>
+                    <row>
+                        <cell><m><var name="$x[0]" /></m></cell>
+                        <cell><m><var name="$y[0]" /></m></cell>
+                    </row>
+                    <row>
+                        <cell><m><var name="$x[1]" /></m></cell>
+                        <cell><m><var name="$y[1]" /></m></cell>
+                    </row>
+                    <row>
+                        <cell><m><var name="$x[2]" /></m></cell>
+                        <cell><m><var name="$y[2]" /></m></cell>
+                    </row>
+                    <row>
+                        <cell><var name="$x[3]" width="2" /></cell>
+                        <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
+                    </row>
+                    <row>
+                        <cell><var name="$x[4]" width="2" /></cell>
+                        <cell><var name="$y[4]" width="20" evaluator="$ev[4]"/></cell>
+                    </row>
+                </tabular></sidebyside>
+                <p>Notice there is a pattern emerging. For every hour that passes there is another multiple of the same growth factor.</p>
+              </statement>
+            </stage>
+            <stage>
+              <statement>
+                <p>Now, instead of writing the growth factor over and over, we can use exponents to clean up the notation. The exponent <q>counts</q> how many times the percent has been compounded.</p>
+                <p>
+                  <ol label="a">
+                    <li>
+                    <p>In the next cell, let <m>t = 20</m> hours. Then use an exponent to enter the calculation (not the answer) on the right.</p>
+                    <sidebyside><tabular top="major" halign="center">
+                      <col halign="left" />
+                      <col halign="left" />
+                      <row bottom="medium">
+                        <cell><m>t</m> (hours)</cell>
+                        <cell><m>P(t)</m> Population Size</cell>
+                      </row>
+                      <row>
+                        <cell><var name="$x[5]" width="2" /></cell>
+                        <cell><var name="$y[5]" width="20" evaluator="$ev[5]"/></cell>
+                      </row>
+                    </tabular></sidebyside>
+                  </li>
+                  <li>
+                    <p>Finally, at any time <m>t</m>, what is the resulting formula?</p>
+                    <sidebyside><tabular top="major" halign="center">
+                      <col halign="left" />
+                      <col halign="left" />
+                      <row bottom="medium">
+                        <cell><m>t</m> (hours)</cell>
+                        <cell><m>P(t)</m> Population Size</cell>
+                      </row>
+                      <row>
+                        <cell><var name="$x[6]" width="2" /></cell>
+                        <cell><var name="$y[6]" width="20" evaluator="$ev[6]"/></cell>
+                      </row>
+                    </tabular></sidebyside>
+                  <p>This is your formula to calculate the population at any time!</p>
                 </li>
               </ol>
             </p>
           </statement>
-        </webwork>
-      </exercise>
-      <exercise>
-        <introduction>
-          <p>Is one decrease by <m>60 \%</m> of students the same as three decreases by <m>20 \%</m> of students?</p>
-        </introduction>
-        <webwork>
-          <setup>
-            <var name="$same">
-              <set>
-                <member>\text{yes}</member>
-                <member correct="yes">\text{no}</member>
-              </set>
-            </var>
+          <solution>
+            <p>Notice what is changing and what is not changing in the table.</p>
+            <p>Every calculation is based on the initial amount, that does not change. Every calculation has multiples of <m>1.08</m>, that does not change either.</p>
+            <p>However, the number of times <m>1.08</m> is repeated does change.  We have to figure out how the input numbers on the left affect the output values on the right.</p>
+            <p>In this case the input is the same as the number of repeated <m>1.08</m> factors. This is not always the case.</p>
+            <p>Notice how the formula <m>390(1.08)^{t}</m>shows what changes and what does not change.  The initial value and the growth factor are both constants.  The only thing that changes is the exponent which counts <em>how many</em> times the growth factor is repeated.</p>
+          </solution>
+        </stage>
+      </webwork>
+    </exercise>
+    <p>Now we have general forms for both linear <me>y=mx+b</me> and exponential <me>y=ab^{x}</me> equations.</p>
+    <p>In the linear equation <me>y=mx+b</me> the variable <m>b</m> is sometimes referred to as the initial value. On a graph it represents the vertical intercept while <m>m</m> represents the rate of change (slope). The rate of change tells us the rate of increase (or decrease) <em>per unit</em> input.</p>
+    <p>The variable <m>x</m> counts how many times the rate of change is added to the initial value.</p>
+    <p>In the exponential equation <me>y = ab^{x}</me> the initial value is represented by <m>a</m>, and <m>b</m> is the growth factor. This equation, or model, is called the <term>discrete exponential</term> model.</p>
+    <p>The growth factor tells us the percent increase (or decrease) <em>per unit</em> input while the variable <m>x</m> in this case counts how many times the growth factor is multiplied.</p>
+    <p>Finding the growth factor <em>per unit</em> in an exponential formula can be tricky. We have been thinking in terms of linear (constant rate of change)for so long, we often think everything is linear.</p>
+    <p>We need a way to convert a statement like <q><m>60 \%</m> over <m>3</m> years</q> into one about the percent growth <em>per year</em>. A good start is to remind ourselves how repeated addition is different than repeated multiplication.</p>
+    <exercise>
+      <introduction>
+        <p>Is one decrease of <m>60</m> students the same as three decreases of <m>20</m> students?</p>
+      </introduction>
+      <webwork>
+        <setup>
+          <var name="$same">
+            <set>
+              <member correct="yes">\text{yes}</member>
+              <member>\text{no}</member>
+            </set>
+          </var>
+          <pg-code>
+            $same = RadioButtons(
+            ["yes","no"],
+            0, labels => ["yes","no"],displayLabels => 0
+            );
+          </pg-code>
+        </setup>
+        <statement>
+          <p>
+            <ol label="a" >
+              <li>
+                <p>If we start with <m>300</m> students and subtract 60 students, how many students remain? <m>300 - 60 = </m><var name="240" width="5" /> students.</p>
+              </li>
+              <li>
+                <p>If we start with <m>300</m> students and subtract <m>20</m> students three consecutive times, how many students remain?</p>
+                <p><m>300-</m> <var name="20" width="5" /> <m>-</m> <var name="20" width="5" /> <m>-</m> <var name="20" width="5" /></p>
+                <p><m>=300-3\cdot </m> <var name="20" width="5" /></p>
+                <p><m>=</m> <var name="240" width="5" /></p>
+              </li>
+              <li>
+                <p>Is one decrease of <m>60</m> students the same as three decreases of <m>20</m> students?</p>
+                <p><var name="$same" form="buttons" /></p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </webwork>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>Is one decrease by <m>60 \%</m> of students the same as three decreases by <m>20 \%</m> of students?</p>
+      </introduction>
+      <webwork>
+        <setup>
+          <var name="$same">
+            <set>
+              <member>\text{yes}</member>
+              <member correct="yes">\text{no}</member>
+            </set>
+          </var>
 
-            <pg-code>
-                $same = RadioButtons(
-                ["yes","no"],
-                1, labels => ["yes","no"],displayLabels => 0
-                );
-            </pg-code>
-          </setup>
-          <stage>
-            <statement>
-                  <p>What is the growth factor associated with a <m>60 \%</m> decrease? Multiply by <var name="0.4" width="4" /> to reduce by <m>60 \%</m>.</p>
-                  <p>If we start with <m>300</m> students then decrease enrollment by <m>60 \%</m>, there will be <var name="120" width="5" /> students remaining.</p>
-            </statement>
-          </stage>
-          <stage>
-            <statement>
-                  <p>What is the growth factor associated with a <m>20 \%</m> decrease? Multiply by <var name="0.8" width="4" /> to reduce by <m>20 \%</m>.</p>
-                  <p>If we start with <m>300</m> students then reduce enrollment by <m>20 \%</m> three consecutive times, how many students remain?</p>
-                  <p><m>300\cdot </m> <var name="0.8" width="5" /> <m>\cdot </m> <var name="0.8" width="5" /> <m>\cdot </m> <var name="0.8" width="5" /></p>
-                  <p><m>=300(</m> <var name="0.8" width="5" /> <m>)^{3}</m></p>
-                  <p><m>=</m> <var name="153.6" width="5" /> (use the actual result for now even though there's no such thing as fractions of a student).</p>
-                  <p>Is one decrease by <m>60 \%</m> of students the same as three decreases by <m>20 \%</m> of students?</p>
-                  <p><var name="$same" form="buttons" /></p>
-            </statement>
-          </stage>
-          <stage>
-            <statement>
-                  <p>What is the overall growth factor associated with three consecutive <m>20 \%</m> decreases?</p>
-                  <p><m>0.8^{3}=</m> <var name="0.512" width="5" /> (round to three decimal places).</p>
-                  <p>What percent decrease does this overall growth factor represent?</p>
-                  <p>It represents an overall decrease of <var name="48.8" width="5" /><m> \%</m>. (round to <m>1</m> decimal place)</p>
-            </statement>
-            <solution>
-              <p>
-                <ol label="a" >
-                  <li>
-                    <p>A <m>60 \%</m> decrease corresponds to a growth factor of <m>1-0.6=0.4</m></p>
-                  </li>
-                  <li>
-                    <p>A <m>60 \%</m> reduction of <m>300 </m>students is <m>120</m> students</p>
-                  </li>
-                  <li>
-                    <p>The growth factor corresponding to a <m>20 \%</m> decrease is <m>1-0.2=0.8</m></p>
-                  </li>
-                  <li>
-                    <p>Three consecutive <m>20 \%</m> decreases from <m>300</m> students is exactly <m>153.6</m> students.</p>
-                  </li>
-                  <li>
-                    <p>One <m>60 \%</m> decrease is not the same as three <m>20 \%</m> decreases!</p>
-                  </li>
-                  <li>
-                    <p>Three <m>20 \%</m> decreases corresponds to an overall growth factor of <m>0.8^{3}=0.512</m></p>
-                    <p>Solving for the decrease we get <m>1-0.512=0.488</m>which corresponds to a <m>48.8 \%</m> decrease in enrollment.</p>
-                  </li>
-                </ol>
-              </p>
-            </solution>
-          </stage>
-        </webwork>
-      </exercise>
-      <p>As we found in the last exercise, given a change of <m>60 \%</m> over three years, we cannot simply divide <m>60 \%</m> by <m>3</m> to find the annual percent change. Because of compounding, three <m>20 \%</m> increases is actually more than one <m>60 \%</m> increase.</p>
-      <p>To derive an exponential formula of the form <m>y=ab^{x}</m>, the goal is to find the values <m>a</m> and <m>b</m> for the specific problem, and then you're done!</p>
-      <p>Practice finding exponential formulas in the next three exercises.</p>
+          <pg-code>
+            $same = RadioButtons(
+            ["yes","no"],
+            1, labels => ["yes","no"],displayLabels => 0
+            );
+          </pg-code>
+        </setup>
+        <stage>
+          <statement>
+            <p>What is the growth factor associated with a <m>60 \%</m> decrease? Multiply by <var name="0.4" width="4" /> to reduce by <m>60 \%</m>.</p>
+            <p>If we start with <m>300</m> students then decrease enrollment by <m>60 \%</m>, there will be <var name="120" width="5" /> students remaining.</p>
+          </statement>
+        </stage>
+        <stage>
+          <statement>
+            <p>What is the growth factor associated with a <m>20 \%</m> decrease? Multiply by <var name="0.8" width="4" /> to reduce by <m>20 \%</m>.</p>
+            <p>If we start with <m>300</m> students then reduce enrollment by <m>20 \%</m> three consecutive times, how many students remain?</p>
+            <p><m>300\cdot </m> <var name="0.8" width="5" /> <m>\cdot </m> <var name="0.8" width="5" /> <m>\cdot </m> <var name="0.8" width="5" /></p>
+            <p><m>=300(</m> <var name="0.8" width="5" /> <m>)^{3}</m></p>
+            <p><m>=</m> <var name="153.6" width="5" /> (use the actual result for now even though there's no such thing as fractions of a student).</p>
+            <p>Is one decrease by <m>60 \%</m> of students the same as three decreases by <m>20 \%</m> of students?</p>
+            <p><var name="$same" form="buttons" /></p>
+          </statement>
+        </stage>
+        <stage>
+          <statement>
+                <p>What is the overall growth factor associated with three consecutive <m>20 \%</m> decreases?</p>
+                <p><m>0.8^{3}=</m> <var name="0.512" width="5" /> (round to three decimal places).</p>
+                <p>What percent decrease does this overall growth factor represent?</p>
+                <p>It represents an overall decrease of <var name="48.8" width="5" /><m> \%</m>. (round to <m>1</m> decimal place)</p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a" >
+                <li>
+                  <p>A <m>60 \%</m> decrease corresponds to a growth factor of <m>1-0.6=0.4</m></p>
+                </li>
+                <li>
+                  <p>A <m>60 \%</m> reduction of <m>300 </m>students is <m>120</m> students</p>
+                </li>
+                <li>
+                  <p>The growth factor corresponding to a <m>20 \%</m> decrease is <m>1-0.2=0.8</m></p>
+                </li>
+                <li>
+                  <p>Three consecutive <m>20 \%</m> decreases from <m>300</m> students is exactly <m>153.6</m> students.</p>
+                </li>
+                <li>
+                  <p>One <m>60 \%</m> decrease is not the same as three <m>20 \%</m> decreases!</p>
+                </li>
+                <li>
+                  <p>Three <m>20 \%</m> decreases corresponds to an overall growth factor of <m>0.8^{3}=0.512</m></p>
+                  <p>Solving for the decrease we get <m>1-0.512=0.488</m>which corresponds to a <m>48.8 \%</m> decrease in enrollment.</p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </stage>
+      </webwork>
+    </exercise>
+    <p>As we found in the last exercise, given a change of <m>60 \%</m> over three years, we cannot simply divide <m>60 \%</m> by <m>3</m> to find the annual percent change. Because of compounding, three <m>20 \%</m> increases is actually more than one <m>60 \%</m> increase.</p>
+    <p>To derive an exponential formula of the form <m>y=ab^{x}</m>, the goal is to find the values <m>a</m> and <m>b</m> for the specific problem, and then you're done!</p>
+    <p>Practice finding exponential formulas in the next three exercises.</p>
     <p>In each example we will use time, <m>t</m>, as the input. But the strategy will be the same regardless of what variable we use:</p>
       <p>
         <ul>
