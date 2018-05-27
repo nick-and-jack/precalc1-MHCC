@@ -243,11 +243,12 @@
           <p>The cost of renting an apartment in a growing town has increased by <m>21.4 \%</m> over the last <m>5</m> years.  If this trend continues, in how many years will rental prices double?</p>
         </statement>
         <solution>
-          <p>We use an exponential model <m>ab^{t}</m> because of the repeated <m>21.4 \%</m> growth every <m>5</m> years. The annual growth factor <m>b</m> is found by realizing it occurs <m>5</m> times for a total growth of <m>21.4 \%</m>. This means that <me>b^{5}=1.214</me> and solving this equation we get</p>
-          <md>
-            <mrow>b^{5} \amp=1.214</mrow>
-            <mrow>(b^{5})^{\frac{1}{5}} \amp=(1.214)^{\frac{1}{5}}.</mrow>
-          </md>
+          <p>We use an exponential model <m>ab^{t}</m> because of the repeated <m>21.4 \%</m> growth every <m>5</m> years. The annual growth factor <m>b</m> is found by realizing it occurs <m>5</m> times for a total growth of <m>21.4 \%</m>. This means that <me>b^{5}=1.214</me> and solving this equation we get
+            <md>
+              <mrow>b^{5} \amp=1.214</mrow>
+              <mrow>(b^{5})^{\frac{1}{5}} \amp=(1.214)^{\frac{1}{5}}.</mrow>
+            </md>
+          </p>
           <p>Our model is therefore <m>ab^{\frac{t}{5}}</m> where <m>a</m> is the current cost of renting an appartment. We want to find the time it takes for the cost of renting to double. Since the cost of renting an apartment now is <m>a</m> dollars, then we want to know when the price will be <m>2a</m>.</p>
           <p>In math we would write <me>ab^{\frac{t}{5}}=2a</me> but since <m>a</m> cancels on both sides we can just write <me>b^{\frac{t}{5}}=2</me>.</p>
           <p>Solving this equation for <m>t</m> gives us the doubling time.</p>
@@ -420,12 +421,13 @@
         <blockquote><p><em>A population of <m>500</m> grows by <m>8 \%</m> every <m>10</m> years.</em></p>
         <p><m>P(t)=500(1.08)^{\frac{t}{10}}</m></p></blockquote>
         <p>Notice how we went from an observation about the population growth directly to an equation without any algebra. We literally translated information from one language, English, to another, Math.</p>
-        <p>However, with just one algebra step we can get an equation to model the annual percent increase.</p>
-        <md>
-          <mrow>P(t)=500(1.08)^{\frac{t}{10}}</mrow>
-          <mrow>P(t)=500(1.08^{\frac{1}{10}})^{t}</mrow>
-          <mrow>P(t) \approx 500(1.007726)^{t}</mrow>
-        </md>
+        <p>However, with just one algebra step we can get an equation to model the annual percent increase.
+          <md>
+            <mrow>P(t)=500(1.08)^{\frac{t}{10}}</mrow>
+            <mrow>P(t)=500(1.08^{\frac{1}{10}})^{t}</mrow>
+            <mrow>P(t) \approx 500(1.007726)^{t}</mrow>
+          </md>
+        </p>
         <p>In this example <m>a=500</m> is the initial size of the population when the measuring began and <m>b \approx 1.007726</m> is the annual growth factor (<init>i.e.</init> the number that is multiplied repeatedly) representing an annual percent growth of about <m>0.7726 \%</m> each year.</p>
       </example>
       <p>Another way to arrive at an exponential model is through higher level calculus called <term>differential equations</term>. Of course we will not get into this subject, but here is a tiny little glimpse.</p>
