@@ -465,14 +465,12 @@
             </webwork>
           </exercise>
 
-<todo>Fix the next exercise as it won't accept a list of numbers as the answer.</todo>
-
           <exercise>
             <webwork>
               <setup>
                 <pg-code>
                   $fof2=Real(4);
-                  $solve2=Set(-2,0,3);
+                  $solve2=List(-2,0,3);
                   $gr=init_graph(-6,-6,6,6,
                   axes=>[0,0],
                   grid=>[12,12],
