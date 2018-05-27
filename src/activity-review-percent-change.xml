@@ -177,7 +177,8 @@
       </webwork>
   </exercise>
   <p>We should now be able to use the growth factor to increase a value by a percent and we should be able to determine the percent growth between two values by calculating the growh factor and extracting the percent change.</p>
-<example>
+<exercise>
+  <introduction>
   <p>
     <ol label="A" >
       <li>
@@ -188,7 +189,7 @@
       </li>
     </ol>
   </p>
-  <exercise>
+  </introduction>
     <webwork>
       <setup>
         <pg-code>
@@ -198,7 +199,7 @@
             $b2=Real(1.129);
         </pg-code>
       </setup>
-      <stage> 
+      <stage>
         <statement>
           <p>Price of Milk Increase</p>
           <p>
@@ -208,7 +209,7 @@
                 <p>What is the growth factor for a <m>7.5 \%</m> increase?</p>
                 <p><m>b = </m> <var name="$b1" width="5" /></p>
               </li>
-              <li>  
+              <li>
                 <p>We multiply the original price of milk, <m>\$ 3.43</m> by our growth factor to get the new price of milk.</p>
                 <p>The price of milk today is <m>\$</m><var name="$increase1" width="5" /> (round to the nearest cent).</p>
               </li>
@@ -237,16 +238,16 @@
         </stage>
       </webwork>
     </exercise>
-  </example>
 </subsection>
 
 <subsection>
   <title>Growth Factor: Percent Decrease (<m>0 \lt b \lt 1</m>)</title>
   <p>Just like something can increase by a percent, it is also possible to decrease by a percent.</p>
   <p>Complete the following example to determine on your own how to decrease a value by a percent.</p>
-  <example>
-  <p>A pair of shorts on sale for <q><m>15 \%</m> off</q>.</p>
   <exercise>
+    <introduction>
+      <p>A pair of shorts on sale for <q><m>15 \%</m> off</q>.</p>
+    </introduction>
     <webwork>
       <stage>
         <statement>
@@ -278,7 +279,6 @@
       </stage>
     </webwork>
   </exercise>
-</example>
   <p>Notice that our price reduction was achieved by multipying by a growth factor <m>b \lt 1</m>.</p>
   <p>Something we need to consider about a percent decrease is, <q>How much can we decrease?</q></p>
   <p>Let's think about that for a moment.</p>
@@ -346,12 +346,13 @@
     </exercise>
 
   <p>Consider a study on the reduction of asthma.</p>
-  <example>
-  <p>In a study of 658 adults, most of whom had mild to moderate asthma, reviewers found that oral vitamin D supplements ranging from 400 to 4,000 units a day reduced the risk of attacks requiring medication by 37 percent.</p>
-  <blockquote>
-  <p><em><mdash />New York Times, Vitamin D May Reduce Asthma Attacks, Nicholas Bakalar, Sept. 8 2016</em></p>
-  </blockquote>
-    <exercise>
+  <exercise>
+    <introduction>
+      <p>In a study of 658 adults, most of whom had mild to moderate asthma, reviewers found that oral vitamin D supplements ranging from 400 to 4,000 units a day reduced the risk of attacks requiring medication by 37 percent.</p>
+      <blockquote>
+        <p><em><mdash />New York Times, Vitamin D May Reduce Asthma Attacks, Nicholas Bakalar, Sept. 8 2016</em></p>
+      </blockquote>
+    </introduction>
       <webwork>
         <setup>
           <pg-code>
@@ -423,6 +424,5 @@
         </solution>
       </webwork>
     </exercise>
-  </example>
   </subsection>
 </section>
