@@ -104,7 +104,7 @@
     </exercise>
 
     <exercise>
-      <webwork xml:id="webwork-polynomial-roots">
+      <webwork>
         <setup>
           <pg-code>
             $m=random(1,9,1);
@@ -134,7 +134,7 @@
 
     <p>Now, we will see how our knowledge of first degree polynomials (<init>a.k.a.</init> <em>lines</em>) will help us to understand polynomials of higher degrees.</p>
     <exercise>
-      <webwork xml:id="webwork-roots-linear-to-quadratic">
+      <webwork>
         <pg-macros>
           <macro-file>contextLimitedPolynomial.pl</macro-file>
         </pg-macros>
@@ -188,7 +188,7 @@
     </exercise>
 
     <exercise>
-      <webwork xml:id="webwork-roots-linear-to-quadratic1">
+      <webwork>
         <setup>
           <pg-code>
             $rootsWhere=PopUp(["?","It has both roots of the linear functions.","It has different roots than the linear functions.","Roots? There are no roots."],1);
@@ -209,7 +209,7 @@
     </exercise>
 
     <exercise>
-      <webwork xml:id="webwork-roots-linear-to-cubic">
+      <webwork>
         <setup>
 
           <pg-code>
@@ -238,7 +238,7 @@
     <p>By now, you are already seeing the relationship between the roots of a polynomial, and the roots of its linear factors. Use this observation to make predictions about the graph of a polynomial in the next exercise.</p>
 
     <exercise>
-      <webwork xml:id="webwork-roots-graph-guess">
+      <webwork>
         <setup>
           <pg-code>
             $graph=PopUp(["?","Graph A","Graph B","Graph C","Graph D"],4);
@@ -304,7 +304,7 @@
     <p>In the next two problems, you'll predict the number of roots of a polynomial and where those roots are located.</p>
 
     <exercise>
-      <webwork xml:id="webwork-guess-the-number-of-roots">
+      <webwork>
         <setup>
           <pg-code>
             $c=4;
@@ -339,7 +339,7 @@
     </exercise>
 
     <exercise>
-      <webwork xml:id="webwork-roots-linear-to-quartic">
+      <webwork>
         <setup>
           <pg-code>
             $didItGraph=PopUp(["?","yes","no"],"yes");
@@ -371,7 +371,7 @@
     <p>Now, let's summarize what we've seen up to this point in the next exercise.</p>
 
     <exercise>
-      <webwork xml:id="webwork-polynomial-roots-summary-statements">
+      <webwork>
         <setup>
           <pg-code>
             $rootsN=PopUp(["?","2","N"],"N");
@@ -410,7 +410,7 @@
     </blockquote>
     <p>In the next exercise, you will see how a horizontal asymptote of a function can be seen by a table of values.</p>
     <exercise>
-      <webwork xml:id="webwork-horizontal-asymptote-numerical">
+      <webwork>
         <setup>
           <pg-code>
             @x=(1, 10, 100, 1000, 10000);
@@ -509,7 +509,7 @@
     <p>As you know, not every function has a horizontal asymptote. For example, power functions do not <q>flatten out,</q> but rather they either increase toward <m>\infty</m> (point upward) or decrease toward <m>-\infty</m> (point downward). So, end-behavior may be just that <mdash /> the graph increasing or decreasing forever.</p>
     <p>In the next two exercises, you will examine the end-behavior of a polynomial and learn to predict this end-behavior by observing its formula.</p>
     <exercise>
-      <webwork xml:id="webwork-polynomial-end-behavior">
+      <webwork>
         <setup>
 
           <pg-code>
@@ -538,7 +538,7 @@
     </exercise>
 
     <exercise>
-      <webwork xml:id="webwork-polynomial-end-behavior-2">
+      <webwork>
         <setup>
 
           <pg-code>
@@ -578,7 +578,7 @@
     <p>And, since you already know the graphs of power functions, you should be able to predict the end-behavior of a polynomial if you know its leading term.</p>
     <p>In the next exercise, you will get practice finding the leading term of a polynomial.</p>
     <exercise>
-      <webwork xml:id="polynomial-end-behavior-leading-term">
+      <webwork>
         <setup>
 
           <pg-code>
@@ -622,7 +622,7 @@
     </exercise>
 <todo>Geogebra graphs are allowing click-and-drag when they shouldn't be.</todo>
     <exercise>
-      <webwork xml:id="polynomial-end-behavior-arrows">
+      <webwork>
         <setup>
 
           <pg-code>
@@ -662,7 +662,7 @@
     <p>In the next two exercises, you will be given the graph of a polynomial. Use what you know about the roots and end-behavior in order to write the formula.</p>
 
     <exercise>
-      <webwork xml:id="webwork-polynomial-write-formula">
+      <webwork>
         <setup>
           <pg-code>
             $num=Real(3);
@@ -704,7 +704,7 @@
     </exercise>
 
     <exercise>
-      <webwork xml:id="webwork-polynomial-write-formula-1">
+      <webwork>
         <setup>
           <pg-code>
             @root=(-4,-1,2);
@@ -936,7 +936,7 @@
 
       <p>In the next exercise, use this algebraic technique to determine the formula for a different polynomial.</p>
       <exercise>
-        <webwork xml:id="webwork-polynomial-formula-stretched">
+        <webwork>
           <setup>
             <pg-code>
               $m=Real(0.25);
@@ -986,7 +986,7 @@
     <p>In the final exercises for this activity, you will explore these effects on the graph.</p>
 <todo>Geogebra graphs are allowing click-and-drag when they shouldn't be.</todo>
     <exercise>
-      <webwork xml:id="webwork-repeated-roots-introduction">
+      <webwork>
         <setup>
 
             <pg-code>
@@ -1025,7 +1025,7 @@
     </exercise>
 
     <exercise>
-      <webwork xml:id="webwork-repeated-roots-1">
+      <webwork>
         <setup>
           <pg-code>
             $bounces=PopUp(["?","crosses over","bounces off"],"bounces off");
@@ -1091,7 +1091,7 @@
     </exercise>
 
     <exercise>
-      <webwork xml:id="webwork-polynomial-multiplicity-formula">
+      <webwork>
         <setup>
           <pg-code>
             $formula=Compute("(x+2)(x-1)^2(x-3)^2");

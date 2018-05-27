@@ -184,7 +184,7 @@
         <p>Continue <xref ref="example-composition-blood-pressure">Example</xref> in the next exercise, evaluating the composition with a numerical input.</p>
 
         <exercise>
-          <webwork xml:id="heart-rate-evaluate">
+          <webwork>
             <setup>
               <pg-code>
                 Context('Numeric');
@@ -231,7 +231,7 @@
         <p>Finally, we conclude <xref ref="example-composition-blood-pressure">Example</xref> by finding the formula for a <term>composite function</term>.</p>
 
         <exercise>
-          <webwork xml:id="heart-rate-formula">
+          <webwork>
             <setup>
               <pg-code>
                 Context()->variables->are(t=>'Real', C=>'Real');
@@ -833,7 +833,7 @@
 
 
 <exercise>
-  <webwork xml:id="function-composition-table2">
+  <webwork>
     <setup>
       <pg-code>
         @x=(0,1,2,3,4,5);
@@ -983,7 +983,7 @@
 <exercisegroup><introduction><p>Formula of a Composite Function</p></introduction>
 
 <exercise>
-  <webwork xml:id="composition-formula-examples">
+  <webwork>
     <setup>
       <pg-code>
         $GofF=Compute("(x/(x+4))^2");
@@ -1304,7 +1304,7 @@
 </exercise>
 
 <exercise>
-  <webwork xml:id="webwork-windchill">
+  <webwork>
     <setup>
         <pg-code>
           @rand=map{$_+1}NchooseK(6,4);
