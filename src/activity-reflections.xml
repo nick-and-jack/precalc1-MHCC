@@ -44,34 +44,35 @@
         </webwork>
       </exercise>
 
-      <paragraphs><title>The Opposite</title>
-        <p>We refer to the number <m>-5</m> by the name <q>negative <m>5</m></q>. The word <em>negative</em> always refers to things <em>less than zero</em>. So, what should we call the expression <m>-N</m>?</p>
-        <p>If <m>N</m> is a variable (or an unknown quantity), then it may not make sense to say <q>negative <m>N</m></q>. If <m>N</m> is a positive number, then this would be fine, but if <m>N</m> is a <em>negative</em> number, then <m>-N</m> would be positive. No matter whether <m>N</m> is positive or negative to begin with, the expression <m>-N</m> will have the opposite sign of <m>N</m>.</p>
-        <p>Therefore, we will call <m>-N</m> the <term>opposite</term><idx><h>opposite</h></idx> of <m>N</m>.</p>
-        <p>This is particularly useful when we don't know if a variable is positive or negative.</p>
-        <exercise>
-          <webwork>
-            <setup>
-              <pg-code>
-                $x=random(3,30,1);
-                $y=random(-30,-3,1);
-                $oppX=-1*$x;
-                $oppY=-1*$y;
-              </pg-code>
-            </setup>
-            <statement>
-              <p>Suppose <m>x = <var name="$x" /></m> and <m>y = <var name="$y" /></m>. Type in the correct number in each blank below.</p>
-              <p>The opposite of <m>x</m> is:  <var name="$oppX" width="10" /></p>
-              <p>The opposite of <m>y</m> is:  <var name="$oppY" width="10" /></p>
-            </statement>
-            <solution>
-              <p>The opposite of <m>x</m> is:  <me><var name="$oppX" /></me></p>
-              <p>The opposite of <m>y</m> is:  <me><var name="$oppY" /></me></p>
-            </solution>
-          </webwork>
-        </exercise>
-        <p>We refer to <m>-x</m> as the opposite of <m>x</m>, and we avoid saying <em>negative</em> <m>x</m>.</p>
-      </paragraphs>
+      <p>We refer to the number <m>-5</m> by the name <q>negative <m>5</m></q>. The word <em>negative</em> always refers to things <em>less than zero</em>. So, what should we call the expression <m>-N</m>?</p>
+
+      <p>If <m>N</m> is a variable (or an unknown quantity), then it may not make sense to say <q>negative <m>N</m></q>. If <m>N</m> is a positive number, then this would be fine, but if <m>N</m> is a <em>negative</em> number, then <m>-N</m> would be positive. No matter whether <m>N</m> is positive or negative to begin with, the expression <m>-N</m> will have the opposite sign of <m>N</m>.</p>
+
+      <p>Therefore, we will call <m>-N</m> the <term>opposite</term><idx><h>opposite</h></idx> of <m>N</m>.</p>
+
+      <p>This is particularly useful when we don't know if a variable is positive or negative.</p>
+      <exercise>
+        <webwork>
+          <setup>
+            <pg-code>
+              $x=random(3,30,1);
+              $y=random(-30,-3,1);
+              $oppX=-1*$x;
+              $oppY=-1*$y;
+            </pg-code>
+          </setup>
+          <statement>
+            <p>Suppose <m>x = <var name="$x" /></m> and <m>y = <var name="$y" /></m>. Type in the correct number in each blank below.</p>
+            <p>The opposite of <m>x</m> is:  <var name="$oppX" width="10" /></p>
+            <p>The opposite of <m>y</m> is:  <var name="$oppY" width="10" /></p>
+          </statement>
+          <solution>
+            <p>The opposite of <m>x</m> is:  <me><var name="$oppX" /></me></p>
+            <p>The opposite of <m>y</m> is:  <me><var name="$oppY" /></me></p>
+          </solution>
+        </webwork>
+      </exercise>
+      <p>We refer to <m>-x</m> as the opposite of <m>x</m>, and we avoid saying <em>negative</em> <m>x</m>.</p>
 
       <p>Check your understanding in the next exercise, where you will locate the opposite of a number.</p>
       <exercise>
