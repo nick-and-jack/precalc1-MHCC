@@ -538,21 +538,21 @@
             <p>If expanded, the leading term would be the power function <m>x^6</m>, so the end-behavior would be increasing on both the left and right sides of the graph.</p>
           </hint>
           <answer>
-            <p>The graph should look like:
-              <figure>
-                  <image width="47%">
-                      <latex-image>
-                      <![CDATA[\begin{tikzpicture}
-                                  \begin{axis}[ymin=-1000, ymax=1000,
-                                              ytick={},
-                                              minor ytick={}]
-                                      \addplot+[domain=-6:6,samples=100]{(x-4)*(x-1)^2*(x+3)^2*(x+5)};
-                                   \end{axis}
-                              \end{tikzpicture}
-                      ]]>
-                      </latex-image>
-                  </image>
-              </figure></p>
+            <p>The graph should look like:</p>
+            <sidebyside>
+                <image width="47%">
+                    <latex-image>
+                    <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[ymin=-1000, ymax=1000,
+                                            ytick={},
+                                            minor ytick={}]
+                                    \addplot+[domain=-6:6,samples=100]{(x-4)*(x-1)^2*(x+3)^2*(x+5)};
+                                 \end{axis}
+                            \end{tikzpicture}
+                    ]]>
+                    </latex-image>
+                </image>
+            </sidebyside>
             <p>Notice that the graph crosses the <m>x</m>-axis at <m>x = -5</m> and <m>x = 4</m>, and it bounces off of the <m>x</m>-axis at <m>x = -3</m> and <m>x = 1</m>.</p>
           </answer>
         </exercise>
