@@ -71,7 +71,7 @@ IMAGESOUT  = $(OUTPUT)/images
 WWOUT      = $(OUTPUT)/webwork-extraction
 
 # Some aspects of producing these examples require a WeBWorK server.
-SERVER = https://webwork-ptx.aimath.org
+SERVER = "(https://webwork.pcc.edu,anonymous,anonymous,anonymous,open)"
 
 
 ################
