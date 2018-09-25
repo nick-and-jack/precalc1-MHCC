@@ -126,7 +126,7 @@ html:
 	cp -a $(IMAGESOUT) $(HTMLOUT)
 	cd $(HTMLOUT); \
 	xsltproc --stringparam webwork.divisional.static no $(MBXSL)/mathbook-html.xsl $(OUTPUT)/merge.ptx;
-	open -a $(HTMLVIEWER) index.html
+	open -a $(HTMLVIEWER) $(HTMLOUT)/precalc1-MHCC.html
 
 ###########
 # Utilities
