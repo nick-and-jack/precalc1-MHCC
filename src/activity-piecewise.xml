@@ -36,7 +36,7 @@
         <p>Annual incomes greater than <m>60</m> (thousand dollars) are taxed at <m>15 \%</m> for the first <m>60</m> then <m>35 \%</m> for any amount over <m>60</m> thousand dollars.</p>
         <p>What piece of the graph do you use to calculate the income tax? It depends on the income. Of the two line segments, use the left one to calculate the tax for incomes up to <m>60</m> thousand dollars, and use the right segment to calculate the tax for incomes over <m>60</m> thousand dollars.</p>
         </example>
-        <p>The most difficult part of piecewise functions is the notation. In the following exercise you will use a skill you already know (finding function values from a graph), and then transition into how to write and understand piecewise notation.</p>
+        <p>The most difficult part of piecewise functions is the notation. In the following exercise you will use a skill you already know (evaluate a function from a graph), and then transition into how to write and understand piecewise notation.</p>
    <exercise>
      <webwork>
        <setup>
@@ -97,6 +97,7 @@
         <stage>
           <statement>
             <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QeJS3ygG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>For each answer below, inclcude <m>y =</m> as part of the answer.</p>
             <p>What is the equation for line A? <var name="$lineA" width="15" /></p>
             <p>What is the equation for line B? <var name="$lineB" width="15" /></p>
             <p>What is the equation for line C? <var name="$lineC" width="15" /></p>
@@ -110,7 +111,7 @@
         <stage>
           <statement>
             <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QeJS3ygG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Just like when you used the graph to evaluate different input values, you only use the piece of the graph that corresponds to the input you were given. The graph is just a single function, so one input can only give you one output. If all you had were formulas instead of the graph, you would have to decide which formula to use depending on the input given.</p>
+            <p>Notice, when you used the graph to evaluate the function, you had to decide which section of the graph to use. If there was no graph, but only formulas instead, you would need a way to decide which formula to use in order to evaluate the function and get a result.</p>
             <p>Keep in mind if two lines intersect at the same point then the input value is shared between the two formulas. If two line are joined at <m>x = 21</m> for example, then <m>x = 21</m> belongs in the domain of each line.</p>
             <p>Under what conditions would you use Line A to evaluate the function? Use inequalities to state the domain for each line.</p>
             <p>Use line A for the interval: <var name="$answer1" width="10" /></p>
@@ -148,6 +149,9 @@
               $output1 = Real(2);
               $output2 = Real(0);
               $output3 = Real(1.75);
+              $formulaA=Compute("-2(x+8)+6");
+              $formulaB=Compute("x-1");
+              $formulaC=Compute("-0.25(x-2)+3");
 
             Context("Inequalities");
               $answer1 = Compute("-8&lt;=x&lt;=-3");
@@ -159,45 +163,46 @@
           <statement>
               <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/QeJS3ygG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
               <p>The graph shows a single function made from three different lines.</p>
-              <p>In order to create a formula for this function, we list each equation together with its domain in separate rows, as shown in the example below.</p>
+              <p>In order to create a single piecewise function, we list each formula used in the function together with its domain in separate rows, as shown in the example below.</p>
               <p>
                 <me>f(x) = \left\{
                     \begin{array}{ll}
-                    \text{equation 1} \amp \text{domain 1} \\
-                    \text{equation 2} \amp \text{domain 2} \\
-                    \text{equation 3} \amp \text{domain 3} \\
+                    \text{formula 1} \amp \text{domain 1} \\
+                    \text{formula 2} \amp \text{domain 2} \\
+                    \text{formula 3} \amp \text{domain 3} \\
                   \end{array}
                   \right.
                 </me>
               </p>
-              <p>Now using the template above, write the equations for the lines</p>
+              <p>Now using the template above, we write only the formulas from the equations of each section of the function.</p>
                <p><md>
-                <mrow>y \amp= -2x - 10</mrow>
-                <mrow>y \amp= x - 1</mrow>
-                <mrow>y \amp= -0.25x + 3.5</mrow></md>
+                <mrow>-2x - 10</mrow>
+                <mrow>x - 1</mrow>
+                <mrow>-0.25x + 3.5</mrow></md>
                 </p>
-              <p>in the correct positions, lining them up with their corresponding domains</p>
+              <p>And next to each formula we write their corresponding domains</p>
                 <p><me>-8 \leq x \leq -3</me>
                 <me>-3 \leq x \leq 2</me>
                 <me>2 \lt x \leq 8</me>.</p>
               <p><m>f(x) = </m></p>
+              <p>Write the three formulas below next to their corresponding domains.</p>
               <sidebyside>
                 <tabular>
                   <col halign="center"/>
                   <col halign="center"/>
                   <col halign="center"/>
                   <row>
-                      <cell><var name="$lineA" width="15" /></cell>
+                      <cell><var name="$formulaA" width="15" /></cell>
                       <cell><m>if</m></cell>
                       <cell><var name="$answer1" /></cell>
                   </row>
                   <row>
-                    <cell><var name="$lineB" width="15" /></cell>
+                    <cell><var name="$formulaB" width="15" /></cell>
                     <cell><m>if</m></cell>
                     <cell><var name="$answer2" /></cell>
                   </row>
                   <row>
-                    <cell><var name="$lineC" width="15" /></cell>
+                    <cell><var name="$formulaC" width="15" /></cell>
                     <cell><m>if</m></cell>
                     <cell><var name="$answer3" /></cell>
                   </row>
@@ -210,9 +215,9 @@
             <p>You found:
                 <me>f(x) = \left\{
                     \begin{array}{ll}
-                    y=-2x-10 \amp -8 \leq x \leq 3 \\
-                    y=x-1 \amp -3 \leq x \leq 2 \\
-                    y=-0.25x + 3.5 \amp 2 \lt x \leq 8 \\
+                    -2x-10 \amp -8 \leq x \leq -3 \\
+                    x-1 \amp -3 \leq x \leq 2 \\
+                    -0.25x + 3.5 \amp 2 \lt x \leq 8 \\
                   \end{array}
                   \right.
                 </me>
@@ -225,8 +230,8 @@
                     <p><var name="1" width="5" /></p>
                     <p>To which domain does this input belong?</p>
                     <p><var name="$answer2" width="10" /></p>
-                    <p>What is the formula that corresponds to this domain?</p>
-                    <p><var name="$lineB" width="15" /></p>
+                    <p>What is the formula that corresponds to this domain? Write only the formula, not <m>y =</m></p>
+                    <p><var name="$formulaB" width="15" /></p>
                     <p>Therefore <m>f(1) = </m> <var name="$output2" width="5" /></p>
                   </li>
                   <li>
@@ -235,7 +240,7 @@
                     <p>To which domain does this belong?</p>
                     <p><var name="$answer1" width="10" /></p>
                     <p>What is the formula that corresponds to this domain?</p>
-                    <p><var name="$lineA" width="15" /></p>
+                    <p><var name="$formulaA" width="15" /></p>
                     <p>Therefore <m>f(-6) = </m> <var name="$output1" width="5" /></p>
                   </li>
                   <li>
@@ -244,8 +249,8 @@
                     <p>To which domain does <m>x = 7</m> belong?</p>
                     <p><var name="$answer3" width="10" /></p>
                     <p>What is the formula that corresponds to this domain?</p>
-                    <p><var name="$lineC" width="15" /></p>
-                    <p>Therefore <m>f(1) = </m> <var name="$output3" width="5" /></p>
+                    <p><var name="$formulaC" width="15" /></p>
+                    <p>Therefore <m>f(7) = </m> <var name="$output3" width="5" /></p>
                   </li>
                 </ol>
               </p>
