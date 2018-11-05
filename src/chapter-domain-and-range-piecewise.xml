@@ -44,7 +44,7 @@
                 <p>Find the domain of the function <me>f(x) = \frac{x}{{{x^2} - 1}}.</me></p>
               </statement>
               <solution>
-                <p>We know that we cannot divide by zerw. In this function, the denominator would be zero if <m>x</m> is either <m>1</m> or <m>-1</m>, so the domain of this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
+                <p>We know that we cannot divide by zero. In this function, the denominator would be zero if <m>x</m> is either <m>1</m> or <m>-1</m>, so the domain of this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
                 <p>In math this can be written many different ways.</p>
                 <p>We could use <em>set-builder</em> notation: <me>\{x \vert x \neq \pm 1 \}</me></p>
                 <p>This is read, from left-to-right, as <q>the set of all numbers <m>x</m>, such that <m>x</m> is not equal to positive or negative <m>1</m></q>.</p>
@@ -294,20 +294,142 @@
           </exercise>
       </subsection>
 
+      <subsection>
+        <title>Conclusion</title>
+        <p>Test your understanding of this chapter with the following exercises.</p>
+        <p>Student Learning Outcome: <em>Determine the domain and range of a function.</em></p>
+
+
+        <p>Student Learning Outcome: <em>Define, distinguish, and apply piecewise-defined functions.</em></p>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <pg-code>
+                $cost=Real(60);
+                $units=PopUp(["?","dollars","hours"],"dollars");
+              </pg-code>
+            </setup>
+            <statement>
+              <p><em>Tools of the Trade</em> rental shop will rent a pressure washer for <m>\$35</m> for the first two hours, and <m>\$5</m> for each additional hour, up to a total of <m>8</m> hours. After this, you will pay the full-day price for <m>24</m> hours, which costs <m>\$65</m>. Note: You cannot pay for a partial hour. If you keep the washer <m>3</m> hours and <m>1</m> minute, you will be charged for <m>4</m> full hours.</p>
+              <p>If you rented the washer at <m>9{:}15</m> a.m. and returned it at <m>3{:}45</m> on the same day, what would you owe?</p>
+              <p>Answer:  <var name="$cost" width="10" /> <var name="$units" form="popup" /></p>
+            </statement>
+            <solution>
+              <p>You already owe <m>\$35</m> for the first <m>2</m> hours, and you've kept the washer an additional <m>4.5</m> hours. Therefore, you will be charged <m>\$25</m> for <m>5</m> additional hours.</p>
+              <p>Your bill will be <m>35 + 25 = 60</m> dollars.</p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <pg-code>
+                $input1=random(5,19,1);
+                $output1=Compute("$input1*12.5");
+                $output1units=PopUp(["?","dollars","shirts"],"dollars");
+                $input2=random(21,49,1);
+                $output2=Compute("250+($input2-20)*11");
+                $input2units=PopUp(["?","dollars","shirts"],"shirts");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>A T-shirt printer sells custom-printed shirts for <m>\$ 12.50</m> each for the first <m>20</m> shirts, dropping the price to <m>\$ 11.00</m> for each additional shirt, up to a maximum order of <m>50</m> shirts.</p>
+              <p>Let the function <m>P(S)</m> represent the price (in dollars) of ordering <m>S</m> shirts.</p>
+              <p><ol label ="a">
+                <li><p>What is <m>P\left(<var name="$input1" />\right)</m>?</p>
+                <p>Answer: <var name="$output1" width="10" /> <var name="$output1units" form="popup" /></p></li>
+                <li><p>Solve the equation: <m>P(S) = <var name="$output2" /></m></p>
+                <p>Answer: <m>S = </m><var name="$input2" width="10" /> <var name="$input2units" width="popup" /></p></li>
+              </ol></p>
+            </statement>
+            <solution>
+              <p><ol label="a">
+                <li><p><m>P(<var name="$input1" />) = <var name="$output1" /> <var name="$output1units" /></m></p></li>
+                <li><p><m>S = <var name="$input2" /> <var name="$input2units" /></m></p></li>
+              </ol></p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+            <setup>
+
+              <pg-code>
+                $ans1=Real(3);
+                $ans2=Real(2);
+                $ans3=PopUp(["?","one","two","three","infinitely many"],"two");
+                $ans4=PopUp(["?","one","two","three","infinitely many"],"infinitely many");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>
+                <me>f(x) = \left\{
+                \begin{array}{ll}
+                1-x \amp x \leqslant -1 \\
+                2 \amp -1 \lt x \lt 1 \\
+                1+x \amp x \geqslant 1 \\
+                \end{array}
+                \right.</me>
+              </p>
+              <p>
+                <ol label="a">
+                  <li>
+                    <p>Evaluate <m>f(-2)</m>. Answer: <var name="$ans1" width="10" /></p>
+                  </li>
+                  <li>
+                    <p>Evaluate <m>f(1)</m>. Answer: <var name="$ans2" width="10" /></p>
+                  </li>
+                  <li>
+                    <p>How many solutions are there to the equation <m>f(x) = 2</m>?</p>
+                    <p>Answer: <var name="$ans3" form="popup" /></p>
+                  </li>
+                  <li>
+                    <p>How many solutions are there to the equation <m>f(x) = 3</m>?</p>
+                    <p>Answer: <var name="$ans4" form="popup" /></p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <ol label="a">
+                  <li>
+                    <p><m>f(-2) = 1 - (-2) = 3</m></p>
+                  </li>
+                  <li>
+                    <p><m>f(1) = 1 + 1 = 2</m></p>
+                  </li>
+                  <li>
+                    <p>Only the first and last parts of the piecewise function can have an output of <m>3</m>, and they are <m>x = -2</m> and <m>x = 2</m>.</p>
+                  </li>
+                  <li>
+                    <p>There are infinitely many solutions to <m>f(x) = 2</m>, because any input between <m>-1</m> and <m>1</m> will give an output of <m>2</m>. Examples: <m>x = -0.3546</m> and <m>x = 4/5</m></p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+          </webwork>
+        </exercise>
+
+
+
+
+
+
+      </subsection>
+
+
+
+
 <exercises>
-<!-- domain and range -->
+
 <exercisegroup><introduction><p>Domain and Range</p></introduction>
         <exercise>
           <webwork source="Library/Mizzou/Algebra/functions_domain_range/fun_dom_15.pg" seed="1" />
         </exercise>
-
-        <!-- Coded with PTX-incompatible structure. -->
-        <!--<exercise>
-          <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec2/Q13.pg" seed="1" />
-        </exercise>
-        <exercise>
-          <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec2/Q14.pg" seed="1" />
-        </exercise>-->
 
         <exercise>
           <webwork source="Library/Mizzou/Algebra/functions_domain_range/fun_dom_23.pg" seed="1" />
@@ -330,7 +452,6 @@
         </exercise>
 </exercisegroup>
 
-<!-- evaluating piecewise functions -->
 <exercisegroup><introduction><p>Evaluating Piecewise Functions</p></introduction>
 
         <exercise>
@@ -343,7 +464,7 @@
             </setup>
             <statement>
               <p><em>Tools of the Trade</em> rental shop will rent a pressure washer for <m>\$35</m> for the first two hours, and <m>\$5</m> for each additional hour, up to a total of <m>8</m> hours. After this, you will pay the full-day price for <m>24</m> hours, which costs <m>\$65</m>. Note: You cannot pay for a partial hour. If you keep the washer <m>3</m> hours and <m>1</m> minute, you will be charged for <m>4</m> full hours.</p>
-              <p>If you rented the washer at <m>9:15</m> a.m. and returned it at <m>3:45</m> on the same day, what would you owe?</p>
+              <p>If you rented the washer at <m>9{:}15</m> a.m. and returned it at <m>3{:}45</m> on the same day, what would you owe?</p>
               <p>Answer:  <var name="$cost" width="10" /> <var name="$units" form="popup" /></p>
             </statement>
             <solution>
@@ -462,12 +583,6 @@
           <webwork source="Library/Westmont/ActiveCalculus/Preview_1_2/preview_1_2_a/preview_1_2_a.pg" seed="1" />
         </exercise>
 
-        <!-- Coded with PTX-incompatible structure. -->
-        <!-- Specifically, uses "align" inside math mode. Would be easy to fix by changing to "aligned" -->
-        <!-- <exercise>
-          <webwork source="Library/Wiley/setAnton_Section_0.1/Question7b.pg" seed="1" />
-        </exercise> -->
-
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec2/Connally3-2-Piecewise-function-ineq.pg" seed="1" />
         </exercise>
@@ -481,21 +596,10 @@
         </exercise>
 </exercisegroup>
 
-<!-- find the formula for a piecewise function -->
 <exercisegroup><introduction><p>Formulas for Piecewise Functions</p></introduction>
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec3/Connally3-2-3-02-Piecewise-functions.pg" seed="1" />
         </exercise>
-
-        <!-- Coded with PTX-incompatible structure. -->
-        <!--<exercise>
-          <webwork source="Library/Mizzou/Algebra/functions_piecewise/determine_formula_from_graph_02.pg" seed="1" />
-        </exercise>
-        <exercise>
-          <webwork source="Library/Mizzou/College_Algebra/Functions_Piecewise/Three_Lines_Left_Piece_Constant.pg" seed="1" />
-        </exercise>-->
-
-<!-- match the equation to the graph -->
 
         <exercise>
           <webwork source="Library/Rochester/setAlgebra16FunctionGraphs/c2s2p59_72/c2s2p59_72.pg" seed="1" />
@@ -507,12 +611,7 @@
 
 </exercisegroup>
 <exercisegroup><introduction><p>Additional Problems</p></introduction>
-<!-- application problems -->
 
-        <!-- Coded with PTX-incompatible structure. -->
-        <!-- <exercise>
-          <webwork source="Library/Mizzou/Algebra/functions_piecewise/app_01.pg" seed="1" />
-        </exercise> -->
 </exercisegroup>
 
       </exercises>

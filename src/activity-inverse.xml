@@ -470,13 +470,9 @@
     <webwork>
       <setup>
         <pg-code>
-          $a=random(1,6,1);
-          $h=random(1,6,1);
-          $k=random(1,6,1);
-          @diff=map{$_+1}NchooseK(6,3);
-          @x=($a-$diff[0],$a-$diff[1],$a+$diff[2],$a+$diff[0]);
-          @f=map{$a*($_-$h)**2-$k}@x;
+          $a=Real(7);
           $why=PopUp(["?","f should never have that output","f had that output twice"],2);
+
         </pg-code>
       </setup>
       <statement>
@@ -490,26 +486,26 @@
               <cell><m>f(x)</m></cell>
             </row>
             <row>
-              <cell><m><var name="$x[0]" /></m></cell>
-              <cell><m><var name="$f[0]" /></m></cell>
+              <cell><m>2</m></cell>
+              <cell><m>7</m></cell>
             </row>
             <row>
-              <cell><m><var name="$x[1]" /></m></cell>
-              <cell><m><var name="$f[1]" /></m></cell>
+              <cell><m>5</m></cell>
+              <cell><m>3</m></cell>
             </row>
             <row>
-              <cell><m><var name="$x[2]" /></m></cell>
-              <cell><m><var name="$f[2]" /></m></cell>
+              <cell><m>6</m></cell>
+              <cell><m>9</m></cell>
             </row>
             <row>
-              <cell><m><var name="$x[3]" /></m></cell>
-              <cell><m><var name="$f[3]" /></m></cell>
+              <cell><m>10</m></cell>
+              <cell><m>7</m></cell>
             </row>
           </tabular>
         </sidebyside>
         <p>There is an output value of <m>f</m> that is causing the inverse <m>f^{-1}</m> to <em>not</em> be a function.</p>
         <p>Which output value is the problem?</p>
-        <p><var name="$f[0]" width="10" /></p>
+        <p><var name="$a" width="10" /></p>
         <p>How is that output value of <m>f</m> causing the inverse to not be a function?</p>
         <p><var name="$why" form="popup" /></p>
       </statement>
@@ -518,9 +514,9 @@
         <p>Is it true that each input for <m>f^{-1}</m> corresponds to exactly one output for <m>f^{-1}</m>?</p>
       </hint>
       <solution>
-        <p>Because both <m>f(<var name="$x[0]" />)</m> and <m>f(<var name="$x[3]" />)</m> are equal to <m><var name="$f[0]" /></m>, the inverse cannot be a function.</p>
-        <p>The output <m>0</m> is the problem.</p>
-        <p>This is because if we tried to evaluate <m>f^{-1}(<var name="$f[0]" />)</m>, there would be two different outputs: both <m><var name="$x[0]" /></m> and <m><var name="$x[3]" /></m>.</p>
+        <p>Because both <m>f(2)</m> and <m>f(10)</m> are equal to <m>7</m>, the inverse cannot be a function.</p>
+        <p>The output <m>7</m> is the problem.</p>
+        <p>This is because if we tried to evaluate <m>f^{-1}(7)</m>, there would be two different outputs: both <m>2</m> and <m>10</m>.</p>
       </solution>
     </webwork>
   </exercise>
@@ -588,7 +584,7 @@
         <p><var name="$inv" form="popup" /></p>
       </statement>
       <hint>
-        <p>If a function is invertible, then you should be able to read the table backward as a function. Why can you <em>not</em> do this with the table for <m>g</m></p>
+        <p>If a function is invertible, then you should be able to read the table backward as a function. Why can you <em>not</em> do this with the table for <m>g</m>?</p>
       </hint>
       <solution>
         <p>A function is invertible if:  <var name="$inv" />.</p>

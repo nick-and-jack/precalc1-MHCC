@@ -829,6 +829,35 @@
 
   <exercises>
 
+    <exercise>
+      <webwork>
+        <setup>
+          <pg-code>
+            $num=random(2,8,1);
+            $f=Compute("4*$num-3");
+            $g=Compute("$num**2-1");
+            $fog=Compute("4*$g-3");
+            $gof=Compute("$f**2-1");
+          </pg-code>
+        </setup>
+        <statement>
+          <p>Let <m>f(x)=4x-3</m> and <m>g(x)=x^2-1</m>.</p>
+          <p>
+            <ol>
+              <li>
+                <p>What is <m>f(g(<var name="$num" />))</m>?</p>
+                <p>Answer: <var name="$fog" width="15" /></p>
+              </li>
+              <li>
+                <p>What is <m>g(f(<var name="$num" />))</m>?</p>
+                <p>Answer: <var name="$gof" width="15" /></p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </webwork>
+    </exercise>
+
 <exercisegroup><introduction><p>Evaluating Composite Functions</p></introduction>
 
 
@@ -1387,6 +1416,27 @@
 
 <exercise>
   <webwork source="Library/LoyolaChicago/Precalc/Chap8Review/Q49.pg" seed="1" />
+</exercise>
+
+</exercisegroup>
+
+<exercisegroup><introduction><p>Written Homework</p></introduction>
+
+<exercise>
+  <statement>
+    <p>At a company, the human resources department keeps information about their employees in table form. If an office specialist enters the name of an employee, a function <m>f</m> will output that employee's ID Number. IF they enter an employee's ID Number, then various functions can be used:</p>
+    <ul>
+      <li><p>Function <m>W</m> will output that employee's current hourly wage (in dollars).</p></li>
+      <li><p>Function <m>D</m> will output that employee's date of hire.</p></li>
+      <li><p>Function <m>N</m> will output that employee's name.</p></li>
+    </ul>
+    <ol>
+      <li><p>Write a composition to find employee Nallely Garcia's date of hire.</p></li>
+      <li><p>Write a composition to find employee David Smith's hourly wage.</p></li>
+      <li><p>What is <m>f(N(1435))</m>? Explain how you know.</p></li>
+      <li><p>Which of the functions (<m>f</m>, <m>W</m>, <m>D</m> and <m>N</m>) are <em>invertible</em>? Explain your choices, using examples if possible.</p></li>
+    </ol>
+  </statement>
 </exercise>
 
 </exercisegroup>
