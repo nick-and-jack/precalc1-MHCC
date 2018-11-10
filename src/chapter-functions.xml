@@ -49,6 +49,7 @@
           <li><url href="https://www.khanacademy.org/math/algebra/solving-linear-equations-and-inequalities/solving_for_variable/e/solving_for_a_variable">Solving linear equations.</url></li>
           <li><url href="https://www.khanacademy.org/math/algebra2/rational-expressions/solving-rational-equations/e/linear_equations_4">Solving equations with fractions (rational equations).</url></li>
           <li><url href="https://www.khanacademy.org/math/algebra/linear_inequalities/compound_absolute_value_inequali/e/compound_inequalities">Compound Inequalities.</url></li>
+          <li><url href="http://www.opentextbookstore.com/precalc/2.1/Chapter%201.pdf">Reading for this chapter</url></li>
         </ul></p>
     </introduction>
 
@@ -395,9 +396,121 @@
             </exercise>-->
         </subsection>
 
-        <exercises>
+        <subsection>
+          <title>Conclusion</title>
+          <p>At the end of this chapter, you should have learned some function basics. Test your understanding of the big ideas from this chapter.</p>
 
-        <exercisegroup><introduction><p>Interpretating Function Notation</p></introduction>
+          <p>Student Learning Outcome: <em>Identify a function from a table of values, a graph or an equation.</em></p>
+
+          <exercise>
+            <webwork source="Library/NewHampshire/unh_schoolib/Functions/funsrs201.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <webwork source="Library/NewHampshire/NECAP/grade11/gr11-2009/n11-2009-6s.pg" seed="1" />
+          </exercise>
+
+          <!--<exercise>
+            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/FunctionOrNotByGraph10.pg" seed="1" />
+          </exercise>-->
+
+          <exercise>
+            <webwork>
+              <setup>
+                <pg-code>
+                  $is=PopUp(["?","Is","Is Not"],"Is Not");
+                  $isnt=PopUp(["?","Is","Is Not"],"Is");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>Does each equation represent <m>y</m> as a function of <m>x</m>?</p>
+                <p><m>y^2=x</m></p>
+                <p>Answer: <m>y</m> <var name="$is" form="popup" /> a function of <m>x</m>.</p>
+                <p><m>y=x^2</m></p>
+                <p>Answer: <m>y</m> <var name="$isnt" form="popup" /> a function of <m>x</m>.</p>
+              </statement>
+              <solution>
+                <p>The equation <m>y^2=x</m> does <em>not</em> give <m>y</m> as a function of <m>x</m>. You can see this by choosing an input value for <m>x</m> and seeing whether there is only one value of the output <m>y</m>.</p>
+                <p>As an example, leting <m>x=4</m> gives <m>y^2=4</m>, which has <em>two</em> outputs: <m>y=2</m> and <m>y=-2</m></p>
+                <p>The equation <m>y=x^2</m> <em>is</em> a function, because for any input value <m>x</m>, the output value is just the square of <m>x</m>.</p>
+                <p>As an example, letting <m>x=3</m> gives <m>y=3^2=9</m>.</p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <p>Student Learning Outcome: <em>Recognize, apply, interpret, evaluate and solve equations using function notation.</em></p>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <pg-code>
+                  $solve=PopUp(["?","evaluate f(0)","solve f(x) = 0"],"solve f(x) = 0");
+                  $evaluate=PopUp(["?","evaluate f(0)","solve f(x) = 0"],"evaluate f(0)");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>Consider the function <m>f(x)=12-3x^2</m>.</p>
+                <p>If we wanted to find where the graph of <m>y=f(x)</m> crosses the <m>x</m>-axis, what should we do?</p>
+                <p>Answer:  <var name="$solve" form="popup" /></p>
+                <p>If we wanted to find where the graph of <m>y=f(x)</m> crosses the <m>y</m>-axis, what should we do?</p>
+                <p>Answer:  <var name="$evaluate" form="popup" /></p>
+              </statement>
+              <solution>
+                <p>To find where <m>y=f(x)</m> crosses the <m>x</m>-axis, we <var name="$solve" />. Remember that the <m>x</m>-axis is another name for <m>y = 0</m>, so we are just setting the output of <m>f</m> equal to zero and solving for the <m>x</m> value(s).</p>
+                <p>To find where <m>y=f(x)</m> crosses the <m>y</m>-axis, we <var name="$evaluate" />. Remember that the <m>y</m>-axis is another name for <m>x=0</m>, so we are just setting the input of <m>f</m> equal to zero and evaluating the output <m>y</m>.</p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <webwork>
+              <setup>
+
+                <pg-code>
+                  $xory1=PopUp(["?","x","y","g(x)"],"x");
+                  $xory2=PopUp(["?","x","y","f(x)","g(x)"],"x");
+                  $ans1=Real(3/2);
+                  $ans2=Real(1);
+                </pg-code>
+              </setup>
+              <statement>
+                <p>Let <m>f(x)=x^2+4x+5</m> and <m>g(x)=2x+4</m>. Solve each of the following equations:</p>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p><m>g(x)=7</m></p>
+                      <p>Solution: <var name="$xory1" form="popup" /> <m>=</m> <var name="$ans1" width="10" /></p>
+                    </li>
+                    <li>
+                      <p><m>f(x) = g(x)</m></p>
+                      <p>Solution: <var name="$xory2" form="popup" /> <m>=</m> <var name="$ans2" width="10" /></p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p><md>
+                        <mrow>2x+4 \amp= 7</mrow>
+                        <mrow>2x \amp= 3</mrow>
+                        <mrow>x \amp= \frac{3}{2}</mrow></md>
+                      </p>
+                    </li>
+                    <li>
+                      <p><md>
+                        <mrow>x^2+4x+5 \amp= 2x+4</mrow>
+                        <mrow>x^2+2x+1 \amp= 0</mrow>
+                        <mrow>x \amp= 1</mrow></md>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+            </webwork>
+          </exercise>
+
           <exercise>
             <webwork>
               <setup>
@@ -465,6 +578,302 @@
             </webwork>
           </exercise>
 
+          <p>Student Learning Outcome: <em>Perform calculations using function notation including average rate of change</em>.</p>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <pg-code>
+                  $ans1=Real(12);
+                  $ans2=Real(-1);
+                </pg-code>
+              </setup>
+              <statement>
+                <p>Let <m>g(w) = (w+1)^2+3</m>.</p>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>Evaluate <m>g(2)</m>.</p>
+                      <p>Answer: <var name="$ans1" width="15" /></p>
+                    </li>
+                    <li>
+                      <p>Solve <m>g(w)=3</m>.</p>
+                      <p>Answer: <m>x = </m> <var name="$ans2" width="15" /></p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p><m>g(2) = (2+1)^2+3 = 12</m></p>
+                    </li>
+                    <li>
+                      <p>
+                        <md>
+                          <mrow>(w+1)^2 + 3 \amp= 3</mrow>
+                          <mrow>(w+1)^2 \amp= 0</mrow>
+                          <mrow>w+1 \amp= 0</mrow>
+                          <mrow>w \amp= -1</mrow>
+                        </md>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+            </webwork>
+          </exercise>
+
+          <exercise>
+            <webwork source="Library/LoyolaChicago/Precalc/Chap1Sec2/Q03.pg" seed="1" />
+          </exercise>
+
+          <exercise>
+            <webwork>
+              <setup>
+                <pg-code>
+                  $aroc_num1=Compute("(400-45)/5");
+                  $aroc_num2=Compute("(23-4)/5");
+                  $aroc_unit1=PopUp(["?","students","years","students/year","years/student"],"students/year");
+                  $aroc_unit2=PopUp(["?","teachers","years","years/teacher","teachers/year"],"teachers/year");
+                </pg-code>
+              </setup>
+              <statement>
+                <p>In <m>2012</m> the new school had <m>45</m> students and <m>4</m> teachers, and by <m>2017</m> it had grown to <m>400</m> students and <m>23</m> teachers.</p>
+                <p>Let <m>S = f(y)</m> represent the number of students in the school, and let <m>T = g(y)</m> represent the number of teachers in the school. In both functions, the input variable <m>y</m> represents the number of years after <m>2012</m>.</p>
+                <p><ol label="a">
+                  <li><p>Calculate the average rate of change of the function <m>f</m> between <m>t=0</m> and <m>t=5</m>.</p>
+                  <p>Answer:  <var name="$aroc_num1" width="10" /> <var name="$aroc_unit1" form="popup" /></p></li>
+                  <li><p>Calculate the average rate of change of the function <m>g</m> between <m>t=0</m> and <m>t=5</m>.</p>
+                  <p>Answer:  <var name="$aroc_num2" width="10" /> <var name="$aroc_unit2" form="popup" /></p></li>
+                </ol></p>
+              </statement>
+              <solution>
+                <p><ol label="a">
+                  <li><p><var name="$aroc_num1" /> <var name="$aroc_unit1" /></p></li>
+                  <li><p><var name="$aroc_num2" /> <var name="$aroc_unit2" /></p></li>
+                </ol></p>
+              </solution>
+            </webwork>
+          </exercise>
+        </subsection>
+
+        <p>Student Learning Outcome: <em>Determine if a variable is dependent or independent.</em></p>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <pg-code>
+                $ind1=PopUp(["?","z","t","f"],"f");
+                $dep1=PopUp(["?","z","t","f"],"z");
+                $ind2=PopUp(["?","j","q","J"],"q");
+                $dep2=PopUp(["?","j","q","J"],"J");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>In each function, determine the independent and dependent variables.</p>
+              <p>
+                <ol label="a">
+                  <li>
+                    <p><m>z=t(f)</m></p>
+                    <p>The independent variable is: <var name="$ind1" form="popup" /></p>
+                    <p>The dependent variable is: <var name="$dep1" form="popup" /></p>
+                  </li>
+                  <li>
+                    <p><m>j(q)=J</m></p>
+                    <p>The independent variable is: <var name="$ind2" form="popup" /></p>
+                    <p>The dependent variable is: <var name="$dep2" form="popup" /></p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <ol label="a">
+                  <li>
+                    <p>In <m>z=t(f)</m>, the independent variable is <m>f</m> and the dependent variable is <m>z</m>.</p>
+                  </li>
+                  <li>
+                    <p>In <m>j(q)=J</m>, the independent variable is <m>q</m> and the dependent variable is <m>J</m>.</p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <p>Student Learning Outcome: <em>Determine the intervals over which a function is increasing or decreasing or constant based on a numerical, graphical or algebraic model.</em></p>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <pg-code>
+                $f=PopUp(["?","f","g","both f and g","neither function"],"f");
+                $g=PopUp(["?","f","g","both f and g","neither function"],"g");
+                $both=PopUp(["?","f","g","both f and g","neither function"],"both f and g");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>Tables for functions <m>f</m> and <m>g</m> are shown below.</p>
+              <sidebyside widths="47% 47%">
+                <tabular top="major" halign="center">
+                    <col halign="left" />
+                    <col />
+                    <row bottom="medium">
+                      <cell><m>x</m></cell>
+                      <cell><m>f(x)</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>1</m></cell>
+                      <cell><m>12</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>2</m></cell>
+                      <cell><m>10</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>3</m></cell>
+                      <cell><m>8</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>4</m></cell>
+                      <cell><m>6</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>5</m></cell>
+                      <cell><m>5</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>4</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>7</m></cell>
+                      <cell><m>5</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>8</m></cell>
+                      <cell><m>12</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>9</m></cell>
+                      <cell><m>25</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>10</m></cell>
+                      <cell><m>119</m></cell>
+                    </row>
+                </tabular>
+                <tabular top="major" halign="center">
+                    <col halign="left" />
+                    <col />
+                    <row bottom="medium">
+                      <cell><m>x</m></cell>
+                      <cell><m>g(x)</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>1</m></cell>
+                      <cell><m>45</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>2</m></cell>
+                      <cell><m>49</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>3</m></cell>
+                      <cell><m>51</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>4</m></cell>
+                      <cell><m>53</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>5</m></cell>
+                      <cell><m>50</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>45</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>7</m></cell>
+                      <cell><m>40</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>8</m></cell>
+                      <cell><m>41</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>9</m></cell>
+                      <cell><m>42</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>10</m></cell>
+                      <cell><m>44</m></cell>
+                    </row>
+                </tabular>
+            </sidebyside>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>Which function appears to be increasing on the interval <m>1 \leq x \leq 3</m>?</p>
+                  <p>Answer: <var name="$g" form="popup" /></p>
+                </li>
+                <li>
+                  <p>Which function appears to be decreasing on the interval <m>4 \leq x \leq 6</m>?</p>
+                  <p>Answer: <var name="$both" form="popup" /></p>
+                </li>
+                <li>
+                  <p>Which function has zero average rate of change on the interval <m>1 \leq x \leq 8</m>?</p>
+                  <p>Answer: <var name="$f" form="popup" /></p>
+                </li>
+              </ol>
+            </p>
+            </statement>
+            <solution>
+              <p>
+                <ol label="a">
+                  <li>
+                    <p>Function <m>g</m> appears to be increasing on the interval <m>1 \leq x \leq 3</m>.</p>
+                  </li>
+                  <li>
+                    <p>Both functions <m>f</m> and <m>g</m> appear to be decreasing on the interval <m>4 \leq x \leq 6</m>.</p>
+                  </li>
+                  <li>
+                    <p>Function <m>f</m> has zero average rate of change on the interval <m>1 \leq x \leq 8</m>.</p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+            <setup>
+              <pg-code>
+                $stops=Real(2.5);
+                $units=PopUp(["?","feet","seconds"],"seconds");
+              </pg-code>
+            </setup>
+            <statement>
+              <p>The function <m>H=f(t)=-16t^2+80t+3</m> models the height above the ground (in feet) of a soccer ball, kicked straight upward at <m>80</m> feet per second, from a height of <m>3</m> feet. The input, <m>t</m>, is the number of seconds after the moment the ball was kicked.</p>
+              <p>Use a graph or numerical evidence to find when the height of the ball <em>stops</em> increasing.</p>
+              <p>Answer: The function stops increasing at <m>t = </m> <var name="$stops" width="10" /> <var name="$units" form="popup" /></p>
+            </statement>
+            <solution>
+              <p>The graph of this function is a parabola (opening downward), so the vertex is the highest point. This occurs at the point <m>(2.5, 103)</m>, so the function stops increasing at <m>t = 2.5</m> seconds.</p>
+            </solution>
+          </webwork>
+        </exercise>
+
+<!--
+        <exercises>
+
+        <exercisegroup><introduction><p>Interpretating Function Notation</p></introduction>
+
+
           <exercise>
             <webwork>
               <setup>
@@ -519,308 +928,292 @@
           </exercise>
 
         </exercisegroup>
-<!-- evaluating functions -->
 
-        <exercisegroup><introduction><p>Evaluating Functions</p></introduction>
-          <exercise>
-            <webwork source="Library/Utah/Intermediate_Algebra/set5_Graphs_and_Functions/s5p32.pg" seed="1" />
-          </exercise>
+				<exercisegroup><introduction><p>Evaluating Functions</p></introduction>
+					<exercise>
+						<webwork source="Library/Utah/Intermediate_Algebra/set5_Graphs_and_Functions/s5p32.pg" seed="1" />
+					</exercise>
 
-          <!-- Coded with PTX-incompatible structure. -->
-          <!-- <exercise>
-            <webwork source="Library/Wiley/setAnton_Section_0.1/Question2.pg" seed="1" />
-          </exercise> -->
+					<exercise>
+						<webwork source="Library/Mizzou/Intermediate_Algebra/Functions_Evaluating/Quadratic.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/Mizzou/Intermediate_Algebra/Functions_Evaluating/Quadratic.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/Mizzou/Intermediate_Algebra/Functions_Evaluating/Inverse.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/Mizzou/Intermediate_Algebra/Functions_Evaluating/Inverse.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-11-Input-and-output.pg" seed="1" />
+					</exercise>
 
-          <!-- Coded with PTX-incompatible structure. -->
-          <!-- Specifically, uses "align" inside math mode. Would be easy to fix by changing to "aligned" -->
-          <!-- <exercise>
-            <webwork source="Library/Wiley/setAnton_Section_0.1/Question8a.pg" seed="1" />
-          </exercise> -->
+					<exercise>
+						<webwork source="Library/FortLewis/Algebra/4-1-What-is-a-function/MCH1-4-1-08-What-is-a-function.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-11-Input-and-output.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/FortLewis/Algebra/4-1-What-is-a-function/MCH1-4-1-10-What-is-a-function.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/FortLewis/Algebra/4-1-What-is-a-function/MCH1-4-1-08-What-is-a-function.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/PCC/BasicAlgebra/FunctionBasics/EvaluateFunction40.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/FortLewis/Algebra/4-1-What-is-a-function/MCH1-4-1-10-What-is-a-function.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/PCC/BasicAlgebra/FunctionBasics/EvaluateFunction50.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/EvaluateFunction40.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/PCC/BasicAlgebra/FunctionBasics/EvaluateFunction70.pg" seed="1" />
+					</exercise>
+				</exercisegroup>
 
-          <exercise>
-            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/EvaluateFunction50.pg" seed="1" />
-          </exercise>
 
-          <exercise>
-            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/EvaluateFunction70.pg" seed="1" />
-          </exercise>
-        </exercisegroup>
-
-<!-- evaluating and making combinations -->
 <exercisegroup><introduction><p>Evaluating and Making Combinations</p></introduction>
-          <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-24-Input-and-output.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-24-Input-and-output.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec1/Q22.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/LoyolaChicago/Precalc/Chap2Sec1/Q22.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/FortLewis/Basic-skills-pretest/Skill-Assessment-29.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/FortLewis/Basic-skills-pretest/Skill-Assessment-29.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S03-NewFunctOld/1-3-31.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S03-NewFunctOld/1-3-31.pg" seed="1" />
+					</exercise>
 </exercisegroup>
 
-<!-- about graphs -->
 <exercisegroup><introduction><p>Function Graphs</p></introduction>
-          <exercise>
-            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/Functions120.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/PCC/BasicAlgebra/FunctionBasics/Functions120.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/Functions100.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/PCC/BasicAlgebra/FunctionBasics/Functions100.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/Functions110.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/PCC/BasicAlgebra/FunctionBasics/Functions110.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/Michigan/Chap1Sec2/Q11.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/Michigan/Chap1Sec2/Q11.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/Westmont/ActiveCalculus/Preview_1_3/preview_1_3_a/preview_1_3_a.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/Westmont/ActiveCalculus/Preview_1_3/preview_1_3_a/preview_1_3_a.pg" seed="1" />
+					</exercise>
 </exercisegroup>
 
-<!-- average rate of change and difference quotient -->
 <exercisegroup><introduction><p>Average Rate of Change and Difference Quotient</p></introduction>
 
-          <exercise>
-            <webwork>
-              <setup>
-                <pg-code>
-                  $aroc_num1=Compute("(400-45)/5");
-                  $aroc_num2=Compute("(23-4)/5");
-                  $aroc_unit1=PopUp(["?","students","years","students/year","years/student"],"students/year");
-                  $aroc_unit2=PopUp(["?","teachers","years","years/teacher","teachers/year"],"teachers/year");
-                </pg-code>
-              </setup>
-              <statement>
-                <p>In <m>2012</m> the new school had <m>45</m> students and <m>4</m> teachers, and by <m>2017</m> it had grown to <m>400</m> students and <m>23</m> teachers.</p>
-                <p>Let <m>S = f(y)</m> represent the number of students in the school, and let <m>T = g(y)</m> represent the number of teachers in the school. In both functions, the input variable <m>y</m> represents the number of years after <m>2012</m>.</p>
-                <p><ol label="a">
-                  <li><p>Calculate the average rate of change of the function <m>f</m> between <m>t=0</m> and <m>t=5</m>.</p>
-                  <p>Answer:  <var name="$aroc_num1" width="10" /> <var name="$aroc_unit1" form="popup" /></p></li>
-                  <li><p>Calculate the average rate of change of the function <m>g</m> between <m>t=0</m> and <m>t=5</m>.</p>
-                  <p>Answer:  <var name="$aroc_num2" width="10" /> <var name="$aroc_unit2" form="popup" /></p></li>
-                </ol></p>
-              </statement>
-              <solution>
-                <p><ol label="a">
-                  <li><p><var name="$aroc_num1" /> <var name="$aroc_unit1" /></p></li>
-                  <li><p><var name="$aroc_num2" /> <var name="$aroc_unit2" /></p></li>
-                </ol></p>
-              </solution>
-            </webwork>
-          </exercise>
+					<exercise>
+						<webwork>
+							<setup>
+								<pg-code>
+									$aroc_num1=Compute("(400-45)/5");
+									$aroc_num2=Compute("(23-4)/5");
+									$aroc_unit1=PopUp(["?","students","years","students/year","years/student"],"students/year");
+									$aroc_unit2=PopUp(["?","teachers","years","years/teacher","teachers/year"],"teachers/year");
+								</pg-code>
+							</setup>
+							<statement>
+								<p>In <m>2012</m> the new school had <m>45</m> students and <m>4</m> teachers, and by <m>2017</m> it had grown to <m>400</m> students and <m>23</m> teachers.</p>
+								<p>Let <m>S = f(y)</m> represent the number of students in the school, and let <m>T = g(y)</m> represent the number of teachers in the school. In both functions, the input variable <m>y</m> represents the number of years after <m>2012</m>.</p>
+								<p><ol label="a">
+									<li><p>Calculate the average rate of change of the function <m>f</m> between <m>t=0</m> and <m>t=5</m>.</p>
+									<p>Answer:  <var name="$aroc_num1" width="10" /> <var name="$aroc_unit1" form="popup" /></p></li>
+									<li><p>Calculate the average rate of change of the function <m>g</m> between <m>t=0</m> and <m>t=5</m>.</p>
+									<p>Answer:  <var name="$aroc_num2" width="10" /> <var name="$aroc_unit2" form="popup" /></p></li>
+								</ol></p>
+							</statement>
+							<solution>
+								<p><ol label="a">
+									<li><p><var name="$aroc_num1" /> <var name="$aroc_unit1" /></p></li>
+									<li><p><var name="$aroc_num2" /> <var name="$aroc_unit2" /></p></li>
+								</ol></p>
+							</solution>
+						</webwork>
+					</exercise>
 
-          <exercise>
-            <webwork>
-              <setup>
-                <pg-code>
-                  $aroc=Real(-2);
-                  Context()->variables->are(m=>'Real');
-                  $arocm=Formula("m");
-                </pg-code>
-              </setup>
-              <statement>
-                <p><ol label="a">
-                  <li><p>What is the average rate of change for the function <m>g(x) = -2x + 7</m> on the interval <m>0\leq x \leq 5</m>?</p>
-                  <p>Answer:  <var name="$aroc" width="10" /></p></li>
-                  <li><p>What is the average rate of change for the function <m>g(x) = -2x + 7</m> on the interval <m>12\leq x \leq 20</m>?</p>
-                  <p>Answer:  <var name="$aroc" width="10" /></p></li>
-                  <li><p>What is the average rate of change for the function <m>h(x) = mx + b</m> on <em>any</em> interval?</p>
-                  <p>Answer:  <var name="$arocm" width="10" /></p></li>
-                </ol></p>
-              </statement>
-              <solution>
-                <p><ol label="a">
-                  <li><p>The average rate of change is <m><var name="$aroc" /></m></p></li>
-                  <li><p>The average rate of change is <m><var name="$aroc" /></m></p></li>
-                  <li><p>The average rate of change is <m><var name="$arocm" /></m></p></li>
-                </ol></p>
-              </solution>
-            </webwork>
-          </exercise>
+					<exercise>
+						<webwork>
+							<setup>
+								<pg-code>
+									$aroc=Real(-2);
+									Context()->variables->are(m=>'Real');
+									$arocm=Formula("m");
+								</pg-code>
+							</setup>
+							<statement>
+								<p><ol label="a">
+									<li><p>What is the average rate of change for the function <m>g(x) = -2x + 7</m> on the interval <m>0\leq x \leq 5</m>?</p>
+									<p>Answer:  <var name="$aroc" width="10" /></p></li>
+									<li><p>What is the average rate of change for the function <m>g(x) = -2x + 7</m> on the interval <m>12\leq x \leq 20</m>?</p>
+									<p>Answer:  <var name="$aroc" width="10" /></p></li>
+									<li><p>What is the average rate of change for the function <m>h(x) = mx + b</m> on <em>any</em> interval?</p>
+									<p>Answer:  <var name="$arocm" width="10" /></p></li>
+								</ol></p>
+							</statement>
+							<solution>
+								<p><ol label="a">
+									<li><p>The average rate of change is <m><var name="$aroc" /></m></p></li>
+									<li><p>The average rate of change is <m><var name="$aroc" /></m></p></li>
+									<li><p>The average rate of change is <m><var name="$arocm" /></m></p></li>
+								</ol></p>
+							</solution>
+						</webwork>
+					</exercise>
 
-          <exercise>
-            <webwork>
-              <setup>
-                <pg-code>
-                  Context()->variables->are(x=>'Real');
-                  $form=Formula("5*x+3");
-                </pg-code>
-              </setup>
-              <statement>
-                <p>For a certain linear function <m>f(x)</m>, suppose we know that <m>f(0) = 3</m> and the average rate of change of <m>f</m> is <m>5</m> on the interval <m>1 \leq x \leq 8</m>.</p>
-                <p>Find the formula for the function <m>f(x)</m>.</p>
-                <p>Answer:  <m>f(x) = </m><var name="$form" width="15" /></p>
-              </statement>
-              <hint>
-                <p>Remember that the <em>average rate of change</em> of a function <m>f</m> on an interval <m>[a,b]</m> is just the slope of the line segment connecting the points <m>\left(a,f(a)\right)</m> and <m>\left(b,f(b)\right)</m>. And, the function in this problem is actually a line.</p>
-              </hint>
-              <solution>
-                <p>Since the function <m>f</m> is actually a line, then the average rate of change on <em>any</em> interval will be the slope of the line.</p>
-                <p>Also, since it is linear, we can write the formula as: <m>f(x) = mx + b</m></p>
-                <p>Therefore, the formula is just: <m>f(x) = 5x + 3</m></p>
-              </solution>
-            </webwork>
-          </exercise>
+					<exercise>
+						<webwork>
+							<setup>
+								<pg-code>
+									Context()->variables->are(x=>'Real');
+									$form=Formula("5*x+3");
+								</pg-code>
+							</setup>
+							<statement>
+								<p>For a certain linear function <m>f(x)</m>, suppose we know that <m>f(0) = 3</m> and the average rate of change of <m>f</m> is <m>5</m> on the interval <m>1 \leq x \leq 8</m>.</p>
+								<p>Find the formula for the function <m>f(x)</m>.</p>
+								<p>Answer:  <m>f(x) = </m><var name="$form" width="15" /></p>
+							</statement>
+							<hint>
+								<p>Remember that the <em>average rate of change</em> of a function <m>f</m> on an interval <m>[a,b]</m> is just the slope of the line segment connecting the points <m>\left(a,f(a)\right)</m> and <m>\left(b,f(b)\right)</m>. And, the function in this problem is actually a line.</p>
+							</hint>
+							<solution>
+								<p>Since the function <m>f</m> is actually a line, then the average rate of change on <em>any</em> interval will be the slope of the line.</p>
+								<p>Also, since it is linear, we can write the formula as: <m>f(x) = mx + b</m></p>
+								<p>Therefore, the formula is just: <m>f(x) = 5x + 3</m></p>
+							</solution>
+						</webwork>
+					</exercise>
 
-          <exercise>
-            <webwork>
-              <setup>
-                <pg-code>
-                  $b=random(3,7,1);
-                  $c=random(8,12,1);
-                  $d=Compute("$c + 5*($b-1)");
-                  $run=Compute("$b-1");
-                  $rise=Compute("5*$run");
-                </pg-code>
-              </setup>
-              <statement>
-                <p>Suppose the average rate of change of a function <m>g</m> on the interval <m>1 \leq x \leq <var name="$b" /></m> is <m>5</m>. If <m>g(1) = <var name="$c" /></m>, what is <m>g\left(<var name="$b" />\right)</m>?</p>
-                <p>Answer:  <m>g\left(<var name="$b" />\right) = </m><var name="$d" width="10" /></p>
-              </statement>
-              <solution>
-                <p>Remember that the average rate of change is the slope connecting two points on the function, and this <em>slope</em> is just <m>\frac{\text{rise}}{\text{run}} = 5</m>. The horizontal change, or "run", between <m>x=1</m> and <m>x=<var name="$b" /></m> is <m><var name="$run" /></m>. With this, we can solve for the vertical change, or "rise":</p>
-                <p><md>
-                  <mrow>\frac{\text{rise}}{\text{run}} \amp= 5</mrow>
-                  <mrow>\frac{\text{rise}}{<var name="$run" />} \amp= 5</mrow>
-                  <mrow>\text{rise} \amp= <var name="$rise" /></mrow>
-                </md></p>
-                <p>Finally, we can find <m>f(<var name="$b" />)</m> by adding <m><var name="$rise" /></m> to the output <m>f(1) = <var name="$c" /></m>.</p>
-                <p>Answer:  <md>
-                  <mrow>f(<var name="$b" />) \amp= <var name="$c" /> + <var name="$rise" /></mrow>
-                  <mrow>\amp= <var name="$d" /></mrow>
-                </md></p>
-              </solution>
-            </webwork>
-          </exercise>
+					<exercise>
+						<webwork>
+							<setup>
+								<pg-code>
+									$b=random(3,7,1);
+									$c=random(8,12,1);
+									$d=Compute("$c + 5*($b-1)");
+									$run=Compute("$b-1");
+									$rise=Compute("5*$run");
+								</pg-code>
+							</setup>
+							<statement>
+								<p>Suppose the average rate of change of a function <m>g</m> on the interval <m>1 \leq x \leq <var name="$b" /></m> is <m>5</m>. If <m>g(1) = <var name="$c" /></m>, what is <m>g\left(<var name="$b" />\right)</m>?</p>
+								<p>Answer:  <m>g\left(<var name="$b" />\right) = </m><var name="$d" width="10" /></p>
+							</statement>
+							<solution>
+								<p>Remember that the average rate of change is the slope connecting two points on the function, and this <em>slope</em> is just <m>\frac{\text{rise}}{\text{run}} = 5</m>. The horizontal change, or "run", between <m>x=1</m> and <m>x=<var name="$b" /></m> is <m><var name="$run" /></m>. With this, we can solve for the vertical change, or "rise":</p>
+								<p><md>
+									<mrow>\frac{\text{rise}}{\text{run}} \amp= 5</mrow>
+									<mrow>\frac{\text{rise}}{<var name="$run" />} \amp= 5</mrow>
+									<mrow>\text{rise} \amp= <var name="$rise" /></mrow>
+								</md></p>
+								<p>Finally, we can find <m>f(<var name="$b" />)</m> by adding <m><var name="$rise" /></m> to the output <m>f(1) = <var name="$c" /></m>.</p>
+								<p>Answer:  <md>
+									<mrow>f(<var name="$b" />) \amp= <var name="$c" /> + <var name="$rise" /></mrow>
+									<mrow>\amp= <var name="$d" /></mrow>
+								</md></p>
+							</solution>
+						</webwork>
+					</exercise>
 
-          <exercise>
-            <webwork>
-              <setup>
-                <pg-code>
-                  $false=PopUp(["?","True","False"],"False");
-                  $true=PopUp(["?","True","False"],"True");
-                </pg-code>
-              </setup>
-              <statement>
-                <p>True or False:</p>
-                <p><ol label="a">
-                  <li><p>If the average rate of change of a function <m>y = f(x)</m> is <m>3</m> on an interval, then for every increase of <m>1</m> in <m>x</m> in that interval, <m>y</m> will increase by <m>3</m>.</p>
-                  <p>Answer:  <var name="$false" form="popup" /></p></li>
-                  <li><p>If the average rate of change of a <em>linear</em> function <m>y = g(x)</m> is <m>4</m> on an interval, then for every increase of <m>1</m> in <m>x</m> in that interval, <m>y</m> will increase by <m>4</m>.</p>
-                  <p>Answer:  <var name="$true" form="popup" /></p></li>
-                </ol></p>
-              </statement>
-              <hint>
-                <p>Notice that <m>f</m> is not assumed to be linear, but <m>g</m> is. Also, remember that the average rate of change represents a <em>slope</em>.</p>
-              </hint>
-              <solution>
-                <p><ol label="a">
-                  <li><p>This is <var name="$false" /> because the function <m>f</m> may be curved on that interval, so the average rate of change is just the slope connecting the points at the endpoints of that interval.</p>
-                  <p>An example would be the function <m>f(x) = x^2</m> on the interval <m>0 \leq x \leq 3</m>. Even though the average rate of change on that interval is <m>\frac{9-0}{3} = 3</m>, increasing from <m>x=2</m> to <m>x=3</m> only sees an increase in the output of <m>f(3) - f(2) = 9 - 4 = 5</m>.</p></li>
-                  <li><p>This <var name="$true" /> because the function <m>g</m> was assumed to be linear. A linear function has a constant slope, no matter what the interval.</p></li>
-                </ol></p>
-              </solution>
-            </webwork>
-          </exercise>
+					<exercise>
+						<webwork>
+							<setup>
+								<pg-code>
+									$false=PopUp(["?","True","False"],"False");
+									$true=PopUp(["?","True","False"],"True");
+								</pg-code>
+							</setup>
+							<statement>
+								<p>True or False:</p>
+								<p><ol label="a">
+									<li><p>If the average rate of change of a function <m>y = f(x)</m> is <m>3</m> on an interval, then for every increase of <m>1</m> in <m>x</m> in that interval, <m>y</m> will increase by <m>3</m>.</p>
+									<p>Answer:  <var name="$false" form="popup" /></p></li>
+									<li><p>If the average rate of change of a <em>linear</em> function <m>y = g(x)</m> is <m>4</m> on an interval, then for every increase of <m>1</m> in <m>x</m> in that interval, <m>y</m> will increase by <m>4</m>.</p>
+									<p>Answer:  <var name="$true" form="popup" /></p></li>
+								</ol></p>
+							</statement>
+							<hint>
+								<p>Notice that <m>f</m> is not assumed to be linear, but <m>g</m> is. Also, remember that the average rate of change represents a <em>slope</em>.</p>
+							</hint>
+							<solution>
+								<p><ol label="a">
+									<li><p>This is <var name="$false" /> because the function <m>f</m> may be curved on that interval, so the average rate of change is just the slope connecting the points at the endpoints of that interval.</p>
+									<p>An example would be the function <m>f(x) = x^2</m> on the interval <m>0 \leq x \leq 3</m>. Even though the average rate of change on that interval is <m>\frac{9-0}{3} = 3</m>, increasing from <m>x=2</m> to <m>x=3</m> only sees an increase in the output of <m>f(3) - f(2) = 9 - 4 = 5</m>.</p></li>
+									<li><p>This <var name="$true" /> because the function <m>g</m> was assumed to be linear. A linear function has a constant slope, no matter what the interval.</p></li>
+								</ol></p>
+							</solution>
+						</webwork>
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_19.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_19.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/Michigan/precalc/4e/Chap1Sec2/Q15.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/Michigan/precalc/4e/Chap1Sec2/Q15.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec5/Q10.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/LoyolaChicago/Precalc/Chap2Sec5/Q10.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap1Sec2/Q03.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/LoyolaChicago/Precalc/Chap1Sec2/Q03.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap1Sec2/Q18.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/LoyolaChicago/Precalc/Chap1Sec2/Q18.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/Michigan/precalc/4e/Chap1Sec2/Q23.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/Michigan/precalc/4e/Chap1Sec2/Q23.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/Westmont/ActiveCalculus/Preview_1_3/preview_1_3_b/preview_1_3_b.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/Westmont/ActiveCalculus/Preview_1_3/preview_1_3_b/preview_1_3_b.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/Westmont/ActiveCalculus/Preview_1_3/preview_1_3_c/preview_1_3_c.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/Westmont/ActiveCalculus/Preview_1_3/preview_1_3_c/preview_1_3_c.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap1Sec2/Q16.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/LoyolaChicago/Precalc/Chap1Sec2/Q16.pg" seed="1" />
+					</exercise>
 </exercisegroup>
 
 
-<!-- evaluating and solving for x -->
 <exercisegroup><introduction><p>Evaluating Functions and Solving for an Unknown</p></introduction>
-          <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-09-Input-and-output.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/LoyolaChicago/Precalc/Chap2Sec1/Connally3-2-1-09-Input-and-output.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/FortLewis/Algebra/4-3-Functions-and-equations/MCH1-4-3-02-Functions-and-equations.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/FortLewis/Algebra/4-3-Functions-and-equations/MCH1-4-3-02-Functions-and-equations.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph20.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph20.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph10.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph10.pg" seed="1" />
+					</exercise>
 
-          <exercise>
-            <webwork source="Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph30.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph30.pg" seed="1" />
+					</exercise>
 </exercisegroup>
 
 
-<!-- Is it a function? -->
 <exercisegroup><introduction><p>Identifying a Function</p></introduction>
           <exercise>
             <webwork source="Library/Wiley/setAnton_Section_0.1/Question3.pg" seed="1" />
@@ -829,11 +1222,6 @@
           <exercise>
             <webwork source="Library/NewHampshire/unh_schoolib/Functions/funsrs201.pg" seed="1" />
           </exercise>
-
-          <!-- Coded with PTX-incompatible structure. -->
-          <!-- <exercise>
-            <webwork source="Library/NewHampshire/unh_schoolib/Functions/funbrs201.pg" seed="1" />
-          </exercise> -->
 
           <exercise>
             <webwork source="Library/NewHampshire/NECAP/grade11/gr11-2009/n11-2009-6s.pg" seed="1" />
@@ -849,16 +1237,38 @@
 </exercisegroup>
 
 <exercisegroup><introduction><p>Additional Problems</p></introduction>
-<!-- choose the best graph for the story -->
 
-          <exercise>
-            <webwork source="Library/ASU-topics/setFunctions/rich1.pg" seed="1" />
-          </exercise>
+					<exercise>
+						<webwork source="Library/ASU-topics/setFunctions/rich1.pg" seed="1" />
+					</exercise>
 
-<!-- harder simplifications -->
 
 </exercisegroup>
 
+<<<<<<< Updated upstream
+
+<exercisegroup><introduction><p>Additional Problems</p></introduction>
+  <exercise>
+    <statement>
+      <p>Define the following variables:</p>
+      <ul>
+        <li><p><m>T =</m> the average temperature outside in degrees Celsius</p></li>
+        <li><p><m>I =</m> the number of ice cream bars you sell at your food cart in one day</p></li>
+        <li><p><m>H =</m> the number of hot coffee drinks you sell at your food cart in one day</p></li>
+      </ul>
+      <ol>
+        <li><p>Suppose <m>I = f(T)</m>. Do you expect that the function <m>f</m> should be <em>increasing</em> or <em>decreasing</em>? Explain your answer.</p></li>
+        <li><p>Suppose <m>H = g(T)</m>. Do you expect that the function <m>g</m> should be <em>increasing</em> or <em>decreasing</em>? Explain your answer.</p></li>
+        <li><p>If you charge <m>\$ 2.50</m> for an ice cream bar and <m>\$ 1.75</m> for a hot coffee drink, write an expression (using function notation) that represents the total amount of money you will make from coffee and ice cream in one day, if the average temperature outside is <m>27^{\circ}</m>.</p></li>
+        <li><p>Suppose that on a <m>27^{\circ}</m> day, your cart sells <m>30</m> ice cream bars and <m>24</m> hot coffee drinks, and on a <m>35^{\circ}</m> day it sells <m>50</m> ice cream bars and <m>16</m> hot coffee drinks. Determine the average rate of changes for <m>f</m> and <m>g</m> on the interval <m>27 \leq T \leq 35</m>, and interpret each with a complete sentence.</p></li>
+      </ol>
+    </statement>
+  </exercise>
+
+</exercisegroup>
+
+
         </exercises>
+-->
     </section>
 </chapter>
