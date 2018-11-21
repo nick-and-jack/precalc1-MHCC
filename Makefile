@@ -71,7 +71,8 @@ IMAGESOUT  = $(OUTPUT)/images
 WWOUT      = $(OUTPUT)/webwork-extraction
 
 # Some aspects of producing these examples require a WeBWorK server.
-SERVER = "(https://webwork.pcc.edu,anonymous,anonymous,anonymous,open)"
+SERVER = "https://webwork-ptx.aimath.org"
+# If using PCC, change line above to SERVER = "(https://webwork.pcc.edu,anonymous,anonymous,anonymous,open)"
 
 
 ################
@@ -140,4 +141,3 @@ check:
 	-rm $(OUTPUT)/jingreport.txt
 	-java -classpath ~/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar ~/jing-trang/build/jing.jar $(MB)/schema/pretext.rng $(MAINFILE) > $(OUTPUT)/jingreport.txt
 	less $(OUTPUT)/jingreport.txt
-
