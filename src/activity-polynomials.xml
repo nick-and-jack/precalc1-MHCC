@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -10,59 +9,91 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-
 <section xml:id="section-activity-polynomials" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Polynomials</title>
   <subsection>
     <title>Degree and Roots</title>
-    <p>In this activity, we will explore <term>polynomial</term> functions by building on our knowledge of power functions.</p>
+    <p>
+      In this activity, we will explore <term>polynomial</term>
+      functions by building on our knowledge of power functions.
+    </p>
 
-    <p>A <term>polynomial</term><idx><h>polynomial</h></idx><idx><h>function</h><h>polynomial</h></idx> is a function of the form <me>f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n</me> where the numbers <m>a_0</m> through <m>a_n</m> are constant values, called <term>coefficients</term><idx><h>coefficient</h></idx>. A polynomial is a sum of a specific set <term>power</term> functions (power functions with non-negative exponents).</p>
+    <p>
+      A <term>polynomial</term>
+          <idx><h>polynomial</h></idx>
+          <idx><h>function</h><h>polynomial</h></idx>
+      is a function of the form
+      <me>
+        f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
+      </me>
+      where the numbers <m>a_0</m> through <m>a_n</m> are constant values,
+      called <term>coefficients</term>.
+          <idx><h>coefficient</h></idx>
+      A polynomial is a sum of a specific set
+      <term>power</term> functions
+      (power functions with non-negative exponents).
+    </p>
 
-    <p>First, we will introduce two important terms associated with polynomials: <em>degree</em> and <em>root</em></p>
+    <p>
+      First, we will introduce two important terms associated with polynomials:
+      <em>degree</em> and <em>root</em>
+    </p>
 
-    <p>The <term>degree</term><idx><h>polynomial</h><h>degree</h></idx> of a polynomial is the highest exponent on the variable.</p>
+    <p>
+      The <term>degree</term>
+          <idx><h>polynomial</h><h>degree</h></idx>
+      of a polynomial is the highest exponent on the variable.
+    </p>
+
     <example>
-      <p>Some polynomials and their degrees:</p>
+      <p>
+        Some polynomials and their degrees:
+      </p>
+
       <sidebyside>
+
         <tabular top="major" halign="center">
-            <col halign="left" />
-            <col />
-
-            <row bottom="medium">
-              <cell>Polynomial</cell>
-              <cell>Degree</cell>
-            </row>
-
-            <row>
-              <cell><m>-3 + 5x + x^2</m></cell>
-              <cell><m>2</m></cell>
-            </row>
-
-            <row>
-              <cell><m>10 + 5.4x</m></cell>
-              <cell><m>1</m></cell>
-            </row>
-
-            <row>
-              <cell><m>9x^4 + 3x</m></cell>
-              <cell><m>4</m></cell>
-            </row>
-
-            <row>
-              <cell><m>137</m></cell>
-              <cell><m>0</m></cell>
-            </row>
-
+          <col halign="left" />
+          <col />
+          <row bottom="medium">
+            <cell>Polynomial</cell>
+            <cell>Degree</cell>
+          </row>
+          <row>
+            <cell><m>-3 + 5x + x^2</m></cell>
+            <cell><m>2</m></cell>
+          </row>
+          <row>
+            <cell><m>10 + 5.4x</m></cell>
+            <cell><m>1</m></cell>
+          </row>
+          <row>
+            <cell><m>9x^4 + 3x</m></cell>
+            <cell><m>4</m></cell>
+          </row>
+          <row>
+            <cell><m>137</m></cell>
+            <cell><m>0</m></cell>
+          </row>
         </tabular>
+
       </sidebyside>
     </example>
 
-    <p>A <term>root</term><idx><h>polynomial</h><h>root</h></idx> of a polynomial is a value of the input which gives an output of <em>zero</em>.</p>
-    <p>Test your understanding of these definitions in the next two exercises.</p>
+    <p>
+      A <term>root</term>
+          <idx><h>polynomial</h><h>root</h></idx>
+      of a polynomial is a value of the input which gives an output of <em>zero</em>.
+    </p>
+
+    <p>
+      Test your understanding of these definitions in the next two exercises.
+    </p>
+
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $true=PopUp(
             ["?","True","False"],"True"
@@ -71,41 +102,76 @@
             ["?","True","False"],"False"
             );
           </pg-code>
-        </setup>
-        <statement>
-          <p>For each statement below, decide if it is True or False.</p>
-          <p><ol label="a">
-            <li>
-              <p>The number <m>x = 2.5</m> is a root of the polynomial <m>f(x) = 10x^2 - 37x + 30</m>.</p>
-              <p>Answer:  <var name="$true" form="popup" /></p>
-            </li>
-            <li>
-              <p>The number <m>x = 0</m> is a root of the polynomial <m>f(x) = 10x^2 - 37x + 30</m>.</p>
-              <p>Answer:  <var name="$false" form="popup" /></p>
-            </li>
-            <li>
-              <p>The number <m>x = 1.2</m> is a root of the polynomial <m>f(x) = 10x^2 - 37x + 30</m>.</p>
-              <p>Answer:  <var name="$true" form="popup" /></p>
-            </li>
-          </ol></p>
-        </statement>
-        <hint>
-          <p>Use your calculator. Remember that a number <m>x = a</m> is a root of a polynomial <m>f(x)</m> if <m>f(a) = 0</m>.</p>
-        </hint>
-        <solution>
-          <p>The roots of the polynomial are <m>x = 2.5</m> and <m>x = 1.2</m> because:<md>
-            <mrow>f(2.5) \amp= 10(2.5)^2 - 37(2.5) + 30</mrow>
-            <mrow>\amp= 0</mrow></md> and <md>
-            <mrow>f(1.2) \amp= 10(1.2)^2 - 37(1.2) + 30</mrow>
-            <mrow>\amp= 0</mrow></md>.
-          </p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              For each statement below, decide if it is True or False.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    The number <m>x = 2.5</m> is a root of the polynomial <m>f(x) = 10x^2 - 37x + 30</m>.
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$true" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The number <m>x = 0</m> is a root of the polynomial <m>f(x) = 10x^2 - 37x + 30</m>.
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$false" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The number <m>x = 1.2</m> is a root of the polynomial <m>f(x) = 10x^2 - 37x + 30</m>.
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$true" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Use your calculator.
+              Remember that a number <m>x = a</m> is a root of a polynomial <m>f(x)</m> if <m>f(a) = 0</m>.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              The roots of the polynomial are <m>x = 2.5</m> and <m>x = 1.2</m> because:
+              <md>
+                <mrow>f(2.5) \amp= 10(2.5)^2 - 37(2.5) + 30</mrow>
+                <mrow>\amp= 0</mrow>
+              </md>
+              and
+              <md>
+                <mrow>f(1.2) \amp= 10(1.2)^2 - 37(1.2) + 30</mrow>
+                <mrow>\amp= 0</mrow>
+              </md>.
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $m=random(3,9,1);
             $b=random(5,9,1);
@@ -115,102 +181,196 @@
             Context("Fraction");
             $root=Fraction(-$b,$m);
           </pg-code>
-        </setup>
-        <statement>
-          <p><ol label="a">
-            <li>
-              <p>What is the <term>degree</term> of the polynomial <m>f(x) = <var name="$m" />x + <var name="$b" /></m>?</p>
-              <p>Answer:  <var name="$degree" width="10" /></p>
-            </li>
-            <li>
-              <p>Find the <term>root</term> of the function <m>f(x) = <var name="$m" />x + <var name="$b" /></m>.</p>
-              <p>Answer:  <var name="$variable" form="popup" /> = <var name="$root" width="10" /></p>
-            </li>
-          </ol></p>
-        </statement>
+          </setup>
+          <statement>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    What is the <term>degree</term> of the polynomial <m>f(x) = <var name="$m" />x + <var name="$b" /></m>?
+                  </p>
 
+                  <p>
+                    Answer:
+                    <var name="$degree" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Find the <term>root</term> of the function <m>f(x) = <var name="$m" />x + <var name="$b" /></m>.
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$variable" form="popup" /> = <var name="$root" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
       </webwork>
     </exercise>
 
-    <p>Now, we will see how our knowledge of first degree polynomials (<init>a.k.a.</init> <em>lines</em>) will help us to understand polynomials of higher degrees.</p>
+    <p>
+      Now, we will see how our knowledge of first degree polynomials (<init>a.k.a.</init>
+      <em>lines</em>) will help us to understand polynomials of higher degrees.
+    </p>
+
     <exercise>
       <webwork>
-        <pg-macros>
-          <macro-file>contextLimitedPolynomial.pl</macro-file>
-        </pg-macros>
-        <setup>
+          <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
+          <setup>
+
           <pg-code>
             $degree1=Real(1);
             $degree2=Real(2);
             Context("LimitedPolynomial");
             $formula=Formula("x^2-x-2");
           </pg-code>
-        </setup>
-        <statement>
-          <p>Use the checkboxes to graph the functions:<md>
-            <mrow>y \amp= x - 2\amp y \amp= x + 1\amp y \amp= (x - 2)(x + 1)</mrow>
-          </md></p>
+          </setup>
+          <statement>
+            <p>
+              Use the checkboxes to graph the functions:
+              <md>
+                <mrow>y \amp= x - 2\amp y \amp= x + 1\amp y \amp= (x - 2)(x + 1)</mrow>
+              </md>
+            </p>
 
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888/sdz/false/" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888/sdz/false/" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
 
-          <p><ol label="a">
-            <li>
-              <p>What is the degree of the function <m>y = x - 2</m>?</p>
-              <p>Answer:  <var name="$degree1" width="10" /></p>
-            </li>
-            <li>
-              <p>How many roots does it have?</p>
-              <p>Answer:  <var name="$degree1" width="10" /></p>
-            </li>
-            <li>
-              <p>What is the degree of the function <m>y = x + 1</m>?</p>
-              <p>Answer:  <var name="$degree1" width="10" /></p>
-            </li>
-            <li>
-              <p>How many roots does it have?</p>
-              <p>Answer:  <var name="$degree1" width="10" /></p>
-            </li>
-            <li>
-              <p>Expand the function <m>y = (x - 2)(x + 1)</m> by writing it in the form <m>ax^2 + bx + c</m>.</p>
-              <p>Answer:  <var name="$formula" width="15" /></p>
-            </li>
-            <li>
-              <p>What is the degree of the function <m>y = (x - 2)(x + 1)</m>?</p>
-              <p>Answer:  <var name="$degree2" width="10" /></p>
-            </li>
-            <li>
-              <p>How many roots does it have?</p>
-              <p>Answer:  <var name="$degree2" width="10" /></p>
-            </li>
-          </ol></p>
-        </statement>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    What is the degree of the function <m>y = x - 2</m>?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$degree1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    How many roots does it have?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$degree1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the degree of the function <m>y = x + 1</m>?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$degree1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    How many roots does it have?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$degree1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Expand the function <m>y = (x - 2)(x + 1)</m> by writing it in the form <m>ax^2 + bx + c</m>.
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$formula" width="15" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the degree of the function <m>y = (x - 2)(x + 1)</m>?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$degree2" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    How many roots does it have?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$degree2" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
       </webwork>
     </exercise>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $rootsWhere=PopUp(["?","It has both roots of the linear functions.","It has different roots than the linear functions.","Roots? There are no roots."],1);
           </pg-code>
-        </setup>
-        <statement>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888/sdz/false/" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+          </setup>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZQ4DEqee/width/432/height/373/border/888888/sdz/false/" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
 
-          <p>The <m>2^{\text{nd}}</m> degree polynomial <me>y = (x - 2)(x + 1)</me> is the product of two linear functions: <me>y = x - 2 \text{ and } y = x + 1</me>.</p>
-          <p>The <m>1^{\text{st}}</m> degree polynomials each had one root. Where are the roots of the <m>2^{\text{nd}}</m> degree polynomial?</p>
-          <p>Answer:  <var name="$rootsWhere" form="popup" /></p>
-        </statement>
+            <p>
+              The <m>2^{\text{nd}}</m> degree polynomial
+              <me>
+                y = (x - 2)(x + 1)
+              </me>
+              is the product of two linear functions:
+              <me>
+                y = x - 2 \text{ and } y = x + 1
+              </me>.
+            </p>
 
-        <solution>
-          <p>If a function <m>p</m> is the product of two linear functions <m>f</m> and <m>g</m>, then <m>p</m> will have both the roots of the <m>f</m> and <m>g</m>.</p>
-        </solution>
+            <p>
+              The <m>1^{\text{st}}</m> degree polynomials each had one root.
+              Where are the roots of the <m>2^{\text{nd}}</m> degree polynomial?
+            </p>
+
+            <p>
+              Answer:
+              <var name="$rootsWhere" form="popup" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              If a function <m>p</m> is the product of two linear functions <m>f</m> and <m>g</m>,
+              then <m>p</m> will have both the roots of the <m>f</m> and <m>g</m>.
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
 
           <pg-code>
             $variable=PopUp(["?","x","y"],"x");
@@ -219,27 +379,60 @@
             $root0=Real(0);
             $rootsAll=PopUp(["?","All the roots of f, g and h","None of the roots of f, g or h","Roots? There are no roots!"],1);
           </pg-code>
-        </setup>
-        <statement>
-          <p>Use the checkboxes to graph the functions: <md>
-            <mrow>f(x) \amp= x - 3\amp g(x) \amp= x - 1\amp h(x) \amp= x</mrow>
-          </md></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aBfjCKXg/width/433/height/373/border/888888/sdz/false/" width="433px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>What is the root of each function?</p>
-          <p>Root of <m>f(x) = x - 3</m>:  <var name="$variable" form="popup" /> = <var name="$root3" width="10" /></p>
-          <p>Root of <m>g(x) = x - 1</m>:  <var name="$variable" form="popup" /> = <var name="$root1" width="10" /></p>
-          <p>Root of <m>h(x) = x</m>:  <var name="$variable" form="popup" /> = <var name="$root0" width="10" /></p>
-          <p>What are the roots of <m>p(x) = (x-3)(x-1)x</m>?</p>
-          <p>Answer:  <var name="$rootsAll" form="popup" /></p>
-        </statement>
+          </setup>
+          <statement>
+            <p>
+              Use the checkboxes to graph the functions:
+              <md>
+                <mrow>f(x) \amp= x - 3\amp g(x) \amp= x - 1\amp h(x) \amp= x</mrow>
+              </md>
+            </p>
+
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aBfjCKXg/width/433/height/373/border/888888/sdz/false/" width="433px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              What is the root of each function?
+            </p>
+
+            <p>
+              Root of <m>f(x) = x - 3</m>:
+              <var name="$variable" form="popup" /> = <var name="$root3" width="10" />
+            </p>
+
+            <p>
+              Root of <m>g(x) = x - 1</m>:
+              <var name="$variable" form="popup" /> = <var name="$root1" width="10" />
+            </p>
+
+            <p>
+              Root of <m>h(x) = x</m>:
+              <var name="$variable" form="popup" /> = <var name="$root0" width="10" />
+            </p>
+
+            <p>
+              What are the roots of <m>p(x) = (x-3)(x-1)x</m>?
+            </p>
+
+            <p>
+              Answer:
+              <var name="$rootsAll" form="popup" />
+            </p>
+          </statement>
       </webwork>
     </exercise>
 
-    <p>By now, you are already seeing the relationship between the roots of a polynomial, and the roots of its linear factors. Use this observation to make predictions about the graph of a polynomial in the next exercise.</p>
+    <p>
+      By now, you are already seeing the relationship between the roots of a polynomial,
+      and the roots of its linear factors.
+      Use this observation to make predictions about the graph of a polynomial in the next exercise.
+    </p>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $graph=PopUp(["?","Graph A","Graph B","Graph C","Graph D"],4);
 
@@ -275,37 +468,73 @@
             add_functions($gr[3], "(x+1)*(x-2)*(x-3) for x in &lt;-2,5&gt; using color:red and weight:2");
             $gr[3] -> lb(new Label ( 4,-12,'Graph D','red','right','bottom'));
           </pg-code>
-        </setup>
-        <statement>
-          <p>Let <m>p(x) = (x-2)(x+1)(2x-6)</m>.</p>
-          <p>Thinking about the linear factors of <m>p</m> as lines, each with its own root, choose which option below could be the graph of <m>p(x)</m>.</p>
-          <sidebyside widths="40%"><image pg-name="$gr[0]" /></sidebyside>
-          <sidebyside widths="40%"><image pg-name="$gr[1]" /></sidebyside>
-          <sidebyside widths="40%"><image pg-name="$gr[2]" /></sidebyside>
-          <sidebyside widths="40%"><image pg-name="$gr[3]" /></sidebyside>
-          <p>Answer:  <var name="$graph" form="popup" /></p>
-        </statement>
-        <hint>
-          <p>If you take each of the factors as a linear function <md>
-            <mrow>y = x - 2</mrow>
-            <mrow>y = x + 1</mrow>
-            <mrow>y = 2x - 6</mrow>
-          </md>and find the <term>root</term> of each one, this will tell you where the function <m>p(x)</m> should cross the <m>x</m>-axis.</p>
-        </hint>
-        <solution>
-          <p>The graph of <m>p(x) = (x-2)(x+1))2x-6)</m> is graph <var name="$graph" /> because it has the roots: <md>
-          <mrow>x = 2</mrow>
-          <mrow>x = -1</mrow>
-          <mrow>x = 3</mrow></md></p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              Let <m>p(x) = (x-2)(x+1)(2x-6)</m>.
+            </p>
+
+            <p>
+              Thinking about the linear factors of <m>p</m> as lines,
+              each with its own root,
+              choose which option below could be the graph of <m>p(x)</m>.
+            </p>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr[0]" />
+            </sidebyside>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr[1]" />
+            </sidebyside>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr[2]" />
+            </sidebyside>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr[3]" />
+            </sidebyside>
+
+            <p>
+              Answer:
+              <var name="$graph" form="popup" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              If you take each of the factors as a linear function
+              <md>
+                <mrow>y = x - 2</mrow>
+                <mrow>y = x + 1</mrow>
+                <mrow>y = 2x - 6</mrow>
+              </md>
+              and find the <term>root</term> of each one,
+              this will tell you where the function <m>p(x)</m> should cross the <m>x</m>-axis.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              The graph of <m>p(x) = (x-2)(x+1))2x-6)</m> is graph <var name="$graph" /> because it has the roots:
+              <md>
+                <mrow>x = 2</mrow>
+                <mrow>x = -1</mrow>
+                <mrow>x = 3</mrow>
+              </md>
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
-    <p>In the next two problems, you'll predict the number of roots of a polynomial and where those roots are located.</p>
+    <p>
+      In the next two problems,
+      you'll predict the number of roots of a polynomial and where those roots are located.
+    </p>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $c=4;
             @a=map{$_+5}NchooseK(14,3);
@@ -314,104 +543,236 @@
             @c=map{-1*$_}@b;
             $roots=PopUp(["?","$b[0], $c[1] and $b[2]","$b[0], $b[1] and $b[2]","$c[0], $b[1] and $c[2]"],"$b[0], $b[1] and $b[2]");
           </pg-code>
-        </setup>
-        <statement>
-          <p>Let <m>m(x) = (<var name="$c" />x - <var name="$a[0]" />)(x + <var name="$a[1]" />)(x - <var name="$a[2]" />).</m></p>
-          <p><ol label="a">
-            <li>
-              <p>How many roots does <m>m(x)</m> have?</p>
-              <p>Answer:  <var name="$howManyRoots" width="10" /></p>
-            </li>
-            <li>
-              <p>What are the roots of <m>m(x)</m>?</p>
-              <p>Answer:  <var name="$roots" form="popup" /></p>
-            </li>
-          </ol></p>
-        </statement>
-        <hint>
-          <p>Find the root of each linear factor of <m>m(x)</m>.</p>
-        </hint>
-        <solution>
-          <p>There are three roots, because the function has three different linear factors.</p>
-          <p>They are:  <var name="$roots" />.</p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              Let <m>m(x) = (<var name="$c" />x - <var name="$a[0]" />)(x + <var name="$a[1]" />)(x - <var name="$a[2]" />)</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    How many roots does <m>m(x)</m> have?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$howManyRoots" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What are the roots of <m>m(x)</m>?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$roots" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Find the root of each linear factor of <m>m(x)</m>.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              There are three roots,
+              because the function has three different linear factors.
+            </p>
+
+            <p>
+              They are:
+              <var name="$roots" />.
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $didItGraph=PopUp(["?","yes","no"],"yes");
           </pg-code>
-        </setup>
-        <statement>
-          <p>Move the points to the <m>x</m>-intercepts of the graph: <m>f(x) = (x+3)(x+1)(x-2)(2x-8)</m></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VkKRBCpF/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>If you place the points in the correct locations, the graph of <m>f(x)</m> will appear.</p>
-          <p>Did you correctly place the points?</p>
-          <p><var name="$didItGraph" form="popup" /></p>
-        </statement>
-        <hint>
-          <p>Did you set each of the linear factors, such as <m>(x+1)</m>, equal to zero and solve for <m>x</m>? Remember that the roots are the <m>x</m>-coordinates of the <m>x</m>-intercepts.</p>
-        </hint>
-        <solution>
-          <p>The <m>x</m>-intercepts are <m>(-3,0)</m>, <m>(-1,0)</m>, <m>(2,0)</m> and <m>(4,0)</m>.</p>
-          <p>These were found by setting the four linear factors each equal to zero:</p>
-          <p><md>
-            <mrow>x + 3 = 0 \amp\implies x = -3</mrow>
-            <mrow>x + 1 = 0 \amp\implies x = -1</mrow>
-            <mrow>x - 2 = 0 \amp\implies x = 2</mrow>
-            <mrow>2x - 8 = 0 \amp\implies x = 4</mrow>
-          </md></p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              Move the points to the <m>x</m>-intercepts of the graph:
+              <m>f(x) = (x+3)(x+1)(x-2)(2x-8)</m>
+            </p>
+
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/VkKRBCpF/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              If you place the points in the correct locations,
+              the graph of <m>f(x)</m> will appear.
+            </p>
+
+            <p>
+              Did you correctly place the points?
+            </p>
+
+            <p>
+              <var name="$didItGraph" form="popup" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Did you set each of the linear factors,
+              such as <m>(x+1)</m>, equal to zero and solve for <m>x</m>?
+              Remember that the roots are the <m>x</m>-coordinates of the <m>x</m>-intercepts.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              The <m>x</m>-intercepts are <m>(-3,0)</m>,
+              <m>(-1,0)</m>, <m>(2,0)</m> and <m>(4,0)</m>.
+            </p>
+
+            <p>
+              These were found by setting the four linear factors each equal to zero:
+            </p>
+
+            <p>
+              <md>
+                <mrow>x + 3 = 0 \amp\implies x = -3</mrow>
+                <mrow>x + 1 = 0 \amp\implies x = -1</mrow>
+                <mrow>x - 2 = 0 \amp\implies x = 2</mrow>
+                <mrow>2x - 8 = 0 \amp\implies x = 4</mrow>
+              </md>
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
-    <p>Now, let's summarize what we've seen up to this point in the next exercise.</p>
+    <p>
+      Now, let's summarize what we've seen up to this point in the next exercise.
+    </p>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $rootsN=PopUp(["?","2","N"],"N");
             $linearFactors=PopUp(["?","variables","linear factors","terms"],"linear factors");
             $intercepts=PopUp(["?","(a,0)","(0,a)","(-a,0)","(0,-a)"],"(a,0)");
           </pg-code>
-        </setup>
-        <statement>
-          <p>Complete each statement below:</p>
-          <p>If a polynomial is the product of <m>N</m> different linear factors, then its graph will have <var name="$rootsN" form="popup" /> different <m>x</m>-intercepts.</p>
-          <p>The <term>degree</term> of such a polynomial is equal to the number of its <var name="$linearFactors" form="popup" /></p>
-          <p>For each linear factor <m>x - a</m>, the polynomial will have an <m>x</m>-intercept at the point <var name="$intercepts" form="popup" /></p>
-        </statement>
-        <solution>
-          <p>If a polynomial has a factor of <m>(x - a)</m>, then evaluating that polynomial the value <m>x = a</m> will give it a factor of zero. This will make zero the output of the polynomial, so its graph will contain the point <m>(a,0)</m>.</p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              Complete each statement below:
+            </p>
+
+            <p>
+              If a polynomial is the product of <m>N</m> different linear factors,
+              then its graph will have <var name="$rootsN" form="popup" /> different <m>x</m>-intercepts.
+            </p>
+
+            <p>
+              The <term>degree</term> of such a polynomial is equal to the number of its <var name="$linearFactors" form="popup" />
+            </p>
+
+            <p>
+              For each linear factor <m>x - a</m>,
+              the polynomial will have an <m>x</m>-intercept at the point <var name="$intercepts" form="popup" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              If a polynomial has a factor of <m>(x - a)</m>,
+              then evaluating that polynomial the value <m>x = a</m> will give it a factor of zero.
+              This will make zero the output of the polynomial,
+              so its graph will contain the point <m>(a,0)</m>.
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
-    <p>One important note should be made here: Not every polynomial can be written as just a product of linear factors.<fn>The function <m>f(x) = x^2 + 1</m> is an easy example, as it has <em>no</em> <m>x</m>-intercepts. Can you think of other examples?</fn> But in this section, we will focus primarily on polynomials which <em>can</em> be written as a product of linear factors.</p>
-    <p>One skill we will develop here is being able to determine a formula for a polynomial if we have its graph. However, before we can do that, we need to discuss the end-behavior of a polynomial. The <term>end-behavior</term><idx><h>end-behavior</h></idx><idx><h>function</h><h>end-behavior</h></idx> of a function is what its outputs tend to do as <m>x</m> gets (infinitely) far from zero.</p>
-    <p>End-behavior is one thing we <em>can</em> tell about the graph of a polynomial, even if it is <em>not</em> written as a product of linear factors, such as: <md>
-      <mrow>y = 3x - 5x^2 + 17</mrow>
-      <mrow>\text{or}</mrow>
-      <mrow>y = -950x + x^3</mrow>
-    </md></p>
+    <p>
+      One important note should be made here:
+      Not every polynomial can be written as just a product of linear factors.<fn>
+      The function <m>f(x) = x^2 + 1</m> is an easy example,
+      as it has <em>no</em> <m>x</m>-intercepts.
+      Can you think of other examples?
+      </fn> But in this section,
+      we will focus primarily on polynomials which <em>can</em>
+      be written as a product of linear factors.
+    </p>
+
+    <p>
+      One skill we will develop here is being able to determine a formula for a polynomial if we have its graph.
+      However, before we can do that,
+      we need to discuss the end-behavior of a polynomial.
+      The <term>end-behavior</term>
+          <idx><h>end-behavior</h></idx>
+          <idx><h>function</h><h>end-behavior</h></idx>
+      of a function is what its outputs tend to do as <m>x</m> gets (infinitely) far from zero.
+    </p>
+
+    <p>
+      End-behavior is one thing we <em>can</em>
+      tell about the graph of a polynomial,
+      even if it is <em>not</em> written as a product of linear factors, such as:
+      <md>
+        <mrow>y = 3x - 5x^2 + 17</mrow>
+        <mrow>\text{or}</mrow>
+        <mrow>y = -950x + x^3</mrow>
+      </md>
+    </p>
   </subsection>
 
   <subsection>
     <title>End Behavior</title>
-    <p>Recall that a <term>horizontal asymptote</term><idx><h>horizontal asymptote</h></idx><idx><h>asymptote</h><h>horizontal</h></idx>, <m>y = a</m>, is a horizontal line which a function <m>f(x)</m> seems to <em>resemble</em>, as either <m>x \to \infty</m> or <m>x \to -\infty</m>.</p>
-    <p>Put another way, if the function <m>f</m> has a horizontal asymptote <m>y = a</m>, then as we evaluate <m>f(x)</m> at <m>x</m> values which are farther and farther from zero, the ouputs will eventually get very close to the number <m>a</m>.</p>
-    <p>In calculus language, we would write <me>\lim_{x\to\pm\infty}f(x)=a</me> and in words, we would say</p>
+    <p>
+      Recall that a <term>horizontal asymptote</term>,
+          <idx><h>horizontal asymptote</h></idx>
+          <idx><h>asymptote</h><h>horizontal</h></idx>
+      <m>y = a</m>,
+      is a horizontal line which a function <m>f(x)</m> seems to <em>resemble</em>,
+      as either <m>x \to \infty</m> or <m>x \to -\infty</m>.
+    </p>
+
+    <p>
+      Put another way,
+      if the function <m>f</m> has a horizontal asymptote <m>y = a</m>,
+      then as we evaluate <m>f(x)</m> at <m>x</m> values which are farther and farther from zero,
+      the ouputs will eventually get very close to the number <m>a</m>.
+    </p>
+
+    <p>
+      In calculus language, we would write
+      <me>
+        \lim_{x\to\pm\infty}f(x)=a
+      </me>
+      and in words, we would say
+    </p>
+
     <blockquote>
-      <p>The limit of <m>f(x)</m>, as <m>x</m> goes to positive or negative infinity, is equal to <m>a</m>.</p>
+      <p>
+        The limit of <m>f(x)</m>,
+        as <m>x</m> goes to positive or negative infinity, is equal to <m>a</m>.
+      </p>
     </blockquote>
-    <p>In the next exercise, you will see how a horizontal asymptote of a function can be seen by a table of values.</p>
+
+    <p>
+      In the next exercise,
+      you will see how a horizontal asymptote of a function can be seen by a table of values.
+    </p>
+
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             @x=(1, 10, 100, 1000, 10000);
             $a=12*random(2, 5, 1);
@@ -422,95 +783,134 @@
             Context("Fraction");
             $value=Fraction($a,$c);
           </pg-code>
-        </setup>
-        <statement>
-          <p>The table below shows values of the function: <me>f(x) = \frac{<var name="$a" />x + <var name="$b" />}{<var name="$c" />x}</me></p>
-          <sidebyside>
-            <tabular top="major" halign="center">
-              <col halign="left" />
-              <col halign="left" />
+          </setup>
+          <statement>
+            <p>
+              The table below shows values of the function:
+              <me>
+                f(x) = \frac{<var name="$a" />x + <var name="$b" />}{<var name="$c" />x}
+              </me>
+            </p>
 
-              <row bottom="medium">
-                <cell><m>x</m></cell>
-                <cell><m>f(x)</m></cell>
-              </row>
+            <sidebyside>
 
-              <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
-              </row>
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col halign="left" />
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>f(x)</m></cell>
+                </row>
+                <row>
+                  <cell><m><var name="$x[0]" /></m></cell>
+                  <cell><m><var name="$y[0]" /></m></cell>
+                </row>
+                <row>
+                  <cell><m><var name="$x[1]" /></m></cell>
+                  <cell><m><var name="$y[1]" /></m></cell>
+                </row>
+                <row>
+                  <cell><m><var name="$x[2]" /></m></cell>
+                  <cell><m><var name="$y[2]" /></m></cell>
+                </row>
+                <row>
+                  <cell><m><var name="$x[3]" /></m></cell>
+                  <cell><m><var name="$y[3]" /></m></cell>
+                </row>
+                <row>
+                  <cell><m><var name="$x[4]" /></m></cell>
+                  <cell><m><var name="$y[4]" /></m></cell>
+                </row>
+              </tabular>
 
-              <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
-              </row>
+            </sidebyside>
 
-              <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
-              </row>
+            <p>
+              What appears to be the horizontal asymptote of <m>f(x)</m>?
+            </p>
 
-              <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
-              </row>
-
-              <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
-              </row>
-            </tabular>
-          </sidebyside>
-          <p>What appears to be the horizontal asymptote of <m>f(x)</m>?</p>
-          <p>Answer:  <var name="$variable" form="popup" /> = <var name="$value" width="10" /></p>
-        </statement>
-
-        <solution>
-          <p>The horizontal asymptote of the function is:  <m>y = <var name="$value" /></m></p>
-        </solution>
+            <p>
+              Answer:
+              <var name="$variable" form="popup" /> = <var name="$value" width="10" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              The horizontal asymptote of the function is:
+              <m>y = <var name="$value" /></m>
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
-    <p><idx><h>end-behavior</h></idx><idx><h>long-run behavior</h></idx>This behavior can be seen in the graph, as the function <m>f(x)</m> appears to <q>flatten out</q> to the left and the right. This is an example of what is called <term>end-behavior</term> (or <term>long-run behavior</term>). From a graphical perspective, end-behavior is what the graph tends to do as the input <m>x</m> gets far from zero.</p>
+    <p>
+          <idx><h>end-behavior</h></idx>
+          <idx><h>long-run behavior</h></idx>
+      This behavior can be seen in the graph,
+      as the function <m>f(x)</m> appears to <q>flatten out</q>
+      to the left and the right.
+      This is an example of what is called <term>end-behavior</term>
+      (or <term>long-run behavior</term>).
+      From a graphical perspective,
+      end-behavior is what the graph tends to do as the input <m>x</m> gets far from zero.
+    </p>
 
     <sidebyside widths="48% 48%">
       <figure>
         <caption>Function with horizontal asymptote <m>y = 2</m></caption>
-          <image>
-              <latex-image>
-              <![CDATA[\begin{tikzpicture}
-                          \begin{axis}[]
-                          \addplot[variable=\u,domain=-2:2.2, thick] ({e^u},{2+0.8*e^(-u)});
-                          \addplot[variable=\u,domain=-2:2.2, thick] ({-e^u},{2+0.8*-e^(-u)});
-                          \addplot[asymptote] coordinates {(-10,2) (10,2)};
-                          \addplot[asymptote] coordinates {(0,-4) (0,8)};
-                          \end{axis}
-                      \end{tikzpicture}
-              ]]>
-              </latex-image>
-          </image>
+        <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                        \addplot[variable=\u,domain=-2:2.2, thick] ({e^u},{2+0.8*e^(-u)});
+                        \addplot[variable=\u,domain=-2:2.2, thick] ({-e^u},{2+0.8*-e^(-u)});
+                        \addplot[asymptote] coordinates {(-10,2) (10,2)};
+                        \addplot[asymptote] coordinates {(0,-4) (0,8)};
+                        \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+        </image>
+
       </figure>
+
       <figure>
         <caption>Function with horizontal asymptote <m>y = -1</m></caption>
-          <image>
-              <latex-image>
-              <![CDATA[\begin{tikzpicture}
-                          \begin{axis}[]
-                          \addplot[,domain=-6.3:6.3, thick, samples=50] ({x},{5*e^(-0.3*x^2)-1});
-                          \addplot[asymptote] coordinates {(-6.5,-1) (6.5,-1)};
-                          \end{axis}
-                      \end{tikzpicture}
-              ]]>
-              </latex-image>
-          </image>
+        <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                        \addplot[,domain=-6.3:6.3, thick, samples=50] ({x},{5*e^(-0.3*x^2)-1});
+                        \addplot[asymptote] coordinates {(-6.5,-1) (6.5,-1)};
+                        \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+        </image>
+
       </figure>
     </sidebyside>
 
-    <p>As you know, not every function has a horizontal asymptote. For example, power functions do not <q>flatten out,</q> but rather they either increase toward <m>\infty</m> (point upward) or decrease toward <m>-\infty</m> (point downward). So, end-behavior may be just that <mdash /> the graph increasing or decreasing forever.</p>
-    <p>In the next two exercises, you will examine the end-behavior of a polynomial and learn to predict this end-behavior by observing its formula.</p>
+    <p>
+      As you know, not every function has a horizontal asymptote.
+      For example, power functions do not <q>flatten out,</q>
+      but rather they either increase toward <m>\infty</m>
+      (point upward)
+      or decrease toward <m>-\infty</m>
+      (point downward).
+      So, end-behavior may be just that <mdash /> the graph increasing or decreasing forever.
+    </p>
+
+    <p>
+      In the next two exercises,
+      you will examine the end-behavior of a polynomial and learn to predict this end-behavior by observing its formula.
+    </p>
+
     <exercise>
       <webwork>
-        <setup>
+          <setup>
 
           <pg-code>
             $compare=PopUp(["?","very different","very similar"],"very similar");
@@ -518,68 +918,189 @@
             $power=PopUp(["?","x^2","x^3"],"x^3");
             $term=Compute("x^3");
           </pg-code>
-        </setup>
-        <statement>
-          <p>The graph below shows: <me>f(x) = x(x+3)(x-4)</me></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Abx2UAXB/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Use the checkbox to graph the power function <m>y = x^3</m>.</p>
-          <p>Now use the slider to zoom out, and observe the shape of the graph.</p>
-          <p>After zooming out, how do the graphs of <m>y = x(x+3)(x-4)</m> and <m>y = x^3</m> compare to each other?</p>
-          <p>Answer:  The graphs are <var name="$compare" form="popup" /></p>
-          <p>Complete the following statment:</p>
-          <p>The <var name="$endBehavior" form="popup" /> of the function <m>x(x+3)(x-4)</m> is like <var name="$power" form="popup" /></p>
-          <p>Now, use algebra to expand the formula <m>x(x+3)(x-4)</m>. What is the leading term (the one with the highest power on <m>x</m>)?</p>
-          <p>Answer:  <var name="$term" width="10" /></p>
-        </statement>
-        <solution>
-          <p>Expanding the polynomial <m>f(x) = x(x+3)(x-4)</m> gives <me>x^3 - x^2 - 12x</me> and we see the leading term <m>x^3</m>. This is what the graph of <m>f(x)</m> resembles when we zoom out, so we would say that the end behavior of <m>f(x)</m> is like <m>x^3</m>.</p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              The graph below shows:
+              <me>
+                f(x) = x(x+3)(x-4)
+              </me>
+            </p>
+
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Abx2UAXB/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Use the checkbox to graph the power function <m>y = x^3</m>.
+            </p>
+
+            <p>
+              Now use the slider to zoom out,
+              and observe the shape of the graph.
+            </p>
+
+            <p>
+              After zooming out, how do the graphs of
+              <m>y = x(x+3)(x-4)</m> and <m>y = x^3</m> compare to each other?
+            </p>
+
+            <p>
+              Answer:
+              The graphs are <var name="$compare" form="popup" />
+            </p>
+
+            <p>
+              Complete the following statment:
+            </p>
+
+            <p>
+              The <var name="$endBehavior" form="popup" /> of the function
+              <m>x(x+3)(x-4)</m> is like <var name="$power" form="popup" />
+            </p>
+
+            <p>
+              Now, use algebra to expand the formula <m>x(x+3)(x-4)</m>.
+              What is the leading term (the one with the highest power on <m>x</m>)?
+            </p>
+
+            <p>
+              Answer:
+              <var name="$term" width="10" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Expanding the polynomial <m>f(x) = x(x+3)(x-4)</m> gives
+              <me>
+                x^3 - x^2 - 12x
+              </me>
+              and we see the leading term <m>x^3</m>.
+              This is what the graph of <m>f(x)</m> resembles when we zoom out,
+              so we would say that the end behavior of <m>f(x)</m> is like <m>x^3</m>.
+            </p>
+          </solution>
       </webwork>
     </exercise>
 <!-- The graphs of x^3 and x^5 are messed up in the next problem...it was never like this before -->
     <exercise>
       <webwork>
-        <setup>
+          <setup>
 
           <pg-code>
             $function=PopUp(["?","x^2","x^3","x^4","x^5"],"x^4");
           </pg-code>
-        </setup>
-        <statement>
-          <p>There is a lot going on in the following graph.</p>
-          <p>The two <q>vertical</q> lines are actually just part of the graph of: <me>g(x)=(x-12)(x+3)(x+15)(x-4)+5000</me></p>
-          <p>We can't see much of the graph because we are zoomed in on a small part of it.</p>
-          <p>Your objective is to predict the <term>end-behavior</term> of <m>g(x)</m>, and you have four options:<md>
-          <mrow>y \amp= x^2</mrow>
-          <mrow>y \amp= x^3</mrow>
-          <mrow>y \amp= x^4</mrow>
-          <mrow>y \amp= x^5</mrow></md></p>
-          <p>Before maniuplating the graph, make a guess:  Which of these power functions will the function <m>g(x)</m> resemble if we zoom out?</p>
-          <p>Make your choice from among the power functions by selecting its checkbox. Then, use the slider to zoom out.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Swe8tMPk/width/416/height/373/border/888888/sdz/false/" width="416px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>If you guessed correctly, the graph of <m>g(x)</m> will begin to look more and more like your power function.</p>
-          <p>Which power function has the same end behavior as <m>g(x)</m>?</p>
-          <p>Answer:  <var name="$function" form="popup" /></p>
-        </statement>
-        <hint>
-          <p>Imagine using algebra to expand this polynomial. What would be the leading term?</p>
-        </hint>
-        <solution>
-          <p>Expanding the function <m>g(x) = (x-1)(x+4)(x-5)(x+2)</m> gives: <me>x^4 - 22x^2 - 18x + 40</me></p>
-          <p>The leading term, <m>x^4</m>, will have the same end-behavior as <m>g(x)</m>.</p>
-          <p>However, you don't need to completely expand the function in order to see this. Since there are four linear factors, the degree will be <m>4</m>. In expanding the polynomial, the only way to get <m>x^4</m> is by multiplying the <m>x</m> from each linear factor. So, the leading term will be just <m>x^4</m>.</p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              There is a lot going on in the following graph.
+            </p>
+
+            <p>
+              The two <q>vertical</q> lines are actually just part of the graph of:
+              <me>
+                g(x)=(x-12)(x+3)(x+15)(x-4)+5000
+              </me>
+            </p>
+
+            <p>
+              We can't see much of the graph because we are zoomed in on a small part of it.
+            </p>
+
+            <p>
+              Your objective is to predict the
+              <term>end-behavior</term> of <m>g(x)</m>,
+              and you have four options:
+              <md>
+                <mrow>y \amp= x^2</mrow>
+                <mrow>y \amp= x^3</mrow>
+                <mrow>y \amp= x^4</mrow>
+                <mrow>y \amp= x^5</mrow>
+              </md>
+            </p>
+
+            <p>
+              Before maniuplating the graph, make a guess:
+              Which of these power functions will the function <m>g(x)</m> resemble if we zoom out?
+            </p>
+
+            <p>
+              Make your choice from among the power functions by selecting its checkbox.
+              Then, use the slider to zoom out.
+            </p>
+
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Swe8tMPk/width/416/height/373/border/888888/sdz/false/" width="416px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              If you guessed correctly,
+              the graph of <m>g(x)</m> will begin to look more and more like your power function.
+            </p>
+
+            <p>
+              Which power function has the same end behavior as <m>g(x)</m>?
+            </p>
+
+            <p>
+              Answer:
+              <var name="$function" form="popup" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Imagine using algebra to expand this polynomial.
+              What would be the leading term?
+            </p>
+          </hint>
+          <solution>
+            <p>
+              Expanding the function <m>g(x) = (x-1)(x+4)(x-5)(x+2)</m> gives:
+              <me>
+                x^4 - 22x^2 - 18x + 40
+              </me>
+            </p>
+
+            <p>
+              The leading term, <m>x^4</m>,
+              will have the same end-behavior as <m>g(x)</m>.
+            </p>
+
+            <p>
+              However, you don't need to completely expand the function in order to see this.
+              Since there are four linear factors,
+              the degree will be <m>4</m>.
+              In expanding the polynomial,
+              the only way to get <m>x^4</m> is by multiplying the <m>x</m> from each linear factor.
+              So, the leading term will be just <m>x^4</m>.
+            </p>
+          </solution>
       </webwork>
     </exercise>
-    <p>The rule for determining the end-behavior of a polynomial is a simple one:</p>
+
+    <p>
+      The rule for determining the end-behavior of a polynomial is a simple one:
+    </p>
+
     <blockquote>
-      <p>A polynomial and its leading term have the same end-behavior.</p>
+      <p>
+        A polynomial and its leading term have the same end-behavior.
+      </p>
     </blockquote>
-    <p>And, since you already know the graphs of power functions, you should be able to predict the end-behavior of a polynomial if you know its leading term.</p>
-    <p>In the next exercise, you will get practice finding the leading term of a polynomial.</p>
+
+    <p>
+      And, since you already know the graphs of power functions,
+      you should be able to predict the end-behavior of a polynomial if you know its leading term.
+    </p>
+
+    <p>
+      In the next exercise,
+      you will get practice finding the leading term of a polynomial.
+    </p>
+
     <exercise>
       <webwork>
-        <setup>
+          <setup>
 
           <pg-code>
             @a=map{2+$_}NchooseK(15,9);
@@ -589,81 +1110,188 @@
             $vars4=PopUp(["?","x^2","x^3","x^4"],"x^4");
             $vars3=PopUp(["?","x^2","x^3","x^4"],"x^3");
           </pg-code>
-        </setup>
-        <statement>
-          <p>For each polynomial below, determine its leading term.</p>
-          <p>Enter the coefficient in the blank, and then choose the correct power of <m>x</m> with the drop-down.</p>
-          <p><ol label="a">
-            <li>
-              <p><me>f(x) = <var name="$a[0]" />x + <var name="$a[1]" />x^2 + <var name="$a[2]" /></me></p>
-              <p>The leading term of <m>f(x)</m> is:  <var name="$a[1]" width="10" /> <var name="$vars2" form="popup" /></p>
-            </li>
-            <li>
-              <p><me>g(x) = x(x - <var name="$a[3]" />)(<var name="$a[4]" />x + 1)(<var name="$a[5]" />x - 1)</me></p>
-              <p>The leading term of <m>g(x)</m> is:  <var name="$a4a5" width="10" /> <var name="$vars4" form="popup" /></p>
-            </li>
-            <li>
-              <p><me>h(x) = (<var name="$a[6]" /> - x)(x + <var name="$a[7]" />)(<var name="$a[8]" />x - 1)</me></p>
-              <p>The leading term of <m>h(x)</m> is:  <var name="$mina8" width="10" /> <var name="$vars3" form="popup" /></p>
-            </li>
-          </ol></p>
-        </statement>
-        <hint>
-          <p>You don't need to completely expand the polynomials <m>g(x)</m> and <m>h(x)</m>. Just ask yourself which parts of each linear factor you would multiply to give the highest power of <m>x</m>.</p>
-          <p>For instance, in <m>h(x)</m>, it should be clear that the degree is <m>3</m>. From the formula given, the only way to get a factor of <m>x^3</m> is by multiplying the <m>-x</m> in the first factor, by the <m>x</m> in the second factor, and finally by the <m><var name="$a[8]" />x</m> in the third factor.</p>
-          <p>The leading term for <m>h(x)</m> is just that product:<me>(-x)\cdot(x)\cdot(<var name="$a[8]" />x)</me></p>
-        </hint>
-        <solution>
-          <p>The leading term of <m>f(x)</m> is:  <m><var name="$a[1]" />x^2</m></p>
-          <p>The leading term of <m>g(x)</m> is:  <m><var name="$a4a5" />x^4</m></p>
-          <p>The leading term of <m>h(x)</m> is:  <m><var name="$mina8" />x^3</m></p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              For each polynomial below, determine its leading term.
+            </p>
+
+            <p>
+              Enter the coefficient in the blank,
+              and then choose the correct power of <m>x</m> with the drop-down.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <me>
+                      f(x) = <var name="$a[0]" />x + <var name="$a[1]" />x^2 + <var name="$a[2]" />
+                    </me>
+                  </p>
+
+                  <p>
+                    The leading term of <m>f(x)</m> is:
+                    <var name="$a[1]" width="10" /> <var name="$vars2" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <me>
+                      g(x) = x(x - <var name="$a[3]" />)(<var name="$a[4]" />x + 1)(<var name="$a[5]" />x - 1)
+                    </me>
+                  </p>
+
+                  <p>
+                    The leading term of <m>g(x)</m> is:
+                    <var name="$a4a5" width="10" /> <var name="$vars4" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <me>
+                      h(x) = (<var name="$a[6]" /> - x)(x + <var name="$a[7]" />)(<var name="$a[8]" />x - 1)
+                    </me>
+                  </p>
+
+                  <p>
+                    The leading term of <m>h(x)</m> is:
+                    <var name="$mina8" width="10" /> <var name="$vars3" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <hint>
+            <p>
+              You don't need to completely expand the polynomials <m>g(x)</m> and <m>h(x)</m>.
+              Just ask yourself which parts of each linear factor you would multiply to give the highest power of <m>x</m>.
+            </p>
+
+            <p>
+              For instance, in <m>h(x)</m>,
+              it should be clear that the degree is <m>3</m>.
+              From the formula given,
+              the only way to get a factor of <m>x^3</m> is by multiplying the <m>-x</m> in the first factor,
+              by the <m>x</m> in the second factor,
+              and finally by the <m><var name="$a[8]" />x</m> in the third factor.
+            </p>
+
+            <p>
+              The leading term for <m>h(x)</m> is just that product:
+              <me>
+                (-x)\cdot(x)\cdot(<var name="$a[8]" />x)
+              </me>
+            </p>
+          </hint>
+          <solution>
+            <p>
+              The leading term of <m>f(x)</m> is:
+              <m><var name="$a[1]" />x^2</m>
+            </p>
+
+            <p>
+              The leading term of <m>g(x)</m> is:
+              <m><var name="$a4a5" />x^4</m>
+            </p>
+
+            <p>
+              The leading term of <m>h(x)</m> is:
+              <m><var name="$mina8" />x^3</m>
+            </p>
+          </solution>
       </webwork>
     </exercise>
-<todo>Geogebra graphs are allowing click-and-drag when they shouldn't be.</todo>
+
+    <todo>Geogebra graphs are allowing click-and-drag when they shouldn't be.</todo>
+
     <exercise>
       <webwork>
-        <setup>
+          <setup>
 
           <pg-code>
             $left=PopUp(["?","Up","Down"],"Down");
             $right=PopUp(["?","Up","Down"],"Up");
             $end=PopUp(["?","x","x^2","x^3"],"x^3");
           </pg-code>
-        </setup>
-        <statement>
-          <p>This problem concerns the polynomial <me>f(x) = x(x - 2)(x + 3)</me>and your goal is to predict the end-behavior. Think about which power function has the same end-behavior as <m>f(x)</m>.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NcwafvMp/width/427/height/392/border/888888/sdz/false/" width="427px" height="392px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Use the checkboxes to choose whether the graph will point upward or downward as <m>x</m> gets far from zero on the left and right.</p>
-          <p>On the left-hand side, the graph points <var name="$left" form="popup" /></p>
-          <p>On the right-hand side, the graph points <var name="$right" form="popup" /></p>
-          <p>The end-behavior of <m>f(x)</m> is the same as <var name="$end" form="popup" /></p>
+          </setup>
+          <statement>
+            <p>
+              This problem concerns the polynomial
+              <me>
+                f(x) = x(x - 2)(x + 3)
+              </me>
+              and your goal is to predict the end-behavior.
+              Think about which power function has the same end-behavior as <m>f(x)</m>.
+            </p>
 
-        </statement>
-        <solution>
-          <p>The degree of <m>f(x)</m> is <m>3</m>, as that is the number of linear factors. So, its end-behavior is the same as <m>x^3</m>.</p>
-        </solution>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NcwafvMp/width/427/height/392/border/888888/sdz/false/" width="427px" height="392px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Use the checkboxes to choose whether the graph will point upward or downward as <m>x</m> gets far from zero on the left and right.
+            </p>
+
+            <p>
+              On the left-hand side, the graph points <var name="$left" form="popup" />
+            </p>
+
+            <p>
+              On the right-hand side,
+              the graph points <var name="$right" form="popup" />
+            </p>
+
+            <p>
+              The end-behavior of <m>f(x)</m> is the same as <var name="$end" form="popup" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              The degree of <m>f(x)</m> is <m>3</m>,
+              as that is the number of linear factors.
+              So, its end-behavior is the same as <m>x^3</m>.
+            </p>
+          </solution>
       </webwork>
     </exercise>
-
   </subsection>
 
   <subsection>
     <title>The Formula for a Polynomial</title>
-    <p>We have now learned two important things we need in order to write the formula for a polynomial:<ul>
-      <li>
-        <p>the relationship between the roots of a polynomial and its linear factors</p>
-      </li>
-      <li>
-        <p>the relationship between the end-behavior of a polynomial and its leading term</p>
-      </li>
-    </ul></p>
-    <p>Let's put these together in order to write the formula for a polynomial.</p>
-    <p>In the next two exercises, you will be given the graph of a polynomial. Use what you know about the roots and end-behavior in order to write the formula.</p>
+    <p>
+      We have now learned two important things we need in order to write the formula for a polynomial:
+
+      <ul>
+        <li>
+          <p>
+            the relationship between the roots of a polynomial and its linear factors
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the relationship between the end-behavior of a polynomial and its leading term
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      Let's put these together in order to write the formula for a polynomial.
+    </p>
+
+    <p>
+      In the next two exercises, you will be given the graph of a polynomial.
+      Use what you know about the roots and end-behavior in order to write the formula.
+    </p>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $num=Real(3);
             $formula=Compute("(x+1)(x-2)(x-3)");
@@ -674,38 +1302,74 @@
             );
             add_functions($gr, "(x+1)*(x-2)*(x-3) for x in &lt;-2,4&gt; using color:red and weight:2");
           </pg-code>
-        </setup>
-        <statement>
-          <p>A polynomial <m>y = f(x)</m> is graphed below. Your goal is to write its formula.</p>
-          <sidebyside><image pg-name="$gr" /></sidebyside>
-          <p>Complete the statement below with a number:</p>
-          <p>The polynomial will have <var name="$num" width="10" /> different linear factors.</p>
-          <p>Now write the formula for the polynomial.</p>
-          <p><m>f(x) = </m><var name="$formula" width="15" /></p>
-        </statement>
-        <hint>
-          <p>Remember that if a polynomial has an <m>x</m>-intercept at the point <m>(b, 0)</m>, then it will have a linear factor of <m>(x - b)</m>.</p>
-          <p>Apply this idea to each of the linear factors.</p>
-        </hint>
-        <solution>
-          <p>The <m>x</m>-intercepts are at the points:<md>
-            <mrow>(-1, 0)</mrow>
-            <mrow>(2, 0)</mrow>
-            <mrow>(3, 0)</mrow>
-          </md></p>
-          <p>So, the formula will have the linear factors:<md>
-            <mrow>(x + 1)</mrow>
-            <mrow>(x - 2)</mrow>
-            <mrow>(x - 3)</mrow>
-          </md></p>
-          <p>The formula is:  <m>f(x) = (x + 1)(x - 2)(x - 3)</m></p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              A polynomial <m>y = f(x)</m> is graphed below.
+              Your goal is to write its formula.
+            </p>
+
+            <sidebyside>
+              <image pg-name="$gr" />
+            </sidebyside>
+
+            <p>
+              Complete the statement below with a number:
+            </p>
+
+            <p>
+              The polynomial will have <var name="$num" width="10" /> different linear factors.
+            </p>
+
+            <p>
+              Now write the formula for the polynomial.
+            </p>
+
+            <p>
+              <m>f(x) = </m><var name="$formula" width="15" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Remember that if a polynomial has an <m>x</m>-intercept at the point <m>(b, 0)</m>,
+              then it will have a linear factor of <m>(x - b)</m>.
+            </p>
+
+            <p>
+              Apply this idea to each of the linear factors.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              The <m>x</m>-intercepts are at the points:
+              <md>
+                <mrow>(-1, 0)</mrow>
+                <mrow>(2, 0)</mrow>
+                <mrow>(3, 0)</mrow>
+              </md>
+            </p>
+
+            <p>
+              So, the formula will have the linear factors:
+              <md>
+                <mrow>(x + 1)</mrow>
+                <mrow>(x - 2)</mrow>
+                <mrow>(x - 3)</mrow>
+              </md>
+            </p>
+
+            <p>
+              The formula is:
+              <m>f(x) = (x + 1)(x - 2)(x - 3)</m>
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             @root=(-4,-1,2);
             @factor=map{Formula("x-$_")->reduce}(@root);
@@ -731,115 +1395,212 @@
               return 1;
             });
           </pg-code>
-        </setup>
-        <statement>
-          <p>The graph below shows a polynomial <m>y = f(x)</m>. Answer the following questions in order to write the formula for <m>f(x)</m>.</p>
-          <sidebyside><image pg-name="$gr" /></sidebyside>
-          <p><ol label="a">
-            <li>
-              <p>The <m>x</m>-intercept <m>(-4, 0)</m> means the formula will have a linear factor of: <var name="$factor[0]" evaluator="$ev[0]" width="10" /></p>
-            </li>
-            <li>
-              <p>The <m>x</m>-intercept <m>(-1, 0)</m> means the formula will have a linear factor of: <var name="$factor[1]" evaluator="$ev[1]" width="10" /></p>
-            </li>
-            <li>
-              <p>The <m>x</m>-intercept <m>(2, 0)</m> means the formula will have a linear factor of: <var name="$factor[2]" evaluator="$ev[2]" width="10" /></p>
-            </li>
-            <li>
-              <p>The end-behavior of the polynomial is the same as <var name="$power" form="popup" /></p>
-            </li>
-            <li>
-              <p>Now put all of these facts together in order to write the formula for the polynomial: <m>f(x) = </m><var name="$formula" evaluator="$fev" width="15" /></p>
-            </li>
-          </ol></p>
-        </statement>
-        <hint>
-          <p>Notice the end-behavior looks like <m>-x^3</m>. Remember to incorporate that into your final formula. One idea is to just put a negative symbol outside of the parentheses (like multiplying it all by <m>-1</m>).</p>
-        </hint>
-        <solution>
-          <p>Each <m>x</m>-intercept corresponds to a linear factor in the formula:<md>
-            <mrow>(-4, 0) \amp\implies (x + 4)</mrow>
-            <mrow>(-1, 0) \amp\implies (x + 1)</mrow>
-            <mrow>(2, 0) \amp\implies (x - 2)</mrow>
-          </md></p>
-          <p>Also, the end-behavior is the same as <m>-x^3</m>, so our graph needs to be flipped over the <m>x</m>-axis.</p>
-          <p>The formula is then: <me>f(x) = -(x+4)(x+1)(x-2)</me>.</p>
-          <p>We can test that our formula works by using the point <m>(0, 8)</m> shown:<md>
-            <mrow>f(0) \amp= -(0 + 4)(0 + 1)(0 - 2)</mrow>
-            <mrow>\amp=8</mrow>
-          </md></p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              The graph below shows a polynomial <m>y = f(x)</m>.
+              Answer the following questions in order to write the formula for <m>f(x)</m>.
+            </p>
+
+            <sidebyside>
+              <image pg-name="$gr" />
+            </sidebyside>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    The <m>x</m>-intercept <m>(-4, 0)</m> means the formula will have a linear factor of:
+                    <var name="$factor[0]" evaluator="$ev[0]" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The <m>x</m>-intercept <m>(-1, 0)</m> means the formula will have a linear factor of:
+                    <var name="$factor[1]" evaluator="$ev[1]" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The <m>x</m>-intercept <m>(2, 0)</m> means the formula will have a linear factor of:
+                    <var name="$factor[2]" evaluator="$ev[2]" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The end-behavior of the polynomial is the same as <var name="$power" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Now put all of these facts together in order to write the formula for the polynomial:
+                    <m>f(x) = </m><var name="$formula" evaluator="$fev" width="15" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Notice the end-behavior looks like <m>-x^3</m>.
+              Remember to incorporate that into your final formula.
+              One idea is to just put a negative symbol outside of the parentheses
+              (like multiplying it all by <m>-1</m>).
+            </p>
+          </hint>
+          <solution>
+            <p>
+              Each <m>x</m>-intercept corresponds to a linear factor in the formula:
+              <md>
+                <mrow>(-4, 0) \amp\implies (x + 4)</mrow>
+                <mrow>(-1, 0) \amp\implies (x + 1)</mrow>
+                <mrow>(2, 0) \amp\implies (x - 2)</mrow>
+              </md>
+            </p>
+
+            <p>
+              Also, the end-behavior is the same as <m>-x^3</m>,
+              so our graph needs to be flipped over the <m>x</m>-axis.
+            </p>
+
+            <p>
+              The formula is then:
+              <me>
+                f(x) = -(x+4)(x+1)(x-2)
+              </me>.
+            </p>
+
+            <p>
+              We can test that our formula works by using the point <m>(0, 8)</m> shown:
+              <md>
+                <mrow>f(0) \amp= -(0 + 4)(0 + 1)(0 - 2)</mrow>
+                <mrow>\amp=8</mrow>
+              </md>
+            </p>
+          </solution>
       </webwork>
     </exercise>
-    <p>Keep that last exercise in mind when finding a formula for a polynomial. You may need to control the end-behavior by flipping the graph over the <m>x</m>-axis.</p>
+
+    <p>
+      Keep that last exercise in mind when finding a formula for a polynomial.
+      You may need to control the end-behavior by flipping the graph over the <m>x</m>-axis.
+    </p>
   </subsection>
 
   <subsection>
     <title>Applying Vertical Stretches</title>
-    <p>There are a few additional things we will encounter with the graph of a polynomial.</p>
-    <p>The first issue concerns using vertical stretches to the graph of a polynomial (see <xref ref="chapter-reflections-and-vertical-stretches">Chapter</xref>).</p>
-    <p>Imagine trying to determine the formulas for the <m>3^{\rm{rd}}</m> degree polynomials graphed below.</p>
-      <sidebyside widths="32% 32% 32%">
-          <figure xml:id="figure-first-polynomial">
-            <caption>First Graph</caption>
-              <image>
-                  <latex-image>
-                  <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[]
-                                  \addplot+[domain=-1:5]{(x-1)*(x-3)*(x-4)};
-                                  \fill (1,0)  circle[radius=4pt];
-                                  \fill (3,0)  circle[radius=4pt];
-                                  \fill (4,0)  circle[radius=4pt];
-                                  \fill (2,1)  circle[red, radius=4pt];
-                               \end{axis}
-                          \end{tikzpicture}
-                  ]]>
-                  </latex-image>
-              </image>
-          </figure>
-          <figure xml:id="figure-second-polynomial">
-            <caption>Second Graph</caption>
-              <image>
-                  <latex-image>
-                  <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[]
-                                  \addplot+[domain=-1:5]{2*(x-1)*(x-3)*(x-4)};
-                                  \fill (1,0)  circle[radius=4pt];
-                                  \fill (3,0)  circle[radius=4pt];
-                                  \fill (4,0)  circle[radius=4pt];
-                                  \fill (2,4)  circle[red, radius=4pt];
-                               \end{axis}
-                          \end{tikzpicture}
-                  ]]>
-                  </latex-image>
-              </image>
-          </figure>
-          <figure xml:id="figure-third-polynomial">
-            <caption>Third Graph</caption>
-              <image>
-                  <latex-image>
-                  <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[]
-                                  \addplot+[domain=-1:5]{1.5*(x-1)*(x-3)*(x-4)};
-                                  \fill (1,0)  circle[radius=4pt];
-                                  \fill (3,0)  circle[radius=4pt];
-                                  \fill (4,0)  circle[radius=4pt];
-                                  \fill (2,1)  circle[red, radius=4pt];
-                               \end{axis}
-                          \end{tikzpicture}
-                  ]]>
-                  </latex-image>
-              </image>
-          </figure>
-      </sidebyside>
+    <p>
+      There are a few additional things we will encounter with the graph of a polynomial.
+    </p>
 
-      <p>They each appear to have the same end-behavior as <m>x^3</m>, and they all have the same <m>x</m>-intercepts:<me>(1, 0)\qquad(3, 0)\qquad(4, 0)</me></p>
-      <p>To begin, we will give the formula the necessary linear factors: <me>f(x) = (x-1)(x-3)(x-4)</me> because this gives us the correct roots and end-behavior. However, the graphs are not identical, so this formula cannot work for all of them.</p>
-      <p>Since these graphs all have the same roots of <m>1</m>, <m>3</m> and <m>4</m>, we might consider examining a different input value.</p>
-      <p>Fix your attention on the value <m>x = 2</m> for each graph.</p>
-      <exercise>
-        <webwork>
+    <p>
+      The first issue concerns using vertical stretches to the graph of a polynomial
+      (see <xref ref="chapter-reflections-and-vertical-stretches">Chapter</xref>).
+    </p>
+
+    <p>
+      Imagine trying to determine the formulas for the
+      <m>3^{\rm{rd}}</m> degree polynomials graphed below.
+    </p>
+
+    <sidebyside widths="32% 32% 32%">
+      <figure xml:id="figure-first-polynomial">
+        <caption>First Graph</caption>
+        <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-1:5]{(x-1)*(x-3)*(x-4)};
+                            \fill (1,0)  circle[radius=4pt];
+                            \fill (3,0)  circle[radius=4pt];
+                            \fill (4,0)  circle[radius=4pt];
+                            \fill (2,1)  circle[red, radius=4pt];
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+        </image>
+
+      </figure>
+
+      <figure xml:id="figure-second-polynomial">
+        <caption>Second Graph</caption>
+        <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-1:5]{2*(x-1)*(x-3)*(x-4)};
+                            \fill (1,0)  circle[radius=4pt];
+                            \fill (3,0)  circle[radius=4pt];
+                            \fill (4,0)  circle[radius=4pt];
+                            \fill (2,4)  circle[red, radius=4pt];
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+        </image>
+
+      </figure>
+
+      <figure xml:id="figure-third-polynomial">
+        <caption>Third Graph</caption>
+        <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-1:5]{1.5*(x-1)*(x-3)*(x-4)};
+                            \fill (1,0)  circle[radius=4pt];
+                            \fill (3,0)  circle[radius=4pt];
+                            \fill (4,0)  circle[radius=4pt];
+                            \fill (2,1)  circle[red, radius=4pt];
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+        </image>
+
+      </figure>
+    </sidebyside>
+
+    <p>
+      They each appear to have the same end-behavior as <m>x^3</m>,
+      and they all have the same <m>x</m>-intercepts:
+      <me>
+        (1, 0)\qquad(3, 0)\qquad(4, 0)
+      </me>
+    </p>
+
+    <p>
+      To begin, we will give the formula the necessary linear factors:
+      <me>
+        f(x) = (x-1)(x-3)(x-4)
+      </me>
+      because this gives us the correct roots and end-behavior.
+      However, the graphs are not identical,
+      so this formula cannot work for all of them.
+    </p>
+
+    <p>
+      Since these graphs all have the same roots of <m>1</m>,
+      <m>3</m> and <m>4</m>,
+      we might consider examining a different input value.
+    </p>
+
+    <p>
+      Fix your attention on the value <m>x = 2</m> for each graph.
+    </p>
+
+    <exercise>
+      <webwork>
           <setup>
+
             <pg-code>
               $gr[0]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[240,240]);
               add_functions($gr[0], "(x-1)*(x-3)*(x-4) for x in &lt;-2,7&gt; using color:red and weight:2");
@@ -856,31 +1617,64 @@
             </pg-code>
           </setup>
           <statement>
-            <p>Our guess for the formula, <m>f(x) = (x-1)(x-3)(x-4)</m>, actually matches one of the graphs. Use the input value <m>x = 2</m> to decide which of the graphs matches our formula.</p>
-            <sidebyside widths="40%"><image pg-name="$gr[0]" /></sidebyside>
-            <sidebyside widths="40%"><image pg-name="$gr[1]" /></sidebyside>
-            <sidebyside widths="40%"><image pg-name="$gr[2]" /></sidebyside>
-            <p>Answer: <var name="$graph" form="popup" /></p>
+            <p>
+              Our guess for the formula,
+              <m>f(x) = (x-1)(x-3)(x-4)</m>,
+              actually matches one of the graphs.
+              Use the input value <m>x = 2</m> to decide which of the graphs matches our formula.
+            </p>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr[0]" />
+            </sidebyside>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr[1]" />
+            </sidebyside>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr[2]" />
+            </sidebyside>
+
+            <p>
+              Answer:
+              <var name="$graph" form="popup" />
+            </p>
           </statement>
           <hint>
-            <p>Substitute <m>x = 2</m> into our formula, and see which graph has the same output value.</p>
+            <p>
+              Substitute <m>x = 2</m> into our formula,
+              and see which graph has the same output value.
+            </p>
           </hint>
           <solution>
-            <p>Our formula matches the first graph, because <md>
-              <mrow>f(2) \amp= (2-1)(2-3)(2-4)</mrow>
-              <mrow>\amp= 2</mrow>
-            </md>and the first graph contains the point <m>(2, 2)</m>.</p>
+            <p>
+              Our formula matches the first graph, because
+              <md>
+                <mrow>f(2) \amp= (2-1)(2-3)(2-4)</mrow>
+                <mrow>\amp= 2</mrow>
+              </md>
+              and the first graph contains the point <m>(2, 2)</m>.
+            </p>
           </solution>
-        </webwork>
-      </exercise>
+      </webwork>
+    </exercise>
 
-      <p>But what about the formula for the <xref ref="figure-second-polynomial" text="title">Second Graph</xref>? Its output when <m>x = 2</m> is <m>4</m>, which is two times as large as the first graph.</p>
+    <p>
+      But what about the formula for the <xref ref="figure-second-polynomial" text="title">Second Graph</xref>?
+      Its output when <m>x = 2</m> is <m>4</m>,
+      which is two times as large as the first graph.
+    </p>
 
-      <p>This is a <term>vertical stretch</term> of the first graph, as you saw in <xref ref="activity-vertical-stretches">Section</xref></p>
+    <p>
+      This is a <term>vertical stretch</term> of the first graph,
+      as you saw in <xref ref="activity-vertical-stretches">Section</xref>
+    </p>
 
-      <exercise>
-        <webwork>
+    <exercise>
+      <webwork>
           <setup>
+
             <pg-code>
               $gr[1]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[400,400]);
               add_functions($gr[1], "2*(x-1)*(x-3)*(x-4) for x in &lt;-2,7&gt; using color:red and weight:2");
@@ -888,27 +1682,66 @@
             </pg-code>
           </setup>
           <statement>
-            <p>The <m>2^{\rm{nd}}</m> graph is a vertical stretch of the function <me>f(x) = (x-1)(x-3)(x-4)</me>.</p>
-            <sidebyside><image pg-name="$gr[1]" /></sidebyside>
-            <p>What is the formula for this graph?</p>
-            <p>Answer: <m>y = </m><var name="$formula" width="20" /></p>
+            <p>
+              The <m>2^{\rm{nd}}</m> graph is a vertical stretch of the function
+              <me>
+                f(x) = (x-1)(x-3)(x-4)
+              </me>.
+            </p>
+
+            <sidebyside>
+              <image pg-name="$gr[1]" />
+            </sidebyside>
+
+            <p>
+              What is the formula for this graph?
+            </p>
+
+            <p>
+              Answer:
+              <m>y = </m><var name="$formula" width="20" />
+            </p>
           </statement>
           <hint>
-            <p>All of <m>y</m> values on this graph are <m>2</m> times as large as the points on the <m>1^{\rm{st}}</m> graph.</p>
+            <p>
+              All of <m>y</m> values on this graph are <m>2</m> times as large as the points on the <m>1^{\rm{st}}</m> graph.
+            </p>
           </hint>
           <solution>
-            <p>With a vertical stretch of <m>2</m>, the formula for this graph is: <me>y = 2(x-1)(x-3)(x-4)</me></p>
-            <p>We can check that this works by substituting <m>x = 2</m> into this formula: <me>2(2-1)(2-1)(2-4) = 4</me> and observing that this works, as the graph contains the point <m>(2, 4)</m>.</p>
+            <p>
+              With a vertical stretch of <m>2</m>,
+              the formula for this graph is:
+              <me>
+                y = 2(x-1)(x-3)(x-4)
+              </me>
+            </p>
+
+            <p>
+              We can check that this works by substituting <m>x = 2</m> into this formula:
+              <me>
+                2(2-1)(2-1)(2-4) = 4
+              </me>
+              and observing that this works,
+              as the graph contains the point <m>(2, 4)</m>.
+            </p>
           </solution>
-        </webwork>
-      </exercise>
+      </webwork>
+    </exercise>
 
-      <p>For the <xref ref="figure-third-polynomial" text="title">Third Graph</xref>, we see the output is <m>3</m> when the input is <m>x = 2</m>.</p>
-      <p>We may be able to tell by what factor the graph of <m>f(x)</m> has been vertically stretched to make this graph, but the next exercise explores an algebraic method for determining the factor.</p>
+    <p>
+      For the <xref ref="figure-third-polynomial" text="title">Third Graph</xref>,
+      we see the output is <m>3</m> when the input is <m>x = 2</m>.
+    </p>
 
-      <exercise>
-        <webwork>
+    <p>
+      We may be able to tell by what factor the graph of <m>f(x)</m> has been vertically stretched to make this graph,
+      but the next exercise explores an algebraic method for determining the factor.
+    </p>
+
+    <exercise>
+      <webwork>
           <setup>
+
             <pg-code>
               $formula=Compute("1.5*(x-1)*(x-3)*(x-4)");
               $gr[2]=init_graph(-2,-7,7,7,axes=>[0,0],grid=>[9,14],size=>[400,400]);
@@ -916,28 +1749,68 @@
             </pg-code>
           </setup>
           <statement>
-            <p>Recall that a vertical stretch of a function occurs by multiplying the outside of the function by a constant value <m>k</m>: <me>k\cdot f(x)</me></p>
-            <p>So, the formula for the <m>3^{\rm{rd}}</m> graph should look like <me>k(x-1)(x-3)(x-4)</me> for some value <m>k</m>.</p>
-            <sidebyside><image pg-name="$gr[2]" /></sidebyside>
-            <p>We can use the fact that this graph passes through the point <m>(2, 3)</m> to solve for the value <m>k</m>.</p>
-            <p>Because the <m>y</m>-value is <m>3</m> when <m>x = 2</m>, we can write:<md>
-              <mrow>k(2-1)(2-3)(2-4) \amp= 3</mrow>
-              <mrow>k(2) \amp= 3</mrow>
-              <mrow>k \amp= \frac{3}{2}</mrow>
-            </md></p>
-            <p>What is the formula for the <m>3^{\rm{rd}}</m> graph?</p>
-            <p>Answer: <m>y = </m><var name="$formula" width="20" /></p>
+            <p>
+              Recall that a vertical stretch of a function occurs by multiplying the outside of the function by a constant value <m>k</m>:
+              <me>
+                k\cdot f(x)
+              </me>
+            </p>
+
+            <p>
+              So, the formula for the <m>3^{\rm{rd}}</m> graph should look like
+              <me>
+                k(x-1)(x-3)(x-4)
+              </me>
+              for some value <m>k</m>.
+            </p>
+
+            <sidebyside>
+              <image pg-name="$gr[2]" />
+            </sidebyside>
+
+            <p>
+              We can use the fact that this graph passes through the point <m>(2, 3)</m> to solve for the value <m>k</m>.
+            </p>
+
+            <p>
+              Because the <m>y</m>-value is <m>3</m> when <m>x = 2</m>,
+              we can write:
+              <md>
+                <mrow>k(2-1)(2-3)(2-4) \amp= 3</mrow>
+                <mrow>k(2) \amp= 3</mrow>
+                <mrow>k \amp= \frac{3}{2}</mrow>
+              </md>
+            </p>
+
+            <p>
+              What is the formula for the <m>3^{\rm{rd}}</m> graph?
+            </p>
+
+            <p>
+              Answer:
+              <m>y = </m><var name="$formula" width="20" />
+            </p>
           </statement>
           <solution>
-            <p>The formula is: <me>y = \frac{3}{2}(x-1)(x-3)(x-4)</me></p>
+            <p>
+              The formula is:
+              <me>
+                y = \frac{3}{2}(x-1)(x-3)(x-4)
+              </me>
+            </p>
           </solution>
-        </webwork>
-      </exercise>
+      </webwork>
+    </exercise>
 
-      <p>In the next exercise, use this algebraic technique to determine the formula for a different polynomial.</p>
-      <exercise>
-        <webwork>
+    <p>
+      In the next exercise,
+      use this algebraic technique to determine the formula for a different polynomial.
+    </p>
+
+    <exercise>
+      <webwork>
           <setup>
+
             <pg-code>
               $m=Real(0.25);
               $formula=Compute("0.25x(x+3)(x-4)");
@@ -951,43 +1824,130 @@
             </pg-code>
           </setup>
           <statement>
-            <p>The graph below shows a polynomial <m>y = f(x)</m>. Answer the questions that follow in order to write the formula for <m>f(x)</m>.</p>
-            <sidebyside><image pg-name="$gr" /></sidebyside>
-            <p>Begin the formula with just the linear factors we need in order to have the correct <m>x</m>-intercepts.</p>
-            <p>For now, we leave a constant number <m>k</m> multiplied outside of those factors.</p>
-            <p>The formula so far:  <m>f(x) = k \cdot </m><var name="$form" width="15" /></p>
-            <p>Now to solve for the constant number <m>k</m>, use the point <m>(1, -3)</m> on the graph.</p>
-            <p>This means that when <m>x = 1</m>, the output should be <m>-3</m>.</p>
-            <p>So, substitute the value <m>x = 1</m> into your formula, and write that this equals <m>-3</m>.</p>
-            <p>You should now have an equation which has only the unknown value <m>k</m>.</p>
-            <p>Solve for the number <m>k</m>.</p>
-            <p>Answer:  <m>k = </m><var name="$m" width="10" /></p>
-            <p>Finally, what is the formula for the function <m>f(x)</m> graphed?</p>
-            <p>Answer:  <m>f(x) = </m><var name="$formula" width="15" /></p>
-          </statement>
+            <p>
+              The graph below shows a polynomial <m>y = f(x)</m>.
+              Answer the questions that follow in order to write the formula for <m>f(x)</m>.
+            </p>
 
+            <sidebyside>
+              <image pg-name="$gr" />
+            </sidebyside>
+
+            <p>
+              Begin the formula with just the linear factors we need in order to have the correct <m>x</m>-intercepts.
+            </p>
+
+            <p>
+              For now, we leave a constant number <m>k</m> multiplied outside of those factors.
+            </p>
+
+            <p>
+              The formula so far:
+              <m>f(x) = k \cdot </m><var name="$form" width="15" />
+            </p>
+
+            <p>
+              Now to solve for the constant number <m>k</m>,
+              use the point <m>(1, -3)</m> on the graph.
+            </p>
+
+            <p>
+              This means that when <m>x = 1</m>,
+              the output should be <m>-3</m>.
+            </p>
+
+            <p>
+              So, substitute the value <m>x = 1</m> into your formula,
+              and write that this equals <m>-3</m>.
+            </p>
+
+            <p>
+              You should now have an equation which has only the unknown value <m>k</m>.
+            </p>
+
+            <p>
+              Solve for the number <m>k</m>.
+            </p>
+
+            <p>
+              Answer:
+              <m>k = </m><var name="$m" width="10" />
+            </p>
+
+            <p>
+              Finally, what is the formula for the function <m>f(x)</m> graphed?
+            </p>
+
+            <p>
+              Answer:
+              <m>f(x) = </m><var name="$formula" width="15" />
+            </p>
+          </statement>
           <solution>
-            <p>The required factors are: <me>x \cdot (x+3) \cdot (x-4)</me></p>
-            <p>Using the point <m>(1, -3)</m> in our formula gives:<md>
-            <mrow>-3 \amp= k(1)(1+3)(1-4)</mrow>
-            <mrow>\amp= k(-12)</mrow></md></p>
-            <p>Solving the equation <me>-3 = k(-12)</me> gives us <m>k = 1/4</m>.</p>
-            <p>So, the final formula is: <me>f(x) = \frac{1}{4}x(x+3)(x-4)</me></p>
+            <p>
+              The required factors are:
+              <me>
+                x \cdot (x+3) \cdot (x-4)
+              </me>
+            </p>
+
+            <p>
+              Using the point <m>(1, -3)</m> in our formula gives:
+              <md>
+                <mrow>-3 \amp= k(1)(1+3)(1-4)</mrow>
+                <mrow>\amp= k(-12)</mrow>
+              </md>
+            </p>
+
+            <p>
+              Solving the equation
+              <me>
+                -3 = k(-12)
+              </me>
+              gives us <m>k = 1/4</m>.
+            </p>
+
+            <p>
+              So, the final formula is:
+              <me>
+                f(x) = \frac{1}{4}x(x+3)(x-4)
+              </me>
+            </p>
           </solution>
-        </webwork>
-      </exercise>
-    </subsection>
+      </webwork>
+    </exercise>
+  </subsection>
 
   <subsection>
     <title>Multiplicity of Roots</title>
-    <p>By now, we have developed techniques to find the formulas for many kinds of polynomials if we know their roots, end-behavior, and some other point on the graph.</p>
-    <p>The last detail we will encounter involves polynomials with factors such as: <me>x^2 \text{  or  } (x-1)^3 \text{  or  } (x+6)^{10}</me></p>
-    <p>In particular, we want to determine how having an exponent on a linear factor will affect the graph of the polynomial.</p>
-    <p>In the final exercises for this activity, you will explore these effects on the graph.</p>
-<todo>Geogebra graphs are allowing click-and-drag when they shouldn't be.</todo>
+    <p>
+      By now, we have developed techniques to find the formulas for many kinds of polynomials if we know their roots,
+      end-behavior,
+      and some other point on the graph.
+    </p>
+
+    <p>
+      The last detail we will encounter involves polynomials with factors such as:
+      <me>
+        x^2 \text{  or  } (x-1)^3 \text{  or  } (x+6)^{10}
+      </me>
+    </p>
+
+    <p>
+      In particular,
+      we want to determine how having an exponent on a linear factor will affect the graph of the polynomial.
+    </p>
+
+    <p>
+      In the final exercises for this activity,
+      you will explore these effects on the graph.
+    </p>
+
+    <todo>Geogebra graphs are allowing click-and-drag when they shouldn't be.</todo>
+
     <exercise>
       <webwork>
-        <setup>
+          <setup>
 
             <pg-code>
             $variable=PopUp(["?","x","y"],"x");
@@ -996,37 +1956,81 @@
             $horizontal=PopUp(["?","more horizontal","more vertical"],"more horizontal");
             $root=Real(1);
           </pg-code>
-        </setup>
-        <statement>
-          <p>The graph below shows the polynomial: <me>f(x) = (x-1)^k</me></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aysca3Xq/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Use the slider to change the exponent <m>k</m>, and observe the changes to the graph.</p>
-          <p>There are a few things to take note of here:</p>
-          <p><ol label="a">
-            <li>
-              <p>The graph's only <term>root</term> is at: <var name="$variable" form="popup" /> <m>=</m> <var name="$root" width="10" /></p>
-            </li>
-            <li>
-              <p>When the exponent is <em>odd</em>, the graph <var name="$cross" form="popup" /> the <m>x</m>-axis at the <m>x</m>-intercept.</p>
-            </li>
-            <li>
-              <p>When the exponent is <em>even</em>, the graph <var name="$bounce" form="popup" /> the <m>x</m>-axis at the <m>x</m>-intercept.</p>
-            </li>
-            <li>
-              <p>Near the <m>x</m>-intercept, the graph becomes <var name="$horizontal" form="popup" /> as the exponent increases.</p>
-            </li>
-          </ol></p>
-        </statement>
-        <solution>
-          <p>Remember that <m>(x-1)^k</m> just means <me>\overbrace{(x-1)\cdot (x-1) \cdots (x-1)}^{k \text{ times}}</me> so there is only <em>one</em> unique linear factor, repeated <m>k</m> times.</p>
-          <p>Therefore, there is only <em>one</em> root, and hence only <em>one</em> <m>x</m>-intercept at <m>(1, 0)</m>.</p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              The graph below shows the polynomial:
+              <me>
+                f(x) = (x-1)^k
+              </me>
+            </p>
+
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/aysca3Xq/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Use the slider to change the exponent <m>k</m>,
+              and observe the changes to the graph.
+            </p>
+
+            <p>
+              There are a few things to take note of here:
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    The graph's only <term>root</term> is at:
+                    <var name="$variable" form="popup" /> <m>=</m> <var name="$root" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    When the exponent is <em>odd</em>,
+                    the graph <var name="$cross" form="popup" /> the <m>x</m>-axis at the <m>x</m>-intercept.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    When the exponent is <em>even</em>,
+                    the graph <var name="$bounce" form="popup" /> the <m>x</m>-axis at the <m>x</m>-intercept.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Near the <m>x</m>-intercept,
+                    the graph becomes <var name="$horizontal" form="popup" /> as the exponent increases.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Remember that <m>(x-1)^k</m> just means
+              <me>
+                \overbrace{(x-1)\cdot (x-1) \cdots (x-1)}^{k \text{ times}}
+              </me>
+              so there is only <em>one</em> unique linear factor, repeated <m>k</m> times.
+            </p>
+
+            <p>
+              Therefore, there is only <em>one</em> root,
+              and hence only <em>one</em> <m>x</m>-intercept at <m>(1, 0)</m>.
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $bounces=PopUp(["?","crosses over","bounces off"],"bounces off");
             $end2=PopUp(["?","x","x^2","x^3","x^4"],"x^4");
@@ -1034,65 +2038,141 @@
             $crosses=PopUp(["?","crosses over","bounces off"],"crosses over");
             $horizontal=PopUp(["?","vertical","horizontal"],"horizontal");
           </pg-code>
-        </setup>
-        <statement>
-          <p>The graph below shows the polynomial: <me>f(x) = x^2(x-2)^k</me></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BZWTYcmb/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Use the slider to change the exponent <m>k</m>, and observe the changes to the graph.</p>
-          <p>The factor <m>x^2</m> corresponds to the <m>x</m>-intercept <m>(0,0)</m>. Since the exponent is <em>even</em>, the graph always <var name="$bounces" form="popup" /> the <m>x</m>-axis at that point.</p>
-          <p>When <m>k = 2</m>, the end-behavior of <m>f(x)</m> is the same as <var name="$end2" form="popup" />.</p>
-          <p>When <m>k = 5</m>, the end-behavior of <m>f(x)</m> is the same as <var name="$end5" form="popup" />, and the graph <var name="$crosses" form="popup" /> the <m>x</m>-axis at the point <m>(2,0)</m>, and it is nearly <var name="$horizontal" form="popup" /> there.</p>
-        </statement>
+          </setup>
+          <statement>
+            <p>
+              The graph below shows the polynomial:
+              <me>
+                f(x) = x^2(x-2)^k
+              </me>
+            </p>
 
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/BZWTYcmb/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Use the slider to change the exponent <m>k</m>,
+              and observe the changes to the graph.
+            </p>
+
+            <p>
+              The factor <m>x^2</m> corresponds to the <m>x</m>-intercept <m>(0,0)</m>.
+              Since the exponent is <em>even</em>,
+              the graph always <var name="$bounces" form="popup" /> the <m>x</m>-axis at that point.
+            </p>
+
+            <p>
+              When <m>k = 2</m>,
+              the end-behavior of <m>f(x)</m> is the same as <var name="$end2" form="popup" />.
+            </p>
+
+            <p>
+              When <m>k = 5</m>,
+              the end-behavior of <m>f(x)</m> is the same as <var name="$end5" form="popup" />,
+              and the graph <var name="$crosses" form="popup" /> the <m>x</m>-axis at the point <m>(2,0)</m>,
+              and it is nearly <var name="$horizontal" form="popup" /> there.
+            </p>
+          </statement>
       </webwork>
     </exercise>
-    <p>When a polynomial has a linear factor <me>(x - a)^k</me> we say that the root <m>x = a</m> has <term>multiplicity</term><idx><h>multiplicity of a root</h></idx><idx><h>root</h><h>multiplicity</h></idx> <m>k</m>.</p>
-    <p>What is important for us to know, is how the multiplicity of a root affects the graph.</p>
+
+    <p>
+      When a polynomial has a linear factor
+      <me>
+        (x - a)^k
+      </me>
+      we say that the root <m>x = a</m> has <term>multiplicity</term>
+          <idx><h>multiplicity of a root</h></idx>
+          <idx><h>root</h><h>multiplicity</h></idx> <m>k</m>.
+    </p>
+
+    <p>
+      What is important for us to know,
+      is how the multiplicity of a root affects the graph.
+    </p>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $cross=PopUp(["?","graph bounces off of the x-axis","graph crosses over the x-axis"],2);
             $bounce=PopUp(["?","graph bounces off of the x-axis","graph crosses over the x-axis"],1);
             $flat=PopUp(["?","graph is very curved","graph is nearly horizontal"],2);
             $curved=PopUp(["?","graph is very curved","graph is nearly horizontal"],1);
           </pg-code>
-        </setup>
-        <statement>
-          <p>Suppose a polynomial <m>g(x)</m> has roots <m>x = 3</m> and <m>x = 5</m>.</p>
-          <p><ol label="a">
-            <li>
-              <p>If the multiplicity of <m>x = 3</m> is <m>9</m>, then what will the graph look like near the point <m>(3,0)</m>?</p>
-              <p>Answer: <var name="$cross" form="popup" /> and <var name="$flat" form="popup" /></p>
-            </li>
-            <li>
-              <p>If the multiplicity of <m>x = 5</m> is <m>2</m>, then what will the graph look like near the point <m>(5,0)</m>?</p>
-              <p>Answer: <var name="$bounce" form="popup" /> and <var name="$curved" form="popup" /></p>
-            </li>
-          </ol></p>
-        </statement>
-        <hint>
-          <p>See the previous exercises.</p>
-        </hint>
-        <solution>
-          <p>
-            <ol label="a">
-              <li>
-                <p>At the point <m>(3,0)</m>, the graph will <em>cross over</em> the <m>x</m>-axis because the multiplicity is <em>odd</em>, and the graph will be nearly <em>horizontal</em> there, because the multiplicity is large.</p>
-              </li>
-              <li>
-                <p>At the point <m>(5,0)</m>, the graph will <em>bounce off</em> the <m>x</m>-axis because the multiplicity is <em>even</em>, and the graph will still be very curved there, because the mutipliciy is not large.</p>
-              </li>
-            </ol>
-          </p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              Suppose a polynomial <m>g(x)</m> has roots <m>x = 3</m> and <m>x = 5</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    If the multiplicity of <m>x = 3</m> is <m>9</m>,
+                    then what will the graph look like near the point <m>(3,0)</m>?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$cross" form="popup" /> and <var name="$flat" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    If the multiplicity of <m>x = 5</m> is <m>2</m>,
+                    then what will the graph look like near the point <m>(5,0)</m>?
+                  </p>
+
+                  <p>
+                    Answer:
+                    <var name="$bounce" form="popup" /> and <var name="$curved" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <hint>
+            <p>
+              See the previous exercises.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    At the point <m>(3,0)</m>,
+                    the graph will <em>cross over</em>
+                    the <m>x</m>-axis because the multiplicity is <em>odd</em>,
+                    and the graph will be nearly <em>horizontal</em> there,
+                    because the multiplicity is large.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    At the point <m>(5,0)</m>,
+                    the graph will <em>bounce off</em>
+                    the <m>x</m>-axis because the multiplicity is <em>even</em>,
+                    and the graph will still be very curved there,
+                    because the mutipliciy is not large.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
       </webwork>
     </exercise>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $formula=Compute("(x+2)(x-1)^2(x-3)^2");
             $gr=init_graph(-4,-10,4,80,axes=>[0,0],grid=>[8,9],size=>[400,400]);
@@ -1100,25 +2180,63 @@
             $gr->stamps( closed_circle(0,18,'blue') );
             $gr -> lb(new Label ( 0.2,20,'(0, 18)','red','left','bottom'));
           </pg-code>
-        </setup>
-        <statement>
-          <p>The graph below shows a <m>5^{\rm{th}}</m> degree polynomial <m>y = f(x)</m>.</p>
-          <sidebyside><image pg-name="$gr" /></sidebyside>
-          <p>Write a formula for <m>f(x)</m> below, paying attention to the <term>multiplicity</term> of the roots, and the fact that <m>f(x)</m> is a <m>5^{\rm{th}}</m> degree polynomial.</p>
-          <p><m>f(x) = </m><var name="$formula" width="20" /></p>
-        </statement>
-        <hint>
-          <p>Start by finding the roots, using them to help write the linear factors of the function. Next, remember to take into account the multiplicity of the roots. Finally, consider whether the graph has been vertically stretched to go through the point shown.</p>
-        </hint>
-        <solution>
-          <p>Beginning with the linear factors, and a possible vertical stretch, we have: <me>f(x) = k(x+2)(x-1)^2(x-3)^2</me></p>
-          <p>We know that <m>f(0) = 18</m>, so we use those values to solve for the constant <m>k</m>:<md>
-            <mrow>18 \amp= k(0+2)(0-1)^2(0-3)^2</mrow>
-            <mrow>\amp= 18k</mrow>
-          </md></p>
-          <p>Solving gives us <m>k = 1</m>, so the formula for the graph is: <me>f(x) = (x+2)(x-1)(x-3)</me></p>
-        </solution>
+          </setup>
+          <statement>
+            <p>
+              The graph below shows a <m>5^{\rm{th}}</m> degree polynomial <m>y = f(x)</m>.
+            </p>
+
+            <sidebyside>
+              <image pg-name="$gr" />
+            </sidebyside>
+
+            <p>
+              Write a formula for <m>f(x)</m> below,
+              paying attention to the <term>multiplicity</term> of the roots,
+              and the fact that <m>f(x)</m> is a <m>5^{\rm{th}}</m> degree polynomial.
+            </p>
+
+            <p>
+              <m>f(x) = </m><var name="$formula" width="20" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Start by finding the roots,
+              using them to help write the linear factors of the function.
+              Next, remember to take into account the multiplicity of the roots.
+              Finally, consider whether the graph has been vertically stretched to go through the point shown.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              Beginning with the linear factors,
+              and a possible vertical stretch, we have:
+              <me>
+                f(x) = k(x+2)(x-1)^2(x-3)^2
+              </me>
+            </p>
+
+            <p>
+              We know that <m>f(0) = 18</m>,
+              so we use those values to solve for the constant <m>k</m>:
+              <md>
+                <mrow>18 \amp= k(0+2)(0-1)^2(0-3)^2</mrow>
+                <mrow>\amp= 18k</mrow>
+              </md>
+            </p>
+
+            <p>
+              Solving gives us <m>k = 1</m>,
+              so the formula for the graph is:
+              <me>
+                f(x) = (x+2)(x-1)(x-3)
+              </me>
+            </p>
+          </solution>
       </webwork>
     </exercise>
   </subsection>
+
 </section>
+

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -11,26 +10,65 @@
 ## ********************************************************************* ##
 -->
 <section xml:id="activity-domain-range" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Domain and Range Activity </title>
+  <title>Domain and Range Activity</title>
   <subsection>
     <title>Domain and Range</title>
-
     <p>
       <ul>
-        <li><p>What kinds of input does a function accept?</p></li>
-        <li><p>What are all the possible outputs a function will produce?</p></li>
+        <li>
+          <p>
+            What kinds of input does a function accept?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            What are all the possible outputs a function will produce?
+          </p>
+        </li>
       </ul>
     </p>
-    <p>In math we have our own vocabulary we use to ask these same questions. The set of inputs a function will accept is called the <term>domain</term><idx><h>domain</h></idx> of the function. The set of possible outputs is called the <term>range</term><idx><h>range</h></idx>.</p>
+
+    <p>
+      In math we have our own vocabulary we use to ask these same questions.
+      The set of inputs a function will accept is called the <term>domain</term>
+          <idx><h>domain</h></idx>
+      of the function.
+      The set of possible outputs is called the <term>range</term>.
+          <idx><h>range</h></idx>
+    </p>
+
     <exercise>
+
       <introduction>
-      <p>Consider shopping online at a t-shirt company.  Each t-shirt costs <m>\$ 13.00</m>, and each time you click on the <q>add to shopping cart</q> button, your account adds a charge for <m>\$ 13.00</m>.</p>
-      <p>Let <m>C</m> represent the cost in dollars of purchasing <m>N</m> t-shirts. Therefore, <m>C = f(N)</m>.</p>
-      <p>What are the possible input values in this situation? In other words: what is the <em>domain</em> of the function <m>f</m>?</p>
-      <p>What are the possible output values in this situation? In other words: what is the <em>range</em> of the function <m>f</m>?</p>
+        <p>
+          Consider shopping online at a t-shirt company.
+          Each t-shirt costs <m>\$ 13.00</m>,
+          and each time you click on the <q>add to shopping cart</q> button,
+          your account adds a charge for <m>\$ 13.00</m>.
+        </p>
+
+        <p>
+          Let <m>C</m> represent the cost in dollars of purchasing <m>N</m> t-shirts.
+          Therefore, <m>C = f(N)</m>.
+        </p>
+
+        <p>
+          What are the possible input values in this situation?
+          In other words: what is the <em>domain</em>
+          of the function <m>f</m>?
+        </p>
+
+        <p>
+          What are the possible output values in this situation?
+          In other words: what is the <em>range</em>
+          of the function <m>f</m>?
+        </p>
       </introduction>
-        <webwork>
+
+      <webwork>
           <setup>
+
             <pg-code>
               $yes = RadioButtons(
               ["yes","no"],
@@ -45,66 +83,114 @@
             </pg-code>
           </setup>
           <statement>
-            <p>T-shirt cost function: Enter the cost of buying <m>N</m> t-shirts. </p>
+            <p>
+              T-shirt cost function:
+              Enter the cost of buying <m>N</m> t-shirts.
+            </p>
+
             <sidebyside>
+
               <tabular top="medium" bottom="medium" left="medium" right="medium">
                 <col halign="center"/>
                 <col halign="center"/>
                 <row>
-                    <cell>N</cell>
-                    <cell><m>C = f(N)</m></cell>
+                  <cell>N</cell>
+                  <cell><m>C = f(N)</m></cell>
                 </row>
                 <row>
-                    <cell><m>0</m></cell>
-                    <cell><var name="0" width="5" /></cell>
+                  <cell><m>0</m></cell>
+                  <cell><var name="0" width="5" /></cell>
                 </row>
                 <row>
-                    <cell><m>1</m></cell>
-                    <cell><var name="13" width="5" /></cell>
+                  <cell><m>1</m></cell>
+                  <cell><var name="13" width="5" /></cell>
                 </row>
                 <row>
-                    <cell><m>2</m></cell>
-                    <cell><var name="26" width="5" /></cell>
+                  <cell><m>2</m></cell>
+                  <cell><var name="26" width="5" /></cell>
                 </row>
                 <row>
-                    <cell><m>3</m></cell>
-                    <cell><var name="39" width="5" /></cell>
+                  <cell><m>3</m></cell>
+                  <cell><var name="39" width="5" /></cell>
                 </row>
                 <row>
-                    <cell><m>4</m></cell>
-                    <cell><var name="52" width="5" /></cell>
+                  <cell><m>4</m></cell>
+                  <cell><var name="52" width="5" /></cell>
                 </row>
                 <row>
-                    <cell><m>5</m></cell>
-                    <cell><var name="65" width="5" /></cell>
+                  <cell><m>5</m></cell>
+                  <cell><var name="65" width="5" /></cell>
                 </row>
               </tabular>
+
             </sidebyside>
+
             <p>
               <ol label="a">
                 <li>
-                  <p>Look at the inputs for <m>N</m> from the table.</p>
-                  <p>Is it possible to buy <m>3.1415</m> t-shirts?</p>
-                  <p><var name="$no" form="buttons" /></p>
+                  <p>
+                    Look at the inputs for <m>N</m> from the table.
+                  </p>
+
+                  <p>
+                    Is it possible to buy <m>3.1415</m> t-shirts?
+                  </p>
+
+                  <p>
+                    <var name="$no" form="buttons" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>Is it possible to buy <m>-7</m> t-shirts?</p>
-                  <p><var name="$no" form="buttons" /></p>
+                  <p>
+                    Is it possible to buy <m>-7</m> t-shirts?
+                  </p>
+
+                  <p>
+                    <var name="$no" form="buttons" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>How would you classify all the possible input values?</p>
-                  <p><var name="$integers" form="popup" />?</p>
-                  <p>This is the domain of our function.</p>
+                  <p>
+                    How would you classify all the possible input values?
+                  </p>
+
+                  <p>
+                    <var name="$integers" form="popup" />?
+                  </p>
+
+                  <p>
+                    This is the domain of our function.
+                  </p>
                 </li>
+
                 <li>
-                  <p>Now look at all the outputs <m>C</m> from the table.</p>
-                  <p>Is it possible that the cost will be <m>\$ 14</m> or <m>\$ 15</m> or <m>\$ 16</m>?</p>
-                  <p><var name="$no" form="buttons" /></p>
+                  <p>
+                    Now look at all the outputs <m>C</m> from the table.
+                  </p>
+
+                  <p>
+                    Is it possible that the cost will be <m>\$ 14</m> or <m>\$ 15</m> or <m>\$ 16</m>?
+                  </p>
+
+                  <p>
+                    <var name="$no" form="buttons" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>How would you classify all the output values?</p>
-                  <p><var name="$thirteen" form="popup" /></p>
-                  <p>This is the range of our function.</p>
+                  <p>
+                    How would you classify all the output values?
+                  </p>
+
+                  <p>
+                    <var name="$thirteen" form="popup" />
+                  </p>
+
+                  <p>
+                    This is the range of our function.
+                  </p>
                 </li>
               </ol>
             </p>
@@ -113,119 +199,258 @@
             <p>
               <ol label="a">
                 <li>
-                  <p>You can buy <m>0</m> t-shirts, or <m>1</m> or <m>2</m> or more, but you can't buy <m>1.5</m> t-shirts or <m>2.63</m> t-shirts. You can only buy a whole number of t-shirts, not fractions of shirts.</p>
+                  <p>
+                    You can buy <m>0</m> t-shirts,
+                    or <m>1</m> or <m>2</m> or more,
+                    but you can't buy <m>1.5</m> t-shirts or <m>2.63</m> t-shirts.
+                    You can only buy a whole number of t-shirts, not fractions of shirts.
+                  </p>
                 </li>
+
                 <li>
-                  <p>You also can't buy a negative number of t-shirts, so <m>N</m> can't be less than zero.</p>
+                  <p>
+                    You also can't buy a negative number of t-shirts,
+                    so <m>N</m> can't be less than zero.
+                  </p>
                 </li>
+
                 <li>
-                  <p>In math we say that the domain of our function is the set of all <em>non-negative integers</em>. This means the domain is the set: <m>N = \{0, 1, 2, 3, \cdots \}</m>. These are the only numbers that make sense for our function, the only numbers our function accepts.</p>
+                  <p>
+                    In math we say that the domain of our function is the set of all
+                    <em>non-negative integers</em>.
+                    This means the domain is the set:
+                    <m>N = \{0, 1, 2, 3, \cdots \}</m>.
+                    These are the only numbers that make sense for our function,
+                    the only numbers our function accepts.
+                  </p>
                 </li>
+
                 <li>
-                  <p>If you don't add t-shirts to your online shopping cart, then <m>N = 0</m>, your cart will have no t-shirst and you won't pay anything, <m>f(0) = 0</m>.</p>
-                  <p>If you choose <m>N = 1</m> t-shirts you will pay <m>\$ 13.00</m></p>
-                   <p>At <m>N = 2</m> you pay <m>\$ 26.00</m></p>
-                  <p>Notice you will never have a final checkout of <m>\$ 10.00</m> or <m>\$ 18.00</m>. In fact, you will only pay in multiples of <m>\$ 13.00</m> because, again, you can't buy fractions of a t-shirt.</p>
+                  <p>
+                    If you don't add t-shirts to your online shopping cart,
+                    then <m>N = 0</m>,
+                    your cart will have no t-shirst and you won't pay anything,
+                    <m>f(0) = 0</m>.
+                  </p>
+
+                  <p>
+                    If you choose <m>N = 1</m> t-shirts you will pay <m>\$ 13.00</m>
+                  </p>
+
+                  <p>
+                    At <m>N = 2</m> you pay <m>\$ 26.00</m>
+                  </p>
+
+                  <p>
+                    Notice you will never have a final checkout of <m>\$ 10.00</m> or <m>\$ 18.00</m>.
+                    In fact, you will only pay in multiples of <m>\$ 13.00</m> because, again,
+                    you can't buy fractions of a t-shirt.
+                  </p>
                 </li>
+
                 <li>
-                  <p>What are all the possible output values of our function?</p>
-                  <p>You can't purchase a negative amount and you can't buy fractions of a t-shirt</p>
-                  <p>Therefore the range of our function is <em>all non-negative integer multiples of <m>13</m></em>: </p>
+                  <p>
+                    What are all the possible output values of our function?
+                  </p>
+
+                  <p>
+                    You can't purchase a negative amount and you can't buy fractions of a t-shirt
+                  </p>
+
+                  <p>
+                    Therefore the range of our function is
+                    <em>all non-negative integer multiples of <m>13</m></em>:
+                  </p>
                 </li>
               </ol>
             </p>
           </solution>
-        </webwork>
+      </webwork>
     </exercise>
 
-    <p>Sometimes a function can use any number as an input. Consider <me>f(x) = x^2</me></p>
+    <p>
+      Sometimes a function can use any number as an input.
+      Consider
+      <me>
+        f(x) = x^2
+      </me>
+    </p>
+
     <exercise>
       <title>Polynomials</title>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $yes1 = PopUp(["?","yes","no"],"yes");
             $yes2 = PopUp(["?","yes","no"],"yes");
             $no = PopUp(["?","yes","no"],"no");
             $domain = PopUp(["?","only positive numbers","all real numbers","only negative numbers","only numbers ending in C"],"all real numbers");
           </pg-code>
-        </setup>
-        <stage>
+          </setup>
+          <stage>
           <statement>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FRZgk5eU/width/413/height/350/border/888888" width="413px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Drag the input value (point) on the horizontal axis left and right to see if the input shown has an output value.</p>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FRZgk5eU/width/413/height/350/border/888888" width="413px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Drag the input value (point) on the horizontal axis left and right to see if the input shown has an output value.
+            </p>
+
             <p>
               <ol label="a">
                 <li>
-                  <p>Can you square <m>\frac{-1}{2}</m>? <var name="$yes1" form="popup" /></p>
+                  <p>
+                    Can you square <m>\frac{-1}{2}</m>?
+                    <var name="$yes1" form="popup" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>Can you square <m>2.1</m>? <var name="$yes2" form="popup" /></p>
+                  <p>
+                    Can you square <m>2.1</m>?
+                    <var name="$yes2" form="popup" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>Use a calculator to help you answer this next question.</p>
-                  <p>Is there any number you <em>can't</em> square (multiply by itself)? <var name="$no" form="popup" /></p>
+                  <p>
+                    Use a calculator to help you answer this next question.
+                  </p>
+
+                  <p>
+                    Is there any number you <em>can't</em>
+                    square (multiply by itself)?
+                    <var name="$no" form="popup" />
+                  </p>
                 </li>
               </ol>
             </p>
           </statement>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
-            <p>Therefore, what is the domain of <m>f(x)=x^2</m>?</p>
-            <p>The domain is <var name="$domain" form="popup" /></p>
+            <p>
+              Therefore, what is the domain of <m>f(x)=x^2</m>?
+            </p>
+
+            <p>
+              The domain is <var name="$domain" form="popup" />
+            </p>
           </statement>
-        </stage>
+          </stage>
       </webwork>
     </exercise>
 
-    <p>Once we know the domain, we can then find all the possible results.</p>
+    <p>
+      Once we know the domain, we can then find all the possible results.
+    </p>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $pos1 = PopUp(["?","positive","negative"],"positive");
             $pos2 = PopUp(["?","positive","negative"],"positive");
             $no = PopUp(["?","yes","no"],"no");
             $range = PopUp(["?","only positive numbers","all real numbers","only negative numbers","all real numbers greater than or equal to zero"],"all real numbers greater than or equal to zero");
           </pg-code>
-        </setup>
-        <statement>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FRZgk5eU/width/413/height/350/border/888888" width="413px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Drag the input value (point) on the horizontal axis left and right to see if the input shown has an output value.</p>
-          <p>
-            <ol label="a">
-              <li>
-                <p>Pick a negatvie number, square it.  What is the sign of the result? <var name="$pos1" form="popup" /></p>
-              </li>
-              <li>
-                <p>Pick a positive number, square it.  What is the sign of the result? <var name="$pos2" form="popup" /></p>
-              </li>
-              <li>
-                <p>Square the number zero. What is the result? <var name="0" width="3" /></p>
-              </li>
-              <li>
-                <p>Will <m>f(x) = x^2</m> ever generate a negative result (less than zero)? <var name="$no" form="popup" /></p>
-              </li>
-              <li>
-                <p>Therefore what is the range of <m>f(x)=x^2</m>?</p>
-                <p>The range is <var name="$range" form="popup" /></p>
-              </li>
-            </ol>
-          </p>
-          <p>Notice that the graph of <m>f</m> goes up forever, but it never drops below the horizontal axis.</p>
-        </statement>
+          </setup>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FRZgk5eU/width/413/height/350/border/888888" width="413px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Drag the input value (point) on the horizontal axis left and right to see if the input shown has an output value.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Pick a negatvie number, square it.
+                    What is the sign of the result?
+                    <var name="$pos1" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Pick a positive number, square it.
+                    What is the sign of the result?
+                    <var name="$pos2" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Square the number zero.
+                    What is the result?
+                    <var name="0" width="3" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Will <m>f(x) = x^2</m> ever generate a negative result (less than zero)?
+                    <var name="$no" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Therefore what is the range of <m>f(x)=x^2</m>?
+                  </p>
+
+                  <p>
+                    The range is <var name="$range" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+
+            <p>
+              Notice that the graph of <m>f</m> goes up forever,
+              but it never drops below the horizontal axis.
+            </p>
+          </statement>
       </webwork>
     </exercise>
-    <p>Sometimes a function will only accept certain input values, or it may produce only certain kinds of outputs.</p>
-    <p>Consider the function: <me>f(x) = \sqrt{x}</me></p>
-    <p>This function will take real number inputs, as long as the input is not negative (you can't take the square root of a negative number).</p>
-    <p>On the other hand, the square root function only produces outputs that are positive or zero.</p>
-    <p>By graphing the function, the domain and range become more apparent.</p>
-      <figure xml:id="graph-of-root-xs">
-        <caption>Graph of <m>f(x)=\sqrt{x}</m></caption>
-          <image width="47%" xml:id="image-graph-of-root-x">
+
+    <p>
+      Sometimes a function will only accept certain input values,
+      or it may produce only certain kinds of outputs.
+    </p>
+
+    <p>
+      Consider the function:
+      <me>
+        f(x) = \sqrt{x}
+      </me>
+    </p>
+
+    <p>
+      This function will take real number inputs,
+      as long as the input is not negative
+      (you can't take the square root of a negative number).
+    </p>
+
+    <p>
+      On the other hand,
+      the square root function only produces outputs that are positive or zero.
+    </p>
+
+    <p>
+      By graphing the function, the domain and range become more apparent.
+    </p>
+
+    <figure xml:id="graph-of-root-xs">
+      <caption>Graph of <m>f(x)=\sqrt{x}</m></caption>
+      <image width="47%" xml:id="image-graph-of-root-x">
+
             <latex-image>
                 <![CDATA[\begin{tikzpicture}
                 \begin{axis}[ymin=-5, ymax=7, xlabel={$x$}, ylabel={$y$}, xtick={4,8,...,24}, minor xtick={-3,-2,...,25}, ytick={-4,-2,...,6}, minor ytick={-5,-4,...,7}, xmin=-3, xmax=25, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
@@ -233,53 +458,122 @@
                 \end{axis}
                 \end{tikzpicture}]]>
             </latex-image>
-          </image>
-      </figure>
-      <p>The figure shows the graph of <m>f</m> exists horizontally only from the origin and to the right. Therefore the domain of <m>f</m> is: <m>x \geq 0</m>.</p>
-      <p>The figure also shows the graph of <m>f</m> exists vertically from the origin and up. Therefore the range of <m>f</m> is: <m>y \geq 0</m>.</p>
-      <p>Note: Since the vertical axis is called <m>y</m>, it means that <m>y = f(x)</m>. Think of <m>f(x)</m> as the <q>machine</q> that turns <m>x</m> values into <m>y</m> values.  Therefore we can use <m>f(x)</m> or <m>y</m> when referring to the range.</p>
+      </image>
+
+    </figure>
+
+    <p>
+      The figure shows the graph of <m>f</m> exists horizontally only from the origin and to the right.
+      Therefore the domain of <m>f</m> is:
+      <m>x \geq 0</m>.
+    </p>
+
+    <p>
+      The figure also shows the graph of <m>f</m> exists vertically from the origin and up.
+      Therefore the range of <m>f</m> is:
+      <m>y \geq 0</m>.
+    </p>
+
+    <p>
+      Note:
+      Since the vertical axis is called <m>y</m>,
+      it means that <m>y = f(x)</m>.
+      Think of <m>f(x)</m> as the <q>machine</q>
+      that turns <m>x</m> values into <m>y</m> values.
+      Therefore we can use <m>f(x)</m> or <m>y</m> when referring to the range.
+    </p>
+
     <exercise>
       <webwork>
-        <statement>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KeUqTgkB/width/413/height/410/border/888888" width="413px" height="410px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>The function <m>f(x)= \sqrt{x}</m> can be manipulated to change its domain and its range.</p>
-          <p>By clicking on a checkbox, you can see a variation of this function. The domain is shown as an interval on the <m>x</m>-axis, and the range is shown as an interval on the <m>y</m>-axis.</p>
-          <p>
-            <ol label="a">
-              <li>
-                <p>In what quadrant are both the domain and the range positive? Quadrant <var name="1" width="3" /></p>
-              </li>
-              <li>
-                <p>In what quadrant are both the domain and the range negative? Quadrant <var name="3" width="3" /></p>
-              </li>
-              <li>
-                <p>In what quadrant the domain positive and the range negative? Quadrant <var name="4" width="3" /></p>
-              </li>
-              <li>
-                <p>In what quadrant the domain negative and the range positive? Quadrant <var name="2" width="3" /></p>
-              </li>
-            </ol>
-          </p>
-        </statement>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KeUqTgkB/width/413/height/410/border/888888" width="413px" height="410px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              The function <m>f(x)= \sqrt{x}</m> can be manipulated to change its domain and its range.
+            </p>
+
+            <p>
+              By clicking on a checkbox, you can see a variation of this function.
+              The domain is shown as an interval on the <m>x</m>-axis,
+              and the range is shown as an interval on the <m>y</m>-axis.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    In what quadrant are both the domain and the range positive?
+                    Quadrant <var name="1" width="3" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    In what quadrant are both the domain and the range negative?
+                    Quadrant <var name="3" width="3" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    In what quadrant the domain positive and the range negative?
+                    Quadrant <var name="4" width="3" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    In what quadrant the domain negative and the range positive?
+                    Quadrant <var name="2" width="3" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
       </webwork>
     </exercise>
+
     <assemblage>
-      <p>Important facts when determining the domain of a function:</p>
+      <p>
+        Important facts when determining the domain of a function:
+      </p>
+
       <p>
         <ul>
           <li>
-            <p>You can't take the square root of negative numbers</p>
+            <p>
+              You can't take the square root of negative numbers
+            </p>
           </li>
+
           <li>
-            <p>You can't allow the denominator of a fraction to be zero.</p>
+            <p>
+              You can't allow the denominator of a fraction to be zero.
+            </p>
           </li>
         </ul>
       </p>
     </assemblage>
+
     <example>
       <title>The algebraic method of finding the domain of any function with a square root</title>
-      <p>Because we cannot take the square root of a negative number, we can set the expression under the root (called the <q>radicand</q>) greater than or equal to zero, and then isolate the variable. The result is the domain of the function.</p>
-      <p>Let <m>f(x)=\sqrt{4x-9}</m>. To find the domain, we set <m>4x-9 \geq 0</m> and isolate <m>x</m>.</p>
+      <p>
+        Because we cannot take the square root of a negative number,
+        we can set the expression under the root
+        (called the <q>radicand</q>)
+        greater than or equal to zero,
+        and then isolate the variable.
+        The result is the domain of the function.
+      </p>
+
+      <p>
+        Let <m>f(x)=\sqrt{4x-9}</m>.
+        To find the domain, we set
+        <m>4x-9 \geq 0</m> and isolate <m>x</m>.
+      </p>
+
       <p>
         <md>
           <mrow>4x-9 \amp \geq 0</mrow>
@@ -287,55 +581,107 @@
           <mrow>x \amp \geq \frac{9}{4}</mrow>
         </md>
       </p>
-      <p>So the domain of <m>f</m> is <m>x \geq \frac{9}{4}</m></p>
+
+      <p>
+        So the domain of <m>f</m> is <m>x \geq \frac{9}{4}</m>
+      </p>
+
       <sidebyside widths="47% 47%">
         <figure>
           <caption>Graph of <m>f(x)=\sqrt{4x-9}</m></caption>
-            <image>
-              <latex-image>
-                  <![CDATA[\begin{tikzpicture}
-                  \begin{axis}[ymin=-2, ymax=6, xlabel={$x$}, ylabel={$y$}, xtick={2,4,...,8}, minor xtick={0,1,...,9}, ytick={-2,0,...,6}, minor ytick={-2,-1,...,6}, xmin=0, xmax=9, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
-                  \addplot[thick, color=red, domain=0:4,->] ({(x^2+9)/4},{x});
-                  \end{axis}
-                  \end{tikzpicture}]]>
-              </latex-image>
-            </image>
+          <image>
+
+            <latex-image>
+                <![CDATA[\begin{tikzpicture}
+                \begin{axis}[ymin=-2, ymax=6, xlabel={$x$}, ylabel={$y$}, xtick={2,4,...,8}, minor xtick={0,1,...,9}, ytick={-2,0,...,6}, minor ytick={-2,-1,...,6}, xmin=0, xmax=9, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
+                \addplot[thick, color=red, domain=0:4,->] ({(x^2+9)/4},{x});
+                \end{axis}
+                \end{tikzpicture}]]>
+            </latex-image>
+          </image>
+
         </figure>
+
         <stack>
-          <p>The domain is the set of numbers which are greater than or equal to <m>\frac{9}{4}</m>, as shown in the graph. The <m>x</m>-intercept of the graph is the point <m>\left(\frac{9}{4}, 0\right)</m>, and the graph extends to the right.</p>
-          <p>This technique is good only for determining the domain of a function. Finding the range requires other methods.</p>
+          <p>
+            The domain is the set of numbers which are greater than or equal to
+            <m>\frac{9}{4}</m>, as shown in the graph.
+            The <m>x</m>-intercept of the graph is the point <m>\left(\frac{9}{4}, 0\right)</m>,
+            and the graph extends to the right.
+          </p>
+
+          <p>
+            This technique is good only for determining the domain of a function.
+            Finding the range requires other methods.
+          </p>
         </stack>
+
       </sidebyside>
     </example>
 
-      <p>For functions written as fractions, we must also avoid input values which put the number <m>0</m> in the denominator. A good way to avoid these numbers is to solve for them: Set the denominator equal to zero, and then solve that equation.</p>
+    <p>
+      For functions written as fractions,
+      we must also avoid input values which put the number <m>0</m> in the denominator.
+      A good way to avoid these numbers is to solve for them:
+      Set the denominator equal to zero,
+      and then solve that equation.
+    </p>
 
-      <exercise>
-        <webwork>
+    <exercise>
+      <webwork>
           <statement>
-            <p>For the function <me>f(x)=\frac{\sqrt{x}}{9-x^2}</me> find the input values which would cause division by zero.</p>
-            <p>To do this, we set the denominator equal to zero then solve the equation.</p>
+            <p>
+              For the function
+              <me>
+                f(x)=\frac{\sqrt{x}}{9-x^2}
+              </me>
+              find the input values which would cause division by zero.
+            </p>
+
+            <p>
+              To do this, we set the denominator equal to zero then solve the equation.
+            </p>
+
             <p>
               <md>
                 <mrow>9-x^2 \amp= 0</mrow>
                 <mrow>(3-x)(x+3) \amp= 0</mrow>
               </md>
             </p>
-            <p>One solution comes from the factor <m>3-x = 0</m>.</p>
-            <p>Answer: <m>x</m> = <var name="3" width="5" /></p>
-            <p>The other solution comes from the factor <m>3+x = 0</m>.</p>
-            <p>Answer: <m>x</m> = <var name="-3" width="5" /></p>
+
+            <p>
+              One solution comes from the factor <m>3-x = 0</m>.
+            </p>
+
+            <p>
+              Answer:
+              <m>x</m> = <var name="3" width="5" />
+            </p>
+
+            <p>
+              The other solution comes from the factor <m>3+x = 0</m>.
+            </p>
+
+            <p>
+              Answer:
+              <m>x</m> = <var name="-3" width="5" />
+            </p>
           </statement>
           <solution>
-            <p>The numbers <m>x = 3</m> and <m>x = -3</m> would cause division by zero in this function.</p>
+            <p>
+              The numbers <m>x = 3</m> and <m>x = -3</m> would cause division by zero in this function.
+            </p>
           </solution>
-        </webwork>
-      </exercise>
+      </webwork>
+    </exercise>
 
-      <p>We are not done yet. What about the numerator <m>\sqrt{x}</m> ? Are there any values that might cause trouble there?</p>
+    <p>
+      We are not done yet.
+      What about the numerator <m>\sqrt{x}</m> ? Are there any values that might cause trouble there?
+    </p>
 
-      <exercise>
-        <webwork>
+    <exercise>
+      <webwork>
           <setup>
 
             <pg-code>
@@ -349,40 +695,77 @@
               );
             </pg-code>
           </setup>
-        <stage>
+          <stage>
           <statement>
-            <p>What are the only values of <m>x</m> the numerator will accept? (Use an inequality to state your answer) <var name="$domNumerator" width="8" /></p>
+            <p>
+              What are the only values of <m>x</m> the numerator will accept? (Use an inequality to state your answer) <var name="$domNumerator" width="8" />
+            </p>
           </statement>
           <hint>
-            <p>Can we take the square root of zero?</p>
+            <p>
+              Can we take the square root of zero?
+            </p>
           </hint>
           <solution>
-            <p>The domain of <m>\sqrt{x}</m> is:  <m>x \gt = 0</m></p>
+            <p>
+              The domain of <m>\sqrt{x}</m> is:
+              <m>x \gt = 0</m>
+            </p>
           </solution>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
-            <p>Using the domain of the denominator you found, identify the domain of the entire function.</p>
-            <p>The denominator could not use the values <m>x = \pm 3</m>. So the domain of the denominator is <m>x \neq -3</m> and <m>x \neq 3</m>.</p>
-            <p>The numerator can only use values <m>x \geq 0</m>.</p>
-            <p>Think about what values the numerator and the denominator have in common.</p>
-            <p>The domain of <m>f</m> is:</p>
-            <p><var name="$dom" form="buttons" /></p>
-          </statement>
-          <hint>
-            <p>The domain must be the numbers which are in common between the domains of the numerator and the denominator.</p>
-          </hint>
-          <solution>
-            <p>The domain of the function is:  <m>x \geqslant 0</m> and <m>x \neq 3</m>.</p>
-          </solution>
-        </stage>
-        </webwork>
-      </exercise>
+            <p>
+              Using the domain of the denominator you found,
+              identify the domain of the entire function.
+            </p>
 
-    <p>Try some algebraic methods of finding domain on your own. If you get stuck, use your calculator to make a graph of the function.  Look to see where the graph exists.</p>
-      <exercise>
-        <title>Practice with Roots and Denominators</title>
-        <webwork>
+            <p>
+              The denominator could not use the values <m>x = \pm 3</m>.
+              So the domain of the denominator is <m>x \neq -3</m> and <m>x \neq 3</m>.
+            </p>
+
+            <p>
+              The numerator can only use values <m>x \geq 0</m>.
+            </p>
+
+            <p>
+              Think about what values the numerator and the denominator have in common.
+            </p>
+
+            <p>
+              The domain of <m>f</m> is:
+            </p>
+
+            <p>
+              <var name="$dom" form="buttons" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              The domain must be the numbers which are in common between the domains of the numerator and the denominator.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              The domain of the function is:
+              <m>x \geqslant 0</m> and <m>x \neq 3</m>.
+            </p>
+          </solution>
+          </stage>
+      </webwork>
+    </exercise>
+
+    <p>
+      Try some algebraic methods of finding domain on your own.
+      If you get stuck,
+      use your calculator to make a graph of the function.
+      Look to see where the graph exists.
+    </p>
+
+    <exercise>
+      <title>Practice with Roots and Denominators</title>
+      <webwork>
           <setup>
 
             <pg-code>
@@ -395,29 +778,67 @@
             </pg-code>
           </setup>
           <statement>
-            <p>Remember that typing <m>x!=a</m> means <q><m>x</m> does not equal <m>a</m></q>.</p>
             <p>
-              <ol label="a" >
+              Remember that typing <m>x!=a</m> means
+              <q><m>x</m> does not equal <m>a</m></q>.
+            </p>
+
+            <p>
+              <ol label="a">
                 <li>
-                  <p>Let <m>f(x)= \sqrt{x-4}</m></p>
-                  <p>What possible choices for <m>x</m> will allow the function to compute real valued outputs?</p>
-                  <p><m>f</m> has the domain <var name="$dom1" width="8" /></p>
-                </li>
-                <li>
-                  <p>Let <m>f(x) = \sqrt{4-x}</m></p>
-                  <p>What possible choices for <m>x</m> will allow the function to compute real valued ouptuts?</p>
-                  <p><m>f</m> has the domain <var name="$dom2" width="8" /></p>
-                </li>
-                <li>
-                  <p>Let <m>f(x) = \frac{1}{x-7}</m></p>
-                  <p>What possible choices for <m>x</m> will allow the function to compute real valued outputs?</p>
-                 <p><m>f</m> has the domain <var name="$dom3" width="8" /></p>
+                  <p>
+                    Let <m>f(x)= \sqrt{x-4}</m>
+                  </p>
+
+                  <p>
+                    What possible choices for <m>x</m> will allow the function to compute real valued outputs?
+                  </p>
+
+                  <p>
+                    <m>f</m> has the domain <var name="$dom1" width="8" />
+                  </p>
                 </li>
 
                 <li>
-                  <p>Let <m>f(x) = \frac{1}{x^2-9}</m></p>
-                  <p>What possible choices for <m>x</m> will allow the function to compute real valued outputs?</p>
-                  <p><m>f</m> has the domain <var name="$dom4" width="8" /></p>
+                  <p>
+                    Let <m>f(x) = \sqrt{4-x}</m>
+                  </p>
+
+                  <p>
+                    What possible choices for <m>x</m> will allow the function to compute real valued ouptuts?
+                  </p>
+
+                  <p>
+                    <m>f</m> has the domain <var name="$dom2" width="8" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Let <m>f(x) = \frac{1}{x-7}</m>
+                  </p>
+
+                  <p>
+                    What possible choices for <m>x</m> will allow the function to compute real valued outputs?
+                  </p>
+
+                  <p>
+                    <m>f</m> has the domain <var name="$dom3" width="8" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Let <m>f(x) = \frac{1}{x^2-9}</m>
+                  </p>
+
+                  <p>
+                    What possible choices for <m>x</m> will allow the function to compute real valued outputs?
+                  </p>
+
+                  <p>
+                    <m>f</m> has the domain <var name="$dom4" width="8" />
+                  </p>
                 </li>
               </ol>
             </p>
@@ -426,30 +847,59 @@
             <p>
               <ol label="a">
                 <li>
-                  <p>In order for <m>x-4</m> to be such that <m>x - 4 \geqslant 0</m> (<abbr>i.e.</abbr> non-negative) then <m>x \geqslant 4</m></p>
+                  <p>
+                    In order for <m>x-4</m> to be such that
+                    <m>x - 4 \geqslant 0</m> (<abbr>i.e.</abbr> non-negative) then <m>x \geqslant 4</m>
+                  </p>
                 </li>
+
                 <li>
-                  <p>In order for <m>4-x</m> to be such that <m>4-x \geqslant 0</m> (<abbr>i.e.</abbr> non-negative) then <m>x \leqslant 4</m></p>
+                  <p>
+                    In order for <m>4-x</m> to be such that
+                    <m>4-x \geqslant 0</m> (<abbr>i.e.</abbr> non-negative) then <m>x \leqslant 4</m>
+                  </p>
                 </li>
+
                 <li>
-                  <p>In order for <m>x-7</m> to be such that <m>x-7 \neq 0</m> (<abbr>i.e.</abbr> non-zero) then <m>x\neq 7</m></p>
+                  <p>
+                    In order for <m>x-7</m> to be such that
+                    <m>x-7 \neq 0</m> (<abbr>i.e.</abbr> non-zero) then <m>x\neq 7</m>
+                  </p>
                 </li>
+
                 <li>
-                  <p>In order for <m>x^2-9</m> to be such that <m>x^2-9 \neq 0</m> (<abbr>i.e.</abbr> non-zero) then <m>x\neq \pm 3</m></p>
+                  <p>
+                    In order for <m>x^2-9</m> to be such that
+                    <m>x^2-9 \neq 0</m> (<abbr>i.e.</abbr> non-zero) then <m>x\neq \pm 3</m>
+                  </p>
                 </li>
               </ol>
             </p>
           </solution>
-        </webwork>
-      </exercise>
+      </webwork>
+    </exercise>
 
-    <p>Identifying the domain and range of a function just by looking at its formula can be difficult. Knowing what to look for comes with experience.</p>
-    <p>Often, a good way to determine the domain and range of a function is to graph it. Make a graph on a graphing tool and try to identify where the function exists horizontally: this is the domain. Then try to identify where the function exists vertically: this is the range.</p>
-    <p>Be careful: the domain and range are not necessarily connected intervals. They may consist of different sections that together make up the entire domain or the entire range.</p>
+    <p>
+      Identifying the domain and range of a function just by looking at its formula can be difficult.
+      Knowing what to look for comes with experience.
+    </p>
+
+    <p>
+      Often, a good way to determine the domain and range of a function is to graph it.
+      Make a graph on a graphing tool and try to identify where the function exists horizontally:
+      this is the domain.
+      Then try to identify where the function exists vertically:
+      this is the range.
+    </p>
+
+    <p>
+      Be careful: the domain and range are not necessarily connected intervals.
+      They may consist of different sections that together make up the entire domain or the entire range.
+    </p>
 
     <exercise>
       <webwork>
-        <setup>
+          <setup>
 
           <pg-code>
             Context("Inequalities");
@@ -459,51 +909,107 @@
             $rng1 = Compute("-3&lt;=y&lt;=-0.5");
             $rng2 = Compute("2&lt;y&lt;=8");
           </pg-code>
-        </setup>
-        <stage>
+          </setup>
+          <stage>
           <statement>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/AsPd6ZyS/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>Use the point on the horizontal axis to drag the vertical line across the graph of the function <m>f</m>. The function exists when the vertical line intersects with the graph.</p>
-            <p>The domain is all the values for which the function exists.</p>
-            <p>Use inequalities to state the intervals that make up the domain of <m>f</m></p>
-            <p>From left to right, the domain is <var name="$dom1" width="8" /> and <var name="$dom2" width="8" /></p>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/AsPd6ZyS/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Use the point on the horizontal axis to drag the vertical line across the graph of the function <m>f</m>.
+              The function exists when the vertical line intersects with the graph.
+            </p>
+
+            <p>
+              The domain is all the values for which the function exists.
+            </p>
+
+            <p>
+              Use inequalities to state the intervals that make up the domain of <m>f</m>
+            </p>
+
+            <p>
+              From left to right,
+              the domain is <var name="$dom1" width="8" /> and <var name="$dom2" width="8" />
+            </p>
           </statement>
           <hint>
-            <p>Remember that the domain is the set of possible <m>x</m>-values, so you must use the symbol <m>x</m> here.</p>
+            <p>
+              Remember that the domain is the set of possible <m>x</m>-values,
+              so you must use the symbol <m>x</m> here.
+            </p>
           </hint>
           <solution>
-            <p>From left to right, the range is: <m>-5 \leqslant x \leqslant 0</m> and <m>2 \lt x \leqslant 5</m></p>
+            <p>
+              From left to right, the range is:
+              <m>-5 \leqslant x \leqslant 0</m> and <m>2 \lt x \leqslant 5</m>
+            </p>
           </solution>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/sVku4sA4/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>When you pick numbers from the domain, what are all the possible results?</p>
-            <p>Use the point on the vertical axis to drag the horizontal line across the graph. Use the line to identify all the possible outputs the function can yield. This is the range of the function.</p>
-            <p>From bottom to top, the range of the function is <var name="$rng1" width="8" /> and <var name="$rng2" width="8" /></p>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/sVku4sA4/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              When you pick numbers from the domain,
+              what are all the possible results?
+            </p>
+
+            <p>
+              Use the point on the vertical axis to drag the horizontal line across the graph.
+              Use the line to identify all the possible outputs the function can yield.
+              This is the range of the function.
+            </p>
+
+            <p>
+              From bottom to top,
+              the range of the function is <var name="$rng1" width="8" /> and <var name="$rng2" width="8" />
+            </p>
           </statement>
           <hint>
-            <p>Remember that the range is the set of possible <m>y</m>-values, so you must use the symbol <m>y</m> here.</p>
+            <p>
+              Remember that the range is the set of possible <m>y</m>-values,
+              so you must use the symbol <m>y</m> here.
+            </p>
           </hint>
           <solution>
-            <p>From bottom to top, the range is: <m>-3 \leqslant y \leqslant -0.5</m> and <m>2 \lt y \leqslant 8</m></p>
+            <p>
+              From bottom to top, the range is:
+              <m>-3 \leqslant y \leqslant -0.5</m> and <m>2 \lt y \leqslant 8</m>
+            </p>
           </solution>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WhcSmWsn/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>The green intervals along the horizontal axis show the domain of the function.</p>
-            <p>The red intervals along the vertical axis show the range of the function.</p>
-            <p>Enter a <m>1</m> in the box if you got this problem correct <var name="1" width="3" /></p>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WhcSmWsn/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              The green intervals along the horizontal axis show the domain of the function.
+            </p>
+
+            <p>
+              The red intervals along the vertical axis show the range of the function.
+            </p>
+
+            <p>
+              Enter a <m>1</m> in the box if you got this problem correct <var name="1" width="3" />
+            </p>
           </statement>
-        </stage>
+          </stage>
       </webwork>
     </exercise>
 
-    <p>Also, the range is not necessarily between the endpoints of the graph.</p>
+    <p>
+      Also, the range is not necessarily between the endpoints of the graph.
+    </p>
 
-      <exercise>
-        <webwork>
+    <exercise>
+      <webwork>
           <setup>
 
             <pg-code>
@@ -514,41 +1020,90 @@
               $rng3 = Compute("1.95&lt;=y&lt;4.62");
             </pg-code>
           </setup>
+          <stage>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
 
-          <stage>
-            <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>Drag the left boundary point on the horizontal axis (in green) to change the domain of the function.</p>
-                <p>Set the domain to <m>0.4\leqslant x \lt 8</m></p>
-                <p>Under this domain, the range is <var name="$rng1" width="8" /></p>
-            </statement>
-            <hint>
-              <p>Remember that the range is the set of possible <m>y</m>-values, so you must use the symbol <m>y</m> here.</p>
-            </hint>
+            <p>
+              Drag the left boundary point on the horizontal axis
+              (in green)
+              to change the domain of the function.
+            </p>
+
+            <p>
+              Set the domain to <m>0.4\leqslant x \lt 8</m>
+            </p>
+
+            <p>
+              Under this domain, the range is <var name="$rng1" width="8" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Remember that the range is the set of possible <m>y</m>-values,
+              so you must use the symbol <m>y</m> here.
+            </p>
+          </hint>
           </stage>
           <stage>
-            <statement>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>Drag the left boundary point on the horizontal interval (shaded green) to change the domain of the function. The range is shaded on the vertical axis in red.</p>
-              <p>Set the domain to <m>2\leqslant x \lt 8</m></p>
-              <p>Under this domain, the range is <var name="$rng2" width="8" /></p>
-            </statement>
-            <hint>
-              <p>Remember that the range is the set of possible <m>y</m>-values, so you must use the symbol <m>y</m> here.</p>
-            </hint>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Drag the left boundary point on the horizontal interval
+              (shaded green)
+              to change the domain of the function.
+              The range is shaded on the vertical axis in red.
+            </p>
+
+            <p>
+              Set the domain to <m>2\leqslant x \lt 8</m>
+            </p>
+
+            <p>
+              Under this domain, the range is <var name="$rng2" width="8" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Remember that the range is the set of possible <m>y</m>-values,
+              so you must use the symbol <m>y</m> here.
+            </p>
+          </hint>
           </stage>
           <stage>
-            <statement>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>Drag the left boundary point on the horizontal interval (in green) to change the domain of the function.</p>
-              <p>Set the domain to <m>5\leqslant x \lt 8</m></p>
-              <p>Under this domain, the range is <var name="$rng3" width="8" /></p>
-            </statement>
-            <hint>
-              <p>Remember that the range is the set of possible <m>y</m>-values, so you must use the symbol <m>y</m> here.</p>
-            </hint>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Drag the left boundary point on the horizontal interval
+              (in green)
+              to change the domain of the function.
+            </p>
+
+            <p>
+              Set the domain to <m>5\leqslant x \lt 8</m>
+            </p>
+
+            <p>
+              Under this domain, the range is <var name="$rng3" width="8" />
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Remember that the range is the set of possible <m>y</m>-values,
+              so you must use the symbol <m>y</m> here.
+            </p>
+          </hint>
           </stage>
-          </webwork>
-      </exercise>
+      </webwork>
+    </exercise>
   </subsection>
 </section>
+

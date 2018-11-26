@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -10,556 +9,1162 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-
 <chapter xml:id="chapter-power-functions-and-polynomials" xmlns:xi="http://www.w3.org/2001/XInclude">
-
   <title>Power Functions and Polynomials</title>
+  <objectives xml:id="outcomes-power-functions-and-polynomials">
+    <title>Student Learning Outcomes</title>
+    <ul>
+      <li>
+        <p>
+          Use the relationship between the zeros of a polynomial and the factored form to find a graphing window or to write an equation.
+        </p>
+      </li>
 
-    <objectives xml:id="outcomes-power-functions-and-polynomials">
-      <title>Student Learning Outcomes</title>
-      <ul>
-          <li><p>Use the relationship between the zeros of a polynomial and the factored form to find a graphing window or to write an equation.</p></li>
-          <li><p>Sketch or describe the possible shape of a polynomial function of degree <m>n</m> including: the number of turning points, number of possible real roots, and end behavior.</p></li>
-      </ul>
-    </objectives>
-
+      <li>
+        <p>
+          Sketch or describe the possible shape of a polynomial function of degree <m>n</m> including:
+          the number of turning points,
+          number of possible real roots, and end behavior.
+        </p>
+      </li>
+    </ul>
+  </objectives>
     <!-- Video Lectures on "Power Functions" (http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-composition-captioned_-_20150124_193451_26.html) and "Polynomials" (http://stream.mhcc.edu/videos/greenja/captioned/m07-lec-inverse-functions-captioned_-_20150124_202541_26.html) go here -->
+  <xi:include href="./activity-power-functions.xml" />
+  <xi:include href="./activity-polynomials.xml" />
+  <xi:include href="./activity-rational-functions.xml" />
 
-    <xi:include href="./activity-power-functions.xml" />
-    <xi:include href="./activity-polynomials.xml" />
-    <xi:include href="./activity-rational-functions.xml" />
+  <section xml:id="power-functions-and-polynomials-gist">
+    <title>Gist of Power Functions and Polynomials</title>
+    <subsection>
+      <title>Power Functions</title>
+      <p>
+        A <term>Power Function</term><idx><h>function</h><h>power function</h></idx> is a single-term function of the form
+        <me>
+          y = ax^k
+        </me>
+        where <m>a</m> and <m>k</m> are constant numbers.
+      </p>
 
-    <section xml:id="power-functions-and-polynomials-gist">
-      <title>Gist of Power Functions and Polynomials</title>
+      <p>
+        For us, the important characteristic of a power function is the shape of its graph,
+        and in particular,
+        the tendency of the graph as <m>x</m> gets very far from zero.
+        This tendency is referred to as the <term>end-behavior</term>
+            <idx><h>end-behavior</h></idx>
+            <idx><h>function</h><h>end-behavior</h></idx>
+        of the function.
+      </p>
 
-      <subsection>
-        <title>Power Functions</title>
-        <p>A <term>Power Function</term><idx><h>function</h><h>power function</h></idx> is a single-term function of the form <me>y = ax^k</me> where <m>a</m> and <m>k</m> are constant numbers.</p>
-        <p>For us, the important characteristic of a power function is the shape of its graph, and in particular, the tendency of the graph as <m>x</m> gets very far from zero. This tendency is referred to as the <term>end-behavior</term><idx><h>end-behavior</h></idx><idx><h>function</h><h>end-behavior</h></idx> of the function.</p>
-        <p>Power functions of the form <me>y = x^k</me> when <m>k</m> is an even number <m>(2, 4, 6, \cdots)</m>, all resemble <m>x^2</m>, in the sense that their output values constantly increase as <m>x \to \infty</m> or <m>x \to -\infty</m>.</p>
-        <p>We would say that power functions with even exponents all have similar end-behavior <mdash /> the graph keeps increasing forever when <m>x</m> gets far from zero.</p>
-        <sidebyside widths="32% 32% 32%">
-          <figure>
-            <caption><m>y = x^2</m></caption>
-            <image>
-              <latex-image>
-              <![CDATA[\begin{tikzpicture}
-                          \begin{axis}[]
-                              \addplot+[domain=-3:3]{x^2};
-                           \end{axis}
-                      \end{tikzpicture}
-              ]]>
-              </latex-image>
-            </image>
-          </figure>
-          <figure>
-            <caption><m>y = x^4</m></caption>
-            <image>
-              <latex-image>
-              <![CDATA[\begin{tikzpicture}
-                          \begin{axis}[]
-                              \addplot+[domain=-3:3]{x^4};
-                           \end{axis}
-                      \end{tikzpicture}
-              ]]>
-              </latex-image>
-            </image>
-          </figure>
-          <figure>
-            <caption><m>y = x^6</m></caption>
-            <image>
-              <latex-image>
-              <![CDATA[\begin{tikzpicture}
-                          \begin{axis}[]
-                              \addplot+[domain=-3:3]{x^6};
-                           \end{axis}
-                      \end{tikzpicture}
-              ]]>
-              </latex-image>
-            </image>
-          </figure>
-        </sidebyside>
+      <p>
+        Power functions of the form
+        <me>
+          y = x^k
+        </me>
+        when <m>k</m> is an even number
+        <m>(2, 4, 6, \cdots)</m>, all resemble <m>x^2</m>,
+        in the sense that their output values constantly increase as
+        <m>x \to \infty</m> or <m>x \to -\infty</m>.
+      </p>
 
-        <p>Power functions of the form <me>y = x^k</me> when <m>k</m> is an <em>odd</em> number <m>(1, 3, 5, \cdots)</m>, all resemble <m>y = x</m>, in the sense that their output values constantly increase as <m>x \to \infty</m>, and they decrease as <m>x \to -\infty</m>.</p>
-        <p>Similarly, we would say that power functions with odd exponents all have similar end-behavior <mdash /> the graph increases on one side, and it decreases on the other, as <m>x</m> gets far from zero.</p>
-        <sidebyside widths="32% 32% 32%">
-          <figure>
-            <caption><m>y = x^1</m></caption>
-            <image>
-              <latex-image>
-              <![CDATA[\begin{tikzpicture}
-                          \begin{axis}[]
-                              \addplot+[domain=-3:3]{x^1};
-                           \end{axis}
-                      \end{tikzpicture}
-              ]]>
-              </latex-image>
-            </image>
-          </figure>
-          <figure>
-            <caption><m>y = x^3</m></caption>
-            <image>
-              <latex-image>
-              <![CDATA[\begin{tikzpicture}
-                          \begin{axis}[]
-                              \addplot+[domain=-3:3]{x^3};
-                           \end{axis}
-                      \end{tikzpicture}
-              ]]>
-              </latex-image>
-            </image>
-          </figure>
-          <figure>
-            <caption><m>y = x^5</m></caption>
-            <image>
-              <latex-image>
-              <![CDATA[\begin{tikzpicture}
-                          \begin{axis}[]
-                              \addplot+[domain=-3:3]{x^5};
-                           \end{axis}
-                      \end{tikzpicture}
-              ]]>
-              </latex-image>
-            </image>
-          </figure>
-        </sidebyside>
+      <p>
+        We would say that power functions with even exponents all have similar end-behavior <mdash /> the graph keeps increasing forever when <m>x</m> gets far from zero.
+      </p>
 
-        <example>
-          <statement>
-            <p>If you have ever stood on the end of a diving board, your weight caused the board to <em>deflect</em> <mdash /> that is, it bent downward a bit toward the water below. If the board was <em>longer</em>, it would deflect more, and if it was shorter, it would deflect less.</p>
-            <p>Assuming one end of the board is fixed solidly to a wall, and the other end is free to move up and down, then engineers could use the following equation to model the weight required to deflect a board of a given length <m>L</m>:<md>
-            <mrow>W = \frac{3 \delta E I}{L^3}</mrow></md></p>
-            <p>Here, <m>\delta</m> is the deflection (inches), <m>E</m> is a physical constant called <em>Young's Modulus of Elasticity</em> (<m>in^4</m>), <m>I</m> is a geometric constant called the <em>Area Moment of Inertia</em> (<m>\frac{lb}{in^2}</m>), and <m>L</m> is the length of the board (inches).</p>
-            <p>Assuming the board is deflected by <m>6</m> inches, and using typical materials and dimensions, this equation simplifies to: <md>
-            <mrow>W = W(L) \amp= \frac{(3)(6)(10{,}010{,}000)(1.64)}{L^3}</mrow>
-            <mrow>\amp= \frac{295{,}495{,}200}{L^3}</mrow></md></p>
-            <p>So, <m>W</m> is a power function with the variable <m>L</m>.</p>
-            <p>Professional diving boards are typically between <m>177</m> and <m>201</m> inches long. See a portion of the graph of <m>W = W(L)</m> below.</p>
-            <figure>
-              <caption><m>W = \frac{295495200}{L^3}</m></caption>
-                <image width="47%">
-                  <latex-image>
-                  <![CDATA[
-                    \begin{tikzpicture}
-                      \begin{axis}[xmax=210, xmin=170,
-                                  xlabel={Length (inches)},
-                                  ylabel={Weight (lbs)},
-                                  xtick={170,180,190,200,210},
-                                  minor xtick={175,180,...,210},
-                                  ymax=60, ymin=30,
-                                  ytick={30,40,50,60},
-                                  minor ytick={30,35,...,60}]
-                        \addplot+[domain=177:201, samples=50] {295495200/(x^3)};
-                      \end{axis}
+      <sidebyside widths="32% 32% 32%">
+        <figure>
+          <caption><m>y = x^2</m></caption>
+          <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-3:3]{x^2};
+                         \end{axis}
                     \end{tikzpicture}
-                  ]]>
-                  </latex-image>
-              </image>
-            </figure>
-            <p>Notice the slight curve to this graph and that it is concave <em>up</em>. Is there a horizontal asymptote for this function? Why?</p>
-          </statement>
-          <solution>
-            <p>Notice that: <me>\frac{295495200}{L^3} = 295495200\cdot \frac{1}{L^3}</me></p>
-            <p>Even with a large coefficient, the power function <m>\frac{1}{L^3}</m> still goes to <em>zero</em> as <m>L \to \infty</m>.</p>
-            <p>This makes sense, because as the length of the board gets longer and longer, it would require a smaller and smaller weight in order to deflect the board by <m>6</m> inches.</p>
-            <p>[However, the weight of the board itself would tend to cause significant deflection as the length increased. This function would work to model only boards of moderate length, and it should not be used for boards which are extremely long.]</p>
-          </solution>
-        </example>
-      </subsection>
+            ]]>
+            </latex-image>
+          </image>
 
-      <subsection>
-        <title>Polynomials</title>
+        </figure>
 
-        <p><term>Polynomials</term><idx><h>polynomial</h></idx> are functions of the form: <me>y = a_nx^n + a_{n−1}x^{n−1} + \cdots + a_1x + a_0</me> where the numbers <m>a_0, a_1, \cdots, a_{n-1}, a_n</m> are some constant real numbers, called <term>coefficients</term><idx><h>coefficients</h></idx><idx><h>polynomial</h><h>coefficients</h></idx>.</p>
-        <p>Note that some of the coefficients may be zero.</p>
-        <remark>
-          <p>It is common to write an arbitrary list of values like <me>a_1, a_2, \cdots, a_n</me> when we don't know (or don't want to specify) how many there are in the list. The subscript <m>n</m> just means that the list is not infinitely long.</p>
-        </remark>
-        <p>Here are some examples of polynomials you already know:<md>
+        <figure>
+          <caption><m>y = x^4</m></caption>
+          <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-3:3]{x^4};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+          </image>
+
+        </figure>
+
+        <figure>
+          <caption><m>y = x^6</m></caption>
+          <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-3:3]{x^6};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+          </image>
+
+        </figure>
+      </sidebyside>
+
+      <p>
+        Power functions of the form
+        <me>
+          y = x^k
+        </me>
+        when <m>k</m> is an <em>odd</em>
+        number <m>(1, 3, 5, \cdots)</m>,
+        all resemble <m>y = x</m>,
+        in the sense that their output values constantly increase as <m>x \to \infty</m>,
+        and they decrease as <m>x \to -\infty</m>.
+      </p>
+
+      <p>
+        Similarly, we would say that power functions with odd exponents all have similar end-behavior <mdash /> the graph increases on one side,
+        and it decreases on the other,
+        as <m>x</m> gets far from zero.
+      </p>
+
+      <sidebyside widths="32% 32% 32%">
+        <figure>
+          <caption><m>y = x^1</m></caption>
+          <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-3:3]{x^1};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+          </image>
+
+        </figure>
+
+        <figure>
+          <caption><m>y = x^3</m></caption>
+          <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-3:3]{x^3};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+          </image>
+
+        </figure>
+
+        <figure>
+          <caption><m>y = x^5</m></caption>
+          <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-3:3]{x^5};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+          </image>
+
+        </figure>
+      </sidebyside>
+
+      <example>
+        <statement>
+          <p>
+            If you have ever stood on the end of a diving board,
+            your weight caused the board to
+            <em>deflect</em> <mdash /> that is,
+            it bent downward a bit toward the water below.
+            If the board was <em>longer</em>,
+            it would deflect more, and if it was shorter, it would deflect less.
+          </p>
+
+          <p>
+            Assuming one end of the board is fixed solidly to a wall,
+            and the other end is free to move up and down,
+            then engineers could use the following equation to model the weight required to deflect a board of a given length <m>L</m>:
+            <md>
+              <mrow>W = \frac{3 \delta E I}{L^3}</mrow>
+            </md>
+          </p>
+
+          <p>
+            Here, <m>\delta</m> is the deflection (inches),
+            <m>E</m> is a physical constant called
+            <em>Young's Modulus of Elasticity</em> (<m>in^4</m>),
+            <m>I</m> is a geometric constant called the
+            <em>Area Moment of Inertia</em>
+            (<m>\frac{lb}{in^2}</m>),
+            and <m>L</m> is the length of the board
+            (inches).
+          </p>
+
+          <p>
+            Assuming the board is deflected by <m>6</m> inches,
+            and using typical materials and dimensions,
+            this equation simplifies to:
+            <md>
+              <mrow>W = W(L) \amp= \frac{(3)(6)(10{,}010{,}000)(1.64)}{L^3}</mrow>
+              <mrow>\amp= \frac{295{,}495{,}200}{L^3}</mrow>
+            </md>
+          </p>
+
+          <p>
+            So, <m>W</m> is a power function with the variable <m>L</m>.
+          </p>
+
+          <p>
+            Professional diving boards are typically between <m>177</m> and <m>201</m> inches long.
+            See a portion of the graph of <m>W = W(L)</m> below.
+          </p>
+
+          <figure>
+            <caption><m>W = \frac{295495200}{L^3}</m></caption>
+            <image width="47%">
+
+            <latex-image>
+            <![CDATA[
+              \begin{tikzpicture}
+                \begin{axis}[xmax=210, xmin=170,
+                            xlabel={Length (inches)},
+                            ylabel={Weight (lbs)},
+                            xtick={170,180,190,200,210},
+                            minor xtick={175,180,...,210},
+                            ymax=60, ymin=30,
+                            ytick={30,40,50,60},
+                            minor ytick={30,35,...,60}]
+                  \addplot+[domain=177:201, samples=50] {295495200/(x^3)};
+                \end{axis}
+              \end{tikzpicture}
+            ]]>
+            </latex-image>
+            </image>
+
+          </figure>
+
+          <p>
+            Notice the slight curve to this graph and that it is concave <em>up</em>.
+            Is there a horizontal asymptote for this function?
+            Why?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Notice that:
+            <me>
+              \frac{295495200}{L^3} = 295495200\cdot \frac{1}{L^3}
+            </me>
+          </p>
+
+          <p>
+            Even with a large coefficient,
+            the power function <m>\frac{1}{L^3}</m> still goes to
+            <em>zero</em> as <m>L \to \infty</m>.
+          </p>
+
+          <p>
+            This makes sense,
+            because as the length of the board gets longer and longer,
+            it would require a smaller and smaller weight in order to deflect the board by <m>6</m> inches.
+          </p>
+
+          <p>
+            [However, the weight of the board itself would tend to cause significant deflection as the length increased.
+            This function would work to model only boards of moderate length,
+            and it should not be used for boards which are extremely long.]
+          </p>
+        </solution>
+      </example>
+    </subsection>
+
+    <subsection>
+      <title>Polynomials</title>
+      <p>
+        <term>Polynomials</term>
+            <idx><h>polynomial</h></idx>
+        are functions of the form:
+        <me>
+          y = a_nx^n + a_{n−1}x^{n−1} + \cdots + a_1x + a_0
+        </me>
+        where the numbers <m>a_0, a_1, \cdots,
+        a_{n-1}, a_n</m> are some constant real numbers,
+        called <term>coefficients</term>.
+            <idx><h>coefficients</h></idx>
+            <idx><h>polynomial</h><h>coefficients</h></idx>
+      </p>
+
+      <p>
+        Note that some of the coefficients may be zero.
+      </p>
+
+      <remark>
+        <p>
+          It is common to write an arbitrary list of values like
+          <me>
+            a_1, a_2, \cdots, a_n
+          </me>
+          when we don't know
+          (or don't want to specify)
+          how many there are in the list.
+          The subscript <m>n</m> just means that the list is not infinitely long.
+        </p>
+      </remark>
+
+      <p>
+        Here are some examples of polynomials you already know:
+        <md>
           <mrow>\text{The line } y = 3x - 7</mrow>
           <mrow>\text{The parabola } y = x^2 + 1</mrow>
-        </md></p>
-        <p>The <term>degree</term><idx><h>polynomial</h><h>degre</h></idx> of a polynomial is the value of the highest exponent in the formula.</p>
-        <p>So our parabola <me>y = x^2 + 1</me> has degree <m>2</m>, and our line <me>y = 3x − 7</me> has degree <m>1</m>.</p>
-        <p>The exponents of a polynomial can only be non-negative integers. That means functions like<me>y = x^\frac{1}{2}</me>and<me>y = 2x^3 - x^{-5}</me>are <em>not</em> polynomials.</p>
+        </md>
+      </p>
 
-        <exercise>
-          <statement>
-            <p>Which of the functions below are polynomials?<md>
+      <p>
+        The <term>degree</term>
+            <idx><h>polynomial</h><h>degre</h></idx>
+        of a polynomial is the value of the highest exponent in the formula.
+      </p>
+
+      <p>
+        So our parabola
+        <me>
+          y = x^2 + 1
+        </me>
+        has degree <m>2</m>, and our line
+        <me>
+          y = 3x − 7
+        </me>
+        has degree <m>1</m>.
+      </p>
+
+      <p>
+        The exponents of a polynomial can only be non-negative integers.
+        That means functions like
+        <me>
+          y = x^\frac{1}{2}
+        </me>
+        and
+        <me>
+          y = 2x^3 - x^{-5}
+        </me>
+        are <em>not</em> polynomials.
+      </p>
+
+      <exercise>
+        <statement>
+          <p>
+            Which of the functions below are polynomials?
+            <md>
               <mrow>f(x) \amp= x^5 - \frac{2}{x}</mrow>
               <mrow>g(x) \amp= 2 + 6x^3</mrow>
               <mrow>h(x) \amp= \frac{11x^3+4x}{9\pi}</mrow>
               <mrow>p(x) \amp= 5\sqrt{x}+9</mrow>
               <mrow>q(x) \amp= (6x-2)(5x^3-2x+7)</mrow>
               <mrow>r(x) \amp= \log_7(4)x(x+\sqrt{12.8})</mrow>
-            </md></p>
-          </statement>
-          <hint>
-            <p>You may do some algebra to simplify a function before deciding if it is a polynomial.</p>
-          </hint>
-          <answer>
-            <p>The functions <m>f(x)</m> and <m>p(x)</m> are <em>not</em> polynomials, but the others <em>are</em>.</p>
-            <p>The <term>coefficients</term> may be complicated, as when simplifying <m>r(x)</m>: <me>r(x)= \log_7(4)x^2 + \log_7(4)\sqrt{12.8}x</me></p>
-          </answer>
-        </exercise>
+            </md>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You may do some algebra to simplify a function before deciding if it is a polynomial.
+          </p>
+        </hint>
+        <answer>
+          <p>
+            The functions <m>f(x)</m> and <m>p(x)</m> are
+            <em>not</em> polynomials,
+            but the others <em>are</em>.
+          </p>
 
-        <p>The coefficients can be positive, negative or zero. In the <m>4^{\rm{th}}</m> degree polynomial<md>
+          <p>
+            The <term>coefficients</term> may be complicated,
+            as when simplifying <m>r(x)</m>:
+            <me>
+              r(x)= \log_7(4)x^2 + \log_7(4)\sqrt{12.8}x
+            </me>
+          </p>
+        </answer>
+      </exercise>
+
+      <p>
+        The coefficients can be positive, negative or zero.
+        In the <m>4^{\rm{th}}</m> degree polynomial
+        <md>
           <mrow>y \amp= −5x^4+2x^3−x^1+0.69x^0</mrow>
           <mrow>\amp= -5x^4 + 2x^3 - x + 0.69</mrow>
-        </md>the coefficient of <m>x^3</m> is <m>2</m>, and the coefficient of <m>x^2</m> is <m>0</m> (because there <em>is</em> no <m>x^2</m> term).</p>
-        <p>The term with the highest power of <m>x</m> is called the <term>leading term</term><idx><h>polynomial</h><h>leading term</h></idx>, and the coefficient of <m>x^0</m> is called the <term>constant term</term><idx><h>polynomial</h><h>constant term</h></idx>. In the polynomial above, the leading term is <m>-5x^4</m> and the constant term is <m>0.69</m>.</p>
+        </md>
+        the coefficient of <m>x^3</m> is <m>2</m>,
+        and the coefficient of <m>x^2</m> is <m>0</m>
+        (because there <em>is</em> no <m>x^2</m> term).
+      </p>
 
-        <p>When polynomials are multiplied together, the result will also a polynomial, and the degree of this new polynomial is just the sum of the degrees of the formulas you multiplied together.</p>
-        <example>
-          <p>The two linear (<m>1^{\rm{st}}</m> degree) polynomials<me>7x + 2</me>and<me>5x + 4</me>will create a <m>2^{\rm{nd}}</m> degree polynomial when multiplied together:</p>
+      <p>
+        The term with the highest power of <m>x</m> is called the
+        <term>leading term</term>,
+            <idx><h>polynomial</h><h>leading term</h></idx>
+        and the coefficient of <m>x^0</m> is called the
+        <term>constant term</term>.
+            <idx><h>polynomial</h><h>constant term</h></idx>
+        In the polynomial above,
+        the leading term is <m>-5x^4</m> and the constant term is <m>0.69</m>.
+      </p>
 
-          <p><me>(7x + 2)(5x + 4) = 35x^2 + 38x + 8</me></p>
-          <p>Recall from <xref ref="chapter-combinations-of-functions">Chapter</xref>, that if we named the linear functions <m>f(x) = 7x + 2</m> and <m>g(x) = 5x + 4</m>, then the <m>2^{\rm{nd}}</m> degree polynomial <m>35x^2 + 38x + 8</m> above may be thought of as the function combination:<m>f(x)\cdot g(x)</m></p>
-        </example>
+      <p>
+        When polynomials are multiplied together,
+        the result will also a polynomial,
+        and the degree of this new polynomial is just the sum of the degrees of the formulas you multiplied together.
+      </p>
 
-        <p>An input value which gives an output of zero is called a <term>root</term><idx><h>root</h></idx><idx><h>polynomial</h><h>root</h></idx> of the polynomial, and a root corresponds to an <m>x</m>-intercept of the polynomial's graph.</p>
+      <example>
+        <p>
+          The two linear (<m>1^{\rm{st}}</m> degree) polynomials
+          <me>
+            7x + 2
+          </me>
+          and
+          <me>
+            5x + 4
+          </me>
+          will create a <m>2^{\rm{nd}}</m> degree polynomial when multiplied together:
+        </p>
 
-        <example xml:id="example-cubic-polynomial-roots">
-          <p>The values <md>
+        <p>
+          <me>
+            (7x + 2)(5x + 4) = 35x^2 + 38x + 8
+          </me>
+        </p>
+
+        <p>
+          Recall from <xref ref="chapter-combinations-of-functions">Chapter</xref>,
+          that if we named the linear functions
+          <m>f(x) = 7x + 2</m> and <m>g(x) = 5x + 4</m>,
+          then the <m>2^{\rm{nd}}</m> degree polynomial
+          <m>35x^2 + 38x + 8</m> above may be thought of as the function combination:<m>f(x)\cdot g(x)</m>
+        </p>
+      </example>
+
+      <p>
+        An input value which gives an output of zero is called a <term>root</term>
+            <idx><h>root</h></idx>
+            <idx><h>polynomial</h><h>root</h></idx>
+        of the polynomial,
+        and a root corresponds to an <m>x</m>-intercept of the polynomial's graph.
+      </p>
+
+      <example xml:id="example-cubic-polynomial-roots">
+        <p>
+          The values
+          <md>
             <mrow>x \amp= 3</mrow>
             <mrow>x \amp= \frac{1}{2}</mrow>
             <mrow>x \amp= -4</mrow>
-          </md>are all roots of the polynomial: <me>f(x) = 8x^3 + 4x^2 - 100x + 48</me></p>
-          <p>To confirm this, we could either:</p>
-            <p><ol>
-              <li>
-                <p>Evaluate <m>f\left(3\right)</m>, <m>f\left(\frac{1}{2}\right)</m> and <m>f(-4)</m>, and see that they each give zero as the output. (Try this!)</p>
-              </li>
-              <li>
-                <p>Graph the function <m>y = f(x)</m> and observe that it contains the <m>x</m>-intercepts <m>(3, 0)</m>, <m>\left(\frac{1}{2}, 0\right)</m> and <m>(-4, 0)</m>.</p>
-                <figure>
-                <caption><m>y = 8x^3 + 4x^2 - 100x + 48</m></caption>
-                  <image width="47%">
-                      <latex-image>
-                      <![CDATA[
-                          \begin{tikzpicture}
-                          \begin{axis}[xmin=-5,xmax=4,
-                                      ymax=300, ymin=-300,
-                                      ytick={-200,-100,...,200},
-                                      ylabel={$f(x)$}]
-                            \addplot+[domain=-5:4]{8*x^3+4*x^2-100*x+48};
-                            \addplot[soldot, samples=50] coordinates {(-4,0) (0.5,0) (3,0)};
-                          \end{axis}
-                        \end{tikzpicture}
-                      ]]>
-                      </latex-image>
-                  </image>
-                </figure>
-              </li>
-            </ol></p>
-        </example>
+          </md>
+          are all roots of the polynomial:
+          <me>
+            f(x) = 8x^3 + 4x^2 - 100x + 48
+          </me>
+        </p>
 
-        <paragraphs>
-          <title>Finding the Formula for a Polynomial</title>
-          <p>If you know the roots of a polynomial, you can easily create a list of linear factors (lines of degree <m>1</m>) which have those same roots. Then, multiplying those linear factors together will create a polynomial which has all of those roots.</p>
-        </paragraphs>
-        <example>
-          <p>In <xref ref="example-cubic-polynomial-roots">Example</xref>, we were told that the polynomial had the roots <m>3</m>, <m>\frac{1}{2}</m> and <m>-4</m>.</p>
-          <p>If we wanted to write the formula for <m>f(x)</m>, using only this information, we could create the linear factors: <md>
+        <p>
+          To confirm this, we could either:
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                Evaluate <m>f\left(3\right)</m>,
+                <m>f\left(\frac{1}{2}\right)</m> and <m>f(-4)</m>,
+                and see that they each give zero as the output. (Try this!)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Graph the function <m>y = f(x)</m> and observe that it contains the <m>x</m>-intercepts <m>(3, 0)</m>,
+                <m>\left(\frac{1}{2}, 0\right)</m> and <m>(-4, 0)</m>.
+              </p>
+
+              <figure>
+                <caption><m>y = 8x^3 + 4x^2 - 100x + 48</m></caption>
+                <image width="47%">
+
+            <latex-image>
+            <![CDATA[
+                \begin{tikzpicture}
+                \begin{axis}[xmin=-5,xmax=4,
+                            ymax=300, ymin=-300,
+                            ytick={-200,-100,...,200},
+                            ylabel={$f(x)$}]
+                  \addplot+[domain=-5:4]{8*x^3+4*x^2-100*x+48};
+                  \addplot[soldot, samples=50] coordinates {(-4,0) (0.5,0) (3,0)};
+                \end{axis}
+              \end{tikzpicture}
+            ]]>
+            </latex-image>
+                </image>
+
+              </figure>
+
+            </li>
+          </ol>
+        </p>
+      </example>
+
+      <paragraphs>
+        <title>Finding the Formula for a Polynomial</title>
+        <p>
+          If you know the roots of a polynomial,
+          you can easily create a list of linear factors
+          (lines of degree <m>1</m>)
+          which have those same roots.
+          Then, multiplying those linear factors together will create a polynomial which has all of those roots.
+        </p>
+      </paragraphs>
+
+      <example>
+        <p>
+          In <xref ref="example-cubic-polynomial-roots">Example</xref>,
+          we were told that the polynomial had the roots <m>3</m>,
+          <m>\frac{1}{2}</m> and <m>-4</m>.
+        </p>
+
+        <p>
+          If we wanted to write the formula for <m>f(x)</m>,
+          using only this information, we could create the linear factors:
+          <md>
             <mrow>\left(x - 3\right)</mrow>
             <mrow>(x - \frac{1}{2})</mrow>
             <mrow>\left(x + 4\right)</mrow>
-          </md></p>
-          <p>Multiplying these factors together <me>\left(x-3\right)(x-\frac{1}{2})\left(x+4\right)</me> gives a polynomial which has all three of those roots.</p>
-          <p>Note: This polynomial is <em>not</em> the same as <m>f(x)</m> from <xref ref="example-cubic-polynomial-roots">Example</xref>, though it does have the same roots.</p>
-        </example>
+          </md>
+        </p>
 
-        <p>Now, beyond just making a polynomial have particular roots, you can also vertically stretch or compress your function in order to adjust the shape, making it pass through any other point you may know on the polynomial.</p>
+        <p>
+          Multiplying these factors together
+          <me>
+            \left(x-3\right)(x-\frac{1}{2})\left(x+4\right)
+          </me>
+          gives a polynomial which has all three of those roots.
+        </p>
 
-        <example>
-          <p>Suppose we know that a polynomial <m>f(x)</m> has the roots<md>
+        <p>
+          Note:
+          This polynomial is <em>not</em>
+          the same as <m>f(x)</m> from <xref ref="example-cubic-polynomial-roots">Example</xref>,
+          though it does have the same roots.
+        </p>
+      </example>
+
+      <p>
+        Now, beyond just making a polynomial have particular roots,
+        you can also vertically stretch or compress your function in order to adjust the shape,
+        making it pass through any other point you may know on the polynomial.
+      </p>
+
+      <example>
+        <p>
+          Suppose we know that a polynomial <m>f(x)</m> has the roots
+          <md>
             <mrow>x \amp= 5</mrow>
             <mrow>x \amp= -6</mrow>
             <mrow>x \amp= 9</mrow>
-          </md>and that it also contains the point <m>(4,2)</m>.</p>
-          <p>We can determine a polynomial which has these characteristics by creating linear factors which have the given roots:<md>
+          </md>
+          and that it also contains the point <m>(4,2)</m>.
+        </p>
+
+        <p>
+          We can determine a polynomial which has these characteristics by creating linear factors which have the given roots:
+          <md>
             <mrow>x = 5 \amp\implies (x - 5)</mrow>
             <mrow>x = -6 \amp\implies (x + 6)</mrow>
             <mrow>x = 9 \amp\implies (x - 9)</mrow>
-          </md></p>
-          <p>Multiplying these factors together will make a polynomial which has the given roots: <me>y = (x-5)(x+6)(x-9)</me>However, it does <em>not</em> pass through the point <m>(4, 2)</m>, because using the input <m>x = 4</m> gives:<md>
+          </md>
+        </p>
+
+        <p>
+          Multiplying these factors together will make a polynomial which has the given roots:
+          <me>
+            y = (x-5)(x+6)(x-9)
+          </me>
+          However, it does <em>not</em> pass through the point <m>(4, 2)</m>,
+          because using the input <m>x = 4</m> gives:
+          <md>
             <mrow>y \amp= (4-5)(4+6)(4-9)</mrow>
             <mrow>\amp= (-1)(10)(-5)</mrow>
             <mrow>\amp= 50</mrow>
-          </md></p>
-          <p>In order to make our polynomial also pass through the point <m>(4,2)</m>, we will use a vertical compression. We know this must be a compression, because our function currently has an output of <m>50</m> when the input is <m>4</m> <mdash /> we want the output to be only <m>2</m>.</p>
-          <p>For the vertical compression, we include a constant factor <m>k</m> to our function: <me>y = k(x-5)(x+6)(x-9)</me></p>
-          <p>Notice that multiplying by a constant <m>k</m> does not change the roots of the function.</p>
-          <p>In order to determine the value of <m>k</m> that will work here, we use the point <m>(4,2)</m>, substituting <m>4</m> for <m>x</m>, and <m>2</m> for <m>y</m>:<md>
+          </md>
+        </p>
+
+        <p>
+          In order to make our polynomial also pass through the point <m>(4,2)</m>,
+          we will use a vertical compression.
+          We know this must be a compression,
+          because our function currently has an output of <m>50</m> when the input is <m>4</m> <mdash /> we want the output to be only <m>2</m>.
+        </p>
+
+        <p>
+          For the vertical compression,
+          we include a constant factor <m>k</m> to our function:
+          <me>
+            y = k(x-5)(x+6)(x-9)
+          </me>
+        </p>
+
+        <p>
+          Notice that multiplying by a constant <m>k</m> does not change the roots of the function.
+        </p>
+
+        <p>
+          In order to determine the value of <m>k</m> that will work here,
+          we use the point <m>(4,2)</m>,
+          substituting <m>4</m> for <m>x</m>,
+          and <m>2</m> for <m>y</m>:
+          <md>
             <mrow>2 \amp= k(4-5)(4+6)(4-9)</mrow>
             <mrow>2 \amp= k(50)</mrow>
             <mrow>k \amp= \frac{2}{50}</mrow>
             <mrow>\amp=0.04</mrow>
-          </md></p>
-          <p>Therefore, we have a polynomial which passes through <m>(4,2)</m> and has the correct roots:<me>y = 0.04(x-5)(x+6)(x-9)</me></p>
-        </example>
+          </md>
+        </p>
 
-        <paragraphs>
-          <title>Repeated Roots</title>
-          <p>Linear factors may be repeated, as in: <md>
+        <p>
+          Therefore, we have a polynomial which passes through <m>(4,2)</m> and has the correct roots:
+          <me>
+            y = 0.04(x-5)(x+6)(x-9)
+          </me>
+        </p>
+      </example>
+
+      <paragraphs>
+        <title>Repeated Roots</title>
+        <p>
+          Linear factors may be repeated, as in:
+          <md>
             <mrow>y \amp= x(x+1)^2(x-6)^4</mrow>
             <mrow>\amp= x(x+1)(x+1)(x-6)(x-6)(x-6)(x-6)</mrow>
-          </md></p>
-          <p>Since a linear factor <m>(x-a)</m> corresponds to a root <m>x = a</m>, then repeating a linear factor will give us a repeated root. A <term>repeated root</term><idx><h>repeated root</h></idx><idx><h>polynomial</h><h>repeated root</h></idx> is a root of a polynomial caused by a repeated linear factor.</p>
-          <p>If a linear factor is repeated <m>k</m> times, then we say the root it creates has <term>multiplicity</term><idx><h>multiplicity</h></idx><idx><h>root</h><h>multiplicity</h></idx> <m>k</m>.</p>
-        </paragraphs>
-        <example>
-          <p>The polynomial <me>y = x^3(x-5)^2</me> has only two roots: <m>x = 0</m> and <m>x = 5</m>.</p>
-          <p>We say the root <m>x = 0</m> has multiplicity <m>3</m>, and the root <m>x = 5</m> has multiplicity <m>2</m>.</p>
-        </example>
+          </md>
+        </p>
 
-        <p>How does a repeated root affect the graph? We know that a root will appear as an <m>x</m>-intercept on the graph, but will repeating a root in a formula mean the <m>x</m>-intercept is somehow also repeated?</p>
-        <p>In <xref ref="chapter-vertical-and-horizontal-translations">Chapter</xref>, we learned to shift a parabola <em>left</em> or <em>right</em>, just by adding a number to the input. For example:<me>y = (x+3)^2</me>is the parabola <m>x^2</m> moved to the left by <m>3</m> units.</p>
-        <p>This parabola has just one root which has been repeated twice, and the graph appears to <em>bounce</em> off of the <m>x</m>-axis at the root.</p>
-        <todo>Insert a graph here.</todo>
-        <p>This phenomenon of <em>bouncing</em> remains a characteristic of the graph, even if we give a polynomial more linear factors, such as: <me>y = (x+3)^2(x-1)</me></p>
-        <todo>Fix the following graph, then learn how to make graphs that aren't disgusting</todo>
+        <p>
+          Since a linear factor <m>(x-a)</m> corresponds to a root <m>x = a</m>,
+          then repeating a linear factor will give us a repeated root.
+          A <term>repeated root</term>
+              <idx><h>repeated root</h></idx>
+              <idx><h>polynomial</h><h>repeated root</h></idx>
+          is a root of a polynomial caused by a repeated linear factor.
+        </p>
 
+        <p>
+          If a linear factor is repeated <m>k</m> times,
+          then we say the root it creates has <term>multiplicity</term>
+              <idx><h>multiplicity</h></idx>
+              <idx><h>root</h><h>multiplicity</h></idx> <m>k</m>.
+        </p>
+      </paragraphs>
+
+      <example>
+        <p>
+          The polynomial
+          <me>
+            y = x^3(x-5)^2
+          </me>
+          has only two roots:
+          <m>x = 0</m> and <m>x = 5</m>.
+        </p>
+
+        <p>
+          We say the root <m>x = 0</m> has multiplicity <m>3</m>,
+          and the root <m>x = 5</m> has multiplicity <m>2</m>.
+        </p>
+      </example>
+
+      <p>
+        How does a repeated root affect the graph?
+        We know that a root will appear as an <m>x</m>-intercept on the graph,
+        but will repeating a root in a formula mean the <m>x</m>-intercept is somehow also repeated?
+      </p>
+
+      <p>
+        In <xref ref="chapter-vertical-and-horizontal-translations">Chapter</xref>,
+        we learned to shift a parabola <em>left</em> or <em>right</em>,
+        just by adding a number to the input.
+        For example:
+        <me>
+          y = (x+3)^2
+        </me>
+        is the parabola <m>x^2</m> moved to the left by <m>3</m> units.
+      </p>
+
+      <p>
+        This parabola has just one root which has been repeated twice,
+        and the graph appears to <em>bounce</em>
+        off of the <m>x</m>-axis at the root.
+      </p>
+
+      <todo>Insert a graph here.</todo>
+
+      <p>
+        This phenomenon of <em>bouncing</em>
+        remains a characteristic of the graph,
+        even if we give a polynomial more linear factors, such as:
+        <me>
+          y = (x+3)^2(x-1)
+        </me>
+      </p>
+
+      <todo>Fix the following graph, then learn how to make graphs that aren't disgusting</todo>
+
+      <figure>
+        <caption><m>y = (x+3)^2(x-1)</m></caption>
+        <image width="47%">
+
+            <latex-image>
+            <![CDATA[
+              \begin{tikzpicture}
+                \begin{axis}[xmax=6, xmin=-6,
+                            ymax=40, ymin=-40,
+                            ytick={},
+                            minor ytick={}]
+                  \addplot+[domain=-5:2.4, samples=50] {(x+3)^2*(x-1)};
+                \end{axis}
+              \end{tikzpicture}
+            ]]>
+            </latex-image>
+        </image>
+
+      </figure>
+
+      <p>
+        Notice that the root <m>x = -3</m> has multiplicity <m>2</m>,
+        and the graph resembles a parabola near that point,
+        bouncing off of the <m>x</m>-axis.
+        It also has the root <m>x = 1</m>,
+        which has <term>multiplicity</term> <m>1</m>,
+        and the graph crosses over the <m>x</m>-axis there.
+      </p>
+
+      <p>
+        The polynomials below both have <m>(x+3)^2</m> as a factor,
+        but they have other linear factors with either <em>odd</em>
+        or <em>even</em> multiplicity:
+      </p>
+
+      <sidebyside widths="47% 47%">
         <figure>
-          <caption><m>y = (x+3)^2(x-1)</m></caption>
-            <image width="47%">
-              <latex-image>
-              <![CDATA[
-                \begin{tikzpicture}
-                  \begin{axis}[xmax=6, xmin=-6,
-                              ymax=40, ymin=-40,
-                              ytick={},
-                              minor ytick={}]
-                    \addplot+[domain=-5:2.4, samples=50] {(x+3)^2*(x-1)};
-                  \end{axis}
-                \end{tikzpicture}
-              ]]>
-              </latex-image>
+          <caption><m>y = (x+3)^2(x-1)^2</m></caption>
+          <image>
+
+            <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+              \begin{axis}[ymin=-20,ymax=20,
+                          ytick={},
+                          minor ytick={}]
+                \addplot+[domain=-5:2,samples=50]{(x+3)^2*(x-1)^2};
+              \end{axis}
+            \end{tikzpicture}
+            ]]>
+            </latex-image>
           </image>
+
         </figure>
 
-        <p>Notice that the root <m>x = -3</m> has multiplicity <m>2</m>, and the graph resembles a parabola near that point, bouncing off of the <m>x</m>-axis. It also has the root <m>x = 1</m>, which has <term>multiplicity</term> <m>1</m>, and the graph crosses over the <m>x</m>-axis there.</p>
+        <figure>
+          <caption><m>y = (x+3)^2(x-1)^2(x-4)</m></caption>
+          <image>
 
-        <p>The polynomials below both have <m>(x+3)^2</m> as a factor, but they have other linear factors with either <em>odd</em> or <em>even</em> multiplicity:</p>
+            <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+              \begin{axis}[ymin=-100,ymax=100,
+                          ytick={},
+                          minor ytick={}]
+                \addplot+[domain=-5:5,samples=100]{(x+3)^2*(x-1)^2*(x-4)};
+              \end{axis}
+            \end{tikzpicture}
+            ]]>
+            </latex-image>
+          </image>
 
-        <sidebyside widths="47% 47%">
-          <figure>
-            <caption><m>y = (x+3)^2(x-1)^2</m></caption>
-            <image>
-              <latex-image>
-              <![CDATA[
-              \begin{tikzpicture}
-                \begin{axis}[ymin=-20,ymax=20,
-                            ytick={},
-                            minor ytick={}]
-                  \addplot+[domain=-5:2,samples=50]{(x+3)^2*(x-1)^2};
-                \end{axis}
-              \end{tikzpicture}
-              ]]>
-              </latex-image>
-            </image>
-          </figure>
-          <figure>
-            <caption><m>y = (x+3)^2(x-1)^2(x-4)</m></caption>
-            <image>
-              <latex-image>
-              <![CDATA[
-              \begin{tikzpicture}
-                \begin{axis}[ymin=-100,ymax=100,
-                            ytick={},
-                            minor ytick={}]
-                  \addplot+[domain=-5:5,samples=100]{(x+3)^2*(x-1)^2*(x-4)};
-                \end{axis}
-              \end{tikzpicture}
-              ]]>
-              </latex-image>
-            </image>
-          </figure>
-        </sidebyside>
+        </figure>
+      </sidebyside>
 
-        <p>Notice that when the multiplicity of a root is <em>even</em><idx><h>multiplicity</h><h>even</h></idx>, the graph bounces off of the <m>x</m>-axis at that value. When the multiplicity of a root is <em>odd</em><idx><h>multiplicity</h><h>odd</h></idx>, the graph crosses over the <m>x</m>-axis at that value.</p>
+      <p>
+        Notice that when the multiplicity of a root is <em>even</em>,
+            <idx><h>multiplicity</h><h>even</h></idx>
+        the graph bounces off of the <m>x</m>-axis at that value.
+        When the multiplicity of a root is <em>odd</em>,
+            <idx><h>multiplicity</h><h>odd</h></idx>
+        the graph crosses over the <m>x</m>-axis at that value.
+      </p>
 
-        <exercise>
-          <webwork>
+      <exercise>
+        <webwork>
             <setup>
-              <pg-code>
-                $formulaOptions = RadioButtons(
-                  ["\((x+1)(x-1)(x-3)\)","\((x+1)^2(x-1)(x-3)\)","\((x+1)^2(x-1)(x-3)^2\)","\((x+1)^2(x-1)^2(x-3)^2\)","None of these"],
-                  2, labels => ["(x+1)(x-1)(x-3)","(x+1)^2(x-1)(x-3)","(x+1)^2(x-1)(x-3)^2","(x+1)^2(x-1)^2(x-3)^2","None of these"],
-                  displayLabels => 0
-                );
-              </pg-code>
+
+            <pg-code>
+              $formulaOptions = RadioButtons(
+                ["\((x+1)(x-1)(x-3)\)","\((x+1)^2(x-1)(x-3)\)","\((x+1)^2(x-1)(x-3)^2\)","\((x+1)^2(x-1)^2(x-3)^2\)","None of these"],
+                2, labels => ["(x+1)(x-1)(x-3)","(x+1)^2(x-1)(x-3)","(x+1)^2(x-1)(x-3)^2","(x+1)^2(x-1)^2(x-3)^2","None of these"],
+                displayLabels => 0
+              );
+            </pg-code>
             </setup>
             <statement>
-              <p>The graph below shows a polynomial <m>y = f(x)</m>.</p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qUku8jCM/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-              <p>Which of the following options could be the formula for <m>f(x)</m>?</p>
-              <p><var name="$formulaOptions" form="buttons" /></p>
+              <p>
+                The graph below shows a polynomial <m>y = f(x)</m>.
+              </p>
+
+              <p>
+                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qUku8jCM/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              </p>
+
+              <p>
+                Which of the following options could be the formula for <m>f(x)</m>?
+              </p>
+
+              <p>
+                <var name="$formulaOptions" form="buttons" />
+              </p>
             </statement>
             <hint>
-              <p>Notice the behavior of the graph near <m>x = -1</m> and <m>x = 3</m>. Those roots have <em>even</em> multiplicities.</p>
+              <p>
+                Notice the behavior of the graph near <m>x = -1</m> and <m>x = 3</m>.
+                Those roots have <em>even</em> multiplicities.
+              </p>
             </hint>
             <solution>
-              <p>The only viable option is <m>f(x) = (x+1)^2(x-1)(x-3)^2</m>, since the graph bounces off the points <m>(-1, 0)</m> and <m>(3, 0)</m>, and crosses over the point <m>(1, 0)</m>.</p>
-              <p>In general, our best guess for the formula would be something that looked like: <me>(x+1)^\text{even}(x-1)^\text{odd}(x-3)^\text{even}</me></p>
+              <p>
+                The only viable option is <m>f(x) = (x+1)^2(x-1)(x-3)^2</m>,
+                since the graph bounces off the points <m>(-1, 0)</m> and <m>(3, 0)</m>,
+                and crosses over the point <m>(1, 0)</m>.
+              </p>
+
+              <p>
+                In general, our best guess for the formula would be something that looked like:
+                <me>
+                  (x+1)^\text{even}(x-1)^\text{odd}(x-3)^\text{even}
+                </me>
+              </p>
             </solution>
-          </webwork>
-        </exercise>
+        </webwork>
+      </exercise>
 
+      <p>
+        You probably noticed that while an even multiplicity of a root causes the graph to bounce off of the <m>x</m>-axis,
+        sometimes the graph is below the <m>x</m>-axis and sometimes it is above the <m>x</m>-axis.
+      </p>
 
-        <p>You probably noticed that while an even multiplicity of a root causes the graph to bounce off of the <m>x</m>-axis, sometimes the graph is below the <m>x</m>-axis and sometimes it is above the <m>x</m>-axis.</p>
-        <p>What causes this? How can we predict whether the graph will be above the <m>x</m>-axis or below it?</p>
-        <p>The reason for this has to do with the <term>end-behavior</term> of the whole function. That is, the graph of a polynomial will eventually either increase or decrease forever as <m>x</m> gets far from zero.</p>
-        <p>Since the end-behavior of a function is the tendency of the graph as <m>x \rightarrow \infty</m> or <m>x \to -\infty</m>, we may ask how to determine this without having to graph the function.</p>
+      <p>
+        What causes this?
+        How can we predict whether the graph will be above the <m>x</m>-axis or below it?
+      </p>
 
-        <example>
-          <p>A table of values for the function <m>f(x) = x^3 - 45x^2 + 12x - 20</m> is shown below.</p>
-          <sidebyside>
-            <tabular top="major" halign="center">
-              <col halign="left" />
-              <col />
+      <p>
+        The reason for this has to do with the
+        <term>end-behavior</term> of the whole function.
+        That is, the graph of a polynomial will eventually either increase or decrease forever as <m>x</m> gets far from zero.
+      </p>
 
-              <row bottom="medium">
-                <cell><m>x</m></cell>
-                <cell><m>f(x)</m></cell>
-              </row>
+      <p>
+        Since the end-behavior of a function is the tendency of the graph as
+        <m>x \rightarrow \infty</m> or <m>x \to -\infty</m>,
+        we may ask how to determine this without having to graph the function.
+      </p>
 
-              <row bottom="medium">
-                <cell><m>10</m></cell>
-                <cell><m>-3400</m></cell>
-              </row>
+      <example>
+        <p>
+          A table of values for the function <m>f(x) = x^3 - 45x^2 + 12x - 20</m> is shown below.
+        </p>
 
-              <row bottom="medium">
-                <cell><m>20</m></cell>
-                <cell><m>-9780</m></cell>
-              </row>
+        <sidebyside>
 
-              <row bottom="medium">
-                <cell><m>30</m></cell>
-                <cell><m>-13160</m></cell>
-              </row>
+          <tabular top="major" halign="center">
+            <col halign="left" />
+            <col />
+            <row bottom="medium">
+              <cell><m>x</m></cell>
+              <cell><m>f(x)</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell><m>10</m></cell>
+              <cell><m>-3400</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell><m>20</m></cell>
+              <cell><m>-9780</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell><m>30</m></cell>
+              <cell><m>-13160</m></cell>
+            </row>
+          </tabular>
 
-            </tabular>
-          </sidebyside>
+        </sidebyside>
 
-          <p>So far, it appears that the function is decreasing as <m>x</m> increases. However, continuing the table shows a change in the behavior:</p>
-          <sidebyside>
-            <tabular top="major" halign="center">
-              <col halign="left" />
-              <col />
+        <p>
+          So far, it appears that the function is decreasing as <m>x</m> increases.
+          However, continuing the table shows a change in the behavior:
+        </p>
 
-              <row bottom="medium">
-                <cell><m>40</m></cell>
-                <cell><m>-7540</m></cell>
-              </row>
+        <sidebyside>
 
-              <row bottom="medium">
-                <cell><m>50</m></cell>
-                <cell><m>13080</m></cell>
-              </row>
+          <tabular top="major" halign="center">
+            <col halign="left" />
+            <col />
+            <row bottom="medium">
+              <cell><m>40</m></cell>
+              <cell><m>-7540</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell><m>50</m></cell>
+              <cell><m>13080</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell><m>60</m></cell>
+              <cell><m>54700</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell><m>70</m></cell>
+              <cell><m>123320</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell><m>80</m></cell>
+              <cell><m>224940</m></cell>
+            </row>
+          </tabular>
 
-              <row bottom="medium">
-                <cell><m>60</m></cell>
-                <cell><m>54700</m></cell>
-              </row>
+        </sidebyside>
 
-              <row bottom="medium">
-                <cell><m>70</m></cell>
-                <cell><m>123320</m></cell>
-              </row>
+        <p>
+          Initially, the function was decreasing very quickly,
+          but eventually it turned around and began to increase
+          (even faster).
+          In fact, this function will eventually increase
+          <em>forever</em> as <m>x \to \infty</m>.
+        </p>
 
-              <row bottom="medium">
-                <cell><m>80</m></cell>
-                <cell><m>224940</m></cell>
-              </row>
+        <p>
+          We can make sense of this by considering the formula for <m>f(x)</m> and imagining substituting a very large value of <m>x</m>.
+        </p>
 
-            </tabular>
-          </sidebyside>
-
-          <p>Initially, the function was decreasing very quickly, but eventually it turned around and began to increase (even faster). In fact, this function will eventually increase <em>forever</em> as <m>x \to \infty</m>.</p>
-          <p>We can make sense of this by considering the formula for <m>f(x)</m> and imagining substituting a very large value of <m>x</m>.</p>
-          <p>If <m>x</m> was large, say <em>one million</em>, evaluating the function would look like:<md>
+        <p>
+          If <m>x</m> was large, say <em>one million</em>,
+          evaluating the function would look like:
+          <md>
             <mrow>f(1000000) \amp= (1000000)^3 - 45(1000000)^2 + 12(1000000) - 20</mrow>
             <mrow>\amp= \text{ENORMOUS NUMBER} - \text{ HUGE Number }</mrow>
             <mrow>\amp\phantom{={}}{}+\text{ Fairly Big Number } - \text{ small number }</mrow>
             <mrow>\amp= \text{Still an ENORMOUS NUMBER}</mrow>
-          </md></p>
-          <p>(In fact, the output is <m>999{,}955{,}000{,}011{,}999{,}980</m>.)</p>
-        </example>
+          </md>
+        </p>
 
-          <p>The point here is that raising a large value to the power of <m>3</m> is much more significant than raising it to the power of <m>2</m> (or any smaller power). As another piece of math terminology, we would say that the term <m>x^3</m> <em>dominates</em> the other terms. The highest power of <m>x</m> is most significant in the end, so we can just focus our attention on the leading term of a polynomial to determine the end-behavior.</p>
-          <p>In summary:</p>
-          <assemblage>
-            <p>A polynomial has the same end-behavior as its leading term.</p>
-          </assemblage>
-          <p>Similarly, we can ask what the graph tends to do as <m>x \to -\infty</m>. This will be the same as the leading term <m>x^3</m>, which eventually decreases forever as <m>x \to -\infty</m>.</p>
+        <p>
+          (In fact, the output is <m>999{,}955{,}000{,}011{,}999{,}980</m>.)
+        </p>
+      </example>
 
-        <p>In the next exercise, we show the steps for graphing a polynomial. Following these steps, you can sketch the graph of a polynomial by hand.</p>
-        <exercise>
-          <webwork>
+      <p>
+        The point here is that raising a large value to the power of <m>3</m> is much more significant than raising it to the power of <m>2</m>
+        (or any smaller power).
+        As another piece of math terminology,
+        we would say that the term <m>x^3</m>
+        <em>dominates</em> the other terms.
+        The highest power of <m>x</m> is most significant in the end,
+        so we can just focus our attention on the leading term of a polynomial to determine the end-behavior.
+      </p>
+
+      <p>
+        In summary:
+      </p>
+
+      <assemblage>
+        <p>
+          A polynomial has the same end-behavior as its leading term.
+        </p>
+      </assemblage>
+
+      <p>
+        Similarly, we can ask what the graph tends to do as <m>x \to -\infty</m>.
+        This will be the same as the leading term <m>x^3</m>,
+        which eventually decreases forever as <m>x \to -\infty</m>.
+      </p>
+
+      <p>
+        In the next exercise, we show the steps for graphing a polynomial.
+        Following these steps, you can sketch the graph of a polynomial by hand.
+      </p>
+
+      <exercise>
+        <webwork>
             <setup>
-              <pg-code>
-              </pg-code>
+
+            <pg-code>
+            </pg-code>
             </setup>
             <statement>
-              <p>In this problem, we will make a rough sketch of the graph of the polynomial: <me>f(x) = x(x+3)(x-2)^2</me></p>
-              <p>First, we know that the <m>x</m>-intercepts are at <m>x=0</m>, <m>x=-3</m> and <m>x=2</m>.</p>
-              <p>Next, in expanded form, the leading term would be <m>x^4</m>. This tells us the end-behavior of the graph.</p>
-              <p>Finally, the multiplicity of the roots tells us whether the graph crosses or bounces off of the <m>x</m>-axis.</p>
-              <p>In the graph below, use the slider to show steps for graphing this function.</p>
-              <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MRSRj24k/width/425/height/373/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+              <p>
+                In this problem,
+                we will make a rough sketch of the graph of the polynomial:
+                <me>
+                  f(x) = x(x+3)(x-2)^2
+                </me>
+              </p>
+
+              <p>
+                First, we know that the <m>x</m>-intercepts are at <m>x=0</m>,
+                <m>x=-3</m> and <m>x=2</m>.
+              </p>
+
+              <p>
+                Next, in expanded form, the leading term would be <m>x^4</m>.
+                This tells us the end-behavior of the graph.
+              </p>
+
+              <p>
+                Finally, the multiplicity of the roots tells us whether the graph crosses or bounces off of the <m>x</m>-axis.
+              </p>
+
+              <p>
+                In the graph below,
+                use the slider to show steps for graphing this function.
+              </p>
+
+              <p>
+                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MRSRj24k/width/425/height/373/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              </p>
             </statement>
-          </webwork>
-        </exercise>
-        <exercise>
-          <statement>
-          <p>Make a rough sketch of the graph of the polynomial <m>f(x) = (x-4)(x-1)^2(x+3)^2(x+5)</m>.</p>
-          <p>We must use what we know about the roots and their multiplicities, and also the end-behavior of the function.</p>
-          <p><ol>
-            <li>
-              <p>First, plot the <m>x</m>-intercepts on your graph. Remember that these are determined by finding the roots of the function.</p>
-            </li>
-            <li>
-              <p>Next, consider the end-behavior of the polynomial. Do this by deciding what the leading term would be if it was completely expanded. On the far left and far right side of the graph, draw arrows to show what the graph will eventually do (increasing or decreasing).</p>
-            </li>
-            <li>
-              <p>Finally, use what you know about the multiplicity of each root. Beginning at your arrow on the far left side of the graph, draw a smooth curve which contains all of the <m>x</m>-intercepts you drew in the first step. When you get to an <m>x</m>-intercept, if its multiplicity is <em>odd</em>, the graph will cross over the <m>x</m>-axis, and if the multiplicity is <em>even</em>, the graph will bounce off of the <m>x</m>-axis. Your smooth curve should end at the arrow you drew on the far right hand side.</p>
-            </li>
-          </ol></p>
-          <p>Check the graph. If drawn correctly, you should have been able to draw from your arrow on the left side to the arrow on the right side without picking up your pencil.</p>
-          </statement>
-          <hint>
-            <p>The roots are <md>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Make a rough sketch of the graph of the polynomial <m>f(x) = (x-4)(x-1)^2(x+3)^2(x+5)</m>.
+          </p>
+
+          <p>
+            We must use what we know about the roots and their multiplicities,
+            and also the end-behavior of the function.
+          </p>
+
+          <p>
+            <ol>
+              <li>
+                <p>
+                  First, plot the <m>x</m>-intercepts on your graph.
+                  Remember that these are determined by finding the roots of the function.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Next, consider the end-behavior of the polynomial.
+                  Do this by deciding what the leading term would be if it was completely expanded.
+                  On the far left and far right side of the graph,
+                  draw arrows to show what the graph will eventually do
+                  (increasing or decreasing).
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Finally, use what you know about the multiplicity of each root.
+                  Beginning at your arrow on the far left side of the graph,
+                  draw a smooth curve which contains all of the <m>x</m>-intercepts you drew in the first step.
+                  When you get to an <m>x</m>-intercept,
+                  if its multiplicity is <em>odd</em>,
+                  the graph will cross over the <m>x</m>-axis,
+                  and if the multiplicity is <em>even</em>,
+                  the graph will bounce off of the <m>x</m>-axis.
+                  Your smooth curve should end at the arrow you drew on the far right hand side.
+                </p>
+              </li>
+            </ol>
+          </p>
+
+          <p>
+            Check the graph.
+            If drawn correctly,
+            you should have been able to draw from your arrow on the left side to the arrow on the right side without picking up your pencil.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The roots are
+            <md>
               <mrow>x = 4</mrow>
               <mrow>x = 1</mrow>
               <mrow>x = -3</mrow>
               <mrow>x = -5</mrow>
-            </md></p>
-            <p>If expanded, the leading term would be the power function <m>x^6</m>, so the end-behavior would be increasing on both the left and right sides of the graph.</p>
-          </hint>
-          <answer>
-            <p>The graph should look like:</p>
-            <sidebyside>
-                <image width="47%">
-                    <latex-image>
-                    <![CDATA[\begin{tikzpicture}
-                                \begin{axis}[ymin=-1000, ymax=1000,
-                                            ytick={},
-                                            minor ytick={}]
-                                    \addplot+[domain=-6:6,samples=100]{(x-4)*(x-1)^2*(x+3)^2*(x+5)};
-                                 \end{axis}
-                            \end{tikzpicture}
-                    ]]>
-                    </latex-image>
-                </image>
-            </sidebyside>
-            <p>Notice that the graph crosses the <m>x</m>-axis at <m>x = -5</m> and <m>x = 4</m>, and it bounces off of the <m>x</m>-axis at <m>x = -3</m> and <m>x = 1</m>.</p>
-          </answer>
-        </exercise>
-      </subsection>
+            </md>
+          </p>
 
-      <exercises>
-<exercisegroup><introduction><p>Graphs of Power Functions and Polynomials</p></introduction>
+          <p>
+            If expanded,
+            the leading term would be the power function <m>x^6</m>,
+            so the end-behavior would be increasing on both the left and right sides of the graph.
+          </p>
+        </hint>
+        <answer>
+          <p>
+            The graph should look like:
+          </p>
+
+          <sidebyside>
+
+            <image width="47%">
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[ymin=-1000, ymax=1000,
+                                    ytick={},
+                                    minor ytick={}]
+                            \addplot+[domain=-6:6,samples=100]{(x-4)*(x-1)^2*(x+3)^2*(x+5)};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+            </image>
+
+          </sidebyside>
+
+          <p>
+            Notice that the graph crosses the <m>x</m>-axis at <m>x = -5</m> and <m>x = 4</m>,
+            and it bounces off of the <m>x</m>-axis at <m>x = -3</m> and <m>x = 1</m>.
+          </p>
+        </answer>
+      </exercise>
+    </subsection>
+
+    <exercises>
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Graphs of Power Functions and Polynomials
+          </p>
+        </introduction>
         <!-- Coded with PTX-incompatible structure. -->
         <!-- <exercise>
           <webwork source="Library/UMN/algebraKaufmannSchwitters/ks_8_5_3.pg" seed="1" />
@@ -584,16 +1189,13 @@
         <exercise>
           <webwork source="Library/UMN/algebraKaufmannSchwitters/ks_8_3_7.pg" seed="1" />
         </exercise> -->
-
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap9Sec2/Q10.pg" seed="1" />
         </exercise>
-
         <!-- Coded with PTX-incompatible structure. -->
         <!-- <exercise>
           <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S02-MoreFunctions/1-2-03.pg" seed="1" />
         </exercise> -->
-
         <exercise>
           <webwork source="Library/ASU-topics/setPolynomialFunctions/di3.pg" seed="1" />
         </exercise>
@@ -601,17 +1203,21 @@
         <exercise>
           <webwork source="Library/UMN/algebraKaufmannSchwitters/ks_9_6_prob01.pg" seed="1" />
         </exercise>
-
         <!-- Coded with PTX-incompatible structure. -->
         <!-- Specifically with an extra }, so would be esay to fix. -->
         <!-- <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap9Sec2/polynomial-04.pg" seed="1" />
         </exercise> -->
-</exercisegroup>
-
+      </exercisegroup>
 <!-- zeros and multiplicities -->
+      <exercisegroup>
 
-<exercisegroup><introduction><p>Degree, Roots, Multiplicities and End Behavior</p></introduction>
+        <introduction>
+          <p>
+            Degree, Roots, Multiplicities and End Behavior
+          </p>
+        </introduction>
+
         <exercise>
           <webwork source="Library/Mizzou/College_Algebra/Polynomials_Zeroes_Multiplicities/Mult1.pg" seed="1" />
         </exercise>
@@ -655,11 +1261,17 @@
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap9Sec2/polynomial-03.pg" seed="1" />
         </exercise>
-</exercisegroup>
 
+      </exercisegroup>
 <!-- Algebraic simplification -->
+      <exercisegroup>
 
-<exercisegroup><introduction><p>Algebraic Simplification</p></introduction>
+        <introduction>
+          <p>
+            Algebraic Simplification
+          </p>
+        </introduction>
+
         <exercise>
           <webwork source="Library/FortLewis/Algebra/4-2-Functions-and-expressions/MCH1-4-2-14-Functions-and-expressions.pg" seed="1" />
         </exercise>
@@ -667,11 +1279,17 @@
         <exercise>
           <webwork source="Library/Utah/Intermediate_Algebra/set9_Polynomials_and_Factoring/s9p17.pg" seed="1" />
         </exercise>
-</exercisegroup>
 
+      </exercisegroup>
 <!-- Find the equation of the polynomial -->
+      <exercisegroup>
 
-<exercisegroup><introduction><p>Formulas for Polynomials</p></introduction>
+        <introduction>
+          <p>
+            Formulas for Polynomials
+          </p>
+        </introduction>
+
         <exercise>
           <webwork source="Library/ASU-topics/setPolynomialFunctions/rich4.pg" seed="1" />
         </exercise>
@@ -711,11 +1329,17 @@
         <exercise>
           <webwork source="Library/UMN/algebraKaufmannSchwitters/ks_9_4_prob07.pg" seed="1" />
         </exercise>
-</exercisegroup>
 
+      </exercisegroup>
 <!-- choose the correct graph -->
+      <exercisegroup>
 
-<exercisegroup><introduction><p>Graphs of Polynomials</p></introduction>
+        <introduction>
+          <p>
+            Graphs of Polynomials
+          </p>
+        </introduction>
+
         <exercise>
           <webwork source="Library/Mizzou/College_Algebra/Graphing_Polynomials/MC_Find_Graph_Not_Factored_Random_Deg_3_4.pg" seed="1" />
         </exercise>
@@ -723,22 +1347,27 @@
         <exercise>
           <webwork source="Library/Mizzou/College_Algebra/Graphing_Polynomials/MC_Find_Graph.pg" seed="1" />
         </exercise>
-
         <!-- Coded with PTX-incompatible structure. -->
         <!-- <exercise>
           <webwork source="Library/UMN/algebraKaufmannSchwitters/ks_9_4_prob02.pg" seed="1" />
         </exercise> -->
-
-</exercisegroup>
-
+      </exercisegroup>
 <!-- application problems -->
+      <exercisegroup>
 
-<exercisegroup><introduction><p>Additional Problems</p></introduction>
+        <introduction>
+          <p>
+            Additional Problems
+          </p>
+        </introduction>
+
         <exercise>
           <webwork source="Library/Rochester/setAlgebra23PolynomialZeros/beth1polydiv.pg" seed="1" />
         </exercise>
-</exercisegroup>
 
-      </exercises>
-    </section>
+      </exercisegroup>
+    </exercises>
+  </section>
+
 </chapter>
+

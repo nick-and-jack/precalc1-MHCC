@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -10,385 +9,743 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-
 <chapter xml:id="chapter-domain-and-range-piecewise" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Domain, Range and Piecewise Defined Functions</title>
+  <objectives>
+    <title>Student Learning Outcomes</title>
+    <ul>
+      <li>
+        <p>
+          Determine the domain and range of a function.
+        </p>
+      </li>
 
-    <title>Domain, Range and Piecewise Defined Functions</title>
+      <li>
+        <p>
+          Determine from a graph or an equation whether a function is continuous or discontinuous.
+        </p>
+      </li>
 
-    <objectives>
-      <title>Student Learning Outcomes</title>
-      <ul>
-        <li><p>Determine the domain and range of a function.</p></li>
-        <li><p>Determine from a graph or an equation whether a function is continuous or discontinuous.</p></li>
-        <li><p>Define, distinguish, and apply piecewise-defined functions.</p></li>
-      </ul>
-    </objectives>
+      <li>
+        <p>
+          Define, distinguish, and apply piecewise-defined functions.
+        </p>
+      </li>
+    </ul>
+  </objectives>
 
-    <xi:include href="./activity-domain-range.xml" />
-    <xi:include href="./activity-piecewise.xml" />
+  <xi:include href="./activity-domain-range.xml" />
+  <xi:include href="./activity-piecewise.xml" />
 
-    <section xml:id="domain-and-range-piecewise-gist">
-      <title>Gist of Domain, Range and Piecewise Defined Functions</title>
-        <subsection>
-          <title>Domain and Range</title>
-            <p>Sometimes a formula can only accept certain kinds of input values. For instance the square root function <me>f(x) = \sqrt x</me> can only accept values of <m>x</m> that are <em>not</em> negative, because only non-negative inputs allow the function to yield real-valued outputs.</p>
-            <p>In math we say</p>
-            <blockquote>
-              <p>The function <m>f</m> has a domain such that <m>x \geqslant 0</m></p>
-            </blockquote>
-            <p>meaning whatever values we choose for <m>x</m>, they must be greater than or equal to zero. That's the math way of saying <q>not negative</q>.
-            </p>
-            <p>The <term>domain</term> of a function is the set of all inputs a function is allowed to use.</p>
-            <example>
-              <statement>
-                <p>Find the domain of the function <me>f(x) = \frac{x}{{{x^2} - 1}}.</me></p>
-              </statement>
-              <solution>
-                <p>We know that we cannot divide by zero. In this function, the denominator would be zero if <m>x</m> is either <m>1</m> or <m>-1</m>, so the domain of this function is <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.</p>
-                <p>In math this can be written many different ways.</p>
-                <p>We could use <em>set-builder</em> notation: <me>\{x \vert x \neq \pm 1 \}</me></p>
-                <p>This is read, from left-to-right, as <q>the set of all numbers <m>x</m>, such that <m>x</m> is not equal to positive or negative <m>1</m></q>.</p>
-                <p>Or, we could use <em>inequalitites</em>: <me>-\infty \lt x \lt -1 \text{ or } -1 \lt x \lt 1 \text{ or } 1 \lt x \lt \infty</me></p>
-                <p>This means that the domain includes all numbers strictly less than <m>-1</m>, between <m>-1</m> and <m>1</m>, or strictly greater than <m>1</m>.</p>
-                <p>A third choice is <em>interval</em> notation: <me>(-\infty,-1) \cup (-1,1) \cup (1,\infty)</me></p>
-                <p>Here, the union symbol <m>\cup</m> means we are bringing together these three intervals.</p>
-              </solution>
-            </example>
-            <note><title>Bad Inputs</title>
-              <p>To find the domain of a function, it is sometimes easiest to find the <q>bad</q> input values <mdash /> numbers which are <em>not</em> in the domain. Then, the domain is all numbers <em>except</em> the bad ones. Typical examples of <q>bad</q> inputs are those which cause <em>division by zero</em> or <em>negatives under a radical</em>.</p>
-            </note>
-            <p>Once we find the domain of a function, we can then consider all the possible outputs for the function. The set of all possible outputs is called the <term>range</term> of the function.</p>
-            <example>
-              <statement>
-                <p>Find the domain and range of the function <me>f(x) = \sqrt {x - 8}.</me></p>
-              </statement>
-              <solution>
-                <p>Since we cannot take the square root of a negative number, we know that <m>x-8</m> must be greater than or equal to zero. Solving this inequality for <m>x</m>, we can find the domain.</p>
-                <p><md><mrow>x - 8 \amp \geqslant 0</mrow>
-                <mrow>x \amp \geqslant 8</mrow></md>.</p>
-                <p>This means that the inputs for this function must be greater than or equal to <m>8</m>.</p>
-                <p>Once the domain is found, we can turn our attention to finding all the possible output values our function can create; this is the range.</p>
-                <p>The square root function always creates non-negative results. In other words, if you put a number (from the domain) into the square root function, you always get a result that is greater than or equal to zero.</p>
-                <p>Therefore, the range of <m>f(x) = \sqrt x </m> is <m>y \geqslant 0</m></p>
-              </solution>
-            </example>
-            <p>At this point it is important to note that when we state the domain of a function, we refer to the input variable. So far our inputs have been called <m>x</m>, so every domain we have described has had <m>x</m> in it. For instance, <m>f(x) = \frac{x}{{{x^2} - 1}}</m> had the domain <m>\{x \vert x \neq \pm 1 \}</m>.</p>
-            <p>When we state the range of a function, we must refer to the output. If <m>y=f(x)</m> where <m>f(x) = \frac{x}{{{x^2} - 1}}</m>, then our range has to refer to <m>y</m> or to <m>f(x)</m>, both of which represent the output. In this case the range could be written <m>y \geqslant 0</m> or <m>f(x) \geqslant 0</m>.</p>
-            <p>Identifying the domain and range directly from a formula can be difficult. It is often more clear if we look at functions graphically. Below is a graph of <m>f(x) = \sqrt {x - 8}</m></p>
+  <section xml:id="domain-and-range-piecewise-gist">
+    <title>Gist of Domain, Range and Piecewise Defined Functions</title>
+    <subsection>
+      <title>Domain and Range</title>
+      <p>
+        Sometimes a formula can only accept certain kinds of input values.
+        For instance the square root function
+        <me>
+          f(x) = \sqrt x
+        </me>
+        can only accept values of <m>x</m> that are <em>not</em> negative,
+        because only non-negative inputs allow the function to yield real-valued outputs.
+      </p>
 
-            <example>
-                <figure xml:id="graph-of-root-x-minus-8">
-                  <caption>Graph of <m>f(x)=\sqrt{x-8}</m></caption>
-                    <image width="47%" xml:id="image-graph-of-root-x-minus-8">
-                      <latex-image>
-                          <![CDATA[\begin{tikzpicture}
-                          \begin{axis}[ymin=-5, ymax=7, xlabel={$x$}, ylabel={$y$}, xtick={4,8,...,24}, minor xtick={-3,-2,...,25}, ytick={-4,-2,...,6}, minor ytick={-5,-4,...,7}, xmin=-3, xmax=25, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
-                          \addplot[thick, color=red, domain=0:4,->] ({x^2+8},{x});
-                          \end{axis}
-                          \end{tikzpicture}]]>
-                      </latex-image>
-                    </image>
-                </figure>
-            <p>Notice the graph only appears for input values <m>x \geqslant 8</m>. That is the domain of <m>f</m>.</p>
-            <p>Also notice the graph only appears at or above the <m>x-</m>axis.  The graph shows us the range is <m>y \geqslant 0</m>.</p>
-            </example>
+      <p>
+        In math we say
+      </p>
 
-            <p>When you want to find the domain and range of a function, one option is to graph it on a graphing tool. Determine the intervals or boundaries on the horizontal axis where the graph exists. This is the domain.</p>
-            <p>Next, use the graph to determine if there are vertical intervals or boundaries to how high or low the graph reaches. This is the range.</p>
-            <example>
-              <statement>
-                <p>Find the domain and range of the function <m>f(x)</m> graphed below.</p>
-                <figure>
-                  <caption>A graph of <m>y = f(x)</m>.</caption>
-                  <image width="47%">
-                    <description></description>
-                    <latex-image>
-                      <![CDATA[
-                        \begin{tikzpicture}
-                          \begin{axis}[xmin=-2,xmax=5.7,ymin=-33,ymax=31,ytick={},
-                          minor ytick={}]
-                          \addplot+[-,domain=-1:5, samples=40] {2*x^3-9*x^2};
-                          \addplot[holdot] coordinates{(-1,-11)} node[below] {$(-1,-11)$};
-                          \addplot[soldot] coordinates{(0,0)} node[above right] {$(0,0)$};
-                          \addplot[soldot] coordinates{(3,-27)} node[below] {$(3,-27)$};
-                          \addplot[soldot] coordinates{(5,25)} node[above] {$(5,25)$};
-                          \end{axis}
-                        \end{tikzpicture}
-                      ]]>
-                    </latex-image>
-                  </image>
-                </figure>
-              </statement>
-              <solution>
-                <p>The graph only exists when <m>x</m> is greater than <m>-1</m> and less than or equal to <m>5</m>. This is the domain, and it can be written as an inequality <me>-1 \lt x \leq 5</me> or an interval <me>(-1,5].</me></p>
-                <p>The graph curves up and down, but it reaches every output value where <m>y</m> is greater than or equal to <m>-27</m> and less than or equal to <m>25</m>. This is the range, and it can be written as an inequality <me>-27 \leq y \leq 25</me> or an interval <me>[-27,25].</me></p>
-              </solution>
-            </example>
+      <blockquote>
+        <p>
+          The function <m>f</m> has a domain such that <m>x \geqslant 0</m>
+        </p>
+      </blockquote>
 
-            <p>In the next exercise, you will manipulate a graph to change its domain and range.</p>
+      <p>
+        meaning whatever values we choose for <m>x</m>,
+        they must be greater than or equal to zero.
+        That's the math way of saying <q>not negative</q>.
+      </p>
 
-            <exercise>
-              <webwork>
-                <setup>
+      <p>
+        The <term>domain</term> of a function is the set of all inputs a function is allowed to use.
+      </p>
 
-                  <pg-code>
-                    Context("Inequalities");
-                    Context()->variables->are(x=>'Real',y=>'Real');
-                    $dom1 = Compute("2&lt;=x&lt;6");
-                    $rng1 = Compute("1.5&lt;=y&lt;3.5");
-                    $rng2 = Compute("3&lt;=y&lt;5");
-                  </pg-code>
-                </setup>
-                <stage>
-                  <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/s4F4ptNM/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>The domain of the function <m>f</m> is shown as an interval on the <m>x</m>-axis, while its range is shown as an interval on the <m>y</m>-axis. Click and drag the bottom-left point on the graph to change its domain and range.</p>
-                    <p>Use <m>x</m> to describe the domain and use <m>y</m> to describe the range.</p>
-                    <p>Drag the bottom-left point to the location <m>(2, 1.5)</m>.</p>
-                    <p>The domain is <var name="$dom1" width="8" /></p>
-                    <p>The range is <var name="$rng1" width="8" /></p>
-                  </statement>
-                </stage>
-                <stage>
-                  <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/s4F4ptNM/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>Drag the graph from the point at the origin to the point <m>(2, 3)</m>.</p>
-                    <p>The domain is <var name="$dom1" width="8" /></p>
-                    <p>The range is <var name="$rng2" width="8" /></p>
-                  </statement>
-                </stage>
-              </webwork>
-            </exercise>
+      <example>
+        <statement>
+          <p>
+            Find the domain of the function
+            <me>
+              f(x) = \frac{x}{{{x^2} - 1}}
+            </me>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We know that we cannot divide by zero.
+            In this function,
+            the denominator would be zero if <m>x</m> is either <m>1</m> or <m>-1</m>,
+            so the domain of this function is
+            <q>All numbers except <m>x = 1</m> or <m>x = -1</m></q>.
+          </p>
 
-        </subsection>
-        <subsection>
-          <title>Piecewise Defined Functions</title>
-          <p>A piecewise defined function is actually a collection of two or more functions that tell us how to use an input to get an output. Each function must state the domain on which it is defined, that way you know when to use it.</p>
-          <p>We start with some easy, everyday examples of piecewise defined functions.</p>
-          <example>
-            <p>The cost of renting a snowboard is <m>\$25</m> per day, or <m>\$60</m> for three days, or <m>\$75</m> for a week.</p>
-            <p>The first cost function is <m>\$25</m> per day and is good for <m>1</m> or <m>2</m> days. The domain of this function is the <q><m>1</m> or <m>2</m> days</q>. It tells you when to use this cost function.</p>
-            <p>On the third day is a new cost function, a simple constant of <m>\$60</m>.</p>
-            <p>Finally, the constant function <m>\$75</m> is used when we keep the snowboard for more than <m>3</m> days, up to <m>7</m> days (a full week).</p>
-            <p>Each rule has its own domain that tells us when to use the rule. In <xref ref="figure-snowboard-graph" >Figure</xref>, we see the graph of the price function. Notice the graph has a constant output of <m>50</m> when <m>1 \lt x \leq 2</m>, but it immediately changes to <m>60</m> when <m>x \gt 2</m>.</p>
-            <figure xml:id="figure-snowboard-graph">
-              <caption>A piecewise defined cost function.</caption>
-              <image width="47%">
-                <description></description>
-                <latex-image>
-                  <![CDATA[
-                    \begin{tikzpicture}
-                      \begin{axis}[xmin=-0.8,xmax=7.8,ymin=-10,ymax=85,ytick={},
-                      minor ytick={}]
-                      \addplot[holdot] coordinates{(0,25)};
-                      \addplot[soldot] coordinates{(1,25)};
-                      \addplot[holdot] coordinates{(1,50)};
-                      \addplot[soldot] coordinates{(2,50)};
-                      \addplot[holdot] coordinates{(2,60)};
-                      \addplot[soldot] coordinates{(3,60)};
-                      \addplot[holdot] coordinates{(3,75)};
-                      \addplot[soldot] coordinates{(4,75)};
-                      \addplot[soldot] coordinates{(5,75)};
-                      \addplot[soldot] coordinates{(6,75)};
-                      \addplot[soldot] coordinates{(7,75)};
-                      \addplot[-,domain=0:1] {25};
-                      \addplot[-,domain=1:2] {50};
-                      \addplot[-,domain=2:3] {60};
-                      \addplot[-,domain=3:7] {75};
-                      \end{axis}
-                    \end{tikzpicture}
-                  ]]>
-                </latex-image>
-              </image>
-            </figure>
-          </example>
-          <example>
-            <p>A hot cup of coffee sits on a counter and begins to cool down. The rate at which the coffee cools is related to the temperature of the coffee and the temperature in the room (there's actually a formula for that). The formula is good for as long the situation in the room remains the same.</p>
-            <p>If you suddenly change the room conditions by turning on the air conditioner, then the rate at which the coffee cools will also change. There would be a new formula to model the coffee's temperature after the air conditioner is switched on.</p>
-            <p>One formula is good from the time you pour the coffee up until you switch on the air conditioner. Then the other formula takes over after the air conditioner has been turned on.</p>
-          </example>
-          <example>
-            <p>In the United States there are <m>7</m> income tax brackets. That means there are <m>7</m> different functions to tell us how much income tax we owe. The function you use is determined by how much money you make.</p>
-            <p>In other words, each function has its own domain (income bracket) that tells you when to use the function.</p>
-            <p>One family's income will put them in a <m>25\%</m> tax bracket, but another family with a higher income will fall under a higher tax bracket, like <m>28\%</m>.</p>
-          </example>
+          <p>
+            In math this can be written many different ways.
+          </p>
 
-          <p>To create a piecewise function, start by finding formulas or rules for all the different functions in the set.  Then identify the domain for each function.</p>
-          <p>When you finally write the piecewise function, write each formula with its corresponding domain to its right.</p>
+          <p>
+            We could use <em>set-builder</em> notation:
+            <me>
+              \{x \vert x \neq \pm 1 \}
+            </me>
+          </p>
 
-          <todo>It would be nice if the student could enter their answers in such a way that in the end the answer looks like proper piecewise notation as shown in the solution.</todo>
-          <exercise>
-            <webwork>
-              <setup>
+          <p>
+            This is read, from left-to-right,
+            as <q>the set of all numbers <m>x</m>,
+            such that <m>x</m> is not equal to positive or negative <m>1</m></q>.
+          </p>
 
-                  <pg-code>
-                      Context()->variables->are(x=>'Real',y=>'Real');
-                      $blueLine = ImplicitPlane("y=0.5(x+3)-2");
-                      $greenLine = ImplicitPlane("y=3");
-                      Context("Inequalities");
-                      $answer1 = Compute("-5&lt;=x&lt;0");
-                      $answer2 = Compute("1&lt;=x&lt;=4");
-                  </pg-code>
-              </setup>
+          <p>
+            Or, we could use <em>inequalitites</em>:
+            <me>
+              -\infty \lt x \lt -1 \text{ or } -1 \lt x \lt 1 \text{ or } 1 \lt x \lt \infty
+            </me>
+          </p>
 
-              <statement>
-                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                  <p>Find a formula for the piecewise defined function shown in the graph</p>
-                  <p>What is the equation of the blue line? <var name="$blueLine" width="15" /> and what is its domain? <var name="$answer1" width="5" /></p>
-                  <p>What is the equation of the green line? <var name="$greenLine" width="15" /> and what is its domain? <var name="$answer2" width="5" /></p>
-                  <p>Once you have determined the equations and their corresponding domains, group the equations and their domains into one piecewise defined function.</p>
-              </statement>
-              <solution>
-                <p>
-                  <me>f(x) = \left\{
+          <p>
+            This means that the domain includes all numbers strictly less than <m>-1</m>,
+            between <m>-1</m> and <m>1</m>,
+            or strictly greater than <m>1</m>.
+          </p>
+
+          <p>
+            A third choice is <em>interval</em> notation:
+            <me>
+              (-\infty,-1) \cup (-1,1) \cup (1,\infty)
+            </me>
+          </p>
+
+          <p>
+            Here, the union symbol <m>\cup</m> means we are bringing together these three intervals.
+          </p>
+        </solution>
+      </example>
+
+      <note>
+        <title>Bad Inputs</title>
+        <p>
+          To find the domain of a function,
+          it is sometimes easiest to find the <q>bad</q>
+          input values <mdash /> numbers which are
+          <em>not</em> in the domain.
+          Then, the domain is all numbers
+          <em>except</em> the bad ones.
+          Typical examples of <q>bad</q>
+          inputs are those which cause <em>division by zero</em>
+          or <em>negatives under a radical</em>.
+        </p>
+      </note>
+
+      <p>
+        Once we find the domain of a function,
+        we can then consider all the possible outputs for the function.
+        The set of all possible outputs is called the
+        <term>range</term> of the function.
+      </p>
+
+      <example>
+        <statement>
+          <p>
+            Find the domain and range of the function
+            <me>
+              f(x) = \sqrt {x - 8}
+            </me>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Since we cannot take the square root of a negative number,
+            we know that <m>x-8</m> must be greater than or equal to zero.
+            Solving this inequality for <m>x</m>, we can find the domain.
+          </p>
+
+          <p>
+            <md>
+              <mrow>x - 8 \amp \geqslant 0</mrow>
+              <mrow>x \amp \geqslant 8</mrow>
+            </md>.
+          </p>
+
+          <p>
+            This means that the inputs for this function must be greater than or equal to <m>8</m>.
+          </p>
+
+          <p>
+            Once the domain is found,
+            we can turn our attention to finding all the possible output values our function can create;
+            this is the range.
+          </p>
+
+          <p>
+            The square root function always creates non-negative results.
+            In other words, if you put a number
+            (from the domain)
+            into the square root function,
+            you always get a result that is greater than or equal to zero.
+          </p>
+
+          <p>
+            Therefore, the range of <m>f(x) = \sqrt x </m> is <m>y \geqslant 0</m>
+          </p>
+        </solution>
+      </example>
+
+      <p>
+        At this point it is important to note that when we state the domain of a function,
+        we refer to the input variable.
+        So far our inputs have been called <m>x</m>,
+        so every domain we have described has had <m>x</m> in it.
+        For instance,
+        <m>f(x) = \frac{x}{{{x^2} - 1}}</m> had the domain <m>\{x \vert x \neq \pm 1 \}</m>.
+      </p>
+
+      <p>
+        When we state the range of a function,
+        we must refer to the output.
+        If <m>y=f(x)</m> where <m>f(x) = \frac{x}{{{x^2} - 1}}</m>,
+        then our range has to refer to <m>y</m> or to <m>f(x)</m>,
+        both of which represent the output.
+        In this case the range could be written
+        <m>y \geqslant 0</m> or <m>f(x) \geqslant 0</m>.
+      </p>
+
+      <p>
+        Identifying the domain and range directly from a formula can be difficult.
+        It is often more clear if we look at functions graphically.
+        Below is a graph of <m>f(x) = \sqrt {x - 8}</m>
+      </p>
+
+      <example>
+        <figure xml:id="graph-of-root-x-minus-8">
+          <caption>Graph of <m>f(x)=\sqrt{x-8}</m></caption>
+          <image width="47%" xml:id="image-graph-of-root-x-minus-8">
+
+            <latex-image>
+                <![CDATA[\begin{tikzpicture}
+                \begin{axis}[ymin=-5, ymax=7, xlabel={$x$}, ylabel={$y$}, xtick={4,8,...,24}, minor xtick={-3,-2,...,25}, ytick={-4,-2,...,6}, minor ytick={-5,-4,...,7}, xmin=-3, xmax=25, grid=both, axis background/.style={fill=yellow!40}, axis lines=middle]
+                \addplot[thick, color=red, domain=0:4,->] ({x^2+8},{x});
+                \end{axis}
+                \end{tikzpicture}]]>
+            </latex-image>
+          </image>
+
+        </figure>
+
+        <p>
+          Notice the graph only appears for input values <m>x \geqslant 8</m>.
+          That is the domain of <m>f</m>.
+        </p>
+
+        <p>
+          Also notice the graph only appears at or above the <m>x-</m>axis.
+          The graph shows us the range is <m>y \geqslant 0</m>.
+        </p>
+      </example>
+
+      <p>
+        When you want to find the domain and range of a function,
+        one option is to graph it on a graphing tool.
+        Determine the intervals or boundaries on the horizontal axis where the graph exists.
+        This is the domain.
+      </p>
+
+      <p>
+        Next, use the graph to determine if there are vertical intervals or boundaries to how high or low the graph reaches.
+        This is the range.
+      </p>
+
+      <example>
+        <statement>
+          <p>
+            Find the domain and range of the function <m>f(x)</m> graphed below.
+          </p>
+
+          <figure>
+            <caption>A graph of <m>y = f(x)</m>.</caption>
+            <image width="47%">
+              <description></description>
+
+            <latex-image>
+              <![CDATA[
+                \begin{tikzpicture}
+                  \begin{axis}[xmin=-2,xmax=5.7,ymin=-33,ymax=31,ytick={},
+                  minor ytick={}]
+                  \addplot+[-,domain=-1:5, samples=40] {2*x^3-9*x^2};
+                  \addplot[holdot] coordinates{(-1,-11)} node[below] {$(-1,-11)$};
+                  \addplot[soldot] coordinates{(0,0)} node[above right] {$(0,0)$};
+                  \addplot[soldot] coordinates{(3,-27)} node[below] {$(3,-27)$};
+                  \addplot[soldot] coordinates{(5,25)} node[above] {$(5,25)$};
+                  \end{axis}
+                \end{tikzpicture}
+              ]]>
+            </latex-image>
+            </image>
+
+          </figure>
+        </statement>
+        <solution>
+          <p>
+            The graph only exists when <m>x</m> is greater than <m>-1</m> and less than or equal to <m>5</m>.
+            This is the domain, and it can be written as an inequality
+            <me>
+              -1 \lt x \leq 5
+            </me>
+            or an interval
+            <me>
+              (-1,5]
+            </me>.
+          </p>
+
+          <p>
+            The graph curves up and down,
+            but it reaches every output value where <m>y</m> is greater than or equal to <m>-27</m> and less than or equal to <m>25</m>.
+            This is the range, and it can be written as an inequality
+            <me>
+              -27 \leq y \leq 25
+            </me>
+            or an interval
+            <me>
+              [-27,25]
+            </me>.
+          </p>
+        </solution>
+      </example>
+
+      <p>
+        In the next exercise,
+        you will manipulate a graph to change its domain and range.
+      </p>
+
+      <exercise>
+        <webwork>
+            <setup>
+
+            <pg-code>
+              Context("Inequalities");
+              Context()->variables->are(x=>'Real',y=>'Real');
+              $dom1 = Compute("2&lt;=x&lt;6");
+              $rng1 = Compute("1.5&lt;=y&lt;3.5");
+              $rng2 = Compute("3&lt;=y&lt;5");
+            </pg-code>
+            </setup>
+            <stage>
+            <statement>
+              <p>
+                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/s4F4ptNM/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              </p>
+
+              <p>
+                The domain of the function <m>f</m> is shown as an interval on the <m>x</m>-axis,
+                while its range is shown as an interval on the <m>y</m>-axis.
+                Click and drag the bottom-left point on the graph to change its domain and range.
+              </p>
+
+              <p>
+                Use <m>x</m> to describe the domain and use <m>y</m> to describe the range.
+              </p>
+
+              <p>
+                Drag the bottom-left point to the location <m>(2, 1.5)</m>.
+              </p>
+
+              <p>
+                The domain is <var name="$dom1" width="8" />
+              </p>
+
+              <p>
+                The range is <var name="$rng1" width="8" />
+              </p>
+            </statement>
+            </stage>
+            <stage>
+            <statement>
+              <p>
+                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/s4F4ptNM/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              </p>
+
+              <p>
+                Drag the graph from the point at the origin to the point <m>(2, 3)</m>.
+              </p>
+
+              <p>
+                The domain is <var name="$dom1" width="8" />
+              </p>
+
+              <p>
+                The range is <var name="$rng2" width="8" />
+              </p>
+            </statement>
+            </stage>
+        </webwork>
+      </exercise>
+    </subsection>
+
+    <subsection>
+      <title>Piecewise Defined Functions</title>
+      <p>
+        A piecewise defined function is actually a collection of two or more functions that tell us how to use an input to get an output.
+        Each function must state the domain on which it is defined,
+        that way you know when to use it.
+      </p>
+
+      <p>
+        We start with some easy, everyday examples of piecewise defined functions.
+      </p>
+
+      <example>
+        <p>
+          The cost of renting a snowboard is <m>\$25</m> per day,
+          or <m>\$60</m> for three days,
+          or <m>\$75</m> for a week.
+        </p>
+
+        <p>
+          The first cost function is <m>\$25</m> per day and is good for <m>1</m> or <m>2</m> days.
+          The domain of this function is the
+          <q><m>1</m> or <m>2</m> days</q>.
+          It tells you when to use this cost function.
+        </p>
+
+        <p>
+          On the third day is a new cost function,
+          a simple constant of <m>\$60</m>.
+        </p>
+
+        <p>
+          Finally, the constant function <m>\$75</m> is used when we keep the snowboard for more than <m>3</m> days,
+          up to <m>7</m> days (a full week).
+        </p>
+
+        <p>
+          Each rule has its own domain that tells us when to use the rule.
+          In <xref ref="figure-snowboard-graph">Figure</xref>,
+          we see the graph of the price function.
+          Notice the graph has a constant output of <m>50</m> when <m>1 \lt x \leq 2</m>,
+          but it immediately changes to <m>60</m> when <m>x \gt 2</m>.
+        </p>
+
+        <figure xml:id="figure-snowboard-graph">
+          <caption>A piecewise defined cost function.</caption>
+          <image width="47%">
+            <description></description>
+
+            <latex-image>
+              <![CDATA[
+                \begin{tikzpicture}
+                  \begin{axis}[xmin=-0.8,xmax=7.8,ymin=-10,ymax=85,ytick={},
+                  minor ytick={}]
+                  \addplot[holdot] coordinates{(0,25)};
+                  \addplot[soldot] coordinates{(1,25)};
+                  \addplot[holdot] coordinates{(1,50)};
+                  \addplot[soldot] coordinates{(2,50)};
+                  \addplot[holdot] coordinates{(2,60)};
+                  \addplot[soldot] coordinates{(3,60)};
+                  \addplot[holdot] coordinates{(3,75)};
+                  \addplot[soldot] coordinates{(4,75)};
+                  \addplot[soldot] coordinates{(5,75)};
+                  \addplot[soldot] coordinates{(6,75)};
+                  \addplot[soldot] coordinates{(7,75)};
+                  \addplot[-,domain=0:1] {25};
+                  \addplot[-,domain=1:2] {50};
+                  \addplot[-,domain=2:3] {60};
+                  \addplot[-,domain=3:7] {75};
+                  \end{axis}
+                \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>
+
+        </figure>
+      </example>
+
+      <example>
+        <p>
+          A hot cup of coffee sits on a counter and begins to cool down.
+          The rate at which the coffee cools is related to the temperature of the coffee and the temperature in the room
+          (there's actually a formula for that).
+          The formula is good for as long the situation in the room remains the same.
+        </p>
+
+        <p>
+          If you suddenly change the room conditions by turning on the air conditioner,
+          then the rate at which the coffee cools will also change.
+          There would be a new formula to model the coffee's temperature after the air conditioner is switched on.
+        </p>
+
+        <p>
+          One formula is good from the time you pour the coffee up until you switch on the air conditioner.
+          Then the other formula takes over after the air conditioner has been turned on.
+        </p>
+      </example>
+
+      <example>
+        <p>
+          In the United States there are <m>7</m> income tax brackets.
+          That means there are <m>7</m> different functions to tell us how much income tax we owe.
+          The function you use is determined by how much money you make.
+        </p>
+
+        <p>
+          In other words, each function has its own domain
+          (income bracket)
+          that tells you when to use the function.
+        </p>
+
+        <p>
+          One family's income will put them in a <m>25\%</m> tax bracket,
+          but another family with a higher income will fall under a higher tax bracket,
+          like <m>28\%</m>.
+        </p>
+      </example>
+
+      <p>
+        To create a piecewise function,
+        start by finding formulas or rules for all the different functions in the set.
+        Then identify the domain for each function.
+      </p>
+
+      <p>
+        When you finally write the piecewise function,
+        write each formula with its corresponding domain to its right.
+      </p>
+
+      <todo>It would be nice if the student could enter their answers in such a way that in the end the answer looks like proper piecewise notation as shown in the solution.</todo>
+
+      <exercise>
+        <webwork>
+            <setup>
+
+            <pg-code>
+                Context()->variables->are(x=>'Real',y=>'Real');
+                $blueLine = ImplicitPlane("y=0.5(x+3)-2");
+                $greenLine = ImplicitPlane("y=3");
+                Context("Inequalities");
+                $answer1 = Compute("-5&lt;=x&lt;0");
+                $answer2 = Compute("1&lt;=x&lt;=4");
+            </pg-code>
+            </setup>
+            <statement>
+              <p>
+                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              </p>
+
+              <p>
+                Find a formula for the piecewise defined function shown in the graph
+              </p>
+
+              <p>
+                What is the equation of the blue line?
+                <var name="$blueLine" width="15" /> and what is its domain?
+                <var name="$answer1" width="5" />
+              </p>
+
+              <p>
+                What is the equation of the green line?
+                <var name="$greenLine" width="15" /> and what is its domain?
+                <var name="$answer2" width="5" />
+              </p>
+
+              <p>
+                Once you have determined the equations and their corresponding domains,
+                group the equations and their domains into one piecewise defined function.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <me>
+                  f(x) = \left\{
                   \begin{array}{ll}
                   0.5x-0.5 \amp -5 \leqslant x \leqslant 0 \\
                   3 \amp 1 \leqslant x \leqslant 4 \\
                   \end{array}
-                  \right.</me>
-                </p>
-              </solution>
-            </webwork>
-          </exercise>
+                  \right.
+                </me>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
 
-          <exercise>
-            <title>Match the Graph to the Piecewise Formula</title>
-            <webwork>
-              <setup>
-                <pg-code>
-                  $one = RadioButtons(
-                  ["Function A","Function B","Function C"],
-                  2, labels => ["Function A","Function B","Function C"],displayLabels => 0
-                  );
-                </pg-code>
-              </setup>
-              <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/UY2xPaVW/width/413/height/300/border/888888" width="413px" height="300px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>
-                  <me>\text{A: } f(x) = \left\{
+      <exercise>
+        <title>Match the Graph to the Piecewise Formula</title>
+        <webwork>
+            <setup>
+
+            <pg-code>
+              $one = RadioButtons(
+              ["Function A","Function B","Function C"],
+              2, labels => ["Function A","Function B","Function C"],displayLabels => 0
+              );
+            </pg-code>
+            </setup>
+            <statement>
+              <p>
+                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/UY2xPaVW/width/413/height/300/border/888888" width="413px" height="300px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              </p>
+
+              <p>
+                <me>
+                  \text{A: } f(x) = \left\{
                   \begin{array}{ll}
                   x^2 \amp 1 \leqslant x \leqslant 3 \\
                   x \amp -2 \leqslant x \leqslant 0 \\
                   \end{array}
-                  \right.</me>
-                </p>
-                <p>
-                  <me>\text{B: } f(x) = \left\{
+                  \right.
+                </me>
+              </p>
+
+              <p>
+                <me>
+                  \text{B: } f(x) = \left\{
                   \begin{array}{ll}
                   x^2 \amp 0 \leqslant x \leqslant 4 \\
                   x \amp 1 \leqslant x \leqslant 3 \\
                   \end{array}
-                  \right.</me>
-                </p>
-                <p>
-                  <me>\text{C: } f(x) = \left\{
+                  \right.
+                </me>
+              </p>
+
+              <p>
+                <me>
+                  \text{C: } f(x) = \left\{
                   \begin{array}{ll}
                   x^2 \amp -2 \leqslant x \lt 0 \\
                   x \amp 1 \lt x \leqslant 3 \\
                   \end{array}
-                  \right.</me>
-                </p>
-                <p><var name="$one" form="buttons" /></p>
-              </statement>
-            </webwork>
-          </exercise>
-      </subsection>
-
-      <subsection>
-        <title>Conclusion</title>
-        <p>Test your understanding of this chapter with the following exercises.</p>
-        <p>Student Learning Outcome: <em>Determine the domain and range of a function.</em></p>
-
-
-        <p>Student Learning Outcome: <em>Define, distinguish, and apply piecewise-defined functions.</em></p>
-
-        <exercise>
-          <webwork>
-            <setup>
-              <pg-code>
-                $cost=Real(60);
-                $units=PopUp(["?","dollars","hours"],"dollars");
-              </pg-code>
-            </setup>
-            <statement>
-              <p><em>Tools of the Trade</em> rental shop will rent a pressure washer for <m>\$35</m> for the first two hours, and <m>\$5</m> for each additional hour, up to a total of <m>8</m> hours. After this, you will pay the full-day price for <m>24</m> hours, which costs <m>\$65</m>. Note: You cannot pay for a partial hour. If you keep the washer <m>3</m> hours and <m>1</m> minute, you will be charged for <m>4</m> full hours.</p>
-              <p>If you rented the washer at <m>9{:}15</m> a.m. and returned it at <m>3{:}45</m> on the same day, what would you owe?</p>
-              <p>Answer:  <var name="$cost" width="10" /> <var name="$units" form="popup" /></p>
-            </statement>
-            <solution>
-              <p>You already owe <m>\$35</m> for the first <m>2</m> hours, and you've kept the washer an additional <m>4.5</m> hours. Therefore, you will be charged <m>\$25</m> for <m>5</m> additional hours.</p>
-              <p>Your bill will be <m>35 + 25 = 60</m> dollars.</p>
-            </solution>
-          </webwork>
-        </exercise>
-
-        <exercise>
-          <webwork>
-            <setup>
-              <pg-code>
-                $input1=random(5,19,1);
-                $output1=Compute("$input1*12.5");
-                $output1units=PopUp(["?","dollars","shirts"],"dollars");
-                $input2=random(21,49,1);
-                $output2=Compute("250+($input2-20)*11");
-                $input2units=PopUp(["?","dollars","shirts"],"shirts");
-              </pg-code>
-            </setup>
-            <statement>
-              <p>A T-shirt printer sells custom-printed shirts for <m>\$ 12.50</m> each for the first <m>20</m> shirts, dropping the price to <m>\$ 11.00</m> for each additional shirt, up to a maximum order of <m>50</m> shirts.</p>
-              <p>Let the function <m>P(S)</m> represent the price (in dollars) of ordering <m>S</m> shirts.</p>
-              <p><ol label ="a">
-                <li><p>What is <m>P\left(<var name="$input1" />\right)</m>?</p>
-                <p>Answer: <var name="$output1" width="10" /> <var name="$output1units" form="popup" /></p></li>
-                <li><p>Solve the equation: <m>P(S) = <var name="$output2" /></m></p>
-                <p>Answer: <m>S = </m><var name="$input2" width="10" /> <var name="$input2units" width="popup" /></p></li>
-              </ol></p>
-            </statement>
-            <solution>
-              <p><ol label="a">
-                <li><p><m>P(<var name="$input1" />) = <var name="$output1" /> <var name="$output1units" /></m></p></li>
-                <li><p><m>S = <var name="$input2" /> <var name="$input2units" /></m></p></li>
-              </ol></p>
-            </solution>
-          </webwork>
-        </exercise>
-
-        <exercise>
-          <webwork>
-            <setup>
-
-              <pg-code>
-                $ans1=Real(3);
-                $ans2=Real(2);
-                $ans3=PopUp(["?","one","two","three","infinitely many"],"two");
-                $ans4=PopUp(["?","one","two","three","infinitely many"],"infinitely many");
-              </pg-code>
-            </setup>
-            <statement>
-              <p>
-                <me>f(x) = \left\{
-                \begin{array}{ll}
-                1-x \amp x \leqslant -1 \\
-                2 \amp -1 \lt x \lt 1 \\
-                1+x \amp x \geqslant 1 \\
-                \end{array}
-                \right.</me>
+                  \right.
+                </me>
               </p>
+
               <p>
-                <ol label="a">
+                <var name="$one" form="buttons" />
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+    </subsection>
+
+    <subsection>
+      <title>Conclusion</title>
+      <p>
+        Test your understanding of this chapter with the following exercises.
+      </p>
+
+      <p>
+        Student Learning Outcome:
+        <em>Determine the domain and range of a function.</em>
+      </p>
+
+      <p>
+        Student Learning Outcome:
+        <em>Define, distinguish, and apply piecewise-defined functions.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+            <setup>
+
+            <pg-code>
+              $cost=Real(60);
+              $units=PopUp(["?","dollars","hours"],"dollars");
+            </pg-code>
+            </setup>
+            <statement>
+              <p>
+                <em>Tools of the Trade</em> rental shop will rent a pressure washer for <m>\$35</m> for the first two hours,
+                and <m>\$5</m> for each additional hour,
+                up to a total of <m>8</m> hours.
+                After this, you will pay the full-day price for <m>24</m> hours,
+                which costs <m>\$65</m>.
+                Note:
+                You cannot pay for a partial hour.
+                If you keep the washer <m>3</m> hours and <m>1</m> minute,
+                you will be charged for <m>4</m> full hours.
+              </p>
+
+              <p>
+                If you rented the washer at <m>9{:}15</m> a.m. and returned it at <m>3{:}45</m> on the same day,
+                what would you owe?
+              </p>
+
+              <p>
+                Answer:
+                <var name="$cost" width="10" /> <var name="$units" form="popup" />
+              </p>
+            </statement>
+            <solution>
+              <p>
+                You already owe <m>\$35</m> for the first <m>2</m> hours,
+                and you've kept the washer an additional <m>4.5</m> hours.
+                Therefore, you will be charged <m>\$25</m> for <m>5</m> additional hours.
+              </p>
+
+              <p>
+                Your bill will be <m>35 + 25 = 60</m> dollars.
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+            <setup>
+
+            <pg-code>
+              $input1=random(5,19,1);
+              $output1=Compute("$input1*12.5");
+              $output1units=PopUp(["?","dollars","shirts"],"dollars");
+              $input2=random(21,49,1);
+              $output2=Compute("250+($input2-20)*11");
+              $input2units=PopUp(["?","dollars","shirts"],"shirts");
+            </pg-code>
+            </setup>
+            <statement>
+              <p>
+                A T-shirt printer sells custom-printed shirts for
+                <m>\$ 12.50</m> each for the first <m>20</m> shirts,
+                dropping the price to <m>\$ 11.00</m> for each additional shirt,
+                up to a maximum order of <m>50</m> shirts.
+              </p>
+
+              <p>
+                Let the function <m>P(S)</m> represent the price
+                (in dollars)
+                of ordering <m>S</m> shirts.
+              </p>
+
+              <p>
+                <ol label ="a">
                   <li>
-                    <p>Evaluate <m>f(-2)</m>. Answer: <var name="$ans1" width="10" /></p>
+                    <p>
+                      What is <m>P\left(<var name="$input1" />\right)</m>?
+                    </p>
+
+                    <p>
+                      Answer:
+                      <var name="$output1" width="10" /> <var name="$output1units" form="popup" />
+                    </p>
                   </li>
+
                   <li>
-                    <p>Evaluate <m>f(1)</m>. Answer: <var name="$ans2" width="10" /></p>
-                  </li>
-                  <li>
-                    <p>How many solutions are there to the equation <m>f(x) = 2</m>?</p>
-                    <p>Answer: <var name="$ans3" form="popup" /></p>
-                  </li>
-                  <li>
-                    <p>How many solutions are there to the equation <m>f(x) = 3</m>?</p>
-                    <p>Answer: <var name="$ans4" form="popup" /></p>
+                    <p>
+                      Solve the equation:
+                      <m>P(S) = <var name="$output2" /></m>
+                    </p>
+
+                    <p>
+                      Answer:
+                      <m>S = </m><var name="$input2" width="10" /> <var name="$input2units" width="popup" />
+                    </p>
                   </li>
                 </ol>
               </p>
@@ -397,36 +754,134 @@
               <p>
                 <ol label="a">
                   <li>
-                    <p><m>f(-2) = 1 - (-2) = 3</m></p>
+                    <p>
+                      <m>P(<var name="$input1" />) = <var name="$output1" /> <var name="$output1units" /></m>
+                    </p>
                   </li>
+
                   <li>
-                    <p><m>f(1) = 1 + 1 = 2</m></p>
-                  </li>
-                  <li>
-                    <p>Only the first and last parts of the piecewise function can have an output of <m>3</m>, and they are <m>x = -2</m> and <m>x = 2</m>.</p>
-                  </li>
-                  <li>
-                    <p>There are infinitely many solutions to <m>f(x) = 2</m>, because any input between <m>-1</m> and <m>1</m> will give an output of <m>2</m>. Examples: <m>x = -0.3546</m> and <m>x = 4/5</m></p>
+                    <p>
+                      <m>S = <var name="$input2" /> <var name="$input2units" /></m>
+                    </p>
                   </li>
                 </ol>
               </p>
             </solution>
-          </webwork>
-        </exercise>
+        </webwork>
+      </exercise>
 
+      <exercise>
+        <webwork>
+            <setup>
 
+            <pg-code>
+              $ans1=Real(3);
+              $ans2=Real(2);
+              $ans3=PopUp(["?","one","two","three","infinitely many"],"two");
+              $ans4=PopUp(["?","one","two","three","infinitely many"],"infinitely many");
+            </pg-code>
+            </setup>
+            <statement>
+              <p>
+                <me>
+                  f(x) = \left\{
+                  \begin{array}{ll}
+                  1-x \amp x \leqslant -1 \\
+                  2 \amp -1 \lt x \lt 1 \\
+                  1+x \amp x \geqslant 1 \\
+                  \end{array}
+                  \right.
+                </me>
+              </p>
 
+              <p>
+                <ol label="a">
+                  <li>
+                    <p>
+                      Evaluate <m>f(-2)</m>.
+                      Answer:
+                      <var name="$ans1" width="10" />
+                    </p>
+                  </li>
 
+                  <li>
+                    <p>
+                      Evaluate <m>f(1)</m>.
+                      Answer:
+                      <var name="$ans2" width="10" />
+                    </p>
+                  </li>
 
+                  <li>
+                    <p>
+                      How many solutions are there to the equation <m>f(x) = 2</m>?
+                    </p>
 
-      </subsection>
+                    <p>
+                      Answer:
+                      <var name="$ans3" form="popup" />
+                    </p>
+                  </li>
 
+                  <li>
+                    <p>
+                      How many solutions are there to the equation <m>f(x) = 3</m>?
+                    </p>
 
+                    <p>
+                      Answer:
+                      <var name="$ans4" form="popup" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <ol label="a">
+                  <li>
+                    <p>
+                      <m>f(-2) = 1 - (-2) = 3</m>
+                    </p>
+                  </li>
 
+                  <li>
+                    <p>
+                      <m>f(1) = 1 + 1 = 2</m>
+                    </p>
+                  </li>
 
-<exercises>
+                  <li>
+                    <p>
+                      Only the first and last parts of the piecewise function can have an output of <m>3</m>,
+                      and they are <m>x = -2</m> and <m>x = 2</m>.
+                    </p>
+                  </li>
 
-<exercisegroup><introduction><p>Domain and Range</p></introduction>
+                  <li>
+                    <p>
+                      There are infinitely many solutions to <m>f(x) = 2</m>,
+                      because any input between <m>-1</m> and <m>1</m> will give an output of <m>2</m>.
+                      Examples:
+                      <m>x = -0.3546</m> and <m>x = 4/5</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+    </subsection>
+
+    <exercises>
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Domain and Range
+          </p>
+        </introduction>
+
         <exercise>
           <webwork source="Library/Mizzou/Algebra/functions_domain_range/fun_dom_15.pg" seed="1" />
         </exercise>
@@ -450,128 +905,293 @@
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec2/Q23.pg" seed="1" />
         </exercise>
-</exercisegroup>
 
-<exercisegroup><introduction><p>Evaluating Piecewise Functions</p></introduction>
+      </exercisegroup>
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Evaluating Piecewise Functions
+          </p>
+        </introduction>
 
         <exercise>
           <webwork>
-            <setup>
-              <pg-code>
-                $cost=Real(60);
-                $units=PopUp(["?","dollars","hours"],"dollars");
-              </pg-code>
-            </setup>
-            <statement>
-              <p><em>Tools of the Trade</em> rental shop will rent a pressure washer for <m>\$35</m> for the first two hours, and <m>\$5</m> for each additional hour, up to a total of <m>8</m> hours. After this, you will pay the full-day price for <m>24</m> hours, which costs <m>\$65</m>. Note: You cannot pay for a partial hour. If you keep the washer <m>3</m> hours and <m>1</m> minute, you will be charged for <m>4</m> full hours.</p>
-              <p>If you rented the washer at <m>9{:}15</m> a.m. and returned it at <m>3{:}45</m> on the same day, what would you owe?</p>
-              <p>Answer:  <var name="$cost" width="10" /> <var name="$units" form="popup" /></p>
-            </statement>
-            <solution>
-              <p>You already owe <m>\$35</m> for the first <m>2</m> hours, and you've kept the washer an additional <m>4.5</m> hours. Therefore, you will be charged <m>\$25</m> for <m>5</m> additional hours.</p>
-              <p>Your bill will be <m>35 + 25 = 60</m> dollars.</p>
-            </solution>
+              <setup>
+
+            <pg-code>
+              $cost=Real(60);
+              $units=PopUp(["?","dollars","hours"],"dollars");
+            </pg-code>
+              </setup>
+              <statement>
+                <p>
+                  <em>Tools of the Trade</em> rental shop will rent a pressure washer for <m>\$35</m> for the first two hours,
+                  and <m>\$5</m> for each additional hour,
+                  up to a total of <m>8</m> hours.
+                  After this, you will pay the full-day price for <m>24</m> hours,
+                  which costs <m>\$65</m>.
+                  Note:
+                  You cannot pay for a partial hour.
+                  If you keep the washer <m>3</m> hours and <m>1</m> minute,
+                  you will be charged for <m>4</m> full hours.
+                </p>
+
+                <p>
+                  If you rented the washer at <m>9{:}15</m> a.m. and returned it at <m>3{:}45</m> on the same day,
+                  what would you owe?
+                </p>
+
+                <p>
+                  Answer:
+                  <var name="$cost" width="10" /> <var name="$units" form="popup" />
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  You already owe <m>\$35</m> for the first <m>2</m> hours,
+                  and you've kept the washer an additional <m>4.5</m> hours.
+                  Therefore, you will be charged <m>\$25</m> for <m>5</m> additional hours.
+                </p>
+
+                <p>
+                  Your bill will be <m>35 + 25 = 60</m> dollars.
+                </p>
+              </solution>
           </webwork>
         </exercise>
 
         <exercise>
           <webwork>
-            <setup>
-              <pg-code>
-                $input1=random(5,19,1);
-                $output1=Compute("$input1*12.5");
-                $output1units=PopUp(["?","dollars","shirts"],"dollars");
-                $input2=random(21,49,1);
-                $output2=Compute("250+($input2-20)*11");
-                $input2units=PopUp(["?","dollars","shirts"],"shirts");
-              </pg-code>
-            </setup>
-            <statement>
-              <p>A T-shirt printer sells custom-printed shirts for <m>\$ 12.50</m> each for the first <m>20</m> shirts, dropping the price to <m>\$ 11.00</m> for each additional shirt, up to a maximum order of <m>50</m> shirts.</p>
-              <p>Let the function <m>P(S)</m> represent the price (in dollars) of ordering <m>S</m> shirts.</p>
-              <p><ol label ="a">
-                <li><p>What is <m>P\left(<var name="$input1" />\right)</m>?</p>
-                <p>Answer: <var name="$output1" width="10" /> <var name="$output1units" form="popup" /></p></li>
-                <li><p>Solve the equation: <m>P(S) = <var name="$output2" /></m></p>
-                <p>Answer: <m>S = </m><var name="$input2" width="10" /> <var name="$input2units" width="popup" /></p></li>
-              </ol></p>
-            </statement>
-            <solution>
-              <p><ol label="a">
-                <li><p><m>P(<var name="$input1" />) = <var name="$output1" /> <var name="$output1units" /></m></p></li>
-                <li><p><m>S = <var name="$input2" /> <var name="$input2units" /></m></p></li>
-              </ol></p>
-            </solution>
+              <setup>
+
+            <pg-code>
+              $input1=random(5,19,1);
+              $output1=Compute("$input1*12.5");
+              $output1units=PopUp(["?","dollars","shirts"],"dollars");
+              $input2=random(21,49,1);
+              $output2=Compute("250+($input2-20)*11");
+              $input2units=PopUp(["?","dollars","shirts"],"shirts");
+            </pg-code>
+              </setup>
+              <statement>
+                <p>
+                  A T-shirt printer sells custom-printed shirts for
+                  <m>\$ 12.50</m> each for the first <m>20</m> shirts,
+                  dropping the price to <m>\$ 11.00</m> for each additional shirt,
+                  up to a maximum order of <m>50</m> shirts.
+                </p>
+
+                <p>
+                  Let the function <m>P(S)</m> represent the price
+                  (in dollars)
+                  of ordering <m>S</m> shirts.
+                </p>
+
+                <p>
+                  <ol label ="a">
+                    <li>
+                      <p>
+                        What is <m>P\left(<var name="$input1" />\right)</m>?
+                      </p>
+
+                      <p>
+                        Answer:
+                        <var name="$output1" width="10" /> <var name="$output1units" form="popup" />
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Solve the equation:
+                        <m>P(S) = <var name="$output2" /></m>
+                      </p>
+
+                      <p>
+                        Answer:
+                        <m>S = </m><var name="$input2" width="10" /> <var name="$input2units" width="popup" />
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>
+                        <m>P(<var name="$input1" />) = <var name="$output1" /> <var name="$output1units" /></m>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>S = <var name="$input2" /> <var name="$input2units" /></m>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
           </webwork>
         </exercise>
 
         <exercise>
           <webwork>
-            <setup>
-              <pg-code>
-                $height1=Real(0);
-                $height2=Real(8);
-                $units=PopUp(["?","feet","seconds"],"feet");
-              </pg-code>
-            </setup>
-            <statement>
-              <p>A tennis ball is dropped from a height of <m>16</m> feet. It's height (in feet) above the ground can be modeled by the piecewise function <me>H(t) = \left\{
-              \begin{array}{ll}
-              16(1 - t^2) \amp 0 \leq t \leq 1 \\
-              (4 - 4t)(4t - 10) \amp 1 \lt t \leq 2.5 \\
-              \end{array}
-              \right. </me>where <m>t</m> is measured in seconds after it was dropped.</p>
-              <p><ol label="a">
-                <li><p>What is <m>H(1)</m>?</p>
-                <p>Answer:  <var name="$height1" width="10" /> <var name="$units" form="popup" /></p></li>
-                <li><p>What is <m>H(2)</m>?</p>
-                <p>Answer:  <var name="$height2" width="10" /> <var name="$units" form="popup" /></p></li>
-              </ol></p>
-            </statement>
-            <solution>
-              <p><ol label="a">
-                <li><p><md><mrow>H(1) \amp= 16(1 - 1^2)</mrow>
-                <mrow>\amp= 0 \text{feet}</mrow></md></p></li>
-                <li><p><md><mrow>H(2) \amp= (4 - 4(2))(4(2) - 10)</mrow>
-                <mrow>\amp= 8 \text{feet}</mrow></md></p></li>
-              </ol></p>
-            </solution>
+              <setup>
+
+            <pg-code>
+              $height1=Real(0);
+              $height2=Real(8);
+              $units=PopUp(["?","feet","seconds"],"feet");
+            </pg-code>
+              </setup>
+              <statement>
+                <p>
+                  A tennis ball is dropped from a height of <m>16</m> feet.
+                  It's height
+                  (in feet)
+                  above the ground can be modeled by the piecewise function
+                  <me>
+                    H(t) = \left\{
+                    \begin{array}{ll}
+                    16(1 - t^2) \amp 0 \leq t \leq 1 \\
+                    (4 - 4t)(4t - 10) \amp 1 \lt t \leq 2.5 \\
+                    \end{array}
+                    \right.
+                  </me>
+                  where <m>t</m> is measured in seconds after it was dropped.
+                </p>
+
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>
+                        What is <m>H(1)</m>?
+                      </p>
+
+                      <p>
+                        Answer:
+                        <var name="$height1" width="10" /> <var name="$units" form="popup" />
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        What is <m>H(2)</m>?
+                      </p>
+
+                      <p>
+                        Answer:
+                        <var name="$height2" width="10" /> <var name="$units" form="popup" />
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>
+                        <md>
+                          <mrow>H(1) \amp= 16(1 - 1^2)</mrow>
+                          <mrow>\amp= 0 \text{feet}</mrow>
+                        </md>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <md>
+                          <mrow>H(2) \amp= (4 - 4(2))(4(2) - 10)</mrow>
+                          <mrow>\amp= 8 \text{feet}</mrow>
+                        </md>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
           </webwork>
         </exercise>
 
         <exercise>
           <webwork>
-            <setup>
-              <pg-code>
-                $height1=random(10,15,1);
-                $time1=Compute("($height1/-16+1)^(1/2)");
-                $units=PopUp(["?","feet","seconds"],"seconds");
-                $time2=Real(2.5);
-              </pg-code>
-            </setup>
-            <statement>
-              <p>A tennis ball is dropped from a height of <m>16</m> feet. It's height (in feet) above the ground can be modeled by the piecewise function <me>H(t) = \left\{
-              \begin{array}{ll}
-              16(1 - t^2) \amp 0 \leq t \leq 1 \\
-              (4 - 4t)(4t - 10) \amp 1 \lt t \leq 2.5 \\
-              \end{array}
-              \right. </me>where <m>t</m> is measured in seconds after it was dropped.</p>
-              <p><ol label="a">
-                <li><p>Solve the equation <m>H(t) = <var name="$height1" /></m>?</p>
-                <p>Answer:  <m>t = </m><var name="$time1" width="10" /> <var name="$units" form="popup" /></p></li>
-                <li><p>One solution to the equation <m>H(t) = 0</m> is <m>t = 1</m> second. What is the other solution?</p>
-                <p>Answer:  <m>t = </m><var name="$time2" width="10" /> <var name="$units" form="popup" /></p></li>
-              </ol></p>
-            </statement>
-            <solution>
-              <p><ol label="a">
-                <li><p><md><mrow>16(1 - t^2) \amp= <var name="$height1" /></mrow>
-                <mrow>1 - t^2 \amp= \frac{<var name="$height1" />}{16}</mrow>
-                <mrow>t^2 \amp= 1 - \frac{<var name="$height1" />}{16}</mrow>
-                <mrow>t \amp= \sqrt{1 - \frac{<var name="$height1" />}{16}}</mrow></md></p></li>
-                <li><p><m>t = 2.5</m> seconds</p></li>
-              </ol></p>
-            </solution>
+              <setup>
+
+            <pg-code>
+              $height1=random(10,15,1);
+              $time1=Compute("($height1/-16+1)^(1/2)");
+              $units=PopUp(["?","feet","seconds"],"seconds");
+              $time2=Real(2.5);
+            </pg-code>
+              </setup>
+              <statement>
+                <p>
+                  A tennis ball is dropped from a height of <m>16</m> feet.
+                  It's height
+                  (in feet)
+                  above the ground can be modeled by the piecewise function
+                  <me>
+                    H(t) = \left\{
+                    \begin{array}{ll}
+                    16(1 - t^2) \amp 0 \leq t \leq 1 \\
+                    (4 - 4t)(4t - 10) \amp 1 \lt t \leq 2.5 \\
+                    \end{array}
+                    \right.
+                  </me>
+                  where <m>t</m> is measured in seconds after it was dropped.
+                </p>
+
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>
+                        Solve the equation <m>H(t) = <var name="$height1" /></m>?
+                      </p>
+
+                      <p>
+                        Answer:
+                        <m>t = </m><var name="$time1" width="10" /> <var name="$units" form="popup" />
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        One solution to the equation
+                        <m>H(t) = 0</m> is <m>t = 1</m> second.
+                        What is the other solution?
+                      </p>
+
+                      <p>
+                        Answer:
+                        <m>t = </m><var name="$time2" width="10" /> <var name="$units" form="popup" />
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>
+                        <md>
+                          <mrow>16(1 - t^2) \amp= <var name="$height1" /></mrow>
+                          <mrow>1 - t^2 \amp= \frac{<var name="$height1" />}{16}</mrow>
+                          <mrow>t^2 \amp= 1 - \frac{<var name="$height1" />}{16}</mrow>
+                          <mrow>t \amp= \sqrt{1 - \frac{<var name="$height1" />}{16}}</mrow>
+                        </md>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>t = 2.5</m> seconds
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
           </webwork>
         </exercise>
 
@@ -594,9 +1214,16 @@
         <exercise>
           <webwork source="Library/Mizzou/Algebra/functions_piecewise/evaluate_at_a_point_03.pg" seed="1" />
         </exercise>
-</exercisegroup>
 
-<exercisegroup><introduction><p>Formulas for Piecewise Functions</p></introduction>
+      </exercisegroup>
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Formulas for Piecewise Functions
+          </p>
+        </introduction>
+
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec3/Connally3-2-3-02-Piecewise-functions.pg" seed="1" />
         </exercise>
@@ -609,12 +1236,17 @@
           <webwork source="Library/Mizzou/Algebra/functions_piecewise/mc_determine_graph_01.pg" seed="1" />
         </exercise>
 
-</exercisegroup>
-<exercisegroup><introduction><p>Additional Problems</p></introduction>
+      </exercisegroup>
+      <exercisegroup>
 
-</exercisegroup>
+        <introduction>
+          <p>
+            Additional Problems
+          </p>
+        </introduction>
 
-      </exercises>
-    </section>
-
+      </exercisegroup>
+    </exercises>
+  </section>
 </chapter>
+

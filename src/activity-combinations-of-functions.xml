@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -10,14 +9,19 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-
 <section xml:id="activity-combinations-of-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Combinations of Functions</title>
+  <p>
+    There are many ways and reasons to combine two or more functions together.
+    In the first exercise,
+    you will combine two functions in the context of performing a familiar activity:
+    paying bills
+  </p>
 
-    <p>There are many ways and reasons to combine two or more functions together. In the first exercise, you will combine two functions in the context of performing a familiar activity: paying bills</p>
-    <exercise>
-      <webwork>
+  <exercise>
+    <webwork>
         <setup>
+
           <pg-code>
             $heat=random(80,120,5);
             $water=random(20,50,5);
@@ -31,39 +35,95 @@
           </pg-code>
         </setup>
         <stage>
-          <statement>
-            <p>Suppose you are only responsible to pay the heating and water bills each month. These bills change each month, depending on how warm you keep your house and on how much water you use.</p>
-            <p>Let <m>h(x)</m> represent the heating bill (in dollars) for month <m>x</m>, and let <m>w(x)</m> represent the water bill (in dollars) for month <m>x</m>.</p>
-            <p>Suppose <m>h(2) = <var name="$heat" /></m> and <m>w(2) = <var name="$water" /></m>.</p>
-            <p>Now, let <m>b(x)</m> represent the total amount you must pay in bills for month <m>x</m>. What is <m>b(2)</m>?</p>
-            <p>Answer:  <var name="$billNumber" width="15" /> dollars</p>
-          </statement>
-          <solution>
-            <p>The function <m>b(x)</m> is just the sum of the functions <m>h(x)</m> and <m>w(x)</m>, so: <md>
-            <mrow>b(2) \amp= h(2) + w(2)</mrow>
-            <mrow>\amp= <var name="$heat" /> + <var name="$water" /></mrow>
-            <mrow>\amp= <var name="$billNumber" /></mrow></md></p>
-          </solution>
+        <statement>
+          <p>
+            Suppose you are only responsible to pay the heating and water bills each month.
+            These bills change each month,
+            depending on how warm you keep your house and on how much water you use.
+          </p>
+
+          <p>
+            Let <m>h(x)</m> represent the heating bill
+            (in dollars)
+            for month <m>x</m>, and let <m>w(x)</m> represent the water bill
+            (in dollars)
+            for month <m>x</m>.
+          </p>
+
+          <p>
+            Suppose <m>h(2) = <var name="$heat" /></m> and <m>w(2) = <var name="$water" /></m>.
+          </p>
+
+          <p>
+            Now, let <m>b(x)</m> represent the total amount you must pay in bills for month <m>x</m>.
+            What is <m>b(2)</m>?
+          </p>
+
+          <p>
+            Answer:
+            <var name="$billNumber" width="15" /> dollars
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The function <m>b(x)</m> is just the sum of the functions <m>h(x)</m> and <m>w(x)</m>, so:
+            <md>
+              <mrow>b(2) \amp= h(2) + w(2)</mrow>
+              <mrow>\amp= <var name="$heat" /> + <var name="$water" /></mrow>
+              <mrow>\amp= <var name="$billNumber" /></mrow>
+            </md>
+          </p>
+        </solution>
         </stage>
         <stage>
-          <statement>
-            <p>The heating bill is <m>h(x)</m> and the water bill is <m>w(x)</m>.</p>
-            <p>For any month <m>x</m>, what is <m>b(x)</m>?</p>
-            <p>Answer:  <var name="$billExpression" width="15" /></p>
-          </statement>
-          <solution>
-            <p>In general, we have: <me>b(x) = h(x) + w(x)</me></p>
-          </solution>
+        <statement>
+          <p>
+            The heating bill is <m>h(x)</m> and the water bill is <m>w(x)</m>.
+          </p>
+
+          <p>
+            For any month <m>x</m>, what is <m>b(x)</m>?
+          </p>
+
+          <p>
+            Answer:
+            <var name="$billExpression" width="15" />
+          </p>
+        </statement>
+        <solution>
+          <p>
+            In general, we have:
+            <me>
+              b(x) = h(x) + w(x)
+            </me>
+          </p>
+        </solution>
         </stage>
-      </webwork>
-    </exercise>
-    <p>If you need to add two functions together, such as <m>f(x)+g(x)</m>, this represents a <term>combination of functions</term><idx><h>combination of functions</h></idx><idx><h>function</h><h>combinations</h></idx>.</p>
-    <p>This combination is actually a new function of <m>x</m>, whose output is just the sum of the outputs of the functions <m>f</m> and <m>g</m>.</p>
-    <p>Of course, there are other ways to combine the outputs of two or more functions. In the next exercise, you will practice evaluating other function combinations.</p>
+    </webwork>
+  </exercise>
+
+  <p>
+    If you need to add two functions together, such as <m>f(x)+g(x)</m>,
+    this represents a <term>combination of functions</term>.
+        <idx><h>combination of functions</h></idx>
+        <idx><h>function</h><h>combinations</h></idx>
+  </p>
+
+  <p>
+    This combination is actually a new function of <m>x</m>,
+    whose output is just the sum of the outputs of the functions <m>f</m> and <m>g</m>.
+  </p>
+
+  <p>
+    Of course, there are other ways to combine the outputs of two or more functions.
+    In the next exercise,
+    you will practice evaluating other function combinations.
+  </p>
 
   <exercise>
     <webwork>
-      <setup>
+        <setup>
+
         <pg-code>
           $x=random(2,4,1);
           $M=random(5,8,1);
@@ -73,55 +133,134 @@
           $p=$M*$N;
           $q=$M/$N;
         </pg-code>
-      </setup>
-      <stage>
+        </setup>
+        <stage>
         <statement>
-          <p>Suppose we have the following facts about functions <m>M</m> and <m>N</m>:</p>
-          <p><md><mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow><mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow></md></p>
-          <p>If we define a new function <me>s(x) = M(x) + N(x)</me> then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.</p>
-          <p>Answer: <m>s(<var name="$x" />)</m> = <var name="$s" width="10" /></p>
+          <p>
+            Suppose we have the following facts about functions <m>M</m> and <m>N</m>:
+          </p>
+
+          <p>
+            <md>
+              <mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow>
+              <mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow>
+            </md>
+          </p>
+
+          <p>
+            If we define a new function
+            <me>
+              s(x) = M(x) + N(x)
+            </me>
+            then we could evaluate <m>s(<var name="$x" />)</m> by merely adding <m>M(<var name="$x" />)</m> and <m>N(<var name="$x" />)</m>.
+          </p>
+
+          <p>
+            Answer:
+            <m>s(<var name="$x" />)</m> = <var name="$s" width="10" />
+          </p>
         </statement>
         <solution>
-          <p><m>s(<var name="$x" />) = </m><var name="$s" /></p>
+          <p>
+            <m>s(<var name="$x" />) = </m><var name="$s" />
+          </p>
         </solution>
-      </stage>
-      <stage>
+        </stage>
+        <stage>
         <statement>
-          <p>Again, we know that: <md><mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow><mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow></md></p>
-          <p>Now, here are three other combinations of <m>M</m> and <m>N</m>:</p>
-          <p><md><mrow>d(x) \amp= M(x) - N(x)</mrow><mrow>p(x) \amp= M(x) \cdot N(x)</mrow><mrow>q(x) \amp= \frac{M(x)}{N(x)}</mrow></md></p>
-          <p>Using these definitions, evaluate each of the following:</p>
-          <p><ul>
-            <li><p><m>d(</m><var name="$x" /><m>) = </m><var name="$d" width="10" /></p></li>
-            <li><p><m>p(</m><var name="$x" /><m>) = </m><var name="$p" width="10" /></p></li>
-            <li><p><m>q(</m><var name="$x" /><m>) = </m><var name="$q" width="10" /></p></li>
-          </ul></p>
+          <p>
+            Again, we know that:
+            <md>
+              <mrow>M(<var name="$x" />) \amp= <var name="$M" /></mrow>
+              <mrow>N(<var name="$x" />) \amp= <var name="$N" /></mrow>
+            </md>
+          </p>
+
+          <p>
+            Now, here are three other combinations of <m>M</m> and <m>N</m>:
+          </p>
+
+          <p>
+            <md>
+              <mrow>d(x) \amp= M(x) - N(x)</mrow>
+              <mrow>p(x) \amp= M(x) \cdot N(x)</mrow>
+              <mrow>q(x) \amp= \frac{M(x)}{N(x)}</mrow>
+            </md>
+          </p>
+
+          <p>
+            Using these definitions, evaluate each of the following:
+          </p>
+
+          <p>
+            <ul>
+              <li>
+                <p>
+                  <m>d(</m><var name="$x" /><m>) = </m><var name="$d" width="10" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>p(</m><var name="$x" /><m>) = </m><var name="$p" width="10" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>q(</m><var name="$x" /><m>) = </m><var name="$q" width="10" />
+                </p>
+              </li>
+            </ul>
+          </p>
         </statement>
         <solution>
-          <p><ul>
-            <li><p><md>
-              <mrow>d(<var name="$x" />) \amp= <var name="$M" /> - <var name="$N" /></mrow>
-              <mrow>\amp= <var name="$d" /></mrow>
-            </md></p></li>
-            <li><p><md>
-              <mrow>p(<var name="$x" />) \amp= <var name="$M" /> \cdot <var name="$N" /></mrow>
-              <mrow>\amp= <var name="$p" /></mrow>
-            </md></p></li>
-            <li><p><md>
-              <mrow>q(<var name="$x" />) \amp= \frac{<var name="$M" />}{<var name="$N" />}</mrow>
-              <mrow>\amp= <var name="$q" /></mrow>
-            </md></p></li>
-          </ul></p>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  <md>
+                    <mrow>d(<var name="$x" />) \amp= <var name="$M" /> - <var name="$N" /></mrow>
+                    <mrow>\amp= <var name="$d" /></mrow>
+                  </md>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <md>
+                    <mrow>p(<var name="$x" />) \amp= <var name="$M" /> \cdot <var name="$N" /></mrow>
+                    <mrow>\amp= <var name="$p" /></mrow>
+                  </md>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <md>
+                    <mrow>q(<var name="$x" />) \amp= \frac{<var name="$M" />}{<var name="$N" />}</mrow>
+                    <mrow>\amp= <var name="$q" /></mrow>
+                  </md>
+                </p>
+              </li>
+            </ul>
+          </p>
         </solution>
-      </stage>
+        </stage>
     </webwork>
   </exercise>
-  <p>Again, combining functions just means <q>doing arithmetic</q> on the outputs of functions. In context, we should be able to describe the meaning of different function combinations.</p>
 
+  <p>
+    Again, combining functions just means
+    <q>doing arithmetic</q>
+    on the outputs of functions.
+    In context, we should be able to describe the meaning of different function combinations.
+  </p>
 
   <exercise>
     <webwork>
-      <setup>
+        <setup>
+
         <pg-code>
           $revenue=PopUp(
           ["?","c(t)p(t)","p(t)q(t)","c(t)q(t)"],"p(t)q(t)"
@@ -133,69 +272,184 @@
           ["?","You sell it for 40 cents more than you paid for it.","You sell it for 40 percent more than you paid for it.","You paid 1.40 for the item."],"You sell it for 40 percent more than you paid for it."
           );
         </pg-code>
-      </setup>
-      <stage>
+        </setup>
+        <stage>
         <statement>
-          <p>For your business, you buy a certain type of item from the manufacturer, and then you sell it to your customers at a mark-up. That is, you sell it for more than you bought it.</p>
-          <p>You are concerned with the following functions regarding this item.</p>
-          <p><ul>
-            <li><p>In month <m>t</m>, the function <m>c(t)</m> represents your cost to buy one of the items.</p></li>
-            <li><p>In month <m>t</m>, the function <m>p(t)</m> represents the price you sell the item for.</p></li>
-            <li><p>In month <m>t</m>, the function <m>q(t)</m> represents the total quantity of the items you sell that month.</p></li>
-          </ul></p>
-          <p>Which function combination represents the total amount your customers paid you for all the items you sell?</p>
-          <p>Answer:  <var name="$revenue" form="popup" /></p>
+          <p>
+            For your business,
+            you buy a certain type of item from the manufacturer,
+            and then you sell it to your customers at a mark-up.
+            That is, you sell it for more than you bought it.
+          </p>
+
+          <p>
+            You are concerned with the following functions regarding this item.
+          </p>
+
+          <p>
+            <ul>
+              <li>
+                <p>
+                  In month <m>t</m>,
+                  the function <m>c(t)</m> represents your cost to buy one of the items.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  In month <m>t</m>,
+                  the function <m>p(t)</m> represents the price you sell the item for.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  In month <m>t</m>,
+                  the function <m>q(t)</m> represents the total quantity of the items you sell that month.
+                </p>
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            Which function combination represents the total amount your customers paid you for all the items you sell?
+          </p>
+
+          <p>
+            Answer:
+            <var name="$revenue" form="popup" />
+          </p>
         </statement>
         <hint>
-          <p>Suppose you paid <m>c(t) = 8</m> dollars for each item, and you sell them for <m>p(t) = 10</m> dollars per item. If you sell <m>q(t) = 50</m> items, what would you really multiply together to find how much your customers paid for all of the items?</p>
+          <p>
+            Suppose you paid <m>c(t) = 8</m> dollars for each item,
+            and you sell them for <m>p(t) = 10</m> dollars per item.
+            If you sell <m>q(t) = 50</m> items,
+            what would you really multiply together to find how much your customers paid for all of the items?
+          </p>
         </hint>
         <solution>
-          <p>Your customers paid <m>p(t)q(t)</m> for all of the items.</p>
+          <p>
+            Your customers paid <m>p(t)q(t)</m> for all of the items.
+          </p>
         </solution>
-      </stage>
-      <stage>
+        </stage>
+        <stage>
         <statement>
-          <p><ul>
-            <li><p>The function <m>c(t)</m> represents your cost to buy one of the items.</p></li>
-            <li><p>The function <m>p(t)</m> represents the price you sell the item for.</p></li>
-            <li><p>The function <m>q(t)</m> represents the quantity, or number, of the items you sell.</p></li>
-          </ul></p>
-          <p>Which function combination represents the actual profit you would make from selling one item?</p>
-          <p>Answer:  <var name="$profit" form="popup" /></p>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  The function <m>c(t)</m> represents your cost to buy one of the items.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The function <m>p(t)</m> represents the price you sell the item for.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The function <m>q(t)</m> represents the quantity,
+                  or number, of the items you sell.
+                </p>
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            Which function combination represents the actual profit you would make from selling one item?
+          </p>
+
+          <p>
+            Answer:
+            <var name="$profit" form="popup" />
+          </p>
         </statement>
         <hint>
-          <p>If you paid <m>c(t) = 8</m> dollars for an item, but you then sold it for <m>p(t) = 10</m> dollars, how would you find your actual profit from this one item?</p>
+          <p>
+            If you paid <m>c(t) = 8</m> dollars for an item,
+            but you then sold it for <m>p(t) = 10</m> dollars,
+            how would you find your actual profit from this one item?
+          </p>
         </hint>
         <solution>
-          <p>Your profit from one item is: <m>p(t) - c(t)</m></p>
+          <p>
+            Your profit from one item is:
+            <m>p(t) - c(t)</m>
+          </p>
         </solution>
-      </stage>
-      <stage>
+        </stage>
+        <stage>
         <statement>
-          <p><ul>
-            <li><p>The function <m>c(t)</m> represents your cost to buy one of the items.</p></li>
-            <li><p>The function <m>p(t)</m> represents the price you sell the item for.</p></li>
-            <li><p>The function <m>q(t)</m> represents the quantity, or number, of the items you sell.</p></li>
-          </ul></p>
-          <p>Suppose <m>\frac{p(t)}{c(t)} = 1.40</m>. What does this mean?</p>
-          <p>Answer:  <var name="$markup" form="popup" /></p>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  The function <m>c(t)</m> represents your cost to buy one of the items.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The function <m>p(t)</m> represents the price you sell the item for.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The function <m>q(t)</m> represents the quantity,
+                  or number, of the items you sell.
+                </p>
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            Suppose <m>\frac{p(t)}{c(t)} = 1.40</m>.
+            What does this mean?
+          </p>
+
+          <p>
+            Answer:
+            <var name="$markup" form="popup" />
+          </p>
         </statement>
         <hint>
-          <p>Since <m>p(t)</m> is always bigger than <m>c(t)</m>, it makes sense that dividing the two would give a number larger than one.</p>
-          <p>If you made the price just double your cost, then dividing the two would give the number <m>2</m>. This would be an increase of <m>100 \%</m>.</p>
+          <p>
+            Since <m>p(t)</m> is always bigger than <m>c(t)</m>,
+            it makes sense that dividing the two would give a number larger than one.
+          </p>
+
+          <p>
+            If you made the price just double your cost,
+            then dividing the two would give the number <m>2</m>.
+            This would be an increase of <m>100 \%</m>.
+          </p>
         </hint>
         <solution>
-          <p>This means that you increased the cost by <m>40 \%</m> to choose a selling price.</p>
+          <p>
+            This means that you increased the cost by <m>40 \%</m> to choose a selling price.
+          </p>
         </solution>
-      </stage>
+        </stage>
     </webwork>
   </exercise>
 
-  <p>Now we look at the graphs of function combinations. In the next exercise, you will see the effect of multiplying the outputs of two functions to create the combination: <me>y = f(x)g(x)</me></p>
+  <p>
+    Now we look at the graphs of function combinations.
+    In the next exercise,
+    you will see the effect of multiplying the outputs of two functions to create the combination:
+    <me>
+      y = f(x)g(x)
+    </me>
+  </p>
 
   <exercise>
     <webwork>
-      <setup>
+        <setup>
 
         <pg-code>
           @x=(-4,0,2,4,6,8);
@@ -206,177 +460,212 @@
           ["?","yes","no"],"yes"
           );
         </pg-code>
-      </setup>
-      <stage>
+        </setup>
+        <stage>
         <statement>
-          <p>The graph shows two new functions <m>y = f(x)</m> and <m>y = g(x)</m>. Our goal is to create the product of these functions: <md><mrow>P(x) = f(x)g(x)</mrow></md></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888/sri/true/sdz/false/" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Use the graph to complete the table of values for the functions <m>f(x)</m>, <m>g(x)</m> and <m>P(x)</m></p>
+          <p>
+            The graph shows two new functions <m>y = f(x)</m> and <m>y = g(x)</m>.
+            Our goal is to create the product of these functions:
+            <md>
+              <mrow>P(x) = f(x)g(x)</mrow>
+            </md>
+          </p>
+
+          <p>
+            [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888/sri/true/sdz/false/" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+          </p>
+
+          <p>
+            Use the graph to complete the table of values for the functions <m>f(x)</m>,
+            <m>g(x)</m> and <m>P(x)</m>
+          </p>
 
           <sidebyside>
+
             <tabular top="major" halign="center">
-                <col halign="left" />
-                <col />
-                <col />
-                <col />
-
-                <row bottom="medium">
-                  <cell><m>x</m></cell>
-                  <cell><m>f(x)</m></cell>
-                  <cell><m>g(x)</m></cell>
-                  <cell><m>P(x)=f(x)g(x)</m></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[0]" /></cell>
-                  <cell><var name="$f[0]" /></cell>
-                  <cell><var name="$g[0]" /></cell>
-                  <cell><var name="$P[0]" width="10" /></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[1]" /></cell>
-                  <cell><var name="$f[1]" /></cell>
-                  <cell><var name="$g[1]" /></cell>
-                  <cell><var name="$P[1]" width="10" /></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[2]" /></cell>
-                  <cell><var name="$f[2]" /></cell>
-                  <cell><var name="$g[2]" /></cell>
-                  <cell><var name="$P[2]" width="10" /></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[3]" /></cell>
-                  <cell><var name="$f[3]" /></cell>
-                  <cell><var name="$g[3]" /></cell>
-                  <cell><var name="$P[3]" width="10" /></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[4]" /></cell>
-                  <cell><var name="$f[4]" /></cell>
-                  <cell><var name="$g[4]" /></cell>
-                  <cell><var name="$P[4]" width="10" /></cell>
-                </row>
-
-                <row>
-                  <cell><var name="$x[5]" /></cell>
-                  <cell><var name="$f[5]" /></cell>
-                  <cell><var name="$g[5]" /></cell>
-                  <cell><var name="$P[5]" width="10" /></cell>
-                </row>
+              <col halign="left" />
+              <col />
+              <col />
+              <col />
+              <row bottom="medium">
+                <cell><m>x</m></cell>
+                <cell><m>f(x)</m></cell>
+                <cell><m>g(x)</m></cell>
+                <cell><m>P(x)=f(x)g(x)</m></cell>
+              </row>
+              <row>
+                <cell><var name="$x[0]" /></cell>
+                <cell><var name="$f[0]" /></cell>
+                <cell><var name="$g[0]" /></cell>
+                <cell><var name="$P[0]" width="10" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[1]" /></cell>
+                <cell><var name="$f[1]" /></cell>
+                <cell><var name="$g[1]" /></cell>
+                <cell><var name="$P[1]" width="10" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[2]" /></cell>
+                <cell><var name="$f[2]" /></cell>
+                <cell><var name="$g[2]" /></cell>
+                <cell><var name="$P[2]" width="10" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[3]" /></cell>
+                <cell><var name="$f[3]" /></cell>
+                <cell><var name="$g[3]" /></cell>
+                <cell><var name="$P[3]" width="10" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[4]" /></cell>
+                <cell><var name="$f[4]" /></cell>
+                <cell><var name="$g[4]" /></cell>
+                <cell><var name="$P[4]" width="10" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[5]" /></cell>
+                <cell><var name="$f[5]" /></cell>
+                <cell><var name="$g[5]" /></cell>
+                <cell><var name="$P[5]" width="10" /></cell>
+              </row>
             </tabular>
+
           </sidebyside>
         </statement>
         <hint>
-          <p>Remember that for each value of <m>x</m>, the function <m>P(x)</m> just multiplies the outputs of the functions <m>f(x)</m> and <m>g(x)</m>.</p>
-          <p>So, when <m>x = 2</m>, we have <m>P(2) = 0 \cdot 1.5 = 0</m>.</p>
+          <p>
+            Remember that for each value of <m>x</m>,
+            the function <m>P(x)</m> just multiplies the outputs of the functions <m>f(x)</m> and <m>g(x)</m>.
+          </p>
+
+          <p>
+            So, when <m>x = 2</m>, we have <m>P(2) = 0 \cdot 1.5 = 0</m>.
+          </p>
         </hint>
         <solution>
           <sidebyside>
-              <tabular top="major" halign="center">
-                  <col halign="left" />
-                  <col />
-                  <col />
-                  <col />
-                  <row bottom="medium">
-                    <cell><m>x</m></cell>
-                    <cell><m>f(x)</m></cell>
-                    <cell><m>g(x)</m></cell>
-                    <cell><m>P(x)=f(x)\cdot g(x)</m></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[0]" /></cell>
-                    <cell><var name="$f[0]" /></cell>
-                    <cell><var name="$g[0]" /></cell>
-                    <cell><var name="$P[0]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[1]" /></cell>
-                    <cell><var name="$f[1]" /></cell>
-                    <cell><var name="$g[1]" /></cell>
-                    <cell><var name="$P[1]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[2]" /></cell>
-                    <cell><var name="$f[2]" /></cell>
-                    <cell><var name="$g[2]" /></cell>
-                    <cell><var name="$P[2]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[3]" /></cell>
-                    <cell><var name="$f[3]" /></cell>
-                    <cell><var name="$g[3]" /></cell>
-                    <cell><var name="$P[3]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[4]" /></cell>
-                    <cell><var name="$f[4]" /></cell>
-                    <cell><var name="$g[4]" /></cell>
-                    <cell><var name="$P[4]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[5]" /></cell>
-                    <cell><var name="$f[5]" /></cell>
-                    <cell><var name="$g[5]" /></cell>
-                    <cell><var name="$P[5]" /></cell>
-                  </row>
-              </tabular>
+
+            <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <col />
+              <col />
+              <row bottom="medium">
+                <cell><m>x</m></cell>
+                <cell><m>f(x)</m></cell>
+                <cell><m>g(x)</m></cell>
+                <cell><m>P(x)=f(x)\cdot g(x)</m></cell>
+              </row>
+              <row>
+                <cell><var name="$x[0]" /></cell>
+                <cell><var name="$f[0]" /></cell>
+                <cell><var name="$g[0]" /></cell>
+                <cell><var name="$P[0]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[1]" /></cell>
+                <cell><var name="$f[1]" /></cell>
+                <cell><var name="$g[1]" /></cell>
+                <cell><var name="$P[1]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[2]" /></cell>
+                <cell><var name="$f[2]" /></cell>
+                <cell><var name="$g[2]" /></cell>
+                <cell><var name="$P[2]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[3]" /></cell>
+                <cell><var name="$f[3]" /></cell>
+                <cell><var name="$g[3]" /></cell>
+                <cell><var name="$P[3]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[4]" /></cell>
+                <cell><var name="$f[4]" /></cell>
+                <cell><var name="$g[4]" /></cell>
+                <cell><var name="$P[4]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[5]" /></cell>
+                <cell><var name="$f[5]" /></cell>
+                <cell><var name="$g[5]" /></cell>
+                <cell><var name="$P[5]" /></cell>
+              </row>
+            </tabular>
+
           </sidebyside>
         </solution>
-      </stage>
-      <stage>
+        </stage>
+        <stage>
         <statement>
-          <p>You made the table:</p>
+          <p>
+            You made the table:
+          </p>
+
           <sidebyside>
-              <tabular top="major" halign="center">
-                  <col halign="left" />
-                  <col />
-                  <row bottom="medium">
-                    <cell><m>x</m></cell>
-                    <cell><m>P(x)=f(x)\cdot g(x)</m></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[0]" /></cell>
-                    <cell><var name="$P[0]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[1]" /></cell>
-                    <cell><var name="$P[1]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[2]" /></cell>
-                    <cell><var name="$P[2]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[3]" /></cell>
-                    <cell><var name="$P[3]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[4]" /></cell>
-                    <cell><var name="$P[4]" /></cell>
-                  </row>
-                  <row>
-                    <cell><var name="$x[5]" /></cell>
-                    <cell><var name="$P[5]" /></cell>
-                  </row>
-              </tabular>
+
+            <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <row bottom="medium">
+                <cell><m>x</m></cell>
+                <cell><m>P(x)=f(x)\cdot g(x)</m></cell>
+              </row>
+              <row>
+                <cell><var name="$x[0]" /></cell>
+                <cell><var name="$P[0]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[1]" /></cell>
+                <cell><var name="$P[1]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[2]" /></cell>
+                <cell><var name="$P[2]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[3]" /></cell>
+                <cell><var name="$P[3]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[4]" /></cell>
+                <cell><var name="$P[4]" /></cell>
+              </row>
+              <row>
+                <cell><var name="$x[5]" /></cell>
+                <cell><var name="$P[5]" /></cell>
+              </row>
+            </tabular>
+
           </sidebyside>
-          <p>Use the values from your table above to plot six points on the graph of <m>y= P(x)</m>. Move the six blue points to those locations and the graph of <m>P(x)</m> will appear.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xE8wUtMM/width/433/height/493/border/888888/sri/true/sdz/false/" width="433px" height="493px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Did you successfully create the graph of <m>P(x)</m>?</p>
-          <p>Answer:  <var name="$didItGraph" form="popup" /></p>
+
+          <p>
+            Use the values from your table above to plot six points on the graph of <m>y= P(x)</m>.
+            Move the six blue points to those locations and the graph of <m>P(x)</m> will appear.
+          </p>
+
+          <p>
+            [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xE8wUtMM/width/433/height/493/border/888888/sri/true/sdz/false/" width="433px" height="493px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+          </p>
+
+          <p>
+            Did you successfully create the graph of <m>P(x)</m>?
+          </p>
+
+          <p>
+            Answer:
+            <var name="$didItGraph" form="popup" />
+          </p>
         </statement>
-      </stage>
+        </stage>
     </webwork>
   </exercise>
 
   <exercise>
     <webwork>
-      <setup>
+        <setup>
 
         <pg-code>
           $f=Compute("-1+0.5*x");
@@ -384,88 +673,220 @@
           $P=Compute("$f*$g");
 
         </pg-code>
+        </setup>
+        <statement>
+          <p>
+            The graph below shows the functions <m>f</m> and <m>g</m>.
+          </p>
 
-      </setup>
+          <p>
+            [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888/sri/true/sdz/false/" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+          </p>
 
-      <statement>
-        <p>The graph below shows the functions <m>f</m> and <m>g</m>.</p>
-        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MyMCZCZ6/width/433/height/311/border/888888/sri/true/sdz/false/" width="433px" height="311px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-        <p>You can confirm that: <me>f(x) = -1+0.5x</me> and: <me>g(x) = 2-0.25x</me>.</p>
-        <p>Write the formula for the function combination <m>P(x) = f(x) \cdot g(x)</m>.</p>
-        <p>Answer:  <m>P(x) = </m><var name="$P" width="15" /></p>
+          <p>
+            You can confirm that:
+            <me>
+              f(x) = -1+0.5x
+            </me>
+            and:
+            <me>
+              g(x) = 2-0.25x
+            </me>.
+          </p>
 
-      </statement>
-      <hint>
-        <p>Did you remember to use parentheses when multiplying?</p>
-      </hint>
-      <solution>
-        <p><ol label="a">
-          <li><p><m>f(x) = </m><var name="$f" /></p></li>
-          <li><p><m>g(x) = </m><var name="$g" /></p></li>
-          <li><p><m>P(x) = </m><var name="$P" /></p></li>
-        </ol></p>
-      </solution>
+          <p>
+            Write the formula for the function combination <m>P(x) = f(x) \cdot g(x)</m>.
+          </p>
+
+          <p>
+            Answer:
+            <m>P(x) = </m><var name="$P" width="15" />
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Did you remember to use parentheses when multiplying?
+          </p>
+        </hint>
+        <solution>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  <m>f(x) = </m><var name="$f" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>g(x) = </m><var name="$g" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>P(x) = </m><var name="$P" />
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
     </webwork>
   </exercise>
 
-  <p>By now, you know that all combinations of functions are really just doing arithmetic on the the <term>outputs</term> of the functions. From a graphical standpoint, this just involves combining the <m>y</m> values of points on the graphs of <m>f</m> and <m>g</m>.</p>
-  <p>The next problem will have you explore the graph of a particular function combination: <md><mrow>f(x) - g(x)</mrow></md></p>
-  <p>Remember that this is all about combining the outputs of the <m>f</m> and <m>g</m> functions.</p>
+  <p>
+    By now, you know that all combinations of functions are really just doing arithmetic on the the
+    <term>outputs</term> of the functions.
+    From a graphical standpoint,
+    this just involves combining the <m>y</m> values of points on the graphs of <m>f</m> and <m>g</m>.
+  </p>
 
-<todo> Finish this problem </todo>
+  <p>
+    The next problem will have you explore the graph of a particular function combination:
+    <md>
+      <mrow>f(x) - g(x)</mrow>
+    </md>
+  </p>
+
+  <p>
+    Remember that this is all about combining the outputs of the <m>f</m> and <m>g</m> functions.
+  </p>
+
+  <todo> Finish this problem </todo>
+
   <exercise>
     <webwork>
-      <setup>
+        <setup>
 
         <pg-code>
           $hZero=Real(4.4);
           $hPositive=OneOf(0,2.1);
           $hNegative=OneOf(-3,7);
         </pg-code>
-      </setup>
+        </setup>
+        <statement>
+          <p>
+            In this problem,
+            we are considering the function <m>h</m> defined by:
+            <md>
+              <mrow>h(x) = f(x) - g(x)</mrow>
+            </md>
+          </p>
 
-      <statement>
-        <p>In this problem, we are considering the function <m>h</m> defined by: <md><mrow>h(x) = f(x) - g(x)</mrow></md></p>
-        <p>The graphs of functions <m>f(x)</m> and <m>g(x)</m> are shown below.</p>
-        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/uSYHMfWJ/width/422/height/427/border/888888/sri/true/sdz/false/" width="422px" height="427px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-        <p>The function <m>h(x)</m> is called the <em>difference</em> of <m>f</m> and <m>g</m>.</p>
-        <p><ol label="a">
-          <li><p>Consider the <m>x</m> values:</p>
-            <sidebyside>
-              <tabular halign="left">
-                  <row>
-                    <cell><m>-3</m></cell>
-                    <cell><m>0</m></cell>
-                    <cell><m>2.1</m></cell>
-                    <cell><m>4.4</m></cell>
-                    <cell><m>7</m></cell>
-                  </row>
-              </tabular>
-            </sidebyside>
-          </li>
-          <li><p>For which of these values is it true that <m>h(x) = 0</m>?</p>
-          <p>Answer: <var name="$hZero" width="10" /></p></li>
+          <p>
+            The graphs of functions <m>f(x)</m> and <m>g(x)</m> are shown below.
+          </p>
 
-          <li><p>Choose an <m>x</m> value from the list so that <m>h(x)</m> has a positive output.</p>
-          <p>Answer: <var name="$hPositive" width="10" /></p></li>
+          <p>
+            [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/uSYHMfWJ/width/422/height/427/border/888888/sri/true/sdz/false/" width="422px" height="427px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+          </p>
 
-          <li><p>Choose an <m>x</m> value from the list so that <m>h(x)</m> has a negative output.</p>
-          <p>Answer: <var name="$hNegative" width="10" /></p></li>
-        </ol></p>
+          <p>
+            The function <m>h(x)</m> is called the <em>difference</em>
+            of <m>f</m> and <m>g</m>.
+          </p>
 
-      </statement>
-      <hint>
-        <p>If <m>h(x) = 0</m>, this means that <m>f(x) - g(x) = 0</m>. What would have to be true about <m>f(x)</m> and <m>g(x)</m> at that point?</p>
-        <p>Similarly, if <m>h(x)</m> was positive, then <m>f(x) - g(x) > 0</m>. Which output would have to be larger at that point, <m>f(x)</m> or <m>g(x)</m>?</p>
-      </hint>
-      <solution>
-        <p><ol label="a">
-          <li><p><m>h(x) = 0</m> when <m>x = 4.4</m>, because that is where <m>f(x) = g(x)</m>.</p></li>
-          <li><p>For <m>h(x)</m> to have a positive output, it must be true that <m>f(x) &gt; g(x)</m>. Among the options given, this is only true for <m>x = 0</m> and <m>x = 2.1</m>.</p></li>
-          <li><p><m>h(x)</m> will have negative outputs when <m>f(x) &lt; g(x)</m>. Among the options given, this happens when <m>x = -3</m> or <m>x = 7</m>.</p></li>
-        </ol></p>
-      </solution>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Consider the <m>x</m> values:
+                </p>
+
+                <sidebyside>
+
+                  <tabular halign="left">
+                    <row>
+                      <cell><m>-3</m></cell>
+                      <cell><m>0</m></cell>
+                      <cell><m>2.1</m></cell>
+                      <cell><m>4.4</m></cell>
+                      <cell><m>7</m></cell>
+                    </row>
+                  </tabular>
+
+                </sidebyside>
+
+              </li>
+
+              <li>
+                <p>
+                  For which of these values is it true that <m>h(x) = 0</m>?
+                </p>
+
+                <p>
+                  Answer:
+                  <var name="$hZero" width="10" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Choose an <m>x</m> value from the list so that <m>h(x)</m> has a positive output.
+                </p>
+
+                <p>
+                  Answer:
+                  <var name="$hPositive" width="10" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Choose an <m>x</m> value from the list so that <m>h(x)</m> has a negative output.
+                </p>
+
+                <p>
+                  Answer:
+                  <var name="$hNegative" width="10" />
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            If <m>h(x) = 0</m>, this means that <m>f(x) - g(x) = 0</m>.
+            What would have to be true about <m>f(x)</m> and <m>g(x)</m> at that point?
+          </p>
+
+          <p>
+            Similarly, if <m>h(x)</m> was positive,
+            then <m>f(x) - g(x) > 0</m>.
+            Which output would have to be larger at that point,
+            <m>f(x)</m> or <m>g(x)</m>?
+          </p>
+        </hint>
+        <solution>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  <m>h(x) = 0</m> when <m>x = 4.4</m>,
+                  because that is where <m>f(x) = g(x)</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  For <m>h(x)</m> to have a positive output,
+                  it must be true that <m>f(x) &gt; g(x)</m>.
+                  Among the options given,
+                  this is only true for <m>x = 0</m> and <m>x = 2.1</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>h(x)</m> will have negative outputs when <m>f(x) &lt;
+                  g(x)</m>.
+                  Among the options given, this happens when <m>x = -3</m> or <m>x = 7</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
     </webwork>
   </exercise>
-
 </section>
+

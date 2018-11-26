@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -10,18 +9,38 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-
 <section xml:id="activity-power-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Power Functions</title>
+  <p>
+    In this activity, we will explore power functions.
+  </p>
 
-    <p>In this activity, we will explore power functions.</p>
-    <p>A power function is a function of the form <me>f(x) = x^a</me> where <m>a</m> is a constant real number.</p>
-    <p>Our goal is to learn to predict what the graph of a power function will look like, depending on the exponent <m>a</m>.</p>
-    <paragraphs><title>Positive Integer Exponents</title>
-    <p>We will begin by examining power functions where the exponent <m>n</m> is a positive integer <m>(1, 2, 3, \cdots )</m>. In order to do this, we should briefly remind ourselves about the difference between even and odd exponents.</p></paragraphs>
-    <exercise>
-      <webwork>
+  <p>
+    A power function is a function of the form
+    <me>
+      f(x) = x^a
+    </me>
+    where <m>a</m> is a constant real number.
+  </p>
+
+  <p>
+    Our goal is to learn to predict what the graph of a power function will look like,
+    depending on the exponent <m>a</m>.
+  </p>
+
+  <paragraphs>
+    <title>Positive Integer Exponents</title>
+    <p>
+      We will begin by examining power functions where the exponent <m>n</m> is a positive integer <m>(1, 2, 3, \cdots )</m>.
+      In order to do this,
+      we should briefly remind ourselves about the difference between even and odd exponents.
+    </p>
+  </paragraphs>
+
+  <exercise>
+    <webwork>
         <setup>
+
           <pg-code>
             $positive=PopUp(
             ["?","positive","negative"],"positive"
@@ -33,34 +52,104 @@
           </pg-code>
         </setup>
         <statement>
-          <p>Recall that a positive integer exponent refers to <em>repeated</em> multiplication, so that: <me>x^3 = x\cdot x\cdot x</me> and <me>x^4 = x\cdot x\cdot x\cdot x</me></p>
-          <p><ol label="a">
-          <li><p>Let <m>f(x) = x^4</m>, and evaluate both <m>f(2)</m> and <m>f(-2)</m>. Remember to use parentheses when raising a negative number to an exponent.</p>
-          <p>Answer:  <m>f(2) = </m><var name="$ans[0]" width="10" /></p>
-          <p>Answer:  <m>f(-2) = </m><var name="$ans[1]" width="10" /></p></li>
-          <li><p>Let <m>g(x) = x^5</m>, and evauate both <m>g(2)</m> and <m>g(-2)</m>.</p>
-          <p>Answer:  <m>g(2) = </m><var name="$ans[2]" width="10" /></p>
-          <p>Answer:  <m>g(-2) = </m><var name="$ans[3]" width="10" /></p></li>
-          <li><p>In summary:  If we evaluate the function <m>f(x) = x^4</m> when <m>x \gt 0</m>, then the output will be <var name="$positive" form="popup" />, and if <m>x \lt 0</m>, the output will be <var name="$positive" form="popup" /></p></li>
-          <li><p>If we evaluate the function <m>g(x) = x^3</m> when <m>x \gt 0</m>, then the output will be <var name="$positive" form="popup" />, and if <m>x \lt 0</m>, the output will be <var name="$negative" form="popup" /></p></li>
-          </ol></p>
+          <p>
+            Recall that a positive integer exponent refers to
+            <em>repeated</em> multiplication, so that:
+            <me>
+              x^3 = x\cdot x\cdot x
+            </me>
+            and
+            <me>
+              x^4 = x\cdot x\cdot x\cdot x
+            </me>
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Let <m>f(x) = x^4</m>, and evaluate both <m>f(2)</m> and <m>f(-2)</m>.
+                  Remember to use parentheses when raising a negative number to an exponent.
+                </p>
+
+                <p>
+                  Answer:
+                  <m>f(2) = </m><var name="$ans[0]" width="10" />
+                </p>
+
+                <p>
+                  Answer:
+                  <m>f(-2) = </m><var name="$ans[1]" width="10" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Let <m>g(x) = x^5</m>, and evauate both <m>g(2)</m> and <m>g(-2)</m>.
+                </p>
+
+                <p>
+                  Answer:
+                  <m>g(2) = </m><var name="$ans[2]" width="10" />
+                </p>
+
+                <p>
+                  Answer:
+                  <m>g(-2) = </m><var name="$ans[3]" width="10" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  In summary:
+                  If we evaluate the function <m>f(x) = x^4</m> when <m>x \gt 0</m>,
+                  then the output will be <var name="$positive" form="popup" />, and if <m>x \lt 0</m>,
+                  the output will be <var name="$positive" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If we evaluate the function <m>g(x) = x^3</m> when <m>x \gt 0</m>,
+                  then the output will be <var name="$positive" form="popup" />, and if <m>x \lt 0</m>,
+                  the output will be <var name="$negative" form="popup" />
+                </p>
+              </li>
+            </ol>
+          </p>
         </statement>
         <hint>
-          <p><m>f(-10) = (-10)\cdot(-10)\cdot(-10)\cdot(-10)</m></p>
-          <p><m>g(-10) = (-10)\cdot(-10)\cdot(-10)</m></p>
+          <p>
+            <m>f(-10) = (-10)\cdot(-10)\cdot(-10)\cdot(-10)</m>
+          </p>
+
+          <p>
+            <m>g(-10) = (-10)\cdot(-10)\cdot(-10)</m>
+          </p>
         </hint>
         <solution>
-          <p>The function <m>f(x) = x^4</m> only outputs non-negative numbers, regardless of the sign of the input.</p>
-          <p>The function <m>g(x) = x^3</m> will output a positive number if the input is positive, and it will output a negative number if the input is negative.</p>
+          <p>
+            The function <m>f(x) = x^4</m> only outputs non-negative numbers,
+            regardless of the sign of the input.
+          </p>
+
+          <p>
+            The function <m>g(x) = x^3</m> will output a positive number if the input is positive,
+            and it will output a negative number if the input is negative.
+          </p>
         </solution>
-      </webwork>
-    </exercise>
+    </webwork>
+  </exercise>
 
-    <p>Now, let's see the graphs of different power functions with positive exponents, and generalize what happens if the exponent is even or odd.</p>
+  <p>
+    Now, let's see the graphs of different power functions with positive exponents,
+    and generalize what happens if the exponent is even or odd.
+  </p>
 
-    <exercise>
-      <webwork>
+  <exercise>
+    <webwork>
         <setup>
+
           <pg-code>
             $evenExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],2);
             $oddExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],1);
@@ -68,31 +157,60 @@
           </pg-code>
         </setup>
         <statement>
-          <p>The graph below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a positive integer. Use the slider to change the exponent <m>n</m>.</p>
+          <p>
+            The graph below shows a power function of the form <m>f(x) = x^n</m>,
+            where <m>n</m> is a positive integer.
+            Use the slider to change the exponent <m>n</m>.
+          </p>
 
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ECrUf9u9/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+          <p>
+            [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ECrUf9u9/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+          </p>
 
-          <p>Power functions have similar overall <em>shapes</em>, depending on their exponents. Complete the following statements about the shapes of the power functions in this exercise.</p>
-          <p><ol label="a">
-            <li>
-              <p>If the exponent is an <em>even</em> positive integer, then its graph: <var name="$evenExponent" form="popup" /></p>
-            </li>
-            <li>
-              <p>If the exponent is an <em>odd</em> positive integer, then its graph: <var name="$oddExponent" form="popup" /></p>
-            </li>
-            <li>
-              <p>All of these power functions pass through the point(s): <var name="$commonPoints" form="popup" /></p>
-            </li>
-          </ol></p>
+          <p>
+            Power functions have similar overall <em>shapes</em>,
+            depending on their exponents.
+            Complete the following statements about the shapes of the power functions in this exercise.
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  If the exponent is an <em>even</em>
+                  positive integer, then its graph:
+                  <var name="$evenExponent" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If the exponent is an <em>odd</em>
+                  positive integer, then its graph:
+                  <var name="$oddExponent" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  All of these power functions pass through the point(s):
+                  <var name="$commonPoints" form="popup" />
+                </p>
+              </li>
+            </ol>
+          </p>
         </statement>
-      </webwork>
-    </exercise>
+    </webwork>
+  </exercise>
 
-    <p>Use your observations to identify the function in the next exercise.</p>
+  <p>
+    Use your observations to identify the function in the next exercise.
+  </p>
 
-    <exercise>
-      <webwork>
+  <exercise>
+    <webwork>
         <setup>
+
           <pg-code>
             $formula=RadioButtons(
                 ["\(f(x) = x^4\)", "\(f(x) = x^5\)","None of these."],
@@ -108,28 +226,55 @@
           </pg-code>
         </setup>
         <statement>
-          <p>The graph below shows a power function.</p>
-          <sidebyside>
+          <p>
+            The graph below shows a power function.
+          </p>
 
+          <sidebyside>
             <image pg-name="$gr" />
           </sidebyside>
-          <p>What is a possible formula for this function?</p>
-          <p><var name="$formula" form="buttons" /></p>
+
+          <p>
+            What is a possible formula for this function?
+          </p>
+
+          <p>
+            <var name="$formula" form="buttons" />
+          </p>
         </statement>
         <hint>
-          <p>Remember that the graphs of <em>all</em> power functions with positive whole number exponents look similar, depending on whether the exponent is <em>odd</em> or <em>even</em>. Think about a function whose graph you know, such as <m>x^1</m> or <m>x^2</m>. How does that compare to the graph shown above?</p>
+          <p>
+            Remember that the graphs of <em>all</em>
+            power functions with positive whole number exponents look similar,
+            depending on whether the exponent is
+            <em>odd</em> or <em>even</em>.
+            Think about a function whose graph you know,
+            such as <m>x^1</m> or <m>x^2</m>.
+            How does that compare to the graph shown above?
+          </p>
         </hint>
         <solution>
-          <p>The only possibility given is <m>f(x) = x^5</m>.</p>
+          <p>
+            The only possibility given is <m>f(x) = x^5</m>.
+          </p>
         </solution>
-      </webwork>
-    </exercise>
+    </webwork>
+  </exercise>
 
-    <p>Now, recall what you know about function transformations from <xref ref="chapter-reflections-and-vertical-stretches">chapter</xref> <mdash /> in particular, that the transformation <me>y = -f(x)</me> will reflect the graph of <m>f(x)</m> over the <m>x</m>-axis. Use this in the next exercise.</p>
+  <p>
+    Now, recall what you know about function transformations from <xref ref="chapter-reflections-and-vertical-stretches">chapter</xref>
+    <mdash /> in particular, that the transformation
+    <me>
+      y = -f(x)
+    </me>
+    will reflect the graph of <m>f(x)</m> over the <m>x</m>-axis.
+    Use this in the next exercise.
+  </p>
 
-    <todo>At a future date, make this a sidebyside, once that is possible within a webwork</todo>
-    <exercise>
-      <webwork>
+  <todo>At a future date, make this a sidebyside, once that is possible within a webwork</todo>
+
+  <exercise>
+    <webwork>
         <setup>
 
           <pg-code>
@@ -150,62 +295,152 @@
 
           </pg-code>
         </setup>
-
         <statement>
-          <sidebyside widths="40%"><image pg-name="$gr[0]" /></sidebyside>
-          <sidebyside widths="40%"><image pg-name="$gr[1]" /></sidebyside>
-          <sidebyside widths="40%"><image pg-name="$gr[2]" /></sidebyside>
-          <sidebyside widths="40%"><image pg-name="$gr[3]" /></sidebyside>
+          <sidebyside widths="40%">
+            <image pg-name="$gr[0]" />
+          </sidebyside>
 
-          <p>The graphs show the following functions:<md>
-            <mrow>y \amp= -x^2\amp y \amp= -x^3\amp y \amp= x^4\amp y = x^5</mrow>
-          </md></p>
+          <sidebyside widths="40%">
+            <image pg-name="$gr[1]" />
+          </sidebyside>
 
-          <p><ol label="a">
-            <li>
-              <p>Which graph shows <m>y = x^4</m>? <var name="$posEven" form="popup" /></p>
-            </li>
-            <li>
-              <p>Which graph shows <m>y = x^5</m>? <var name="$posOdd" form="popup" /></p>
-            </li>
-            <li>
-              <p>Which graph shows <m>y = -x^2</m>? <var name="$negEven" form="popup" /></p>
-            </li>
-            <li>
-              <p>Which graph shows <m>y = -x^3</m>? <var name="$negOdd" form="popup" /></p>
-            </li>
-          </ol></p>
+          <sidebyside widths="40%">
+            <image pg-name="$gr[2]" />
+          </sidebyside>
+
+          <sidebyside widths="40%">
+            <image pg-name="$gr[3]" />
+          </sidebyside>
+
+          <p>
+            The graphs show the following functions:
+            <md>
+              <mrow>y \amp= -x^2\amp y \amp= -x^3\amp y \amp= x^4\amp y = x^5</mrow>
+            </md>
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Which graph shows <m>y = x^4</m>?
+                  <var name="$posEven" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Which graph shows <m>y = x^5</m>?
+                  <var name="$posOdd" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Which graph shows <m>y = -x^2</m>?
+                  <var name="$negEven" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Which graph shows <m>y = -x^3</m>?
+                  <var name="$negOdd" form="popup" />
+                </p>
+              </li>
+            </ol>
+          </p>
         </statement>
-      </webwork>
-    </exercise>
+    </webwork>
+  </exercise>
 
-    <paragraphs><title>Negative Integer Exponents</title>
-    <p>Next, we will expand our set of power functions to include <em>negative</em> integer exponents. First, however, we should review the meaning of a negative exponent.</p></paragraphs>
-    <example>
-      <statement>
-        <p>A positive integer exponent refers to <em>repeated multiplication</em>: <me>x^5 = x\cdot x\cdot x\cdot x\cdot x</me></p>
-        <p>It is often helpful to think of this as a product beginning with the number <m>1</m>, so that we really have: <me>x^5 = 1\cdot x\cdot x\cdot x\cdot x\cdot x</me></p>
-        <p>Now, a <em>negative</em> integer exponent refers to <em>repeated division</em>. So, expanding an expression like <m>x^{-3}</m> is easy if we begin with the number <m>1</m>, as in: <md>
-        <mrow>x^{-3} \amp= 1 / (x\cdot x\cdot x)</mrow>
-        <mrow>\amp= \frac{1}{x\cdot x\cdot x}</mrow>
-        <mrow>\amp= \frac{1}{x^3}</mrow></md></p>
-        <p>Simplify the following expressions so they have positive exponents:</p>
-        <p><ul>
-          <li><p><m>x^{-2}</m></p></li>
-          <li><p><m>5x^{-3}</m></p></li>
-        </ul></p>
-      </statement>
-      <solution>
-        <p><ul>
-          <li><p><m>x^{-2} = \frac{1}{x^2}</m></p></li>
-          <li><p><m>5x^{-3} = 5\cdot \frac{1}{x^3} = \frac{5}{x^3}</m></p></li>
-          </ul></p>
-      </solution>
-    </example>
-    <p>So, a variable raised to a negative exponent is the same as dividing by that variable raised to a positive exponent. Keep that in mind as you answer the next exercise.</p>
-    <exercise>
-      <webwork>
+  <paragraphs>
+    <title>Negative Integer Exponents</title>
+    <p>
+      Next, we will expand our set of power functions to include
+      <em>negative</em> integer exponents.
+      First, however,
+      we should review the meaning of a negative exponent.
+    </p>
+  </paragraphs>
+
+  <example>
+    <statement>
+      <p>
+        A positive integer exponent refers to
+        <em>repeated multiplication</em>:
+        <me>
+          x^5 = x\cdot x\cdot x\cdot x\cdot x
+        </me>
+      </p>
+
+      <p>
+        It is often helpful to think of this as a product beginning with the number <m>1</m>,
+        so that we really have:
+        <me>
+          x^5 = 1\cdot x\cdot x\cdot x\cdot x\cdot x
+        </me>
+      </p>
+
+      <p>
+        Now, a <em>negative</em> integer exponent refers to
+        <em>repeated division</em>.
+        So, expanding an expression like <m>x^{-3}</m> is easy if we begin with the number <m>1</m>, as in:
+        <md>
+          <mrow>x^{-3} \amp= 1 / (x\cdot x\cdot x)</mrow>
+          <mrow>\amp= \frac{1}{x\cdot x\cdot x}</mrow>
+          <mrow>\amp= \frac{1}{x^3}</mrow>
+        </md>
+      </p>
+
+      <p>
+        Simplify the following expressions so they have positive exponents:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              <m>x^{-2}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>5x^{-3}</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ul>
+          <li>
+            <p>
+              <m>x^{-2} = \frac{1}{x^2}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>5x^{-3} = 5\cdot \frac{1}{x^3} = \frac{5}{x^3}</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </solution>
+  </example>
+
+  <p>
+    So, a variable raised to a negative exponent is the same as dividing by that variable raised to a positive exponent.
+    Keep that in mind as you answer the next exercise.
+  </p>
+
+  <exercise>
+    <webwork>
         <setup>
+
           <pg-code>
             $false=PopUp(
             ["?","True","False"],"False"
@@ -216,26 +451,90 @@
           </pg-code>
         </setup>
         <statement>
-          <p>True or False: The function <m>f(x) = x^{-2}</m> <em>always</em> gives negative outputs, because it has a negative exponent.</p>
-          <p>Answer:  <var name="$false" form="popup" /></p>
-          <p>True or False: The function <m>f(x) = x^{-2}</m> <em>never</em> gives negative outputs, because it is the same as <m>\frac{1}{x^2}</m>, which is just <m>1</m> divided by a positive number.</p>
-          <p>Answer:  <var name="$true" form="popup" /></p>
-          <p>True or False: The function <m>g(x) = x^{-3}</m> <em>always</em> gives negative outputs, because it has a negative exponent.</p>
-          <p>Answer:  <var name="$false" form="popup" /></p>
-          <p>True or False: The function <m>g(x) = x^{-3}</m> <em>will only</em> give a negative output if the input is negative.</p>
-          <p>Answer:  <var name="$true" form="popup" /></p>
+          <p>
+            True or False:
+            The function <m>f(x) = x^{-2}</m>
+            <em>always</em> gives negative outputs,
+            because it has a negative exponent.
+          </p>
+
+          <p>
+            Answer:
+            <var name="$false" form="popup" />
+          </p>
+
+          <p>
+            True or False:
+            The function <m>f(x) = x^{-2}</m>
+            <em>never</em> gives negative outputs,
+            because it is the same as <m>\frac{1}{x^2}</m>,
+            which is just <m>1</m> divided by a positive number.
+          </p>
+
+          <p>
+            Answer:
+            <var name="$true" form="popup" />
+          </p>
+
+          <p>
+            True or False:
+            The function <m>g(x) = x^{-3}</m>
+            <em>always</em> gives negative outputs,
+            because it has a negative exponent.
+          </p>
+
+          <p>
+            Answer:
+            <var name="$false" form="popup" />
+          </p>
+
+          <p>
+            True or False:
+            The function <m>g(x) = x^{-3}</m> <em>will only</em>
+            give a negative output if the input is negative.
+          </p>
+
+          <p>
+            Answer:
+            <var name="$true" form="popup" />
+          </p>
         </statement>
         <solution>
-          <p>First, we rewrite these functions so they have positive exponents: <me>f(x) = x^{-2} = \frac{1}{x^2}</me> and <me>g(x) = x^{-3} = \frac{1}{x^3}</me></p>
-          <p>We know <m>x^2</m> never gives negative outputs, so neither will <m>x^{-2} = \frac{1}{x^2}</m>.</p>
-          <p>We also know that <m>x^3</m> will only give a negative output when <m>x \lt 0</m>, so the same is true about <m>x^{-3} = \frac{1}{x^3}</m>.</p>
+          <p>
+            First, we rewrite these functions so they have positive exponents:
+            <me>
+              f(x) = x^{-2} = \frac{1}{x^2}
+            </me>
+            and
+            <me>
+              g(x) = x^{-3} = \frac{1}{x^3}
+            </me>
+          </p>
+
+          <p>
+            We know <m>x^2</m> never gives negative outputs,
+            so neither will <m>x^{-2} = \frac{1}{x^2}</m>.
+          </p>
+
+          <p>
+            We also know that <m>x^3</m> will only give a negative output when <m>x \lt 0</m>,
+            so the same is true about <m>x^{-3} = \frac{1}{x^3}</m>.
+          </p>
         </solution>
-      </webwork>
-    </exercise>
-    <p>Now, explore the graphs of power functions with negative integer exponents. You will see a pattern for the shapes of these graphs, depending on whether the exponent is <em>even</em> or <em>odd</em>.</p>
-    <exercise>
-      <webwork>
+    </webwork>
+  </exercise>
+
+  <p>
+    Now, explore the graphs of power functions with negative integer exponents.
+    You will see a pattern for the shapes of these graphs,
+    depending on whether the exponent is
+    <em>even</em> or <em>odd</em>.
+  </p>
+
+  <exercise>
+    <webwork>
         <setup>
+
           <pg-code>
             $evenExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],1);
             $oddExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],2);
@@ -243,35 +542,83 @@
           </pg-code>
         </setup>
         <statement>
-          <p>The graph below shows a power function of the form <m>f(x) = x^n</m>, where <m>n</m> is a negative integer. Use the slider to change the exponent <m>n</m>.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PAjZ6WxB/width/417/height/349/border/888888/sdz/false/" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Notice that the <em>x</em>-axis is a horizontal <term>asymptote</term>, and the <em>y</em>-axis is a vertical <term>asymptote</term>.</p>
-          <p>Observe the general <em>shapes</em> of these functions, and think about what is the same or different about them.</p>
-          <p>Complete each statement below with the best option.</p>
-          <p><ol label="a">
-            <li>
-              <p>If the exponent is an <em>even</em> negative number, then near the vertical asymptote, the graph: <var name="$evenExponent" form="popup" /></p>
-            </li>
-            <li>
-              <p>If the exponent is an <em>odd</em> negative number, then near the verical asymptote, the graph: <var name="$oddExponent" form="popup" /></p>
-            </li>
-            <li>
-              <p>All of these power functions pass through the point(s): <var name="$commonPoints" form="popup" /></p>
-            </li>
-          </ol></p>
-        </statement>
+          <p>
+            The graph below shows a power function of the form <m>f(x) = x^n</m>,
+            where <m>n</m> is a negative integer.
+            Use the slider to change the exponent <m>n</m>.
+          </p>
 
+          <p>
+            [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PAjZ6WxB/width/417/height/349/border/888888/sdz/false/" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+          </p>
+
+          <p>
+            Notice that the <em>x</em>-axis is a horizontal <term>asymptote</term>,
+            and the <em>y</em>-axis is a vertical <term>asymptote</term>.
+          </p>
+
+          <p>
+            Observe the general <em>shapes</em> of these functions,
+            and think about what is the same or different about them.
+          </p>
+
+          <p>
+            Complete each statement below with the best option.
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  If the exponent is an <em>even</em> negative number,
+                  then near the vertical asymptote, the graph:
+                  <var name="$evenExponent" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If the exponent is an <em>odd</em> negative number,
+                  then near the verical asymptote, the graph:
+                  <var name="$oddExponent" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  All of these power functions pass through the point(s):
+                  <var name="$commonPoints" form="popup" />
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
         <solution>
-          <p>If <m>n</m> is an even negative integer, then the graph of <m>y = x^n</m> will point upward on both sides of the vertical asymptote.</p>
-          <p>If <m>n</m> is an odd negative integer, then the graph of <m>y = x^n</m> will point in opposite directions (up/down) on the sides of the vertical asymptote.</p>
-          <p>All of these functions will contain the point <m>(1,1)</m>.</p>
+          <p>
+            If <m>n</m> is an even negative integer,
+            then the graph of <m>y = x^n</m> will point upward on both sides of the vertical asymptote.
+          </p>
+
+          <p>
+            If <m>n</m> is an odd negative integer,
+            then the graph of <m>y = x^n</m> will point in opposite directions (up/down) on the sides of the vertical asymptote.
+          </p>
+
+          <p>
+            All of these functions will contain the point <m>(1,1)</m>.
+          </p>
         </solution>
-      </webwork>
-    </exercise>
-    <p>Use your observations to identify the function in the next exercise.</p>
-    <exercise>
-      <webwork>
+    </webwork>
+  </exercise>
+
+  <p>
+    Use your observations to identify the function in the next exercise.
+  </p>
+
+  <exercise>
+    <webwork>
         <setup>
+
           <pg-code>
             $formula=RadioButtons(
                 ["\(f(x) = x^4\)","\(f(x) = x^3\)","\(f(x) = x^{-4}\)", "\(f(x) = x^{-3}\)","None of these."],
@@ -288,25 +635,39 @@
           </pg-code>
         </setup>
         <statement>
-          <p>The graph below shows a power function.</p>
-          <sidebyside>
+          <p>
+            The graph below shows a power function.
+          </p>
 
+          <sidebyside>
             <image pg-name="$gr" />
           </sidebyside>
-          <p>What is a possible formula for this function?</p>
-          <p><var name="$formula" form="buttons" /></p>
+
+          <p>
+            What is a possible formula for this function?
+          </p>
+
+          <p>
+            <var name="$formula" form="buttons" />
+          </p>
         </statement>
         <solution>
-          <p>The only possibility given is <m>f(x)=x^{-4}</m>.</p>
+          <p>
+            The only possibility given is <m>f(x)=x^{-4}</m>.
+          </p>
         </solution>
-      </webwork>
-    </exercise>
+    </webwork>
+  </exercise>
 
-    <p>Again, remember the function transformation for reflecting over the <m>x</m>-axis. Use this in the next exercise.</p>
+  <p>
+    Again, remember the function transformation for reflecting over the <m>x</m>-axis.
+    Use this in the next exercise.
+  </p>
 
-    <todo>Use sidebyside when it is available</todo>
-    <exercise>
-      <webwork>
+  <todo>Use sidebyside when it is available</todo>
+
+  <exercise>
+    <webwork>
         <setup>
 
           <pg-code>
@@ -330,70 +691,193 @@
             add_functions($gr[3], "-x^(-3) for x in &lt;0.1,5> using color:blue and weight:2");
           </pg-code>
         </setup>
-
         <statement>
-          <sidebyside widths="40%"><image pg-name="$gr[0]" /></sidebyside>
-          <sidebyside widths="40%"><image pg-name="$gr[1]" /></sidebyside>
-          <sidebyside widths="40%"><image pg-name="$gr[2]" /></sidebyside>
-          <sidebyside widths="40%"><image pg-name="$gr[3]" /></sidebyside>
-          <p>Select the graph for each formula:</p>
-          <p><ol label="a">
-            <li>
-              <p>Which graph shows <m>y = -x^{-2}</m>? <var name="$posEven" form="popup" /></p>
-            </li>
-            <li>
-              <p>Which graph shows <m>y = x^{-4}</m>? <var name="$posOdd" form="popup" /></p>
-            </li>
-            <li>
-              <p>Which graph shows <m>y = x^{-1}</m>? <var name="$negEven" form="popup" /></p>
-            </li>
-            <li>
-              <p>Which graph shows <m>y = -x^{-3}</m>? <var name="$negOdd" form="popup" /></p>
-            </li>
-          </ol></p>
+          <sidebyside widths="40%">
+            <image pg-name="$gr[0]" />
+          </sidebyside>
+
+          <sidebyside widths="40%">
+            <image pg-name="$gr[1]" />
+          </sidebyside>
+
+          <sidebyside widths="40%">
+            <image pg-name="$gr[2]" />
+          </sidebyside>
+
+          <sidebyside widths="40%">
+            <image pg-name="$gr[3]" />
+          </sidebyside>
+
+          <p>
+            Select the graph for each formula:
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Which graph shows <m>y = -x^{-2}</m>?
+                  <var name="$posEven" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Which graph shows <m>y = x^{-4}</m>?
+                  <var name="$posOdd" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Which graph shows <m>y = x^{-1}</m>?
+                  <var name="$negEven" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Which graph shows <m>y = -x^{-3}</m>?
+                  <var name="$negOdd" form="popup" />
+                </p>
+              </li>
+            </ol>
+          </p>
         </statement>
         <solution>
-          <p><ol label="a">
-            <li><p><m>y = -x^{-2}</m> is graph <var name="$posEven" />.</p></li>
-            <li><p><m>y = x^{-4}</m> is graph <var name="$posOdd" />.</p></li>
-            <li><p><m>y = x^{-1}</m> is graph <var name="$negEven" />.</p></li>
-            <li><p><m>y = -x^{-3}</m> is graph <var name="$negOdd" />.</p></li>
-          </ol></p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  <m>y = -x^{-2}</m> is graph <var name="$posEven" />.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>y = x^{-4}</m> is graph <var name="$posOdd" />.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>y = x^{-1}</m> is graph <var name="$negEven" />.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>y = -x^{-3}</m> is graph <var name="$negOdd" />.
+                </p>
+              </li>
+            </ol>
+          </p>
         </solution>
-      </webwork>
-    </exercise>
-    <paragraphs><title>Fractional Exponents</title>
-    <p>We now explore the graphs of power functions which have fractional exponents of the form <m>\frac{1}{n}</m>.</p>
-    <p>Here, we only consider when the exponent is positive.</p></paragraphs>
-    <p>Before looking at graphs, we will briefly revisit the meaning of a fractional exponent.</p>
-    <example>
-      <statement>
-        <p>Recall the meaning of a fractional exponent. For example, the expression <m>9^{\frac{1}{2}}</m> is the same as the <em>square root</em> of <m>9</m>:  <me>9^{\frac{1}{2}} = \sqrt{9} = 3</me></p>
-        <p>This can be justified by using properties of exponents. If we multiplied <m>9^{\frac{1}{2}}</m> by itself, we would have: <md>
-        <mrow>9^{\frac{1}{2}}\cdot 9^{\frac{1}{2}} \amp= 9^{\frac{1}{2} + \frac{1}{2}}</mrow>
-        <mrow>\amp= 9^1</mrow>
-        <mrow>\amp= 9</mrow></md></p>
-        <p>So, <m>9^{\frac{1}{2}}</m> must be a square root of <m>9</m>, because squaring it actually equals <m>9</m>.</p>
-        <p>Find the following values:</p>
-        <p><ul>
-          <li><p><m>100^{\frac{1}{2}}</m></p></li>
-          <li><p><m>-100^{\frac{1}{2}}</m></p></li>
-          <li><p><m>(-100)^{\frac{1}{2}}</m></p></li>
-        </ul></p>
-      </statement>
-      <solution>
-        <p><ul>
-          <li><p><m>100^{\frac{1}{2}} = \sqrt{100} = 10</m></p></li>
-          <li><p><m>-100^{\frac{1}{2}} = -\sqrt{100} = -10</m></p></li>
-          <li><p><m>(-100)^{\frac{1}{2}} = \sqrt{-100}</m> is <em>not</em> a real number</p></li>
-        </ul></p>
-      </solution>
-    </example>
+    </webwork>
+  </exercise>
 
-    <p>Now explore the graphs of power functions with exponents of the form <m>\frac{1}{n}</m>, noting what happens when <m>n</m> is even or odd.</p>
+  <paragraphs>
+    <title>Fractional Exponents</title>
+    <p>
+      We now explore the graphs of power functions which have fractional exponents of the form <m>\frac{1}{n}</m>.
+    </p>
 
-    <exercise>
-      <webwork>
+    <p>
+      Here, we only consider when the exponent is positive.
+    </p>
+  </paragraphs>
+
+  <p>
+    Before looking at graphs,
+    we will briefly revisit the meaning of a fractional exponent.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Recall the meaning of a fractional exponent.
+        For example,
+        the expression <m>9^{\frac{1}{2}}</m> is the same as the
+        <em>square root</em> of <m>9</m>:
+        <me>
+          9^{\frac{1}{2}} = \sqrt{9} = 3
+        </me>
+      </p>
+
+      <p>
+        This can be justified by using properties of exponents.
+        If we multiplied <m>9^{\frac{1}{2}}</m> by itself, we would have:
+        <md>
+          <mrow>9^{\frac{1}{2}}\cdot 9^{\frac{1}{2}} \amp= 9^{\frac{1}{2} + \frac{1}{2}}</mrow>
+          <mrow>\amp= 9^1</mrow>
+          <mrow>\amp= 9</mrow>
+        </md>
+      </p>
+
+      <p>
+        So, <m>9^{\frac{1}{2}}</m> must be a square root of <m>9</m>,
+        because squaring it actually equals <m>9</m>.
+      </p>
+
+      <p>
+        Find the following values:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              <m>100^{\frac{1}{2}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>-100^{\frac{1}{2}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(-100)^{\frac{1}{2}}</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ul>
+          <li>
+            <p>
+              <m>100^{\frac{1}{2}} = \sqrt{100} = 10</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>-100^{\frac{1}{2}} = -\sqrt{100} = -10</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(-100)^{\frac{1}{2}} = \sqrt{-100}</m> is
+              <em>not</em> a real number
+            </p>
+          </li>
+        </ul>
+      </p>
+    </solution>
+  </example>
+
+  <p>
+    Now explore the graphs of power functions with exponents of the form <m>\frac{1}{n}</m>,
+    noting what happens when <m>n</m> is even or odd.
+  </p>
+
+  <exercise>
+    <webwork>
         <setup>
 
           <pg-code>
@@ -403,23 +887,62 @@
           </pg-code>
         </setup>
         <statement>
-          <p>The graph below shows a power function of the form <m>f(x) = x^{1/n}</m>, where <m>n</m> is a positive integer. Use the slider to change the value of <m>n</m>.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PGyGRyHg/width/417/height/349/border/888888/sdz/false/" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>Power functions of this type also have similar overall <em>shapes</em>, depending on the denominator in the exponent. Complete the following statements about the shapes of the power functions in this exercise.</p>
-          <p><ol label="a">
-            <li>
-              <p>If the exponent is <m>1</m> over an <em>even</em> positive number, then the domain is: <var name="$evenExponent" form="popup" /></p>
-            </li>
-            <li>
-              <p>If the exponent is <m>1</m> over an <em>odd</em> positive number, then the domain is: <var name="$oddExponent" form="popup" /></p>
-            </li>
-            <li>
-              <p>All of these power functions pass through the point(s): <var name="$commonPoints" form="popup" /></p>
-            </li>
-          </ol></p>
-        </statement>
-      </webwork>
-    </exercise>
-    <p>So we see that fractional exponents refer to <m>n^{\rm{th}}</m> roots: <m>x^{\frac{1}{2}}</m> is a square root, <m>x^{\frac{1}{3}}</m> is a cube root, etc. <fn>One should be careful when evaluating power functions of this type when the input <m>x</m> is negative. Some calculators/programs will evaluate an expression like <m>(-8)^{\frac{1}{3}}</m> differently, and actually <em>not</em> return a real number. In this course, we will treat <m>x^{\frac{1}{3}}</m> and <m>\sqrt[3]{x}</m> the same.</fn></p>
+          <p>
+            The graph below shows a power function of the form <m>f(x) = x^{1/n}</m>,
+            where <m>n</m> is a positive integer.
+            Use the slider to change the value of <m>n</m>.
+          </p>
 
+          <p>
+            [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PGyGRyHg/width/417/height/349/border/888888/sdz/false/" width="417px" height="349px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+          </p>
+
+          <p>
+            Power functions of this type also have similar overall <em>shapes</em>,
+            depending on the denominator in the exponent.
+            Complete the following statements about the shapes of the power functions in this exercise.
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  If the exponent is <m>1</m> over an <em>even</em>
+                  positive number, then the domain is:
+                  <var name="$evenExponent" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If the exponent is <m>1</m> over an <em>odd</em>
+                  positive number, then the domain is:
+                  <var name="$oddExponent" form="popup" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  All of these power functions pass through the point(s):
+                  <var name="$commonPoints" form="popup" />
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+    </webwork>
+  </exercise>
+
+  <p>
+    So we see that fractional exponents refer to <m>n^{\rm{th}}</m> roots:
+    <m>x^{\frac{1}{2}}</m> is a square root,
+    <m>x^{\frac{1}{3}}</m> is a cube root, etc.<fn>
+    One should be careful when evaluating power functions of this type when the input <m>x</m> is negative.
+    Some calculators/programs will evaluate an expression like <m>(-8)^{\frac{1}{3}}</m> differently,
+    and actually <em>not</em> return a real number.
+    In this course, we will treat
+    <m>x^{\frac{1}{3}}</m> and <m>\sqrt[3]{x}</m> the same.
+    </fn>
+  </p>
 </section>
+

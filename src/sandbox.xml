@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -10,11 +9,8 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-
 <chapter xml:id="sandbox" xmlns:xi="http://www.w3.org/2001/XInclude">
-
-    <title>Sandbox</title>
-
+  <title>Sandbox</title>
     <!-- <exercise> -->
       <!-- <title></title> -->
       <!-- <introduction>
@@ -23,7 +19,7 @@
       <!-- <webwork>
         <setup>
           <pg-code>
-            
+
           </pg-code>
         </setup>
         <statement>
@@ -34,35 +30,53 @@
         </solution>
       </webwork>
     </exercise> -->
-
-    <exercise>
-      <webwork>
+  <exercise>
+    <webwork>
         <setup>
+
           <pg-code>
             $train = RadioButtons(["Blue Train (dotted line)","Red Train (dashed line)","Green Train (solid line)"],0);
             $slope = RadioButtons(["mope","dope","slope","scope"],2);
           </pg-code>
         </setup>
-
         <statement>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mYBwwJSp/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-          <p>The graph below shows the position of three trains at various times.</p>
+          <p>
+            [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mYBwwJSp/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+          </p>
+
+          <p>
+            The graph below shows the position of three trains at various times.
+          </p>
+
           <p>
             <ol>
               <li>
-                <p>Which of the three trains is traveling a the fastest speed?</p>
-                <p><var name="$train" form="buttons" /></p>
+                <p>
+                  Which of the three trains is traveling a the fastest speed?
+                </p>
+
+                <p>
+                  <var name="$train" form="buttons" />
+                </p>
               </li>
+
               <li>
-                <p><em>What do you call the steepness of the line?</em></p>
-                <p>The graph of the fastest train has the greatest:</p>
-                <p><var name="$slope" form="buttons" /></p>
+                <p>
+                  <em>What do you call the steepness of the line?</em>
+                </p>
+
+                <p>
+                  The graph of the fastest train has the greatest:
+                </p>
+
+                <p>
+                  <var name="$slope" form="buttons" />
+                </p>
               </li>
             </ol>
           </p>
         </statement>
-      </webwork>
-    </exercise>
-
-
+    </webwork>
+  </exercise>
 </chapter>
+
