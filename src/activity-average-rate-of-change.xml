@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -10,555 +9,1139 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-
 <section xml:id="activity-average-rate-of-change" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Average Rate of Change</title>
-
-    <objectives>
-        <title>Student Learning Outcomes</title>
-        <introduction>
-            <p>After completing this lesson you will be able to:</p>
-        </introduction>
-        <ol>
-            <li>
-                <p>Perform calculations using function notation including Average Rate of Change.</p>
-            </li>
-            <li>
-                <p>Define an interval and understand the use of inequality notation to denote an interval.</p>
-            </li>
-        </ol>
-    </objectives>
-
+  <title>Average Rate of Change</title>
+  <objectives>
+    <title>Student Learning Outcomes</title>
     <introduction>
-        <p>In this activity we introduce the Greek letter <m>\Delta</m> that represents change, and we develop the concept of <term>average rate of change</term>.</p>
-
-        <p>The prerequisites for this lesson are knowing how to calculate the slope of a line and understanding the meaning of slope.</p>
+      <p>
+        After completing this lesson you will be able to:
+      </p>
     </introduction>
 
-    <subsection>
-        <title>Intuitive Knowledge</title>
-
-        <p>Let's start by realizing you already understand the concept of average rate of change, but maybe you have never heard the phrase before.</p>
-
-        <exercise>
-            <webwork>
-                <setup>
-
-                    <pg-code>
-                        $train = RadioButtons(["Blue Train (dotted line)","Red Train (dashed line)","Green Train (solid line)"],0);
-                        $slope = RadioButtons(["mope","dope","slope","scope"],2);
-                    </pg-code>
-                </setup>
-
-                <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mYBwwJSp/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>The graph below shows the position of three trains at various times.</p>
-
-                    <p><ol>
-                        <li>
-                            <p>Which of the three trains is traveling a the fastest speed?</p>
-                            <p><var name="$train" form="buttons" /></p>
-                        </li>
-                        <li>
-                            <p><em>What do you call the steepness of the line?</em></p>
-                            <p>The graph of the fastest train has the greatest:</p>
-                            <p><var name="$slope" form="buttons" /></p>
-                        </li>
-                    </ol></p>
-                </statement>
-            </webwork>
-        </exercise>
-
-        <p>It turns out, <term>average rate of change</term> is just another way to talk about slope. As the name implies, it measures how quickly things change, on average.</p>
-        <p>Common examples of average rate of change:</p>
+    <ol>
+      <li>
         <p>
-          <ul>
-            <li>
-              <p>Traveling from Portland, OR to Seattle, WA (about <m>200</m> miles) in <m>4</m> hours is an average speed of <quantity><mag>50</mag><unit base="mileperhour" /></quantity>.</p>
-            </li>
-            <li>
-              <p>Pressure at the surface of the ocean is about <quantity><mag>14.6</mag><unit base="poundpersquareinch" /></quantity> (pounds per square inch). If you dive under water <m>20</m> feet the pressure is about <quantity><mag>23.6</mag><unit base="poundpersquareinch" /></quantity>.  That's an average rate of pressure increase of about <quantity><mag>0.45</mag><unit base="poundpersquareinch" /></quantity> pounds per square inch, per foot underwater.</p>
-            </li>
-            <li>
-              <p>Earning <m>\$108</m> for <m>6</m> hours of work is an average hourly pay rate of <m>18</m> dollars per hour.</p>
-            </li>
-          </ul>
+          Perform calculations using function notation including Average Rate of Change.
         </p>
-        <p>In each example there is a function that relates an input with an output. When the input changes by some amount, the output will also change (though usually by some other amount).</p>
-        <p>The change in the output divided by the change in the input is called an <term>average rate of change</term><idx><h>average rate of change</h></idx> of the function.</p>
-        <p>Be careful to remember that we are only talking about an <em>average</em>. For instance, no one can drive from Portland to Seattle at a constant speed. There is always stop and go traffic, variations in speed limits, etc.</p>
-        <exercise>
-            <introduction>
-                <p>The interactive graph below is that of a function <m>D = f(t)</m> where <em>D</em> is the number of miles a train is from downtown at <m>t</m> hours after 8 am.</p>
-            </introduction>
+      </li>
 
-            <webwork>
-                <setup>
+      <li>
+        <p>
+          Define an interval and understand the use of inequality notation to denote an interval.
+        </p>
+      </li>
+    </ol>
+  </objectives>
 
-                    <!-- Within parserFunction below the formula has nothing to do with the problem.  It's only there to be function to generate values for us -->
-                    <pg-code>
-                        $speed = PopUp(["?", "hours", "miles", "hours per mile", "miles per hour"], "miles per hour");
-                        Context('Numeric');
-                        $Vchange = Real(32);
-                        Context('Numeric');
-                        $Hchange = Real(2);
-                        Context('Numeric');
-                        $Rate = Real(16);
-                        parserFunction("f(x)"=>"(sin(x)+2)/pi");
-                        Context()->flags->set(reduceConstantFunctions=>0);
-                        Context()->flags->set(formatStudentAnswer=>"parsed");
-                        $difference=Formula("f(5)-f(2)");
-                    </pg-code>
-                </setup>
+  <introduction>
+    <p>
+      In this activity we introduce the Greek letter <m>\Delta</m> that represents change,
+      and we develop the concept of <term>average rate of change</term>.
+    </p>
 
-                <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+    <p>
+      The prerequisites for this lesson are knowing how to calculate the slope of a line and understanding the meaning of slope.
+    </p>
+  </introduction>
 
-                    <p>As the time changes along the horizontal axis the result is the changing position of the train measured on the vertical axis.  The key word here is <q>change</q></p>
-                    <p><ol label="a">
-                        <li>
-                            <p>Use the graph to find the change in distance between the <m>9{:}00</m> and <m>11{:}00</m> <init>A.M.</init>.</p>
-                            <p><m>f(3) - f(1) \approx </m> <var name="$Vchange" width="3" /> miles.</p>
-                        </li>
-                        <li>
-                            <p>What is the change in time between the <m>9{:}00</m> and <m>11{:}00</m> <init>A.M.</init>?</p>
-                            <p>The change in time is <var name="$Hchange" width="3" /> hour(s).</p>
-                        </li>
-                        <li>
-                            <p>What is the average speed (rate of change) between <m>9{:}00</m> and <m>11{:}00</m> <init>A.M.</init>?</p>
-                            <p>The average speed is <var name="$Rate" width="3" /><var name="$speed" form="popup" /></p>
-                        </li>
-                        <li>
-                            <p>Use function notation (as in part a) to write an expression that represents the <em>change in distance</em> between the <m>10{:}00</m> <init>A.M.</init> and <m>1{:}00</m> <init>P.M.</init>.</p>
-                            <p>The change in distance can be expressed as <var name="$difference" width="10" /></p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <solution>
-                  <p><ol label="a">
-                    <li>
-                      <p><m>f(3) - f(1) \approx </m> <var name="$Vchange" /> miles.</p>
-                    </li>
-                    <li>
-                      <p>The change in time is <var name="$Hchange" /> hour(s).</p>
-                    </li>
-                    <li>
-                      <p>The average speed is <m><var name="$Rate" /></m> <var name="$speed" form="popup" /></p>
-                    </li>
-                    <li>
-                      <p>The change in distance can be expressed as <var name="$difference" /></p>
-                    </li>
-                  </ol></p>
-                </solution>
-            </webwork>
-        </exercise>
+  <subsection>
+    <title>Intuitive Knowledge</title>
+    <p>
+      Let's start by realizing you already understand the concept of average rate of change,
+      but maybe you have never heard the phrase before.
+    </p>
 
-        <p>In math we use the Greek letter <m>\Delta</m> to mean <q>change in</q>. Change between two values is typically measured by subtracting an old value from a new value.</p>
-        <p>In our train story where <m>D = f(t)</m>, the expression <m>\Delta f</m> means <q>change in miles from downtown</q>. As the train travels away from downtown, the distance from downtown increases. New distance is greater than old distance, so traveling away from downtown is a positive change in distance.</p>
-        <p>However, the distance from downtown decreases as the train travels towards downtown. New distance is less than old distance, therefore traveling toward downtown is a negative change in distance.</p>
+    <exercise>
+      <webwork>
+          <setup>
 
-        <exercise>
-            <webwork>
-                <setup>
-                    <pg-code>
-                        $chngDist = Real(19.5);
-                        $meaning = PopUp(["?", "Change in hours since 8 a.m.", "Delta t", "Delta times t", "There is no meaning to this expression"], 1);
-                    </pg-code>
-                </setup>
-
-                <statement>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-
-                    <p>Use the graph to find the value of <m>\Delta f</m> during the first <m>2</m> hours of the trip</p>
-                    <p><m>\Delta f \approx </m> <var name="$chngDist" width="5" /> miles</p>
-
-                    <p>What is the meaning of the expression <m>\Delta t</m> in the context of the train story? <var name="$meaning" form="popup" /></p>
-                </statement>
-            </webwork>
-        </exercise>
-    </subsection>
-
-    <subsection>
-        <title>Computing Average Rate of Change</title>
-
-        <p>As we move from one point to another point on a function, there are two changes that take place: The change in the input is called <m>\Delta\text{Input}</m>, and the change in the output is called <m>\Delta\text{Output}</m>.</p>
-
-        <p>If we divide these two changes we get an <term>average rate of change</term>.</p>
-
-        <p>An average rate of change <m>=\frac{\Delta Output}{\Delta Input}</m>.</p>
-
-        <example>
+            <pg-code>
+                $train = RadioButtons(["Blue Train (dotted line)","Red Train (dashed line)","Green Train (solid line)"],0);
+                $slope = RadioButtons(["mope","dope","slope","scope"],2);
+            </pg-code>
+          </setup>
           <statement>
-            <p>The function below shows a <em>Demand Curve</em>, which shows the relationship between the <em>price</em> at which an item is sold, and the <em>number</em> of items people will buy at that price. When the price is low, people will buy more of them <mdash /> when the price is high, people won't buy as many.</p>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mYBwwJSp/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
 
-            <sidebyside widths="47% 47%">
+            <p>
+              The graph below shows the position of three trains at various times.
+            </p>
 
-                <figure>
-                    <caption>Demand Curve</caption>
-                    <image>
-                        <description></description>
-                        <latex-image>
-                        <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xlabel={price (in dollars)},
-                                        ylabel={number sold (in thousands)},
-                                        xmin=-0.5,xmax=6.5,
-                                        ymin=-0.5,ymax=5.5,
-                                        xtick={1,2,...,6},
-                                        ytick={1,2,...,5},
-                                        ]
-                                \addplot+[domain = 1.2:6.2,->]{2/(x-1)^0.5+0.5};
-                                \addplot[soldot] coordinates {(2,2.5) (5,1.5)};
-                                \addplot[guideline,-] coordinates {(2,2.5) (2,1.5)} node[pos=0.5,above,rotate=90] {$-1$};
-                                \addplot[guideline,->] coordinates {(2,1.5) (5,1.5)} node[pos=0.5,below] {$\$3$};
-                            \end{axis}
-                    \end{tikzpicture}
-                    ]]>
-                    </latex-image>
-                    </image>
-                </figure>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Which of the three trains is traveling a the fastest speed?
+                  </p>
 
-                <p>The labeled slope triangle indicates that when the price of the item increases from <m>\$2</m> to <m>\$5</m>, the number sold will decrease from <m>2.5</m> thousand to <m>1.5</m> thousand. The average rate of change of <em>thousands sold</em> with respect to <em>price in dollars</em> is: <me>\frac{-1000}{3} \approx -333.33 \frac{\text{sold}}{\text{\$}}</me>.</p>
-            </sidebyside>
+                  <p>
+                    <var name="$train" form="buttons" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <em>What do you call the steepness of the line?</em>
+                  </p>
+
+                  <p>
+                    The graph of the fastest train has the greatest:
+                  </p>
+
+                  <p>
+                    <var name="$slope" form="buttons" />
+                  </p>
+                </li>
+              </ol>
+            </p>
           </statement>
-        </example>
+      </webwork>
+    </exercise>
 
-        <p>Does this look familiar?  Think <q>rise over run</q>.</p>
-        <p>Once again, average rate of change is just slope. You should be very familiar with the concept of slope, especially as it relates to lines and the famous equation <me>y = mx + b</me> where <m>m</m> represents the slope of the line. Now we are going to use our newly learned function notation to write slope in a different way.</p>
-        <p>Remember, the notation <m>f(3)</m> represents an output value; it's a number. It's the output when the input is <m>3</m>.</p>
+    <p>
+      It turns out, <term>average rate of change</term>
+      is just another way to talk about slope.
+      As the name implies, it measures how quickly things change,
+      on average.
+    </p>
 
-        <exercise>
-            <webwork>
-                <setup>
-                    <pg-code>
-                      $in1=Real(7);
-                      $in2=Real(2);
-                      parserFunction("f(x)"=>"(sin(x)+2)/pi");
-                      Context()->flags->set(reduceConstantFunctions=>exe);
-                      Context()->flags->set(formatStudentAnswer=>"parsed");
-                      $f7=Formula("f(7)");
-                      $evf7=$f7->cmp()->withPostFilter(AnswerHints(Compute("30") => "That's the actual value, but respond by using function notation."));
-                      $f2=Formula("f(2)");
-                      $evf2=$f2->cmp()->withPostFilter(AnswerHints(Compute("30") => "That's the actual value, but respond by using function notation."));
-                    </pg-code>
-                </setup>
+    <p>
+      Common examples of average rate of change:
+    </p>
 
-                <statement>
-                    <p>Suppose <m>f(x)</m> is a function defined for all real numbers.</p>
-                    <p><ol label="a">
-                        <li>
-                            <p>If <m>x = 7</m> is the input value, how do you represent the output value?</p>
-                            <p>The output can be represented as <var name="$f7" width="2" evaluator="$evf7"/>.</p>
-                        </li>
-                        <li>
-                            <p>If <m>x = 2</m> is the input value, how do you represent the output value?</p>
-                            <p>The output can be represented as <var name="$f2" width="2" evaluator="$evf2"/></p>
-                        </li>
-                        <li>
-                            <p>Calculate the change in the input in moving from <m>x = 2</m> to <m>x = 7</m>.</p>
-                            <p><m>\Delta x</m> <m>=</m> <var name="$in1" width="2" /> <m>-</m> <var name="$in2" width="2" /></p>
-                        </li>
-                        <li>
-                            <p>As the input changes from <m>x = 2</m> to <m>x = 7</m> the output also changes. Calculate the change in the output.</p>
-                            <p><m>\Delta f</m> <m>=</m> <var name="$f7" width="2" /> <m>-</m> <var name="$f2" width="2" /></p>
-                        </li>
-                        <li>
-                            <p>Now let's put all that notation together. We want to calculate the average rate of change in the output as the input goes from <m>x = 2</m> to <m>x = 7</m>.</p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            Traveling from Portland, OR to Seattle, WA
+            (about <m>200</m> miles)
+            in <m>4</m> hours is an average speed of
+            <quantity>
+              <mag>50</mag><unit base="mileperhour" />
+            </quantity>.
+          </p>
+        </li>
 
-                            <p><m>\dfrac{\Delta f}{\Delta x} =</m></p>
+        <li>
+          <p>
+            Pressure at the surface of the ocean is about
+            <quantity>
+              <mag>14.6</mag><unit base="poundpersquareinch" />
+            </quantity>
+            (pounds per square inch).
+            If you dive under water <m>20</m> feet the pressure is about
+            <quantity>
+              <mag>23.6</mag><unit base="poundpersquareinch" />
+            </quantity>.
+            That's an average rate of pressure increase of about
+            <quantity>
+              <mag>0.45</mag><unit base="poundpersquareinch" />
+            </quantity>
+            pounds per square inch, per foot underwater.
+          </p>
+        </li>
 
-                            <sidebyside>
-                                <tabular>
-                                <row bottom="minor">
-                                    <cell><var name="$f7" width="2" /></cell>
-                                    <cell><m>-</m></cell>
-                                    <cell><var name="$f2" width="2" /></cell>
-                                </row>
-                                <row>
-                                    <cell><var name="$in1" width="2" /></cell>
-                                    <cell><m>-</m></cell>
-                                    <cell><var name="$in2" width="2" /></cell>
-                                </row>
-                                </tabular>
-                            </sidebyside>
-                        </li>
-                    </ol></p>
-                </statement>
-            </webwork>
-        </exercise>
+        <li>
+          <p>
+            Earning <m>\$108</m> for <m>6</m> hours of work is an average hourly pay rate of <m>18</m> dollars per hour.
+          </p>
+        </li>
+      </ul>
+    </p>
 
-        <p>Next is the easy part: making the actual calculations. We need to find the actual value of our two outputs and we need to find the difference between them.  In math <q>difference</q> essentially means to subtract.</p>
+    <p>
+      In each example there is a function that relates an input with an output.
+      When the input changes by some amount,
+      the output will also change
+      (though usually by some other amount).
+    </p>
 
-        <exercise>
-            <webwork>
-                <setup>
-                    <pg-code>
-                        $slope1 = Real(-1);
-                        $slope2 = Real(2);
-                        $f7 = Real(0);
-                        $f2 = Real(5);
-                        $fminus8 = Real(-15);
-                        $delf1 = Real(-5);
-                        $delx1 = Real(5);
-                        $delf2 = Real(20);
-                        $delx2 = Real(10);
-                        Context()->variables->are(x=>'Real',y=>'Real');
-                        $lineA = ImplicitPlane("y=-x+7");
-                        $lineB = ImplicitPlane("y=2x+1");
-                    </pg-code>
-                </setup>
+    <p>
+      The change in the output divided by the change in the input is called an
+      <term>average rate of change</term>
+          <idx><h>average rate of change</h></idx>
+      of the function.
+    </p>
 
-                <stage>
-                    <statement>
-                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vB6mAHUg/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                        <p>Use the graph of the function <m>f(x)</m> to place each point at the specified coordinates. You will get a message when the points are placed correctly.</p>
-                        <p>Point <m>A</m> at <m>(7,f(7))</m>, Point <m>B</m> at <m>(2,f(2))</m> and Point <m>C</m> at <m>(-8,f(-8))</m>.</p>
-                        <p><ol label="a">
-                            <li>
-                                <p>Use the graph to approximate values for the following outputs:</p>
-                                <p><m>f(7) \approx</m> <var name="$f7" width="2" /></p>
-                                <p><m>f(2) \approx</m> <var name="$f2" width="2" /></p>
-                            </li>
-                            <li>
-                                <p>What is the change in the output as we move from point <m>B</m> to point <m>A</m>?</p>
-                                <p><m>\Delta f \approx </m> <var name="$delf1" width="2" /></p>
-                            </li>
-                            <li>
-                                <p>What is the change in the input moving from point <m>B</m> to point <m>A</m>?</p>
-                                <p><m>\Delta x = </m> <var name="$delx1" width="2" /></p>
-                            </li>
-                            <li>
-                                <p>What is the average rate of change between the points <m>A</m> and <m>B</m>?</p>
-                                <p><m>\frac{\Delta f}{\Delta x} \approx </m><var name="$slope1" width="5" />.</p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                </stage>
-                <stage>
-                    <statement>
-                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vdbw2XUs/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                        <p>The average rate of change you just found between points <m>A</m> and <m>B</m> is the slope of the line connecting the two points.</p>
-                        <p>It means that the function drops about <m>-1</m> unit for every unit we move to the right, on average. But this is only if the inputs are in the interval between <m>x = 2</m> and <m>x = 7</m>.</p>
-                        <p>Here is how you say that in math:<me>\frac{\Delta f}{\Delta x} \approx <var name="$slope1" />\text{ for }2 \leq x \leq 7</me></p>
-                        <p><ol label="A">
-                            <li>
-                                <p>What is the equation of the line between points <m>A</m> and <m>B</m>?</p>
-                                <p>The equation is <var name="$lineA" width="15" /> (use <q><m>y=formula</m></q> as your answer).</p>
-                            </li>
-                            <li>
-                                <p>Use the graph to approximate a value for <m>f(-8)</m></p>
-                                <p><m>f(-8) \approx </m> <var name="$fminus8" width="2" /></p>
-                            </li>
-                            <li>
-                                <p>Recall what you already found: <m>f(2) \approx <var name="$f2" /></m></p>
-                                <p>What is the change in the output as we move from point <m>C</m> to point <m>B</m>?</p>
-                                <p><m>\Delta f \approx </m> <var name="$delf2" width="2" /></p>
-                            </li>
-                            <li>
-                                <p>What is the change in the input moving from point <m>C</m> to point <m>B</m>?</p>
-                                <p><m>\Delta x = </m> <var name="$delx2" width="2" /></p>
-                            </li>
-                            <li>
-                                <p>What is the average rate of change between the points <m>B</m> and <m>C</m>?</p>
-                                <p><m>\frac{\Delta f}{\Delta x} \approx </m><var name="$slope2" width="5" />.</p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                </stage>
-                <stage>
-                    <statement>
-                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GxRSTPsw/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                        <p>The average rate of change you just found between points <m>B</m> and <m>C</m> is the slope of the line connecting the two points.</p>
-                        <p>It means that the function increases about <m>2</m> units for every unit we move to the right, on average. But this is only if the inputs are in the interval between <m>x = -8</m> and <m>x = 2</m>.</p>
-                        <p>Here is how you say that in math:<me>\frac{\Delta f}{\Delta x} \approx <var name="$slope2" />\text{ for }-8 \leq x \leq 2</me></p>
-                        <p>What is the equation of the line between points <m>B</m> and <m>C</m>?</p>
-                        <p>The equation for the line is <var name="$lineB" width="15" />  (use <q><m>y=formula</m></q> as your answer).</p>
-                  </statement>
-                </stage>
-            </webwork>
-        </exercise>
+    <p>
+      Be careful to remember that we are only talking about an <em>average</em>.
+      For instance,
+      no one can drive from Portland to Seattle at a constant speed.
+      There is always stop and go traffic,
+      variations in speed limits, etc.
+    </p>
 
-        <p>As demonstrated in the previous exercise, the average rate of change of a function depends on what interval (section) of the input axis we use.</p>
+    <exercise>
 
-        <p>As a practical example, consider the average daily temperature in Portland as a function of the month.  Temperatures tend to climb as winter transitions into summer (a positive average rate of change), while temperatures tend to drop as summer transitions back into winter (a negative rate of change).</p>
-        <exercise>
-            <introduction>
-              <p>Let <m>T = f(m)</m> be the function that relates the average high temperatures, <m>T</m> degrees Fahrenheit, in Portland as a function of <m>m</m>, the number of months after December 31 in any given year.</p>
-            </introduction>
-            <webwork>
-              <setup>
-                <pg-code>
-                  $intMay = Real(2.6);
-                  $intSep = Real(-10.3);
-                  $intFeb = Real(0.1);
-                  $March = Real(3);
-                  $units = PopUp(["?", "month", "time", "degrees Fahrenheit", "degrees Fahrenheit per month"], "degrees Fahrenheit per month");
-                  Context("Inequalities");
-                  Context()->variables->are(m => "Real");
-                  $intMarch = Compute("3&lt;=m&lt;=12");
-                </pg-code>
-              </setup>
+      <introduction>
+        <p>
+          The interactive graph below is that of a function <m>D = f(t)</m> where <em>D</em>
+          is the number of miles a train is from downtown at <m>t</m> hours after 8 am.
+        </p>
+      </introduction>
 
-              <statement>
-                <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PPsZ6cgY/width/431/height/245/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="245px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                <p>Change the length of the interval on the <q>month</q> axis to see how it affects the average rate of change of the temperature.</p>
-                <p>The questions below are all asking for basically the same thing, but they are written in different ways so you can see how the language relates to the notation.</p>
-                    <p><ol label="a">
-                        <li>
-                            <p>What is the average rate of change on the interval between May and August?</p>
-                            <p><m>\frac{\Delta T}{\Delta m} \approx </m> <var name="$intMay" width="2" /></p>
-                        </li>
-                        <li>
-                            <p>What is <m>\frac{\Delta T}{\Delta m}</m> on the interval between September and December?</p>
-                            <p><m>\frac{\Delta T}{\Delta m} \approx </m> <var name="$intSep" width="2" /></p>
-                        </li>
-                        <li>
-                            <p>Find <m>\frac{\Delta T}{\Delta m}</m> for <m>2 \leq m \leq 12</m></p>
-                            <p><m>\frac{\Delta T}{\Delta m} \approx </m> <var name="$intFeb" width="2" /></p>
-                        </li>
-                        <li>
-                            <p>What month begins a <m>-1</m> degree per month average rate of temperature change that ends in December?</p>
-                            <p>The month is (use a number for the month) <var name="$March" width="10" /></p>
-                        </li>
-                        <li>
-                            <p>Finish the next sentence using the month number you just found to write the entire interval.</p>
-                            <p><m>\frac{\Delta T}{\Delta m} \approx -1</m> on the  interval <var name="$intMarch" width="10" /></p>
-                        </li>
-                        <li>
-                          <p>What are the units of average rate of change in this example?</p>
-                          <p><var name="$units" form="popup" /></p>
-                        </li>
-                    </ol></p>
-              </statement>
-            </webwork>
-        </exercise>
+      <webwork>
+          <setup>
+            <!-- Within parserFunction below the formula has nothing to do with the problem.  It's only there to be function to generate values for us -->
+            <pg-code>
+                $speed = PopUp(["?", "hours", "miles", "hours per mile", "miles per hour"], "miles per hour");
+                Context('Numeric');
+                $Vchange = Real(32);
+                Context('Numeric');
+                $Hchange = Real(2);
+                Context('Numeric');
+                $Rate = Real(16);
+                parserFunction("f(x)"=>"(sin(x)+2)/pi");
+                Context()->flags->set(reduceConstantFunctions=>0);
+                Context()->flags->set(formatStudentAnswer=>"parsed");
+                $difference=Formula("f(5)-f(2)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
 
+            <p>
+              As the time changes along the horizontal axis the result is the changing position of the train measured on the vertical axis.
+              The key word here is <q>change</q>
+            </p>
 
-        <p>Earlier you found the outputs by estimating the results from a graph. Next you will find the outputs by calculating them directly using a formula.</p>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Use the graph to find the change in distance between the <m>9{:}00</m> and <m>11{:}00</m> <init>A.M.</init>.
+                  </p>
 
-        <exercise>
-            <webwork>
-                <setup>
+                  <p>
+                    <m>f(3) - f(1) \approx </m> <var name="$Vchange" width="3" /> miles.
+                  </p>
+                </li>
 
-                    <pg-code>
-                        $deltaInput = Real(2);
-                        $deltaF = Real(-2);
-                        $aveRate = Real(-1);
-                        $aveRate1 = Real(-1);
-                        $aveRate2 = Real(-1);
-                        $fzero = Real(-6);
-                        $ftwo = Real(-4);
-                    </pg-code>
-                </setup>
+                <li>
+                  <p>
+                    What is the change in time between the <m>9{:}00</m> and <m>11{:}00</m> <init>A.M.</init>?
+                  </p>
 
-                <statement>
-                    <p><ol label="a">
-                        <li>
-                            <p>What is <m>\Delta x</m> on the interval <m>-2 \leq x \leq 0</m>?</p>
-                            <p><m>\Delta x = </m> <var name="$deltaInput" width="5" />.</p>
-                        </li>
-                        <li>
-                            <p>Use the formula <m>f(x) = (x-2)(x+3)</m> to calculate <m>\Delta f</m> on the interval <m>-2 \leq x \leq 0</m>.</p>
-                            <p><m>f(0) =</m> <var name="$fzero" width="5" /></p>
-                            <p><m>f(-2) =</m> <var name="$ftwo" width="5" /></p>
-                            <p><m>\Delta f = </m> <var name="$deltaF" width="5" /></p>
-                        </li>
-                        <li>
-                            <p>Use the two results above to calculate <m>\frac{\Delta f}{\Delta x}</m> on the interval <m>-2 \leq x \leq 0</m>.</p>
-                            <p><m>\frac{\Delta f}{\Delta x} = </m> <var name="$aveRate" width="5" /></p>
-                        </li>
-                        </ol></p>
-                </statement>
-                <hint>
-                  <p>To find an average rate of change of any function where, in general <m>y = f(x)</m>, you need two ordered pairs (two points). Use each input to find its corresponding output. That makes one ordered pair.</p>
-                  <p><md>
-                      <mrow>f(\text{input}) = \text{output}</mrow></md></p>
-                  <p>makes the ordered pair</p>
-                      <p><md><mrow>(\text{input}, \text{output})</mrow></md></p>
-                  <p>Calculate the change in the output (subtract the two  outputs). That's <m>\Delta f</m>.</p>
-                  <p>Calculate the change in the input (subtract the two inputs). That's <m>\Delta x</m> </p>
-                  <p>Make sure to subtract the ordered pairs in the same order.</p>
-                  <p>Given ordered pairs <m>(a,f(a))</m> and <m>(b,f(b))</m> if you start with <m>f(a) - f(b)</m> as <m>\Delta f</m>, then you must start with <m>a - b</m> for <m>\Delta x</m>.</p>
-                  <p>But if you go the other direction <m>f(b) - f(a)</m> as <m>\Delta f</m>, then you must start with <m>b - a</m> for <m>\Delta x</m>.</p>
-                </hint>
-            </webwork>
-        </exercise>
-        <p>One question that comes up a lot is, <q>Does it matter what order we evaluate <m>\Delta f</m> and <m>\Delta x</m> ?</q></p>
-        <p>To answer this question recall earlier you used <m>f(x) = (x-2)(x+3)</m> to calculate <m>f(0)</m> and <m>f(-2)</m>. Use these values to calculate the average rate of change in two different directions.</p>
-        <exercise>
-            <webwork>
-                <setup>
+                  <p>
+                    The change in time is <var name="$Hchange" width="3" /> hour(s).
+                  </p>
+                </li>
 
-                    <pg-code>
-                        $forward = Real(-1);
-                        $backward = Real(-1);
-                    </pg-code>
-                </setup>
+                <li>
+                  <p>
+                    What is the average speed
+                    (rate of change)
+                    between <m>9{:}00</m> and <m>11{:}00</m> <init>A.M.</init>?
+                  </p>
 
-                <statement>
-                    <p>Previously you were given the function <m>f(x) = (x-2)(x+3)</m> and you calculated <m>f(0) = -6</m> and <m>f(-2) = -4</m>. Use these values to calculate the average rate of change of the function in two different directions.</p>
-                    <p><m>\frac{f(0) - f(-2)}{0 -^{-} 2} = </m> <var name="$forward" width="5" /></p>
-                    <p><m>\frac{f(-2) - f(0)}{-2 - 0} = </m> <var name="$backward" width="5" /></p>
-                </statement>
+                  <p>
+                    The average speed is <var name="$Rate" width="3" /><var name="$speed" form="popup" />
+                  </p>
+                </li>
 
-                <solution>
-                    <p>It does not matter what direction you calculate an average rate of change.  Just keep the ordered pairs vertically aligned!</p>
-                </solution>
-            </webwork>
-        </exercise>
-        <p>The only thing that matters is that the ordered pairs are kept together.  In the previous exercise the ordered pairs were <m>(0, f(0))</m> and <m>(-2,f(-2))</m>. If you choose to start with <m>x = 0</m> in the denominator then you must start with <m>f(0)</m> in the numerator.</p>
-        <p>On the other hand, if you choose to start with <m>x = -2</m> in the denominator then you must start with <m>f(-2)</m> in the numerator. We say that the ordered pairs <em>must be vertically aligned</em>.</p>
+                <li>
+                  <p>
+                    Use function notation
+                    (as in part a)
+                    to write an expression that represents the
+                    <em>change in distance</em>
+                    between the <m>10{:}00</m> <init>A.M.</init> and <m>1{:}00</m> <init>P.M.</init>.
+                  </p>
 
-        <p>Let's finish this activity by going back to the train example where the distance (miles) of the train from downtown is a function of the time (hours) after 8 a.m.  In other words <m>D = f(t)</m>.</p>
+                  <p>
+                    The change in distance can be expressed as <var name="$difference" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>f(3) - f(1) \approx </m> <var name="$Vchange" /> miles.
+                  </p>
+                </li>
 
-        <exercise>
-            <webwork>
-                <setup>
-                    <pg-code>
-                        $delDist = Real(10);
-                        $delTime = Real(0.5);
-                        $avRate = Real(20);
-                        $distUnits = PopUp(["?", "miles", "units", "hours", "miles per hour"], 1);
-                        $timeUnits = PopUp(["?", "hours per mile", "miles", "hours", "units"], 3);
-                        $avrtUnits = PopUp(["?", "hours", "hours per mile", "miles per hour", "miles"], 3);
-                        $avrtMeaning = PopUp(["?", "distance of the train from downtown", "average speed of the train", "time train has traveled", "triangle D over triangle t"], 2);
-                        $speed= Real(45);
-                        $meaning = PopUp(["?", "distance of the train from downtown", "time the train has traveled", "average speed of the train", "triangle D divided by triangle t"], 3);
-                        $lastUnit = PopUp(["?", "miles", "hours per mile", "hours", "miles per hour"], 4);
-                        $interval = PopUp(["?", "2 p.m. and 5 p.m.", "10 a.m. and 1 p.m.", "2 and 5", "2 mph and 5 mph"], 2);
-                    </pg-code>
-                </setup>
+                <li>
+                  <p>
+                    The change in time is <var name="$Hchange" /> hour(s).
+                  </p>
+                </li>
 
-                <statement>
-                  <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/413/height/250/border/888888" width="413px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+                <li>
+                  <p>
+                    The average speed is <m><var name="$Rate" /></m> <var name="$speed" form="popup" />
+                  </p>
+                </li>
 
-                  <p>The train changes position over time, therefore the train is moving and so the train has <em>speed</em>.  Speed is a rate of change.</p>
+                <li>
+                  <p>
+                    The change in distance can be expressed as <var name="$difference" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
 
-                  <p>In order to calculate an average speed for the train we need to determine how much distance the train covered <m>(\Delta f)</m> and how much time it took to cover that distance <m>(\Delta t)</m>. Consider the interval <m>1.5 \leq t \leq 2.0</m>.</p>
+    <p>
+      In math we use the Greek letter <m>\Delta</m> to mean <q>change in</q>.
+      Change between two values is typically measured by subtracting an old value from a new value.
+    </p>
 
-                  <p><ol label="a">
-                      <li>
-                          <p>What is <m>\Delta f</m> on this interval?</p>
-                          <p><m>\Delta f \approx </m> <var name="$delDist" width="5" /><var name="$distUnits" form="popup" />.</p>
-                      </li>
-                      <li>
-                          <p>What is <m>\Delta t</m> on this interval?</p>
-                          <p><m>\Delta t =</m> <var name="$delTime" width="5" /><var name="$timeUnits" form="popup" />.</p>
-                      </li>
-                      <li>
-                          <p>Use the values you just found to calculate <m>\frac{\Delta f}{\Delta t}</m>.</p>
-                          <p><m>\frac{\Delta f}{\Delta t} \approx </m> <var name="$avRate" width="5" /><var name="$avrtUnits" form="popup" />.</p>
-                      </li>
-                      <li>
-                          <p>What does <m>\frac{\Delta f}{\Delta t}</m> represent in this situation?</p>
-                          <p><m>\frac{\Delta f}{\Delta t}</m> represents the <var name="$avrtMeaning" form="popup" />.</p>
-                      </li>
-                      <li>
-                          <p>Interpret the meaning of the mathematical expression in the context of the train story:</p>
-                          <p><m>\frac{\Delta f}{\Delta t} = 45</m> on the interval <m>2 \leq t \leq 5</m> means the <var name="$meaning" form="popup" /> is <var name="$speed" width="5" /><var name="$lastUnit" form="popup" /> between <var name="$interval" form="popup" />.</p>
-                      </li>
-                  </ol></p>
-                </statement>
-            </webwork>
-        </exercise>
-    </subsection>
+    <p>
+      In our train story where <m>D = f(t)</m>,
+      the expression <m>\Delta f</m> means
+      <q>change in miles from downtown</q>.
+      As the train travels away from downtown,
+      the distance from downtown increases.
+      New distance is greater than old distance,
+      so traveling away from downtown is a positive change in distance.
+    </p>
+
+    <p>
+      However, the distance from downtown decreases as the train travels towards downtown.
+      New distance is less than old distance,
+      therefore traveling toward downtown is a negative change in distance.
+    </p>
+
+    <exercise>
+      <webwork>
+          <setup>
+
+            <pg-code>
+                $chngDist = Real(19.5);
+                $meaning = PopUp(["?", "Change in hours since 8 a.m.", "Delta t", "Delta times t", "There is no meaning to this expression"], 1);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Use the graph to find the value of
+              <m>\Delta f</m> during the first <m>2</m> hours of the trip
+            </p>
+
+            <p>
+              <m>\Delta f \approx </m> <var name="$chngDist" width="5" /> miles
+            </p>
+
+            <p>
+              What is the meaning of the expression
+              <m>\Delta t</m> in the context of the train story?
+              <var name="$meaning" form="popup" />
+            </p>
+          </statement>
+      </webwork>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>Computing Average Rate of Change</title>
+    <p>
+      As we move from one point to another point on a function,
+      there are two changes that take place:
+      The change in the input is called <m>\Delta\text{Input}</m>,
+      and the change in the output is called <m>\Delta\text{Output}</m>.
+    </p>
+
+    <p>
+      If we divide these two changes we get an
+      <term>average rate of change</term>.
+    </p>
+
+    <p>
+      An average rate of change <m>=\frac{\Delta Output}{\Delta Input}</m>.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          The function below shows a <em>Demand Curve</em>,
+          which shows the relationship between the <em>price</em>
+          at which an item is sold,
+          and the <em>number</em> of items people will buy at that price.
+          When the price is low,
+          people will buy more of them <mdash /> when the price is high,
+          people won't buy as many.
+        </p>
+
+        <sidebyside widths="47% 47%">
+          <figure>
+            <caption>Demand Curve</caption>
+            <image>
+              <description></description>
+
+                <latex-image>
+                <![CDATA[\begin{tikzpicture}
+                    \begin{axis}[xlabel={price (in dollars)},
+                                ylabel={number sold (in thousands)},
+                                xmin=-0.5,xmax=6.5,
+                                ymin=-0.5,ymax=5.5,
+                                xtick={1,2,...,6},
+                                ytick={1,2,...,5},
+                                ]
+                        \addplot+[domain = 1.2:6.2,->]{2/(x-1)^0.5+0.5};
+                        \addplot[soldot] coordinates {(2,2.5) (5,1.5)};
+                        \addplot[guideline,-] coordinates {(2,2.5) (2,1.5)} node[pos=0.5,above,rotate=90] {$-1$};
+                        \addplot[guideline,->] coordinates {(2,1.5) (5,1.5)} node[pos=0.5,below] {$\$3$};
+                    \end{axis}
+            \end{tikzpicture}
+            ]]>
+            </latex-image>
+            </image>
+
+          </figure>
+
+          <p>
+            The labeled slope triangle indicates that when the price of the item increases from <m>\$2</m> to <m>\$5</m>,
+            the number sold will decrease from <m>2.5</m> thousand to <m>1.5</m> thousand.
+            The average rate of change of <em>thousands sold</em>
+            with respect to <em>price in dollars</em> is:
+            <me>
+              \frac{-1000}{3} \approx -333.33 \frac{\text{sold}}{\text{\$}}
+            </me>.
+          </p>
+        </sidebyside>
+      </statement>
+    </example>
+
+    <p>
+      Does this look familiar?
+      Think <q>rise over run</q>.
+    </p>
+
+    <p>
+      Once again, average rate of change is just slope.
+      You should be very familiar with the concept of slope,
+      especially as it relates to lines and the famous equation
+      <me>
+        y = mx + b
+      </me>
+      where <m>m</m> represents the slope of the line.
+      Now we are going to use our newly learned function notation to write slope in a different way.
+    </p>
+
+    <p>
+      Remember, the notation <m>f(3)</m> represents an output value;
+      it's a number.
+      It's the output when the input is <m>3</m>.
+    </p>
+
+    <exercise>
+      <webwork>
+          <setup>
+
+            <pg-code>
+              $in1=Real(7);
+              $in2=Real(2);
+              parserFunction("f(x)"=>"(sin(x)+2)/pi");
+              Context()->flags->set(reduceConstantFunctions=>exe);
+              Context()->flags->set(formatStudentAnswer=>"parsed");
+              $f7=Formula("f(7)");
+              $evf7=$f7->cmp()->withPostFilter(AnswerHints(Compute("30") => "That's the actual value, but respond by using function notation."));
+              $f2=Formula("f(2)");
+              $evf2=$f2->cmp()->withPostFilter(AnswerHints(Compute("30") => "That's the actual value, but respond by using function notation."));
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Suppose <m>f(x)</m> is a function defined for all real numbers.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    If <m>x = 7</m> is the input value,
+                    how do you represent the output value?
+                  </p>
+
+                  <p>
+                    The output can be represented as <var name="$f7" width="2" evaluator="$evf7"/>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    If <m>x = 2</m> is the input value,
+                    how do you represent the output value?
+                  </p>
+
+                  <p>
+                    The output can be represented as <var name="$f2" width="2" evaluator="$evf2"/>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Calculate the change in the input in moving from <m>x = 2</m> to <m>x = 7</m>.
+                  </p>
+
+                  <p>
+                    <m>\Delta x</m> <m>=</m> <var name="$in1" width="2" /> <m>-</m> <var name="$in2" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    As the input changes from <m>x = 2</m> to <m>x = 7</m> the output also changes.
+                    Calculate the change in the output.
+                  </p>
+
+                  <p>
+                    <m>\Delta f</m> <m>=</m> <var name="$f7" width="2" /> <m>-</m> <var name="$f2" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Now let's put all that notation together.
+                    We want to calculate the average rate of change in the output as the input goes from <m>x = 2</m> to <m>x = 7</m>.
+                  </p>
+
+                  <p>
+                    <m>\dfrac{\Delta f}{\Delta x} =</m>
+                  </p>
+
+                  <sidebyside>
+
+                    <tabular>
+                      <row bottom="minor">
+                        <cell><var name="$f7" width="2" /></cell>
+                        <cell><m>-</m></cell>
+                        <cell><var name="$f2" width="2" /></cell>
+                      </row>
+                      <row>
+                        <cell><var name="$in1" width="2" /></cell>
+                        <cell><m>-</m></cell>
+                        <cell><var name="$in2" width="2" /></cell>
+                      </row>
+                    </tabular>
+
+                  </sidebyside>
+
+                </li>
+              </ol>
+            </p>
+          </statement>
+      </webwork>
+    </exercise>
+
+    <p>
+      Next is the easy part: making the actual calculations.
+      We need to find the actual value of our two outputs and we need to find the difference between them.
+      In math <q>difference</q> essentially means to subtract.
+    </p>
+
+    <exercise>
+      <webwork>
+          <setup>
+
+            <pg-code>
+                $slope1 = Real(-1);
+                $slope2 = Real(2);
+                $f7 = Real(0);
+                $f2 = Real(5);
+                $fminus8 = Real(-15);
+                $delf1 = Real(-5);
+                $delx1 = Real(5);
+                $delf2 = Real(20);
+                $delx2 = Real(10);
+                Context()->variables->are(x=>'Real',y=>'Real');
+                $lineA = ImplicitPlane("y=-x+7");
+                $lineB = ImplicitPlane("y=2x+1");
+            </pg-code>
+          </setup>
+          <stage>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vB6mAHUg/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Use the graph of the function <m>f(x)</m> to place each point at the specified coordinates.
+              You will get a message when the points are placed correctly.
+            </p>
+
+            <p>
+              Point <m>A</m> at <m>(7,f(7))</m>, Point <m>B</m> at
+              <m>(2,f(2))</m> and Point <m>C</m> at <m>(-8,f(-8))</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Use the graph to approximate values for the following outputs:
+                  </p>
+
+                  <p>
+                    <m>f(7) \approx</m> <var name="$f7" width="2" />
+                  </p>
+
+                  <p>
+                    <m>f(2) \approx</m> <var name="$f2" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the change in the output as we move from point <m>B</m> to point <m>A</m>?
+                  </p>
+
+                  <p>
+                    <m>\Delta f \approx </m> <var name="$delf1" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the change in the input moving from point <m>B</m> to point <m>A</m>?
+                  </p>
+
+                  <p>
+                    <m>\Delta x = </m> <var name="$delx1" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the average rate of change between the points <m>A</m> and <m>B</m>?
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta f}{\Delta x} \approx </m><var name="$slope1" width="5" />.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          </stage>
+          <stage>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vdbw2XUs/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              The average rate of change you just found between points <m>A</m> and <m>B</m> is the slope of the line connecting the two points.
+            </p>
+
+            <p>
+              It means that the function drops about <m>-1</m> unit for every unit we move to the right,
+              on average.
+              But this is only if the inputs are in the interval between <m>x = 2</m> and <m>x = 7</m>.
+            </p>
+
+            <p>
+              Here is how you say that in math:
+              <me>
+                \frac{\Delta f}{\Delta x} \approx <var name="$slope1" />\text{ for }2 \leq x \leq 7
+              </me>
+            </p>
+
+            <p>
+              <ol label="A">
+                <li>
+                  <p>
+                    What is the equation of the line between points <m>A</m> and <m>B</m>?
+                  </p>
+
+                  <p>
+                    The equation is <var name="$lineA" width="15" />
+                    (use <q><m>y=formula</m></q> as your answer).
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use the graph to approximate a value for <m>f(-8)</m>
+                  </p>
+
+                  <p>
+                    <m>f(-8) \approx </m> <var name="$fminus8" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Recall what you already found:
+                    <m>f(2) \approx <var name="$f2" /></m>
+                  </p>
+
+                  <p>
+                    What is the change in the output as we move from point <m>C</m> to point <m>B</m>?
+                  </p>
+
+                  <p>
+                    <m>\Delta f \approx </m> <var name="$delf2" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the change in the input moving from point <m>C</m> to point <m>B</m>?
+                  </p>
+
+                  <p>
+                    <m>\Delta x = </m> <var name="$delx2" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the average rate of change between the points <m>B</m> and <m>C</m>?
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta f}{\Delta x} \approx </m><var name="$slope2" width="5" />.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          </stage>
+          <stage>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GxRSTPsw/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              The average rate of change you just found between points <m>B</m> and <m>C</m> is the slope of the line connecting the two points.
+            </p>
+
+            <p>
+              It means that the function increases about <m>2</m> units for every unit we move to the right,
+              on average.
+              But this is only if the inputs are in the interval between <m>x = -8</m> and <m>x = 2</m>.
+            </p>
+
+            <p>
+              Here is how you say that in math:
+              <me>
+                \frac{\Delta f}{\Delta x} \approx <var name="$slope2" />\text{ for }-8 \leq x \leq 2
+              </me>
+            </p>
+
+            <p>
+              What is the equation of the line between points <m>B</m> and <m>C</m>?
+            </p>
+
+            <p>
+              The equation for the line is <var name="$lineB" width="15" />
+              (use <q><m>y=formula</m></q> as your answer).
+            </p>
+          </statement>
+          </stage>
+      </webwork>
+    </exercise>
+
+    <p>
+      As demonstrated in the previous exercise,
+      the average rate of change of a function depends on what interval (section) of the input axis we use.
+    </p>
+
+    <p>
+      As a practical example,
+      consider the average daily temperature in Portland as a function of the month.
+      Temperatures tend to climb as winter transitions into summer (a positive average rate of change),
+      while temperatures tend to drop as summer transitions back into winter (a negative rate of change).
+    </p>
+
+    <exercise>
+
+      <introduction>
+        <p>
+          Let <m>T = f(m)</m> be the function that relates the average high temperatures,
+          <m>T</m> degrees Fahrenheit, in Portland as a function of <m>m</m>,
+          the number of months after December 31 in any given year.
+        </p>
+      </introduction>
+
+      <webwork>
+          <setup>
+
+            <pg-code>
+              $intMay = Real(2.6);
+              $intSep = Real(-10.3);
+              $intFeb = Real(0.1);
+              $March = Real(3);
+              $units = PopUp(["?", "month", "time", "degrees Fahrenheit", "degrees Fahrenheit per month"], "degrees Fahrenheit per month");
+              Context("Inequalities");
+              Context()->variables->are(m => "Real");
+              $intMarch = Compute("3&lt;=m&lt;=12");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PPsZ6cgY/width/431/height/245/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="245px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              Change the length of the interval on the <q>month</q>
+              axis to see how it affects the average rate of change of the temperature.
+            </p>
+
+            <p>
+              The questions below are all asking for basically the same thing,
+              but they are written in different ways so you can see how the language relates to the notation.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    What is the average rate of change on the interval between May and August?
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta T}{\Delta m} \approx </m> <var name="$intMay" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is <m>\frac{\Delta T}{\Delta m}</m> on the interval between September and December?
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta T}{\Delta m} \approx </m> <var name="$intSep" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Find <m>\frac{\Delta T}{\Delta m}</m> for <m>2 \leq m \leq 12</m>
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta T}{\Delta m} \approx </m> <var name="$intFeb" width="2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What month begins a <m>-1</m> degree per month average rate of temperature change that ends in December?
+                  </p>
+
+                  <p>
+                    The month is
+                    (use a number for the month)
+                    <var name="$March" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Finish the next sentence using the month number you just found to write the entire interval.
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta T}{\Delta m} \approx -1</m> on the interval <var name="$intMarch" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What are the units of average rate of change in this example?
+                  </p>
+
+                  <p>
+                    <var name="$units" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+      </webwork>
+    </exercise>
+
+    <p>
+      Earlier you found the outputs by estimating the results from a graph.
+      Next you will find the outputs by calculating them directly using a formula.
+    </p>
+
+    <exercise>
+      <webwork>
+          <setup>
+
+            <pg-code>
+                $deltaInput = Real(2);
+                $deltaF = Real(-2);
+                $aveRate = Real(-1);
+                $aveRate1 = Real(-1);
+                $aveRate2 = Real(-1);
+                $fzero = Real(-6);
+                $ftwo = Real(-4);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    What is <m>\Delta x</m> on the interval <m>-2 \leq x \leq 0</m>?
+                  </p>
+
+                  <p>
+                    <m>\Delta x = </m> <var name="$deltaInput" width="5" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use the formula <m>f(x) = (x-2)(x+3)</m> to calculate
+                    <m>\Delta f</m> on the interval <m>-2 \leq x \leq 0</m>.
+                  </p>
+
+                  <p>
+                    <m>f(0) =</m> <var name="$fzero" width="5" />
+                  </p>
+
+                  <p>
+                    <m>f(-2) =</m> <var name="$ftwo" width="5" />
+                  </p>
+
+                  <p>
+                    <m>\Delta f = </m> <var name="$deltaF" width="5" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use the two results above to calculate
+                    <m>\frac{\Delta f}{\Delta x}</m> on the interval <m>-2 \leq x \leq 0</m>.
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta f}{\Delta x} = </m> <var name="$aveRate" width="5" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <hint>
+            <p>
+              To find an average rate of change of any function where,
+              in general <m>y = f(x)</m>, you need two ordered pairs
+              (two points).
+              Use each input to find its corresponding output.
+              That makes one ordered pair.
+            </p>
+
+            <p>
+              <md>
+                <mrow>f(\text{input}) = \text{output}</mrow>
+              </md>
+            </p>
+
+            <p>
+              makes the ordered pair
+            </p>
+
+            <p>
+              <md>
+                <mrow>(\text{input}, \text{output})</mrow>
+              </md>
+            </p>
+
+            <p>
+              Calculate the change in the output
+              (subtract the two outputs).
+              That's <m>\Delta f</m>.
+            </p>
+
+            <p>
+              Calculate the change in the input
+              (subtract the two inputs).
+              That's <m>\Delta x</m>
+            </p>
+
+            <p>
+              Make sure to subtract the ordered pairs in the same order.
+            </p>
+
+            <p>
+              Given ordered pairs <m>(a,f(a))</m> and
+              <m>(b,f(b))</m> if you start with <m>f(a) - f(b)</m> as <m>\Delta f</m>,
+              then you must start with <m>a - b</m> for <m>\Delta x</m>.
+            </p>
+
+            <p>
+              But if you go the other direction <m>f(b) - f(a)</m> as <m>\Delta f</m>,
+              then you must start with <m>b - a</m> for <m>\Delta x</m>.
+            </p>
+          </hint>
+      </webwork>
+    </exercise>
+
+    <p>
+      One question that comes up a lot is,
+      <q>Does it matter what order we evaluate
+      <m>\Delta f</m> and <m>\Delta x</m> ?</q>
+    </p>
+
+    <p>
+      To answer this question recall earlier you used
+      <m>f(x) = (x-2)(x+3)</m> to calculate <m>f(0)</m> and <m>f(-2)</m>.
+      Use these values to calculate the average rate of change in two different directions.
+    </p>
+
+    <exercise>
+      <webwork>
+          <setup>
+
+            <pg-code>
+                $forward = Real(-1);
+                $backward = Real(-1);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Previously you were given the function <m>f(x) = (x-2)(x+3)</m> and you calculated
+              <m>f(0) = -6</m> and <m>f(-2) = -4</m>.
+              Use these values to calculate the average rate of change of the function in two different directions.
+            </p>
+
+            <p>
+              <m>\frac{f(0) - f(-2)}{0 -^{-} 2} = </m> <var name="$forward" width="5" />
+            </p>
+
+            <p>
+              <m>\frac{f(-2) - f(0)}{-2 - 0} = </m> <var name="$backward" width="5" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              It does not matter what direction you calculate an average rate of change.
+              Just keep the ordered pairs vertically aligned!
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+
+    <p>
+      The only thing that matters is that the ordered pairs are kept together.
+      In the previous exercise the ordered pairs were
+      <m>(0, f(0))</m> and <m>(-2,f(-2))</m>.
+      If you choose to start with <m>x = 0</m> in the denominator then you must start with <m>f(0)</m> in the numerator.
+    </p>
+
+    <p>
+      On the other hand,
+      if you choose to start with <m>x = -2</m> in the denominator then you must start with <m>f(-2)</m> in the numerator.
+      We say that the ordered pairs <em>must be vertically aligned</em>.
+    </p>
+
+    <p>
+      Let's finish this activity by going back to the train example where the distance (miles) of the train from downtown is a function of the time (hours) after 8 a.m.
+      In other words <m>D = f(t)</m>.
+    </p>
+
+    <exercise>
+      <webwork>
+          <setup>
+
+            <pg-code>
+                $delDist = Real(10);
+                $delTime = Real(0.5);
+                $avRate = Real(20);
+                $distUnits = PopUp(["?", "miles", "units", "hours", "miles per hour"], 1);
+                $timeUnits = PopUp(["?", "hours per mile", "miles", "hours", "units"], 3);
+                $avrtUnits = PopUp(["?", "hours", "hours per mile", "miles per hour", "miles"], 3);
+                $avrtMeaning = PopUp(["?", "distance of the train from downtown", "average speed of the train", "time train has traveled", "triangle D over triangle t"], 2);
+                $speed= Real(45);
+                $meaning = PopUp(["?", "distance of the train from downtown", "time the train has traveled", "average speed of the train", "triangle D divided by triangle t"], 3);
+                $lastUnit = PopUp(["?", "miles", "hours per mile", "hours", "miles per hour"], 4);
+                $interval = PopUp(["?", "2 p.m. and 5 p.m.", "10 a.m. and 1 p.m.", "2 and 5", "2 mph and 5 mph"], 2);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/413/height/250/border/888888" width="413px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              The train changes position over time,
+              therefore the train is moving and so the train has <em>speed</em>.
+              Speed is a rate of change.
+            </p>
+
+            <p>
+              In order to calculate an average speed for the train we need to determine how much distance the train covered
+              <m>(\Delta f)</m> and how much time it took to cover that distance <m>(\Delta t)</m>.
+              Consider the interval <m>1.5 \leq t \leq 2.0</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    What is <m>\Delta f</m> on this interval?
+                  </p>
+
+                  <p>
+                    <m>\Delta f \approx </m> <var name="$delDist" width="5" /><var name="$distUnits" form="popup" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is <m>\Delta t</m> on this interval?
+                  </p>
+
+                  <p>
+                    <m>\Delta t =</m> <var name="$delTime" width="5" /><var name="$timeUnits" form="popup" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use the values you just found to calculate <m>\frac{\Delta f}{\Delta t}</m>.
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta f}{\Delta t} \approx </m> <var name="$avRate" width="5" /><var name="$avrtUnits" form="popup" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What does <m>\frac{\Delta f}{\Delta t}</m> represent in this situation?
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta f}{\Delta t}</m> represents the <var name="$avrtMeaning" form="popup" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Interpret the meaning of the mathematical expression in the context of the train story:
+                  </p>
+
+                  <p>
+                    <m>\frac{\Delta f}{\Delta t} = 45</m> on the interval
+                    <m>2 \leq t \leq 5</m> means the <var name="$meaning" form="popup" /> is <var name="$speed" width="5" /><var name="$lastUnit" form="popup" /> between <var name="$interval" form="popup" />.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+      </webwork>
+    </exercise>
+  </subsection>
 </section>
+

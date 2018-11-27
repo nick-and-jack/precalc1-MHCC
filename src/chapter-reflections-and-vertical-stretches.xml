@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -10,130 +9,181 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-
 <chapter xml:id="chapter-reflections-and-vertical-stretches" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Reflections and Vertical Stretches</title>
+  <objectives>
+    <title>Student Learning Outcomes</title>
+    <ul>
+      <li>
+        <p>
+          Describe the effect of the transformation of the form
+          <m>y = a\cdot f(x)</m> given the graph of <m>y = f(x)</m>,
+          and sketch a graph.
+        </p>
+      </li>
 
-    <title>Reflections and Vertical Stretches</title>
+      <li>
+        <p>
+          Describe the effects on the graph of a function <m>f(x)</m> when comparing <m>f(x)</m> to <m>f(-x)</m> or <m>-f(x)</m>.
+        </p>
+      </li>
 
-        <objectives>
-          <title>Student Learning Outcomes</title>
-          <ul>
-            <li><p>Describe the effect of the transformation of the form <m>y = a\cdot f(x)</m> given the graph of <m>y = f(x)</m>, and sketch a graph.</p></li>
-            <li><p>Describe the effects on the graph of a function <m>f(x)</m> when comparing <m>f(x)</m> to <m>f(-x)</m> or <m>-f(x)</m>.</p></li>
-            <li><p>Use transformations to model situations algebraically (from verbal descriptions, graphs, tables, and data points). Recognize functions as transformations of basic functions.</p></li>
-          </ul>
-        </objectives>
+      <li>
+        <p>
+          Use transformations to model situations algebraically
+          (from verbal descriptions, graphs, tables, and data points).
+          Recognize functions as transformations of basic functions.
+        </p>
+      </li>
+    </ul>
+  </objectives>
         <!-- TODO: Maybe fix video below. A mistake at 5min 20sec -->
         <!--  Video Lectures on "Reflections" (http://stream.mhcc.edu/videos/greenja/captioned/m06-lec-stretch-factor-captioned_-_20150120_200703_26.html) and "Vertical Stretches" (http://stream.mhcc.edu/videos/greenja/captioned/m06-cyu-transformation-equations-captioned_-_20150120_183648_26.html) go here -->
+  <xi:include href="./activity-reflections.xml" />
+  <xi:include href="./activity-vertical-stretches.xml" />
 
-      <xi:include href="./activity-reflections.xml" />
-      <xi:include href="./activity-vertical-stretches.xml" />
+  <section xml:id="reflections-and-vertical-stretches-gist">
+    <title>Gist of Reflections and Vertical Stretches</title>
+    <subsection>
+      <title>Reflections</title>
+      <p>
+        Thinking again of function notation as language,
+        we know that the notation <m>f(x)</m> indicates that there is an input called <m>x</m> and an output called <m>f(x)</m>.
+        Therefore, by replacing <m>x</m> with <m>-x</m> we are using the <term>opposite</term>
+            <idx><h>opposite</h></idx>
+        of the <em>input</em>.
+      </p>
 
-      <section xml:id="reflections-and-vertical-stretches-gist">
-      <title>Gist of Reflections and Vertical Stretches</title>
+      <p>
+        Likewise, if we replace <m>f(x)</m> with <m>-f(x)</m>,
+        we are referring to the <term>opposite</term> of the <em>output</em>.
+      </p>
 
-      <subsection>
-        <title>Reflections</title>
-
-        <p>Thinking again of function notation as language, we know that the notation <m>f(x)</m> indicates that there is an input called <m>x</m> and an output called <m>f(x)</m>. Therefore, by replacing <m>x</m> with <m>-x</m> we are using the <term>opposite</term><idx><h>opposite</h></idx> of the <em>input</em>.</p>
-        <p>Likewise, if we replace <m>f(x)</m> with <m>-f(x)</m>, we are referring to the <term>opposite</term> of the <em>output</em>.</p>
-        <p>From a graphical standpoint, both of the transformations <m>-f(x)</m> and <m>f(-x)</m> represent reflections of a graph:
+      <p>
+        From a graphical standpoint,
+        both of the transformations <m>-f(x)</m> and <m>f(-x)</m> represent reflections of a graph:
         <dl>
           <li>
             <title><m>y = -f(x)</m></title>
-            <p>reflects <m>y = f(x)</m> over the horizontal-axis</p>
+            <p>
+              reflects <m>y = f(x)</m> over the horizontal-axis
+            </p>
           </li>
+
           <li>
             <title><m>y = f(-x)</m></title>
-            <p>reflects <m>y = f(x)</m> over the vertical-axis</p>
+            <p>
+              reflects <m>y = f(x)</m> over the vertical-axis
+            </p>
           </li>
         </dl>
+      </p>
+
+      <example>
+        <p>
+          The function <m>g(x) = x^3 - 5x^2 + 2</m> is graphed below.
         </p>
 
-        <example>
-            <p>The function <m>g(x) = x^3 - 5x^2 + 2</m> is graphed below.</p>
+        <figure>
+          <caption><m>g(x) = x^3 - 5x^2 + 2</m></caption>
+          <image width="47%">
 
-            <figure>
-              <caption><m>g(x) = x^3 - 5x^2 + 2</m></caption>
-                <image width="47%">
-                  <latex-image>
-                  <![CDATA[
-                    \begin{tikzpicture}
-                      \begin{axis}[xmax=6, xmin=-6,
-                                  ymax=40, ymin=-40,
-                                  ytick={},
-                                  minor ytick={}]
-                        \addplot+[domain=-3:6, samples=50] {x^3-5*x^2+2};
-                      \end{axis}
-                    \end{tikzpicture}
-                  ]]>
-                  </latex-image>
-              </image>
-            </figure>
+            <latex-image>
+            <![CDATA[
+              \begin{tikzpicture}
+                \begin{axis}[xmax=6, xmin=-6,
+                            ymax=40, ymin=-40,
+                            ytick={},
+                            minor ytick={}]
+                  \addplot+[domain=-3:6, samples=50] {x^3-5*x^2+2};
+                \end{axis}
+              \end{tikzpicture}
+            ]]>
+            </latex-image>
+          </image>
 
-            <sidebyside widths="48% 48%">
-              <stack>
-                <p>To reflect <m>g(x)</m> over the <m>x</m>-axis, we would take the opposite of the output by multiplying the formula by <m>-1</m>.</p>
-                  <p>The formula for this reflection is <md>
-                    <mrow>y \amp= -g(x)</mrow>
-                    <mrow>\amp= -1(x^3 - 5x^2 + 2)</mrow>
-                    <mrow>\amp= -x^3 + 5x^2 - 2</mrow></md>
-                    and it is graphed below:
-                  </p>
-              </stack>
+        </figure>
 
-              <stack>
-                  <p>To reflect <m>g(x)</m> over the <m>y</m>-axis, we would use the opposite of the input by evaluating <m>g(-x)</m>.</p>
-                  <p>The formula for this reflection is <md>
-                    <mrow>y \amp= g(-x)</mrow>
-                    <mrow>\amp= (-x)^3 - 5(-x)^2 + 2</mrow>
-                    <mrow>\amp= -x^3 - 5x^2 + 2</mrow></md>
-                    and it is graphed below:
-                  </p>
-              </stack>
-            </sidebyside>
+        <sidebyside widths="48% 48%">
 
-            <sidebyside widths="48% 48%">
-                  <figure>
-                    <caption>The reflection <m>y = -g(x)</m></caption>
-                      <image>
-                          <latex-image>
-                            <![CDATA[
-                              \begin{tikzpicture}
-                                \begin{axis}[xmax=6, xmin=-6,
-                                            ymax=40, ymin=-40,
-                                            ytick={},
-                                            minor ytick={}]
-                                  \addplot+[domain=-3:6, samples=50] {-x^3+5*x^2-2};
-                                \end{axis}
-                              \end{tikzpicture}
-                            ]]>
-                          </latex-image>
-                      </image>
-                  </figure>
+          <stack>
+            <p>
+              To reflect <m>g(x)</m> over the <m>x</m>-axis,
+              we would take the opposite of the output by multiplying the formula by <m>-1</m>.
+            </p>
 
-                  <figure>
-                    <caption>The reflection <m>y = g(-x)</m></caption>
-                      <image>
-                          <latex-image>
-                            <![CDATA[
-                              \begin{tikzpicture}
-                                \begin{axis}[xmax=6, xmin=-6,
-                                            ymax=40, ymin=-40,
-                                            ytick={},
-                                            minor ytick={}]
-                                  \addplot+[domain=-6:3, samples=50] {(-x)^3-5*(-x)^2+2};
-                                \end{axis}
-                              \end{tikzpicture}
-                            ]]>
-                          </latex-image>
-                      </image>
-                  </figure>
-            </sidebyside>
-        </example>
+            <p>
+              The formula for this reflection is
+              <md>
+                <mrow>y \amp= -g(x)</mrow>
+                <mrow>\amp= -1(x^3 - 5x^2 + 2)</mrow>
+                <mrow>\amp= -x^3 + 5x^2 - 2</mrow>
+              </md>
+              and it is graphed below:
+            </p>
+          </stack>
 
+          <stack>
+            <p>
+              To reflect <m>g(x)</m> over the <m>y</m>-axis,
+              we would use the opposite of the input by evaluating <m>g(-x)</m>.
+            </p>
 
+            <p>
+              The formula for this reflection is
+              <md>
+                <mrow>y \amp= g(-x)</mrow>
+                <mrow>\amp= (-x)^3 - 5(-x)^2 + 2</mrow>
+                <mrow>\amp= -x^3 - 5x^2 + 2</mrow>
+              </md>
+              and it is graphed below:
+            </p>
+          </stack>
 
+        </sidebyside>
+
+        <sidebyside widths="48% 48%">
+          <figure>
+            <caption>The reflection <m>y = -g(x)</m></caption>
+            <image>
+
+            <latex-image>
+              <![CDATA[
+                \begin{tikzpicture}
+                  \begin{axis}[xmax=6, xmin=-6,
+                              ymax=40, ymin=-40,
+                              ytick={},
+                              minor ytick={}]
+                    \addplot+[domain=-3:6, samples=50] {-x^3+5*x^2-2};
+                  \end{axis}
+                \end{tikzpicture}
+              ]]>
+            </latex-image>
+            </image>
+
+          </figure>
+
+          <figure>
+            <caption>The reflection <m>y = g(-x)</m></caption>
+            <image>
+
+            <latex-image>
+              <![CDATA[
+                \begin{tikzpicture}
+                  \begin{axis}[xmax=6, xmin=-6,
+                              ymax=40, ymin=-40,
+                              ytick={},
+                              minor ytick={}]
+                    \addplot+[domain=-6:3, samples=50] {(-x)^3-5*(-x)^2+2};
+                  \end{axis}
+                \end{tikzpicture}
+              ]]>
+            </latex-image>
+            </image>
+
+          </figure>
+        </sidebyside>
+      </example>
 <!--
       <exercise>
         <statement>
@@ -168,12 +218,13 @@
       </exercise>
 
     -->
-
-      <p>Now practice writing the formula for a function which has been transformed.</p>
+      <p>
+        Now practice writing the formula for a function which has been transformed.
+      </p>
 
       <exercise>
         <webwork>
-          <setup>
+            <setup>
 
             <pg-code>
               $description1=PopUp(["?","horizontal axis","vertical axis"],"vertical axis");
@@ -188,199 +239,383 @@
 
               $nMinusC=Compute("x-$c");
             </pg-code>
+            </setup>
+            <statement>
+              <p>
+                Let <m>m(x) = x^2 - <var name="$a" />x + <var name="$b" /></m>.
+              </p>
 
-          </setup>
-          <statement>
-            <p>Let <m>m(x) = x^2 - <var name="$a" />x + <var name="$b" /></m>.</p>
-            <p><ol>
-              <li><p>Write a formula for the transformation <m>m(-x)</m> and geometrically describe the transformation.</p>
-              <p>To do this, use the <em>blank</em> method: write the output <m>x^2 - <var name="$a" />x + <var name="$b" /></m>, but replace all instances of the variable <m>x</m> with the new input, <m>-x</m>. Remember to use parentheses when substituting this in for <m>x</m>.</p>
-              <p>Formula: <m>m(-x) = </m><var name="$f" width="15" /></p>
-              <p>For the geometric description, remember that we are taking the opposite of the input variable, so this will affect the graph's position in the horizontal direction.</p>
-              <p>Description: <m>m(-x)</m> will reflect the graph of <m>m(x)</m> over the <var name="$description1" form="popup" /></p></li>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Write a formula for the transformation <m>m(-x)</m> and geometrically describe the transformation.
+                    </p>
 
-              <li><p>Write a formula for the transformation <m>-m(x - </m><var name="$c" /><m>)</m>.</p>
-              <p>Notice that there are two changes here: Subtracting <var name="$c" /> from the input, and the opposite symbol outside.</p>
-              <p>First apply the inside change by replacing all instances of the variable <m>x</m> with the new input, <m>x - <var name="$c" /></m>. Remember again to use parentheses when substituting this expression for <m>x</m>.</p>
-              <p>This would leave us with:</p>
-              <p>(<var name="$nMinusC" width="6" /><m>)^2 - </m><var name="$a" />(<var name="$nMinusC" width="6" /><m>) + </m><var name="$b" /></p>
-              <p>Next, apply the outside change by putting the opposite symbol outside of this whole expression, again remembering to use parentheses.</p>
-              <p>Formula: <m>-m(x - </m><var name="$c" /><m>) = </m><var name="$g" width="15" /></p>
-              <p>The inside change of subtracting <var name="$c" /> will move the graph in the horizontal direction. The outside change of taking the opposite will affect the output values by changing their sign.</p>
-              <p>Description: <m>-m(x - <var name="$c" />)</m> will shift the graph of <m>m(x)</m> by <var name="$c" /> units <var name="$description2" form="popup"/> and reflect it over the <var name="$description3" form="popup" /></p></li>
-            </ol></p>
-          </statement>
-          <solution>
-            <p><ol>
-              <li><p>The formula for <m>m(-x)</m> is found by substituting <m>-x</m> in the place of <m>x</m> in the function <m>m(x)</m>. The original formula was <m>x^2 - </m><var name="$a" /><m>x + </m><var name="$b" />, so the result is:  <me><var name="$f" /></me></p></li>
+                    <p>
+                      To do this, use the <em>blank</em> method:
+                      write the output <m>x^2 - <var name="$a" />x + <var name="$b" /></m>,
+                      but replace all instances of the variable <m>x</m> with the new input,
+                      <m>-x</m>.
+                      Remember to use parentheses when substituting this in for <m>x</m>.
+                    </p>
 
-              <li><p>The formula for <m>-m(x-</m><var name="$c" /><m>)</m> is found by substituting <m>(x-<var name="$c" />)</m> in the place of <m>x</m>, and then taking the opposite of that whole expression.</p>
-              <p>The result is:  <m><var name="$g" /></m></p></li>
-            </ol></p>
-          </solution>
+                    <p>
+                      Formula:
+                      <m>m(-x) = </m><var name="$f" width="15" />
+                    </p>
+
+                    <p>
+                      For the geometric description,
+                      remember that we are taking the opposite of the input variable,
+                      so this will affect the graph's position in the horizontal direction.
+                    </p>
+
+                    <p>
+                      Description:
+                      <m>m(-x)</m> will reflect the graph of <m>m(x)</m> over the <var name="$description1" form="popup" />
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Write a formula for the transformation <m>-m(x - </m><var name="$c" /><m>)</m>.
+                    </p>
+
+                    <p>
+                      Notice that there are two changes here:
+                      Subtracting <var name="$c" /> from the input,
+                      and the opposite symbol outside.
+                    </p>
+
+                    <p>
+                      First apply the inside change by replacing all instances of the variable <m>x</m> with the new input,
+                      <m>x - <var name="$c" /></m>.
+                      Remember again to use parentheses when substituting this expression for <m>x</m>.
+                    </p>
+
+                    <p>
+                      This would leave us with:
+                    </p>
+
+                    <p>
+                      (<var name="$nMinusC" width="6" /><m>)^2 - </m><var name="$a" />(<var name="$nMinusC" width="6" /><m>) + </m><var name="$b" />
+                    </p>
+
+                    <p>
+                      Next, apply the outside change by putting the opposite symbol outside of this whole expression,
+                      again remembering to use parentheses.
+                    </p>
+
+                    <p>
+                      Formula:
+                      <m>-m(x - </m><var name="$c" /><m>) = </m><var name="$g" width="15" />
+                    </p>
+
+                    <p>
+                      The inside change of subtracting <var name="$c" /> will move the graph in the horizontal direction.
+                      The outside change of taking the opposite will affect the output values by changing their sign.
+                    </p>
+
+                    <p>
+                      Description:
+                      <m>-m(x - <var name="$c" />)</m> will shift the graph of <m>m(x)</m> by <var name="$c" /> units <var name="$description2" form="popup"/> and reflect it over the <var name="$description3" form="popup" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      The formula for <m>m(-x)</m> is found by substituting <m>-x</m> in the place of <m>x</m> in the function <m>m(x)</m>.
+                      The original formula was <m>x^2 - </m><var name="$a" /><m>x + </m><var name="$b" />, so the result is:
+                      <me>
+                        <var name="$f" />
+                      </me>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The formula for <m>-m(x-</m><var name="$c" /><m>)</m> is found by substituting <m>(x-<var name="$c" />)</m> in the place of <m>x</m>,
+                      and then taking the opposite of that whole expression.
+                    </p>
+
+                    <p>
+                      The result is:
+                      <m><var name="$g" /></m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
         </webwork>
       </exercise>
-      <p>One use of the transformation <m>-f(x)</m> is in redefining a variable from positive-to-negative, or vice versa, as shown in the example below.</p>
+
+      <p>
+        One use of the transformation <m>-f(x)</m> is in redefining a variable from positive-to-negative,
+        or vice versa, as shown in the example below.
+      </p>
+
       <example>
         <statement>
-          <p>When deep sea divers swim back to the surface of the water after a dive, they must do so slowly. If a diver ascends too quickly, she may experience <url href="https://en.wikipedia.org/wiki/Decompression_sickness">decompression sickness</url>. In order to prevent this, divers must ascend at a rate slower than <quantity><mag>33</mag><unit base="foot" /><per base="minute" /></quantity>.</p>
-          <p>Suppose a diver begins at a depth of <quantity><mag>100</mag><unit base="foot" /></quantity> and ascends at a rate of <quantity><mag>30</mag><unit base="foot" /><per base="minute" /></quantity>.</p>
-          <p>If we wanted to represent the diver's depth below the water as a function of time, we could write: <me>D = f(t) = 100 - 30t</me></p>
-          <p>Alternatively, we could have written a function for the diver's <em>altitude</em> as a function of time. In this case, the diver's altitude when below the water would be <em>negative</em>, so our function would be: <me>A = g(t) = -100 + 30t</me></p>
-          <p>Notice that the altitude is the opposite of the depth here, so our function <m>g(t)</m> is equal to <m>-f(t)</m>.</p>
-          <p>The graphs below show these functions as reflections of each other over the horizontal axis.</p>
-          <sidebyside widths="48% 48%">
-                <figure>
-                  <caption>The diver's depth: <m>D = f(t)</m></caption>
-                    <image>
-                        <latex-image>
-                          <![CDATA[
-                            \begin{tikzpicture}
-                              \begin{axis}[xmax=4, xmin=-1,
-                                          ymax=120, ymin=-120,
-                                          ytick={},
-                                          xlabel={t (min)},
-                                          ylabel={D (feet)},
-                                          minor ytick={}]
-                                \addplot+[domain=0:3.333] {100-30*x};
-                              \end{axis}
-                            \end{tikzpicture}
-                          ]]>
-                        </latex-image>
-                    </image>
-                </figure>
+          <p>
+            When deep sea divers swim back to the surface of the water after a dive,
+            they must do so slowly.
+            If a diver ascends too quickly, she may experience
+            <url href="https://en.wikipedia.org/wiki/Decompression_sickness">decompression sickness</url>.
+            In order to prevent this, divers must ascend at a rate slower than
+            <quantity>
+              <mag>33</mag><unit base="foot" /><per base="minute" />
+            </quantity>.
+          </p>
 
-                <figure>
-                  <caption>The diver's altitude: <m>A = g(t) = -f(t)</m></caption>
-                    <image>
-                        <latex-image>
-                          <![CDATA[
-                            \begin{tikzpicture}
-                              \begin{axis}[xmax=4, xmin=-1,
-                                          ymax=120, ymin=-120,
-                                          ytick={},
-                                          xlabel={t (min)},
-                                          ylabel={A (feet)},
-                                          minor ytick={}]
-                                \addplot+[domain=0:3.333] {-100+30*x};
-                              \end{axis}
-                            \end{tikzpicture}
-                          ]]>
-                        </latex-image>
-                    </image>
-                </figure>
+          <p>
+            Suppose a diver begins at a depth of
+            <quantity>
+              <mag>100</mag><unit base="foot" />
+            </quantity>
+            and ascends at a rate of
+            <quantity>
+              <mag>30</mag><unit base="foot" /><per base="minute" />
+            </quantity>.
+          </p>
+
+          <p>
+            If we wanted to represent the diver's depth below the water as a function of time,
+            we could write:
+            <me>
+              D = f(t) = 100 - 30t
+            </me>
+          </p>
+
+          <p>
+            Alternatively, we could have written a function for the diver's
+            <em>altitude</em> as a function of time.
+            In this case, the diver's altitude when below the water would be
+            <em>negative</em>, so our function would be:
+            <me>
+              A = g(t) = -100 + 30t
+            </me>
+          </p>
+
+          <p>
+            Notice that the altitude is the opposite of the depth here,
+            so our function <m>g(t)</m> is equal to <m>-f(t)</m>.
+          </p>
+
+          <p>
+            The graphs below show these functions as reflections of each other over the horizontal axis.
+          </p>
+
+          <sidebyside widths="48% 48%">
+            <figure>
+              <caption>The diver's depth: <m>D = f(t)</m></caption>
+              <image>
+
+            <latex-image>
+              <![CDATA[
+                \begin{tikzpicture}
+                  \begin{axis}[xmax=4, xmin=-1,
+                              ymax=120, ymin=-120,
+                              ytick={},
+                              xlabel={t (min)},
+                              ylabel={D (feet)},
+                              minor ytick={}]
+                    \addplot+[domain=0:3.333] {100-30*x};
+                  \end{axis}
+                \end{tikzpicture}
+              ]]>
+            </latex-image>
+              </image>
+
+            </figure>
+
+            <figure>
+              <caption>The diver's altitude: <m>A = g(t) = -f(t)</m></caption>
+              <image>
+
+            <latex-image>
+              <![CDATA[
+                \begin{tikzpicture}
+                  \begin{axis}[xmax=4, xmin=-1,
+                              ymax=120, ymin=-120,
+                              ytick={},
+                              xlabel={t (min)},
+                              ylabel={A (feet)},
+                              minor ytick={}]
+                    \addplot+[domain=0:3.333] {-100+30*x};
+                  \end{axis}
+                \end{tikzpicture}
+              ]]>
+            </latex-image>
+              </image>
+
+            </figure>
           </sidebyside>
         </statement>
       </example>
     </subsection>
+
     <subsection>
-        <title>Vertical Stretches and Compressions</title>
-        <p>In addition to reflecting a function, we can also <term>stretch</term><idx><h>vertical stretch</h></idx><idx><h>function</h><h>vertical stretch</h></idx> or <term>compress</term><idx><h>vertical compression</h></idx><idx><h>function</h><h>vertical compression</h></idx> a function vertically by multiplying the output by a constant number <m>a</m>.
+      <title>Vertical Stretches and Compressions</title>
+      <p>
+        In addition to reflecting a function,
+        we can also <term>stretch</term>
+            <idx><h>vertical stretch</h></idx>
+            <idx><h>function</h><h>vertical stretch</h></idx>
+        or <term>compress</term>
+            <idx><h>vertical compression</h></idx>
+            <idx><h>function</h><h>vertical compression</h></idx>
+        a function vertically by multiplying the output by a constant number <m>a</m>.
         <dl>
           <li>
             <title>If <m>a &gt; 1</m></title>
-            <p>The transformation <m>y = a\cdot f(x)</m> will vertically <term>stretch</term> the graph of <m>y = f(x)</m> by a factor of <m>a</m>.</p>
+            <p>
+              The transformation <m>y = a\cdot f(x)</m> will vertically <term>stretch</term>
+              the graph of <m>y = f(x)</m> by a factor of <m>a</m>.
+            </p>
           </li>
+
           <li>
             <title>If <m>0 &lt; a &lt; 1</m></title>
-            <p>The transformation <m>y = a\cdot f(x)</m> will vertically <term>compress</term> the graph of <m>y = f(x)</m> by a factor of <m>a</m>.</p>
+            <p>
+              The transformation <m>y = a\cdot f(x)</m> will vertically <term>compress</term>
+              the graph of <m>y = f(x)</m> by a factor of <m>a</m>.
+            </p>
           </li>
         </dl>
       </p>
 
       <example>
-        <p>For the function <me>f(x) = x^2 - 1</me>, describe the transformations <m>3f(x)</m> and <m>\frac{1}{2}f(x)</m>.</p>
-        <p>For the first transformation, we have: <md>
-        <mrow>3f(x) \amp= 3(x^2 - 1)</mrow>
-        <mrow>\amp= 3x^2 - 3</mrow></md>
-        This is just like <m>f(x) = x^2 - 1</m>, but all of the output values have been multiplied by <m>3</m>.</p>
-            <sidebyside>
-              <tabular top="major" halign="center">
-                <col halign="left" />
-                <col />
-                <col />
+        <p>
+          For the function
+          <me>
+            f(x) = x^2 - 1
+          </me>,
+          describe the transformations <m>3f(x)</m> and <m>\frac{1}{2}f(x)</m>.
+        </p>
 
-                <row bottom="medium">
-                  <cell><m>x</m></cell>
-                  <cell><m>f(x)</m></cell>
-                  <cell><m>3f(x)</m></cell>
-                </row>
-                <row bottom="medium">
-                  <cell>-3</cell>
-                  <cell>8</cell>
-                  <cell>24</cell>
-                </row>
-                <row bottom="medium">
-                  <cell>-2</cell>
-                  <cell>3</cell>
-                  <cell>9</cell>
-                </row>
-                <row bottom="medium">
-                  <cell>-1</cell>
-                  <cell>0</cell>
-                  <cell>0</cell>
-                </row>
-                <row bottom="medium">
-                  <cell>0</cell>
-                  <cell>-1</cell>
-                  <cell>-3</cell>
-                </row>
-                <row bottom="medium">
-                  <cell>1</cell>
-                  <cell>0</cell>
-                  <cell>0</cell>
-                </row>
-                <row bottom="medium">
-                  <cell>2</cell>
-                  <cell>3</cell>
-                  <cell>9</cell>
-                </row>
-                <row bottom="medium">
-                  <cell>3</cell>
-                  <cell>8</cell>
-                  <cell>24</cell>
-                </row>
-              </tabular>
-            </sidebyside>
-        <p>Since the output values were all multiplied by <m>3</m>, this would make all of the <m>y</m>-coordinates of the points <m>3</m> times as far from zero (either positive or negative).</p>
-        <sidebyside widths="40% 40%">
-          <figure>
-            <caption><m>f(x) = x^2 - 1</m></caption>
-              <image>
-                  <latex-image>
-                  <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[]
-                                  \addplot+[domain=-3:3, samples=50]{x^2-1};
-                               \end{axis}
-                          \end{tikzpicture}
-                  ]]>
-                  </latex-image>
-              </image>
-          </figure>
-          <figure>
-            <caption><m>3f(x) = 3x^2 - 3</m></caption>
-              <image>
-                  <latex-image>
-                  <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[]
-                                  \addplot+[domain=-2:2, samples=50]{3*x^2-3};
-                               \end{axis}
-                          \end{tikzpicture}
-                  ]]>
-                  </latex-image>
-              </image>
-          </figure>
-        </sidebyside>
-        <p>Similarly, if we began with <m>f(x) = x^2 - 1</m>, then the transformation <md>
-        <mrow>\frac{1}{2}f(x) \amp= \frac{1}{2}(x^2 - 1)</mrow>
-        <mrow>\amp= \frac{1}{2}x^2 - \frac{1}{2}</mrow></md>
-        would be just like <m>f(x)</m>, but all of its output values would be multiplied by <m>\frac{1}{2}</m>.</p>
+        <p>
+          For the first transformation, we have:
+          <md>
+            <mrow>3f(x) \amp= 3(x^2 - 1)</mrow>
+            <mrow>\amp= 3x^2 - 3</mrow>
+          </md>
+          This is just like <m>f(x) = x^2 - 1</m>,
+          but all of the output values have been multiplied by <m>3</m>.
+        </p>
+
         <sidebyside>
+
           <tabular top="major" halign="center">
             <col halign="left" />
             <col />
             <col />
+            <row bottom="medium">
+              <cell><m>x</m></cell>
+              <cell><m>f(x)</m></cell>
+              <cell><m>3f(x)</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell>-3</cell>
+              <cell>8</cell>
+              <cell>24</cell>
+            </row>
+            <row bottom="medium">
+              <cell>-2</cell>
+              <cell>3</cell>
+              <cell>9</cell>
+            </row>
+            <row bottom="medium">
+              <cell>-1</cell>
+              <cell>0</cell>
+              <cell>0</cell>
+            </row>
+            <row bottom="medium">
+              <cell>0</cell>
+              <cell>-1</cell>
+              <cell>-3</cell>
+            </row>
+            <row bottom="medium">
+              <cell>1</cell>
+              <cell>0</cell>
+              <cell>0</cell>
+            </row>
+            <row bottom="medium">
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>9</cell>
+            </row>
+            <row bottom="medium">
+              <cell>3</cell>
+              <cell>8</cell>
+              <cell>24</cell>
+            </row>
+          </tabular>
 
+        </sidebyside>
+
+        <p>
+          Since the output values were all multiplied by <m>3</m>,
+          this would make all of the <m>y</m>-coordinates of the points <m>3</m> times as far from zero
+          (either positive or negative).
+        </p>
+
+        <sidebyside widths="40% 40%">
+          <figure>
+            <caption><m>f(x) = x^2 - 1</m></caption>
+            <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-3:3, samples=50]{x^2-1};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+            </image>
+
+          </figure>
+
+          <figure>
+            <caption><m>3f(x) = 3x^2 - 3</m></caption>
+            <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-2:2, samples=50]{3*x^2-3};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+            </image>
+
+          </figure>
+        </sidebyside>
+
+        <p>
+          Similarly, if we began with
+          <m>f(x) = x^2 - 1</m>, then the transformation
+          <md>
+            <mrow>\frac{1}{2}f(x) \amp= \frac{1}{2}(x^2 - 1)</mrow>
+            <mrow>\amp= \frac{1}{2}x^2 - \frac{1}{2}</mrow>
+          </md>
+          would be just like <m>f(x)</m>,
+          but all of its output values would be multiplied by <m>\frac{1}{2}</m>.
+        </p>
+
+        <sidebyside>
+
+          <tabular top="major" halign="center">
+            <col halign="left" />
+            <col />
+            <col />
             <row bottom="medium">
               <cell><m>x</m></cell>
               <cell><m>f(x)</m></cell>
@@ -422,274 +657,425 @@
               <cell>4</cell>
             </row>
           </tabular>
+
         </sidebyside>
-        <p>Since the output values were all multiplied by <m>\frac{1}{2}</m>, this would make all of the <m>y</m> values of the points only half as far from zero (either positive or negative).</p>
+
+        <p>
+          Since the output values were all multiplied by <m>\frac{1}{2}</m>,
+          this would make all of the <m>y</m> values of the points only half as far from zero
+          (either positive or negative).
+        </p>
 
         <sidebyside widths="40% 40%">
           <figure>
             <caption><m>f(x) = x^2 - 1</m></caption>
-              <image>
-                  <latex-image>
-                  <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[]
-                                  \addplot+[domain=-3:3, samples=50]{x^2-1};
-                               \end{axis}
-                          \end{tikzpicture}
-                  ]]>
-                  </latex-image>
-              </image>
+            <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-3:3, samples=50]{x^2-1};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+            </image>
+
           </figure>
+
           <figure>
             <caption><m>\frac{1}{2}f(x) = \frac{1}{2}x^2 - \frac{1}{2}</m></caption>
-              <image>
-                  <latex-image>
-                  <![CDATA[\begin{tikzpicture}
-                              \begin{axis}[]
-                                  \addplot+[domain=-4:4, samples=50]{0.5*x^2-0.5};
-                               \end{axis}
-                          \end{tikzpicture}
-                  ]]>
-                  </latex-image>
-              </image>
+            <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-4:4, samples=50]{0.5*x^2-0.5};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+            </image>
+
           </figure>
         </sidebyside>
       </example>
+
       <paragraphs>
         <title>Even and Odd Functions</title>
-        <p>You will notice that some functions, after being reflected over the <em>vertical</em> axis, remain the same as they began. That is, the transformation <m>f(-x)</m> is the same as the original function <m>f(x)</m>.</p>
-        <p>If the graph of a function is unchanged after reflecting it over the vertical axis, then we say the function is <term>even</term><idx><h>even function</h></idx><idx><h>function</h><h>even</h></idx>. In function notation, a function is called even if: <me>f(-x) = f(x)</me> Geometrically, an even function is symmetric over the vertical axis.</p>
+        <p>
+          You will notice that some functions,
+          after being reflected over the <em>vertical</em> axis,
+          remain the same as they began.
+          That is, the transformation <m>f(-x)</m> is the same as the original function <m>f(x)</m>.
+        </p>
+
+        <p>
+          If the graph of a function is unchanged after reflecting it over the vertical axis,
+          then we say the function is <term>even</term>.
+              <idx><h>even function</h></idx>
+              <idx><h>function</h><h>even</h></idx>
+          In function notation, a function is called even if:
+          <me>
+            f(-x) = f(x)
+          </me>
+          Geometrically,
+          an even function is symmetric over the vertical axis.
+        </p>
       </paragraphs>
-        <example>
-          <statement><p>Two of the functions below are <em>even</em> and two are not. Which ones are the <em>even</em> functions?</p>
-          <p><ol label="a">
-            <li><p><m>a(x) = 3x^4-7x^2+9</m></p></li>
-            <li><p><m>b(x) = \sqrt{x}-9</m></p></li>
-            <li><p><m>c(x) = e^{x^2}+x</m></p></li>
-            <li><p><m>d(x) = e^{x^2} + x^2</m></p></li>
-          </ol></p>
+
+      <example>
+        <statement>
+          <p>
+            Two of the functions below are <em>even</em> and two are not.
+            Which ones are the <em>even</em> functions?
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  <m>a(x) = 3x^4-7x^2+9</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>b(x) = \sqrt{x}-9</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>c(x) = e^{x^2}+x</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>d(x) = e^{x^2} + x^2</m>
+                </p>
+              </li>
+            </ol>
+          </p>
         </statement>
-          <solution>
-            <p><ol label="a">
-              <li><p><md>
-                <mrow>a(-x) \amp= 3x^4-7x^2+9</mrow>
-                <mrow>\amp= 3(-x)^4 - 7(-x)^2 + 9</mrow>
-                <mrow>\amp= 3x^4 - 7x^2 + 9</mrow>
-                <mrow>\amp= a(x)</mrow></md></p>
-              <p>Therefore, <m>a(x)</m> is an even function.</p></li>
-              <li><p><md>
-                <mrow>b(-x) \amp= \sqrt{-x}-9</mrow>
-                <mrow>\amp\neq b(x)</mrow></md></p>
-              <p>So, <m>b(x)</m> is <em>not</em> an even function.</p></li>
-              <li><p><md>
-                <mrow>c(-x) \amp= e^{(-x)^2}+(-x)</mrow>
-                <mrow>\amp= e^{x^2} - x</mrow>
-                <mrow>\amp\neq c(x)</mrow></md></p>
-              <p>So, <m>c(x)</m> is <em>not</em> an even function.</p></li>
-              <li><p><md>
-                <mrow>d(-x) \amp= e^{(-x)^2} + (-x)^2</mrow>
-                <mrow>\amp= e^{x^2} + x^2</mrow></md></p>
-              <p>Therefore, <m>d(x)</m> is an even function.</p></li>
-            </ol></p>
-          </solution>
-        </example>
-        <p>On the other hand, we may try to reflect a function over the vertical axis, and find that this is the same as reflecting it over the horizontal axis. In function notation, this would mean that: <me>f(-x) = -f(x)</me></p>
-        <p>If <m>f(-x) = -f(x)</m>, then we say <m>f</m> is an <term>odd</term><idx><h>odd function</h></idx><idx><h>function</h><h>odd</h></idx> function. Geometrically, an odd function is symmetric about the <em>origin</em>.</p>
-        <example>
-          <statement>
-            <p>Show that the function <m>f(x) = 8x^3 + x</m> is an odd function.</p>
-          </statement>
-          <solution>
-            <p><md>
+        <solution>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  <md>
+                    <mrow>a(-x) \amp= 3x^4-7x^2+9</mrow>
+                    <mrow>\amp= 3(-x)^4 - 7(-x)^2 + 9</mrow>
+                    <mrow>\amp= 3x^4 - 7x^2 + 9</mrow>
+                    <mrow>\amp= a(x)</mrow>
+                  </md>
+                </p>
+
+                <p>
+                  Therefore, <m>a(x)</m> is an even function.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <md>
+                    <mrow>b(-x) \amp= \sqrt{-x}-9</mrow>
+                    <mrow>\amp\neq b(x)</mrow>
+                  </md>
+                </p>
+
+                <p>
+                  So, <m>b(x)</m> is <em>not</em> an even function.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <md>
+                    <mrow>c(-x) \amp= e^{(-x)^2}+(-x)</mrow>
+                    <mrow>\amp= e^{x^2} - x</mrow>
+                    <mrow>\amp\neq c(x)</mrow>
+                  </md>
+                </p>
+
+                <p>
+                  So, <m>c(x)</m> is <em>not</em> an even function.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <md>
+                    <mrow>d(-x) \amp= e^{(-x)^2} + (-x)^2</mrow>
+                    <mrow>\amp= e^{x^2} + x^2</mrow>
+                  </md>
+                </p>
+
+                <p>
+                  Therefore, <m>d(x)</m> is an even function.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </example>
+
+      <p>
+        On the other hand,
+        we may try to reflect a function over the vertical axis,
+        and find that this is the same as reflecting it over the horizontal axis.
+        In function notation, this would mean that:
+        <me>
+          f(-x) = -f(x)
+        </me>
+      </p>
+
+      <p>
+        If <m>f(-x) = -f(x)</m>, then we say <m>f</m> is an <term>odd</term>
+            <idx><h>odd function</h></idx>
+            <idx><h>function</h><h>odd</h></idx>
+        function.
+        Geometrically,
+        an odd function is symmetric about the <em>origin</em>.
+      </p>
+
+      <example>
+        <statement>
+          <p>
+            Show that the function <m>f(x) = 8x^3 + x</m> is an odd function.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <md>
               <mrow>f(-x) \amp= 8(-x)^3 + (-x)</mrow>
               <mrow>\amp= -8x^3 - x</mrow>
               <mrow>\amp= -\left(8x^3 + x\right)</mrow>
-              <mrow>\amp= -f(x)</mrow></md>
-            </p>
-          </solution>
-        </example>
-<todo>Nick, write an exercise wherein the user writes the equation for a vertical stretch or compression of a given function, so its graph passes through a given point. If their graph passes through the point but is not a vertical stretch or compression, give appropriate feedback.</todo>
+              <mrow>\amp= -f(x)</mrow>
+            </md>
+          </p>
+        </solution>
+      </example>
 
+      <todo>Nick, write an exercise wherein the user writes the equation for a vertical stretch or compression of a given function, so its graph passes through a given point. If their graph passes through the point but is not a vertical stretch or compression, give appropriate feedback.</todo>
     </subsection>
+
     <exercises>
+      <exercisegroup>
 
-<exercisegroup><introduction><p>Interpreting Transformations</p></introduction>
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q34.pg" seed="1" />
-      </exercise>
+        <introduction>
+          <p>
+            Interpreting Transformations
+          </p>
+        </introduction>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q18.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q34.pg" seed="1" />
+        </exercise>
 
-</exercisegroup>
-<exercisegroup><introduction><p>Even and Odd</p></introduction>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q18.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q10.pg" seed="1" />
-      </exercise>
+      </exercisegroup>
+      <exercisegroup>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q06.pg" seed="1" />
-      </exercise>
+        <introduction>
+          <p>
+            Even and Odd
+          </p>
+        </introduction>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q07.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q10.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q30.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q06.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q20.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q07.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/maCalcDB/setAlgebra15Functions/srw2_2_53.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q30.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/maCalcDB/setAlgebra15Functions/srw2_2_55.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q20.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/Mizzou/College_Algebra/Functions_Even_Odd_Symmetry/Graph_Even_Odd_Neither.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/maCalcDB/setAlgebra15Functions/srw2_2_53.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/Mizzou/College_Algebra/Functions_Even_Odd_Symmetry/Find_Point_Symmetry.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/maCalcDB/setAlgebra15Functions/srw2_2_55.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/Utah/AP_Calculus_I/set1_Reviews_of_Fundamentals/1210s2p5.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/Mizzou/College_Algebra/Functions_Even_Odd_Symmetry/Graph_Even_Odd_Neither.pg" seed="1" />
+        </exercise>
 
-</exercisegroup>
-<exercisegroup><introduction><p>Graphs of Reflections and Stretches</p></introduction>
+        <exercise>
+          <webwork source="Library/Mizzou/College_Algebra/Functions_Even_Odd_Symmetry/Find_Point_Symmetry.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q18.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/Utah/AP_Calculus_I/set1_Reviews_of_Fundamentals/1210s2p5.pg" seed="1" />
+        </exercise>
 
+      </exercisegroup>
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Graphs of Reflections and Stretches
+          </p>
+        </introduction>
+
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q18.pg" seed="1" />
+        </exercise>
       <!-- Coded with PTX-incompatible structure. -->
       <!-- <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q29.pg" seed="1" />
       </exercise> -->
-
-      <exercise>
-        <webwork source="Library/ASU-topics/setTransformationFunctions/jj1.pg" seed="1" />
-      </exercise>
-
+        <exercise>
+          <webwork source="Library/ASU-topics/setTransformationFunctions/jj1.pg" seed="1" />
+        </exercise>
       <!-- Coded with PTX-incompatible structure. -->
       <!-- <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q20.pg" seed="1" />
       </exercise> -->
+      </exercisegroup>
+      <exercisegroup>
 
-</exercisegroup>
-<exercisegroup><introduction><p>Formula of a Reflection or Vertical Stretch</p></introduction>
+        <introduction>
+          <p>
+            Formula of a Reflection or Vertical Stretch
+          </p>
+        </introduction>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q20.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q20.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/graph-reflection-12.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/graph-reflection-12.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q10.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q10.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q06.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q06.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q18.pg" seed="1" />
-      </exercise>
-
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q18.pg" seed="1" />
+        </exercise>
       <!-- Coded with PTX-incompatible structure. -->
       <!-- <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/graph-reflection-21.pg" seed="1" />
       </exercise> -->
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q12.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q12.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q17.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q17.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/ASU-topics/setTransformationFunctions/p3.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/ASU-topics/setTransformationFunctions/p3.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/ASU-topics/setTransformationFunctions/ptransf2.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/ASU-topics/setTransformationFunctions/ptransf2.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/ASU-topics/setLogarithmicFunctions/ur_le_2_13.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/ASU-topics/setLogarithmicFunctions/ur_le_2_13.pg" seed="1" />
-      </exercise>
+      </exercisegroup>
+      <exercisegroup>
 
-</exercisegroup>
-<exercisegroup><introduction><p>Geometry of Reflections and Vertical Stretches</p></introduction>
+        <introduction>
+          <p>
+            Geometry of Reflections and Vertical Stretches
+          </p>
+        </introduction>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q04.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q04.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q12.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q12.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q26.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q26.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q03.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q03.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q02.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q02.pg" seed="1" />
+        </exercise>
 
-</exercisegroup>
-<exercisegroup><introduction><p>Additional Problems</p></introduction>
+      </exercisegroup>
+      <exercisegroup>
 
-      <exercise>
-        <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_61.pg" seed="1" />
-      </exercise>
+        <introduction>
+          <p>
+            Additional Problems
+          </p>
+        </introduction>
 
-      <exercise>
-        <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_4.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_61.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_11.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_4.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_14.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_11.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/ASU-topics/setExponentialFunctions/sw6_1_21.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_14.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/ASU-topics/setExponentialFunctions/srw4_1_29.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/ASU-topics/setExponentialFunctions/sw6_1_21.pg" seed="1" />
+        </exercise>
 
-</exercisegroup>
-<exercisegroup><introduction><p>Horizontal Stretches</p></introduction>
+        <exercise>
+          <webwork source="Library/ASU-topics/setExponentialFunctions/srw4_1_29.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S03-NewFunctOld/1-3-06.pg" seed="1" />
-      </exercise>
+      </exercisegroup>
+      <exercisegroup>
 
+        <introduction>
+          <p>
+            Horizontal Stretches
+          </p>
+        </introduction>
+
+        <exercise>
+          <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S03-NewFunctOld/1-3-06.pg" seed="1" />
+        </exercise>
       <!-- Coded with PTX-incompatible structure. -->
       <!-- <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q20.pg" seed="1" />
@@ -697,38 +1083,34 @@
       <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/graph-scaling-22.pg" seed="1" />
       </exercise>-->
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q04.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q04.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/ASU-topics/setTransformationFunctions/srw2_5_15.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/ASU-topics/setTransformationFunctions/srw2_5_15.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/ASU-topics/setTransformationFunctions/ptransf1.pg" seed="1" />
-      </exercise>
-
+        <exercise>
+          <webwork source="Library/ASU-topics/setTransformationFunctions/ptransf1.pg" seed="1" />
+        </exercise>
       <!-- Coded with PTX-incompatible structure. -->
       <!-- Specifically, it uses a .gif image which is not a format you can use in .tex. -->
       <!-- <exercise>
         <webwork source="Library/Rochester/setAlgebra19FunTransforms/p7.pg" seed="1" />
       </exercise> -->
+        <exercise>
+          <webwork source="Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/1_Precalculus_Review/1.1_Real_Numbers_Functions_and_Graphs/1.1.71.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/1_Precalculus_Review/1.1_Real_Numbers_Functions_and_Graphs/1.1.71.pg" seed="1" />
-      </exercise>
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q16.pg" seed="1" />
+        </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q16.pg" seed="1" />
-      </exercise>
-</exercisegroup>
-
+      </exercisegroup>
     </exercises>
   </section>
 </chapter>
-
 <!-- Extra problem
 
 <exercise>

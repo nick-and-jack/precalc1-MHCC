@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -13,94 +12,256 @@
 <section xml:id="activity-exponential-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Introduction to Exponential Functions</title>
   <introduction>
-    <p>You may have heard, <q>The world is constantly changing</q>.  But the big question is <q>How?</q> Is there a pattern?  In math, patterns have names.</p>
-    <p><em>Linear</em> is the name of a pattern. A <term>linear equation</term><idx><h>linear</h><h>equation</h></idx> may look like this <me>y=mx+b</me> and its graph is a straight line.</p>
+    <p>
+      You may have heard, <q>The world is constantly changing</q>.
+      But the big question is <q>How?</q> Is there a pattern?
+      In math, patterns have names.
+    </p>
 
-    <p>If you look at a table of values from a <term>linear pattern</term><idx><h>Linear</h><h>pattern</h></idx>, you will notice the data have a constant rate of change; in other words, a constant slope.</p>
+    <p>
+      <em>Linear</em> is the name of a pattern.
+      A <term>linear equation</term>
+          <idx><h>linear</h><h>equation</h></idx>
+      may look like this
+      <me>
+        y=mx+b
+      </me>
+      and its graph is a straight line.
+    </p>
 
-    <p>In this section we study a pattern in which something remains constant, but not the rate of change; it is the <em>percent change</em>. An <term>exponential pattern</term><idx><h>exponential</h><h>pattern</h></idx> has the characteristic of having <em>constant percent change</em>.</p>
+    <p>
+      If you look at a table of values from a
+      <term>linear pattern</term>,
+          <idx><h>Linear</h><h>pattern</h></idx>
+      you will notice the data have a constant rate of change;
+      in other words, a constant slope.
+    </p>
 
+    <p>
+      In this section we study a pattern in which something remains constant,
+      but not the rate of change;
+      it is the <em>percent change</em>.
+      An <term>exponential pattern</term><idx><h>exponential</h><h>pattern</h></idx> has the characteristic of having
+      <em>constant percent change</em>.
+    </p>
   </introduction>
+
   <subsection>
     <title>Percent Change, Multiplication and the Growth Factor</title>
-    <p>Before we explore exponential functions, we should have a very good understanding of percent, what it means and how it is calculated.</p>
+    <p>
+      Before we explore exponential functions,
+      we should have a very good understanding of percent,
+      what it means and how it is calculated.
+    </p>
+
     <example>
-      <statement><p>Quickly test yourself:</p>
-      <p>
-        <ol label="a">
-          <li><p>Can you increase the number <m>745</m> by <m>12 \%</m>?</p></li>
-          <li><p>Can you decrease the number <m>38.2</m> by <m>25 \%</m>?</p></li>
-          <li><p>Which of the following expressions will find <m>60 \%</m> of <m>1450</m>?</p>
-            <p>
-              <ul>
-                <li><p><m>1450(60)</m></p></li>
-                <li><p><m>1450(0.60)</m></p></li>
-                <li><p><m>1450 + 0.60</m></p></li>
-                <li><p><m>1450 - 1450(0.40)</m></p></li>
-              </ul>
-            </p>
-          </li>
-          <li><p>What is the decimal equivalent of <m>0.14 \%</m>?</p></li>
-        </ol>
-      </p>
+      <statement>
+        <p>
+          Quickly test yourself:
+        </p>
+
+        <p>
+          <ol label="a">
+            <li>
+              <p>
+                Can you increase the number <m>745</m> by <m>12 \%</m>?
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Can you decrease the number <m>38.2</m> by <m>25 \%</m>?
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Which of the following expressions will find <m>60 \%</m> of <m>1450</m>?
+              </p>
+
+              <p>
+                <ul>
+                  <li>
+                    <p>
+                      <m>1450(60)</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>1450(0.60)</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>1450 + 0.60</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>1450 - 1450(0.40)</m>
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                What is the decimal equivalent of <m>0.14 \%</m>?
+              </p>
+            </li>
+          </ol>
+        </p>
       </statement>
       <answer>
         <p>
           <ol label="a">
-            <li><p><m>834.4</m></p></li>
-            <li><p><m>29.19</m></p></li>
-            <li><p>Only <m>1450(0.60)</m> and <m>1450 - 1450(0.40)</m> will find <m>60 \%</m> of <m>1450</m>.</p></li>
-            <li><p>The decimal equivalent is: <m>0.0014</m></p></li>
+            <li>
+              <p>
+                <m>834.4</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>29.19</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Only <m>1450(0.60)</m> and
+                <m>1450 - 1450(0.40)</m> will find <m>60 \%</m> of <m>1450</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The decimal equivalent is:
+                <m>0.0014</m>
+              </p>
+            </li>
           </ol>
         </p>
       </answer>
     </example>
-    <p>You may want a more in-depth review on the meanings of the terms <q>decimal equivalent</q> and <q>growth factor</q>. Follow this link to an interactive review of that material: <xref ref="activity-review-percent-change">review</xref></p>
-    <p>In short, to change a number by a percent, we multiply.</p>
-    <p>For instance if we start with the number <m>8</m>, then <m>8(1.25)</m> will increase the number <m>8</m> by <em>one and a quarter of itself</em>. You get all of the <m>8</m> and <m>25 \%</m> more.</p>
-    <p>So, the equation <m>8(1.25) = 10</m> means that <m>10</m> is <m>25 \%</m> greater than <m>8</m></p>
-    <p>On the other hand, if we again start with <m>8</m>, then <m>8(0.75)</m> is <em>a fraction of 8</em>; not all of it, only a portion. In fact, it means <m>75 \%</m> of <m>8</m>.</p>
-    <p>Notice that keeping <m>75 \%</m> of 8 automatically means a <em>loss</em> of <m>25 \%</m>. So, the equation <m>8(0.75) = 6</m> says that <m>6</m> is <m>75 \%</m> of <m>8</m>, which also means that reducing <m>8</m> by <m>25 \%</m> will give us <m>6</m>.</p>
-    <p>The number we multiply by to get the percent change is called the <term>growth factor</term><idx><h>growth factor</h></idx> <mdash/> even though it may actually result in a percent decrease. In this book we will refer to the growth factor with the variable <em>b</em>.</p>
+
+    <p>
+      You may want a more in-depth review on the meanings of the terms
+      <q>decimal equivalent</q>
+      and <q>growth factor</q>.
+      Follow this link to an interactive review of that material:
+      <xref ref="activity-review-percent-change">review</xref>
+    </p>
+
+    <p>
+      In short, to change a number by a percent, we multiply.
+    </p>
+
+    <p>
+      For instance if we start with the number <m>8</m>,
+      then <m>8(1.25)</m> will increase the number <m>8</m> by
+      <em>one and a quarter of itself</em>.
+      You get all of the <m>8</m> and <m>25 \%</m> more.
+    </p>
+
+    <p>
+      So, the equation <m>8(1.25) = 10</m> means that <m>10</m> is <m>25 \%</m> greater than <m>8</m>
+    </p>
+
+    <p>
+      On the other hand, if we again start with <m>8</m>,
+      then <m>8(0.75)</m> is <em>a fraction of 8</em>;
+      not all of it, only a portion.
+      In fact, it means <m>75 \%</m> of <m>8</m>.
+    </p>
+
+    <p>
+      Notice that keeping <m>75 \%</m> of 8 automatically means a
+      <em>loss</em> of <m>25 \%</m>.
+      So, the equation <m>8(0.75) = 6</m> says that <m>6</m> is <m>75 \%</m> of <m>8</m>,
+      which also means that reducing <m>8</m> by <m>25 \%</m> will give us <m>6</m>.
+    </p>
+
+    <p>
+      The number we multiply by to get the percent change is called the
+      <term>growth factor</term>
+          <idx><h>growth factor</h></idx>
+      <mdash/> even though it may actually result in a percent decrease.
+      In this book we will refer to the growth factor with the variable <em>b</em>.
+    </p>
+
     <example>
       <statement>
-      <p>Given an initial value of <m>165</m>, identify the growth factor <m>b</m> in each expression and describe the percent change.</p>
-      <p>
-        <ul>
-          <li>
-            <p><m>165(1.12)</m></p>
-          </li>
-          <li>
-            <p><m>165(0.08)</m></p>
-          </li>
-          <li>
-            <p><m>165(2.69)</m></p>
-          </li>
-        </ul>
-      </p>
+        <p>
+          Given an initial value of <m>165</m>,
+          identify the growth factor <m>b</m> in each expression and describe the percent change.
+        </p>
+
+        <p>
+          <ul>
+            <li>
+              <p>
+                <m>165(1.12)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>165(0.08)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>165(2.69)</m>
+              </p>
+            </li>
+          </ul>
+        </p>
       </statement>
       <solution>
         <p>
           <ul>
             <li>
-              <p>The growth factor is <m>b = 1.12</m>, and it means that <m>165</m> has been increased by <m>12 \%</m>.</p>
+              <p>
+                The growth factor is <m>b = 1.12</m>,
+                and it means that <m>165</m> has been increased by <m>12 \%</m>.
+              </p>
             </li>
+
             <li>
-              <p>The growth factor is <m>b = 0.08</m>, and it means that <m>165</m> has been decreased by <m>92 \%</m>.</p>
+              <p>
+                The growth factor is <m>b = 0.08</m>,
+                and it means that <m>165</m> has been decreased by <m>92 \%</m>.
+              </p>
             </li>
+
             <li>
-              <p>The growth factor is <m>b = 2.69</m>, and it means that <m>165</m> has been increased by <m>169 \%</m>.</p>
+              <p>
+                The growth factor is <m>b = 2.69</m>,
+                and it means that <m>165</m> has been increased by <m>169 \%</m>.
+              </p>
             </li>
           </ul>
         </p>
       </solution>
     </example>
+
     <exercise>
+
       <introduction>
-        <p>Use the growth factor to determine the percent change on the given initial value. The growth factor is shown in parentheses.</p>
+        <p>
+          Use the growth factor to determine the percent change on the given initial value.
+          The growth factor is shown in parentheses.
+        </p>
       </introduction>
+
       <webwork>
-        <setup>
+          <setup>
 
             <pg-code>
                 $thirtyNine = Real(39);
@@ -110,133 +271,245 @@
                 $Decrease = PopUp(["?", "Increase", "Decrease", "None of the above", "All of the above"], "Decrease");
             </pg-code>
           </setup>
-
           <statement>
             <p>
               <ol label="a">
                 <li>
-                  <p>Given <m>22(1.39)</m> what is the percent change on the initial value of <m>22</m>?</p>
-                  <p><var name="$thirtyNine" width="5" /><m>\%</m> <var name="$Increase" form="popup" /></p>
+                  <p>
+                    Given <m>22(1.39)</m> what is the percent change on the initial value of <m>22</m>?
+                  </p>
+
+                  <p>
+                    <var name="$thirtyNine" width="5" /><m>\%</m> <var name="$Increase" form="popup" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>Given <m>7(2.41)</m> what is the percent change on the initial value of <m>7</m>?</p>
-                  <p><var name="$OneFortyOne" width="5" /><m>\%</m> <var name="$Increase" form="popup" /></p>
+                  <p>
+                    Given <m>7(2.41)</m> what is the percent change on the initial value of <m>7</m>?
+                  </p>
+
+                  <p>
+                    <var name="$OneFortyOne" width="5" /><m>\%</m> <var name="$Increase" form="popup" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>Given <m>17(0.56)</m> what is the percent change on the initial value of <m>17</m>?</p>
-                  <p><var name="$FortyFour" width="5" /><m>\%</m> <var name="$Decrease" form="popup" /></p>
+                  <p>
+                    Given <m>17(0.56)</m> what is the percent change on the initial value of <m>17</m>?
+                  </p>
+
+                  <p>
+                    <var name="$FortyFour" width="5" /><m>\%</m> <var name="$Decrease" form="popup" />
+                  </p>
                 </li>
               </ol>
             </p>
-        </statement>
-        <solution>
-          <p>The growth factor is actually composed of <m>1 \pm r</m> where <m>r</m> is the decimal equivalent of the percent gain or loss.</p>
-          <p>A percent increase implies the growth factor <m>b = 1 + r</m>, (<init>i.e.</init> <m>b \gt 1</m>) while a percent decrease implies <m>b=1-r</m>, (<init>i.e.</init> <m>0 \lt b \lt 1)</m>.</p>
-          <p>
-            <ol label="a" >
-              <li>
-                <p>Since the growth factor <m>b = 1.39</m> is greater than <m>1</m> we have <m>1+r = 1.39</m>. Solving for <m>r</m> we get <m>r=1.39-1 = 0.39</m>. This is the decimal equivalent of a <m>39 \%</m>percent increase.</p>
-              </li>
-              <li>
-                <p>Since the growth factor <m>b = 2.41</m> is greater than <m>1</m> we have <m>1+r = 2.41</m>. Solving for <m>r</m> we get <m>r=2.41-1 = 1.41</m>. This is the decimal equivalent of a <m>141 \%</m>percent increase.</p>
-              </li>
-              <li>
-                <p>Since the growth factor <m>b = 0.56</m> is less than <m>1</m> we have <m>1-r = 0.56</m>. Solving for <m>r</m> we get <m>r=1-0.56=0.44</m>. This is the decimal equivalent of a <m>44 \%</m>percent decrease.</p>
-              </li>
-            </ol>
-          </p>
-        </solution>
+          </statement>
+          <solution>
+            <p>
+              The growth factor is actually composed of <m>1 \pm r</m> where <m>r</m> is the decimal equivalent of the percent gain or loss.
+            </p>
+
+            <p>
+              A percent increase implies the growth factor
+              <m>b = 1 + r</m>, (<init>i.e.</init> <m>b \gt 1</m>) while a percent decrease implies <m>b=1-r</m>, (<init>i.e.</init> <m>0 \lt b \lt 1)</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Since the growth factor <m>b = 1.39</m> is greater than <m>1</m> we have <m>1+r = 1.39</m>.
+                    Solving for <m>r</m> we get <m>r=1.39-1 = 0.39</m>.
+                    This is the decimal equivalent of a <m>39 \%</m>percent increase.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Since the growth factor <m>b = 2.41</m> is greater than <m>1</m> we have <m>1+r = 2.41</m>.
+                    Solving for <m>r</m> we get <m>r=2.41-1 = 1.41</m>.
+                    This is the decimal equivalent of a <m>141 \%</m>percent increase.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Since the growth factor <m>b = 0.56</m> is less than <m>1</m> we have <m>1-r = 0.56</m>.
+                    Solving for <m>r</m> we get <m>r=1-0.56=0.44</m>.
+                    This is the decimal equivalent of a <m>44 \%</m>percent decrease.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
       </webwork>
     </exercise>
-    <p>We can use a growth factor to determine the overall percent change between any two numbers.</p>
+
+    <p>
+      We can use a growth factor to determine the overall percent change between any two numbers.
+    </p>
+
     <exercise>
       <title>Percent Increase</title>
       <introduction>
-        <p>A population increases from <m>2{,}000</m> to <m>10{,}000</m>. Find the overall percent increase in the population.</p>
+        <p>
+          A population increases from <m>2{,}000</m> to <m>10{,}000</m>.
+          Find the overall percent increase in the population.
+        </p>
       </introduction>
+
       <webwork>
-        <setup>
+          <setup>
+
             <pg-code>
                 $b = Compute(10000/2000);
                 $r = Compute(4);
                 $rPercent = Compute(400);
             </pg-code>
-        </setup>
-        <statement>
-            <p>A percent change implies multiplication by a growth factor.</p>
-            <p>Set up the situation as an algebra problem.</p>
-            <p>
-              <ol label="a" >
-                <li>
-                  <p>What do you multiply by to get from <m>2{,}000</m> to <m>10{,}000</m>?</p>
-                  <p><m>2{,}000 \cdot  b = 10{,}000</m></p>
-                  <p>What is the growth factor b?</p>
-                 <p><m>b = </m><var name="$b" width="5" /></p>
-                </li>
-                <li>
-                  <p>What percent increase does this represent?</p>
-                 <p><var name="$rPercent" width="5" /><m>\%</m></p>
-               </li>
-              </ol>
-            </p>
-        </statement>
-        <solution>
-          <p>
-            <ol label="a" >
-              <li>
-                <p><m>2{,}000 \cdot  b = 10{,}000</m></p>
-                <p><m>b = \frac{10{,}000}{2{,}000} = </m> <var name="$b" /></p>
-              </li>
-              <li>
-                <p>Since the growth factor <m>b \gt 1</m> we have <m>1+r = <var name="$b" /></m>. Solving for <m>r</m> we get <m>r=<var name="$b" />-1 = <var name="$r" /></m>. This is the decimal equivalent of a <m><var name="$rPercent" /> \%</m> increase.</p>
-              </li>
-            </ol>
-          </p>
-        </solution>
-      </webwork>
-    </exercise>
-    <exercise>
-      <title>Percent Decrease</title>
-      <introduction>
-        <p>A population decreases from <m>10{,}000</m> to <m>2{,}000</m>. What is the overall percent decrease in the population?</p>
-      </introduction>
-      <webwork>
-          <setup>
-              <pg-code>
-                  $b = Compute(0.20);
-                  $r = Compute(0.80);
-                  $rPercent = Compute(80);
-              </pg-code>
           </setup>
-
           <statement>
-            <p>A percent change implies multiplication by a growth factor.
-            </p>
-            <p>Set up the situation as an algebra problem.</p>
             <p>
-              <ol label="a" >
+              A percent change implies multiplication by a growth factor.
+            </p>
+
+            <p>
+              Set up the situation as an algebra problem.
+            </p>
+
+            <p>
+              <ol label="a">
                 <li>
-                  <p>What do you multiply by to get from <m>10{,}000</m> to <m>2{,}000</m>?</p>
-                  <p><m>10{,}000 \cdot  b = 2{,}000</m></p>
-                  <p><m>b = </m><var name="$b" width="5" /></p>
+                  <p>
+                    What do you multiply by to get from <m>2{,}000</m> to <m>10{,}000</m>?
+                  </p>
+
+                  <p>
+                    <m>2{,}000 \cdot b = 10{,}000</m>
+                  </p>
+
+                  <p>
+                    What is the growth factor b?
+                  </p>
+
+                  <p>
+                    <m>b = </m><var name="$b" width="5" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>What percent decrease does this represent?</p>
-                  <p><var name="$rPercent" width="5" /><m>\%</m></p>
+                  <p>
+                    What percent increase does this represent?
+                  </p>
+
+                  <p>
+                    <var name="$rPercent" width="5" /><m>\%</m>
+                  </p>
                 </li>
               </ol>
             </p>
           </statement>
-
           <solution>
             <p>
-              <ol label="a" >
+              <ol label="a">
                 <li>
-                  <p><m>10{,}000 \cdot  b = 2{,}000</m></p>
-                  <p><m>b = \frac{2{,}000}{10{,}000} = <var name="$b" /></m></p>
+                  <p>
+                    <m>2{,}000 \cdot b = 10{,}000</m>
+                  </p>
+
+                  <p>
+                    <m>b = \frac{10{,}000}{2{,}000} = </m> <var name="$b" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>Since the growth factor <m>0 \lt b \lt 1</m> we have <m>1-r = <var name="$b" /></m>. Solving for <m>r</m> we get <m>r=1-<var name="$b" /> = <var name="$r" /></m>. This is the decimal equivalent of a <m><var name="$rPercent" /> \%</m> decrease.</p>
+                  <p>
+                    Since the growth factor <m>b \gt 1</m> we have <m>1+r = <var name="$b" /></m>.
+                    Solving for <m>r</m> we get <m>r=<var name="$b" />-1 = <var name="$r" /></m>.
+                    This is the decimal equivalent of a <m><var name="$rPercent" /> \%</m> increase.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <title>Percent Decrease</title>
+      <introduction>
+        <p>
+          A population decreases from <m>10{,}000</m> to <m>2{,}000</m>.
+          What is the overall percent decrease in the population?
+        </p>
+      </introduction>
+
+      <webwork>
+          <setup>
+
+            <pg-code>
+                $b = Compute(0.20);
+                $r = Compute(0.80);
+                $rPercent = Compute(80);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              A percent change implies multiplication by a growth factor.
+            </p>
+
+            <p>
+              Set up the situation as an algebra problem.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    What do you multiply by to get from <m>10{,}000</m> to <m>2{,}000</m>?
+                  </p>
+
+                  <p>
+                    <m>10{,}000 \cdot b = 2{,}000</m>
+                  </p>
+
+                  <p>
+                    <m>b = </m><var name="$b" width="5" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What percent decrease does this represent?
+                  </p>
+
+                  <p>
+                    <var name="$rPercent" width="5" /><m>\%</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>10{,}000 \cdot b = 2{,}000</m>
+                  </p>
+
+                  <p>
+                    <m>b = \frac{2{,}000}{10{,}000} = <var name="$b" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Since the growth factor <m>0 \lt b \lt 1</m> we have <m>1-r = <var name="$b" /></m>.
+                    Solving for <m>r</m> we get <m>r=1-<var name="$b" /> = <var name="$r" /></m>.
+                    This is the decimal equivalent of a <m><var name="$rPercent" /> \%</m> decrease.
+                  </p>
                 </li>
               </ol>
             </p>
@@ -247,40 +520,110 @@
 
   <subsection>
     <title>Linear <init>vs.</init> Exponential Patterns</title>
-     <p>Looking at data, lists of numbers, is related to almost every profession. We search for patterns in the data from past or current events to try to predict future events. We have questions, like:</p>
+    <p>
+      Looking at data, lists of numbers,
+      is related to almost every profession.
+      We search for patterns in the data from past or current events to try to predict future events.
+      We have questions, like:
+    </p>
+
     <p>
       <ul>
         <li>
-          <p>How long will a mechanical part last?</p>
+          <p>
+            How long will a mechanical part last?
+          </p>
         </li>
+
         <li>
-          <p>When can we administer the next dose of medication?</p>
+          <p>
+            When can we administer the next dose of medication?
+          </p>
         </li>
+
         <li>
-          <p>When will we get to our destination?</p>
+          <p>
+            When will we get to our destination?
+          </p>
         </li>
       </ul>
     </p>
-    <p>Two common patterns are <em>linear</em> and <em>exponential</em>, and the news is full of them.</p>
+
+    <p>
+      Two common patterns are <em>linear</em>
+      and <em>exponential</em>,
+      and the news is full of them.
+    </p>
+
     <example>
+
       <blockquote>
-        <p><em>Exponential gains in computing power, along with innovations in software, analytical techniques and the rise of Big Data, mean that many white-collar occupations are due for disruption by machines too. According to a 2013 study by two Oxford University professors, almost half of all jobs in the United States are susceptible to “computerization” over the coming decade or two.</em></p>
-        <p><mdash/><q>How Efficiency Is Wiping Out the Middle Class</q>, <em>Another View</em> by David Diegel, New York Times January 25, 2017</p>
+        <p>
+          <em>Exponential gains in computing power,
+          along with innovations in software,
+          analytical techniques and the rise of Big Data,
+          mean that many white-collar occupations are due for disruption by machines too.
+          According to a 2013 study by two Oxford University professors,
+          almost half of all jobs in the United States are susceptible to “computerization” over the coming decade or two.</em>
+        </p>
+
+        <p>
+          <mdash/><q>How Efficiency Is Wiping Out the Middle Class</q>,
+          <em>Another View</em> by David Diegel, New York Times January 25, 2017
+        </p>
       </blockquote>
-      <p>In writing, <q><em>Exponential</em> gains in computing power</q> this article claims <em>computing power</em> is increasing by a constant percent. It must be assumed that the increases happen over equal time intervals, like every year or every <m>10</m> years for the claim to be valid.</p>
+
+      <p>
+        In writing, <q><em>Exponential</em>
+        gains in computing power</q>
+        this article claims <em>computing power</em>
+        is increasing by a constant percent.
+        It must be assumed that the increases happen over equal time intervals,
+        like every year or every <m>10</m> years for the claim to be valid.
+      </p>
     </example>
+
     <example>
+
       <blockquote>
-        <p><em>In 2012 the average rent was <m>\$2{,}225</m>. Every year it has risen roughly a hundred dollars. But in late 2016, the rental market suddenly became flat.</em></p>
-        <p><em><q>If I were to bet, I would bet that prices are on the way down. I would bet the tenants and buyers are going to have the upper hand probably for the next two or three years,</q> said real estate broker Peter Zalewski.</em></p>
-        <p><mdash/><q>After Years Of Price Hikes, South Florida's Rental Market Entering New Era Of Decline</q>, David Sutta, CBS Miami, March 29, 2017</p>
+        <p>
+          <em>In 2012 the average rent was <m>\$2{,}225</m>.
+          Every year it has risen roughly a hundred dollars.
+          But in late 2016, the rental market suddenly became flat.</em>
+        </p>
+
+        <p>
+          <em><q>If I were to bet, I would bet that prices are on the way down.
+          I would bet the tenants and buyers are going to have the upper hand probably for the next two or three years,</q>
+          said real estate broker Peter Zalewski.</em>
+        </p>
+
+        <p>
+          <mdash/><q>After Years Of Price Hikes, South Florida's Rental Market Entering New Era Of Decline</q>, David Sutta, CBS Miami, March 29, 2017
+        </p>
       </blockquote>
-      <p>This article is reporting a pattern of constant rate of change for monthly rent. The real estate broker quoted in the article is using a linear model to describe the rental market between <m>2012</m> and <m>2016</m>.</p>
+
+      <p>
+        This article is reporting a pattern of constant rate of change for monthly rent.
+        The real estate broker quoted in the article is using a linear model to describe the rental market between <m>2012</m> and <m>2016</m>.
+      </p>
     </example>
-    <p>Distiguishing between linear and exponential patterns is as easy as knowing the difference between addition and multipication. The patterns allow us to find formulas for linear or exponential situations.</p>
+
+    <p>
+      Distiguishing between linear and exponential patterns is as easy as knowing the difference between addition and multipication.
+      The patterns allow us to find formulas for linear or exponential situations.
+    </p>
+
     <assemblage>
-      <p>A <term>linear pattern</term><idx><h>linear pattern</h><h>constant rate of change</h></idx> of constant rate of change is essentially repeated addition. A linear formula counts how many times you add the same number.</p>
-      <p>An <term>exponential pattern</term><idx><h>exponential</h><h>pattern</h></idx> of constant percent change is essesntially repeated multiplication. An exponential formula counts how many times you multiply by the same number.</p>
+      <p>
+        A <term>linear pattern</term><idx><h>linear pattern</h><h>constant rate of change</h></idx> of constant rate of change is essentially repeated addition.
+        A linear formula counts how many times you add the same number.
+      </p>
+
+      <p>
+        An <term>exponential pattern</term><idx><h>exponential</h><h>pattern</h></idx> of constant percent change is essesntially repeated multiplication.
+        An exponential formula counts how many times you multiply by the same number.
+      </p>
     </assemblage>
 <!--     <todo>Not sure If I need these next questions. I'm trying to clean up and shorten the activity to get the point more quickly. Let me think about it.</todo>
     <exercise>
@@ -371,429 +714,691 @@
         </solution>
       </webwork>
     </exercise> -->
-
     <exercise>
+
       <introduction>
-        <p>Repeated addition or repeated multiplication?</p>
+        <p>
+          Repeated addition or repeated multiplication?
+        </p>
       </introduction>
+
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $add = RadioButtons(
             ["repeated multiplication","repeated addition"],
             1, labels => ["repeated multiplication","repeated addition"],displayLabels => 0
             );
           </pg-code>
-        </setup>
-        <stage>
+          </setup>
+          <stage>
           <statement>
             <sidebyside>
-            <tabular top="medium" bottom="medium" left="medium" right="medium">
-              <col halign="center"/>
-              <col halign="center"/>
-              <row>
+
+              <tabular top="medium" bottom="medium" left="medium" right="medium">
+                <col halign="center"/>
+                <col halign="center"/>
+                <row>
                   <cell><m>x</m></cell>
                   <cell><m>f(x)</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>0</m></cell>
                   <cell><m>10.62</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>1</m></cell>
                   <cell><m>11.34</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>2</m></cell>
                   <cell><m>12.06</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>3</m></cell>
                   <cell><m>12.78</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>4</m></cell>
                   <cell><m>13.50</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>5</m></cell>
                   <cell><m>14.22</m></cell>
-              </row>
-            </tabular>
+                </row>
+              </tabular>
+
             </sidebyside>
-            <p>Are the outputs are changing by repeated addtion or by repeated multiplication?</p>
-            <p><var name="$add" form="buttons" /></p>
+
+            <p>
+              Are the outputs are changing by repeated addtion or by repeated multiplication?
+            </p>
+
+            <p>
+              <var name="$add" form="buttons" />
+            </p>
           </statement>
           <solution>
-            <p>The outputs are changing by repeated addition.</p>
+            <p>
+              The outputs are changing by repeated addition.
+            </p>
           </solution>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
-            <p>The outputs are changing by repeatedly adding: <var name="0.72" width="6" /></p>
+            <p>
+              The outputs are changing by repeatedly adding:
+              <var name="0.72" width="6" />
+            </p>
           </statement>
           <solution>
-            <p>To find the added number, we calculate the difference between successive outputs.</p>
-            <p>Take any output and subtract the previous output, and you always get the same number: <me>11.34-10.62=0.72</me></p></solution>
-        </stage>
+            <p>
+              To find the added number,
+              we calculate the difference between successive outputs.
+            </p>
+
+            <p>
+              Take any output and subtract the previous output,
+              and you always get the same number:
+              <me>
+                11.34-10.62=0.72
+              </me>
+            </p>
+          </solution>
+          </stage>
       </webwork>
     </exercise>
+
     <exercise>
+
       <introduction>
-        <p>Repeated addition or repeated multiplication?</p>
+        <p>
+          Repeated addition or repeated multiplication?
+        </p>
       </introduction>
+
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $mult = RadioButtons(
             ["repeated multiplication","repeated addition"],
             0, labels => ["repeated multiplication","repeated addition"],displayLabels => 0
             );
           </pg-code>
-        </setup>
-        <stage>
+          </setup>
+          <stage>
           <statement>
             <sidebyside>
-            <tabular top="medium" bottom="medium" left="medium" right="medium">
-              <col halign="center"/>
-              <col halign="center"/>
-              <row>
+
+              <tabular top="medium" bottom="medium" left="medium" right="medium">
+                <col halign="center"/>
+                <col halign="center"/>
+                <row>
                   <cell><m>x</m></cell>
                   <cell><m>f(x)</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>0</m></cell>
                   <cell><m>10.62</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>1</m></cell>
                   <cell><m>11.36</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>2</m></cell>
                   <cell><m>12.16</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>3</m></cell>
                   <cell><m>13.01</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>4</m></cell>
                   <cell><m>13.92</m></cell>
-              </row>
-              <row>
+                </row>
+                <row>
                   <cell><m>5</m></cell>
                   <cell><m>14.90</m></cell>
-              </row>
-            </tabular>
+                </row>
+              </tabular>
+
             </sidebyside>
-            <p>Are the outputs are changing by repeated addtion or by repeated multiplication?</p>
-            <p><var name="$mult" form="buttons" /></p>
+
+            <p>
+              Are the outputs are changing by repeated addtion or by repeated multiplication?
+            </p>
+
+            <p>
+              <var name="$mult" form="buttons" />
+            </p>
           </statement>
           <solution>
-            <p>The outputs are changing by repeated multiplication.</p>
+            <p>
+              The outputs are changing by repeated multiplication.
+            </p>
           </solution>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
             <p>
               <ol label="a">
                 <li>
-                  <p>The outputs are changing by repeatedly multiplying by about <em>(round your answer to <m>2</m> decimal places)</em> <var name="1.07" width="6" /></p>
+                  <p>
+                    The outputs are changing by repeatedly multiplying by about
+                    <em>(round your answer to <m>2</m> decimal places)</em>
+                    <var name="1.07" width="6" />
+                  </p>
                 </li>
+
                 <li>
-                  <p>What percent increase does this multiple represent? An increase of <var name="7" width="4" /><m>\%</m>.</p>
+                  <p>
+                    What percent increase does this multiple represent?
+                    An increase of <var name="7" width="4" /><m>\%</m>.
+                  </p>
                 </li>
               </ol>
             </p>
           </statement>
           <solution>
-            <p>To find the mulitplied number (the factor), calculate the quotient. In other words, divide successive outputs.</p>
+            <p>
+              To find the mulitplied number
+              (the factor),
+              calculate the quotient.
+              In other words, divide successive outputs.
+            </p>
+
             <p>
               <ol label="a">
-                <li><p>Take any output and divide it by the previous output, and you will always get the same number <me>\frac{11.36}{10.62} \approx 1.07</me></p>
-                <p><em>There may be some variance due to rounding of the values in the table itself.</em></p></li>
-                <li>A growth factor of <m>1.07</m> corresponds to a <m>7 \%</m> increase.</li>
+                <li>
+                  <p>
+                    Take any output and divide it by the previous output,
+                    and you will always get the same number
+                    <me>
+                      \frac{11.36}{10.62} \approx 1.07
+                    </me>
+                  </p>
+
+                  <p>
+                    <em>There may be some variance due to rounding of the values in the table itself.</em>
+                  </p>
+                </li>
+
+                <li>
+                  A growth factor of <m>1.07</m> corresponds to a <m>7 \%</m> increase.
+                </li>
               </ol>
             </p>
           </solution>
-        </stage>
+          </stage>
       </webwork>
     </exercise>
-    <p>Knowing how a pattern works, we can then generate our own data in the form of a table.</p>
+
+    <p>
+      Knowing how a pattern works,
+      we can then generate our own data in the form of a table.
+    </p>
+
     <exercise>
-    <introduction>
-      <p>A patient's hourly dosage rate is reduced by <m>5</m> mg/hour.</p>
-    </introduction>
+
+      <introduction>
+        <p>
+          A patient's hourly dosage rate is reduced by <m>5</m> mg/hour.
+        </p>
+      </introduction>
+
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
           Context()->variables->are(t=>'Real',D=>'Real');
             $line = ImplicitPlane("D=-5t+250");
           </pg-code>
-        </setup>
-        <stage>
+          </setup>
+          <stage>
           <statement>
-            <p>A dosage rate of <m>250</m> mg/hr is reduced by <m>5</m> mg/hour each hour.</p>
             <p>
-              <ol label="a" >
+              A dosage rate of <m>250</m> mg/hr is reduced by <m>5</m> mg/hour each hour.
+            </p>
+
+            <p>
+              <ol label="a">
                 <li>
-                  <p>Complete the table for a dosage rate reduced by <m>5</m> mg/hour each hour.</p>
+                  <p>
+                    Complete the table for a dosage rate reduced by <m>5</m> mg/hour each hour.
+                  </p>
+
                   <sidebyside>
+
                     <tabular top="medium" bottom="medium" left="medium" right="medium">
-                    <col halign="center"/>
-                    <col halign="center"/>
-                    <row>
+                      <col halign="center"/>
+                      <col halign="center"/>
+                      <row>
                         <cell>t (hours)</cell>
                         <cell>Dosage (mg/hr)</cell>
-                    </row>
-                    <row>
+                      </row>
+                      <row>
                         <cell><m>0</m></cell>
                         <cell><var name="250" width="5" /></cell>
-                    </row>
-                    <row>
+                      </row>
+                      <row>
                         <cell><m>1</m></cell>
                         <cell><var name="245" width="5" /></cell>
-                    </row>
-                    <row>
+                      </row>
+                      <row>
                         <cell><m>2</m></cell>
                         <cell><var name="240" width="5" /></cell>
-                    </row>
-                    <row>
+                      </row>
+                      <row>
                         <cell><m>3</m></cell>
                         <cell><var name="235" width="5" /></cell>
-                    </row>
-                    <row>
+                      </row>
+                      <row>
                         <cell><m>4</m></cell>
                         <cell><var name="230" width="5" /></cell>
-                    </row>
-                  </tabular>
-                </sidebyside>
+                      </row>
+                    </tabular>
+
+                  </sidebyside>
+
                 </li>
               </ol>
             </p>
-            <p>What is the rate of change <m>m</m> between any two ordered pairs in the table? <m>m=</m> <var name="-5" width="4" /></p>
-          </statement>
-        </stage>
-        <stage>
-          <statement>
-            <p>For every <m>1</m> hour that passes <m>-5</m> is added (or <m>5</m> is subtracted) from the hourly dosage. Notice, that is our rate of change. This repeated process of addition forms a linear pattern.</p>
-            <p>Write a linear equation to model the data in the table.</p>
-            <p>Let <m>D</m> be the hourly dosage rate and <m>t</m> the hours that pass. Remember, your initial hourly dosage is <m>250</m> mg/hr.</p>
-            <p><var name="$line" width="10" /> (write your equation as <m>D=</m> formula with <m>t</m> in it)</p>
-            <p>In this linear equation, the <m>t</m> counts how many times the rate of change is added.</p>
-          </statement>
-        </stage>
-    </webwork>
-  </exercise>
 
-  <exercise>
-    <introduction>
-       <p>A patient's hourly dosage rate is reduced by <m>2 \%</m> every hour.</p>
-    </introduction>
-    <webwork>
-      <statement>
-        <p>A patient's dosage rate of <m>250</m> mg/hr is reduced by <m>2 \%</m> each hour.</p>
+            <p>
+              What is the rate of change <m>m</m> between any two ordered pairs in the table?
+              <m>m=</m> <var name="-5" width="4" />
+            </p>
+          </statement>
+          </stage>
+          <stage>
+          <statement>
+            <p>
+              For every <m>1</m> hour that passes <m>-5</m> is added
+              (or <m>5</m> is subtracted)
+              from the hourly dosage.
+              Notice, that is our rate of change.
+              This repeated process of addition forms a linear pattern.
+            </p>
+
+            <p>
+              Write a linear equation to model the data in the table.
+            </p>
+
+            <p>
+              Let <m>D</m> be the hourly dosage rate and <m>t</m> the hours that pass.
+              Remember, your initial hourly dosage is <m>250</m> mg/hr.
+            </p>
+
+            <p>
+              <var name="$line" width="10" /> (write your equation as <m>D=</m> formula with <m>t</m> in it)
+            </p>
+
+            <p>
+              In this linear equation,
+              the <m>t</m> counts how many times the rate of change is added.
+            </p>
+          </statement>
+          </stage>
+      </webwork>
+    </exercise>
+
+    <exercise>
+
+      <introduction>
         <p>
-          <ol label="a" >
-            <li>
-              <p>What growth factor gives us a <m>2 \%</m> decrease?</p>
-              <p><m>b =</m> <var name="0.98" width="5" /></p>
-            </li>
-            <li>
-              <p>Complete the table for a dosage reduced by <m>2 \%</m> each hour (<em>round your answers to <m>2</m> decimal places</em>).</p>
-              <sidebyside><tabular top="medium" bottom="medium" left="medium" right="medium">
-                <col halign="center"/>
-                <col halign="center"/>
-                <row>
-                    <cell>t (hours)</cell>
-                    <cell>Dosage (mg/hr)</cell>
-                </row>
-                <row>
-                    <cell><m>0</m></cell>
-                    <cell><var name="250.00" width="5" /></cell>
-                </row>
-                <row>
-                    <cell><m>1</m></cell>
-                    <cell><var name="245.00" width="5" /></cell>
-                </row>
-                <row>
-                    <cell><m>2</m></cell>
-                    <cell><var name="240.10" width="5" /></cell>
-                </row>
-                <row>
-                    <cell><m>3</m></cell>
-                    <cell><var name="235.30" width="5" /></cell>
-                </row>
-                <row>
-                    <cell><m>4</m></cell>
-                    <cell><var name="230.59" width="5" /></cell>
-                </row>
-              </tabular></sidebyside>
-            </li>
-          </ol>
+          A patient's hourly dosage rate is reduced by <m>2 \%</m> every hour.
         </p>
-      </statement>
-      <solution>
-        <p>
-          <ol label="a" >
-            <li>
-              <p>Since <m>2 \%</m> has a decimal equivalent of <me>r=0.02</me>, then a decrease is calculated using a growth factor of:
-              <md alignment="gather">
-                <mrow>b \amp =1-r</mrow>
-                <mrow>b \amp =1-0.02</mrow>
-                <mrow>b \amp =0.98</mrow>
-              </md></p>
-            </li>
-            <li>
-              <sidebyside><tabular top="medium" bottom="medium" left="medium" right="medium">
-                <col halign="center"/>
-                <col halign="center"/>
-                <row>
-                    <cell>t (hours)</cell>
-                    <cell>Dosage (mg/hr)</cell>
-                </row>
-                <row>
-                    <cell><m>0</m></cell>
-                    <cell>250.00</cell>
-                </row>
-                <row>
-                    <cell><m>1</m></cell>
-                    <cell>245.00</cell>
-                </row>
-                <row>
-                    <cell><m>2</m></cell>
-                    <cell>240.10</cell>
-                </row>
-                <row>
-                    <cell><m>3</m></cell>
-                    <cell>235.30</cell>
-                </row>
-                <row>
-                    <cell><m>4</m></cell>
-                    <cell>230.59</cell>
-                </row>
-              </tabular></sidebyside>
-            </li>
-          </ol>
-        </p>
-      </solution>
-    </webwork>
-  </exercise>
-  <exercise>
-    <title>Exponential Pattern: Building a Formula</title>
-    <webwork>
-      <statement>
-        <p>
-          <ol label="a" >
-            <li>
-              <p>Consider again the <m>250</m> mg/hour dosage rate and reducing it by <m>2 \%</m> each hour.</p>
-              <p>This time instead of the actual results, write the initial value followed by multiples of the growth factor for every hour that passes.</p>
-              <sidebyside><tabular top="medium" bottom="medium" left="medium" right="medium">
-                <col halign="center"/>
-                <col halign="left"/>
-                <row>
-                    <cell>t (hours)</cell>
-                    <cell>Dosage (mg/hr)</cell>
-                </row>
-                <row>
-                    <cell><m>0</m></cell>
-                    <cell><m>250\cdot (0.98)^0</m></cell>
-                </row>
-                <row>
-                    <cell><m>1</m></cell>
-                    <cell><m>250</m>(<var name="0.98" width="3" />)</cell>
-                </row>
-                <row>
-                    <cell><m>2</m></cell>
-                    <cell><m>250</m>(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)</cell>
-                </row>
-                <row>
-                    <cell><m>3</m></cell>
-                    <cell><m>250</m>(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)</cell>
-                </row>
-                <row>
-                    <cell><m>4</m></cell>
-                    <cell><m>250</m>(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)</cell>
-                </row>
-              </tabular></sidebyside>
-            </li>
-          </ol>
-        </p>
-        <p>Notice how the expressions in each output cell could be simpified by using exponents to count the repeated growth factor. Good to know!</p>
-      </statement>
-    </webwork>
-  </exercise>
+      </introduction>
+
+      <webwork>
+          <statement>
+            <p>
+              A patient's dosage rate of <m>250</m> mg/hr is reduced by <m>2 \%</m> each hour.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    What growth factor gives us a <m>2 \%</m> decrease?
+                  </p>
+
+                  <p>
+                    <m>b =</m> <var name="0.98" width="5" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Complete the table for a dosage reduced by <m>2 \%</m> each hour
+                    (<em>round your answers to <m>2</m> decimal places</em>).
+                  </p>
+
+                  <sidebyside>
+
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                      <col halign="center"/>
+                      <col halign="center"/>
+                      <row>
+                        <cell>t (hours)</cell>
+                        <cell>Dosage (mg/hr)</cell>
+                      </row>
+                      <row>
+                        <cell><m>0</m></cell>
+                        <cell><var name="250.00" width="5" /></cell>
+                      </row>
+                      <row>
+                        <cell><m>1</m></cell>
+                        <cell><var name="245.00" width="5" /></cell>
+                      </row>
+                      <row>
+                        <cell><m>2</m></cell>
+                        <cell><var name="240.10" width="5" /></cell>
+                      </row>
+                      <row>
+                        <cell><m>3</m></cell>
+                        <cell><var name="235.30" width="5" /></cell>
+                      </row>
+                      <row>
+                        <cell><m>4</m></cell>
+                        <cell><var name="230.59" width="5" /></cell>
+                      </row>
+                    </tabular>
+
+                  </sidebyside>
+
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Since <m>2 \%</m> has a decimal equivalent of
+                    <me>
+                      r=0.02
+                    </me>,
+                    then a decrease is calculated using a growth factor of:
+                    <md alignment="gather">
+                      <mrow>b \amp =1-r</mrow>
+                      <mrow>b \amp =1-0.02</mrow>
+                      <mrow>b \amp =0.98</mrow>
+                    </md>
+                  </p>
+                </li>
+
+                <li>
+
+                  <sidebyside>
+
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                      <col halign="center"/>
+                      <col halign="center"/>
+                      <row>
+                        <cell>t (hours)</cell>
+                        <cell>Dosage (mg/hr)</cell>
+                      </row>
+                      <row>
+                        <cell><m>0</m></cell>
+                        <cell>250.00</cell>
+                      </row>
+                      <row>
+                        <cell><m>1</m></cell>
+                        <cell>245.00</cell>
+                      </row>
+                      <row>
+                        <cell><m>2</m></cell>
+                        <cell>240.10</cell>
+                      </row>
+                      <row>
+                        <cell><m>3</m></cell>
+                        <cell>235.30</cell>
+                      </row>
+                      <row>
+                        <cell><m>4</m></cell>
+                        <cell>230.59</cell>
+                      </row>
+                    </tabular>
+
+                  </sidebyside>
+
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+
+    <exercise>
+      <title>Exponential Pattern: Building a Formula</title>
+      <webwork>
+          <statement>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Consider again the <m>250</m> mg/hour dosage rate and reducing it by <m>2 \%</m> each hour.
+                  </p>
+
+                  <p>
+                    This time instead of the actual results,
+                    write the initial value followed by multiples of the growth factor for every hour that passes.
+                  </p>
+
+                  <sidebyside>
+
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                      <col halign="center"/>
+                      <col halign="left"/>
+                      <row>
+                        <cell>t (hours)</cell>
+                        <cell>Dosage (mg/hr)</cell>
+                      </row>
+                      <row>
+                        <cell><m>0</m></cell>
+                        <cell><m>250\cdot (0.98)^0</m></cell>
+                      </row>
+                      <row>
+                        <cell><m>1</m></cell>
+                        <cell><m>250</m>(<var name="0.98" width="3" />)</cell>
+                      </row>
+                      <row>
+                        <cell><m>2</m></cell>
+                        <cell><m>250</m>(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)</cell>
+                      </row>
+                      <row>
+                        <cell><m>3</m></cell>
+                        <cell><m>250</m>(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)</cell>
+                      </row>
+                      <row>
+                        <cell><m>4</m></cell>
+                        <cell><m>250</m>(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)</cell>
+                      </row>
+                    </tabular>
+
+                  </sidebyside>
+
+                </li>
+              </ol>
+            </p>
+
+            <p>
+              Notice how the expressions in each output cell could be simpified by using exponents to count the repeated growth factor.
+              Good to know!
+            </p>
+          </statement>
+      </webwork>
+    </exercise>
   </subsection>
+
   <subsection>
     <title>A General Formula for Exponential Growth/Decay: Discrete Model</title>
-      <assemblage>
-      <p>You will find the word <term>compounded</term> in the exercises that follow.</p>
-      <p><term>Compounding</term><idx><h>compounding</h></idx> is the process of repeatedly increasing or decreasing by a percent. It refers to the fact that each succesive percent change is based on a number already greater/lesser than the original. </p>
-      <p><ul><li><p><em>Compounded monthly</em> means a percent is calculated each month.</p></li>
-      <li><p><em>Compounded annually</em> means a percent is calculated each year.</p></li>
-      <li><p>In the expression <m>500\cdot 1.15\cdot 1.15\cdot 1.15</m> the value <m>500</m> has been compounded three times by <m>15 \%</m>.</p></li></ul></p>
-      </assemblage>
-      <p>A common form for a linear equation is <m>y = mx + b</m>, although there are others. Exponential equations have their own form too. In this part of the activity we use a table of values to find a pattern in constant percent growth or decay then find a form for exponential functions.</p>
-      <p>To find a pattern within numerical data, it is best to record how we get our results instead of the results themselves.</p>
-      <p>As a way to convince you, here is an experiment.</p>
-      <todo>Write an "if" statement so that if NEXT1 is the actual value or "0" for "I don't know" then it is correct.</todo>
-      <exercise>
-        <introduction>
-          <p>Given a sequence of values, predict (or guess) what value comes next in the sequence.</p>
-        </introduction>
-          <webwork>
-              <setup>
+    <assemblage>
+      <p>
+        You will find the word <term>compounded</term>
+        in the exercises that follow.
+      </p>
 
-                  <pg-code>
-                      $Next1 = Real(165);
-                  </pg-code>
-              </setup>
+      <p>
+        <term>Compounding</term>
+            <idx><h>compounding</h></idx>
+        is the process of repeatedly increasing or decreasing by a percent.
+        It refers to the fact that each succesive percent change is based on a number already greater/lesser than the original.
+      </p>
 
-              <statement>
-                <p>Sometimes, the way a list of values is written can make it easy or hard to determine the pattern.</p>
-                <p>
-                  <ol label="a" >
-                  <li>
-                    <p>Can you guess the next entry into the pattern?</p>
-                    <p><md>
-                        <mrow>11</mrow>
-                        <mrow>22</mrow>
-                        <mrow>43</mrow>
-                        <mrow>84</mrow>
-                      </md></p>
-                    <p>Next is <var name="$Next1" width="3" /></p>
-                    </li>
-                  <li>
-                    <p>What is the next result in this pattern?</p>
-                    <p><md>
+      <p>
+        <ul>
+          <li>
+            <p>
+              <em>Compounded monthly</em> means a percent is calculated each month.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <em>Compounded annually</em> means a percent is calculated each year.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              In the expression <m>500\cdot 1.15\cdot 1.15\cdot 1.15</m> the value <m>500</m> has been compounded three times by <m>15 \%</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+
+    <p>
+      A common form for a linear equation is <m>y = mx + b</m>,
+      although there are others.
+      Exponential equations have their own form too.
+      In this part of the activity we use a table of values to find a pattern in constant percent growth or decay then find a form for exponential functions.
+    </p>
+
+    <p>
+      To find a pattern within numerical data,
+      it is best to record how we get our results instead of the results themselves.
+    </p>
+
+    <p>
+      As a way to convince you, here is an experiment.
+    </p>
+
+    <todo>Write an "if" statement so that if NEXT1 is the actual value or "0" for "I don't know" then it is correct.</todo>
+
+    <exercise>
+
+      <introduction>
+        <p>
+          Given a sequence of values, predict
+          (or guess)
+          what value comes next in the sequence.
+        </p>
+      </introduction>
+
+      <webwork>
+          <setup>
+
+            <pg-code>
+                $Next1 = Real(165);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Sometimes, the way a list of values is written can make it easy or hard to determine the pattern.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Can you guess the next entry into the pattern?
+                  </p>
+
+                  <p>
+                    <md>
+                      <mrow>11</mrow>
+                      <mrow>22</mrow>
+                      <mrow>43</mrow>
+                      <mrow>84</mrow>
+                    </md>
+                  </p>
+
+                  <p>
+                    Next is <var name="$Next1" width="3" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the next result in this pattern?
+                  </p>
+
+                  <p>
+                    <md>
                       <mrow>\amp5*2 + 1 = 11</mrow>
                       <mrow>\amp5*2*2 + 2 = 22</mrow>
                       <mrow>\amp5*2*2*2 + 3=43</mrow>
                       <mrow>\amp5*2*2*2*2 + 4=84</mrow>
-                    </md></p>
-                    <p>The next result is <var name="$Next1" width="10" /></p>
-                  </li>
-                </ol>
-              </p>
-              </statement>
+                    </md>
+                  </p>
 
-              <solution>
-                  <p>Both patterns are exactly the same.  One shows the results and the other shows how to get the results.</p>
-                  <p>Most likely you found the second pattern to be the easiest to predict because you can see <em>how</em> you got the answers.</p>
-                  <p>The first pattern shows only the results, so all you see is numbers without any clue how they were found.</p>
-                  <p>In each case the next value is <var name="$Next1" />, but in the second pattern you can predict the calculation to be <me>5\cdot 2\cdot 2\cdot 2\cdot 2\cdot  + 5 = 165 </me></p>
-              </solution>
-          </webwork>
-      </exercise>
-      <p>Hopefully, you're convinced that finding a pattern in a sequence is much easier if you write out how you get each result instead of the actual result.</p>
-      <exercise>
-        <title>The General Form of an Exponential Equation</title>
-        <introduction>
-          <p>A population of bacteria increases by a constant percent each hour. Find a formula to model the size of the popultion <m>P(t)</m> as a function of time, <m>t</m> in hours.</p>
-        </introduction>
-          <webwork>
-            <setup>
+                  <p>
+                    The next result is <var name="$Next1" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Both patterns are exactly the same.
+              One shows the results and the other shows how to get the results.
+            </p>
+
+            <p>
+              Most likely you found the second pattern to be the easiest to predict because you can see
+              <em>how</em> you got the answers.
+            </p>
+
+            <p>
+              The first pattern shows only the results,
+              so all you see is numbers without any clue how they were found.
+            </p>
+
+            <p>
+              In each case the next value is <var name="$Next1" />,
+              but in the second pattern you can predict the calculation to be
+              <me>
+                5\cdot 2\cdot 2\cdot 2\cdot 2\cdot  + 5 = 165
+              </me>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+
+    <p>
+      Hopefully, you're convinced that finding a pattern in a sequence is much easier if you write out how you get each result instead of the actual result.
+    </p>
+
+    <exercise>
+      <title>The General Form of an Exponential Equation</title>
+      <introduction>
+        <p>
+          A population of bacteria increases by a constant percent each hour.
+          Find a formula to model the size of the popultion <m>P(t)</m> as a function of time,
+          <m>t</m> in hours.
+        </p>
+      </introduction>
+
+      <webwork>
+          <setup>
 
               <pg-code>
                 Context()->variables->are(t=>'Real');
@@ -836,57 +1441,93 @@
                 return 1;
           });}
               </pg-code>
-            </setup>
-            <stage>
-              <statement>
-                <p>A population of <var name="$a" /> bacteria increases by <m><var name="$p" />\%</m> every hour.</p>
-                <p>For each hour that passes, we multiply by the growth factor. This gives us the percent change at the end of each hour <m>t = 1, 2 </m> etc.</p>
-                <p>Identify the growth factor <m>b</m> associated with the given percent increase.</p>
-                <p><m>b = </m> <var name="$b" width="4" /></p>
-              </statement>
-            </stage>
-            <stage>
-              <statement>
-                <p>Use our growth factor <m><var name="$b" /></m> to continue the pattern in the table.</p>
-                <sidebyside><tabular top="major" halign="center">
-                    <col halign="left" />
-                    <col halign="left" />
-                    <row bottom="medium">
-                        <cell><m>t</m> (hours)</cell>
-                        <cell><m>P(t)</m> Population Size</cell>
-                    </row>
-                    <row>
-                        <cell><m><var name="$x[0]" /></m></cell>
-                        <cell><m><var name="$y[0]" /></m></cell>
-                    </row>
-                    <row>
-                        <cell><m><var name="$x[1]" /></m></cell>
-                        <cell><m><var name="$y[1]" /></m></cell>
-                    </row>
-                    <row>
-                        <cell><m><var name="$x[2]" /></m></cell>
-                        <cell><m><var name="$y[2]" /></m></cell>
-                    </row>
-                    <row>
-                        <cell><var name="$x[3]" width="2" /></cell>
-                        <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
-                    </row>
-                    <row>
-                        <cell><var name="$x[4]" width="2" /></cell>
-                        <cell><var name="$y[4]" width="20" evaluator="$ev[4]"/></cell>
-                    </row>
-                </tabular></sidebyside>
-                <p>Notice there is a pattern emerging. For every hour that passes there is another multiple of the same growth factor.</p>
-              </statement>
-            </stage>
-            <stage>
-              <statement>
-                <p>Now, instead of writing the growth factor over and over, we can use exponents to clean up the notation. The exponent <q>counts</q> how many times the percent has been compounded.</p>
-                <p>
-                  <ol label="a">
-                    <li>
-                    <p>In the next cell, let <m>t = 20</m> hours. Then use an exponent to enter the calculation (not the answer) on the right.</p>
-                    <sidebyside><tabular top="major" halign="center">
+          </setup>
+          <stage>
+          <statement>
+            <p>
+              A population of <var name="$a" /> bacteria increases by <m><var name="$p" />\%</m> every hour.
+            </p>
+
+            <p>
+              For each hour that passes, we multiply by the growth factor.
+              This gives us the percent change at the end of each hour <m>t = 1, 2 </m> etc.
+            </p>
+
+            <p>
+              Identify the growth factor <m>b</m> associated with the given percent increase.
+            </p>
+
+            <p>
+              <m>b = </m> <var name="$b" width="4" />
+            </p>
+          </statement>
+          </stage>
+          <stage>
+          <statement>
+            <p>
+              Use our growth factor <m><var name="$b" /></m> to continue the pattern in the table.
+            </p>
+
+            <sidebyside>
+
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col halign="left" />
+                <row bottom="medium">
+                  <cell><m>t</m> (hours)</cell>
+                  <cell><m>P(t)</m> Population Size</cell>
+                </row>
+                <row>
+                  <cell><m><var name="$x[0]" /></m></cell>
+                  <cell><m><var name="$y[0]" /></m></cell>
+                </row>
+                <row>
+                  <cell><m><var name="$x[1]" /></m></cell>
+                  <cell><m><var name="$y[1]" /></m></cell>
+                </row>
+                <row>
+                  <cell><m><var name="$x[2]" /></m></cell>
+                  <cell><m><var name="$y[2]" /></m></cell>
+                </row>
+                <row>
+                  <cell><var name="$x[3]" width="2" /></cell>
+                  <cell><var name="$y[3]" width="20" evaluator="$ev[3]"/></cell>
+                </row>
+                <row>
+                  <cell><var name="$x[4]" width="2" /></cell>
+                  <cell><var name="$y[4]" width="20" evaluator="$ev[4]"/></cell>
+                </row>
+              </tabular>
+
+            </sidebyside>
+
+            <p>
+              Notice there is a pattern emerging.
+              For every hour that passes there is another multiple of the same growth factor.
+            </p>
+          </statement>
+          </stage>
+          <stage>
+          <statement>
+            <p>
+              Now, instead of writing the growth factor over and over,
+              we can use exponents to clean up the notation.
+              The exponent <q>counts</q> how many times the percent has been compounded.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    In the next cell, let <m>t = 20</m> hours.
+                    Then use an exponent to enter the calculation
+                    (not the answer)
+                    on the right.
+                  </p>
+
+                  <sidebyside>
+
+                    <tabular top="major" halign="center">
                       <col halign="left" />
                       <col halign="left" />
                       <row bottom="medium">
@@ -897,11 +1538,21 @@
                         <cell><var name="$x[5]" width="2" /></cell>
                         <cell><var name="$y[5]" width="20" evaluator="$ev[5]"/></cell>
                       </row>
-                    </tabular></sidebyside>
-                  </li>
-                  <li>
-                    <p>Finally, at any time <m>t</m>, what is the resulting formula?</p>
-                    <sidebyside><tabular top="major" halign="center">
+                    </tabular>
+
+                  </sidebyside>
+
+                </li>
+
+                <li>
+                  <p>
+                    Finally, at any time <m>t</m>,
+                    what is the resulting formula?
+                  </p>
+
+                  <sidebyside>
+
+                    <tabular top="major" halign="center">
                       <col halign="left" />
                       <col halign="left" />
                       <row bottom="medium">
@@ -912,69 +1563,182 @@
                         <cell><var name="$x[6]" width="2" /></cell>
                         <cell><var name="$y[6]" width="20" evaluator="$ev[6]"/></cell>
                       </row>
-                    </tabular></sidebyside>
-                  <p>This is your formula to calculate the population at any time!</p>
+                    </tabular>
+
+                  </sidebyside>
+
+                  <p>
+                    This is your formula to calculate the population at any time!
+                  </p>
                 </li>
               </ol>
             </p>
           </statement>
           <solution>
-            <p>Notice what is changing and what is not changing in the table.</p>
-            <p>Every calculation is based on the initial amount, that does not change. Every calculation has multiples of <m>1.08</m>, that does not change either.</p>
-            <p>However, the number of times <m>1.08</m> is repeated does change.  We have to figure out how the input numbers on the left affect the output values on the right.</p>
-            <p>In this case the input is the same as the number of repeated <m>1.08</m> factors. This is not always the case.</p>
-            <p>Notice how the formula <m>390(1.08)^{t}</m>shows what changes and what does not change.  The initial value and the growth factor are both constants.  The only thing that changes is the exponent which counts <em>how many</em> times the growth factor is repeated.</p>
+            <p>
+              Notice what is changing and what is not changing in the table.
+            </p>
+
+            <p>
+              Every calculation is based on the initial amount, that does not change.
+              Every calculation has multiples of <m>1.08</m>,
+              that does not change either.
+            </p>
+
+            <p>
+              However, the number of times <m>1.08</m> is repeated does change.
+              We have to figure out how the input numbers on the left affect the output values on the right.
+            </p>
+
+            <p>
+              In this case the input is the same as the number of repeated <m>1.08</m> factors.
+              This is not always the case.
+            </p>
+
+            <p>
+              Notice how the formula <m>390(1.08)^{t}</m>shows what changes and what does not change.
+              The initial value and the growth factor are both constants.
+              The only thing that changes is the exponent which counts <em>how many</em>
+              times the growth factor is repeated.
+            </p>
           </solution>
-        </stage>
+          </stage>
       </webwork>
     </exercise>
-    <p>Now we have general forms for both linear <me>y=mx+b</me> and exponential <me>y=ab^{x}</me> equations.</p>
-    <p>In the linear equation <me>y=mx+b</me> the variable <m>b</m> is sometimes referred to as the initial value. On a graph it represents the vertical intercept while <m>m</m> represents the rate of change (slope). The rate of change tells us the rate of increase (or decrease) <em>per unit</em> input.</p>
-    <p>The variable <m>x</m> counts how many times the rate of change is added to the initial value.</p>
-    <p>In the exponential equation <me>y = ab^{x}</me> the initial value is represented by <m>a</m>, and <m>b</m> is the growth factor. This equation, or model, is called the <term>discrete exponential</term> model.</p>
-    <p>The growth factor tells us the percent increase (or decrease) <em>per unit</em> input while the variable <m>x</m> in this case counts how many times the growth factor is multiplied.</p>
-    <p>Finding the growth factor <em>per unit</em> in an exponential formula can be tricky. We have been thinking in terms of linear (constant rate of change)for so long, we often think everything is linear.</p>
-    <p>We need a way to convert a statement like <q><m>60 \%</m> over <m>3</m> years</q> into one about the percent growth <em>per year</em>. A good start is to remind ourselves how repeated addition is different than repeated multiplication.</p>
+
+    <p>
+      Now we have general forms for both linear
+      <me>
+        y=mx+b
+      </me>
+      and exponential
+      <me>
+        y=ab^{x}
+      </me>
+      equations.
+    </p>
+
+    <p>
+      In the linear equation
+      <me>
+        y=mx+b
+      </me>
+      the variable <m>b</m> is sometimes referred to as the initial value.
+      On a graph it represents the vertical intercept while <m>m</m> represents the rate of change
+      (slope).
+      The rate of change tells us the rate of increase
+      (or decrease)
+      <em>per unit</em> input.
+    </p>
+
+    <p>
+      The variable <m>x</m> counts how many times the rate of change is added to the initial value.
+    </p>
+
+    <p>
+      In the exponential equation
+      <me>
+        y = ab^{x}
+      </me>
+      the initial value is represented by <m>a</m>,
+      and <m>b</m> is the growth factor.
+      This equation, or model,
+      is called the <term>discrete exponential</term> model.
+    </p>
+
+    <p>
+      The growth factor tells us the percent increase
+      (or decrease)
+      <em>per unit</em> input while the variable <m>x</m> in this case counts how many times the growth factor is multiplied.
+    </p>
+
+    <p>
+      Finding the growth factor <em>per unit</em>
+      in an exponential formula can be tricky.
+      We have been thinking in terms of linear (constant rate of change)for so long,
+      we often think everything is linear.
+    </p>
+
+    <p>
+      We need a way to convert a statement like
+      <q><m>60 \%</m> over <m>3</m> years</q>
+      into one about the percent growth <em>per year</em>.
+      A good start is to remind ourselves how repeated addition is different than repeated multiplication.
+    </p>
+
     <exercise>
+
       <introduction>
-        <p>Is one decrease of <m>60</m> students the same as three decreases of <m>20</m> students?</p>
+        <p>
+          Is one decrease of <m>60</m> students the same as three decreases of <m>20</m> students?
+        </p>
       </introduction>
+
       <webwork>
-        <setup>
+          <setup>
+
           <pg-code>
             $same = RadioButtons(
             ["yes","no"],
             0, labels => ["yes","no"],displayLabels => 0
             );
           </pg-code>
-        </setup>
-        <statement>
-          <p>
-            <ol label="a" >
-              <li>
-                <p>If we start with <m>300</m> students and subtract 60 students, how many students remain? <m>300 - 60 = </m><var name="240" width="5" /> students.</p>
-              </li>
-              <li>
-                <p>If we start with <m>300</m> students and subtract <m>20</m> students three consecutive times, how many students remain?</p>
-                <p><m>300-</m> <var name="20" width="5" /> <m>-</m> <var name="20" width="5" /> <m>-</m> <var name="20" width="5" /></p>
-                <p><m>=300-3\cdot </m> <var name="20" width="5" /></p>
-                <p><m>=</m> <var name="240" width="5" /></p>
-              </li>
-              <li>
-                <p>Is one decrease of <m>60</m> students the same as three decreases of <m>20</m> students?</p>
-                <p><var name="$same" form="buttons" /></p>
-              </li>
-            </ol>
-          </p>
-        </statement>
+          </setup>
+          <statement>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    If we start with <m>300</m> students and subtract 60 students,
+                    how many students remain?
+                    <m>300 - 60 = </m><var name="240" width="5" /> students.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    If we start with <m>300</m> students and subtract <m>20</m> students three consecutive times,
+                    how many students remain?
+                  </p>
+
+                  <p>
+                    <m>300-</m> <var name="20" width="5" /> <m>-</m> <var name="20" width="5" /> <m>-</m> <var name="20" width="5" />
+                  </p>
+
+                  <p>
+                    <m>=300-3\cdot </m> <var name="20" width="5" />
+                  </p>
+
+                  <p>
+                    <m>=</m> <var name="240" width="5" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Is one decrease of <m>60</m> students the same as three decreases of <m>20</m> students?
+                  </p>
+
+                  <p>
+                    <var name="$same" form="buttons" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
       </webwork>
     </exercise>
+
     <exercise>
+
       <introduction>
-        <p>Is one decrease by <m>60 \%</m> of students the same as three decreases by <m>20 \%</m> of students?</p>
+        <p>
+          Is one decrease by <m>60 \%</m> of students the same as three decreases by <m>20 \%</m> of students?
+        </p>
       </introduction>
+
       <webwork>
-        <setup>
+          <setup>
 
           <pg-code>
             $same = RadioButtons(
@@ -982,288 +1746,617 @@
             1, labels => ["yes","no"],displayLabels => 0
             );
           </pg-code>
-        </setup>
-        <stage>
+          </setup>
+          <stage>
           <statement>
-            <p>What is the growth factor associated with a <m>60 \%</m> decrease? Multiply by <var name="0.4" width="4" /> to reduce by <m>60 \%</m>.</p>
-            <p>If we start with <m>300</m> students then decrease enrollment by <m>60 \%</m>, there will be <var name="120" width="5" /> students remaining.</p>
+            <p>
+              What is the growth factor associated with a <m>60 \%</m> decrease?
+              Multiply by <var name="0.4" width="4" /> to reduce by <m>60 \%</m>.
+            </p>
+
+            <p>
+              If we start with <m>300</m> students then decrease enrollment by <m>60 \%</m>,
+              there will be <var name="120" width="5" /> students remaining.
+            </p>
           </statement>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
-            <p>What is the growth factor associated with a <m>20 \%</m> decrease? Multiply by <var name="0.8" width="4" /> to reduce by <m>20 \%</m>.</p>
-            <p>If we start with <m>300</m> students then reduce enrollment by <m>20 \%</m> three consecutive times, how many students remain?</p>
-            <p><m>300\cdot </m> <var name="0.8" width="5" /> <m>\cdot </m> <var name="0.8" width="5" /> <m>\cdot </m> <var name="0.8" width="5" /></p>
-            <p><m>=300(</m> <var name="0.8" width="5" /> <m>)^{3}</m></p>
-            <p><m>=</m> <var name="153.6" width="5" /> (use the actual result for now even though there's no such thing as fractions of a student).</p>
-            <p>Is one decrease by <m>60 \%</m> of students the same as three decreases by <m>20 \%</m> of students?</p>
-            <p><var name="$same" form="buttons" /></p>
+            <p>
+              What is the growth factor associated with a <m>20 \%</m> decrease?
+              Multiply by <var name="0.8" width="4" /> to reduce by <m>20 \%</m>.
+            </p>
+
+            <p>
+              If we start with <m>300</m> students then reduce enrollment by <m>20 \%</m> three consecutive times,
+              how many students remain?
+            </p>
+
+            <p>
+              <m>300\cdot </m> <var name="0.8" width="5" /> <m>\cdot </m> <var name="0.8" width="5" /> <m>\cdot </m> <var name="0.8" width="5" />
+            </p>
+
+            <p>
+              <m>=300(</m> <var name="0.8" width="5" /> <m>)^{3}</m>
+            </p>
+
+            <p>
+              <m>=</m> <var name="153.6" width="5" />
+              (use the actual result for now even though there's no such thing as fractions of a student).
+            </p>
+
+            <p>
+              Is one decrease by <m>60 \%</m> of students the same as three decreases by <m>20 \%</m> of students?
+            </p>
+
+            <p>
+              <var name="$same" form="buttons" />
+            </p>
           </statement>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
-                <p>What is the overall growth factor associated with three consecutive <m>20 \%</m> decreases?</p>
-                <p><m>0.8^{3}=</m> <var name="0.512" width="5" /> (round to three decimal places).</p>
-                <p>What percent decrease does this overall growth factor represent?</p>
-                <p>It represents an overall decrease of <var name="48.8" width="5" /><m> \%</m>. (round to <m>1</m> decimal place)</p>
+            <p>
+              What is the overall growth factor associated with three consecutive <m>20 \%</m> decreases?
+            </p>
+
+            <p>
+              <m>0.8^{3}=</m> <var name="0.512" width="5" />
+              (round to three decimal places).
+            </p>
+
+            <p>
+              What percent decrease does this overall growth factor represent?
+            </p>
+
+            <p>
+              It represents an overall decrease of <var name="48.8" width="5" /><m> \%</m>. (round to <m>1</m> decimal place)
+            </p>
           </statement>
           <solution>
             <p>
-              <ol label="a" >
+              <ol label="a">
                 <li>
-                  <p>A <m>60 \%</m> decrease corresponds to a growth factor of <m>1-0.6=0.4</m></p>
+                  <p>
+                    A <m>60 \%</m> decrease corresponds to a growth factor of <m>1-0.6=0.4</m>
+                  </p>
                 </li>
+
                 <li>
-                  <p>A <m>60 \%</m> reduction of <m>300 </m>students is <m>120</m> students</p>
+                  <p>
+                    A <m>60 \%</m> reduction of <m>300 </m>students is <m>120</m> students
+                  </p>
                 </li>
+
                 <li>
-                  <p>The growth factor corresponding to a <m>20 \%</m> decrease is <m>1-0.2=0.8</m></p>
+                  <p>
+                    The growth factor corresponding to a <m>20 \%</m> decrease is <m>1-0.2=0.8</m>
+                  </p>
                 </li>
+
                 <li>
-                  <p>Three consecutive <m>20 \%</m> decreases from <m>300</m> students is exactly <m>153.6</m> students.</p>
+                  <p>
+                    Three consecutive <m>20 \%</m> decreases from <m>300</m> students is exactly <m>153.6</m> students.
+                  </p>
                 </li>
+
                 <li>
-                  <p>One <m>60 \%</m> decrease is not the same as three <m>20 \%</m> decreases!</p>
+                  <p>
+                    One <m>60 \%</m> decrease is not the same as three <m>20 \%</m> decreases!
+                  </p>
                 </li>
+
                 <li>
-                  <p>Three <m>20 \%</m> decreases corresponds to an overall growth factor of <m>0.8^{3}=0.512</m></p>
-                  <p>Solving for the decrease we get <m>1-0.512=0.488</m>which corresponds to a <m>48.8 \%</m> decrease in enrollment.</p>
+                  <p>
+                    Three <m>20 \%</m> decreases corresponds to an overall growth factor of <m>0.8^{3}=0.512</m>
+                  </p>
+
+                  <p>
+                    Solving for the decrease we get
+                    <m>1-0.512=0.488</m>which corresponds to a <m>48.8 \%</m> decrease in enrollment.
+                  </p>
                 </li>
               </ol>
             </p>
           </solution>
-        </stage>
+          </stage>
       </webwork>
     </exercise>
-    <p>As we found in the last exercise, given a change of <m>60 \%</m> over three years, we cannot simply divide <m>60 \%</m> by <m>3</m> to find the annual percent change. Because of compounding, three <m>20 \%</m> increases is actually more than one <m>60 \%</m> increase.</p>
-    <p>To derive an exponential formula of the form <m>y=ab^{x}</m>, the goal is to find the values <m>a</m> and <m>b</m> for the specific problem, and then you're done!</p>
-    <p>Practice finding exponential formulas in the next three exercises.</p>
-    <p>In each example we will use time, <m>t</m>, as the input. But the strategy will be the same regardless of what variable we use:</p>
-      <p>
-        <ul>
-          <li>
-            <p>Assume an exponential with <m>t</m> representing time as in <m>f(t)=ab^{t}</m>.</p>
-          </li>
-          <li>
-            <p>Find the overall growth factor between to output values.</p>
-          </li>
-          <li>
-            <p>Use the overall growth factor to calculate the growth factor per unit, <m>b</m>.</p>
-          </li>
-          <li>
-            <p>Use the newly found growth factor <m>b</m> to determine the initial value <m>a</m> if it is not already known.</p>
-          </li>
-        </ul>
-      </p>
-<todo>Reduce the displayed results to 4 decimal places.</todo>
-      <exercise>
-        <introduction>
-          <p>Derive a formula for a population <m>P(t)</m> of bacteria that increases by a constant percent every <m>3</m> hours. Let <m>t</m> be time in hours.</p>
-          <blockquote>
-            <p><term>Strategy</term>: Find the overall growth factor for the given span of time and use to it to find the hourly growth factor (per <m>1</m> hour).</p>
-          </blockquote>
-        </introduction>
-        <webwork>
-            <setup>
 
-                <pg-code>
-                Context()->variables->are(t=>'Real');
-                  $a=random(200,400,10);
-                  $r=random(0.05,0.09,0.01);
-                  $p=$r*100;
-                  $b=Real(1+$r);
-                  $bRoot=Real($b**(1/3));
-                </pg-code>
-            </setup>
-            <stage>
-              <statement>
-                  <p>A population <m>P(t)</m> of <m><var name="$a" /></m> bacteria increases by <m><var name="$p" />\%</m> every <m>3</m> hours. Let <m>t</m> be time in hours.</p>
-                  <p>The formula is going to look something like: <m>P(t) = ab^{t}</m>.  Our goal is to find values for <m>a</m> and <m>b</m>.</p>
-                  <p>
-                    <ol label="a" >
-                      <li>
-                        <p>What is the initial size of the population?  This is the result we should get at <m>t = 0</m> (no time goes by).</p>
-                        <p><m>a = </m> <var name="$a" width="5" /></p>
-                      </li>
-                      <li>
-                        <p>We are told there is an <m><var name="$p" /> \%</m>increase that occurs over the span of <m>3</m> hours. We will call this the <q>overall</q> percent increase. We want the <q>hourly</q> percent increase.</p>
-                        <p>What overall growth factor corresponds to an <m><var name="$p" /> \%</m>increase? <var name="$b" width="4" /></p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-                <solution>
-                  <p>
-                    <ol label="a">
-                      <li>
-                        <p>Initially the population is <m>a=<var name="$a" /></m></p>
-                      </li>
-                      <li>
-                        <p>An overall increase of <m><var name="$p"/> \%</m> corresponds to a growth factor of <m><var name="$b" /></m></p>
-                      </li>
-                    </ol>
-                  </p>
-                </solution>
-              </stage>
-              <stage>
-                <statement>
-                  <p>
-                    <ol label="a" >
-                      <li>
-                        <p>In the span of <m>3</m> hours, the <term>hourly growth factor</term> <m>b</m> has been compounded three times (multiplied by itself three times) to equal an overall growth factor of <m><var name="$b" /></m></p>
-                        <p>In English, our problem can be stated like this</p>
-                        <p><lq/>An unknown number is multipied three times to get an overall percent increase of <m><var name="$p" /> \%</m>. What is the unknown number?<rq/></p>
-                        <p>In math, that statement looks like this:</p>
-                        <p>Solve for <m>b</m> if <m>b^{3} = </m> <var name="$b" />.</p>
-                        <p>Solving the equation we get <m>b \approx </m> <var name="$bRoot" width="5" /> <em>(round your answer to <m>4</m> decimal places</em>).</p>
-                      </li>
-                      <li>
-                        <p>We now have everything we need to model the population.</p>
-                        <p><m>P(t) \approx </m> <var name="$a" width="5" /><m>\cdot </m> <var name="$bRoot" width="5"/><m>^t</m></p>
-                      </li>
-                    </ol>
-                  </p>
-              </statement>
-              <solution>
-                <p>
-                  <ol label="a">
-                    <li>
-                      <p>Solve <m>b^{3}=1.08</m>
-                      <md>
-                        <mrow>b^{3} \amp =<var name="$b" /></mrow>
-                        <mrow>(b^{3})^{\frac{1}{3}} \amp=(<var name="$b" />)^{\frac{1}{3}}</mrow>
-                        <mrow>b \amp =(<var name="$b" />)^{\frac{1}{3}}</mrow>
-                        <mrow>b \approx\amp <var name="$bRoot" /></mrow>
-                      </md></p>
-                    </li>
-                    <li>
-                      <p>Having found values for <m>a</m> and <m>b</m> we get <m>P(t)=<var name="$a" />(<var name="$bRoot" />)^{t}</m></p>
-                    </li>
-                  </ol>
-                </p>
-              </solution>
-            </stage>
-          </webwork>
-      </exercise>
+    <p>
+      As we found in the last exercise,
+      given a change of <m>60 \%</m> over three years,
+      we cannot simply divide <m>60 \%</m> by <m>3</m> to find the annual percent change.
+      Because of compounding,
+      three <m>20 \%</m> increases is actually more than one <m>60 \%</m> increase.
+    </p>
 
-      <todo>Make the results render as rounded to 4 decimal places.</todo>
-      <exercise>
-        <introduction>
-          <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie, in degrees Fahrenheit, as a function of time, <m>t</m>, in hours. The initial temperature and one other ordered pair are known.</p>
-          <blockquote>
-            <p><term>Strategy</term>: Find the overall growth factor for the given span of time and use to it to find the hourly growth factor (per <m>1</m> hour).</p>
-          </blockquote>
-        </introduction>
-        <webwork>
+    <p>
+      To derive an exponential formula of the form <m>y=ab^{x}</m>,
+      the goal is to find the values <m>a</m> and <m>b</m> for the specific problem,
+      and then you're done!
+    </p>
+
+    <p>
+      Practice finding exponential formulas in the next three exercises.
+    </p>
+
+    <p>
+      In each example we will use time, <m>t</m>, as the input.
+      But the strategy will be the same regardless of what variable we use:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Assume an exponential with <m>t</m> representing time as in <m>f(t)=ab^{t}</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Find the overall growth factor between to output values.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Use the overall growth factor to calculate the growth factor per unit,
+            <m>b</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Use the newly found growth factor <m>b</m> to determine the initial value <m>a</m> if it is not already known.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <todo>Reduce the displayed results to 4 decimal places.</todo>
+
+    <exercise>
+
+      <introduction>
+        <p>
+          Derive a formula for a population <m>P(t)</m> of bacteria that increases by a constant percent every <m>3</m> hours.
+          Let <m>t</m> be time in hours.
+        </p>
+
+        <blockquote>
+          <p>
+            <term>Strategy</term>:
+            Find the overall growth factor for the given span of time and use to it to find the hourly growth factor
+            (per <m>1</m> hour).
+          </p>
+        </blockquote>
+      </introduction>
+
+      <webwork>
           <setup>
 
-              <pg-code>
-              Context()->variables->are(t=>'Real');
-                $a=random(400,475,5);
-                $finalTemp=random(95,110,1);
-                $b=Real($finalTemp/$a);
-                $bRoot=Real($b**(0.25));
-                $r=Real(1-$b);
-                $rRoot=Real(1-$bRoot);
-                $p=Real($r*100);
-                $pRoot=Real($rRoot*100);
-              </pg-code>
+            <pg-code>
+            Context()->variables->are(t=>'Real');
+              $a=random(200,400,10);
+              $r=random(0.05,0.09,0.01);
+              $p=$r*100;
+              $b=Real(1+$r);
+              $bRoot=Real($b**(1/3));
+            </pg-code>
           </setup>
           <stage>
-            <statement>
-              <p>The temperature of a pie is <m><var name="$a" /></m> degrees Fahrenheit when it is first removed from the oven.  After <m>4</m> hours the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.</p>
-              <p>Derive an exponential formula <m>f(t)</m> for the temperature of the pie as a function of time, <m>t</m> in hours. Round all your calculations to <m>4</m> decimal places.</p>
-              <p>Here's how:</p>
-              <p>Since we are asked to find an exponential formula, we know the formula is going to look something like</p>
-              <p><m>f(t) = ab^{t}</m></p>
-              <p>We know the temperature of the pie at two different times including the initial temperature.</p>
-              <p>Goal: find values for <m>a</m> and <m>b</m>.</p>
-              <p>
-                <ol label="a" >
-                  <li>
-                    <p><q><m>a</m></q> is given in the problem.</p>
-                    <p>What is the initial temperature of the pie? <m>a =</m> <var name="$a" width="5" /> degrees Fahrenheit.</p>
-                  </li>
-                  <li>
-                    <p>Next, we will find the overall growth factor and use it to determine the hourly growth factor <m>b</m>.</p>
-                    <p>The pie decreases in temperature from <m><var name="$a" /></m> degrees to <m><var name="$finalTemp" /></m> degrees.  What is the overall growth factor associated with this temperature decrease?</p>
-                    <p>The overall growth factor is: <var name="$b" width="5" /></p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-            <solution>
+          <statement>
             <p>
-              <ol>
+              A population <m>P(t)</m> of <m><var name="$a" /></m> bacteria increases by <m><var name="$p" />\%</m> every <m>3</m> hours.
+              Let <m>t</m> be time in hours.
+            </p>
+
+            <p>
+              The formula is going to look something like:
+              <m>P(t) = ab^{t}</m>.
+              Our goal is to find values for <m>a</m> and <m>b</m>.
+            </p>
+
+            <p>
+              <ol label="a">
                 <li>
-                  <p>What is the initial temperature of the pie? <m>a = <var name="$a" /></m> degrees Fahrenheit.</p>
-                  <p>Use the two temperatures to find the overall growth factor</p>
-                  <p><m>\frac{<var name="$finalTemp" />}{<var name="$a" />} = <var name="$b" /></m></p>
-                  <p>After four hours we have <m>b^{4} = <var name="$b" /></m></p>
+                  <p>
+                    What is the initial size of the population?
+                    This is the result we should get at <m>t = 0</m>
+                    (no time goes by).
+                  </p>
+
+                  <p>
+                    <m>a = </m> <var name="$a" width="5" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    We are told there is an <m><var name="$p" /> \%</m>increase that occurs over the span of <m>3</m> hours.
+                    We will call this the <q>overall</q> percent increase.
+                    We want the <q>hourly</q> percent increase.
+                  </p>
+
+                  <p>
+                    What overall growth factor corresponds to an <m><var name="$p" /> \%</m>increase?
+                    <var name="$b" width="4" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Initially the population is <m>a=<var name="$a" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    An overall increase of <m><var name="$p"/> \%</m> corresponds to a growth factor of <m><var name="$b" /></m>
+                  </p>
                 </li>
               </ol>
             </p>
           </solution>
           </stage>
           <stage>
-            <statement>
-              <p>
-                <ol label="a" >
-                  <li>
-                    <p>The hourly growth factor <q><m>b</m></q> is compounded over a time of <m>4</m> hours. Therefore it takes <m>4</m> factors of <m>b</m> to reach the overall change in temperature.</p>
-                    <p>Set up an equation that relates the hourly growth factor over <m>4</m> hours to the overall growth factor.</p>
-                    <p><m>b^{4} = <var name="$b" /></m></p>
-                    <p>Solve the equation for <m>b</m>.</p>
-                    <p><m>b = </m> <var name="$bRoot" width="5" /> <em>(round your answer to <m>4</m> decimal places.</em></p>
-                  </li>
-                  <li>
-                    <p>We have everthing we need to write our formula: the initial temperature (<var name="$a" /> degrees) and the hourly growth factor (which you just found).</p>
-                    <p>The exponential formula for temperature as a function of time is <m>f(t) = </m> <var name="$a" width="5" /><m>\cdot </m>( <var name="$bRoot" width="5" /> )<m>^t</m></p>
-                  </li>
-                  <li>
-                    <p>Use <m>b</m> (hourly growth factor) to determine the hourly percent loss in temperature. Answer: <var name="$pRoot" width="5" /><m>\%</m></p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-            <solution>
+          <statement>
             <p>
-              <ol label="a" >
+              <ol label="a">
                 <li>
-                  <p>Solve the equation for <m>b</m>.</p>
-                  <p><m>b^{4} = <var name="$b" /></m></p>
-                  <p><m>(b^{4})^{\frac{1}{4}} = (<var name="$b" />)^{\frac{1}{4}}</m></p>
-                  <p><m>b =  <var name="$bRoot" /></m></p>
+                  <p>
+                    In the span of <m>3</m> hours,
+                    the <term>hourly growth factor</term>
+                    <m>b</m> has been compounded three times
+                    (multiplied by itself three times)
+                    to equal an overall growth factor of <m><var name="$b" /></m>
+                  </p>
+
+                  <p>
+                    In English, our problem can be stated like this
+                  </p>
+
+                  <p>
+                    <lq/>An unknown number is multipied three times to get an overall percent increase of <m><var name="$p" /> \%</m>.
+                    What is the unknown number?<rq/>
+                  </p>
+
+                  <p>
+                    In math, that statement looks like this:
+                  </p>
+
+                  <p>
+                    Solve for <m>b</m> if <m>b^{3} = </m> <var name="$b" />.
+                  </p>
+
+                  <p>
+                    Solving the equation we get
+                    <m>b \approx </m> <var name="$bRoot" width="5" />
+                    <em>(round your answer to <m>4</m> decimal places</em>).
+                  </p>
                 </li>
+
                 <li>
-                  <p>The exponential formula for temperature as a function of time is <m>f(t) = <var name="$a" /> \cdot (<var name="$bRoot" /> )^t</m></p>
+                  <p>
+                    We now have everything we need to model the population.
+                  </p>
+
+                  <p>
+                    <m>P(t) \approx </m> <var name="$a" width="5" /><m>\cdot </m> <var name="$bRoot" width="5"/><m>^t</m>
+                  </p>
                 </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
                 <li>
-                  <p>Use <m>b</m> (hourly growth factor) to determine the hourly percent loss in temperature.</p>
-                  <p><m>b = <var name="$bRoot" /></m></p>
-                  <p>Since <m>b</m> is also <m>1-r</m> we have</p>
-                  <p><m>1-r = <var name="$bRoot" /></m></p>
-                  <p><m>r = 1 - <var name="$bRoot" /></m></p>
-                  <p><m>r = <var name="$rRoot" /></m></p>
-                  <p>Therefore, each hour the temperature drops by <m><var name="$pRoot" />\%</m></p>
+                  <p>
+                    Solve <m>b^{3}=1.08</m>
+                    <md>
+                      <mrow>b^{3} \amp =<var name="$b" /></mrow>
+                      <mrow>(b^{3})^{\frac{1}{3}} \amp=(<var name="$b" />)^{\frac{1}{3}}</mrow>
+                      <mrow>b \amp =(<var name="$b" />)^{\frac{1}{3}}</mrow>
+                      <mrow>b \approx\amp <var name="$bRoot" /></mrow>
+                    </md>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Having found values for <m>a</m> and <m>b</m> we get <m>P(t)=<var name="$a" />(<var name="$bRoot" />)^{t}</m>
+                  </p>
                 </li>
               </ol>
             </p>
           </solution>
-        </stage>
+          </stage>
       </webwork>
     </exercise>
-    <p>What if the initial value is not known?  Can we still find an exponential formula?</p>
+
+    <todo>Make the results render as rounded to 4 decimal places.</todo>
+
     <exercise>
+
       <introduction>
-        <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie, in degrees Fahrenheit, as a function of time, <m>t</m> in hours. Two ordered pairs are known, not including the intitial temperature.</p>
+        <p>
+          Derive an exponential formula <m>f(t)</m> for the temperature of a pie,
+          in degrees Fahrenheit, as a function of time, <m>t</m>,
+          in hours.
+          The initial temperature and one other ordered pair are known.
+        </p>
+
         <blockquote>
-          <p><term>Strategy</term>: Find the overall growth factor, and use it to find the hourly growth factor.</p>
-          <p>The initial value is found using any known ordered pair.</p>
+          <p>
+            <term>Strategy</term>:
+            Find the overall growth factor for the given span of time and use to it to find the hourly growth factor
+            (per <m>1</m> hour).
+          </p>
         </blockquote>
       </introduction>
+
       <webwork>
-        <setup>
+          <setup>
+
+            <pg-code>
+            Context()->variables->are(t=>'Real');
+              $a=random(400,475,5);
+              $finalTemp=random(95,110,1);
+              $b=Real($finalTemp/$a);
+              $bRoot=Real($b**(0.25));
+              $r=Real(1-$b);
+              $rRoot=Real(1-$bRoot);
+              $p=Real($r*100);
+              $pRoot=Real($rRoot*100);
+            </pg-code>
+          </setup>
+          <stage>
+          <statement>
+            <p>
+              The temperature of a pie is <m><var name="$a" /></m> degrees Fahrenheit when it is first removed from the oven.
+              After <m>4</m> hours the temperature of the pie is <m><var name="$finalTemp" /></m> degrees fahrenheit.
+            </p>
+
+            <p>
+              Derive an exponential formula <m>f(t)</m> for the temperature of the pie as a function of time,
+              <m>t</m> in hours.
+              Round all your calculations to <m>4</m> decimal places.
+            </p>
+
+            <p>
+              Here's how:
+            </p>
+
+            <p>
+              Since we are asked to find an exponential formula,
+              we know the formula is going to look something like
+            </p>
+
+            <p>
+              <m>f(t) = ab^{t}</m>
+            </p>
+
+            <p>
+              We know the temperature of the pie at two different times including the initial temperature.
+            </p>
+
+            <p>
+              Goal: find values for <m>a</m> and <m>b</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <q><m>a</m></q> is given in the problem.
+                  </p>
+
+                  <p>
+                    What is the initial temperature of the pie?
+                    <m>a =</m> <var name="$a" width="5" /> degrees Fahrenheit.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Next, we will find the overall growth factor and use it to determine the hourly growth factor <m>b</m>.
+                  </p>
+
+                  <p>
+                    The pie decreases in temperature from <m><var name="$a" /></m> degrees to <m><var name="$finalTemp" /></m> degrees.
+                    What is the overall growth factor associated with this temperature decrease?
+                  </p>
+
+                  <p>
+                    The overall growth factor is:
+                    <var name="$b" width="5" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    What is the initial temperature of the pie?
+                    <m>a = <var name="$a" /></m> degrees Fahrenheit.
+                  </p>
+
+                  <p>
+                    Use the two temperatures to find the overall growth factor
+                  </p>
+
+                  <p>
+                    <m>\frac{<var name="$finalTemp" />}{<var name="$a" />} = <var name="$b" /></m>
+                  </p>
+
+                  <p>
+                    After four hours we have <m>b^{4} = <var name="$b" /></m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+          </stage>
+          <stage>
+          <statement>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    The hourly growth factor <q><m>b</m></q>
+                    is compounded over a time of <m>4</m> hours.
+                    Therefore it takes <m>4</m> factors of <m>b</m> to reach the overall change in temperature.
+                  </p>
+
+                  <p>
+                    Set up an equation that relates the hourly growth factor over <m>4</m> hours to the overall growth factor.
+                  </p>
+
+                  <p>
+                    <m>b^{4} = <var name="$b" /></m>
+                  </p>
+
+                  <p>
+                    Solve the equation for <m>b</m>.
+                  </p>
+
+                  <p>
+                    <m>b = </m> <var name="$bRoot" width="5" />
+                    <em>(round your answer to <m>4</m> decimal places.</em>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    We have everthing we need to write our formula:
+                    the initial temperature
+                    (<var name="$a" /> degrees)
+                    and the hourly growth factor
+                    (which you just found).
+                  </p>
+
+                  <p>
+                    The exponential formula for temperature as a function of time is <m>f(t) = </m> <var name="$a" width="5" /><m>\cdot </m>( <var name="$bRoot" width="5" /> )<m>^t</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use <m>b</m>
+                    (hourly growth factor)
+                    to determine the hourly percent loss in temperature.
+                    Answer:
+                    <var name="$pRoot" width="5" /><m>\%</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Solve the equation for <m>b</m>.
+                  </p>
+
+                  <p>
+                    <m>b^{4} = <var name="$b" /></m>
+                  </p>
+
+                  <p>
+                    <m>(b^{4})^{\frac{1}{4}} = (<var name="$b" />)^{\frac{1}{4}}</m>
+                  </p>
+
+                  <p>
+                    <m>b = <var name="$bRoot" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The exponential formula for temperature as a function of time is <m>f(t) = <var name="$a" /> \cdot (<var name="$bRoot" /> )^t</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use <m>b</m>
+                    (hourly growth factor)
+                    to determine the hourly percent loss in temperature.
+                  </p>
+
+                  <p>
+                    <m>b = <var name="$bRoot" /></m>
+                  </p>
+
+                  <p>
+                    Since <m>b</m> is also <m>1-r</m> we have
+                  </p>
+
+                  <p>
+                    <m>1-r = <var name="$bRoot" /></m>
+                  </p>
+
+                  <p>
+                    <m>r = 1 - <var name="$bRoot" /></m>
+                  </p>
+
+                  <p>
+                    <m>r = <var name="$rRoot" /></m>
+                  </p>
+
+                  <p>
+                    Therefore, each hour the temperature drops by <m><var name="$pRoot" />\%</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+          </stage>
+      </webwork>
+    </exercise>
+
+    <p>
+      What if the initial value is not known?
+      Can we still find an exponential formula?
+    </p>
+
+    <exercise>
+
+      <introduction>
+        <p>
+          Derive an exponential formula <m>f(t)</m> for the temperature of a pie,
+          in degrees Fahrenheit, as a function of time, <m>t</m> in hours.
+          Two ordered pairs are known, not including the intitial temperature.
+        </p>
+
+        <blockquote>
+          <p>
+            <term>Strategy</term>:
+            Find the overall growth factor,
+            and use it to find the hourly growth factor.
+          </p>
+
+          <p>
+            The initial value is found using any known ordered pair.
+          </p>
+        </blockquote>
+      </introduction>
+
+      <webwork>
+          <setup>
 
           <pg-code>
           Context()->variables->are(t=>'Real');
@@ -1278,47 +2371,99 @@
             $compounded=Real(5);
             $initialTemp=$a/($bRoot**3);
           </pg-code>
-        </setup>
-
-        <stage>
-          <statement>
-            <p>The temperature of a pie is <m><var name="$a" /></m> degrees Fahrenheit <m>3</m> hours after being removed from the oven.  After <m>8</m> hours out of the oven the temperature of the pie is <m><var name="$finalTemp" /></m> degrees Fahrenheit.</p>
-            <p>Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time, <m>t</m> in hours.</p>
-            <p>The formula is going to look something like <m>f(t) = ab^{t}</m>.</p>
-            <p>The pie went from a temperature of <m><var name="$a" /></m> degrees to a lower temperature of <m><var name="$finalTemp" /></m> degrees in a time span of <var name="5" width="4" /> hours.</p>
-          </statement>
-          <solution>
-            <p>The time span between <m>3</m> and <m>8</m> hours is <m>8-3=5</m>. Therefore, the decrease in temperature occurs over <m>5</m> hours.</p>
-          </solution>
-        </stage>
-        <stage>
+          </setup>
+          <stage>
           <statement>
             <p>
-              <ol label="a" >
+              The temperature of a pie is <m><var name="$a" /></m> degrees Fahrenheit <m>3</m> hours after being removed from the oven.
+              After <m>8</m> hours out of the oven the temperature of the pie is <m><var name="$finalTemp" /></m> degrees Fahrenheit.
+            </p>
+
+            <p>
+              Derive an exponential formula <m>f(t)</m> for the temperature of a pie as a function of time,
+              <m>t</m> in hours.
+            </p>
+
+            <p>
+              The formula is going to look something like <m>f(t) = ab^{t}</m>.
+            </p>
+
+            <p>
+              The pie went from a temperature of <m><var name="$a" /></m> degrees to a lower temperature of <m><var name="$finalTemp" /></m> degrees in a time span of <var name="5" width="4" /> hours.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              The time span between <m>3</m> and <m>8</m> hours is <m>8-3=5</m>.
+              Therefore, the decrease in temperature occurs over <m>5</m> hours.
+            </p>
+          </solution>
+          </stage>
+          <stage>
+          <statement>
+            <p>
+              <ol label="a">
                 <li>
-                  <p>Over the span of <m>5</m> hours, the growth factor <m>b</m> is repeated <m>5</m> times.</p>
-                  <p>In math we say, <m><var name="$a" /> \cdot  b^5 = <var name="$finalTemp" /></m></p>
-                  <p>Solve for <m>b</m>.</p>
-                  <p><m>b \approx </m> <var name="$bRoot" width="5" /> <em>(round to <m>4</m> decimal places)</em></p>
+                  <p>
+                    Over the span of <m>5</m> hours,
+                    the growth factor <m>b</m> is repeated <m>5</m> times.
+                  </p>
+
+                  <p>
+                    In math we say,
+                    <m><var name="$a" /> \cdot b^5 = <var name="$finalTemp" /></m>
+                  </p>
+
+                  <p>
+                    Solve for <m>b</m>.
+                  </p>
+
+                  <p>
+                    <m>b \approx </m> <var name="$bRoot" width="5" />
+                    <em>(round to <m>4</m> decimal places)</em>
+                  </p>
                 </li>
+
                 <li>
-                  <p>Now we only need to find the initial temperature of the pie, <q><m>a</m></q>.</p>
-                  <p>So far we have <m>f(t) = a \cdot </m>( <var name="$bRoot" width="5" /> )<m>^t</m>.</p>
+                  <p>
+                    Now we only need to find the initial temperature of the pie,
+                    <q><m>a</m></q>.
+                  </p>
+
+                  <p>
+                    So far we have <m>f(t) = a \cdot </m>( <var name="$bRoot" width="5" /> )<m>^t</m>.
+                  </p>
                 </li>
+
                 <li>
-                  <p>We will use a known ordered pair and use it to solve for <m>a</m>.</p>
-                  <p>What are the two ordered pairs (time, temperature) given to us in the problem?</p>
-                  <p>Ordered pair 1: ( <m>3,</m> <var name="$a" width="5" />)</p>
-                  <p>Ordered pair 2: ( <m>8,</m> <var name="$finalTemp" width="5" />)</p>
+                  <p>
+                    We will use a known ordered pair and use it to solve for <m>a</m>.
+                  </p>
+
+                  <p>
+                    What are the two ordered pairs (time,
+                    temperature) given to us in the problem?
+                  </p>
+
+                  <p>
+                    Ordered pair 1: ( <m>3</m>, <var name="$a" width="5" />)
+                  </p>
+
+                  <p>
+                    Ordered pair 2: ( <m>8</m>, <var name="$finalTemp" width="5" />)
+                  </p>
                 </li>
               </ol>
             </p>
           </statement>
           <solution>
             <p>
-              <ol label="a" >
+              <ol label="a">
                 <li>
-                  <p>Solve for <m>b</m></p>
+                  <p>
+                    Solve for <m>b</m>
+                  </p>
+
                   <p>
                     <md>
                       <mrow><var name="$a" /> \cdot  b^5 \amp= <var name="$finalTemp" /></mrow>
@@ -1328,334 +2473,537 @@
                     </md>
                   </p>
                 </li>
+
                 <li>
-                  <p>So now we have <m>f(t) = a \cdot (<var name="$bRoot" />)^t</m></p>
+                  <p>
+                    So now we have <m>f(t) = a \cdot (<var name="$bRoot" />)^t</m>
+                  </p>
                 </li>
+
                 <li>
-                  <p>Pick any known ordered pair (time, Temp)</p>
-                  <p>Ordered pair 1: <m>(3, <var name="$a" />)</m></p>
-                  <p>Ordered pair 2: <m>(8, <var name="$finalTemp" />)</m></p>
+                  <p>
+                    Pick any known ordered pair (time, Temp)
+                  </p>
+
+                  <p>
+                    Ordered pair 1:
+                    <m>(3, <var name="$a" />)</m>
+                  </p>
+
+                  <p>
+                    Ordered pair 2:
+                    <m>(8, <var name="$finalTemp" />)</m>
+                  </p>
                 </li>
               </ol>
             </p>
           </solution>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
             <p>
-              <ol label="a" >
+              <ol label="a">
                 <li>
-                  <p>Use any known ordered pair. Substitute what you know into the equation <m>f(t) = a \cdot </m>(<var name="$bRoot" />)<m>^t</m> and solve for <m>a</m>.</p>
-                  <p>If we choose <m>(3, <var name="$a" />)</m> with <m>t = 3</m> we solve for <m>a</m> using the equation</p>
-                  <p><var name="$a" width="5" /> <m> = a(<var name="$bRoot" />)^{3}</m>. Store your answer in the memory of your calculator, do not round yet!</p>
+                  <p>
+                    Use any known ordered pair.
+                    Substitute what you know into the equation
+                    <m>f(t) = a \cdot </m>(<var name="$bRoot" />)<m>^t</m> and solve for <m>a</m>.
+                  </p>
+
+                  <p>
+                    If we choose <m>(3, <var name="$a" />)</m> with <m>t = 3</m> we solve for <m>a</m> using the equation
+                  </p>
+
+                  <p>
+                    <var name="$a" width="5" /> <m> = a(<var name="$bRoot" />)^{3}</m>.
+                    Store your answer in the memory of your calculator, do not round yet!
+                  </p>
                 </li>
+
                 <li>
-                  <p>If we choose <m>(8, <var name="$finalTemp" />)</m> with <m>t = 8</m> we solve for <m>a</m> using the equation</p>
-                  <p><var name="$finalTemp" width="5" /> <m> = a(<var name="$bRoot" />)^{8}</m>. Store your answer in the memory of your calculator, do not round yet!</p>
+                  <p>
+                    If we choose <m>(8, <var name="$finalTemp" />)</m> with <m>t = 8</m> we solve for <m>a</m> using the equation
+                  </p>
+
+                  <p>
+                    <var name="$finalTemp" width="5" /> <m> = a(<var name="$bRoot" />)^{8}</m>.
+                    Store your answer in the memory of your calculator, do not round yet!
+                  </p>
                 </li>
+
                 <li>
-                  <p>Solve for <m>a</m> in either of the two equations to choose from. In either case, what is the initial temperature?</p>
-                  <p><m>a \approx</m> <var name="$initialTemp" width="5" /> (<em>round your answer to <m>4</m> decimal places</em>).</p>
+                  <p>
+                    Solve for <m>a</m> in either of the two equations to choose from.
+                    In either case, what is the initial temperature?
+                  </p>
+
+                  <p>
+                    <m>a \approx</m> <var name="$initialTemp" width="5" />
+                    (<em>round your answer to <m>4</m> decimal places</em>).
+                  </p>
                 </li>
+
                 <li>
-                  <p>Now we can write the final formula as</p>
-                  <p><m>f(t) = </m> <var name="$initialTemp" width="5" /><m>\cdot (</m><var name="$bRoot" width="5" /><m>)^t</m></p>
+                  <p>
+                    Now we can write the final formula as
+                  </p>
+
+                  <p>
+                    <m>f(t) = </m> <var name="$initialTemp" width="5" /><m>\cdot (</m><var name="$bRoot" width="5" /><m>)^t</m>
+                  </p>
                 </li>
               </ol>
             </p>
           </statement>
           <solution>
             <p>
-              <ol label="a" >
+              <ol label="a">
                 <li>
-                  <p>Using <m>(3,370)</m> we must solve <m><var name="$a" />=a(<var name="$bRoot" />)^{3}</m></p>
+                  <p>
+                    Using <m>(3,370)</m> we must solve <m><var name="$a" />=a(<var name="$bRoot" />)^{3}</m>
+                  </p>
                 </li>
+
                 <li>
-                  <p>Using <m>(8,108)</m> we must solve <m><var name="$finalTemp" />=a(<var name="$bRoot" />)^{8}</m></p>
+                  <p>
+                    Using <m>(8,108)</m> we must solve <m><var name="$finalTemp" />=a(<var name="$bRoot" />)^{8}</m>
+                  </p>
                 </li>
+
                 <li>
-                  <p>Solving either equation we get <m>a \approx<var name="$initialTemp" /></m></p>
+                  <p>
+                    Solving either equation we get <m>a \approx<var name="$initialTemp" /></m>
+                  </p>
                 </li>
+
                 <li>
-                  <p>So our formula is <m>f(t)=<var name="$initialTemp" /> \cdot (<var name="$bRoot" />)^t</m></p>
+                  <p>
+                    So our formula is <m>f(t)=<var name="$initialTemp" /> \cdot (<var name="$bRoot" />)^t</m>
+                  </p>
                 </li>
               </ol>
             </p>
           </solution>
-        </stage>
+          </stage>
       </webwork>
     </exercise>
   </subsection>
+
   <subsection>
     <title>Graphs of Exponential Functions</title>
-    <p>To explore the graphs of exponential functions it may help to compare them to the graphs of linear functions since we already have some experience with them.</p>
-    <p>In the following examples we track the position of an ant over time using both a linear model and an exponential model.</p>
+    <p>
+      To explore the graphs of exponential functions it may help to compare them to the graphs of linear functions since we already have some experience with them.
+    </p>
+
+    <p>
+      In the following examples we track the position of an ant over time using both a linear model and an exponential model.
+    </p>
+
     <exercise>
+
       <introduction>
-        <p>An ant is initially <m>150</m> inches from a wall, and each minute it walks <m>25</m> inches towards the wall.</p>
+        <p>
+          An ant is initially <m>150</m> inches from a wall,
+          and each minute it walks <m>25</m> inches towards the wall.
+        </p>
       </introduction>
-        <webwork>
-            <setup>
 
-                <pg-code>
-                    $dInit = Real(150);
-                    $lin = RadioButtons(
-                    ["linear","exponential"],
-                    0, labels => ["linear","exponential"],displayLabels => 0
-                    );
-                    $exp = RadioButtons(
-                    ["linear","exponential"],
-                    1, labels => ["linear","exponential"],displayLabels => 0
-                    );
-                    $a=Real(25);
-                    @time=map{$dInit-$a*$_}(0..6);
-                </pg-code>
-            </setup>
+      <webwork>
+          <setup>
 
-            <statement>
-              <p>
-                <ol label="a" >
-                  <li>
-                    <p>This situation can be modeled with a formula that is</p>
-                    <p><var name="$lin" form="buttons" /></p>
-                    <p>Calculate the position of the ant at various times to complete the table. <em>round your answers to <m>2</m> decimal places.</em></p>
-                  </li>
-                  <li>
-                    <p>Initial distance from the wall is <var name="$dInit" width="5" /> inches.</p>
-                  </li>
-                  <li>
-                    <sidebyside><tabular top="medium" bottom="medium" left="medium" right="medium">
-                        <col halign="center"/>
-                        <col halign="center"/>
-                        <row>
-                            <cell>Time <m>t</m> (hours)</cell>
-                            <cell>Position <m>f(t)</m> (inches)</cell>
-                        </row>
-                        <row>
-                            <cell><m>0</m></cell>
-                            <cell><var name="$time[0]" width="10"/></cell>
-                        </row>
-                        <row>
-                            <cell><m>1</m></cell>
-                            <cell><var name="$time[1]" width="10"/></cell>
-                        </row>
-                        <row>
-                            <cell><m>2</m></cell>
-                            <cell><var name="$time[2]" width="10"/></cell>
-                        </row>
-                        <row>
-                            <cell><m>3</m></cell>
-                            <cell><var name="$time[3]" width="10"/></cell>
-                        </row>
-                        <row>
-                            <cell><m>4</m></cell>
-                            <cell><var name="$time[4]" width="10"/></cell>
-                        </row>
-                        <row>
-                            <cell><m>5</m></cell>
-                            <cell><var name="$time[5]" width="10"/></cell>
-                        </row>
-                        <row>
-                            <cell><m>6</m></cell>
-                            <cell><var name="$time[6]" width="10"/></cell>
-                        </row>
-                    </tabular></sidebyside>
-                  </li>
-                  <li>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZEDrTGWZ/width/431/height/350/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>Drag the points on the graph to the coordinates you generated in the table.  The entire graph of the function will appear when you have placed the points in their correct positions.</p>
-                  </li>
+            <pg-code>
+                $dInit = Real(150);
+                $lin = RadioButtons(
+                ["linear","exponential"],
+                0, labels => ["linear","exponential"],displayLabels => 0
+                );
+                $exp = RadioButtons(
+                ["linear","exponential"],
+                1, labels => ["linear","exponential"],displayLabels => 0
+                );
+                $a=Real(25);
+                @time=map{$dInit-$a*$_}(0..6);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    This situation can be modeled with a formula that is
+                  </p>
+
+                  <p>
+                    <var name="$lin" form="buttons" />
+                  </p>
+
+                  <p>
+                    Calculate the position of the ant at various times to complete the table.
+                    <em>round your answers to <m>2</m> decimal places.</em>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Initial distance from the wall is <var name="$dInit" width="5" /> inches.
+                  </p>
+                </li>
+
+                <li>
+
+                  <sidebyside>
+
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                      <col halign="center"/>
+                      <col halign="center"/>
+                      <row>
+                        <cell>Time <m>t</m> (hours)</cell>
+                        <cell>Position <m>f(t)</m> (inches)</cell>
+                      </row>
+                      <row>
+                        <cell><m>0</m></cell>
+                        <cell><var name="$time[0]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>1</m></cell>
+                        <cell><var name="$time[1]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>2</m></cell>
+                        <cell><var name="$time[2]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>3</m></cell>
+                        <cell><var name="$time[3]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>4</m></cell>
+                        <cell><var name="$time[4]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>5</m></cell>
+                        <cell><var name="$time[5]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>6</m></cell>
+                        <cell><var name="$time[6]" width="10"/></cell>
+                      </row>
+                    </tabular>
+
+                  </sidebyside>
+
+                </li>
+
+                <li>
+                  <p>
+                    [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZEDrTGWZ/width/431/height/350/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+                  </p>
+
+                  <p>
+                    Drag the points on the graph to the coordinates you generated in the table.
+                    The entire graph of the function will appear when you have placed the points in their correct positions.
+                  </p>
+                </li>
               </ol>
             </p>
-        </statement>
-
-        <solution>
-            <p> Use the formula <m>y=</m><var name="$dInit" /><m>-25t</m> to generate the values in the table. Notice the formula basically says, <q>Start with <m>150</m> and subtract <m>25</m> every minute.</q></p>
-        </solution>
+          </statement>
+          <solution>
+            <p>
+              Use the formula <m>y=</m><var name="$dInit" /><m>-25t</m> to generate the values in the table.
+              Notice the formula basically says,
+              <q>Start with <m>150</m> and subtract <m>25</m> every minute.</q>
+            </p>
+          </solution>
       </webwork>
     </exercise>
+
     <exercise>
+
       <introduction>
-        <p>An ant is initially 150 inches from a wall, each minute the ant walks 25% of the distance to the wall.</p>
+        <p>
+          An ant is initially 150 inches from a wall,
+          each minute the ant walks 25% of the distance to the wall.
+        </p>
       </introduction>
-        <webwork>
-            <setup>
 
-                <pg-code>
-                    $dInit = Real(150);
-                    $lin = RadioButtons(
-                    ["linear","exponential"],
-                    0, labels => ["linear","exponential"],displayLabels => 0
-                    );
-                    $exp = RadioButtons(
-                    ["linear","exponential"],
-                    1, labels => ["linear","exponential"],displayLabels => 0
-                    );
-                    $r=Real(0.25);
-                    $b=1-$r;
-                    @t2=map{$dInit*$b**$_}(0..6);
-                </pg-code>
-            </setup>
+      <webwork>
+          <setup>
 
-            <statement>
-              <p>
-                <ol label="a" >
-                  <li>
-                    <p>This situation can be modeled with a formula that is</p>
-                    <p><var name="$exp" form="buttons" /></p>
-                  </li>
-                  <li>
-                    <p>Calculate the position of the ant at various times to complete the table. <em>round your answers to <m>1</m> decimal place.</em></p>
-                  </li>
-                  <li>
-                    <sidebyside>
-                      <tabular top="medium" bottom="medium" left="medium" right="medium">
-                          <col halign="center"/>
-                          <col halign="center"/>
-                          <row>
-                              <cell>Time <m>t</m> (hours)</cell>
-                              <cell>Position <m>f(t)</m> (inches)</cell>
-                          </row>
-                          <row>
-                              <cell><m>0</m></cell>
-                              <cell><var name="$t2[0]" width="10"/></cell>
-                          </row>
-                          <row>
-                              <cell><m>1</m></cell>
-                              <cell><var name="$t2[1]" width="10"/></cell>
-                          </row>
-                          <row>
-                              <cell><m>2</m></cell>
-                              <cell><var name="$t2[2]" width="10"/></cell>
-                          </row>
-                          <row>
-                              <cell><m>3</m></cell>
-                              <cell><var name="$t2[3]" width="10"/></cell>
-                          </row>
-                          <row>
-                              <cell><m>4</m></cell>
-                              <cell><var name="$t2[4]" width="10"/></cell>
-                          </row>
-                          <row>
-                              <cell><m>5</m></cell>
-                              <cell><var name="$t2[5]" width="10"/></cell>
-                          </row>
-                          <row>
-                              <cell><m>6</m></cell>
-                              <cell><var name="$t2[6]" width="10"/></cell>
-                          </row>
-                      </tabular>
-                    </sidebyside>
-                  </li>
-                  <li>
-                    <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/bu2AzCg2/width/361/height/330/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="361px" height="330px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-                    <p>Drag the points on the graph to the coordinates you generated in the table.  You can use the up/down arrows on your keyboard to fine-tune the values.</p>
-                    <p>The entire graph of the function will appear when you have placed the points in their correct positions.</p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-            <solution>
-                <p>Use the formula <m>y=</m><var name="$dInit" /><m>(0.75)^{t}</m> to generate the values in the table. Notice the formula basically says, "Start with <m>150</m> and reduce it by <m>25 \%</m> every minute.</p>
-            </solution>
-        </webwork>
+            <pg-code>
+                $dInit = Real(150);
+                $lin = RadioButtons(
+                ["linear","exponential"],
+                0, labels => ["linear","exponential"],displayLabels => 0
+                );
+                $exp = RadioButtons(
+                ["linear","exponential"],
+                1, labels => ["linear","exponential"],displayLabels => 0
+                );
+                $r=Real(0.25);
+                $b=1-$r;
+                @t2=map{$dInit*$b**$_}(0..6);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    This situation can be modeled with a formula that is
+                  </p>
+
+                  <p>
+                    <var name="$exp" form="buttons" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Calculate the position of the ant at various times to complete the table.
+                    <em>round your answers to <m>1</m> decimal place.</em>
+                  </p>
+                </li>
+
+                <li>
+
+                  <sidebyside>
+
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                      <col halign="center"/>
+                      <col halign="center"/>
+                      <row>
+                        <cell>Time <m>t</m> (hours)</cell>
+                        <cell>Position <m>f(t)</m> (inches)</cell>
+                      </row>
+                      <row>
+                        <cell><m>0</m></cell>
+                        <cell><var name="$t2[0]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>1</m></cell>
+                        <cell><var name="$t2[1]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>2</m></cell>
+                        <cell><var name="$t2[2]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>3</m></cell>
+                        <cell><var name="$t2[3]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>4</m></cell>
+                        <cell><var name="$t2[4]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>5</m></cell>
+                        <cell><var name="$t2[5]" width="10"/></cell>
+                      </row>
+                      <row>
+                        <cell><m>6</m></cell>
+                        <cell><var name="$t2[6]" width="10"/></cell>
+                      </row>
+                    </tabular>
+
+                  </sidebyside>
+
+                </li>
+
+                <li>
+                  <p>
+                    [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/bu2AzCg2/width/361/height/330/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="361px" height="330px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+                  </p>
+
+                  <p>
+                    Drag the points on the graph to the coordinates you generated in the table.
+                    You can use the up/down arrows on your keyboard to fine-tune the values.
+                  </p>
+
+                  <p>
+                    The entire graph of the function will appear when you have placed the points in their correct positions.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Use the formula <m>y=</m><var name="$dInit" /><m>(0.75)^{t}</m> to generate the values in the table.
+              Notice the formula basically says, "Start with <m>150</m> and reduce it by <m>25 \%</m> every minute.
+            </p>
+          </solution>
+      </webwork>
     </exercise>
-    <p>Comparing linear and exponential graphs there are some clear differences.</p>
+
+    <p>
+      Comparing linear and exponential graphs there are some clear differences.
+    </p>
+
     <p>
       <ul>
         <li>
-         <p>The linear function graphs as a staight line while the exponential function graphs as a concave-up curve.</p>
-       </li>
-       <li>
-         <p>The linear function has a horizontal intercept, but the exponential fucntion appears not to touch the horizontal axis.</p>
-       </li>
+          <p>
+            The linear function graphs as a staight line while the exponential function graphs as a concave-up curve.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The linear function has a horizontal intercept,
+            but the exponential fucntion appears not to touch the horizontal axis.
+          </p>
+        </li>
       </ul>
     </p>
-    <p>Let's explore the graph of the exponential function more closely and return to the example of the ant moving towards a wall by reducing the distance by <m>25 \%</m> each minute.</p>
+
+    <p>
+      Let's explore the graph of the exponential function more closely and return to the example of the ant moving towards a wall by reducing the distance by <m>25 \%</m> each minute.
+    </p>
+
     <exercise>
       <title>Horizontal Asymptotes</title>
-    <introduction>
-      <p>An ant initially <m>150</m> inches from a wall moves towards the wall by <m>25 \%</m> each minute.</p>
-    </introduction>
+      <introduction>
+        <p>
+          An ant initially <m>150</m> inches from a wall moves towards the wall by <m>25 \%</m> each minute.
+        </p>
+      </introduction>
+
       <webwork>
-        <stage>
+          <stage>
           <statement>
-            <p>The position of the ant as a function of time, t minutes, can be modeled with the equation <m>f(t)=150(0.75)^{t}</m></p>
-            <p>Notice that decreasing by <m>25 \%</m> of the distance means <q>keeping</q> <m>75 \%</m> of the distance.</p>
-            <p>Complete the table for various times. Round your answers to <m>3</m> decimal places.</p>
+            <p>
+              The position of the ant as a function of time, t minutes,
+              can be modeled with the equation <m>f(t)=150(0.75)^{t}</m>
+            </p>
+
+            <p>
+              Notice that decreasing by <m>25 \%</m> of the distance means <q>keeping</q>
+              <m>75 \%</m> of the distance.
+            </p>
+
+            <p>
+              Complete the table for various times.
+              Round your answers to <m>3</m> decimal places.
+            </p>
+
             <sidebyside>
+
               <tabular top="medium" bottom="medium" left="medium" right="medium">
-                  <col halign="center"/>
-                  <col halign="center"/>
-                  <row>
-                      <cell>Time <m>t</m> (hours)</cell>
-                      <cell>Position <m>f(t)</m> (inches)</cell>
-                  </row>
-                  <row>
-                      <cell><m>0</m></cell>
-                      <cell><var name="150" width="10"/></cell>
-                  </row>
-                  <row>
-                      <cell><m>10</m></cell>
-                      <cell><var name="8.447" width="10"/></cell>
-                  </row>
-                  <row>
-                      <cell><m>20</m></cell>
-                      <cell><var name=".476" width="10"/></cell>
-                  </row>
-                  <row>
-                      <cell><m>40</m></cell>
-                      <cell><var name=".002" width="10"/></cell>
-                  </row>
+                <col halign="center"/>
+                <col halign="center"/>
+                <row>
+                  <cell>Time <m>t</m> (hours)</cell>
+                  <cell>Position <m>f(t)</m> (inches)</cell>
+                </row>
+                <row>
+                  <cell><m>0</m></cell>
+                  <cell><var name="150" width="10"/></cell>
+                </row>
+                <row>
+                  <cell><m>10</m></cell>
+                  <cell><var name="8.447" width="10"/></cell>
+                </row>
+                <row>
+                  <cell><m>20</m></cell>
+                  <cell><var name=".476" width="10"/></cell>
+                </row>
+                <row>
+                  <cell><m>40</m></cell>
+                  <cell><var name=".002" width="10"/></cell>
+                </row>
               </tabular>
+
             </sidebyside>
-            <p>Notice that even at <m>t=40</m> the answer is small, but it is not zero.</p>
-            <p>In fact, there is no way to actually get to zero. No matter how much time goes by, <m>25 \%</m> of any non-zero number is always non-zero. The ant will never get to the wall!</p>
+
+            <p>
+              Notice that even at <m>t=40</m> the answer is small, but it is not zero.
+            </p>
+
+            <p>
+              In fact, there is no way to actually get to zero.
+              No matter how much time goes by,
+              <m>25 \%</m> of any non-zero number is always non-zero.
+              The ant will never get to the wall!
+            </p>
           </statement>
           <solution>
             <sidebyside>
+
               <tabular top="medium" bottom="medium" left="medium" right="medium">
-                  <col halign="center"/>
-                  <col halign="center"/>
-                  <row>
-                      <cell>Time <m>t</m> (hours)</cell>
-                      <cell>Position <m>f(t)</m> (inches)</cell>
-                  </row>
-                  <row>
-                      <cell><m>0</m></cell>
-                      <cell><var name="150" /></cell>
-                  </row>
-                  <row>
-                      <cell><m>10</m></cell>
-                      <cell><var name="8.447" /></cell>
-                  </row>
-                  <row>
-                      <cell><m>20</m></cell>
-                      <cell><var name=".476" /></cell>
-                  </row>
-                  <row>
-                      <cell><m>40</m></cell>
-                      <cell><var name=".002" /></cell>
-                  </row>
+                <col halign="center"/>
+                <col halign="center"/>
+                <row>
+                  <cell>Time <m>t</m> (hours)</cell>
+                  <cell>Position <m>f(t)</m> (inches)</cell>
+                </row>
+                <row>
+                  <cell><m>0</m></cell>
+                  <cell><var name="150" /></cell>
+                </row>
+                <row>
+                  <cell><m>10</m></cell>
+                  <cell><var name="8.447" /></cell>
+                </row>
+                <row>
+                  <cell><m>20</m></cell>
+                  <cell><var name=".476" /></cell>
+                </row>
+                <row>
+                  <cell><m>40</m></cell>
+                  <cell><var name=".002" /></cell>
+                </row>
               </tabular>
+
             </sidebyside>
           </solution>
-        </stage>
-        <stage>
+          </stage>
+          <stage>
           <statement>
-            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KgnNyQjd/width/457/height/338/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="457px" height="338px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-            <p>The points from the table are plotted on the graph of the function. Though it may seem like the graph eventually touches the horizontal axis, we know from the values in the table that it does not.</p>
-            <p>In this case we say the horizontal axis is a <term>horizontal asymptote</term>.</p>
-            <p>What is the equation for the horizontal axis (<init>i.e.</init> a line that is zero units high)?</p>
-            <p>The equation is <m>y = </m> <var name="0" width="4" /></p>
+            <p>
+              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KgnNyQjd/width/457/height/338/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="457px" height="338px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+            </p>
+
+            <p>
+              The points from the table are plotted on the graph of the function.
+              Though it may seem like the graph eventually touches the horizontal axis,
+              we know from the values in the table that it does not.
+            </p>
+
+            <p>
+              In this case we say the horizontal axis is a
+              <term>horizontal asymptote</term>.
+            </p>
+
+            <p>
+              What is the equation for the horizontal axis (<init>i.e.</init> a line that is zero units high)?
+            </p>
+
+            <p>
+              The equation is <m>y = </m> <var name="0" width="4" />
+            </p>
           </statement>
           <solution>
-            <p>The equation of the horizontal asymptote (the x-axis) is <m>y=0</m></p>
+            <p>
+              The equation of the horizontal asymptote
+              (the x-axis)
+              is <m>y=0</m>
+            </p>
           </solution>
-        </stage>
+          </stage>
       </webwork>
     </exercise>
-    <p>All exponential functions (of this form) have horizontal asymptotes.  The equation for a horizontal asymptote is <m>y=k</m> where <m>k</m> is the height of the horizontal line the function approaches.</p>
-    <p>In the last example the function decreases to near zero, so <m>y=0</m> is the equation of the horizontal asymptote.</p>
+
+    <p>
+      All exponential functions
+      (of this form)
+      have horizontal asymptotes.
+      The equation for a horizontal asymptote is <m>y=k</m> where <m>k</m> is the height of the horizontal line the function approaches.
+    </p>
+
+    <p>
+      In the last example the function decreases to near zero,
+      so <m>y=0</m> is the equation of the horizontal asymptote.
+    </p>
   </subsection>
 </section>
+

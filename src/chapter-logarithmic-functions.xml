@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!--
 ## ********************************************************************* ##
 ## Copyright 2016                                                        ##
@@ -10,32 +9,47 @@
 ##                                                                       ##
 ## ********************************************************************* ##
 -->
-
 <chapter xml:id="chapter-logarithmic-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Logarithmic Functions</title>
+  <objectives>
+    <title>Student Learning Outcomes</title>
+    <ul>
+      <li>
+        <p>
+          Determine the domain and range of functions.
+        </p>
+      </li>
 
-    <title>Logarithmic Functions</title>
+      <li>
+        <p>
+          Sketch the graph of a logarithmic function.
+        </p>
+      </li>
 
-    <objectives>
-        <title>Student Learning Outcomes</title>
-        <ul>
-            <li>
-                <p>Determine the domain and range of functions.</p>
-            </li>
-            <li>
-                <p>Sketch the graph of a logarithmic function.</p>
-            </li>
-            <li>
-                <p>Identify a vertical/horizontal asymptote from a graph, numerical model, verbal description or equation.</p>
-            </li>
-            <li>
-                <p>Solve equations algebraically using properties of exponents and logarithms.</p>
-            </li>
-            <li>
-                <p>Use the characteristics of basic functions, especially slope, intercepts, rate of change, percent change and average change to answer questions in application situations, to write equations and to create graphs by hand and on the calculator.</p>
-            </li>
-        </ul>
-    </objectives>
+      <li>
+        <p>
+          Identify a vertical/horizontal asymptote from a graph,
+          numerical model,
+          verbal description or equation.
+        </p>
+      </li>
 
+      <li>
+        <p>
+          Solve equations algebraically using properties of exponents and logarithms.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Use the characteristics of basic functions,
+          especially slope, intercepts, rate of change,
+          percent change and average change to answer questions in application situations,
+          to write equations and to create graphs by hand and on the calculator.
+        </p>
+      </li>
+    </ul>
+  </objectives>
 <!--         <list>
             <caption>Video Lectures</caption>
             <dl>
@@ -53,804 +67,1554 @@
                 </li>
             </dl>
         </list> -->
-
-    <xi:include href="./activity-logarithmic-functions.xml" />
-
-    <section xml:id="logarithmic-functions-gist">
-        <title>Gist of Logarithmic Functions</title>
-
-        <subsection>
-            <title>A Tool for Solving Exponential Equations</title>
-
-            <p>Logarithms are functions that, among other things, can be used to solve exponential equations. If we have an exponential equation in which the variable is in the exponent, we use logarithms to isolate the variable.</p>
-
-            <p>By definition, a logarithm is an exponent. In the exponential equation <me>b^{y}=x</me> The exponent <m>y</m> is the logarithm so <me>y=\log_{b}(x)</me></p>
-
-            <p>There are at least three useful rules about logarithms:</p>
-
-            <p>The first rule is often used to <q>bring the exponent down</q> <mdash /> after applying the logarithm, the exponent becomes a factor.</p>
-
-            <p>The nest two rules are sometimes used to combine two terms involving logarithms, or to split one term into two.</p>
-
-            <assemblage>
-              <p><ol label="1">
-                <li xml:id="item-logarithm-of-power-rule">
-                    <p><m>\log_{b}(N^{x})=x \log_{b}(N)</m></p>
-                </li>
-                <li xml:id="item-logarithm-of-product-rule">
-                    <p><m>\log_{b}(AB)=\log_{b}(A)+\log_{b}(B)</m></p>
-                </li>
-                <li xml:id="item-logarithm-of-quotient-rule">
-                    <p><m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=\log_{b}(A)-\log_{b}(B)</m></p>
-                </li>
-              </ol></p>
-            </assemblage>
-
-            <p>The first rule is perhaps the most useful at this level.</p>
-            <p>I used to have a pocket knife with <m>10</m> different tools folded into it, but I mostly used only one. <xref ref="item-logarithm-of-power-rule">Rule</xref> is that tool. It allows us to take an exponential expression and <q>bring down the exponent</q> so we can isolate it.</p>
-
-            <p>If we end up with an equation that looks like <me>(0.337)^{\mathord{?}}=1.272</me> as in, <q>I wonder what the exponent is?,</q> we can use a logarithmic function to find the answer.</p>
-
-            <p>Although most likely a variable is used instead of a question mark, like <me>(0.337)^{x}=1.272</me> where <m>x</m> is the unknown value we are trying to find.</p>
-
-            <p>Using <xref ref="item-logarithm-of-power-rule">Rule</xref> and applying any logarithm to both sides of the equation we can work our way towards isolating the unknown variable <m>x</m>.</p>
-
-            <example>
-                <title>Isolate and solve for the unknown variable</title>
-
-                <statement>
-                    <p><md>
-                        <mrow>(0.337)^{x}=1.272</mrow>
-                        <mrow>\log(0.337)^{x}= \log(1.272)</mrow>
-                        <mrow>x \log(0.337)= \log(1.272)</mrow>
-                        <mrow>x=\frac{\log(1.272)}{\log(0.337)}</mrow>
-                        <mrow>x \approx -0.2212</mrow>
-                    </md></p>
-
-                    <p>In this case we used <m>\log</m>, but we get the same answer using the natural logarithm, <m>\ln</m>, instead. Try it!</p>
-
-                    <p>It does not matter what base logarithm you use, as long as you use the same <m>\log_{b}</m> on both sides of the equation. However, it does help to use a function that is readily available on most calculators like base <m>10</m> (<m>\log</m>), or base <m>e</m> (<m>\ln</m>).</p>
-                </statement>
-            </example>
-
-            <p>Now you try it. Solve an exponential equation using <xref ref="item-logarithm-of-power-rule">Rule</xref>.</p>
-
-            <exercise>
-                <introduction>
-                    <p>How many <m>7 \%</m> increases is the same as one <m>49 \%</m> increase?</p>
-                </introduction>
-                <webwork>
-                    <stage>
-                        <statement>
-                            <p>The growth factor associated with a <m>7 \%</m> increase is <m>b=</m><var name="1.07" width="4" />.</p>
-                        </statement>
-                    </stage>
-                    <stage>
-                        <statement>
-                            <p>The equation below literally states, <q>An unknown number of growth factors <m>b=1.07</m> is the same as <m>1.49</m></q><me>(1.07)^{x}=1.49</me></p>
-
-                            <p>Apply your favorite logarithm to each side of the equation. My favorite is <m>\ln</m>, so the equation is now <me>\ln\mathopen{}\left(1.07^x\right)\mathclose{}= \ln(1.49)</me></p>
-
-                            <p>Invoke <xref ref="item-logarithm-of-power-rule">Rule</xref> so that the exponent can come down in front of the expression on the left <me>x \ln(1.07)= \ln(1.49)</me></p>
-
-                            <p>Last step, isolate the variable by dividing both sides by <m>\ln(1.07)</m>, and what do you get?</p>
-                            <p><m>x=</m> <var name="'ln(1.49)/ln(1.07)'" width="5" /></p>
-                        </statement>
-                    </stage>
-                </webwork>
-            </exercise>
-
-            <p><xref ref="item-logarithm-of-power-rule">Rule</xref> is great, but if we want to use it as the main tool we have to know when it applies and how to deal with the situation if the rule does not apply.</p>
-
-            <example>
-                <statement>
-                    <p>Solve the equation for <m>x</m> <me>3(2.83)^{x}=15</me></p>
-
-                    <p>At first glance it seems you can apply <xref ref="item-logarithm-of-power-rule">Rule</xref>, but is that right? <xref ref="item-logarithm-of-power-rule">Rule</xref> states <me>\log_{b}(N^{x})=x \log_{b}(N)</me></p>
-
-                    <p>Notice how <xref ref="item-logarithm-of-power-rule">Rule</xref> assumes you have one side written as <m>N^{x}</m> with nothing else in front (no coefficient). The left side of our equation has a coefficient of <m>3</m> in front of the exponential<me>3(2.83)^{x}</me> The constant <m>3</m> is keeping us from using <xref ref="item-logarithm-of-power-rule">Rule</xref>. That constant either has to be moved or we have to use another rule (if there is one that applies).</p>
-
-                    <p>We can fix the situation by rearranging the equation to match the format of <xref ref="item-logarithm-of-power-rule">Rule</xref> or we could use <xref ref="item-logarithm-of-product-rule">Rule </xref> because at least it matches the format of our equation.</p>
-                </statement>
-                <solution>
-
-                    <p>The constant <m>3</m> needs to be moved so only the exponential remains on the left side of the equation.<me>(2.83)^{x}=\frac{15}{3}</me>Voil&#224;! Now we have the correct form to use <xref ref="item-logarithm-of-power-rule">Rule</xref>. Apply your favorite logarithm to both sides. I'll use <m>\ln</m> this time because I used <m>\log</m> in the last example. <me>\ln (2.83)^{x}= \ln \left( \frac{15}{3} \right)</me> The exponent comes down and we have: <me>x \ln(2.83)= \ln \left( \frac{15}{3} \right)</me>The last step is to isolate the variable <me>x= \frac{\ln \left( \frac{15}{3} \right)}{\ln(2.83)}</me> so that (rounded to three decimals): <me>x \approx 1.547</me></p>
-
-                    <p>Alternatively, we can use <xref ref="item-logarithm-of-product-rule">Rule </xref>. In English <xref ref="item-logarithm-of-product-rule">Rule </xref> says, <q>The log of a product is equal to the sum of the logs.</q></p>
-
-                    <p>Applying <m>\ln</m> to both sides of our equation, we in fact have the log of the product <m>3</m> times <m>(2.83)^{x}</m> on the left side <me>\ln (3(2.83)^{x})=\ln(15)</me> Use <xref ref="item-logarithm-of-product-rule">Rule </xref> to write the left side of the equation as the sum of the logs <me>\ln(3)+\ln\mathopen{}\left(2.83^x\right)\mathclose{}=\ln(15)</me> Remember the goal is to isolate the variable <m>x</m> which we can now do since, on the left side, one term has <m>x</m> and the other does not.</p>
-
-                    <p>Subtracting <m>\ln(3)</m> from both sides we get <me>\ln\mathopen{}\left(2.83^x\right)\mathclose{}=\ln(15)-\ln(3)</me> Look, we get to use <xref ref="item-logarithm-of-power-rule">Rule</xref> anyway! On the left we bring down the exponent, <m>x</m> <me>x \ln(2.83)=\ln(15)-\ln(3)</me> Now isolate <m>x</m> <me>x=\frac{\ln(15)-\ln(3)}{\ln(2.83)}</me> We get the same answer as before <me>x \approx 1.547</me></p>
-
-                    <p>Which method did you like better?</p>
-                </solution>
-            </example>
-
-            <exercise>
-                <introduction>
-                    <p>Of course we could have just solved the equation <m>3(2.83)^{x}=15</m> graphically and avoided the algebra all together.</p>
-                </introduction>
-                <webwork>
-                    <statement>
-                        <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Z4mRThfg/width/431/height/455/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="455px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-
-                        <p>The graph of the exponential function <m>f(x)=3(2.83)^{x}</m> will reach different heights depending on the input <m>x</m>.  What <m>x</m> value makes the graph <m>y=15</m> units high?</p>
-
-                        <p>Drag the output value to <m>y=15</m> to find the solution rounded to <m>2</m> decimal places.</p>
-
-                        <p><m>x \approx</m> <var name="1.55" width="5" /></p>
-                    </statement>
-                </webwork>
-            </exercise>
-
-            <remark>
-                <p>A note about solving. In the two algebra examples we were able to find exact solutions: <me>x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}</me> is exact.</p>
-
-                <p>We then entered the exact expressions into a calculator and found approximations rounded to three decimal places. Though graphically may seem quick and easy, most often we can only get an approximation to the answer.</p>
-            </remark>
-
-            <p>Finally, we could just ask a computer to solve the equation for us. Many websites have tools for solving equations. You can enter an equation like: <c>3(2.83)^x = 15</c> and then type <em>solve</em> or click a <em>solve</em> button to see the solutions. You may wish to perform a web search for such a website.</p>
-
-            <p>We should all be aware that technology can now do much of what only people could do in the past. And we should also be aware of the current limitations of technology.</p>
-
-            <p>In fact, computers can solve all kinds of equations, but so far only people have the ability to set the problems up. So the real question is not necessarily <q>Can you solve an equation?,</q>, but <q>Do you have the right equation?</q></p>
-        </subsection>
-
-        <subsection>
-            <title>Domain and Range</title>
-            <p>Because a logarithm is just another kind of function, it has a domain and a range and the graph of a logarithmic function has its own characteristics that make it unique.</p>
-
-            <p>We can use our language approach to understand the domain and range of a logarithmic function. Remember the literal translation of the expression <m>\log(x)</m> is <q>The power of <m>10</m> that gives you <m>x</m>.</q></p>
-
-            <example>
-                <statement>
-                    <p><ul>
-                        <li>
-                            <p><m>\log(100)</m> means <q>The power of <m>10</m> that gives you <m>100</m>.</q></p>
-                            <p>Therefore <me>\log(100)=2</me> which says, <q>The power of <m>10</m> that gives you <m>100</m> is <m>2</m></q>, since <m>10^{2}=100</m>.</p>
-                        </li>
-                        <li>
-                            <p><m>\log_{3}(81)</m> means, <q>The power of <m>3</m> that gives you <m>81</m>.</q></p>
-                            <p>Therefore <me>\log_{3}(81)=4</me> which says, <q>The power of <m>3</m> that gives you <m>81</m> is <m>4</m></q>, since <m>3^{4}=81</m></p>
-                        </li>
-                    </ul></p>
-                </statement>
-            </example>
-
-            <p>Recall the domain of a function <m>f</m> is the set of all possible inputs the function can use (values that make sense for the function).</p>
-
-            <p>Let <me>f(x)=\log_{3}(x)</me> where <m>x</m> is the input.</p>
-
-            <p>Consider negative input values, like <m>x=-9</m> and think about the meaning of <m>\log_{3}(-9)</m>:</p>
-
-            <blockquote>
-                <p><q>What power of <m>3</m> gives you <m>-9</m>?</q></p>
-            </blockquote>
-
-            <p>The statement should make no sense. You cannot get a negative result if all you have is positive <m>3</m>'s multiplied together. At least one has to be negative!</p>
-
-            <p>Since any negative input leads us to the same conclusion, it turns out logarithms cannot accept negative inputs.</p>
-
-            <p>For a similar reason logarithmic functions cannot have zero as an input. If you ask <q>How many factors of <m>3</m> does it take to get <m>0</m>?</q> or just <m>3^{\mathord{?}}=0</m>, it should be clear there is no answer.</p>
-
-            <p>Therefore, the domain of any logarithmic function is all inputs that are greater than or equal to zero.</p>
-
-            <assemblage>
-                <p>Domain of <m>\log_{b}(x)</m>: <m>x \gt 0</m>.</p>
-            </assemblage>
-
-            <p>For the range we must consider all the possible outputs of the function. In the case of the logarithm, an output is the exponent value needed to get a particular input <me>\log_{b}(\text{input})=\text{output}</me></p>
-
-            <example>
-                <statement>
-                    <p>Consider again <m>y=\log_{3}(x)</m>.</p>
-
-                    <p>For any input <m>x</m> how many <m>3</m>'s does it take to get that <m>x</m>-value? The answer (output) is the <m>y</m>-value.</p>
-
-                    <sidebyside>
-                        <tabular top="medium" bottom="medium" left="medium" right="medium">
-                            <col halign="center"/>
-                            <col halign="center"/>
-                            <col halign="center"/>
-                            <row>
-                                <cell>Input</cell>
-                                <cell>Output (exponent)</cell>
-                                <cell>Reason</cell>
-                            </row>
-                            <row>
-                                <cell><m>\frac{1}{27}</m></cell>
-                                <cell><m>-3</m></cell>
-                                <cell>Because <m>3^{-3}=\frac{1}{27}</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>\frac{1}{9}</m></cell>
-                                <cell><m>-2</m></cell>
-                                <cell>Because <m>3^{-2}=\frac{1}{9}</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>\frac{1}{3}</m></cell>
-                                <cell><m>-1</m></cell>
-                                <cell>Because <m>3^{-1}=\frac{1}{3}</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>1</m></cell>
-                                <cell><m>0</m></cell>
-                                <cell>Because <m>3^{0}=1</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>3</m></cell>
-                                <cell><m>1</m></cell>
-                                <cell>Because <m>3^{1}=3</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>9</m></cell>
-                                <cell><m>2</m></cell>
-                                <cell>Because <m>3^{2}=9</m></cell>
-                            </row>
-                        </tabular>
-                    </sidebyside>
-
-                    <p>For inputs between zero and one, <m>0 \lt x \lt 1</m>, the results are negative, so <m>y \lt 0</m>.</p>
-
-                    <p>For inputs greater than one, <m>x \gt 1</m>, the results are always positive, so <m>y \gt 0</m></p>
-
-                    <p>If the input is <m>x=1</m> the result is always zero <me>\log_{3}(1)=0</me> because, <q>The power of <m>3</m> that gives you <m>1</m></q> is the <m>0</m> power.</p>
-
-                    <p>After a few tries we should begin to realize the range of <m>\log_{3}(x)</m> is all real numbers.</p>
-                </statement>
-            </example>
-
-            <p>It turns out the range for any base of a log function like <m>\log_{b}(x)</m> is all real numbers.</p>
-
-            <assemblage>
-                <p>Range of <m>\log_{b}(x)</m>: All real numbers.</p>
-            </assemblage>
-        </subsection>
-
-        <subsection>
-            <title>The Graph of a Logarithmic Function</title>
-            <p>Just like exponential functions have horizontal asymptotes as in <xref ref="figure-exponential-asymptote" />, logarithm functions have <em>vertical</em> asymptotes as in <xref ref="figure-logarithm-asymptote" />.</p>
-
-            <sidebyside widths="48% 48%">
-                <figure xml:id="figure-exponential-asymptote">
-                    <caption>Exponential function with horizontal asymptote <m>y = 0</m></caption>
-                    <image>
-                        <latex-image>
-                        <![CDATA[\begin{tikzpicture}
-                                    \begin{axis}[]
-                                        \addplot+[domain=-2.7:7]{2^(-x)};
-                                        \addplot[asymptote, ->] coordinates {(-7,0) (7,0)};
-                                     \end{axis}
-                                \end{tikzpicture}
-                        ]]>
-                        </latex-image>
-                    </image>
-                </figure>
-                <figure xml:id="figure-logarithm-asymptote">
-                    <caption>Logarithmic function with vertical asymptote <m>x = 0</m></caption>
-                    <image>
-                        <latex-image>
-                        <![CDATA[\begin{tikzpicture}
-                                    \begin{axis}[]
-                                        \addplot+[domain=-7:2.7] ({2^(x)},{x});
-                                        \addplot[asymptote, ->] coordinates {(0,7) (0,-7)};
-                                     \end{axis}
-                                \end{tikzpicture}
-                        ]]>
-                        </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-
-            <p>The <term>vertical asymptote</term><idx><h>vertical asymptote</h></idx> is like a vertical boundary that the function cannot cross. In the case of the logarithm <m>y=\log_{b}(x)</m> the asymptote is the <m>y</m>-axis with equation <m>x=0</m> and the function only exists to the right of this boundary.</p>
-
-            <p>This supports our assertion that the domain of <m>y=\log_{b}(x)</m> is all <m>x \gt 0</m> (to the right of the <m>y</m>-axis).</p>
-        </subsection>
-
-        <subsection>
-            <title>Change of Base</title>
-            <p>So far, when evaluating expressions like <m>\log_{3}(9)</m> it seems we need to know the answer before we evaluate. How do you evaluate an expression when you don't already know the answer?</p>
-
-            <example>
-                <p>Evaluate <m>\log_{3}(0.1822)</m>.</p>
-
-                <p>We know the answer should be negative because we are trying to get <m>0.1822</m> which is less than <m>1</m>.</p>
-
-                <p>Your calculator may already have a <q>log of any base</q> option. Today, in the 21st century we can also find the answer, for free, on the web. For instance, go to <url href="https://www.desmos.com/calculator/1t5iqhqaad">Desmos.com</url>. Type <c>log_(0.1822)</c> into one of the cells. You should see the answer as <m>\log_{3}(0.1822) \approx -1.5498</m> and you can get more decimal places if you want.</p>
-
-                <p>But before the web, it used to be that calculators only had one or two options for logarithms, (and before calculators there were things called <q><url href="https://en.wikipedia.org/wiki/Slide_rule">slide rules</url></q> and books with pages and pages of tables of logarithms).</p>
-
-                <p>Here is an <q>old school</q> method of evaluating a logarithm expression. The method is called <q>change of base</q> which means you change the base from whatever it is to either base <m>10</m>, <m>\log</m>, or base <m>e</m>, <m>\ln</m>, because most calculators have those built in.</p>
-
-                <p>Set up an equation in which <m>y</m> is the answer you want. Then use the definition of the logarithm to turn the <m>log_{b}</m> equation into an exponential equation. The last step is to solve the exponential equation using the most convenient logarithm at your disposal (most likely <m>log</m> or <m>ln</m>). In this example we use log-base-10, <m>\log</m>.<md>
-                    <mrow>\log_{3}(0.1822)\amp=y</mrow>
-                    <mrow>0.1822\amp=3^{y}</mrow>
-                    <mrow>\log(0.1822)\amp=\log(3^{y})</mrow>
-                    <mrow>\log(0.1822)\amp=y\log(3)</mrow>
-                    <mrow>y\amp=\frac{\log(0.1822)}{\log(3)}</mrow>
-                    <mrow>y\amp\approx -1.5498</mrow>
-                </md></p>
-            </example>
-        </subsection>
-
-        <subsection>
-            <title>Setting Up Problems (Only to Tear Them Down)</title>
-            <p>We conclude this section by working through some examples.</p>
-
-            <exercise>
-                <title>Radioactive Decay and Half-life</title>
-                <introduction>
-                    <p>Solve an exponential equation</p>
-                </introduction>
-                <webwork seed="1">
-                    <setup>
-                        <pg-code>
-                            $chdrp=random(11,31,1);
-                            if($envir{problemSeed}==1){$chdrp=21};
-                            $k=-$chdrp/100;
-                            $b=exp($k);
-                            $hourlyrate=NumberWithUnits((1-exp(-$chdrp/100))*100,'%/hr');
-                            $halflife=NumberWithUnits(ln(0.5)/-$chdrp*100,'hr');
-                        </pg-code>
-                    </setup>
-                    <stage>
-                        <statement>
-                            <p>A radioactive substance has a <em>continuous</em> hourly decay rate of <m><var name="$chdrp" />\%</m>.</p>
-
-                            <p>What is the percent hourly decay rate?</p>
-
-                            <p>The opening sentence is telling us we must use an exponential model because the decay rate is a <q>constant percent</q>. The sentence goes on to tell us <em>what kind</em> of decay model and the percent rate of decay.</p>
-
-                            <p>The word <q>continuous</q> is telling us to use base <m>e</m>. Therefore we can write the formula for decay as <me>Ae^{kt}</me> where <m>k</m> is the continuous decay constant <m>k=<var name="$k" /></m>. This value is negative because we are told the <m>21 \%</m> is a decrease.</p>
-
-                            <p>The value <m>A</m> represents the initial amount of substance, but it was not stated. So we put a variable there to hold its place.</p>
-
-                            <p>The question is about the hourly percent decay. But, we were given the <q>continuous</q> hourly decay. These are two different things.</p>
-
-                            <p>A discrete model would look like <me>Ab^{t}</me> where <m>b</m> is the hourly growth factor we are trying to find. But both the discrete and continuous models have to predict the same behavior. Therefore the two formulas have to be equal <mdash /> they have to produce the same values. <me>A(b)^{t}=A(e^{-k})^t</me> Notice how the parentheses are used to show that both sides are actually the same thing. Both say <me>A(\text{something})^{t}</me>. The <q>somethings</q> must be the same number. That is: <me>b = e^{-k}</me>.</p>
-
-                            <p>With <m>k=<var name="$k"/></m> then <m>b=</m><var name="$b" width="5" /> <em>(round to <m>4</m> significant digits)</em>.</p>
-
-                            <p>Therefore, the percent hourly rate of decay is <var name="$hourlyrate" width="10" /> <em>(include units)</em>.</p>
-                        </statement>
-                    </stage>
-                    <stage>
-                        <statement>
-                            <p>What is the half-life of the substance?</p>
-
-                            <p>The half-life is the time is takes to reduce the substance to half its value. We do not know how much substance there is, but we do know there is something.</p>
-
-                            <p>Earlier we called the initial amount <m>A</m>. In some time we will have <m>\frac{1}{2}A</m>. How much time? The answer is the half-life.</p>
-
-                            <p><md>
-                                <mrow>Ae^{-kt}\amp=\frac{1}{2}A</mrow>
-                                <mrow>e^{-kt}\amp=\frac{1}{2}</mrow>
-                                <mrow>\ln(e^{-kt})\amp=\ln(\frac{1}{2})</mrow>
-                                <mrow>-kt\amp=\ln(\frac{1}{2})</mrow>
-                                <mrow>t\amp=\frac{\ln(\frac{1}{2})}{k}</mrow>
-                            </md></p>
-
-                            <p>The half-life is <m>t \approx</m> <var name="$halflife" width="10" /> <em>(Include units and round to <m>2</m> decimal places)</em>.</p>
-                        </statement>
-                    </stage>
-                </webwork>
-            </exercise>
-
-            <exercise>
-                <title>Population Growth and Time to Triple</title>
-                <introduction>
-                    <p>Solve an exponential equation</p>
-                </introduction>
-                <webwork seed="1">
-                    <setup>
-                        <pg-code>
-                            $arp=random(5,15,1);
-                            if($envir{problemSeed}==1){$arp=9};
-                            $b=1+$arp/100;
-                            $k=ln($b);
-                            $contrate=NumberWithUnits(ln(1+$arp/100)*100,'%/yr');
-                            $triptime=NumberWithUnits(ln(3)/ln(1+$arp/100),'yr');
-                        </pg-code>
-                    </setup>
-                    <stage>
-                        <statement>
-                            <p>A population increases at an annual rate of about <m><var name="$arp" />\%</m>.</p>
-
-                            <p>What is the continuous annual growth rate?</p>
-
-                            <p>The opening sentence is telling us we must use an exponential model because the growth is a <q>constant percent</q>. The sentence goes on to tell us <em>what kind</em> of growth model and the percent rate of growth.</p>
-
-                            <p>Annual percent growth is called <q>discrete growth</q>. Not because it is annual, per se, but because it is measured at the end of some finite time interval. Other examples of discrete growth (or decay) would be described as <q>monthly</q> or <q>daily</q> etc. Another way to tell it is discrete is the absence of the word <q>continuous</q>. If the growth is not continuous, then it is discrete.</p>
-
-                            <p>A discrete model looks like <me>Ab^{t}</me> where in our case <m>b</m> is the annual growth factor and <m>A</m> represents the initial size of the population which we are not given.</p>
-
-                            <p>A continuous model would be <me>Ae^{kt}</me> where <m>k</m> is the continuous growth constant and <m>A</m> still represents the initial amount.</p>
-
-                            <p>These models must be equal because they are describing the same population. Therefore <me>A(b)^{t}=A(e^{k})^{t}</me> Notice what is the same on each side and what is different.</p>
-
-                            <p>In order to be equal <m>b=e^{k}</m>.</p>
-
-                            <p>Solving the equation for <m>k</m>:<md>
-                                <mrow>b\amp=e^{k}</mrow>
-                                <mrow>\ln(b)\amp= \ln(e^{k})</mrow>
-                                <mrow>\ln(b)\amp=k \ln(e)</mrow>
-                                <mrow>\ln(b)\amp=k</mrow>
-                            </md></p>
-
-                            <p>The continuous growth constant in our problem is <m>k \approx</m><var name="$k" width="5" /> <em>(round your answer to <m>2</m> decimal places)</em>.</p>
-
-                            <p>This represents a continuous percent growth rate of about <var name="$contrate" width="10" /> <em>Include units and round to <m>2</m> decimal places)</em>.</p>
-                        </statement>
-                    </stage>
-                    <stage>
-                        <statement>
-                            <p>How long does it take for the population to triple in size?</p>
-                            <p><var name="$triptime" width="10" /></p>
-                        </statement>
-                    </stage>
-                </webwork>
-            </exercise>
-
-            <exercise>
-                <title>Double Time to Triple Time (Population Growth)</title>
-                <introduction>
-                    <p>Solve an exponential equation</p>
-                </introduction>
-                <webwork seed="1">
-                    <setup>
-                        <pg-code>
-                            $doublingdays=random(8,20,1);
-                            if($envir{problemSeed}==1){$doublingdays=10};
-                            $b=2**(1/$doublingdays);
-                            $dgr=NumberWithUnits((2**(1/$doublingdays)-1)*100,'%/day');
-                            $triptime=NumberWithUnits($doublingdays*ln(3)/ln(2),'day');
-                            Context()->variables->are(t=>'Real', P=>'Real');
-                            $form=Compute("P*2^(t/$doublingdays)");
-                        </pg-code>
-                    </setup>
-                    <stage>
-                        <statement>
-                            <p>A population of mosquitoes doubles every <m><var name="$doublingdays" /> </m> days.</p>
-
-                            <p>Time units in this problem are <q>day</q> singular.</p>
-
-                            <p>What is the daily percent growth of the population?</p>
-
-                            <p>A pattern of repeated doubling is the same thing as a pattern of repeated multiplication, in this case multiplication by <m>2</m>. Therefore, the growth of the population is exponential.</p>
-
-                            <p>We need to translate the English sentence <lq/>A population of mosquitoes doubles every <m><var name="$doublingdays" /></m> days<rq/> into a math sentence (a formula).</p>
-
-                            <p>We know there must be some initial population, call it <m>P</m> and we know to multiply by <m>2</m> every <m><var name="$doublingdays" /></m> days.</p>
-
-                            <p>Therefore a formula could be <m>P(t)=</m> <var name="$form" width="10" /> <em>(use a fractional exponent in your answer)</em>.</p>
-
-                            <p>The fractional exponent is then used to calculate the daily growth factor <m>2^{\frac{1}{<var name="$doublingdays" />}} = </m> <var name="$b" width="10" /> <em>(round to <m>3</m> decimal places)</em>.</p>
-
-                            <p>From our growth factor we determine the daily percent growth as <m>(2^{\frac{1}{<var name="$doublingdays" />}} -1) \cdot 100 = </m> <var name="$dgr" width="10" /> <em>(Include units and round to <m>3</m> decimal places)</em></p>
-                        </statement>
-                    </stage>
-                    <stage>
-                        <statement>
-                            <p>How long does it take for the population to triple in size?</p>
-
-                            <p>Using our formula <m>P(t)=P(2)^\frac{t}{<var name="$doublingdays" />}</m> we seek the time it takes for the output to triple the initial value <m>P</m>.</p>
-
-                            <p><me>P(2)^\frac{t}{<var name="$doublingdays" />}=3P</me></p>
-
-                            <p>Solving for <m>P</m> we get<md>
-                                <mrow>P(2)^\frac{t}{<var name="$doublingdays" />}\amp=3P</mrow>
-                                <mrow>(2)^\frac{t}{<var name="$doublingdays" />}\amp=3</mrow>
-                                <mrow>\ln(2^\frac{t}{<var name="$doublingdays" />})\amp=\ln(3)</mrow>
-                                <mrow>\frac{t}{<var name="$doublingdays" />} \cdot \ln(2)\amp= \ln(3)</mrow>
-                                <mrow>t\amp=<var name="$doublingdays" />\frac{\ln(3)}{\ln(2)}</mrow>
-                            </md></p>
-
-                            <p><m>t \approx</m> <var name="$triptime" width="5" /> <em>(Include units and round to <m>2</m> decimal places)</em></p>
-                        </statement>
-                    </stage>
-                </webwork>
-            </exercise>
-
-            <exercise>
-                <title>Chemical Half-life, Time to Decay</title>
-                <introduction>
-                    <p>Solve an exponential equation</p>
-                </introduction>
-                <webwork seed="1">
-                    <setup>
-                        <pg-code>
-                            %hl=('Magnesium-27'=>9.45,'Carbon-11'=>20.33,'Oxygen-15'=>2.04);
-                            $isotope=list_random(keys %hl);
-                            $target=random(5,30,5);
-                            if($envir{problemSeed}==1){$isotope='Magnesium-27';$target=10;};
-                            $halflifemin=$hl{$isotope};
-                            $drpmp=NumberWithUnits(ln(2)/$halflifemin*100,'%/min');
-                            $time=NumberWithUnits(ln($target/100)/ln(1-ln(2)/$halflifemin),'min');
-                            $b=Real(0.5**(1/$halflifemin));
-                        </pg-code>
-                    </setup>
-                    <stage>
-                        <statement>
-                            <p><var name="$isotope"/> has a half-life of <var name="$halflifemin" /> minutes.</p>
-
-                            <p>What is the percent decay rate per minute?</p>
-
-                            <p>A half-life is the time it takes for the chemical to decay to half its current value. We are told the half-life is <var name="$halflifemin" /> minutes, which means every <var name="$halflifemin" /> minutes the amount of chemical is halved.</p>
-
-                            <p>Mathematically, repeated <q>halving</q> is the same as repeated multiplication by <m>\frac{1}{2}=0.5</m>.</p>
-
-                            <p>We can write a formula that says, <lq/>Start with some initial amount, C, and multiply by <m>0.5</m> every <m><var name="$halflifemin" /></m> minutes.<rq/> <me>C(0.5)^{\frac{t}{<var name="$halflifemin" />}}</me></p>
-
-                            <p>Notice we can rewrite our formula to show the <q>per</q> minute growth factor <me>C(0.5)^\frac{t}{<var name="$halflifemin" />}=C(0.5^\frac{1}{<var name="$halflifemin" />})^{t}</me> where <me>b=0.5^\frac{1}{<var name="$halflifemin" />}</me> <m>b \approx </m> <var name="$b" width="5" /> <em>(round to <m>3</m> decimal places)</em></p>
-
-                            <p>From the per-minute growth factor we can calculate the percent decay per minute as <m>(1-<var name="$b" />) \cdot 100 \approx </m> <var name="$drpmp" width="10" /> <em>(Include units and round to <m>3</m> decimal places)</em></p>
-                        </statement>
-                    </stage>
-                    <stage>
-                        <statement>
-                            <p>How long will it take for any amount of <var name="$isotope"/> to decay to <m><var name="$target" />\%</m> of its original amount?</p>
-
-                            <p>We use our equation with the unknown initial amount <m>C</m> and solve for the time it takes to reach <m>10 \%</m> of <m>C</m>, <m>0.1C</m></p>
-
-                            <p>Solving algebraically we get<md>
-                                <mrow>C(0.5)^\frac{t}{<var name="$halflifemin" />}\amp=0.1C</mrow>
-                                <mrow>0.5)^\frac{t}{<var name="$halflifemin" />}\amp=0.1</mrow>
-                                <mrow>\log(0.5)^\frac{t}{<var name="$halflifemin" />})\amp=\log(0.1)</mrow>
-                                <mrow>\frac{t}{<var name="$halflifemin" />}\log(0.5)\amp=\log(0.1)</mrow>
-                                <mrow>t\amp=<var name="$halflifemin" />\frac{\log(0.1)}{\log(0.5)}</mrow>
-                            </md></p>
-                            <p><m>t \approx</m> <var name="$time" width="10" /> <em>(include units and round to <m>3</m> decimal places)</em></p>
-                            <p>Remember, you can always solve graphically too!</p>
-                        </statement>
-                    </stage>
-                </webwork>
-            </exercise>
-
-            <exercise>
-                <title>Solving Log equations</title>
-                <introduction>
-                    <p>Solve a logarithmic equation</p>
-                </introduction>
-                <webwork>
-                    <setup>
-                        <pg-code>
-                            Context()->variables->are(P=>'Real', t=>'Real');
-                            Context()->variables->set(P=>{limits=>[0.01,0.99]});
-                            $step=Compute("ln(P/(1-P))");
-                            $solution=Compute("e^t/(1+e^t)");
-                        </pg-code>
-                    </setup>
-
-                    <stage>
-                        <statement>
-                            <p>In the study of populations (population dynamics) the situation often arises where we must solve logarithmic equations.</p>
-
-                            <p>For instance, when searching for an equation to model a population that has a carrying capacity (a maximum number the population can sustain) we can end up with an equation like <me>\ln(P)-\ln(1-P)=t</me>in which the goal is to isolate <m>P</m> as a function of <m>t</m>. It is a good exercise in algebra and log rules.</p>
-
-                            <p>Use <xref ref="item-logarithm-of-quotient-rule">Rule</xref> to write the left side of the equation <me>\ln(P)-\ln(1-P)=t</me> as one term.</p>
-
-                            <p><m>\ln(P)-\ln(1-P)=</m> <var name="$step" width="10" /></p>
-                        </statement>
-                    </stage>
-                    <stage>
-                        <statement>
-                            <p>Use the definition of the logarithm that states <m>\log_{b}(x)=y</m> means <m>b^{y}=x</m>, to rewrite the equation <m>\ln(\frac{P}{1-P})=t</m> as an exponential equation <me>\frac{P}{1-P}=e^{t}</me></p>
-
-                            <p>Multiply both sides of the equation <m>\frac{P}{1-P}=e^{t}</m> by <m>(1-P)</m> and distribute on the right side to get <me>P=e^{t}-Pe^{t}</me></p>
-
-                            <p>Collect the terms with <m>P</m> on the left of <me>P+Pe^{t}=e^{t}</me> and factor out <m>P</m> so that <me>P(1+e^{t})=e^{t}</me></p>
-
-                            <p>Now solve for <m>P</m> to get the final answer.</p>
-
-                            <p><m>P=</m> <var name="$solution" width="10" />.</p>
-
-                            <p>This kind of equation is called <q>logistical</q> and you will study it more in-depth if you continue your studies through calculus.</p>
-                        </statement>
-                    </stage>
-                    <stage>
-                        <statement>
-                            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Bg52rewM/width/431/height/435/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="435px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-
-                            <p>If we introduce an initial population of <m>750</m> then we can graph the population equation as a function of time.</p>
-
-                            <p>The population increases for <m>t \gt 0</m>. However, there seems to be a limit to how large the population can get.</p>
-
-                            <p>Increase the time (input) by dragging the green, cross-hair to the right along the horizontal axis. Is there a limit to how large the population can get?</p>
-
-                            <p>The population, <m>P \lt</m> <var name="1500" width="10" />.</p>
-
-                            <p>There is an imaginary line that acts as the upper limit of the population size for <m>t \gt 0</m>. Click the checkbox in the graphing area to show the line. What is the equation for the horizontal line?</p>
-
-                            <p>The equation of the line is <m>y=</m> <var name="1500" width="10" />.</p>
-
-                            <p>The line is actually an example of a horizontal asymptote. The function is increasing, yet always remains below the line.</p>
-                        </statement>
-                    </stage>
-                </webwork>
-            </exercise>
-        </subsection>
-
-      <exercises>
-
-<!-- rewriting logs as exponents -->
-<exercisegroup><introduction><p>Definition of the Logarithm</p></introduction>
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q04.pg" seed="1" />
-      </exercise>
+  <xi:include href="./activity-logarithmic-functions.xml" />
+
+  <section xml:id="logarithmic-functions-gist">
+    <title>Gist of Logarithmic Functions</title>
+    <subsection>
+      <title>A Tool for Solving Exponential Equations</title>
+      <p>
+        Logarithms are functions that,
+        among other things, can be used to solve exponential equations.
+        If we have an exponential equation in which the variable is in the exponent,
+        we use logarithms to isolate the variable.
+      </p>
+
+      <p>
+        By definition, a logarithm is an exponent.
+        In the exponential equation
+        <me>
+          b^{y}=x
+        </me>
+        The exponent <m>y</m> is the logarithm so
+        <me>
+          y=\log_{b}(x)
+        </me>
+      </p>
+
+      <p>
+        There are at least three useful rules about logarithms:
+      </p>
+
+      <p>
+        The first rule is often used to
+        <q>bring the exponent down</q>
+        <mdash /> after applying the logarithm,
+        the exponent becomes a factor.
+      </p>
+
+      <p>
+        The nest two rules are sometimes used to combine two terms involving logarithms,
+        or to split one term into two.
+      </p>
+
+      <assemblage>
+        <p>
+          <ol label="1">
+            <li xml:id="item-logarithm-of-power-rule">
+
+              <p>
+                <m>\log_{b}(N^{x})=x \log_{b}(N)</m>
+              </p>
+            </li>
+
+            <li xml:id="item-logarithm-of-product-rule">
+
+              <p>
+                <m>\log_{b}(AB)=\log_{b}(A)+\log_{b}(B)</m>
+              </p>
+            </li>
+
+            <li xml:id="item-logarithm-of-quotient-rule">
+
+              <p>
+                <m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=\log_{b}(A)-\log_{b}(B)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </assemblage>
+
+      <p>
+        The first rule is perhaps the most useful at this level.
+      </p>
+
+      <p>
+        I used to have a pocket knife with <m>10</m> different tools folded into it,
+        but I mostly used only one.
+        <xref ref="item-logarithm-of-power-rule">Rule</xref> is that tool.
+        It allows us to take an exponential expression and
+        <q>bring down the exponent</q> so we can isolate it.
+      </p>
+
+      <p>
+        If we end up with an equation that looks like
+        <me>
+          (0.337)^{\mathord{?}}=1.272
+        </me>
+        as in, <q>I wonder what the exponent is?,</q>
+        we can use a logarithmic function to find the answer.
+      </p>
+
+      <p>
+        Although most likely a variable is used instead of a question mark, like
+        <me>
+          (0.337)^{x}=1.272
+        </me>
+        where <m>x</m> is the unknown value we are trying to find.
+      </p>
+
+      <p>
+        Using <xref ref="item-logarithm-of-power-rule">Rule</xref>
+        and applying any logarithm to both sides of the equation we can work our way towards isolating the unknown variable <m>x</m>.
+      </p>
+
+      <example>
+        <title>Isolate and solve for the unknown variable</title>
+        <statement>
+          <p>
+            <md>
+              <mrow>(0.337)^{x}=1.272</mrow>
+              <mrow>\log(0.337)^{x}= \log(1.272)</mrow>
+              <mrow>x \log(0.337)= \log(1.272)</mrow>
+              <mrow>x=\frac{\log(1.272)}{\log(0.337)}</mrow>
+              <mrow>x \approx -0.2212</mrow>
+            </md>
+          </p>
+
+          <p>
+            In this case we used <m>\log</m>,
+            but we get the same answer using the natural logarithm,
+            <m>\ln</m>, instead.
+            Try it!
+          </p>
+
+          <p>
+            It does not matter what base logarithm you use,
+            as long as you use the same
+            <m>\log_{b}</m> on both sides of the equation.
+            However, it does help to use a function that is readily available on most calculators like base <m>10</m> (<m>\log</m>),
+            or base <m>e</m>
+            (<m>\ln</m>).
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        Now you try it.
+        Solve an exponential equation using <xref ref="item-logarithm-of-power-rule">Rule</xref>.
+      </p>
 
       <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q10.pg" seed="1" />
-      </exercise>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q02.pg" seed="1" />
-      </exercise>
+        <introduction>
+          <p>
+            How many <m>7 \%</m> increases is the same as one <m>49 \%</m> increase?
+          </p>
+        </introduction>
 
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q08.pg" seed="1" />
-      </exercise>
-</exercisegroup>
-
-<!-- solving exponential equations basic -->
-
-<exercisegroup><introduction><p>Solving Exponential Equations with Logarithms</p></introduction>
-      <exercise>
-        <webwork source="Library/Union/setFunctionExponential/srw4_1_11.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap4Review/Q19.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap4Review/Q08.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q14.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/ma112DB/set10/sw6_5_7.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/ma112DB/set10/sw6_5_9.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/ma112DB/set10/sw6_5_3.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/FortLewis/Basic-skills-pretest/Skill-Assessment-27.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/NAU/setExpLog/ExpEq2.pg" seed="1" />
-      </exercise>
-
-<!-- solving exponential equations with different bases -->
-
-      <exercise>
-        <webwork source="Library/Michigan/Chap1Sec4/Q11.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/maCalcDB/setAlgebra30LogExpEqns/solve_in_exponent.pg" seed="1" />
-      </exercise>
-</exercisegroup>
-
-<!-- solving basic logarithmic equations -->
-
-<exercisegroup><introduction><p>Solving Logarithmic Equations</p></introduction>
-     <exercise>
-       <webwork source="Library/Rochester/setAlgebra30LogExpEqns/srw4_3_48.pg" seed="1" />
-     </exercise>
-
-     <exercise>
-       <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S06-LogsInvs/1-6-49.pg" seed="1" />
-     </exercise>
-
-     <exercise>
-       <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q00.pg" seed="1" />
-     </exercise>
-
-     <exercise>
-       <webwork source="Library/Wiley/setAnton_Section_0.5/Question16.pg" seed="1" />
-     </exercise>
-
-     <exercise>
-       <webwork source="Library/ma117DB/set8/srw4_4_41.pg" seed="1" />
-     </exercise>
-
-     <exercise>
-       <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_50.pg" seed="1" />
-     </exercise>
-
-     <exercise>
-       <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_49.pg" seed="1" />
-     </exercise>
-
-     <exercise>
-       <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S06-LogsInvs/1-6-50.pg" seed="1" />
-     </exercise>
-
-<!-- solving logarithmic equations by using log properties -->
-
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q48.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_51.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/1_Precalculus_Review/1.6_Exponential_and_Logarithmic_Functions/1.6.33.pg" seed="1" />
-      </exercise>
-</exercisegroup>
-
-<!-- harder equations -->
-
-<exercisegroup><introduction><p>Additional Problems</p></introduction>
-      <exercise>
-        <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_52.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S06-LogsInvs/1-6-52.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/Rochester/setAlgebra30LogExpEqns/ur_le_1_6.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/Rochester/setAlgebra30LogExpEqns/problem3.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/UMN/calculusStewartCCC/s_1_6_52.pg" seed="1" />
-      </exercise>
-
-      <exercise>
-        <webwork source="Library/Utah/Intermediate_Algebra/set6_Graphs_and_Functions/foo.pg" seed="1" />
-      </exercise>
-
-<!-- equations requiring a calculator, graphical solution -->
-
-      <exercise>
-        <webwork source="Library/ASU-topics/setLogarithmicFunctions/jj7.pg" seed="1" />
-      </exercise>
-</exercisegroup>
-
-<exercisegroup><introduction><p>Applications</p></introduction>
-      <exercise>
         <webwork>
-          <setup>
+            <stage>
+            <statement>
+              <p>
+                The growth factor associated with a <m>7 \%</m> increase is <m>b=</m><var name="1.07" width="4" />.
+              </p>
+            </statement>
+            </stage>
+            <stage>
+            <statement>
+              <p>
+                The equation below literally states,
+                <q>An unknown number of growth factors <m>b=1.07</m> is the same as <m>1.49</m></q>
+                <me>
+                  (1.07)^{x}=1.49
+                </me>
+              </p>
+
+              <p>
+                Apply your favorite logarithm to each side of the equation.
+                My favorite is <m>\ln</m>, so the equation is now
+                <me>
+                  \ln\mathopen{}\left(1.07^x\right)\mathclose{}= \ln(1.49)
+                </me>
+              </p>
+
+              <p>
+                Invoke <xref ref="item-logarithm-of-power-rule">Rule</xref>
+                so that the exponent can come down in front of the expression on the left
+                <me>
+                  x \ln(1.07)= \ln(1.49)
+                </me>
+              </p>
+
+              <p>
+                Last step, isolate the variable by dividing both sides by
+                <m>\ln(1.07)</m>, and what do you get?
+              </p>
+
+              <p>
+                <m>x=</m> <var name="'ln(1.49)/ln(1.07)'" width="5" />
+              </p>
+            </statement>
+            </stage>
+        </webwork>
+      </exercise>
+
+      <p>
+        <xref ref="item-logarithm-of-power-rule">Rule</xref> is great,
+        but if we want to use it as the main tool we have to know when it applies and how to deal with the situation if the rule does not apply.
+      </p>
+
+      <example>
+        <statement>
+          <p>
+            Solve the equation for <m>x</m>
+            <me>
+              3(2.83)^{x}=15
+            </me>
+          </p>
+
+          <p>
+            At first glance it seems you can apply <xref ref="item-logarithm-of-power-rule">Rule</xref>,
+            but is that right?
+            <xref ref="item-logarithm-of-power-rule">Rule</xref> states
+            <me>
+              \log_{b}(N^{x})=x \log_{b}(N)
+            </me>
+          </p>
+
+          <p>
+            Notice how <xref ref="item-logarithm-of-power-rule">Rule</xref>
+            assumes you have one side written as <m>N^{x}</m> with nothing else in front
+            (no coefficient).
+            The left side of our equation has a coefficient of <m>3</m> in front of the exponential
+            <me>
+              3(2.83)^{x}
+            </me>
+            The constant <m>3</m> is keeping us from using <xref ref="item-logarithm-of-power-rule">Rule</xref>.
+            That constant either has to be moved or we have to use another rule
+            (if there is one that applies).
+          </p>
+
+          <p>
+            We can fix the situation by rearranging the equation to match the format of <xref ref="item-logarithm-of-power-rule">Rule</xref>
+            or we could use <xref ref="item-logarithm-of-product-rule">Rule </xref>
+            because at least it matches the format of our equation.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The constant <m>3</m> needs to be moved so only the exponential remains on the left side of the equation.
+            <me>
+              (2.83)^{x}=\frac{15}{3}
+            </me>
+            Voil&#224;! Now we have the correct form to use <xref ref="item-logarithm-of-power-rule">Rule</xref>.
+            Apply your favorite logarithm to both sides.
+            I'll use <m>\ln</m> this time because I used <m>\log</m> in the last example.
+            <me>
+              \ln (2.83)^{x}= \ln \left( \frac{15}{3} \right)
+            </me>
+            The exponent comes down and we have:
+            <me>
+              x \ln(2.83)= \ln \left( \frac{15}{3} \right)
+            </me>
+            The last step is to isolate the variable
+            <me>
+              x= \frac{\ln \left( \frac{15}{3} \right)}{\ln(2.83)}
+            </me>
+            so that (rounded to three decimals):
+            <me>
+              x \approx 1.547
+            </me>
+          </p>
+
+          <p>
+            Alternatively,
+            we can use <xref ref="item-logarithm-of-product-rule">Rule </xref>.
+            In English <xref ref="item-logarithm-of-product-rule">Rule </xref> says,
+            <q>The log of a product is equal to the sum of the logs.</q>
+          </p>
+
+          <p>
+            Applying <m>\ln</m> to both sides of our equation,
+            we in fact have the log of the product <m>3</m> times <m>(2.83)^{x}</m> on the left side
+            <me>
+              \ln (3(2.83)^{x})=\ln(15)
+            </me>
+            Use <xref ref="item-logarithm-of-product-rule">Rule </xref>
+            to write the left side of the equation as the sum of the logs
+            <me>
+              \ln(3)+\ln\mathopen{}\left(2.83^x\right)\mathclose{}=\ln(15)
+            </me>
+            Remember the goal is to isolate the variable <m>x</m> which we can now do since,
+            on the left side, one term has <m>x</m> and the other does not.
+          </p>
+
+          <p>
+            Subtracting <m>\ln(3)</m> from both sides we get
+            <me>
+              \ln\mathopen{}\left(2.83^x\right)\mathclose{}=\ln(15)-\ln(3)
+            </me>
+            Look, we get to use <xref ref="item-logarithm-of-power-rule">Rule</xref> anyway!
+            On the left we bring down the exponent, <m>x</m>
+            <me>
+              x \ln(2.83)=\ln(15)-\ln(3)
+            </me>
+            Now isolate <m>x</m>
+            <me>
+              x=\frac{\ln(15)-\ln(3)}{\ln(2.83)}
+            </me>
+            We get the same answer as before
+            <me>
+              x \approx 1.547
+            </me>
+          </p>
+
+          <p>
+            Which method did you like better?
+          </p>
+        </solution>
+      </example>
+
+      <exercise>
+
+        <introduction>
+          <p>
+            Of course we could have just solved the equation
+            <m>3(2.83)^{x}=15</m> graphically and avoided the algebra all together.
+          </p>
+        </introduction>
+
+        <webwork>
+            <statement>
+              <p>
+                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Z4mRThfg/width/431/height/455/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="455px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              </p>
+
+              <p>
+                The graph of the exponential function
+                <m>f(x)=3(2.83)^{x}</m> will reach different heights depending on the input <m>x</m>.
+                What <m>x</m> value makes the graph <m>y=15</m> units high?
+              </p>
+
+              <p>
+                Drag the output value to <m>y=15</m> to find the solution rounded to <m>2</m> decimal places.
+              </p>
+
+              <p>
+                <m>x \approx</m> <var name="1.55" width="5" />
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+
+      <remark>
+        <p>
+          A note about solving.
+          In the two algebra examples we were able to find exact solutions:
+          <me>
+            x= \frac{\ln \big( \frac{15}{3} \big)}{\ln(2.83)}
+          </me>
+          is exact.
+        </p>
+
+        <p>
+          We then entered the exact expressions into a calculator and found approximations rounded to three decimal places.
+          Though graphically may seem quick and easy,
+          most often we can only get an approximation to the answer.
+        </p>
+      </remark>
+
+      <p>
+        Finally, we could just ask a computer to solve the equation for us.
+        Many websites have tools for solving equations.
+        You can enter an equation like: <c>3(2.83)^x = 15</c> and then type
+        <em>solve</em> or click a <em>solve</em>
+        button to see the solutions.
+        You may wish to perform a web search for such a website.
+      </p>
+
+      <p>
+        We should all be aware that technology can now do much of what only people could do in the past.
+        And we should also be aware of the current limitations of technology.
+      </p>
+
+      <p>
+        In fact, computers can solve all kinds of equations,
+        but so far only people have the ability to set the problems up.
+        So the real question is not necessarily
+        <q>Can you solve an equation?,</q>,
+        but <q>Do you have the right equation?</q>
+      </p>
+    </subsection>
+
+    <subsection>
+      <title>Domain and Range</title>
+      <p>
+        Because a logarithm is just another kind of function,
+        it has a domain and a range and the graph of a logarithmic function has its own characteristics that make it unique.
+      </p>
+
+      <p>
+        We can use our language approach to understand the domain and range of a logarithmic function.
+        Remember the literal translation of the expression <m>\log(x)</m> is
+        <q>The power of <m>10</m> that gives you <m>x</m>.</q>
+      </p>
+
+      <example>
+        <statement>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  <m>\log(100)</m> means <q>The power of <m>10</m> that gives you <m>100</m>.</q>
+                </p>
+
+                <p>
+                  Therefore
+                  <me>
+                    \log(100)=2
+                  </me>
+                  which says, <q>The power of <m>10</m> that gives you <m>100</m> is <m>2</m></q>,
+                  since <m>10^{2}=100</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>\log_{3}(81)</m> means,
+                  <q>The power of <m>3</m> that gives you <m>81</m>.</q>
+                </p>
+
+                <p>
+                  Therefore
+                  <me>
+                    \log_{3}(81)=4
+                  </me>
+                  which says, <q>The power of <m>3</m> that gives you <m>81</m> is <m>4</m></q>,
+                  since <m>3^{4}=81</m>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        Recall the domain of a function <m>f</m> is the set of all possible inputs the function can use
+        (values that make sense for the function).
+      </p>
+
+      <p>
+        Let
+        <me>
+          f(x)=\log_{3}(x)
+        </me>
+        where <m>x</m> is the input.
+      </p>
+
+      <p>
+        Consider negative input values,
+        like <m>x=-9</m> and think about the meaning of <m>\log_{3}(-9)</m>:
+      </p>
+
+      <blockquote>
+        <p>
+          <q>What power of <m>3</m> gives you <m>-9</m>?</q>
+        </p>
+      </blockquote>
+
+      <p>
+        The statement should make no sense.
+        You cannot get a negative result if all you have is positive <m>3</m>'s multiplied together.
+        At least one has to be negative!
+      </p>
+
+      <p>
+        Since any negative input leads us to the same conclusion,
+        it turns out logarithms cannot accept negative inputs.
+      </p>
+
+      <p>
+        For a similar reason logarithmic functions cannot have zero as an input.
+        If you ask <q>How many factors of <m>3</m> does it take to get <m>0</m>?</q>
+        or just <m>3^{\mathord{?}}=0</m>,
+        it should be clear there is no answer.
+      </p>
+
+      <p>
+        Therefore, the domain of any logarithmic function is all inputs that are greater than or equal to zero.
+      </p>
+
+      <assemblage>
+        <p>
+          Domain of <m>\log_{b}(x)</m>:
+          <m>x \gt 0</m>.
+        </p>
+      </assemblage>
+
+      <p>
+        For the range we must consider all the possible outputs of the function.
+        In the case of the logarithm,
+        an output is the exponent value needed to get a particular input
+        <me>
+          \log_{b}(\text{input})=\text{output}
+        </me>
+      </p>
+
+      <example>
+        <statement>
+          <p>
+            Consider again <m>y=\log_{3}(x)</m>.
+          </p>
+
+          <p>
+            For any input <m>x</m> how many <m>3</m>'s does it take to get that <m>x</m>-value?
+            The answer (output) is the <m>y</m>-value.
+          </p>
+
+          <sidebyside>
+
+            <tabular top="medium" bottom="medium" left="medium" right="medium">
+              <col halign="center"/>
+              <col halign="center"/>
+              <col halign="center"/>
+              <row>
+                <cell>Input</cell>
+                <cell>Output (exponent)</cell>
+                <cell>Reason</cell>
+              </row>
+              <row>
+                <cell><m>\frac{1}{27}</m></cell>
+                <cell><m>-3</m></cell>
+                <cell>Because <m>3^{-3}=\frac{1}{27}</m></cell>
+              </row>
+              <row>
+                <cell><m>\frac{1}{9}</m></cell>
+                <cell><m>-2</m></cell>
+                <cell>Because <m>3^{-2}=\frac{1}{9}</m></cell>
+              </row>
+              <row>
+                <cell><m>\frac{1}{3}</m></cell>
+                <cell><m>-1</m></cell>
+                <cell>Because <m>3^{-1}=\frac{1}{3}</m></cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>0</m></cell>
+                <cell>Because <m>3^{0}=1</m></cell>
+              </row>
+              <row>
+                <cell><m>3</m></cell>
+                <cell><m>1</m></cell>
+                <cell>Because <m>3^{1}=3</m></cell>
+              </row>
+              <row>
+                <cell><m>9</m></cell>
+                <cell><m>2</m></cell>
+                <cell>Because <m>3^{2}=9</m></cell>
+              </row>
+            </tabular>
+
+          </sidebyside>
+
+          <p>
+            For inputs between zero and one,
+            <m>0 \lt x \lt 1</m>, the results are negative, so <m>y \lt 0</m>.
+          </p>
+
+          <p>
+            For inputs greater than one,
+            <m>x \gt 1</m>, the results are always positive, so <m>y \gt 0</m>
+          </p>
+
+          <p>
+            If the input is <m>x=1</m> the result is always zero
+            <me>
+              \log_{3}(1)=0
+            </me>
+            because, <q>The power of <m>3</m> that gives you <m>1</m></q> is the <m>0</m> power.
+          </p>
+
+          <p>
+            After a few tries we should begin to realize the range of <m>\log_{3}(x)</m> is all real numbers.
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        It turns out the range for any base of a log function like <m>\log_{b}(x)</m> is all real numbers.
+      </p>
+
+      <assemblage>
+        <p>
+          Range of <m>\log_{b}(x)</m>:
+          All real numbers.
+        </p>
+      </assemblage>
+
+    </subsection>
+
+    <subsection>
+      <title>The Graph of a Logarithmic Function</title>
+      <p>
+        Just like exponential functions have horizontal asymptotes as in <xref ref="figure-exponential-asymptote" />,
+        logarithm functions have <em>vertical</em>
+        asymptotes as in <xref ref="figure-logarithm-asymptote" />.
+      </p>
+
+      <sidebyside widths="48% 48%">
+        <figure xml:id="figure-exponential-asymptote">
+          <caption>Exponential function with horizontal asymptote <m>y = 0</m></caption>
+          <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-2.7:7]{2^(-x)};
+                            \addplot[asymptote, ->] coordinates {(-7,0) (7,0)};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+          </image>
+
+        </figure>
+
+        <figure xml:id="figure-logarithm-asymptote">
+          <caption>Logarithmic function with vertical asymptote <m>x = 0</m></caption>
+          <image>
+
+            <latex-image>
+            <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot+[domain=-7:2.7] ({2^(x)},{x});
+                            \addplot[asymptote, ->] coordinates {(0,7) (0,-7)};
+                         \end{axis}
+                    \end{tikzpicture}
+            ]]>
+            </latex-image>
+          </image>
+
+        </figure>
+      </sidebyside>
+
+      <p>
+        The <term>vertical asymptote</term>
+            <idx><h>vertical asymptote</h></idx>
+        is like a vertical boundary that the function cannot cross.
+        In the case of the logarithm
+        <m>y=\log_{b}(x)</m> the asymptote is the <m>y</m>-axis with equation <m>x=0</m> and the function only exists to the right of this boundary.
+      </p>
+
+      <p>
+        This supports our assertion that the domain of
+        <m>y=\log_{b}(x)</m> is all <m>x \gt 0</m>
+        (to the right of the <m>y</m>-axis).
+      </p>
+    </subsection>
+
+    <subsection>
+      <title>Change of Base</title>
+      <p>
+        So far, when evaluating expressions like
+        <m>\log_{3}(9)</m> it seems we need to know the answer before we evaluate.
+        How do you evaluate an expression when you don't already know the answer?
+      </p>
+
+      <example>
+        <p>
+          Evaluate <m>\log_{3}(0.1822)</m>.
+        </p>
+
+        <p>
+          We know the answer should be negative because we are trying to get <m>0.1822</m> which is less than <m>1</m>.
+        </p>
+
+        <p>
+          Your calculator may already have a
+          <q>log of any base</q> option.
+          Today, in the 21st century we can also find the answer,
+          for free,
+          on the web.
+          For instance, go to
+          <url href="https://www.desmos.com/calculator/1t5iqhqaad">Desmos.com</url>.
+          Type <c>log_(0.1822)</c> into one of the cells.
+          You should see the answer as
+          <m>\log_{3}(0.1822) \approx -1.5498</m> and you can get more decimal places if you want.
+        </p>
+
+        <p>
+          But before the web,
+          it used to be that calculators only had one or two options for logarithms,
+          (and before calculators there were things called
+          <q><url href="https://en.wikipedia.org/wiki/Slide_rule">slide rules</url></q>
+          and books with pages and pages of tables of logarithms).
+        </p>
+
+        <p>
+          Here is an <q>old school</q> method of evaluating a logarithm expression.
+          The method is called <q>change of base</q>
+          which means you change the base from whatever it is to either base <m>10</m>,
+          <m>\log</m>, or base <m>e</m>,
+          <m>\ln</m>, because most calculators have those built in.
+        </p>
+
+        <p>
+          Set up an equation in which <m>y</m> is the answer you want.
+          Then use the definition of the logarithm to turn the <m>log_{b}</m> equation into an exponential equation.
+          The last step is to solve the exponential equation using the most convenient logarithm at your disposal
+          (most likely <m>log</m> or <m>ln</m>).
+          In this example we use log-base-10, <m>\log</m>.
+          <md>
+            <mrow>\log_{3}(0.1822)\amp=y</mrow>
+            <mrow>0.1822\amp=3^{y}</mrow>
+            <mrow>\log(0.1822)\amp=\log(3^{y})</mrow>
+            <mrow>\log(0.1822)\amp=y\log(3)</mrow>
+            <mrow>y\amp=\frac{\log(0.1822)}{\log(3)}</mrow>
+            <mrow>y\amp\approx -1.5498</mrow>
+          </md>
+        </p>
+      </example>
+    </subsection>
+
+    <subsection>
+      <title>Setting Up Problems (Only to Tear Them Down)</title>
+      <p>
+        We conclude this section by working through some examples.
+      </p>
+
+      <exercise>
+        <title>Radioactive Decay and Half-life</title>
+        <introduction>
+          <p>
+            Solve an exponential equation
+          </p>
+        </introduction>
+
+        <webwork seed="1">
+            <setup>
+
+            <pg-code>
+                $chdrp=random(11,31,1);
+                if($envir{problemSeed}==1){$chdrp=21};
+                $k=-$chdrp/100;
+                $b=exp($k);
+                $hourlyrate=NumberWithUnits((1-exp(-$chdrp/100))*100,'%/hr');
+                $halflife=NumberWithUnits(ln(0.5)/-$chdrp*100,'hr');
+            </pg-code>
+            </setup>
+            <stage>
+            <statement>
+              <p>
+                A radioactive substance has a <em>continuous</em>
+                hourly decay rate of <m><var name="$chdrp" />\%</m>.
+              </p>
+
+              <p>
+                What is the percent hourly decay rate?
+              </p>
+
+              <p>
+                The opening sentence is telling us we must use an exponential model because the decay rate is a
+                <q>constant percent</q>.
+                The sentence goes on to tell us <em>what kind</em>
+                of decay model and the percent rate of decay.
+              </p>
+
+              <p>
+                The word <q>continuous</q> is telling us to use base <m>e</m>.
+                Therefore we can write the formula for decay as
+                <me>
+                  Ae^{kt}
+                </me>
+                where <m>k</m> is the continuous decay constant <m>k=<var name="$k" /></m>.
+                This value is negative because we are told the <m>21 \%</m> is a decrease.
+              </p>
+
+              <p>
+                The value <m>A</m> represents the initial amount of substance,
+                but it was not stated.
+                So we put a variable there to hold its place.
+              </p>
+
+              <p>
+                The question is about the hourly percent decay.
+                But, we were given the <q>continuous</q> hourly decay.
+                These are two different things.
+              </p>
+
+              <p>
+                A discrete model would look like
+                <me>
+                  Ab^{t}
+                </me>
+                where <m>b</m> is the hourly growth factor we are trying to find.
+                But both the discrete and continuous models have to predict the same behavior.
+                Therefore the two formulas have to be equal <mdash /> they have to produce the same values.
+                <me>
+                  A(b)^{t}=A(e^{-k})^t
+                </me>
+                Notice how the parentheses are used to show that both sides are actually the same thing.
+                Both say
+                <me>
+                  A(\text{something})^{t}
+                </me>.
+                The <q>somethings</q> must be the same number.
+                That is:
+                <me>
+                  b = e^{-k}
+                </me>.
+              </p>
+
+              <p>
+                With <m>k=<var name="$k"/></m> then <m>b=</m><var name="$b" width="5" />
+                <em>(round to <m>4</m> significant digits)</em>.
+              </p>
+
+              <p>
+                Therefore, the percent hourly rate of decay is <var name="$hourlyrate" width="10" />
+                <em>(include units)</em>.
+              </p>
+            </statement>
+            </stage>
+            <stage>
+            <statement>
+              <p>
+                What is the half-life of the substance?
+              </p>
+
+              <p>
+                The half-life is the time is takes to reduce the substance to half its value.
+                We do not know how much substance there is,
+                but we do know there is something.
+              </p>
+
+              <p>
+                Earlier we called the initial amount <m>A</m>.
+                In some time we will have <m>\frac{1}{2}A</m>.
+                How much time?
+                The answer is the half-life.
+              </p>
+
+              <p>
+                <md>
+                  <mrow>Ae^{-kt}\amp=\frac{1}{2}A</mrow>
+                  <mrow>e^{-kt}\amp=\frac{1}{2}</mrow>
+                  <mrow>\ln(e^{-kt})\amp=\ln(\frac{1}{2})</mrow>
+                  <mrow>-kt\amp=\ln(\frac{1}{2})</mrow>
+                  <mrow>t\amp=\frac{\ln(\frac{1}{2})}{k}</mrow>
+                </md>
+              </p>
+
+              <p>
+                The half-life is <m>t \approx</m> <var name="$halflife" width="10" />
+                <em>(Include units and round to <m>2</m> decimal places)</em>.
+              </p>
+            </statement>
+            </stage>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <title>Population Growth and Time to Triple</title>
+        <introduction>
+          <p>
+            Solve an exponential equation
+          </p>
+        </introduction>
+
+        <webwork seed="1">
+            <setup>
+
+            <pg-code>
+                $arp=random(5,15,1);
+                if($envir{problemSeed}==1){$arp=9};
+                $b=1+$arp/100;
+                $k=ln($b);
+                $contrate=NumberWithUnits(ln(1+$arp/100)*100,'%/yr');
+                $triptime=NumberWithUnits(ln(3)/ln(1+$arp/100),'yr');
+            </pg-code>
+            </setup>
+            <stage>
+            <statement>
+              <p>
+                A population increases at an annual rate of about <m><var name="$arp" />\%</m>.
+              </p>
+
+              <p>
+                What is the continuous annual growth rate?
+              </p>
+
+              <p>
+                The opening sentence is telling us we must use an exponential model because the growth is a
+                <q>constant percent</q>.
+                The sentence goes on to tell us <em>what kind</em>
+                of growth model and the percent rate of growth.
+              </p>
+
+              <p>
+                Annual percent growth is called
+                <q>discrete growth</q>.
+                Not because it is annual, per se,
+                but because it is measured at the end of some finite time interval.
+                Other examples of discrete growth
+                (or decay)
+                would be described as <q>monthly</q> or <q>daily</q> etc.
+                Another way to tell it is discrete is the absence of the word <q>continuous</q>.
+                If the growth is not continuous, then it is discrete.
+              </p>
+
+              <p>
+                A discrete model looks like
+                <me>
+                  Ab^{t}
+                </me>
+                where in our case <m>b</m> is the annual growth factor and <m>A</m> represents the initial size of the population which we are not given.
+              </p>
+
+              <p>
+                A continuous model would be
+                <me>
+                  Ae^{kt}
+                </me>
+                where <m>k</m> is the continuous growth constant and <m>A</m> still represents the initial amount.
+              </p>
+
+              <p>
+                These models must be equal because they are describing the same population.
+                Therefore
+                <me>
+                  A(b)^{t}=A(e^{k})^{t}
+                </me>
+                Notice what is the same on each side and what is different.
+              </p>
+
+              <p>
+                In order to be equal <m>b=e^{k}</m>.
+              </p>
+
+              <p>
+                Solving the equation for <m>k</m>:
+                <md>
+                  <mrow>b\amp=e^{k}</mrow>
+                  <mrow>\ln(b)\amp= \ln(e^{k})</mrow>
+                  <mrow>\ln(b)\amp=k \ln(e)</mrow>
+                  <mrow>\ln(b)\amp=k</mrow>
+                </md>
+              </p>
+
+              <p>
+                The continuous growth constant in our problem is
+                <m>k \approx</m><var name="$k" width="5" />
+                <em>(round your answer to <m>2</m> decimal places)</em>.
+              </p>
+
+              <p>
+                This represents a continuous percent growth rate of about <var name="$contrate" width="10" />
+                <em>Include units and round to <m>2</m> decimal places)</em>.
+              </p>
+            </statement>
+            </stage>
+            <stage>
+            <statement>
+              <p>
+                How long does it take for the population to triple in size?
+              </p>
+
+              <p>
+                <var name="$triptime" width="10" />
+              </p>
+            </statement>
+            </stage>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <title>Double Time to Triple Time (Population Growth)</title>
+        <introduction>
+          <p>
+            Solve an exponential equation
+          </p>
+        </introduction>
+
+        <webwork seed="1">
+            <setup>
+
+            <pg-code>
+                $doublingdays=random(8,20,1);
+                if($envir{problemSeed}==1){$doublingdays=10};
+                $b=2**(1/$doublingdays);
+                $dgr=NumberWithUnits((2**(1/$doublingdays)-1)*100,'%/day');
+                $triptime=NumberWithUnits($doublingdays*ln(3)/ln(2),'day');
+                Context()->variables->are(t=>'Real', P=>'Real');
+                $form=Compute("P*2^(t/$doublingdays)");
+            </pg-code>
+            </setup>
+            <stage>
+            <statement>
+              <p>
+                A population of mosquitoes doubles every <m><var name="$doublingdays" /> </m> days.
+              </p>
+
+              <p>
+                Time units in this problem are <q>day</q> singular.
+              </p>
+
+              <p>
+                What is the daily percent growth of the population?
+              </p>
+
+              <p>
+                A pattern of repeated doubling is the same thing as a pattern of repeated multiplication,
+                in this case multiplication by <m>2</m>.
+                Therefore, the growth of the population is exponential.
+              </p>
+
+              <p>
+                We need to translate the English sentence <lq/>A population of mosquitoes doubles every <m><var name="$doublingdays" /></m> days<rq/> into a math sentence (a formula).
+              </p>
+
+              <p>
+                We know there must be some initial population,
+                call it <m>P</m> and we know to multiply by <m>2</m> every <m><var name="$doublingdays" /></m> days.
+              </p>
+
+              <p>
+                Therefore a formula could be <m>P(t)=</m> <var name="$form" width="10" />
+                <em>(use a fractional exponent in your answer)</em>.
+              </p>
+
+              <p>
+                The fractional exponent is then used to calculate the daily growth factor <m>2^{\frac{1}{<var name="$doublingdays" />}} = </m> <var name="$b" width="10" />
+                <em>(round to <m>3</m> decimal places)</em>.
+              </p>
+
+              <p>
+                From our growth factor we determine the daily percent growth as <m>(2^{\frac{1}{<var name="$doublingdays" />}} -1) \cdot 100 = </m> <var name="$dgr" width="10" />
+                <em>(Include units and round to <m>3</m> decimal places)</em>
+              </p>
+            </statement>
+            </stage>
+            <stage>
+            <statement>
+              <p>
+                How long does it take for the population to triple in size?
+              </p>
+
+              <p>
+                Using our formula <m>P(t)=P(2)^\frac{t}{<var name="$doublingdays" />}</m> we seek the time it takes for the output to triple the initial value <m>P</m>.
+              </p>
+
+              <p>
+                <me>
+                  P(2)^\frac{t}{<var name="$doublingdays" />}=3P
+                </me>
+              </p>
+
+              <p>
+                Solving for <m>P</m> we get
+                <md>
+                  <mrow>P(2)^\frac{t}{<var name="$doublingdays" />}\amp=3P</mrow>
+                  <mrow>(2)^\frac{t}{<var name="$doublingdays" />}\amp=3</mrow>
+                  <mrow>\ln(2^\frac{t}{<var name="$doublingdays" />})\amp=\ln(3)</mrow>
+                  <mrow>\frac{t}{<var name="$doublingdays" />} \cdot \ln(2)\amp= \ln(3)</mrow>
+                  <mrow>t\amp=<var name="$doublingdays" />\frac{\ln(3)}{\ln(2)}</mrow>
+                </md>
+              </p>
+
+              <p>
+                <m>t \approx</m> <var name="$triptime" width="5" />
+                <em>(Include units and round to <m>2</m> decimal places)</em>
+              </p>
+            </statement>
+            </stage>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <title>Chemical Half-life, Time to Decay</title>
+        <introduction>
+          <p>
+            Solve an exponential equation
+          </p>
+        </introduction>
+
+        <webwork seed="1">
+            <setup>
+
+            <pg-code>
+                %hl=('Magnesium-27'=>9.45,'Carbon-11'=>20.33,'Oxygen-15'=>2.04);
+                $isotope=list_random(keys %hl);
+                $target=random(5,30,5);
+                if($envir{problemSeed}==1){$isotope='Magnesium-27';$target=10;};
+                $halflifemin=$hl{$isotope};
+                $drpmp=NumberWithUnits(ln(2)/$halflifemin*100,'%/min');
+                $time=NumberWithUnits(ln($target/100)/ln(1-ln(2)/$halflifemin),'min');
+                $b=Real(0.5**(1/$halflifemin));
+            </pg-code>
+            </setup>
+            <stage>
+            <statement>
+              <p>
+                <var name="$isotope"/> has a half-life of <var name="$halflifemin" /> minutes.
+              </p>
+
+              <p>
+                What is the percent decay rate per minute?
+              </p>
+
+              <p>
+                A half-life is the time it takes for the chemical to decay to half its current value.
+                We are told the half-life is <var name="$halflifemin" /> minutes,
+                which means every <var name="$halflifemin" /> minutes the amount of chemical is halved.
+              </p>
+
+              <p>
+                Mathematically, repeated <q>halving</q>
+                is the same as repeated multiplication by <m>\frac{1}{2}=0.5</m>.
+              </p>
+
+              <p>
+                We can write a formula that says,
+                <lq/>Start with some initial amount, C, and multiply by <m>0.5</m> every <m><var name="$halflifemin" /></m> minutes.<rq/>
+                <me>
+                  C(0.5)^{\frac{t}{<var name="$halflifemin" />}}
+                </me>
+              </p>
+
+              <p>
+                Notice we can rewrite our formula to show the
+                <q>per</q> minute growth factor
+                <me>
+                  C(0.5)^\frac{t}{<var name="$halflifemin" />}=C(0.5^\frac{1}{<var name="$halflifemin" />})^{t}
+                </me>
+                where
+                <me>
+                  b=0.5^\frac{1}{<var name="$halflifemin" />}
+                </me>
+                <m>b \approx </m> <var name="$b" width="5" />
+                <em>(round to <m>3</m> decimal places)</em>
+              </p>
+
+              <p>
+                From the per-minute growth factor we can calculate the percent decay per minute as <m>(1-<var name="$b" />) \cdot 100 \approx </m> <var name="$drpmp" width="10" />
+                <em>(Include units and round to <m>3</m> decimal places)</em>
+              </p>
+            </statement>
+            </stage>
+            <stage>
+            <statement>
+              <p>
+                How long will it take for any amount of <var name="$isotope"/> to decay to <m><var name="$target" />\%</m> of its original amount?
+              </p>
+
+              <p>
+                We use our equation with the unknown initial amount <m>C</m> and solve for the time it takes to reach <m>10 \%</m> of <m>C</m>,
+                <m>0.1C</m>
+              </p>
+
+              <p>
+                Solving algebraically we get
+                <md>
+                  <mrow>C(0.5)^\frac{t}{<var name="$halflifemin" />}\amp=0.1C</mrow>
+                  <mrow>0.5)^\frac{t}{<var name="$halflifemin" />}\amp=0.1</mrow>
+                  <mrow>\log(0.5)^\frac{t}{<var name="$halflifemin" />})\amp=\log(0.1)</mrow>
+                  <mrow>\frac{t}{<var name="$halflifemin" />}\log(0.5)\amp=\log(0.1)</mrow>
+                  <mrow>t\amp=<var name="$halflifemin" />\frac{\log(0.1)}{\log(0.5)}</mrow>
+                </md>
+              </p>
+
+              <p>
+                <m>t \approx</m> <var name="$time" width="10" />
+                <em>(include units and round to <m>3</m> decimal places)</em>
+              </p>
+
+              <p>
+                Remember, you can always solve graphically too!
+              </p>
+            </statement>
+            </stage>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <title>Solving Log equations</title>
+        <introduction>
+          <p>
+            Solve a logarithmic equation
+          </p>
+        </introduction>
+
+        <webwork>
+            <setup>
+
+            <pg-code>
+                Context()->variables->are(P=>'Real', t=>'Real');
+                Context()->variables->set(P=>{limits=>[0.01,0.99]});
+                $step=Compute("ln(P/(1-P))");
+                $solution=Compute("e^t/(1+e^t)");
+            </pg-code>
+            </setup>
+            <stage>
+            <statement>
+              <p>
+                In the study of populations
+                (population dynamics)
+                the situation often arises where we must solve logarithmic equations.
+              </p>
+
+              <p>
+                For instance,
+                when searching for an equation to model a population that has a carrying capacity (a maximum number the population can sustain) we can end up with an equation like
+                <me>
+                  \ln(P)-\ln(1-P)=t
+                </me>
+                in which the goal is to isolate <m>P</m> as a function of <m>t</m>.
+                It is a good exercise in algebra and log rules.
+              </p>
+
+              <p>
+                Use <xref ref="item-logarithm-of-quotient-rule">Rule</xref>
+                to write the left side of the equation
+                <me>
+                  \ln(P)-\ln(1-P)=t
+                </me>
+                as one term.
+              </p>
+
+              <p>
+                <m>\ln(P)-\ln(1-P)=</m> <var name="$step" width="10" />
+              </p>
+            </statement>
+            </stage>
+            <stage>
+            <statement>
+              <p>
+                Use the definition of the logarithm that states
+                <m>\log_{b}(x)=y</m> means <m>b^{y}=x</m>,
+                to rewrite the equation <m>\ln(\frac{P}{1-P})=t</m> as an exponential equation
+                <me>
+                  \frac{P}{1-P}=e^{t}
+                </me>
+              </p>
+
+              <p>
+                Multiply both sides of the equation
+                <m>\frac{P}{1-P}=e^{t}</m> by <m>(1-P)</m> and distribute on the right side to get
+                <me>
+                  P=e^{t}-Pe^{t}
+                </me>
+              </p>
+
+              <p>
+                Collect the terms with <m>P</m> on the left of
+                <me>
+                  P+Pe^{t}=e^{t}
+                </me>
+                and factor out <m>P</m> so that
+                <me>
+                  P(1+e^{t})=e^{t}
+                </me>
+              </p>
+
+              <p>
+                Now solve for <m>P</m> to get the final answer.
+              </p>
+
+              <p>
+                <m>P=</m> <var name="$solution" width="10" />.
+              </p>
+
+              <p>
+                This kind of equation is called <q>logistical</q>
+                and you will study it more in-depth if you continue your studies through calculus.
+              </p>
+            </statement>
+            </stage>
+            <stage>
+            <statement>
+              <p>
+                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Bg52rewM/width/431/height/435/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="435px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              </p>
+
+              <p>
+                If we introduce an initial population of <m>750</m> then we can graph the population equation as a function of time.
+              </p>
+
+              <p>
+                The population increases for <m>t \gt 0</m>.
+                However, there seems to be a limit to how large the population can get.
+              </p>
+
+              <p>
+                Increase the time (input) by dragging the green,
+                cross-hair to the right along the horizontal axis.
+                Is there a limit to how large the population can get?
+              </p>
+
+              <p>
+                The population, <m>P \lt</m> <var name="1500" width="10" />.
+              </p>
+
+              <p>
+                There is an imaginary line that acts as the upper limit of the population size for <m>t \gt 0</m>.
+                Click the checkbox in the graphing area to show the line.
+                What is the equation for the horizontal line?
+              </p>
+
+              <p>
+                The equation of the line is <m>y=</m> <var name="1500" width="10" />.
+              </p>
+
+              <p>
+                The line is actually an example of a horizontal asymptote.
+                The function is increasing, yet always remains below the line.
+              </p>
+            </statement>
+            </stage>
+        </webwork>
+      </exercise>
+    </subsection>
+
+    <exercises>
+<!-- rewriting logs as exponents -->
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Definition of the Logarithm
+          </p>
+        </introduction>
+
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q04.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q10.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q02.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q08.pg" seed="1" />
+        </exercise>
+
+      </exercisegroup>
+<!-- solving exponential equations basic -->
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Solving Exponential Equations with Logarithms
+          </p>
+        </introduction>
+
+        <exercise>
+          <webwork source="Library/Union/setFunctionExponential/srw4_1_11.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap4Review/Q19.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap4Review/Q08.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q14.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/ma112DB/set10/sw6_5_7.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/ma112DB/set10/sw6_5_9.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/ma112DB/set10/sw6_5_3.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/FortLewis/Basic-skills-pretest/Skill-Assessment-27.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/NAU/setExpLog/ExpEq2.pg" seed="1" />
+        </exercise>
+<!-- solving exponential equations with different bases -->
+        <exercise>
+          <webwork source="Library/Michigan/Chap1Sec4/Q11.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/maCalcDB/setAlgebra30LogExpEqns/solve_in_exponent.pg" seed="1" />
+        </exercise>
+
+      </exercisegroup>
+<!-- solving basic logarithmic equations -->
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Solving Logarithmic Equations
+          </p>
+        </introduction>
+
+        <exercise>
+          <webwork source="Library/Rochester/setAlgebra30LogExpEqns/srw4_3_48.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S06-LogsInvs/1-6-49.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q00.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/Wiley/setAnton_Section_0.5/Question16.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/ma117DB/set8/srw4_4_41.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_50.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_49.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S06-LogsInvs/1-6-50.pg" seed="1" />
+        </exercise>
+<!-- solving logarithmic equations by using log properties -->
+        <exercise>
+          <webwork source="Library/LoyolaChicago/Precalc/Chap4Sec1/Q48.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_51.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/1_Precalculus_Review/1.6_Exponential_and_Logarithmic_Functions/1.6.33.pg" seed="1" />
+        </exercise>
+
+      </exercisegroup>
+<!-- harder equations -->
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Additional Problems
+          </p>
+        </introduction>
+
+        <exercise>
+          <webwork source="Library/UCSB/Stewart5_1_6/Stewart5_1_6_52.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S06-LogsInvs/1-6-52.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/Rochester/setAlgebra30LogExpEqns/ur_le_1_6.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/Rochester/setAlgebra30LogExpEqns/problem3.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/UMN/calculusStewartCCC/s_1_6_52.pg" seed="1" />
+        </exercise>
+
+        <exercise>
+          <webwork source="Library/Utah/Intermediate_Algebra/set6_Graphs_and_Functions/foo.pg" seed="1" />
+        </exercise>
+<!-- equations requiring a calculator, graphical solution -->
+        <exercise>
+          <webwork source="Library/ASU-topics/setLogarithmicFunctions/jj7.pg" seed="1" />
+        </exercise>
+
+      </exercisegroup>
+      <exercisegroup>
+
+        <introduction>
+          <p>
+            Applications
+          </p>
+        </introduction>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $digit=random(3,8,1);
               $prob=int(log(2)/log(1+1/$digit)+0.5);
               $rounded=100*sprintf("%.3f",log(1+1/$digit)/log(10));
             </pg-code>
-          </setup>
-          <statement>
-            <p><url href="https://en.wikipedia.org/wiki/Benford%27s_law">Benford's Law</url> (discovered by astronomer Simon Newcomb) is an observation about large sets of multi-digit numbers. In particular, it says that the first digit of a number is more likely to be a <m>1</m> than a <m>2</m>, more likely to be <m>2</m> than <m>3</m>, etc.</p>
-            <p>Newcomb modeled this phenomenon by the function <me>p(n) = 100 \log_{10} \left(1+\frac{1}{n}\right)</me> which gives the percent of numbers that begin with the digit <m>n</m>. Here, the domain of <m>p</m> is just the set of whole numbers <m>\{1,2,3, \cdots , 9\}</m>.</p>
-            <p>According to Benford's Law, about how many times as likely is it for a number to begin with the digit <m>1</m> as it is to begin with the digit <var name="$digit" />? Round your answer to the nearest whole number.</p>
-            <p>Answer: <var name="$prob" width="10" /></p>
-          </statement>
-          <solution>
-            <p>About <m>100 \log_{10}\left(1 + \frac{1}{1}\right) \approx 30.1 \%</m> of numbers begin with the digit <m>1</m>, and about <m>100 \log_{10} \left(1 + \frac{1}{<var name="$digit" />}\right) \approx <var name="$rounded" /> \%</m> of numbers begin with the digit <var name="$digit" />.</p>
-            <p>So, it is about <m>\frac{30.1}{<var name="$rounded" />} \approx <var name="$prob" /></m> times as likely to begin with <m>1</m> than with <m><var name="$digit" /></m>.</p>
-          </solution>
-        </webwork>
-      </exercise>
+              </setup>
+              <statement>
+                <p>
+                  <url href="https://en.wikipedia.org/wiki/Benford%27s_law">Benford's Law</url>
+                  (discovered by astronomer Simon Newcomb)
+                  is an observation about large sets of multi-digit numbers.
+                  In particular,
+                  it says that the first digit of a number is more likely to be a <m>1</m> than a <m>2</m>,
+                  more likely to be <m>2</m> than <m>3</m>, etc.
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  Newcomb modeled this phenomenon by the function
+                  <me>
+                    p(n) = 100 \log_{10} \left(1+\frac{1}{n}\right)
+                  </me>
+                  which gives the percent of numbers that begin with the digit <m>n</m>.
+                  Here, the domain of <m>p</m> is just the set of whole numbers <m>\{1,2,3, \cdots , 9\}</m>.
+                </p>
+
+                <p>
+                  According to Benford's Law,
+                  about how many times as likely is it for a number to begin with the digit <m>1</m> as it is to begin with the digit <var name="$digit" />?
+                  Round your answer to the nearest whole number.
+                </p>
+
+                <p>
+                  Answer:
+                  <var name="$prob" width="10" />
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  About <m>100 \log_{10}\left(1 + \frac{1}{1}\right) \approx 30.1 \%</m> of numbers begin with the digit <m>1</m>,
+                  and about <m>100 \log_{10} \left(1 + \frac{1}{<var name="$digit" />}\right) \approx <var name="$rounded" /> \%</m> of numbers begin with the digit <var name="$digit" />.
+                </p>
+
+                <p>
+                  So, it is about <m>\frac{30.1}{<var name="$rounded" />} \approx <var name="$prob" /></m> times as likely to begin with <m>1</m> than with <m><var name="$digit" /></m>.
+                </p>
+              </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $percent=random(12,16,1)/10;
               Context()->variables->are(t=>'Real');
@@ -859,37 +1623,74 @@
               $years=sprintf("%.1f",log(2800/1500)/log(1+$percent/100));
               $t=Compute("log(2800/1500)/log($b)");
             </pg-code>
-          </setup>
-          <stage>
-            <statement>
-              <p>You deposit <m>1500</m> dollars into a savings account that earns <var name="$percent" /> percent interest per year.</p>
-              <p>Write a formula to model the amount of money, <m>B(t)</m>, in the account after <m>t</m> years.</p>
-              <p>Answer:  <m>B(t) = </m><var name="$formula" width="15" /></p>
-            </statement>
-            <hint><p>An exponential function can be written in the form: <m>B(t) = a(b)^t</m></p></hint>
-            <solution>
-              <p><m>B(t) = <var name="$formula" /></m></p>
-            </solution>
-          </stage>
-          <stage>
-            <statement>
-              <p>The formula <me>B(t) = <var name="$formula" /></me> calculates the balance in your account. Determine how many years until the balance is <m>2800</m> dollars. Round your answer to the nearest tenth of a year.</p>
-              <p>Answer: <var name="$years" width="10" /> years</p>
-            </statement>
-            <hint><p>You must solve the equation: <m>2800 = <var name="$formula" /></m></p></hint>
-            <solution>
-              <p><md>
-                <mrow>t \amp= \frac{\log\left(\frac{2800}{1500}\right)}{\log(<var name="$b" />)}</mrow>
-                <mrow>\amp\approx <var name="$years" />\text{ years}</mrow>
-              </md></p>
-            </solution>
-          </stage>
-        </webwork>
-      </exercise>
+              </setup>
+              <stage>
+              <statement>
+                <p>
+                  You deposit <m>1500</m> dollars into a savings account that earns <var name="$percent" /> percent interest per year.
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  Write a formula to model the amount of money, <m>B(t)</m>,
+                  in the account after <m>t</m> years.
+                </p>
+
+                <p>
+                  Answer:
+                  <m>B(t) = </m><var name="$formula" width="15" />
+                </p>
+              </statement>
+              <hint>
+                <p>
+                  An exponential function can be written in the form:
+                  <m>B(t) = a(b)^t</m>
+                </p>
+              </hint>
+              <solution>
+                <p>
+                  <m>B(t) = <var name="$formula" /></m>
+                </p>
+              </solution>
+              </stage>
+              <stage>
+              <statement>
+                <p>
+                  The formula
+                  <me>
+                    B(t) = <var name="$formula" />
+                  </me>
+                  calculates the balance in your account.
+                  Determine how many years until the balance is <m>2800</m> dollars.
+                  Round your answer to the nearest tenth of a year.
+                </p>
+
+                <p>
+                  Answer:
+                  <var name="$years" width="10" /> years
+                </p>
+              </statement>
+              <hint>
+                <p>
+                  You must solve the equation:
+                  <m>2800 = <var name="$formula" /></m>
+                </p>
+              </hint>
+              <solution>
+                <p>
+                  <md>
+                    <mrow>t \amp= \frac{\log\left(\frac{2800}{1500}\right)}{\log(<var name="$b" />)}</mrow>
+                    <mrow>\amp\approx <var name="$years" />\text{ years}</mrow>
+                  </md>
+                </p>
+              </solution>
+              </stage>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $percent=random(6,9,1);
               Context()->variables->are(t=>'Real');
@@ -897,102 +1698,229 @@
               $b=Compute("1-$percent/100");
               $years=sprintf("%.1f",log(0.5)/log($b));
             </pg-code>
-          </setup>
-          <stage>
-            <statement>
-              <p>The population of a city begins at <m>40000</m> people, and it is expected to decrease by <var name="$percent" /> percent per year.</p>
-              <p>Write a formula to model the population, <m>P(t)</m>, in the city after <m>t</m> years.</p>
-              <p>Answer:  <m>P(t) = </m><var name="$formula" width="15" /></p>
-            </statement>
-            <hint><p>An exponential function can be written in the form: <m>B(t) = a(b)^t</m></p></hint>
-            <solution>
-              <p><m>P(t) = <var name="$formula" /></m></p>
-            </solution>
-          </stage>
-          <stage>
-            <statement>
-              <p>The formula <me>P(t) = <var name="$formula" /></me> calculates the projected population of the city. Determine how many years until the projected population is <m>20000</m> people. Round your answer to the nearest tenth of a year.</p>
-              <p>Answer: <var name="$years" width="10" /> years</p>
-            </statement>
-            <hint><p>You must solve the equation: <m>20000 = <var name="$formula" /></m></p></hint>
-            <solution>
-              <p><md>
-                <mrow>t \amp= \frac{\log\left(\frac{20000}{40000}\right)}{\log(<var name="$b" />)}</mrow>
-                <mrow>\amp\approx <var name="$years" />\text{ years}</mrow>
-              </md></p>
-            </solution>
-          </stage>
-        </webwork>
-      </exercise>
+              </setup>
+              <stage>
+              <statement>
+                <p>
+                  The population of a city begins at <m>40000</m> people,
+                  and it is expected to decrease by <var name="$percent" /> percent per year.
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  Write a formula to model the population, <m>P(t)</m>,
+                  in the city after <m>t</m> years.
+                </p>
+
+                <p>
+                  Answer:
+                  <m>P(t) = </m><var name="$formula" width="15" />
+                </p>
+              </statement>
+              <hint>
+                <p>
+                  An exponential function can be written in the form:
+                  <m>B(t) = a(b)^t</m>
+                </p>
+              </hint>
+              <solution>
+                <p>
+                  <m>P(t) = <var name="$formula" /></m>
+                </p>
+              </solution>
+              </stage>
+              <stage>
+              <statement>
+                <p>
+                  The formula
+                  <me>
+                    P(t) = <var name="$formula" />
+                  </me>
+                  calculates the projected population of the city.
+                  Determine how many years until the projected population is <m>20000</m> people.
+                  Round your answer to the nearest tenth of a year.
+                </p>
+
+                <p>
+                  Answer:
+                  <var name="$years" width="10" /> years
+                </p>
+              </statement>
+              <hint>
+                <p>
+                  You must solve the equation:
+                  <m>20000 = <var name="$formula" /></m>
+                </p>
+              </hint>
+              <solution>
+                <p>
+                  <md>
+                    <mrow>t \amp= \frac{\log\left(\frac{20000}{40000}\right)}{\log(<var name="$b" />)}</mrow>
+                    <mrow>\amp\approx <var name="$years" />\text{ years}</mrow>
+                  </md>
+                </p>
+              </solution>
+              </stage>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $bRounded=sprintf("%.2f",4/(log(9)/log(2)));
               $options=Real(26);
             </pg-code>
-          </setup>
-          <stage>
-            <statement>
-              <p><url href="https://en.wikipedia.org/wiki/Hick%27s_law">Hick's Law</url> (named for psychologist William Edmund Hick) says that when people must make a choice from a set of options, the time it takes them increases <em>logarithmically</em> as the number of possible options increases.</p>
-              <p>In particular, the law says that the time, <m>T</m>, it takes to make a choice can be modeled by the equation <me>T = b \log_2(n+1)</me> where <m>n</m> represents the number of options from which to choose, and <m>b</m> is a constant number related to factors such as the type of decision being made.</p>
-              <p>Suppose a software program has a drop-down menu with <m>8</m> different command options. Suppose it takes a user <m>4</m> seconds to make their choice from the drop-down menu. What is the value of the constant <m>b</m>? Give your answer to the nearest hundredth.</p>
-              <p>Answer:  <m>b \approx </m><var name="$bRounded" width="10" /></p>
-            </statement>
-            <solution>
-              <p>Solve for <m>b</m>:<md>
-              <mrow>b \log_2(8+1) \amp= 4</mrow>
-              <mrow>b \amp= \frac{4}{\log_2(8+1)}</mrow>
-              <mrow>\amp \approx 1.26</mrow></md></p>
-            </solution>
-          </stage>
-          <stage>
-            <statement>
-              <p>Using the value <m>b = <var name="$bRounded" /></m>, suppose the software designers decided that users should spend no more than <m>6</m> seconds to make their choice on the drop-down menu. How many choices can they put in the menu without going over the <m>6</m> second maximum?</p>
-              <p>Answer: <var name="$options" width="10" /> options.</p>
-            </statement>
-            <solution>
-              <p>We can solve for <m>n</m> by setting <m>T = 6</m>: <md>
-              <mrow>6 \amp= 1.26 \log_2(n+1)</mrow>
-              <mrow>\frac{6}{1.26} \amp= log_2(n+1)</mrow>
-              <mrow>2^{\frac{6}{1.26}} \amp= n + 1</mrow>
-              <mrow>n \amp= 2^{\frac{6}{1.26}}-1</mrow>
-              <mrow>\amp\approx 26</mrow></md></p>
-            </solution>
-          </stage>
-        </webwork>
-      </exercise>
+              </setup>
+              <stage>
+              <statement>
+                <p>
+                  <url href="https://en.wikipedia.org/wiki/Hick%27s_law">Hick's Law</url>
+                  (named for psychologist William Edmund Hick)
+                  says that when people must make a choice from a set of options,
+                  the time it takes them increases
+                  <em>logarithmically</em>
+                  as the number of possible options increases.
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  In particular, the law says that the time, <m>T</m>,
+                  it takes to make a choice can be modeled by the equation
+                  <me>
+                    T = b \log_2(n+1)
+                  </me>
+                  where <m>n</m> represents the number of options from which to choose,
+                  and <m>b</m> is a constant number related to factors such as the type of decision being made.
+                </p>
+
+                <p>
+                  Suppose a software program has a drop-down menu with <m>8</m> different command options.
+                  Suppose it takes a user <m>4</m> seconds to make their choice from the drop-down menu.
+                  What is the value of the constant <m>b</m>?
+                  Give your answer to the nearest hundredth.
+                </p>
+
+                <p>
+                  Answer:
+                  <m>b \approx </m><var name="$bRounded" width="10" />
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Solve for <m>b</m>:
+                  <md>
+                    <mrow>b \log_2(8+1) \amp= 4</mrow>
+                    <mrow>b \amp= \frac{4}{\log_2(8+1)}</mrow>
+                    <mrow>\amp \approx 1.26</mrow>
+                  </md>
+                </p>
+              </solution>
+              </stage>
+              <stage>
+              <statement>
+                <p>
+                  Using the value <m>b = <var name="$bRounded" /></m>,
+                  suppose the software designers decided that users should spend no more than <m>6</m> seconds to make their choice on the drop-down menu.
+                  How many choices can they put in the menu without going over the <m>6</m> second maximum?
+                </p>
+
+                <p>
+                  Answer:
+                  <var name="$options" width="10" /> options.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  We can solve for <m>n</m> by setting <m>T = 6</m>:
+                  <md>
+                    <mrow>6 \amp= 1.26 \log_2(n+1)</mrow>
+                    <mrow>\frac{6}{1.26} \amp= log_2(n+1)</mrow>
+                    <mrow>2^{\frac{6}{1.26}} \amp= n + 1</mrow>
+                    <mrow>n \amp= 2^{\frac{6}{1.26}}-1</mrow>
+                    <mrow>\amp\approx 26</mrow>
+                  </md>
+                </p>
+              </solution>
+              </stage>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $note=PopUp(["?","A","B","C","D","E","F"],"C");
             </pg-code>
-          </setup>
-          <statement>
-            <p>The frequency of a musical tone defines the pitch we hear, which we may give a note value (such as G or D<hash />). Mathematically, frequency is measured in <em>hertz</em>. A higher number of hertz for a tone means the tone sounds higher.</p>
-            <p>On a piano, we have the following notes: <em>A, A<hash />, B, C, C<hash />, D, D<hash />, E, F, F<hash />, G, G<hash />, A</em>. This is called one <em>octave</em> of notes, and these same notes repeat in the next octave (just at higher frequencies). We call the distance between successive notes in an octave a <em>semitone</em>. So, the distance from <em>A</em> to <em>C</em> is <m>3</m> semitones, and the distance between <em>A</em> and the next <em>A</em> is <m>12</m> semitones.</p>
-            <p>Now, the note <em>middle A</em> has a frequency of <m>440</m> Hertz. To calculate the frequency of a note, we use the formula <me>F(x) = 440(2)^{x/12}</me> where <m>x</m> is the number of semitones a note is above middle <em>A</em>.</p>
-            <p>What note has a frequency of <m>1046.5</m> Hertz?</p>
-            <p>Answer: <var name="$note" form="popup" /></p>
-          </statement>
-          <solution>
-            <p>Setting the frequency equal to <m>1046.5</m>, we can solve for <m>x</m>: <md>
-            <mrow>1046.5 \amp= 440(2)^{x/12}</mrow>
-            <mrow>\frac{1046.5}{440} \amp= 2^{x/12}</mrow>
-            <mrow>\ln\left(\frac{1046.5}{440}\right) \amp= \frac{x}{12}\ln(2)</mrow>
-            <mrow>x \amp= \frac{12}{\ln(2)}\ln\left(\frac{1046.5}{440}\right)</mrow>
-            <mrow>\amp \approx 15</mrow></md></p>
-            <p>The note is <m>15</m> semitones above middle <em>A</em>. Since the next <em>A</em> is <em>12</em> semitones above middle <em>A</em>, those extra <m>3</m> semitones mean we are at the note <em>C</em>.</p>
-          </solution>
-        </webwork>
-      </exercise>
+              </setup>
+              <statement>
+                <p>
+                  The frequency of a musical tone defines the pitch we hear,
+                  which we may give a note value
+                  (such as G or D<hash />).
+                  Mathematically, frequency is measured in <em>hertz</em>.
+                  A higher number of hertz for a tone means the tone sounds higher.
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  On a piano, we have the following notes:
+                  <em>A, A<hash />, B, C, C<hash />, D, D<hash />, E, F, F<hash />, G, G<hash />, A</em>.
+                  This is called one <em>octave</em> of notes,
+                  and these same notes repeat in the next octave
+                  (just at higher frequencies).
+                  We call the distance between successive notes in an octave a <em>semitone</em>.
+                  So, the distance from <em>A</em>
+                  to <em>C</em> is <m>3</m> semitones,
+                  and the distance between <em>A</em>
+                  and the next <em>A</em> is <m>12</m> semitones.
+                </p>
+
+                <p>
+                  Now, the note <em>middle A</em>
+                  has a frequency of <m>440</m> Hertz.
+                  To calculate the frequency of a note, we use the formula
+                  <me>
+                    F(x) = 440(2)^{x/12}
+                  </me>
+                  where <m>x</m> is the number of semitones a note is above middle <em>A</em>.
+                </p>
+
+                <p>
+                  What note has a frequency of <m>1046.5</m> Hertz?
+                </p>
+
+                <p>
+                  Answer:
+                  <var name="$note" form="popup" />
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Setting the frequency equal to <m>1046.5</m>,
+                  we can solve for <m>x</m>:
+                  <md>
+                    <mrow>1046.5 \amp= 440(2)^{x/12}</mrow>
+                    <mrow>\frac{1046.5}{440} \amp= 2^{x/12}</mrow>
+                    <mrow>\ln\left(\frac{1046.5}{440}\right) \amp= \frac{x}{12}\ln(2)</mrow>
+                    <mrow>x \amp= \frac{12}{\ln(2)}\ln\left(\frac{1046.5}{440}\right)</mrow>
+                    <mrow>\amp \approx 15</mrow>
+                  </md>
+                </p>
+
+                <p>
+                  The note is <m>15</m> semitones above middle <em>A</em>.
+                  Since the next <em>A</em> is <em>12</em>
+                  semitones above middle <em>A</em>,
+                  those extra <m>3</m> semitones mean we are at the note <em>C</em>.
+                </p>
+              </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               @people=(30,38,41,49,57,68);
               $index=random(1,5,1);
@@ -1000,169 +1928,279 @@
               $rejected=$choices/2.718281828459045;
               $rejectedRounded=sprintf("%.0f",$rejected);
             </pg-code>
-          </setup>
-          <statement>
-            <p>A famous application involving the number <m>e</m> comes from <url href="https://en.wikipedia.org/wiki/Optimal_stopping">Optimal Stopping</url> theory. Known as the <url href="https://en.wikipedia.org/wiki/Secretary_problem">Best Choice Problem</url>, it concerns hiring someone for a job under the following conditions:</p>
-            <p><ul>
-              <li><p>You have <m>n</m> people to interview.</p></li>
-              <li><p>You interview them one-by-one.</p></li>
-              <li><p>After each person is interviewed, you must immediately make the decision of whether to hire them or not. If you hire them, you're done and you cannot interview anymore candidates.</p></li>
-              <li><p>If you reject a candidate (decide <em>not</em> to hire them), you can't change your mind later.</p></li>
-            </ul></p>
-            <p>Under these conditions, you may wonder how to actually choose the best person for the job. If you choose a good candidate early on, you may miss the opportunity to hire a really <em>great</em> candidate later down the line. If you wait too long, you may only be left with mediocre candidates from which to choose.</p>
-            <p>The solution is to interview the first <m>\frac{n}{e}</m> candidates but reject <em>all</em> of them, regardless of their qualifications. Then, continue interviewing candidates until you find the first one that is <q>better</q> than the first group you rejected. Hire this person.</p>
-            <p>Interestingly, this simple rule has been shown to find the best candidate in a group approximately <m>37 \%</m> of the time, no matter the size of the group!</p>
-            <p>Question: Suppose a group of people line up to be chosen as an <url href="https://en.wikipedia.org/wiki/Extra_(acting)">extra</url> in a movie. The casting director only has time to interview people one at a time and make a decision: yes or no.</p>
-            <p>Suppose the casting director is familiar with the <em>Best Choice Problem</em>, and she interviews and rejects the first <m><var name="$rejectedRounded" /></m> people in line. How many people are in line? Round your answer to the closest whole number.</p>
-            <p>Answer: There were <var name="$choices" width="10" /> total people.</p>
-          </statement>
-          <solution>
-            <p>Because she rejected <var name="$rejectedRounded" /> people, we solve the equation:
-              <md>
-                <mrow>\text{Rejected} \amp= \frac{\text{Total}}{e}</mrow>
-                <mrow><var name="$rejectedRounded" /> \amp= \frac{\text{Total}}{e}</mrow>
-                <mrow>\text{Total} \amp= <var name="$rejectedRounded" />e</mrow>
-                <mrow>\amp\approx <var name="$choices" /></mrow>
-              </md>
-            </p>
-          </solution>
-        </webwork>
-      </exercise>
+              </setup>
+              <statement>
+                <p>
+                  A famous application involving the number <m>e</m> comes from
+                  <url href="https://en.wikipedia.org/wiki/Optimal_stopping">Optimal Stopping</url>
+                  theory.
+                  Known as the <url href="https://en.wikipedia.org/wiki/Secretary_problem">Best Choice Problem</url>,
+                  it concerns hiring someone for a job under the following conditions:
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        You have <m>n</m> people to interview.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        You interview them one-by-one.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        After each person is interviewed,
+                        you must immediately make the decision of whether to hire them or not.
+                        If you hire them,
+                        you're done and you cannot interview anymore candidates.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If you reject a candidate
+                        (decide <em>not</em> to hire them),
+                        you can't change your mind later.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+
+                <p>
+                  Under these conditions,
+                  you may wonder how to actually choose the best person for the job.
+                  If you choose a good candidate early on,
+                  you may miss the opportunity to hire a really <em>great</em>
+                  candidate later down the line.
+                  If you wait too long,
+                  you may only be left with mediocre candidates from which to choose.
+                </p>
+
+                <p>
+                  The solution is to interview the first
+                  <m>\frac{n}{e}</m> candidates but reject <em>all</em> of them,
+                  regardless of their qualifications.
+                  Then, continue interviewing candidates until you find the first one that is <q>better</q>
+                  than the first group you rejected.
+                  Hire this person.
+                </p>
+
+                <p>
+                  Interestingly,
+                  this simple rule has been shown to find the best candidate in a group approximately <m>37 \%</m> of the time,
+                  no matter the size of the group!
+                </p>
+
+                <p>
+                  Question:
+                  Suppose a group of people line up to be chosen as an
+                  <url href="https://en.wikipedia.org/wiki/Extra_(acting)">extra</url>
+                  in a movie.
+                  The casting director only has time to interview people one at a time and make a decision:
+                  yes or no.
+                </p>
+
+                <p>
+                  Suppose the casting director is familiar with the
+                  <em>Best Choice Problem</em>,
+                  and she interviews and rejects the first <m><var name="$rejectedRounded" /></m> people in line.
+                  How many people are in line?
+                  Round your answer to the closest whole number.
+                </p>
+
+                <p>
+                  Answer:
+                  There were <var name="$choices" width="10" /> total people.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Because she rejected <var name="$rejectedRounded" /> people,
+                  we solve the equation:
+                  <md>
+                    <mrow>\text{Rejected} \amp= \frac{\text{Total}}{e}</mrow>
+                    <mrow><var name="$rejectedRounded" /> \amp= \frac{\text{Total}}{e}</mrow>
+                    <mrow>\text{Total} \amp= <var name="$rejectedRounded" />e</mrow>
+                    <mrow>\amp\approx <var name="$choices" /></mrow>
+                  </md>
+                </p>
+              </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $rate=random(3,8,1)/100;
               $initial=random(3,7,1)*1000;
               $years=Compute("ln(2)/$rate");
             </pg-code>
-          </setup>
-          <statement>
-            <p>Suppose a population is given by
-              <me>
-                P(t) = <var name="$initial" />e^{<var name="$rate" />t}
-              </me>
-              where <m>t</m> is measured in years from now. Determine when the population doubles.
-            </p>
-            <p>Answer: <var name="$years" width="10" /> years</p>
-          </statement>
-          <solution>
-            <p>We will solve the equation: <m><var name="$initial" />e^{<var name="$rate" />t} = 2\cdot<var name="$initial" /></m></p>
-            <p>
-              <md>
-                <mrow>e^{<var name="$rate" />t} \amp= 2</mrow>
-                <mrow><var name="$rate" />t \amp= ln(2)</mrow>
-                <mrow>t \amp= \frac{ln(2)}{<var name="$rate" />}</mrow>
-                <mrow>\amp\approx <var name="$years" /></mrow>
-              </md>
-            </p>
-          </solution>
-        </webwork>
-      </exercise>
+              </setup>
+              <statement>
+                <p>
+                  Suppose a population is given by
+                  <me>
+                    P(t) = <var name="$initial" />e^{<var name="$rate" />t}
+                  </me>
+                  where <m>t</m> is measured in years from now.
+                  Determine when the population doubles.
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  Answer:
+                  <var name="$years" width="10" /> years
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  We will solve the equation:
+                  <m><var name="$initial" />e^{<var name="$rate" />t} = 2\cdot<var name="$initial" /></m>
+                </p>
+
+                <p>
+                  <md>
+                    <mrow>e^{<var name="$rate" />t} \amp= 2</mrow>
+                    <mrow><var name="$rate" />t \amp= ln(2)</mrow>
+                    <mrow>t \amp= \frac{ln(2)}{<var name="$rate" />}</mrow>
+                    <mrow>\amp\approx <var name="$years" /></mrow>
+                  </md>
+                </p>
+              </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $rateF=random(6,9,1);
               $rateG=random(3,5,1);
               $solution=Compute("ln(450/700)/ln((1+$rateG/100)/(1+$rateF/100))");
             </pg-code>
-          </setup>
-          <statement>
-            <p>
-              Suppose <m>f(t)</m> has an initial value of <m>450</m> and increases by <var name="$rateF" /> <m>\%</m> per year, and <m>g(t)</m> has an initial value of <m>700</m> and increases at only <var name="$rateG" /> <m>\%</m> per year. Determine when the two functions are equal.
-            </p>
-            <p>
-              Answer: <m>t = </m><var name="$solution" width="10" />
-            </p>
-          </statement>
-          <hint>
-            <p>
-              What is the equation for each function? You must find these formulas and set them equal.
-            </p>
-          </hint>
-          <solution>
-            <p>
-              <m>\frac{\ln\left(\frac{450}{700}\right)}{\ln\left((1+<var name="$rateG" />/100)/(1+<var name="$rateF" />/100)\right)} \approx <var name="$solution" /></m>
-            </p>
-          </solution>
-        </webwork>
-      </exercise>
+              </setup>
+              <statement>
+                <p>
+                  Suppose <m>f(t)</m> has an initial value of <m>450</m> and increases by <var name="$rateF" /> <m>\%</m> per year,
+                  and <m>g(t)</m> has an initial value of <m>700</m> and increases at only <var name="$rateG" /> <m>\%</m> per year.
+                  Determine when the two functions are equal.
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  Answer:
+                  <m>t = </m><var name="$solution" width="10" />
+                </p>
+              </statement>
+              <hint>
+                <p>
+                  What is the equation for each function?
+                  You must find these formulas and set them equal.
+                </p>
+              </hint>
+              <solution>
+                <p>
+                  <m>\frac{\ln\left(\frac{450}{700}\right)}{\ln\left((1+<var name="$rateG" />/100)/(1+<var name="$rateF" />/100)\right)} \approx <var name="$solution" /></m>
+                </p>
+              </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $rate=random(55,75,1)/10;
               $initial=random(55,85,1)*100;
               $k=Compute("ln(1+$rate/100)");
             </pg-code>
-          </setup>
-          <statement>
-            <p>
-              The value of an asset is increasing by <var name="$rate" /><m>\%</m> per year and has an intial value of <m>\$</m><var name="$initial" />.
-            </p>
-            <p>
-              The value of the asset can be written in the form <m>Ae^{kt}</m>. Find the value of <m>k</m>.
-            </p>
-            <p>
-              Answer: <m>k = </m><var name="$k" width="10" />
-            </p>
-          </statement>
-          <solution>
-            <p>
-              The equation for the asset's value is:  <m><var name="$initial" />\left(1 + \frac{<var name="$rate" />}{100}\right)^t</m>
-            </p>
-            <p>
-              We must rewrite this as <m>Ae^{kt}</m>, so we set these expressions equal and solve for <m>k</m>:
-            </p>
-            <p>
-              <md>
-                <mrow><var name="$initial" />e^{kt} \amp= <var name="$initial" />\left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
-                <mrow>e^{kt} \amp= \left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
-                <mrow>\left(e^k\right)^t \amp= \left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
-                <mrow>e^k \amp= 1 + \frac{<var name="$rate" />}{100}</mrow>
-                <mrow>k \amp= \ln\left(\frac{<var name="$rate" />}{100}\right)</mrow>
-                <mrow>\amp\approx <var name="$k" /></mrow>
-              </md>
-            </p>
-          </solution>
-        </webwork>
-      </exercise>
+              </setup>
+              <statement>
+                <p>
+                  The value of an asset is increasing by <var name="$rate" /><m>\%</m> per year and has an intial value of <m>\$</m><var name="$initial" />.
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  The value of the asset can be written in the form <m>Ae^{kt}</m>.
+                  Find the value of <m>k</m>.
+                </p>
+
+                <p>
+                  Answer:
+                  <m>k = </m><var name="$k" width="10" />
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  The equation for the asset's value is:
+                  <m><var name="$initial" />\left(1 + \frac{<var name="$rate" />}{100}\right)^t</m>
+                </p>
+
+                <p>
+                  We must rewrite this as <m>Ae^{kt}</m>,
+                  so we set these expressions equal and solve for <m>k</m>:
+                </p>
+
+                <p>
+                  <md>
+                    <mrow><var name="$initial" />e^{kt} \amp= <var name="$initial" />\left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
+                    <mrow>e^{kt} \amp= \left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
+                    <mrow>\left(e^k\right)^t \amp= \left(1 + \frac{<var name="$rate" />}{100}\right)^t</mrow>
+                    <mrow>e^k \amp= 1 + \frac{<var name="$rate" />}{100}</mrow>
+                    <mrow>k \amp= \ln\left(\frac{<var name="$rate" />}{100}\right)</mrow>
+                    <mrow>\amp\approx <var name="$k" /></mrow>
+                  </md>
+                </p>
+              </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $left=random(30,50,1);
               $k=Compute("ln($left/100)/1000");
             </pg-code>
-          </setup>
-          <statement>
-            <p>
-              Suppose a value is decaying, and <var name="$left" /><m>\%</m> remains after <m>1000</m> years. The amount of the substance can be modeled by the function
-              <me>
-                f(t) = Ae^{kt}
-              </me>
-              where <m>A</m> is the initial amount, <m>t</m> is the number of years, and the constant <m>k</m> is the <em>continuous rate of decay</em>. Find the value of <m>k</m>.
-            </p>
-            <p>
-              Answer: <m>k = </m><var name="$k" width="10" />
-            </p>
-          </statement>
-          <solution>
-            <p>
-              <md>
-                <mrow>k \amp= \ln\left(\frac{0.<var name="$left" />}{1000}\right)</mrow>
-                <mrow>\amp\approx <var name="$k" /></mrow>
-              </md>
-            </p>
-          </solution>
-        </webwork>
-      </exercise>
+              </setup>
+              <statement>
+                <p>
+                  Suppose a value is decaying,
+                  and <var name="$left" /><m>\%</m> remains after <m>1000</m> years.
+                  The amount of the substance can be modeled by the function
+                  <me>
+                    f(t) = Ae^{kt}
+                  </me>
+                  where <m>A</m> is the initial amount,
+                  <m>t</m> is the number of years,
+                  and the constant <m>k</m> is the
+                  <em>continuous rate of decay</em>.
+                  Find the value of <m>k</m>.
+                </p>
 
+                <p>
+                  Answer:
+                  <m>k = </m><var name="$k" width="10" />
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  <md>
+                    <mrow>k \amp= \ln\left(\frac{0.<var name="$left" />}{1000}\right)</mrow>
+                    <mrow>\amp\approx <var name="$k" /></mrow>
+                  </md>
+                </p>
+              </solution>
+          </webwork>
+        </exercise>
 <!-- This problem returns the error: Can't generate enough valid points for comparison
       <exercise>
         <webwork>
@@ -1192,10 +2230,10 @@
         </webwork>
       </exercise>
 -->
+        <exercise>
+          <webwork>
+              <setup>
 
-      <exercise>
-        <webwork>
-          <setup>
             <pg-code>
               $halfLife=random(25,45,1);
               $initial=random(50,150,1);
@@ -1203,132 +2241,166 @@
               $formula=Compute("$initial*(0.5)^(t/$halfLife)");
               $hours=Compute("ln(10/$initial)/ln(0.5)*$halfLife");
             </pg-code>
-          </setup>
-          <statement>
-            <p>
-              A highly unstable element has a half-life of <var name="$halfLife" /> hours. This means that every <var name="$halfLife" /> hours, half of the element decays, leaving only half of the previous amount.
-            </p>
-            <p>
-              Suppose we start with <var name="$initial" /> grams of the element.
-            </p>
-            <p>
-              <ol label="a">
-                <li>
-                  <p>
-                    Write a function, <m>f(t)</m>, for the amount of the element left after <m>t</m> hours.
-                  </p>
-                  <p>
-                    Answer:  <m>f(t) = </m><var name="$formula" width="15" />
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Determine when the amount of the element remaining drops below <m>10</m> grams.
-                  </p>
-                  <p>
-                    Answer:  <var name="$hours" width="10" /> hours
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </statement>
-          <solution>
-            <p>
-              <ol label="a">
-                <li>
-                  <p>
-                    <m>f(t) = <var name="$formula" /></m>
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <m><var name="$hours" /></m> hours
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </solution>
-        </webwork>
-      </exercise>
+              </setup>
+              <statement>
+                <p>
+                  A highly unstable element has a half-life of <var name="$halfLife" /> hours.
+                  This means that every <var name="$halfLife" /> hours,
+                  half of the element decays, leaving only half of the previous amount.
+                </p>
 
-      <exercise>
-        <webwork>
-          <setup>
+                <p>
+                  Suppose we start with <var name="$initial" /> grams of the element.
+                </p>
+
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>
+                        Write a function, <m>f(t)</m>,
+                        for the amount of the element left after <m>t</m> hours.
+                      </p>
+
+                      <p>
+                        Answer:
+                        <m>f(t) = </m><var name="$formula" width="15" />
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Determine when the amount of the element remaining drops below <m>10</m> grams.
+                      </p>
+
+                      <p>
+                        Answer:
+                        <var name="$hours" width="10" /> hours
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>
+                        <m>f(t) = <var name="$formula" /></m>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m><var name="$hours" /></m> hours
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+          </webwork>
+        </exercise>
+
+        <exercise>
+          <webwork>
+              <setup>
+
             <pg-code>
               $cells=Compute("10^6*e^(0.495105)");
               $cellsRounded=sprintf("%.0f",$cells);
               $true=PopUp(["?","True","False"],"True");
               $concern=PopUp(["?","Yes, because her equation is different from yours.","No, because your formulas are equivalent."],"No, because your formulas are equivalent.");
             </pg-code>
-          </setup>
-          <statement>
-            <p>
-              A colony of yeast cells is estimated to contain <m>10^6</m> cells at time <m>t = 0</m>. After collecting data in the lab, you decide that the population of cells after <m>t</m> hours can be modeled by the function
-              <me>
-                P(t) = 10^6e^{0.495105t}
-              </me>
-            </p>
-            <p>
-              <ol label="a">
-                <li>
-                  <p>
-                    How many cells should be present after <m>1</m> hour? Round your answer to the nearest whole number of cells.
-                  </p>
-                  <p>
-                    Answer: <var name="$cellsRounded" width="10" /> cells
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    True or False: The population of cells will double after <m>1.4</m> hours.
-                  </p>
-                  <p>
-                    Answer: <var name="$true" form="popup" />
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Your lab partner, Latania, looks at your notebook and says...<em>Your equation is wrong. My calculations show that the population could be modeled by the equation:</em>
-                    <me>
-                      P(t) = 10^6(2.042727)^{0.693147t}
-                    </me>
-                  </p>
-                  <p>
-                    Should you be worried by Latania's comment?
-                  </p>
-                  <p>
-                    Answer: <var name="$concern" form="popup" />
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </statement>
-          <solution>
-            <p>
-              <ol label="a">
-                <li>
-                  <p>
-                    There will be about <var name="$cellsRounded" /> cells.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    True, because after <m>1.4</m> hours there will be <m>10^6*e^{0.495105*1.4} \approx 2*10^6</m> cells.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    No, you shouldn't be concerned, because your formulas are equivalent. Check this by evaluating Latania's formula at <m>t=1.4</m>. The result is still about <m>2*10^6</m> cells.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </solution>
-        </webwork>
-      </exercise>
+              </setup>
+              <statement>
+                <p>
+                  A colony of yeast cells is estimated to contain <m>10^6</m> cells at time <m>t = 0</m>.
+                  After collecting data in the lab,
+                  you decide that the population of cells after <m>t</m> hours can be modeled by the function
+                  <me>
+                    P(t) = 10^6e^{0.495105t}
+                  </me>
+                </p>
 
-</exercisegroup>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>
+                        How many cells should be present after <m>1</m> hour?
+                        Round your answer to the nearest whole number of cells.
+                      </p>
 
+                      <p>
+                        Answer:
+                        <var name="$cellsRounded" width="10" /> cells
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        True or False:
+                        The population of cells will double after <m>1.4</m> hours.
+                      </p>
+
+                      <p>
+                        Answer:
+                        <var name="$true" form="popup" />
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Your lab partner, Latania,
+                        looks at your notebook and says...<em>Your equation is wrong.
+                        My calculations show that the population could be modeled by the equation:</em>
+                        <me>
+                          P(t) = 10^6(2.042727)^{0.693147t}
+                        </me>
+                      </p>
+
+                      <p>
+                        Should you be worried by Latania's comment?
+                      </p>
+
+                      <p>
+                        Answer:
+                        <var name="$concern" form="popup" />
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  <ol label="a">
+                    <li>
+                      <p>
+                        There will be about <var name="$cellsRounded" /> cells.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        True, because after <m>1.4</m> hours there will be <m>10^6*e^{0.495105*1.4} \approx 2*10^6</m> cells.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        No, you shouldn't be concerned,
+                        because your formulas are equivalent.
+                        Check this by evaluating Latania's formula at <m>t=1.4</m>.
+                        The result is still about <m>2*10^6</m> cells.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+          </webwork>
+        </exercise>
+
+      </exercisegroup>
     </exercises>
-    </section>
+  </section>
+
 </chapter>
+
