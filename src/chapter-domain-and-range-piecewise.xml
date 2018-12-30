@@ -650,6 +650,10 @@
         <em>Define, distinguish, and apply piecewise-defined functions.</em>
       </p>
 
+      <p>
+        Determine from a graph or an equation whether a function is continuous or discontinuous.
+      </p>
+
       <exercise>
         <webwork>
             <setup>
@@ -777,8 +781,8 @@
             <pg-code>
               $ans1=Real(3);
               $ans2=Real(2);
-              $ans3=PopUp(["?","one","two","three","infinitely many"],"two");
-              $ans4=PopUp(["?","one","two","three","infinitely many"],"infinitely many");
+              $ans3=PopUp(["?","one","two","three","infinitely many"],"infinitely many");
+              $ans4=PopUp(["?","one","two","three","infinitely many"],"two");
             </pg-code>
             </setup>
             <statement>
@@ -853,24 +857,350 @@
 
                   <li>
                     <p>
-                      Only the first and last parts of the piecewise function can have an output of <m>3</m>,
-                      and they are <m>x = -2</m> and <m>x = 2</m>.
+                      There are infinitely many solutions to <m>f(x) = 2</m>. The first and third parts of
+                      the function have solutions <m>x = -1</m> and <m>x = 1</m>, respectively. The second part
+                      is equal to <m>2</m> for any <m>x</m> value between <m>-1</m> and <m>1</m>.
                     </p>
                   </li>
 
                   <li>
                     <p>
-                      There are infinitely many solutions to <m>f(x) = 2</m>,
-                      because any input between <m>-1</m> and <m>1</m> will give an output of <m>2</m>.
-                      Examples:
-                      <m>x = -0.3546</m> and <m>x = 4/5</m>
+                      Only the first and last parts of the piecewise function can have an output of <m>3</m>,
+                      and they occur when <m>x = -2</m> or <m>x = 2</m>.
                     </p>
                   </li>
+
                 </ol>
               </p>
             </solution>
         </webwork>
       </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr=init_graph(-10,-10,10,10,axes=>[0,0],grid=>[20,20],size=>[240,240]);
+              add_functions($gr, "x-2 for x in &lt;4,10&gt; using color:blue");
+              add_functions($gr, "-2 for x in &lt;-2,1&gt; using color:blue and weight:2");
+              add_functions($gr, "0.25*x-2.5 for x in &lt;-10,-2&gt; using color:blue and weight:2");
+              $gr->stamps( open_circle(-2,-3,'blue'));
+              $gr->stamps( closed_circle(-2,-2,'blue'));
+              $gr->stamps( closed_circle(1,-2,'blue'));
+              $gr->stamps( open_circle(4,2,'blue'));
+              $gr->moveTo(8,6);
+              $gr->arrowTo(10,8,'blue');
+              $gr->moveTo(-8,-4.5);
+              $gr->arrowTo(-10,-5,'blue');
+              $y=Real(3);
+              $xvar=PopUp(["?","x","y"],"x");
+              $xval=Real(-6);
+              $notInDomain=PopUp(["?","0","1","2","3","4","5","infinitely many"],"3");
+              $notInRange=PopUp(["?","0","1","2","3","4","5","infinitely many"],"5");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Consider the function <m>y=g(x)</m> below.
+              <image pg-name="$gr" />
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Evaluate <m>g(5)</m>.  Answer: <var name="$y" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Solve <m>g(x)=-4</m>.  Answer: <var name="$xvar" form="popup" /> <m>=</m> <var name="$xval" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Assuming the graph continues forever in the directions indicated by the arrows,
+                    how many whole numbers are <em>not</em> in the domain of <m>g</m>? Answer: <var name="$notInDomain" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Assuming the graph continues forever in the dirctions indicated by the arrows,
+                    how many whole numbers are <em>not</em> in the range of <m>g</m>? Answer: <var name="$notInRange" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>g(5)=<var name="$y" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>x=<var name="$xval" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The numbers <m>2</m>, <m>3</m> and <m>4</m> are not in the domain.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The numbers <m>-3</m>, <m>-1</m>, <m>0</m>, <m>1</m> and <m>2</m> are not in the range.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr=init_graph(-10,-10,10,10,axes=>[0,0],grid=>[20,20],size=>[240,240]);
+              add_functions($gr, "0.25*(x+4)*(x+4)+2 for x in &lt;-10,-2&gt; using color:blue");
+              add_functions($gr, "0.5*x*x for x in &lt;-2,4&gt; using color:blue and weight:2");
+              add_functions($gr, "6 for x in &lt;4,10&gt; using color:blue and weight:2");
+              $gr->stamps( closed_circle(-2,3,'blue'));
+              $gr->stamps( open_circle(-2,2,'blue'));
+              $gr->stamps( open_circle(4,8,'blue'));
+              $gr->stamps( open_circle(4,6,'blue'));
+              $gr->stamps( open_circle(-4,2,'blue'));
+              $gr->stamps( closed_circle(-4,-1,'blue'));
+              $gr->moveTo(8,6);
+              $gr->arrowTo(10,6,'blue');
+              $gr->moveTo(-9,8);
+              $gr->arrowTo(-9.8,10,'blue');
+              $y1=Real(3);
+              $y2=Compute("DNE");
+              $xvar=PopUp(["?","x","y"],"x");
+              $xval=Real(-9);
+              $solns1=PopUp(["?","0","1","2","3","infinitely many"],"infinitely many");
+              $fillCircle=OneOf("(4,6)","(4,8)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Use the graph of <m>y=h(x)</m> below to answer the questions that follow.
+              If a value does not exist, you should type <em>DNE</em>.
+              <image pg-name="$gr" />
+            </p>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Evaluate <m>h(-2)</m>. Answer: <var name="$y1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Evaluate <m>h(4)</m>. Answer: <var name="$y2" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Solve <m>h(x)=8</m>. Answer: <var name="$xvar" form="popup" /> <m>=</m> <var name="$xval" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Assuming the graph continues forever in the directions indicated by the arrows, how many solutions are there
+                    to the equation <m>h(x)=6</m>? Answer: <var name="$solns1" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Choose a hole in the graph that could be filled and still cause <m>h</m> to be a function of <m>x</m>.
+                    Enter your answer as an <m>(x,y)</m> point.
+                    Answer: <var name="$fillCircle" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $yes=PopUp(["?","yes","no"],"yes");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Consider the function <m>y=f(x)</m> below.
+              <me>
+                f(x) = \left\{
+                \begin{array}{ll}
+                10-x^2 \amp x \leqslant 3 \\
+                4x-11 \amp 3 \lt x \\
+                \end{array}
+                \right.
+              </me>
+            </p>
+
+            <p>
+              Is <m>f</m> continuous at <m>x=3</m>? Answer: <var name="$yes" form="popup" />
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Yes. The function is continuous at <m>x=3</m> because both parts of the function are continuous,
+              and they have the same output of <m>1</m> when <m>x=3</m>.
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $C=Real(7);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Consider the function <m>y=g(x)</m> below.
+              <me>
+                f(x) = \left\{
+                \begin{array}{ll}
+                3x+5 \amp x \leqslant 2 \\
+                x^2+C \amp 2 \lt x \\
+                \end{array}
+                \right.
+              </me>
+            </p>
+
+            <p>
+              Find the correct value of <m>C</m> to make the function <m>g</m> continuous at <m>x=2</m>.
+            </p>
+
+            <p>
+              Answer: <var name="$C" width="10" />
+            </p>
+          </statement>
+          <solution>
+
+            <p>
+              We merely want to make both parts of the function have the same output when <m>x=2</m>,
+              so we evaluate them when <m>x=2</m> and solve the equation:
+              <md>
+                <mrow>3(2) + 5 \amp= (2)^2 + C</mrow>
+                <mrow>11 \amp= 4 + C</mrow>
+                <mrow>C \amp= 11</mrow>
+              </md>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr=init_graph(-10,-10,10,10,axes=>[0,0],grid=>[20,20],size=>[240,240]);
+              add_functions($gr, "x-2 for x in &lt;4,10&gt; using color:blue");
+              add_functions($gr, "4 for x in &lt;-2,1&gt; using color:blue and weight:2");
+              add_functions($gr, "x+4 for x in &lt;-10,-2&gt; using color:blue and weight:2");
+              $gr->stamps( open_circle(-2,2,'blue'));
+              $gr->stamps( closed_circle(-2,4,'blue'));
+              $gr->stamps( closed_circle(1,4,'blue'));
+              $gr->stamps( open_circle(4,2,'blue'));
+              $gr->stamps( closed_circle(-4,0,'blue'));
+              $gr->stamps( closed_circle(6,4,'blue'));
+              $gr->moveTo(8,6);
+              $gr->arrowTo(10,8,'blue');
+              $gr->moveTo(-8,-4);
+              $gr->arrowTo(-10,-6,'blue');
+              $eqn1=Formula("x+4");
+              $eqn2=Formula("4");
+              $eqn3=Formula("x-2");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Consider the function <m>y=g(x)</m> below.
+              <image pg-name="$gr" />
+            </p>
+
+            <p>
+              Determine the formulas for this function.
+              <ol label="a">
+                <li>
+                  <p>
+                    When <m>x \lt -2</m>, the formula is: <m>y = </m><var name="$eqn1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    When <m>-2 \leqslant x \leqslant 1</m>, the formula is: <m>y = </m><var name="$eqn2" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    When <m>x \gt 4</m>, the formula is: <m>y = </m><var name="$eqn3" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <var name="$eqn1"/>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <var name="$eqn2"/>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <var name="$eqn3"/>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
     </subsection>
 
     <exercises>
@@ -1249,4 +1579,3 @@
     </exercises>
   </section>
 </chapter>
-
