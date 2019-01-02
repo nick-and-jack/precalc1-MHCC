@@ -853,6 +853,977 @@
         </p>
       </example>
     </subsection>
+
+    <subsection>
+      <title>Conclusion</title>
+
+      <p>
+        Test your understanding of this chapter with the following exercises.
+      </p>
+
+      <p>
+        Student Learning Outcome:
+        <em>Define, distinguish and apply exponential functions.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $exponential=PopUp(["?","linear","exponential"],"exponential");
+              $linear=PopUp(["?","linear","exponential"],"linear");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              For each verbal description, decide if a <em>linear</em> or
+              <em>exponential</em> function best models the situation.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <q>The money in the savings account was growing by <m>1.25\%</m> per
+                    year.</q>
+                  </p>
+
+                  <p>
+                    <var name="$exponential" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <q>The temperature in the freezer was dropping <m>6</m> degrees
+                    per minute.</q>
+                  </p>
+
+                  <p>
+                    <var name="$linear" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <q>The phone battery started at <m>100\%</m> charge and was
+                    decreasing by <m>5\%</m> per hour.</q>
+                  </p>
+
+                  <p>
+                    <var name="$linear" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <q>Every week, the number of subscribers was dropping to half
+                    of what it had been the week before.</q>
+                  </p>
+
+                  <p>
+                    <var name="$exponential" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Exponential, Linear, Linear, exponential
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $isExponential=PopUp(["?","is exponential","is not exponential"],"is exponential");
+              $isNotExponential=PopUp(["?","is exponential","is not exponential"],"is not exponential");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Decide if each function below is exponential or not.
+            </p>
+
+            <sidebyside widths="47% 47%">
+
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>f(x)</m></cell>
+                </row>
+                <row>
+                  <cell><m>1</m></cell>
+                  <cell><m>27</m></cell>
+                </row>
+                <row>
+                  <cell><m>2</m></cell>
+                  <cell><m>36</m></cell>
+                </row>
+                <row>
+                  <cell><m>3</m></cell>
+                  <cell><m>48</m></cell>
+                </row>
+                <row>
+                  <cell><m>4</m></cell>
+                  <cell><m>64</m></cell>
+                </row>
+              </tabular>
+
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>g(x)</m></cell>
+                </row>
+                <row>
+                  <cell><m>1</m></cell>
+                  <cell><m>25</m></cell>
+                </row>
+                <row>
+                  <cell><m>2</m></cell>
+                  <cell><m>30</m></cell>
+                </row>
+                <row>
+                  <cell><m>3</m></cell>
+                  <cell><m>35</m></cell>
+                </row>
+                <row>
+                  <cell><m>4</m></cell>
+                  <cell><m>40</m></cell>
+                </row>
+              </tabular>
+            </sidebyside>
+
+            <sidebyside widths="47% 47%">
+
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>h(x)</m></cell>
+                </row>
+                <row>
+                  <cell><m>1</m></cell>
+                  <cell><m>392</m></cell>
+                </row>
+                <row>
+                  <cell><m>2</m></cell>
+                  <cell><m>360</m></cell>
+                </row>
+                <row>
+                  <cell><m>3</m></cell>
+                  <cell><m>320</m></cell>
+                </row>
+                <row>
+                  <cell><m>4</m></cell>
+                  <cell><m>284</m></cell>
+                </row>
+              </tabular>
+
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>k(x)</m></cell>
+                </row>
+                <row>
+                  <cell><m>1</m></cell>
+                  <cell><m>375</m></cell>
+                </row>
+                <row>
+                  <cell><m>2</m></cell>
+                  <cell><m>300</m></cell>
+                </row>
+                <row>
+                  <cell><m>3</m></cell>
+                  <cell><m>240</m></cell>
+                </row>
+                <row>
+                  <cell><m>4</m></cell>
+                  <cell><m>192</m></cell>
+                </row>
+              </tabular>
+            </sidebyside>
+
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    The function <m>f</m> <var name="$isExponential" form="popup" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The function <m>g</m> <var name="$isNotExponential" form="popup" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The function <m>h</m> <var name="$isNotExponential" form="popup" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The function <m>k</m> <var name="$isExponential" form="popup" />.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    The function <m>f</m> <var name="$isExponential" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The function <m>g</m> <var name="$isNotExponential" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The function <m>h</m> <var name="$isNotExponential" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The function <m>k</m> <var name="$isExponential" />.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>
+        Student Learning Outcome:
+        <em>Sketch the graph of an exponential function.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr1=init_graph(-2,-2,2,10,axes=>[0,0],grid=>[4,12],size=>[240,240]);
+              add_functions($gr1, "3^x+3 for x in &lt;-2,2&gt; using color:blue");
+              $gr1 -> lb(new Label (-1.5,7,'A','red','right','top'));
+              $gr2=init_graph(-2,-2,2,10,axes=>[0,0],grid=>[4,12],size=>[240,240]);
+              add_functions($gr2, "3^x+2 for x in &lt;-2,2&gt; using color:blue");
+              $gr2 -> lb(new Label (-1.5,7,'B','red','right','top'));
+              $gr3=init_graph(-2,-2,2,10,axes=>[0,0],grid=>[4,12],size=>[240,240]);
+              add_functions($gr3, "3^x+4 for x in &lt;-2,2&gt; using color:blue");
+              $gr3 -> lb(new Label (-1.5,7,'C','red','right','top'));
+              $whichGraph=PopUp(["?","A","B","C"],"C");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Consider the graphs below:
+            </p>
+
+            <sidebyside widths="30%">
+              <image pg-name="$gr1" />
+              <image pg-name="$gr2" />
+              <image pg-name="$gr3" />
+            </sidebyside>
+
+            <p>
+              Which could be the graph of <m>f(x)=3^x + 4</m>?
+            </p>
+
+            <p>
+              Answer: <var name="$whichGraph" form="popup" />
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Consider the vertical intercept.
+            </p>
+          </hint>
+
+          <solution>
+            <p>
+              Graph <var name="$whichGraph" /> shows the function <m>f(x)=3^x + 4</m>.
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr1=init_graph(-2,-2,2,10,axes=>[0,0],grid=>[4,12],size=>[240,240]);
+              add_functions($gr1, "4*2^x for x in &lt;-2,2&gt; using color:blue");
+              $gr1->lb(new Label (-1.5,7,'A','red','right','top'));
+              $gr1->stamps( closed_circle(0,4,'blue'));
+              $gr1->stamps( closed_circle(1,8,'blue'));
+              $gr2=init_graph(-2,-2,2,10,axes=>[0,0],grid=>[4,12],size=>[240,240]);
+              add_functions($gr2, "4*(1/2)^x for x in &lt;-2,2&gt; using color:blue");
+              $gr2 -> lb(new Label (-1.5,7,'B','red','right','top'));
+              $gr2->stamps( closed_circle(0,4,'blue'));
+              $gr2->stamps( closed_circle(1,2,'blue'));
+              $gr3=init_graph(-2,-2,2,10,axes=>[0,0],grid=>[4,12],size=>[240,240]);
+              add_functions($gr3, "(1/2)*4^x for x in &lt;-2,2&gt; using color:blue");
+              $gr3 -> lb(new Label (-1.5,7,'C','red','right','top'));
+              $gr3->stamps( closed_circle(0,0.5,'blue'));
+              $gr3->stamps( closed_circle(1,2,'blue'));
+              $gr4=init_graph(-2,-2,2,10,axes=>[0,0],grid=>[4,12],size=>[240,240]);
+              add_functions($gr4, "2*4^x for x in &lt;-2,2&gt; using color:blue");
+              $gr4 -> lb(new Label (-1.5,7,'D','red','right','top'));
+              $gr4->stamps( closed_circle(0,2,'blue'));
+              $gr4->stamps( closed_circle(1,8,'blue'));
+              $A=PopUp(["?","A","B","C","D"],"A");
+              $B=PopUp(["?","A","B","C","D"],"B");
+              $C=PopUp(["?","A","B","C","D"],"C");
+              $D=PopUp(["?","A","B","C","D"],"D");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Consider the graphs below:
+            </p>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr1" />
+              <image pg-name="$gr2" />
+            </sidebyside>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr3" />
+              <image pg-name="$gr4" />
+            </sidebyside>
+
+            <p>
+              Match each formula to its correct graph. You should be able to do this by
+              just examining the formula.
+            </p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>y=2(4)^x</m> is graph <var name="$D" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y=4(2)^x</m> is graph <var name="$A" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y=4\left(\frac{1}{2}\right)^x</m> is graph <var name="$B" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y=\frac{1}{2}(4)^x</m> is graph <var name="$C" form="popup" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>y=2(4)^x</m> is graph <var name="$D" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y=4(2)^x</m> is graph <var name="$A" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y=4\left(\frac{1}{2}\right)^x</m> is graph <var name="$B" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y=\frac{1}{2}(4)^x</m> is graph <var name="$C" />.
+                  </p>
+                </li>
+              </ul>
+            </p>
+
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>
+        Student Learning Outcome:
+        <em>Identify a horizontal asymptote from a graph, numerical model,
+        verbal description or equation.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <pg-code>
+              $yesAsymptote=PopUp(["?","has a horizontal asymptote","does not have a horizontal asymptote"],"has a horizontal asymptote");
+              $noAsymptote=PopUp(["?","has a horizontal asymptote","does not have a horizontal asymptote"],"does not have a horizontal asymptote");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Which of the functions below have a horizontal asymptote?
+            </p>
+
+            <p>
+              <md>
+                <mrow>f(x) \amp= x^2</mrow>
+                <mrow>g(x) \amp= 2^x</mrow>
+                <mrow>h(x) \amp= 5(1.03)^x</mrow>
+                <mrow>j(x) \amp= 3x-5</mrow>
+                <mrow>k(x) \amp= 0.92^x + 3</mrow>
+                <mrow>m(x) \amp= e^x</mrow>
+              </md>
+            </p>
+
+            <p>
+              Answer:
+            </p>
+
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>f(x)</m> <var name="$noAsymptote" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>g(x)</m> <var name="$yesAsymptote" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>h(x)</m> <var name="$yesAsymptote" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>j(x)</m> <var name="$noAsymptote" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>k(x)</m> <var name="$yesAsymptote" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>m(x)</m> <var name="$yesAsymptote" form="popup" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>f(x) = x^2</m> <var name="$noAsymptote" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>g(x) = 2^x</m> <var name="$yesAsymptote" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>h(x) = 5(1.03)^x</m> <var name="$yesAsymptote" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>j(x) = 3x-5</m> <var name="$noAsymptote" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>k(x) = 0.92^x + 3</m> <var name="$yesAsymptote" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>m(x) = e^x</m> <var name="$yesAsymptote" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+            <pg-code>
+              $zero=Real(0);
+              $three=Real(3);
+              $yVar=PopUp(["?","x","y"],"y");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              For each function, determine the horizontal asymptote.
+            </p>
+
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>g(x)=2^x</m> has the horizontal asymptote:
+                  </p>
+                  <p>
+                    <var name="$yVar" form="popup" />
+                    <m>=</m> <var name="$zero" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>h(x) = 5(1.03)^x</m> has the horizontal asymptote:
+                  </p>
+                  <p>
+                    <var name="$yVar" form="popup" />
+                    <m>=</m> <var name="$zero" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>k(x) = 0.92^x + 3</m> has the horizontal asymptote:
+                  </p>
+                  <p>
+                    <var name="$yVar" form="popup" />
+                    <m>=</m> <var name="$three" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>m(x) = e^x</m> has the horizontal asymptote:
+                  </p>
+                  <p>
+                    <var name="$yVar" form="popup" />
+                    <m>=</m> <var name="$zero" width="10" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <var name="$yVar" /> <m>=</m> <var name="$zero" />, <var name="$yVar" /> <m>=</m> <var name="$zero" />,
+              <var name="$yVar" /> <m>=</m> <var name="$three" />, <var name="$yVar" /> <m>=</m> <var name="$zero" />
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>
+        Student Learning Outcome:
+        <em>Distinguish growth vs. decay given any model
+        (verbal, numberical, graphical, equation).</em>
+      </p>
+
+      <p>
+        Student Learning Outcome:
+        <em>Determine percent change of an exponential function.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $a=Real(20);
+              $b=Real(17);
+              $c=Real(1);
+              $d=Real(7.5);
+              $increasing=PopUp(["?","increasing","decreasing"],"increasing");
+              $decreasing=PopUp(["?","increasing","decreasing"],"decreasing");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              In the functions below, the input <m>t</m> represents years. Describe the percent change of each function.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    The function <m>f(t)=475(1.2)^t</m> is:
+                  </p>
+
+                  <p>
+                    <var name="$increasing" form="popup" />
+                    by <var name="$a" width="10" /> percent per year.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The function <m>g(t)=2500(0.83)^t</m> is:
+                  </p>
+
+                  <p>
+                    <var name="$decreasing" form="popup" />
+                    by <var name="$b" width="10" /> percent per year.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The function <m>h(t)=12750(0.99)^t</m> is:
+                  </p>
+
+                  <p>
+                    <var name="$decreasing" form="popup" />
+                    by <var name="$c" width="10" /> percent per year.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The function <m>g(t)=2500(1.075)^t</m> is:
+                  </p>
+
+                  <p>
+                    <var name="$increasing" form="popup" />
+                    by <var name="$d" width="10" /> percent per year.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <var name="$increasing" />
+                    by <var name="$a" /> percent per year
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <var name="$decreasing" />
+                    by <var name="$b" /> percent per year
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <var name="$decreasing" />
+                    by <var name="$c"  /> percent per year
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <var name="$increasing" />
+                    by <var name="$d" /> percent per year
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $yes=PopUp(["?","yes","no"],"yes");
+              $no=PopUp(["?","yes","no"],"no");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Decide if each expression below will <em>increase</em> <m>x</m> by <m>5\%</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>x + 0.05</m>? <var name="$no" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>0.05x</m>? <var name="$no" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>0.5x</m>? <var name="$no" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>x + 0.05x</m>? <var name="$yes" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>1.05x</m>? <var name="$yes" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+
+            <p>
+              Decide if each expression below will <em>decrease</em> <m>x</m> by <m>5\%</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>0.95x</m>? <var name="$yes" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>x-0.05</m>? <var name="$no" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>-0.5x</m>? <var name="$no" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>x - 0.05x</m>? <var name="$yes" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>0.05x</m>? <var name="$no" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>
+        Student Learning Outcome:
+        <em>Model real-world situations algebraically using exponential functions.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $A=PopUp(["?","A","B","C","D"],"A");
+              $B=PopUp(["?","A","B","C","D"],"B");
+              $C=PopUp(["?","A","B","C","D"],"C");
+              $D=PopUp(["?","A","B","C","D"],"D");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Each function below represents the population of a different city,
+              measured in thousands of people, where the input <m>t</m> is time in years.
+            </p>
+
+            <p>
+              <md>
+                <mrow>A(t) \amp= 50(0.95)^t</mrow>
+                <mrow>B(t) \amp= 50(0.75)^t</mrow>
+                <mrow>C(t) \amp= 25(1.05)^t</mrow>
+                <mrow>D(t) \amp= 25(1.5)^t</mrow>
+              </md>
+            </p>
+
+            <p>
+              For each verbal description, choose the correct function:
+            </p>
+
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <q>The city begins with <m>25{,}000</m> people and increases by <m>5\%</m> per year.</q>
+                  </p>
+                  <p>
+                    Answer: <var name="$C" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <q>The city begins with <m>50{,}000</m> and decreases by <m>5\%</m> per year.</q>
+                  </p>
+                  <p>
+                    Answer: <var name="$A" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <q>The city begins with <m>25{,}000</m> and increases by <m>50\%</m> per year.</q>
+                  </p>
+                  <p>
+                    Answer: <var name="$D" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <q>The city begins with <m>50{,}000</m> and decreases by <m>25\%</m> per year.</q>
+                  </p>
+                  <p>
+                    Answer: <var name="$B" form="popup" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <var name="$C" />, <var name="$A" />, <var name="$D" />, <var name="$B" />
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              Context()->variables->add(t => 'Real');
+              $form1=Compute("75*1.046**t");
+              $form2=Compute("6.5*0.97**t");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              The populations of two cities are described below. For each city, write a
+              function that models the population <em>in thousands</em>, using the input
+              <m>t</m> to represent years.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <q>The population of the city started at <m>75000</m> and was increasing
+                    by <m>4.6\%</m> per year.</q>
+                  </p>
+
+                  <p>
+                    Answer: <m>P(t) = </m><var name="$form1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <q>The population of the city started at <m>6500</m> and was decreasing by
+                    <m>3\%</m> per year.</q>
+                  </p>
+
+                  <p>
+                    Answer: <m>P(t) = </m><var name="$form2" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>P(t) = <var name="$form1" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>P(t) = <var name="$form2" /></m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>
+        <em>Identify the meaning of the parameters of an exponential function.</em>
+      </p>
+
+    </subsection>
     <!-- <subsection>
       <title>Examples</title>
       <example>
@@ -1183,4 +2154,3 @@
   </section>
 
 </chapter>
-
