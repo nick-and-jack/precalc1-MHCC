@@ -858,7 +858,480 @@
         </solution>
       </example>
 
-      <todo>Nick, write an exercise wherein the user writes the equation for a vertical stretch or compression of a given function, so its graph passes through a given point. If their graph passes through the point but is not a vertical stretch or compression, give appropriate feedback.</todo>
+      <todo>
+        Nick, write an exercise wherein the user writes the equation for a
+        vertical stretch or compression of a given function, so its graph passes
+        through a given point. If their graph passes through the point but is
+        not a vertical stretch or compression, give appropriate feedback.
+      </todo>
+
+    </subsection>
+
+    <subsection>
+      <title>Conclusion</title>
+
+      <p>
+        Test your understanding of this chapter with the following exercises.
+      </p>
+
+      <p>
+        Student Learning Outcome:
+        <em>Describe the effect of the transformation of the form
+        <m>y = a\cdot f(x)</m> given the graph of <m>y = f(x)</m>,
+        and sketch a graph.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $xAxis=PopUp(["?","over the x-axis","over the y-axis","over nothing"],"over the x-axis");
+              $stretch=PopUp(["?","Stretch","Compress"],"Stretch");
+              $left=PopUp(["?","up","down","right","left"],"left");
+              $up=PopUp(["?","up","down","right","left"],"up");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Describe how the graph of the original function <m>y=f(x)</m>
+              would be changed in order to graph the transformation:
+              <me>y = -3f(x+4) + 1</me>
+            </p>
+
+            <p>
+              Begin with <m>y = f(x)</m> and:
+            </p>
+
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    Reflect it <var name="$xAxis" form="popup" />.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <var name="$stretch" form="popup" /> it vertically by a factor of <m>3</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Shift it <var name="$left" form="popup" /> by <m>4</m> units.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Shift it <var name="$up" form="popup" /> by <m>1</m> unit.
+                  </p>
+                </li>
+              </ul>
+            </p>
+
+          </statement>
+          <solution>
+            <p>
+              Reflect it <var name="$xAxis" />.
+            </p>
+
+            <p>
+              <var name="$stretch" /> it vertically by a factor of <m>3</m>.
+            </p>
+
+            <p>
+              Shift it <var name="$left" /> by <m>4</m> units.
+            </p>
+
+            <p>
+              Shift it <var name="$up" /> by <m>1</m> unit.
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr=init_graph(-3,-7,11,7,axes=>[0,0],grid=>[14,14],size=>[240,240]);
+              add_functions($gr, "3*cos(pi/4*x) for x in &lt;-3,11&gt; using color:blue and weight:2");
+              $gr -> lb(new Label (3,-5,'y = f(x)','red','left','top'));
+
+              $gr1=init_graph(-3,-7,11,7,axes=>[0,0],grid=>[14,14],size=>[240,240]);
+              add_functions($gr1, "-6*cos(pi/4*x) for x in &lt;-3,11&gt; using color:blue and weight:2");
+              $gr1 -> lb(new Label (3,-5,'y = g(x)','red','left','top'));
+
+              $k=Real(-2);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              A function <m>y = f(x)</m> is graphed below, together with a transformation
+              <m>y = g(x)</m>.
+            </p>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr" />
+              <image pg-name="$gr1" />
+            </sidebyside>
+
+            <p>
+              Suppose <m>g(x) = k\cdot f(x)</m> for some constant number <m>k</m>.
+              What is <m>k</m>?
+            </p>
+
+            <p>
+              Answer: <m>k</m> = <var name="$k" width="10" />
+            </p>
+
+          </statement>
+          <solution>
+            <p>
+              The graph of <m>y = g(x)</m> is just like <m>f(x)</m> after vertically
+              stretching it by a factor of <m>2</m> and reflecting it over the <m>x</m>-axis.
+              Therefore <m>k = <var name="$k" /></m>, and we have <m>g(x) = -2\cdot f(x)</m>.
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>
+        Student Learning Outcome:
+        <em>Describe the effects on the graph of a function <m>f(x)</m> when
+        comparing <m>f(x)</m> to <m>f(-x)</m> or <m>-f(x)</m>.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $yAxis=PopUp(["?","Reflect it over the x-axis","Reflect it over the y-axis"],"Reflect it over the y-axis");
+              $xAxis=PopUp(["?","Reflect it over the x-axis","Reflect it over the y-axis"],"Reflect it over the x-axis");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Think about the graph of any function <m>y = f(x)</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    How do we change the graph to make <m>y = f(-x)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$yAxis" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    How do we change the graph to make <m>y = -f(x)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$xAxis" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <var name="$yAxis" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <var name="$xAxis" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>
+        Student Learning Outcome:
+        <em>Use transformations to model situations algebraically
+        (from verbal descriptions, graphs, tables, and data points).
+        Recognize functions as transformations of basic functions.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr=init_graph(-5,-10,5,10,axes=>[0,0],grid=>[10,20],size=>[240,240]);
+              add_functions($gr, "0.5*x*abs(x-2)*abs(x+3)+1 for x in &lt;-5,5&gt; using color:blue");
+              $gr->stamps( closed_circle(-3,1,'blue'));
+              $gr->stamps( closed_circle(-2,-3,'blue'));
+              $gr->stamps( closed_circle(0,1,'blue'));
+              $gr->stamps( closed_circle(1,3,'blue'));
+              $gr->stamps( closed_circle(2,1,'blue'));
+
+              $gr1=init_graph(-5,-10,5,10,axes=>[0,0],grid=>[10,20],size=>[240,240]);
+              add_functions($gr1, "2*(0.5*x*abs(x-2)*abs(x+3)+1) for x in &lt;-5,5&gt; using color:blue");
+              $gr1->stamps( closed_circle(-3,2,'blue'));
+              $gr1->stamps( closed_circle(-2,-6,'blue'));
+              $gr1->stamps( closed_circle(0,2,'blue'));
+              $gr1->stamps( closed_circle(1,6,'blue'));
+              $gr1->stamps( closed_circle(2,2,'blue'));
+              $gr1 -> lb(new Label (-3,8,'A','red','left','top'));
+
+              $gr2=init_graph(-5,-10,5,10,axes=>[0,0],grid=>[10,20],size=>[240,240]);
+              add_functions($gr2, "-1*(0.5*x*abs(x-2)*abs(x+3)+1) for x in &lt;-5,5&gt; using color:blue");
+              $gr2->stamps( closed_circle(-3,-1,'blue'));
+              $gr2->stamps( closed_circle(-2,3,'blue'));
+              $gr2->stamps( closed_circle(0,-1,'blue'));
+              $gr2->stamps( closed_circle(1,-3,'blue'));
+              $gr2->stamps( closed_circle(2,-1,'blue'));
+              $gr2 -> lb(new Label (-3,8,'B','red','left','top'));
+
+              $gr3=init_graph(-5,-10,5,10,axes=>[0,0],grid=>[10,20],size=>[240,240]);
+              add_functions($gr3, "-2*(0.5*x*abs(x-2)*abs(x+3)+1) for x in &lt;-5,5&gt; using color:blue");
+              $gr3->stamps( closed_circle(-3,-2,'blue'));
+              $gr3->stamps( closed_circle(-2,6,'blue'));
+              $gr3->stamps( closed_circle(0,-2,'blue'));
+              $gr3->stamps( closed_circle(1,-6,'blue'));
+              $gr3->stamps( closed_circle(2,-2,'blue'));
+              $gr3 -> lb(new Label (-3,8,'C','red','left','top'));
+
+              $gr4=init_graph(-5,-10,5,10,axes=>[0,0],grid=>[10,20],size=>[240,240]);
+              add_functions($gr4, "0.5*x*abs(x-2)*abs(x+3)+1+2 for x in &lt;-5,5&gt; using color:blue");
+              $gr4->stamps( closed_circle(-3,3,'blue'));
+              $gr4->stamps( closed_circle(-2,-1,'blue'));
+              $gr4->stamps( closed_circle(0,3,'blue'));
+              $gr4->stamps( closed_circle(1,5,'blue'));
+              $gr4->stamps( closed_circle(2,3,'blue'));
+              $gr4 -> lb(new Label (-3,8,'D','red','left','top'));
+              $A=PopUp(["?","A","B","C","D"],"A");
+              $B=PopUp(["?","A","B","C","D"],"B");
+              $C=PopUp(["?","A","B","C","D"],"C");
+              $D=PopUp(["?","A","B","C","D"],"D");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              The graph of the function <m>y=f(x)</m> is shown below.
+            </p>
+
+            <p>
+              <image pg-name="$gr" />
+            </p>
+
+            <p>
+              Four transformations of <m>y = f(x)</m> are shown. Use them to
+              answer the questions that follow.
+            </p>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr1" />
+              <image pg-name="$gr2" />
+            </sidebyside>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr3" />
+              <image pg-name="$gr4" />
+            </sidebyside>
+
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    Which graph is <m>y = -f(x)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$B" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Which graph is <m>y = 2f(x)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$A" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Which graph is <m>y = -2f(x)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$C" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Which graph is <m>y = f(x)+2</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$D" form="popup" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+
+          </statement>
+          <solution>
+            <p>
+              <var name="$B" />, <var name="$A" />, <var name="$C" />,
+              <var name="$D" />
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $a=random(3,12,1);
+              $b=random(0.1,0.9,0.1);
+              $c=random(2,8,0.5);
+              do{$d=random(4,12,1);}until($d!=$c);
+              $e=random(3,15,1);
+              $f=random(5,15,1);
+              $g=random(0.1,0.9,0.05);
+              Context('Numeric');
+              Context()->variables->are(x=>'Real');
+              parserFunction("f(x)"=>"(sin(x)+2)/pi");
+              Context()->flags->set(reduceConstantFunctions=>0);
+              Context()->flags->set(formatStudentAnswer=>"parsed");
+              $formula1=Formula("$b*(f(x-$a))");
+              $formula2=Formula("$c*f(x)-$d");
+              $formula3=Formula("$c*(f(x)-$d)");
+              $formula4=Formula("f(-x)+$e");
+              $formula5=Formula("-$g*f(x+$f)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              In this problem, you will use an arbitrary function <m>f(x)</m>. Write
+              an expression using function notation to match each function
+              transformation described below.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Shift the graph of <m>y = f(x)</m> to the right by <var name="$a" />
+                    units, and then vertically compress it by a factor of <var name="$b" />.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m><var name="$formula1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Vertically stretch the graph of <m>y = f(x)</m> by a factor of
+                    <var name="$c" />, and then vertically shift it downward
+                    by <var name="$d" /> units.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m><var name="$formula2" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Vertically shift the graph of <m>y = f(x)</m> downward by <var name="$d" />
+                    units, and then vertically stretch it by a factor of <var name="$c" />.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m><var name="$formula3" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Reflect the graph of <m>y = f(x)</m> over the <m>y</m>-axis, and
+                    then shift it upward by <var name="$e" /> units.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m><var name="$formula4" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Shift the graph of <m>y = f(x)</m> to the left by <var name="$f" />
+                    units, then compress it vertically by a factor of <var name="$g" />,
+                    and then reflect it over the <m>x</m>-axis.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m><var name="$formula5" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>y = <var name="$formula1" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y = <var name="$formula2" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y = <var name="$formula3" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y = <var name="$formula4" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y = <var name="$formula5" /></m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
     </subsection>
 
     <exercises>
@@ -939,17 +1412,11 @@
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap5Review/Q18.pg" seed="1" />
         </exercise>
-      <!-- Coded with PTX-incompatible structure. -->
-      <!-- <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q29.pg" seed="1" />
-      </exercise> -->
+
         <exercise>
           <webwork source="Library/ASU-topics/setTransformationFunctions/jj1.pg" seed="1" />
         </exercise>
-      <!-- Coded with PTX-incompatible structure. -->
-      <!-- <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q20.pg" seed="1" />
-      </exercise> -->
+
       </exercisegroup>
       <exercisegroup>
 
@@ -978,10 +1445,7 @@
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q18.pg" seed="1" />
         </exercise>
-      <!-- Coded with PTX-incompatible structure. -->
-      <!-- <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/graph-reflection-21.pg" seed="1" />
-      </exercise> -->
+
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec2/Q12.pg" seed="1" />
         </exercise>
@@ -1076,13 +1540,7 @@
         <exercise>
           <webwork source="Library/UVA-Stew5e/setUVA-Stew5e-C01S03-NewFunctOld/1-3-06.pg" seed="1" />
         </exercise>
-      <!-- Coded with PTX-incompatible structure. -->
-      <!-- <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q20.pg" seed="1" />
-      </exercise>
-      <exercise>
-        <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/graph-scaling-22.pg" seed="1" />
-      </exercise>-->
+
         <exercise>
           <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q04.pg" seed="1" />
         </exercise>
@@ -1094,11 +1552,7 @@
         <exercise>
           <webwork source="Library/ASU-topics/setTransformationFunctions/ptransf1.pg" seed="1" />
         </exercise>
-      <!-- Coded with PTX-incompatible structure. -->
-      <!-- Specifically, it uses a .gif image which is not a format you can use in .tex. -->
-      <!-- <exercise>
-        <webwork source="Library/Rochester/setAlgebra19FunTransforms/p7.pg" seed="1" />
-      </exercise> -->
+
         <exercise>
           <webwork source="Library/WHFreeman/Rogawski_Calculus_Early_Transcendentals_Second_Edition/1_Precalculus_Review/1.1_Real_Numbers_Functions_and_Graphs/1.1.71.pg" seed="1" />
         </exercise>
@@ -1111,33 +1565,3 @@
     </exercises>
   </section>
 </chapter>
-<!-- Extra problem
-
-<exercise>
-  <webwork>
-    <setup>
-      <pg-code>
-        Context('Numeric');
-        $reflectXAxis = RadioButtons(
-        ["To make the graph of \(-f(x)\), you reflect (flip) the graph of \(f(x)\) over the x-axis.","To make the graph of \(-f(x)\), you reflect (flip) the graph of \(f(x)\) over the y-axis.","None of these"],0,labels => ["Flip over x-axis","Flip over y-axis","None of these"],displayLabels => 0
-        );
-        $reflectYAxis = RadioButtons(
-        ["To make the graph of \(f(-x)\), you reflect (flip) the graph of \(f(x)\) over the x-axis.","To make the graph of \(f(-x)\), you reflect (flip) the graph of \(f(x)\) over the y-axis.","None of these"],1,labels => ["Flip over x-axis","Flip over y-axis","None of these"],displayLabels => 0
-        );
-      </pg-code>
-    </setup>
-
-    <statement>
-      <p>The graph below shows <m>f(x) = \sqrt{x}</m>. Use the radio buttons to change the graph to either <m>-f(x)</m> or <m>f(-x)</m>.</p>
-      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/wrQyy2mH/width/438/height/367/border/888888/sri/true" width="438px" height="367px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-      <p>The next graph shows <m>f(x) = 2^x</m>. Use the radio buttons to change the graph to either <m>-f(x)</m> or <m>f(-x)</m>.</p>
-      <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/zW5SrRKw/width/438/height/429/border/888888/sri/true" width="438px" height="429px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
-      <p>Choose the correct statement below about the graph of <m>y = -f(x)</m>.</p>
-      <p><var name="$reflectXAxis" form="buttons" /></p>
-      <p>Choose the correct statement below about the graph of <m>y = f(-x)</m>.</p>
-      <p><var name="$reflectYAxis" form="buttons" /></p>
-    </statement>
-  </webwork>
-</exercise>
-
--->

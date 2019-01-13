@@ -1237,6 +1237,12 @@
               <ol label="a">
                 <li>
                   <p>
+                    The graph begins with domain <m>-1 \leqslant x \leqslant 7</m>,
+                    and <m>f(x+3)</m> is a horizontal shift to the left by <m>3</m>
+                    units. Therefore, the domain will also shift to the right:
+                  </p>
+
+                  <p>
                     <var name="$a" /> <m>\leqslant</m>
                      <var name="$xVar" /> <m>\leqslant </m>
                     <var name="$b" />
@@ -1245,9 +1251,153 @@
 
                 <li>
                   <p>
+                    The graph begins with range <m>-1 \leqslant x \leqslant 5</m>,
+                    and <m>f(x-1) - 2</m> shifts the graph <em>down</em> by <m>2</m>
+                    units. Therefore, the range will also shift downward:
+                  </p>
+
+                  <p>
                     <var name="$c" /> <m>\leqslant</m>
                     <var name="$yVar" /> <m>\leqslant </m>
                     <var name="$d" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              @a=map{2*$_+3}NchooseK(7,3);
+              @b=map{2*$_+5}NchooseK(8,3);
+              $form1=PopUp(["?","$a[0](x-$a[1])+$a[2]","$a[1](x-$a[2])+$a[0]","$a[2](x-$a[1])+$a[0]"],"$a[0](x-$a[1])+$a[2]");
+              $form2=PopUp(["?","$b[1](x-$b[2])+$b[0]","$b[1](x-$b[0])+$b[2]","$b[0](x-$b[1])+$b[2]"],"$b[0](x-$b[1])+$b[2]");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Use horizontal and/or vertical translations to choose the correct
+              equation for each line described below.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    A line with slope <var name="$a[0]" />, passing through point
+                    <m>(<var name="$a[1]" />,<var name="$a[2]" />)</m>.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m> <var name="$form1" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    A line passing through point <m>(<var name="$b[1]" />,<var name="$b[2]" />)</m>
+                    with slope <var name="$b[0]" />.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m> <var name="$form2" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Think about the line through the origin <m>(0,0)</m> with
+                    slope <var name="$a[0]" />. Shift it horizontally and
+                    vertically so it goes through the point given. The equation
+                    is: <m>y = </m> <var name="$form1" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Think about the line throught the origin <m>(0,0)</m> with
+                    slope <var name="$b[0]" />. Shift it horizontally and
+                    vertically so it goes through the point given. The equation
+                    is: <m>y = </m> <var name="$form2" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              @a=map{2*$_+3}NchooseK(7,3);
+              @b=map{2*$_+2}NchooseK(8,3);
+              $form1=Compute("$a[0]*(x-$a[1])+$a[2]");
+              $form2=Compute("$b[0]*(x-$b[1])+$b[2]");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Use horizontal and/or vertical translations to choose the correct
+              equation for each line described below.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    A line passing through point <m>(<var name="$a[1]" />,<var name="$a[2]" />)</m>
+                    with slope <var name="$a[0]" />.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m> <var name="$form1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    A line with slope <var name="$b[0]" />, passing through
+                    point <m>(<var name="$b[1]" />,<var name="$b[2]" />)</m>.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m> <var name="$form2" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Begin with the line <m>y = <var name="$a[0]" />x</m>, which
+                    passes through the point <m>(0,0)</m>. Shift the graph
+                    horizontally and vertically so it goes through the given
+                    point. Answer: <m>y = </m> <var name="$form1" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Begin with the line <m>y = <var name="$b[0]" />x</m>, which
+                    passes through the point <m>(0,0)</m>. Shift the graph
+                    horizontally and vertically so it goes through the given
+                    point. Answer: <m>y = </m> <var name="$form2" />
                   </p>
                 </li>
               </ol>
