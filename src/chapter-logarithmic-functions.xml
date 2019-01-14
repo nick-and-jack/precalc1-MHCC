@@ -1865,7 +1865,7 @@
             </p>
 
             <p>
-              Answer: <var name="$c" width="10" />
+              Answer: <m>x = </m><var name="$c" width="10" />
             </p>
           </statement>
           <solution>
@@ -1984,6 +1984,52 @@
         answer questions in application situations, to write equations
         and to create graphs by hand and on the calculator.</em>
       </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              Context()->variables->are(t=>'Real');
+              $formula=Compute("9.624*(1.0192)**t");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              According to Wolfram|Alpha, the population of Texas has been
+              growing by about <m>1.92\%</m> per year since <m>1960</m>. In <m>1960</m>,
+              the population was about <m>9.624</m> million people.
+            </p>
+
+            <p>
+              Write an exponential formula to model the population of Texas. Here,
+              the input <m>t</m> should be the number of years after <m>1960</m>,
+              and the output <m>f(t)</m> should be the population <em>in millions</em>.
+            </p>
+
+            <p>
+              Answer: <m>f(t) = </m><var name="$formula" width="10" />
+            </p>
+
+          </statement>
+          <solution>
+            <p>
+              An exponential function has the form
+              <me>
+                f(t) = a(b)^t
+              </me>
+              where <m>a</m> is the initial value, and <m>b</m> is the growth factor.
+              Using the information given, we know that <m>9.624</m> is the initial
+              value (remember the output represents <em>millions</em> of people)
+              and the growth factor is <m>1 + 0.0192 = 1.0192</m>. Therefore, the
+              formula is:
+              <me>
+                f(t) = <var name="$formula" />
+              </me>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
 
     </subsection>
 

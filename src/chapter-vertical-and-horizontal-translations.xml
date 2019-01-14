@@ -849,6 +849,565 @@
       </webwork>
     </exercise>
 
+    <subsection>
+      <title>Conclusion</title>
+
+      <p>
+        Test your understanding of this chapter with the following exercises.
+      </p>
+
+      <p>
+        Student Learning Outcome:
+        <em>List the transformations required to graph equations of the form</em>
+        <m>y = f(x + h) + k</m>, <em>given the graph of</em> <m>y = f(x)</m>, <em>
+        and use those transformations to sketch a graph.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr, "x^3 for x in &lt;-4,4&gt; using color:blue");
+              $gr -> lb(new Label (2,8,'(2,8)','red','left','top'));
+              $gr->stamps( closed_circle(0,0,'blue'));
+              $gr->stamps( closed_circle(2,8,'blue'));
+              $gr->stamps( closed_circle(-2,-8,'blue'));
+              $gr->stamps( closed_circle(3,27,'blue'));
+              $gr->stamps( closed_circle(-3,-27,'blue'));
+
+              $gr1=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr1, "(x-2)^3 for x in &lt;-5,5.5&gt; using color:blue");
+              $gr1 -> lb(new Label (-4,20,'A','red','left','top'));
+              $gr1 -> lb(new Label (4,8,'(4,8)','red','left','top'));
+              $gr1->stamps( closed_circle(2,0,'blue'));
+              $gr1->stamps( closed_circle(4,8,'blue'));
+              $gr1->stamps( closed_circle(0,-8,'blue'));
+              $gr1->stamps( closed_circle(5,27,'blue'));
+              $gr1->stamps( closed_circle(-1,-27,'blue'));
+
+              $gr2=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr2, "(x-2)^3+4 for x in &lt;-4,5&gt; using color:blue");
+              $gr2 -> lb(new Label (-4,20,'B','red','left','top'));
+              $gr2 -> lb(new Label (4,12,'(4,12)','red','left','top'));
+              $gr2->stamps( closed_circle(2,4,'blue'));
+              $gr2->stamps( closed_circle(4,12,'blue'));
+              $gr2->stamps( closed_circle(0,-4,'blue'));
+              $gr2->stamps( closed_circle(5,31,'blue'));
+              $gr2->stamps( closed_circle(-1,-23,'blue'));
+
+              $gr3=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr3, "x^3-5 for x in &lt;-4,4&gt; using color:blue");
+              $gr3 -> lb(new Label (-4,20,'C','red','left','top'));
+              $gr3 -> lb(new Label (2,3,'(2,3)','red','left','top'));
+              $gr3->stamps( closed_circle(0,-5,'blue'));
+              $gr3->stamps( closed_circle(2,3,'blue'));
+              $gr3->stamps( closed_circle(-2,-13,'blue'));
+              $gr3->stamps( closed_circle(3,22,'blue'));
+              $gr3->stamps( closed_circle(-3,-32,'blue'));
+
+              $gr4=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr4, "(x+1)^3-2 for x in &lt;-4,4&gt; using color:blue");
+              $gr4 -> lb(new Label (-4,20,'D','red','left','top'));
+              $gr4 -> lb(new Label (1,6,'(1,6)','red','left','top'));
+              $gr4->stamps( closed_circle(-1,-2,'blue'));
+              $gr4->stamps( closed_circle(1,6,'blue'));
+              $gr4->stamps( closed_circle(-3,-10,'blue'));
+              $gr4->stamps( closed_circle(2,25,'blue'));
+              $gr4->stamps( closed_circle(-4,-29,'blue'));
+              $aOnly=PopUp(["?","A only","B only","C only","D only","A and B","A and C","B and D","C and D","A,B,C and D","None of the graphs"],"A only");
+              $cOnly=PopUp(["?","A only","B only","C only","D only","A and B","A and C","B and D","C and D","A,B,C and D","None of the graphs"],"C only");
+              $bAndD=PopUp(["?","A only","B only","C only","D only","A and B","A and C","B and D","C and D","A,B,C and D","None of the graphs"],"B and D");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              The graph <m>y=f(x)=x^3</m> is graphed below.
+            </p>
+
+            <p>
+              <image pg-name="$gr" />
+            </p>
+
+            <p>
+              Below are shown four translations of <m>f(x)</m>. Answer the
+              questions that follow.
+            </p>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr1" />
+              <image pg-name="$gr2" />
+            </sidebyside>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr3" />
+              <image pg-name="$gr4" />
+            </sidebyside>
+
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    Which graph(s) only involve(s) changing the <em>input</em> of <m>f(x)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$aOnly" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Which graph(s) only involve(s) changing the <em>output</em> of <m>f(x)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$cOnly" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Which graph(s) involve(s) changing both <em>input</em> and
+                    <em>output</em> of <m>f(x)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$bAndD" form="popup" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+
+          </statement>
+          <solution>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <var name="$aOnly" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <var name="$cOnly" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <var name="$bAndD" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr, "x^3 for x in &lt;-4,4&gt; using color:blue");
+              $gr -> lb(new Label (2,8,'(2,8)','red','left','top'));
+              $gr->stamps( closed_circle(0,0,'blue'));
+              $gr->stamps( closed_circle(2,8,'blue'));
+              $gr->stamps( closed_circle(-2,-8,'blue'));
+              $gr->stamps( closed_circle(3,27,'blue'));
+              $gr->stamps( closed_circle(-3,-27,'blue'));
+
+              $gr1=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr1, "(x-2)^3 for x in &lt;-5,5.5&gt; using color:blue");
+              $gr1 -> lb(new Label (-4,20,'A','red','left','top'));
+              $gr1 -> lb(new Label (4,8,'(4,8)','red','left','top'));
+              $gr1->stamps( closed_circle(2,0,'blue'));
+              $gr1->stamps( closed_circle(4,8,'blue'));
+              $gr1->stamps( closed_circle(0,-8,'blue'));
+              $gr1->stamps( closed_circle(5,27,'blue'));
+              $gr1->stamps( closed_circle(-1,-27,'blue'));
+
+              $gr2=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr2, "(x-2)^3+4 for x in &lt;-4,5&gt; using color:blue");
+              $gr2 -> lb(new Label (-4,20,'B','red','left','top'));
+              $gr2 -> lb(new Label (4,12,'(4,12)','red','left','top'));
+              $gr2->stamps( closed_circle(2,4,'blue'));
+              $gr2->stamps( closed_circle(4,12,'blue'));
+              $gr2->stamps( closed_circle(0,-4,'blue'));
+              $gr2->stamps( closed_circle(5,31,'blue'));
+              $gr2->stamps( closed_circle(-1,-23,'blue'));
+
+              $gr3=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr3, "x^3-5 for x in &lt;-4,4&gt; using color:blue");
+              $gr3 -> lb(new Label (-4,20,'C','red','left','top'));
+              $gr3 -> lb(new Label (2,3,'(2,3)','red','left','top'));
+              $gr3->stamps( closed_circle(0,-5,'blue'));
+              $gr3->stamps( closed_circle(2,3,'blue'));
+              $gr3->stamps( closed_circle(-2,-13,'blue'));
+              $gr3->stamps( closed_circle(3,22,'blue'));
+              $gr3->stamps( closed_circle(-3,-32,'blue'));
+
+              $gr4=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+              add_functions($gr4, "(x+1)^3-2 for x in &lt;-4,4&gt; using color:blue");
+              $gr4 -> lb(new Label (-4,20,'D','red','left','top'));
+              $gr4 -> lb(new Label (1,6,'(1,6)','red','left','top'));
+              $gr4->stamps( closed_circle(-1,-2,'blue'));
+              $gr4->stamps( closed_circle(1,6,'blue'));
+              $gr4->stamps( closed_circle(-3,-10,'blue'));
+              $gr4->stamps( closed_circle(2,25,'blue'));
+              $gr4->stamps( closed_circle(-4,-29,'blue'));
+
+              $aFormula=Compute("(x-2)**3");
+              $bFormula=Compute("(x-2)**3+4");
+              $cFormula=Compute("x**3-5");
+              $dFormula=Compute("(x+1)**3-2");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              The graph <m>y=f(x)=x^3</m> is graphed below.
+            </p>
+
+            <p>
+              <image pg-name="$gr" />
+            </p>
+
+            <p>
+              Below are shown four translations of <m>f(x)</m>. Answer the
+              questions that follow.
+            </p>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr1" />
+              <image pg-name="$gr2" />
+            </sidebyside>
+
+            <sidebyside widths="40%">
+              <image pg-name="$gr3" />
+              <image pg-name="$gr4" />
+            </sidebyside>
+
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    What is the formula for graph <em>A</em>?
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m><var name="$aFormula" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the formula for graph <em>B</em>?
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m><var name="$bFormula" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the formula for graph <em>C</em>?
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m><var name="$cFormula" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the formula for graph <em>D</em>?
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m><var name="$dFormula" width="10" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+
+          </statement>
+          <solution>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>y = </m><var name="$aFormula" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y = </m><var name="$bFormula" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y = </m><var name="$cFormula" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>y = </m><var name="$dFormula" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <p>
+        Student Learning Outcome:
+        <em>Use transformations of a basic function to sketch graphs,
+        model situations algebraically, and determine domain/range and asymptotes.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $gr=init_graph(-8,-8,8,8,axes=>[0,0],grid=>[16,16],size=>[240,240]);
+              add_functions($gr, "-2x+1 for x in &lt;-1,1&gt; using color:blue");
+              add_functions($gr, "2x-3 for x in &lt;1,4&gt; using color:blue");
+              add_functions($gr, "5 for x in &lt;4,7&gt; using color:blue");
+              $gr->stamps( closed_circle(-1,3,'blue'));
+              $gr->stamps( closed_circle(1,-1,'blue'));
+              $gr->stamps( closed_circle(4,5,'blue'));
+              $gr->stamps( closed_circle(7,5,'blue'));
+              $a=Real("-4");
+              $b=Real("4");
+              $c=Real("-3");
+              $d=Real("3");
+              $xVar=PopUp(["?","x","y"],"x");
+              $yVar=PopUp(["?","x","y"],"y");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              The graph of a function <m>y = g(x)</m> is shown below.
+            </p>
+
+            <p>
+              <image pg-name="$gr" />
+            </p>
+
+            <p>
+              <ol label ="a">
+                <li>
+                  <p>
+                    What would be the <em>domain</em> of <m>y = f(x + 3)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$a" width="10" /> <m>\leqslant</m>
+                     <var name="$xVar" form="popup" /> <m>\leqslant </m>
+                    <var name="$b" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What would be the <em>range</em> of <m>y = f(x - 1) - 2</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$c" width="10" /> <m>\leqslant</m>
+                    <var name="$yVar" form="popup" /> <m>\leqslant </m>
+                    <var name="$d" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    The graph begins with domain <m>-1 \leqslant x \leqslant 7</m>,
+                    and <m>f(x+3)</m> is a horizontal shift to the left by <m>3</m>
+                    units. Therefore, the domain will also shift to the right:
+                  </p>
+
+                  <p>
+                    <var name="$a" /> <m>\leqslant</m>
+                     <var name="$xVar" /> <m>\leqslant </m>
+                    <var name="$b" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The graph begins with range <m>-1 \leqslant x \leqslant 5</m>,
+                    and <m>f(x-1) - 2</m> shifts the graph <em>down</em> by <m>2</m>
+                    units. Therefore, the range will also shift downward:
+                  </p>
+
+                  <p>
+                    <var name="$c" /> <m>\leqslant</m>
+                    <var name="$yVar" /> <m>\leqslant </m>
+                    <var name="$d" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              @a=map{2*$_+3}NchooseK(7,3);
+              @b=map{2*$_+5}NchooseK(8,3);
+              $form1=PopUp(["?","$a[0](x-$a[1])+$a[2]","$a[1](x-$a[2])+$a[0]","$a[2](x-$a[1])+$a[0]"],"$a[0](x-$a[1])+$a[2]");
+              $form2=PopUp(["?","$b[1](x-$b[2])+$b[0]","$b[1](x-$b[0])+$b[2]","$b[0](x-$b[1])+$b[2]"],"$b[0](x-$b[1])+$b[2]");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Use horizontal and/or vertical translations to choose the correct
+              equation for each line described below.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    A line with slope <var name="$a[0]" />, passing through point
+                    <m>(<var name="$a[1]" />,<var name="$a[2]" />)</m>.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m> <var name="$form1" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    A line passing through point <m>(<var name="$b[1]" />,<var name="$b[2]" />)</m>
+                    with slope <var name="$b[0]" />.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m> <var name="$form2" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Think about the line through the origin <m>(0,0)</m> with
+                    slope <var name="$a[0]" />. Shift it horizontally and
+                    vertically so it goes through the point given. The equation
+                    is: <m>y = </m> <var name="$form1" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Think about the line throught the origin <m>(0,0)</m> with
+                    slope <var name="$b[0]" />. Shift it horizontally and
+                    vertically so it goes through the point given. The equation
+                    is: <m>y = </m> <var name="$form2" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              @a=map{2*$_+3}NchooseK(7,3);
+              @b=map{2*$_+2}NchooseK(8,3);
+              $form1=Compute("$a[0]*(x-$a[1])+$a[2]");
+              $form2=Compute("$b[0]*(x-$b[1])+$b[2]");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Use horizontal and/or vertical translations to choose the correct
+              equation for each line described below.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    A line passing through point <m>(<var name="$a[1]" />,<var name="$a[2]" />)</m>
+                    with slope <var name="$a[0]" />.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m> <var name="$form1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    A line with slope <var name="$b[0]" />, passing through
+                    point <m>(<var name="$b[1]" />,<var name="$b[2]" />)</m>.
+                  </p>
+
+                  <p>
+                    Answer: <m>y = </m> <var name="$form2" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Begin with the line <m>y = <var name="$a[0]" />x</m>, which
+                    passes through the point <m>(0,0)</m>. Shift the graph
+                    horizontally and vertically so it goes through the given
+                    point. Answer: <m>y = </m> <var name="$form1" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Begin with the line <m>y = <var name="$b[0]" />x</m>, which
+                    passes through the point <m>(0,0)</m>. Shift the graph
+                    horizontally and vertically so it goes through the given
+                    point. Answer: <m>y = </m> <var name="$form2" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+    </subsection>
+
     <exercises>
 
       <exercise>
@@ -1007,10 +1566,7 @@
       <exercise>
         <webwork source="Library/FortLewis/Algebra/8-3-Shifting-and-scaling/MCH1-8-3-02-Shifting-and-scaling.pg" seed="1" />
       </exercise>
-          <!-- Coded with PTX-incompatible structure. -->
-          <!-- <exercise>
-            <webwork source="Library/FortLewis/Algebra/8-3-Shifting-and-scaling/MCH1-8-3-17-Shifting-and-scaling.pg" seed="1" />
-          </exercise> -->
+
       <exercise>
         <webwork source="Library/UCSB/Stewart5_1_5/Stewart5_1_5_7.pg" seed="1" />
       </exercise>
@@ -1082,21 +1638,15 @@
       <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec1/graph-shifting-01.pg" seed="1" />
       </exercise>
-          <!-- Coded with PTX-incompatible structure. -->
-          <!-- <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec1/graph-shifting-21.pg" seed="1" />
-          </exercise> -->
+
       <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec1/Q40.pg" seed="1" />
       </exercise>
-    <!-- application problems -->
+
       <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec1/Q42.pg" seed="1" />
       </exercise>
-          <!-- Coded with PTX-incompatible structure. -->
-          <!-- <exercise>
-            <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec3/Q26.pg" seed="1" />
-          </exercise> -->
+
       <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap5Sec4/Q26.pg" seed="1" />
       </exercise>
@@ -1104,4 +1654,3 @@
     </exercises>
   </section>
 </chapter>
-
