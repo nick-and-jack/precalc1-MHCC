@@ -1684,42 +1684,782 @@
 
     <subsection>
       <title>Conclusion</title>
+
       <p>
-        We have seen that a composite function is built from using the output of one function as the input for another function.
+        Test your understanding of this chapter with the following exercises.
       </p>
 
       <p>
-        If a function never has any repeated output values,
-        then it is said to be <em>invertible</em> or <em>one-to-one</em>.
-        It passes the horizontal line test.
+        Student Learning Outcome:
+        <em>Define composite functions and combinations of functions and apply and
+        interpret these in appropriate situations.</em>
       </p>
 
-      <p>
-        For an invertible function <m>f</m>,
-        its inverse function <m>f^{-1}</m> performs the opposite action as <m>f</m>.
-        If you compose a function with its inverse
-        <m>f^{-1}(f(x))</m> or <m>f(f^{-1}(x))</m>,
-        the result will be <m>x</m>.
-      </p>
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              Context('Numeric');
+              Context()->variables->are(x=>'Real');
+              parserFunction("f(x)"=>"(sin(x)+2)/pi");
+              parserFunction("g(x)"=>"((pi+exp(1))(sin(x)+10))");
+              Context()->flags->set(reduceConstantFunctions=>0);
+              Context()->flags->set(formatStudentAnswer=>"parsed");
+              $a=Formula("g(200000)");
+              $b=Formula("f(13)");
+              $c=Formula("g(f(19))");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Suppose <m>M = f(t)</m> represents the number of members in the voting party,
+              where <m>t</m> represents the number of years after <m>2000</m>. Also,
+              let <m>V = g(M)</m> represent the percent of members that we expect to
+              vote in the upcoming election.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Use function notation to write an expression that represents
+                    the percent of the party that will vote when there are <m>200000</m>
+                    members.
+                  </p>
+
+                  <p>
+                    Answer: <var name="$a" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use function notation to write an expression that represents
+                    the number of members in the voting party in the year <m>2013</m>.
+                  </p>
+
+                  <p>
+                    Answer: <var name="$b" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use function notation to write a composition that represents
+                    the percent of the party that will vote in the year <m>2019</m>.
+                  </p>
+
+                  <p>
+                    Answer: <var name="$c" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Answer: <var name="$a" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Answer: <var name="$b" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Answer: <var name="$c" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $distance=random(4,7,1);
+              $minutes=random(6,11,1);
+              $tripPrice=Compute("1.25+$distance*0.94+0.32*$minutes+2.30");
+              Context()->variables->are(L=>'Real');
+              $formula1=Compute("1.25+2.30+$distance*0.94+0.32*L");
+              $lengthOfRide=PopUp(["?","f(1)","g(1)","f(7)","g(7)"],"g(1)");
+              Context('Numeric');
+              Context()->variables->are(x=>'Real');
+              parserFunction("f(x)"=>"(sin(x)+2)/pi");
+              parserFunction("g(x)"=>"((pi+exp(1))(sin(x)+10))");
+              Context()->flags->set(reduceConstantFunctions=>0);
+              Context()->flags->set(formatStudentAnswer=>"parsed");
+              $composite=Formula("f(g(2.5))");
+
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Your favorite peer-to-peer ridehailing service has the following price
+              structure for rides in your neighborhood:
+            </p>
+
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>\$ 1.25</m> base fee
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\$ 0.94</m> per mile
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\$ 0.32</m> per minute
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\$ 2.30</m> service fee
+                  </p>
+                </li>
+              </ul>
+            </p>
+
+            <p>
+              Suppose you use sometimes use this service for your <var name="$distance" /> mile trip
+              to work in the morning. Let <m>P = f(L)</m> represent the price of the
+              ride, where <m>L</m> is the length of time the ride takes (in minutes).
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Calculate the price for a trip taking <var name="$minutes" /> minutes.
+                  </p>
+
+                  <p>
+                    Answer: <var name="$tripPrice" width="10" /> dollars
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    What is the formula for <m>P = f(L)</m>?
+                  </p>
+
+                  <p>
+                    Answer: <m>P = </m><var name="$formula1" width="15" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    From your experience, you know that if you leave at your usual
+                    time (<m>6{:}00</m> <init>a.m.</init>), the ride takes about <m>6</m>
+                    minutes. The ride time increases when you leave later in the
+                    morning, taking about <m>12</m> minutes if you leave at
+                    <m>9{:}00</m> <init>a.m.</init>.
+                  </p>
+
+                  <p>
+                    Let <m>L = g(T)</m> represent the length of time (in minutes)
+                    the trip takes you, where the input <m>T</m> is the number of
+                    hours after <m>6{:}00</m> <init>a.m.</init>
+                  </p>
+
+                  <p>
+                    Which expression represents the length of time the trip takes
+                    if you leave at <m>7{:}00</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$lengthOfRide" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use function notation (with <m>f</m> and <m>g</m>) to write a
+                    composition representing the price of a ride to work if you leave
+                    at <m>8{:}30</m>.
+                  </p>
+
+                  <p>
+                    Answer: <var name="$composite" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Answer: <var name="$tripPrice" /> dollars
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Answer: <m>P = </m><var name="$formula1" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Answer: <var name="$lengthOfRide" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Answer: <var name="$composite" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
 
       <p>
-        The graphs of a function and its inverse will be reflections of each other over the line <m>y = x</m>.
-        Any point <m>(a,b)</m> on the graph of
-        <m>y = f(x)</m> will correspond to a point <m>(b,a)</m> on the graph of <m>y = f^{-1}(x)</m>.
-        The <m>x</m>- and <m>y</m>-coordinates will be switched.
+        Student Learning Outcome:
+        <em>Evaluate, apply, and interpret function notation,
+        including the notation for inverse functions and composition of
+        functions.</em>
       </p>
 
-      <p>
-        We can make a non-invertible function invertible by restricting its domain so it doesn't have repeated values.
-      </p>
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              @a=map{$_+3}NchooseK(7,5);
+              $x1=random(3,10,1);
+              do{$x2=random(3,10,1);}until($x2!=$x1);
+              $y1=Compute("$a[0]*($a[3]*$x1-$a[4])**2-$a[1]*($a[3]*$x1-$a[4])+$a[2]");
+              $y2=Compute("$a[3]*($a[0]*($x2)**2-$a[1]*$x2+$a[2])-$a[4]");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              In this problem, use the functions
+              <me>f(x) = <var name="$a[0]" />x^2 - <var name="$a[1]" />x + <var name="$a[2]" /></me>
+              and <me>g(x) = <var name="$a[3]" />x - <var name="$a[4]" /></me>.
+            </p>
+
+            <p>
+              Compute each of the following expressions:
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>f\left(g(<var name="$x1" />)\right)</m> = <var name="$y1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>g\left(f(<var name="$x2" />)\right)</m> = <var name="$y2" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    First, evaluate <m>g(<var name="$x1" />)</m>, and then use that
+                    value as the input for the function <m>f(x)</m>.
+                  </p>
+
+                  <p>
+                    Answer: <m>x = <var name="$y1" /></m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    First, evaluate <m>f(<var name="$x2" />)</m>, and then use that
+                    value as the input for the function <m>g(x)</m>.
+                  </p>
+
+                  <p>
+                    Answer: <m>x = <var name="$y2" /></m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              Context('Numeric');
+              Context()->variables->are(x=>'Real');
+              parserFunction("f(x)"=>"(sin(x)+2)/pi");
+              parserFunction("g(x)"=>"((pi+exp(1))(sin(x)+10))");
+              parserFunction("h(x)"=>"(cosh(x)+3)/pi");
+              parserFunction("j(x)"=>"(pi*(x-exp(1)))");
+              Context()->flags->set(reduceConstantFunctions=>0);
+              Context()->flags->set(formatStudentAnswer=>"parsed");
+              $formula1=Formula("f(h(x))");
+              $formula2=Formula("h(f(x))");
+              $formula3=Formula("g(h(j(x)))");
+              $formula4=Formula("j(g(x))");
+              $formula5=Formula("f(f(x))");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              In this problem, use the functions
+              <md>
+                <mrow>f(x) \amp= \sqrt{x}</mrow>
+                <mrow>g(x) \amp= x^2</mrow>
+                <mrow>h(x) \amp= e^x</mrow>
+                <mrow>j(x) \amp= x+1</mrow>
+              </md>
+            </p>
+
+            <p>
+              Each function below is a composition of the functions given above. For
+              example, the function <m>y = (x+1)^2</m> is the composition <m>g(j(x))</m>.
+            </p>
+
+            <p>
+              Write the correct composition for each function below.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>\sqrt{e^x}</m> = <var name="$formula1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>e^{\sqrt{x}}</m> = <var name="$formula2" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\left(e^{x+1}\right)^2</m> = <var name="$formula3" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>x^2+1</m> = <var name="$formula4" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\sqrt{\sqrt{x}}</m> = <var name="$formula5" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>\sqrt{e^x}</m> = <var name="$formula1" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>e^{\sqrt{x}}</m> = <var name="$formula2" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\left(e^{x+1}\right)^2</m> = <var name="$formula3" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>x^2+1</m> = <var name="$formula4" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\sqrt{\sqrt{x}}</m> = <var name="$formula5" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $a=2*random(1,5,1);
+              do{$b=random(2,12,1);}until($b!=$a);
+              $x1=random(2,15,1);
+              $y1=Compute("$a*($a*$x1-$b)-$b");
+              do{$y2=random(2,15,1);}until($y2!=$y1);
+              $x2=Compute("($y2+$b)/$a");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Use the function <m>f(x) = <var name="$a" />x - <var name="$b" /></m>
+              in the problems that follow.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    Evaluate: <m>f\left(f(<var name="$x1" />)\right)</m> = <var name="$y1" width="10" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Evaluate: <m>f^{-1}(<var name="$y2" />)</m> = <var name="$x2" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    First, evaluate <m>f(<var name="$x1" />)</m> and then use that
+                    output as the input for the function <m>f</m> again.
+                  </p>
+
+                  <p>
+                    Answer: <m>f\left(f(<var name="$x1" />)\right)</m> = <var name="$y1" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use <m><var name="$y2" /></m> as the <em>output</em> for the
+                    function <m>f</m> and solve for the input.
+                  </p>
+
+                  <p>
+                    Answer: <m>f^{-1}(<var name="$y2" />)</m> = <var name="$x2" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
 
       <p>
-        Because the input and output are switched for a function and its inverse,
-        then so are the domain and range.
-        The domain of an invertible function is the same as the range of its inverse function.
-        Similarly, the range of an invertible function is the same as the domain of its inverse function.
+        Student Learning Outcome:
+        <em>Demonstrate the inverse relationship between an exponential function
+        and a logarithmic function (with the same base).</em>
       </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $formula1 = RadioButtons(
+                  ["\(10^x = 6\)","\(10^6 = x\)","\(x^{10} = 6\)","\(x^6 = 10\)","\(6^{10} = x\)","None of these"],
+                  1, labels => ["10^x = 6","10^6 = x","x^10 = 6","x^6 = 10","6^10 = x","None of these"],
+                  displayLabels => 0
+              );
+
+              $formula2 = RadioButtons(
+                  ["\(2.25^{3.375} = 1.5\)","\(1.5^{2.25} = 3.375\)","\(1.5^{3.375} = 2.25\)","\(2.25^{1.5} = 3.375\)","None of these"],
+                  3, labels => ["2.25^3.375 = 1.5","1.5^2.25 = 3.375","1.5^3.375 = 2.25","2.25^1.5 = 3.375","None of these"],
+                  displayLabels => 0
+              );
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              For each equation involving a logarithm, choose the corresponding exponential
+              equation.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>\log_{10}(x) = 6</m>
+                  </p>
+
+                  <p>
+                    <var name="$formula1" form="buttons" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>1.5 = \log_{2.25}(3.375)</m>
+                  </p>
+
+                  <p>
+                    <var name="$formula2" form="buttons" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    The base of the logarithm is the same as the base of the exponential
+                    statement -- in this case, <m>10</m>. Also, the output of the
+                    logarithm is the exponent we could put on the base to get the
+                    input of the logarithm.
+                  </p>
+
+                  <p>
+                    So, the exponential statement is: <me>10^6 = x</me>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    You can check this one on a calculator: <me>2.25^{1.5} = 3.375</me>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $formula1 = RadioButtons(
+                  ["\(\log_2(35)=x\)","\(\log_{35}(2)=x\)","\(\log_2(x)=35\)","\(\log_x(2)=35\)","\(\log_{35}(x)=2\)","None of these"],
+                  0, labels => ["log_2(35)=x","log_{35}(2)=x","log_2(x)=35","log_x(2)=35","log_{35}(x)=2","None of these"],
+                  displayLabels => 0
+              );
+
+              $formula2 = RadioButtons(
+                  ["\(\log_t(4)=1.03\)","\(\log_4(1.03)=1\)","\(\log_{1.03}(t)=4\)","\(\log_{1.03}(4)=t\)","None of these"],
+                  3, labels => ["log_t(4)=1.03","log_4(1.03)=1","log_{1.03}(t)=4","log_{1.03}(4)=t","None of these"],
+                  displayLabels => 0
+              );
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              For each equation involving an exponent, choose the corresponding logarithm
+              equation.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>35 = 2^x</m>
+                  </p>
+
+                  <p>
+                    <var name="$formula1" form="buttons" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>1.03^t = 4</m>
+                  </p>
+
+                  <p>
+                    <var name="$formula2" form="buttons" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    The base of the logarithm is the same as the base of the exponential
+                    statement -- in this case, <m>10</m>. Also, the output of the
+                    logarithm is the exponent we could put on the base to get the
+                    input of the logarithm.
+                  </p>
+
+                  <p>
+                    The correct logarithm statement is: <m>x=\log_2(35)</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The correct logarithm statement is: <m>t=\log_{1.03}(4)</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $true=PopUp(["?","true","false"],"true");
+              $false=PopUp(["?","true","false"],"false");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Remembering that exponential functions and logarithms (with the same base)
+              are <em>inverses</em>, decide if each of the following expressions
+              will simplify to just <m>x</m>. [Assume the value <m>x</m> is in the
+              domain of the expression.]
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>\log_{10}(x)\cdot 10^x = x</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$false" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\log_{10}\left(10^x\right) = x</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$true" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>e^{\ln(x)} = x</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$true" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\ln\left(e^x\right)</m>
+                  </p>
+
+                  <p>
+                    Answer: <var name="$true" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    <m>\log_{10}(x)\cdot 10^x = x</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$false" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\log_{10}\left(10^x\right) = x</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$true" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>e^{\ln(x)} = x</m>?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$true" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\ln\left(e^x\right)</m>
+                  </p>
+
+                  <p>
+                    Answer: <var name="$true" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
     </subsection>
+
+
 
     <exercises>
 
@@ -2664,4 +3404,3 @@
     </exercises>
   </section>
 </chapter>
-
