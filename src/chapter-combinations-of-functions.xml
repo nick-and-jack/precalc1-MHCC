@@ -840,40 +840,251 @@
 
     <subsection>
       <title>Conclusion</title>
+
       <p>
-        <ul>
-          <li>
-            <p>
-              Now you have seen that function combinations are just different ways of doing arithmetic with the outputs of different functions,
-              provided the same input may be used for each function.
-              Any arithmetic expression you could write with numbers could be done with function outputs.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              The domain of a function combination is the set of numbers that are in both of the domains of the original functions,
-              except for those inputs which cause the combination to be undefined
-              (division by zero, negative number under a square root, etc.).
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Even beginning with simple functions,
-              different combinations may produce very complicated graphs.
-              In general, though,
-              the graph of a combination is found by combining the outputs (y-values) of the functions involved.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Composition is really just some combination of a single function.
-            </p>
-          </li>
-        </ul>
+        Test your understanding of this chapter with the following exercises.
       </p>
+
+      <p>
+        Student Learning Outcome:
+        <em>Define combinations of functions and apply and interpret these in
+        appropriate situations.</em>
+      </p>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $yValues=PopUp(["?","x values","y values"],"y values");
+              $false=PopUp(["?","true","false"],"false");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Consider functions <m>y = f(x)</m> and <m>y = g(x)</m>.
+            </p>
+
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
+                    If we calculate the
+                    combination <m>f(4)+g(4)</m>, does the result combine two <m>x</m>-values or
+                    two <m>y</m>-values?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$yValues" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    True or false: <m>f(3)+f(3)</m> is the same as <m>f(6)</m>.
+                  </p>
+
+                  <p>
+                    Answer: <var name="$false" form="popup" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Each of the terms, <m>f(4)</m> and <m>g(4)</m>, represents a <m>y</m>-value,
+              so the combination <m>f(4)+g(4)</m> is combining <m>y</m>-values.
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $ans1=PopUp(["?","c(3)","c(5)","c(6)","c(7)"],"c(5)");
+              $ans2=Real(1);
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Consider the functions <m>a(x)</m>, <m>b(x)</m>, <m>c(x)=a(x)+b(x)</m>
+              and <m>d(x)=a(x)-b(x)</m>.
+            </p>
+
+            <p>
+              Use the table of values for functions <m>a</m> and <m>b</m> below to
+              answer the questions that follow.
+            </p>
+
+            <sidebyside>
+
+              <tabular top="major" halign="center">
+                <col halign="left" />
+                <col />
+                <col />
+                <row bottom="medium">
+                  <cell><m>x</m></cell>
+                  <cell><m>a(x)</m></cell>
+                  <cell><m>b(x)</m></cell>
+                </row>
+                <row>
+                  <cell><m>5</m></cell>
+                  <cell><m>5</m></cell>
+                  <cell><m>3</m></cell>
+                </row>
+                <row>
+                  <cell><m>10</m></cell>
+                  <cell><m>7</m></cell>
+                  <cell><m>6</m></cell>
+                </row>
+                <row>
+                  <cell><m>15</m></cell>
+                  <cell><m>10</m></cell>
+                  <cell><m>12</m></cell>
+                </row>
+                <row>
+                  <cell><m>20</m></cell>
+                  <cell><m>14</m></cell>
+                  <cell><m>24</m></cell>
+                </row>
+              </tabular>
+
+            </sidebyside>
+
+            <p>
+              <ol label="$a">
+                <li>
+                  <p>
+                    Which value can be determined from the table?
+                  </p>
+
+                  <p>
+                    Answer: <var name="$ans1" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Evaluate: <m>d(10)</m> = <var name="$ans2" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ol label="$a">
+                <li>
+                  <p>
+                    We can only determine <m>c(10)</m> because the table only
+                    gives values of <m>f</m> and <m>g</m> where the inputs are
+                    multiples of <m>5</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>d(10) = f(10) - g(10) = 7 - 6 = 1</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </webwork>
+      </exercise>
+
+      <exercise>
+        <webwork>
+          <setup>
+
+            <pg-code>
+              $ans1=PopUp(["?","12R(x)+12D(x)","R(12)D(12)","R(12)+D(12)","R(D(12))"],"R(12)+D(12)");
+              $ans2=PopUp(["?","d(12)","D(12)d(12)","D(12)+d(12)","d(D(12))"],"D(12)d(12)");
+              Context('Numeric');
+              Context()->variables->are(x=>'Real');
+              parserFunction("R(x)"=>"(sin(x)+2)/pi");
+              parserFunction("D(x)"=>"((pi+exp(1))(sin(x)+10))");
+              parserFunction("r(x)"=>"((pi+exp(2))(cos(x)+10*pi))");
+              parserFunction("d(x)"=>"((pi+exp(3))(sin(x+1)+13*pi))");
+              Context()->flags->set(reduceConstantFunctions=>0);
+              Context()->flags->set(formatStudentAnswer=>"parsed");
+              $ans3=Formula("R(12)r(12)+D(12)d(12)");
+            </pg-code>
+          </setup>
+          <statement>
+            <p>
+              Consider the functions below:
+              <ul>
+                <li>
+                  <p>
+                    <m>R(x)</m> and <m>D(x)</m>
+                  </p>
+
+                  <p>
+                    These represent the number of <em>regular</em> price and <em>discount</em>
+                    tickets (respectively), sold at the performance this month,
+                    where <m>x</m> represents the date of the month
+                    (<m>1</m> - <m>30</m>).
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>r(x)</m> and <m>d(x)</m>
+                  </p>
+
+                  <p>
+                    These represent the price (in dollars) of a <em>regular</em>
+                    ticket and a <em>discount</em> ticket, respectively, where
+                    <m>x</m> represents the date of the month (<m>1</m> - <m>30</m>).
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Which expression represents the total number of tickets sold
+                    on the <m>12^{\rm{th}}</m> day of the month?
+                  </p>
+
+                  <p>
+                    <var name="$ans1" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Which expression represents the total money brought in by
+                    discount tickets on the <m>12^{\rm{th}}</m> day of the month?
+                  </p>
+
+                  <p>
+                    <var name="$ans2" form="popup" />
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Write an expression that represents the total money brought in
+                    by all tickets on the <m>12^{\rm{th}}</m> day of the month.
+                  </p>
+
+                  <p>
+                    <var name="$ans3" width="18" />
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+          </solution>
+        </webwork>
+      </exercise>
+
+
     </subsection>
 
     <exercises>
@@ -1105,4 +1316,3 @@
   </section>
 
 </chapter>
-
