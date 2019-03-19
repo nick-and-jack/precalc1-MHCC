@@ -654,6 +654,13 @@
           <p>
             A cylindrical tank is full of water, ready to fill a shallow swimming pool. The base of the tank has a radius of <m>8</m> feet, and the height is <m>12</m> feet. The swimming pool is a rectangular prism <m>20</m> feet long, <m>18</m> feet wide, and <m>3</m> feet deep.
           </p>
+          <sidebyside widths="15%">
+            <image source="images/graduated_cyl.png">
+              <description>
+                Picture of graduated cylinder
+              </description>
+            </image>
+          </sidebyside>
           <p>
             What percent of the water in the tank will be needed to fill the pool to a depth of <m>2.5</m> feet?
           </p>
@@ -672,6 +679,36 @@
           <p>
             Find the area of the shaded triangular region.
           </p>
+          <sidebyside widths="47%">
+            <image>
+              <description>
+                area of triangle
+              </description>
+              <latex-image>
+                \begin{tikzpicture}
+                  \begin{axis}[
+                    xmin=-11,
+                    xmax=9,
+                    ymin=-7,
+                    ymax=9,
+                    grid=none,
+                    xtick={0},
+                    minor xtick={0},
+                    ytick={0},
+                    minor ytick={0},
+                    axis equal,
+                    ]
+                    \addplot[primarycurve] coordinates {(-7,-4) (-1,8)};
+                    \addplot[primarycurve] coordinates {(-7,6) (7,-1)};
+                    \addplot[soldot] coordinates {(-5,0)} node[above left] {$(-5,0)$};
+                    \addplot[soldot] coordinates {(-3,4)} node[left] {$(-3,4)$};
+                    \addplot[rightangle] coordinates {(-2, 3.5) (-2.5, 2.5) (-3.5,3)};
+                    \addplot[fill=secondcolor, opacity=0.5] coordinates {(0,0) (0,2.5) (5,0)};
+                  \end{axis}
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
         </statement>
       </exercise>
 
