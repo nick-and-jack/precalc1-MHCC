@@ -128,7 +128,7 @@ html:
 	cp -a $(IMAGESOUT) $(HTMLOUT)
 	cp -a $(IMAGESSRC) $(HTMLOUT)
 	cd $(HTMLOUT); \
-	xsltproc --stringparam webwork.divisional.static no $(MBXSL)/mathbook-html.xsl $(OUTPUT)/merge.ptx;
+	xsltproc --stringparam html.calculator geogebra-classic --stringparam webwork.divisional.static no $(MBXSL)/mathbook-html.xsl $(OUTPUT)/merge.ptx;
 	open -a $(HTMLVIEWER) $(HTMLOUT)/precalc1-MHCC.html
 
 ###########
