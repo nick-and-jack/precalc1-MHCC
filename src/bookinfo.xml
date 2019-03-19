@@ -30,6 +30,9 @@
     \usepackage{tkz-euclide}
     \usetkzobj{all}
     \usetikzlibrary{3d,calc}
+    \definecolor{firstcolor}{HTML}{9e0c0f}%ruby
+    \definecolor{secondcolor}{HTML}{008099}%turquoise
+    \definecolor{thirdcolor}{HTML}{1c8464}%emerald
     \usepackage{xltxtra}
 
     % curve, dot, and graph custom styles
@@ -41,6 +44,7 @@
     \pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
     \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
     \pgfplotsset{guideline/.style      = {color=gray, mark=none, line width=1pt, -}}
+    \tikzset{rightangle/.style         = {color=gray, mark=none, -}}
     \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={solid,gray!40}}}
 
     % cycle list of plot styles for graphs with multiple plots
