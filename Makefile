@@ -50,6 +50,7 @@ include Makefile.paths
 # the project distribution
 PRJSRC    = $(PRJ)/src
 OUTPUT    = $(PRJ)/output
+IMAGESSRC = $(PRJSRC)/images
 
 # The project's main hub file
 MAINFILE  = $(PRJSRC)/precalc1-MHCC.xml
@@ -125,8 +126,9 @@ html:
 	-rm $(HTMLOUT)/*.html
 	-rm $(HTMLOUT)/knowl/*.html
 	cp -a $(IMAGESOUT) $(HTMLOUT)
+	cp -a $(IMAGESSRC) $(HTMLOUT)
 	cd $(HTMLOUT); \
-	xsltproc --stringparam webwork.divisional.static no $(MBXSL)/mathbook-html.xsl $(OUTPUT)/merge.ptx;
+	xsltproc --stringparam html.calculator geogebra-classic --stringparam webwork.divisional.static no $(MBXSL)/mathbook-html.xsl $(OUTPUT)/merge.ptx;
 	open -a $(HTMLVIEWER) $(HTMLOUT)/precalc1-MHCC.html
 
 ###########
