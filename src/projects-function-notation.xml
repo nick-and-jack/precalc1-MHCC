@@ -18,8 +18,6 @@
   <exercises>
     <subsection>
       <title>Function and Notation</title>
-
-
       <exercise>
             <statement>
               <p>
@@ -155,7 +153,34 @@
           <p>
             Arizona Cardinals running back LaRod Stephens-Howling once returned a kick-off to make a 102-yard touchdown against the Oakland Raiders. The ball was kicked from the 30-yard line, and it was caught 2 yards into the end zone. Watching the YouTube video of the kick-off, I approximated the angle at which the ball was kicked and, with the help of the internet and an old physics book, I determined the path of the ball could be modeled using the formula <me>f(x)=\frac{-1}{256}x^2+\frac{216}{256}x</me> where x is the horizontal distance of the ball (measured in feet) away from where the ball was kicked, and <m>f(x)</m> is its height above the ground (measured in feet).
           </p>
-
+          <sidebyside widths="47%">
+            <image>
+              <description>
+                Axes of height versus distance
+              </description>
+              <latex-image>
+                \begin{tikzpicture}
+                \begin{axis}[
+                  xmin=-0.1,
+                  xmax=2,
+                  ymin=-0.2,
+                  ymax=2,
+                  grid=none,
+                  xtick={0},
+                  minor xtick={0},
+                  ytick={0},
+                  minor ytick={0},
+                  xlabel={$x={}$ distance from the 30-yard line (in feet)},
+                  ylabel={$y={}$ height above the ground (in feet)},
+                  every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
+                  width=1.5*\axisdefaultwidth,
+                  height=\axisdefaultheight,
+                  ]
+                \end{axis}
+              \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
           <p>
             <ol label="a">
               <li>
@@ -176,7 +201,8 @@
                 </p>
               </li>
             </ol>
-          </p> 
+          </p>
+
         </statement>
       </exercise>
 
@@ -471,7 +497,7 @@
 
 
     <subsection>
-      <title>Composition and Inverse</title> 
+      <title>Composition and Inverse</title>
 
       <exercise>
         <statement>
@@ -682,16 +708,170 @@
         </statement>
       </exercise>
 
+
       <exercise>
         <statement>
           <p>
-            The graph at right shows a rectangle whose sides are formed by four lines. Remember that sides of a rectangle meet at 90, so they are perpendicular. 
+            The figure shows a rectangle whose sides are formed by four lines. Remember that sides of a rectangle are perpendicular. 
           </p>
+          <sidebyside widths="47%">
+            <image>
+              <description>
+                Rectangle Area
+              </description>
+              <latex-image>
+                \begin{tikzpicture}
+                \begin{axis}[
+                  xmin=-26,
+                  xmax=10,
+                  ymin=-10,
+                  ymax=15,
+                  grid=none,
+                  xtick={0},
+                  minor xtick={0},
+                  ytick={0},
+                  minor ytick={0},
+                  axis equal,
+                  ]
+                  \addplot[color=firstcolor, fill=secondcolor, opacity=0.5] coordinates {(-16,4) (-10,12) (6,0) (0,-8) (-16,4)};
+                  \addplot[soldot] coordinates {(-16,4)} node[below left] {$(-16,4)$};
+                  \addplot[soldot] coordinates {(-10,12)} node[above] {$(-10,12)$};
+                \end{axis}
+              \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
           <p>
             Find the area of the rectangle.
           </p>
           <p>
             [Hint: It may help to find the equation of each side of the rectangle.]
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            A point <m>P=(x,y)</m> is on the curve <m>f(x)=x^2+x</m>. Write the formulas for two different functions <m>D(x)</m> and <m>S(x)</m>, where the only input for each function is the x-coordinate of the point P.
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p><m>D(x)</m> finds the distance between the origin <m>(0,0)</m> and the point P.</p>
+              </li>
+              <li>
+                <p><m>S(x)</m> finds the slope of the line throuh the origin <m>(0,0)</m> and the point P.</p>
+              </li>
+            </ol>
+          </p>
+            <sidebyside widths="47%">
+              <image>
+                <description>
+                  Parabola and point P
+                </description>
+                <latex-image>
+                  \begin{tikzpicture}
+                  \begin{axis}[
+                    xmin=-3,
+                    xmax=3,
+                    ymin=-2,
+                    ymax=5,
+                    grid=none,
+                    xtick={0},
+                    minor xtick={0},
+                    ytick={0},
+                    minor ytick={0},
+                    ]
+                    \addplot[primarycurve,domain=-2.8:1.8] {x*(x+1)};
+                    \addplot[soldot] coordinates {(1.5,3.75)} node[below right] {$P$};
+                  \end{axis}
+                \end{tikzpicture}
+                </latex-image>
+              </image>
+            </sidebyside>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            A manufacturer purchases raw materials from a supplier and then makes products to sell. The amount of money the manufacturer makes from selling one of these products depends on how much they have spend on the materials. At the same time, however, the price of materials changes throughout the year.
+          </p>
+            <sidebyside widths="47% 47%">
+              <image>
+                <description>
+                  Composition of two graphs
+                </description>
+                <latex-image>
+                  \begin{tikzpicture}
+                  \begin{axis}[
+                    xmin=-5,
+                    xmax=60,
+                    ymin=-2,
+                    ymax=3,
+                    grid=major,
+                    xtick={5,10,...,55},
+                    minor xtick={0},
+                    ytick={-1.5,-1,...,2.5},
+                    minor ytick={0},
+                    xlabel={$x$, price of materials (in cents)},
+                    ylabel={\parbox{12em}{$f(x)={}$ price for which the product will be (in dollars)}},
+                    ]
+                    \addplot[primarycurve,-] coordinates {(5, 0.5) (50,2)};
+                  \end{axis}
+                \end{tikzpicture}
+                </latex-image>
+              </image>
+              <image>
+                <description>
+                  Composition of two graphs
+                </description>
+                <latex-image>
+                \begin{tikzpicture}
+                \begin{axis}[
+                  xmin=-20,
+                  xmax=360,
+                  ymin=-5,
+                  ymax=65,
+                  grid=both,
+                  xtick={60,120,...,300},
+                  minor xtick={20,40,...,340},
+                  ytick={5,10,...,60},
+                  minor ytick={0},
+                  xlabel={$t$, days after January 1st},
+                  ylabel={$P(t)={}$ price for materials (in cents)},
+                  ]
+                  \addplot[primarycurve,-,domain=0:360] {-45*sin(x/2)+50};
+                \end{axis}
+                \end{tikzpicture}
+                </latex-image>
+              </image>
+            </sidebyside>
+          <p>
+            <ol label="a">
+              <li>
+                <p>Exstimate <m>f(35)</m> and interpret its meaning.</p>
+              </li>
+              <li>
+                <p>At <m>40</m> days after January 1st, how much wil they sell the product for?</p>
+              </li>
+              <li>
+                <p>Evaluate <m>f(P(120))</m> and interpret its meaning.</p>
+              </li>
+              <li>
+                <p>What is wrong with the composition <m>P(f(20))</m>? [Hint: Think about the units involved in the expression.]</p>
+              </li>
+              <li>
+                <p>Use a compostion to write an equation that means: <q>If the company buys their materials <m>280</m> days after January 1st, they will sell the product for <m>\$ 1.19</m>.</q></p>
+              </li>
+              <li>
+                <p>Explain the meaning of <m>f(P(0))=2</m>.</p>
+              </li>
+              <li>
+                <p>Solve the equation <m>f(P(t))=1</m>. [Your answer(s) will look like <q><m>t= </m> </q>]</p>
+              </li>
+            </ol>
           </p>
         </statement>
       </exercise>
