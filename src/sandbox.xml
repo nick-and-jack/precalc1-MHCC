@@ -11,6 +11,59 @@
 -->
 <chapter xml:id="sandbox" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Sandbox</title>
-
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          <sidebyside widths="47% 47%">
+            <image>
+              <description>
+                Linear Graphs with slope <m>\frac{1}{2}</m>
+              </description>
+              <latex-image>
+                \begin{tikzpicture}
+                  \begin{axis}[
+                    xmin=-2,
+                    xmax=12,
+                    ymin=-2,
+                    ymax=12,
+                    grid=none,
+                    xtick={0},
+                    minor xtick={0},
+                    ytick={0},
+                    minor ytick={0},
+                    ]
+                    \addplot[primarycurve,-] coordinates {(-2, 4) (12,11)};
+                    \addplot[soldot] coordinates {(4,7)} node[below right] {$(4,7)$};
+                    \addplot[soldot] coordinates {(9,9.5)} node[below right] {$(9,a)$};
+                  \end{axis}
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+            <image>
+              <latex-image>
+                \begin{tikzpicture}
+                  \begin{axis}[
+                    xmin=-2,
+                    xmax=12,
+                    ymin=-2,
+                    ymax=12,
+                    grid=none,
+                    xtick={0},
+                    minor xtick={0},
+                    ytick={0},
+                    minor ytick={0},
+                    ]
+                    \addplot[primarycurve,-] coordinates {(-2, 3) (12,10)};
+                    \addplot[soldot] coordinates {(2,5)} node[below right] {$(2,5)$};
+                    \addplot[soldot] coordinates {(8,8)} node[below right] {$(a,8)$};
+                  \end{axis}
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
+        </p>
+      </statement>
+    </exercise>
   </exercises>
 </chapter>
