@@ -19,7 +19,235 @@
 
   <exercises>
     <subsection>
-      <title>Function and Notation</title>
+      <title>Evaluate, apply and interpret function notation, including the notation for inverse functions and composition of Functions</title>
+
+      <exercise>
+        <statement>
+          <p>
+            The function W(h) represents the average weight (measured in pounds) of 60 year old American men as a function of their height (measured in centimeters). Suppose <m>W^{-1}(181)=180</m>. Explain what this means in a complete sentence.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            The function <m>A(r)=2 \pi r^2+20 \pi r</m> represents the surface area (measured in square inches) of a cylinder that is <m>10</m> inches tall with the radius of the circular base equal to <m>r</m> inches.
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Explain what <m>A^{-1}(150)</m> represents. Be specific.
+                </p>
+              </li>
+              <li>
+                <p>
+                  What does <m>A(3)</m> represent?
+                </p>
+              </li>
+              <li>
+                <p>
+                  What is a likely domain for the function <m>A(r)</m>?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Is the function <m>A(r)</m> increasing or decreasing?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Match each expression to the correct phrase:
+                </p>
+                <statement>
+                  <table>
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                      <col halign="center"/>
+                      <col halign="center"/>
+                      <row>
+                        <cell><m>A(3r)</m></cell>
+                        <cell>The surface area of three cans of radius <m>r</m></cell>
+                      </row>
+                      <row>
+                        <cell><m>3A(r)</m></cell>
+                        <cell>The surface area of a can of radius <m>r</m>, then add on <m>3</m> more square inches</cell>
+                      </row>
+                      <row>
+                        <cell><m>A(r)+3</m></cell>
+                        <cell>The surface area of a can whose radius is <m>3</m> times as large as <m>r</m></cell>
+                      </row>
+                    </tabular>
+                  </table>
+                </statement>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+      
+      <exercise>
+        <statement>
+          <p>
+            The graph in the figure shows two functions <m>f(x)</m>, linear, and <m>g(x)</m>, quadratic.
+          </p>
+            <sidebyside widths="47%">
+              <image>
+                <description>
+                  Linear and Exponential Graphs (Combinations)
+                </description>
+                <latex-image>
+                  \begin{tikzpicture}
+                    \begin{axis}[
+                      xmin=-3,
+                      xmax=10,
+                      ymin=-8,
+                      ymax=8,
+                      grid=major,
+                      xtick={-2,-1,...,9},
+                      minor xtick={0},
+                      ytick={-7,-6,...,7},
+                      minor ytick={0},
+                      ]
+                      \addplot[primarycurve,-] coordinates {(-4, -5) (9,8)};
+                      \addplot[secondarycurve,-,domain=-3.5:10] {-1/4*(x-4)^2+6};
+                      \addplot[soldot,color=black] coordinates {(-2,-3) (0,-1) (2,1) (4,3) (6,5) (8,7) (0,2) (2,5) (4,6) (6,5) (8,2)};
+                    \end{axis}
+                  \end{tikzpicture}
+                </latex-image>
+              </image>
+            </sidebyside>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Sketch the graph of <m>f(x)-g(x)</m>. Clearly label at least 6 different points on the resulting graph, and connect them with a smooth curve.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Let <m>S(x)=f(x)+g(x)</m>, <m>P(x)=f(x)*g(x)</m> and <m>Q(x)= \frac{f(x)}{g(x)}</m>
+                <p/>
+                  <p>
+                    <ol label="i">
+                      <li>
+                        <p>
+                          Evaluate <m>S(-2)</m>
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Evaluate <m>P(8)</m>
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Solve <m>Q(x)=0</m>
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            A manufacturer purchases raw materials from a supplier and then makes
+            products to sell. The amount of money the manufacturer makes from
+            selling one of these products depends on how much they have spend
+            on the materials. At the same time, however, the price of materials
+            changes throughout the year.
+          </p>
+            <sidebyside widths="47% 47%">
+              <image>
+                <description>
+                  Composition of two graphs
+                </description>
+                <latex-image>
+                  \begin{tikzpicture}
+                  \begin{axis}[
+                    xmin=-5,
+                    xmax=60,
+                    ymin=-2,
+                    ymax=3,
+                    grid=major,
+                    xtick={5,10,...,55},
+                    minor xtick={0},
+                    ytick={-1.5,-1,...,2.5},
+                    minor ytick={0},
+                    xlabel={$x$, price of materials (in cents)},
+                    ylabel={\parbox{12em}{$f(x)={}$ price for which the product
+                    will be (in dollars)}},
+                    ]
+                    \addplot[primarycurve,-] coordinates {(5, 0.5) (50,2)};
+                  \end{axis}
+                \end{tikzpicture}
+                </latex-image>
+              </image>
+              <image>
+                <description>
+                  Composition of two graphs
+                </description>
+                <latex-image>
+                \begin{tikzpicture}
+                \begin{axis}[
+                  xmin=-20,
+                  xmax=360,
+                  ymin=-5,
+                  ymax=65,
+                  grid=both,
+                  xtick={60,120,...,300},
+                  minor xtick={20,40,...,340},
+                  ytick={5,10,...,60},
+                  minor ytick={0},
+                  xlabel={$t$, days after January 1st},
+                  ylabel={$P(t)={}$ price for materials (in cents)},
+                  ]
+                  \addplot[primarycurve,-,domain=0:360] {-45*sin(x/2)+50};
+                \end{axis}
+                \end{tikzpicture}
+                </latex-image>
+              </image>
+            </sidebyside>
+          <p>
+            <ol label="a">
+              <li>
+                <p>Exstimate <m>f(35)</m> and interpret its meaning.</p>
+              </li>
+              <li>
+                <p>At <m>40</m> days after January <m>1^{\rm{st}}</m>, how much
+                will they sell the product for?</p>
+              </li>
+              <li>
+                <p>Evaluate <m>f(P(120))</m> and interpret its meaning.</p>
+              </li>
+              <li>
+                <p>What is wrong with the composition <m>P(f(20))</m>? [Hint:
+                Think about the units involved in the expression.]</p>
+              </li>
+              <li>
+                <p>Use a composition to write an equation that means: <q>If the
+                  company buys their materials <m>280</m> days after January
+                  <m>1^{\rm{st}}</m>, they will sell the product for
+                  <m>\$ 1.19</m>.</q>
+                </p>
+              </li>
+              <li>
+                <p>Explain the meaning of <m>f(P(0))=2</m>.</p>
+              </li>
+              <li>
+                <p>Solve the equation <m>f(P(t))=1</m>. [Your answer(s) will look
+                like <q><m>t= </m> </q>]</p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
       <exercise>
             <statement>
               <p>
@@ -27,7 +255,7 @@
                 where   represents the population and   represents the year.
               </p>
               <p>
-                <ol>
+                <ol label="a">
                   <li>
                     <p>
                       Choose the equation that means, <q>There were <m>2015</m>
@@ -359,6 +587,12 @@
         </statement>
       </exercise>
 
+      
+    </subsection>
+
+    <subsection>
+      <title>Maintain and strengthen prerequisites, especially: percent, linear and quadratic functions, solving equations.</title>
+      
       <exercise>
         <statement>
           <p>
@@ -383,354 +617,6 @@
           </p>
         </statement>
       </exercise>
-    </subsection>
-
-    <subsection>
-      <title>Domain, Range and Piecewise Defined Functions</title>
-
-
-      <exercise>
-        <statement>
-          <p>
-            Give examples of functions with the following domains:
-          </p>
-
-          <p>
-            <ol label="a">
-              <li>
-                <p>
-                  The set of real numbers such that <m>x \geq 0</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  The set of real numbers such that <m>x \neq 2</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  The set of real numbers such that <m>x \neq 2</m> and
-                  <m>x \geq 5</m>
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-    </subsection>
-
-    <subsection>
-      <title>Exponential Functions and Constant Percent Change</title>
-
-      <exercise>
-        <statement>
-          <p>
-            An investment earns <m>2 \%</m> each week
-          </p>
-          <p>
-            <ol label="a">
-              <li>
-                <p>
-                  What is the percent change on the investment value after
-                  <m>5</m> weeks?
-                </p>
-              </li>
-              <li>
-                <p>
-                  What is the overall percent change on the investment value
-                  after <m>10</m> weeks?
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            A heat source is placed on a flat plate initially at <m>25</m>
-            degrees Celsius. As the heat spreads across the plate the temperature
-            of the plate increases over time. Let <m>H(t)</m> be the temperature
-            at a particular point on the plate in degrees Celsius as a function
-            of time <m>t</m> (measured in minutes).
-          </p>
-          <p>
-            Suppose <m>H(5)=27</m>.
-          </p>
-          <p>
-            <ol label="a">
-              <li>
-                <p>
-                  Write an linear formula for <m>H(t)</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  What is <m>H(50)</m> if we assume <m>H(t)</m> is a linear function?
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  At what rate does the linear model predict the temperature is
-                  increasing each minute?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Write an exponential formula for <m>H(t)</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  What is <m>H(50)</m> if we assume <m>H(t)</m> is an exponential
-                  function?
-                </p>
-              </li>
-              <li>
-                <p>
-                  At what rate does the exponential model predict the temperature
-                  is increasing each minute?
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-    </subsection>
-
-    <subsection>
-      <title>Logarithms</title>
-      <exercise>
-        <statement>
-          <p>
-            How many years would it take?
-          </p>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  How many?
-                </p>
-              </li>
-              <li>
-                <p>How many?</p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-    </subsection>
-
-    <subsection>
-      <title>Horizontal and Vertical Translations</title>
-      <exercise>
-        <statement>
-          <p>
-            As the temperature drops, so does the speed of sound. The function
-          </p>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  Determine the speed of sound at <m>9</m> <init>p.m.</init>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Determine a formula for the function that will find the speed
-                  of sound, <m>h</m> hours after <m>6:00</m> <init>p.m.</init>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-    </subsection>
-
-
-
-    <subsection>
-      <title>Composition and Inverse</title>
-
-      <exercise>
-        <statement>
-          <p>
-            As the temperature drops, so does the speed of sound. The function
-            <me>v=f(T)=740.4+1.34T</me> models the speed of sound (in miles per
-            hour) when the temperature is <m>T</m> degrees Celsius. On a
-            particular day between <m>6:00</m> <init>p.m.</init> and midnight,
-            suppose the temperature outside is modeled by the function
-            <me>=g(h)=24-3h</me> where <m>h</m> is the number of hours after
-            <m>6{:}00</m> <init>p.m.</init>
-          </p>
-          <p>
-            <ol label="a">
-              <li>
-                <p>
-                  Determine the speed of sound at <m>9</m> <init>p.m.</init>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Determine a formula for the function that will find the speed
-                  of sound, <m>h</m> hours after <m>6:00</m> <init>p.m.</init>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            Let <m>f(x)</m> represent the number of people who visit your
-            restaurant chain in a month, where <m>x</m> is the amount of money <m>x</m>
-            (in dollars) that you spend on advertising. You know from experience
-            that about <m>25 \%</m> of the people who visit your restaurant chain
-            will order the daily special meal, which costs <m>\$ 12.00</m>.
-          </p>
-          <p>
-            <ol label="a">
-              <li>
-                <p>
-                  Use function notation to write an expression that represents
-                  how much money your restaurant chain will earn in one month
-                  from the meal special if you spend <m>\$ 8,000</m> on advertising.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            On your popular YouTube channel, you earn a small amount of money
-            (due to advertising) for each time your video is viewed.
-          </p>
-          <p>
-            Suppose the function <m>f(x)</m> represents how many times your video
-            is viewed on the <m>x^{\rm{th}}</m> day of the month, and <m>g(x)</m>
-            represents how much you earn per view on the <m>x^{\rm{th}}</m> day
-            of the month.
-          </p>
-          <p>
-            Finally, suppose the function <m>h(x)</m> represents how much you
-            must pay in taxes for earning <m>x</m> dollars from your YouTube channel.
-          </p>
-
-          <p>
-            <ol label="a">
-              <li>
-                <p>
-                  Write an expression to represent how much money you earn on
-                  the <m>5^{\rm{th}}</m> day of the month.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Write an expression to represent how much you must pay in your
-                  taxes from your earnings on the <m>5^{\rm{th}}</m> day of the month.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            On a cold day, when the wind blows, it feels colder than it actually
-            is outside. The temperature you feel is called the <em>wind chill</em>
-            temperature.
-          </p>
-          <p>
-            The table below shows values of the function <m>W(s)</m>, which
-            calculates the wind chill temperature when it is <m>40</m>
-            degrees Fahrenheit outside, and the wind is blowing at <m>s</m>
-            miles per hour.
-          </p>
-          <sidebyside>
-            <tabular top="medium" bottom="medium" left="medium" right="medium">
-              <col halign="center"/>
-              <col halign="center"/>
-              <row>
-                <cell><em>s</em>, Wind Speed <m>(mph)</m></cell>
-                <cell><m>W(s)</m> (degrees Fahrenheit)</cell>
-              </row>
-              <row>
-                <cell><m>0</m></cell>
-                <cell><m>40</m></cell>
-              </row>
-              <row>
-                <cell><m>10</m></cell>
-                <cell><m>34</m></cell>
-              </row>
-              <row>
-                <cell><m>20</m></cell>
-                <cell><m>30</m></cell>
-              </row>
-              <row>
-                <cell><m>30</m></cell>
-                <cell><m>28</m></cell>
-              </row>
-              <row>
-                <cell><m>40</m></cell>
-                <cell><m>27</m></cell>
-              </row>
-              <row>
-                <cell><m>50</m></cell>
-                <cell><m>26</m></cell>
-              </row>
-              <row>
-                <cell><m>60</m></cell>
-                <cell><m>25</m></cell>
-              </row>
-            </tabular>
-          </sidebyside>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  Which pair of statements is true?
-                  <p>
-                    <ul>
-                      <li>
-                        <p>
-                          <m>W(25)=60</m> and <m>W^{-1}(50)=26</m>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <m>W(40)=27</m> and <m>W^{-1}(34)=10</m>
-                        </p>
-                      </li>
-                    </ul>
-                  </p>
-
-                </p>
-              </li>
-              <li>
-                <p>
-                  Explain in words the meaning of the expression <m>W^{-1}(30)=20</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-    </subsection>
-
-    <subsection>
-      <title>Exponentials</title>
 
       <exercise>
         <statement>
@@ -740,6 +626,77 @@
             height is <m>12</m> feet. The swimming pool is a rectangular prism
             <m>20</m> feet long, <m>18</m> feet wide, and <m>3</m> feet deep.
           </p>
+          <p>
+            What percent of the water in the tank will be needed to fill the
+            pool to a depth of <m>2.5</m> feet?
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            The table shows the height of the water in a graduated cylinder as a function of the volume of water in the cylinder.
+          </p>
+          <sidebyside>
+            <tabular top="medium" bottom="medium" left="medium" right="medium">
+              <col halign="center"/>
+              <col halign="center"/>
+              <row>
+                <cell>Volume <m>(cm^3)</m></cell>
+                <cell>Height <m>(cm)</m></cell>
+              </row>
+              <row>
+                <cell><m>50</m></cell>
+                <cell><m>0.6366</m></cell>
+              </row>
+              <row>
+                <cell><m>100</m></cell>
+                <cell><m>1.2732</m></cell>
+              </row>
+              <row>
+                <cell><m>150</m></cell>
+                <cell><m>1.9099</m></cell>
+              </row>
+              <row>
+                <cell><m>200</m></cell>
+                <cell><m>2.5465</m></cell>
+              </row>
+              <row>
+                <cell><m>250</m></cell>
+                <cell><m>3.1831</m></cell>
+              </row>
+            </tabular>
+          </sidebyside>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Confirm that the Height is a linear function of the Volume.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the formula for the height as a function of the volume. Use H(V) to represent the height as a function of volume. Also, sketch a graph of the function and label two points on the graph.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Explain the meaning of the statement <q><m>H(1100)=14</m></q> in a complete sentence, including proper units.
+                </p>
+              </li>
+              <li>
+                <p>
+                  What is the radius of the cylinder? Show how you know this.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Suppose the container is <m>20 cm</m> tall. What is the domain of the function <m>H(V)</m>?
+                </p>
+              </li>
+            </ol>
+          </p>
           <sidebyside widths="15%">
             <image source="images/graduated_cyl.png">
               <description>
@@ -747,17 +704,9 @@
               </description>
             </image>
           </sidebyside>
-          <p>
-            What percent of the water in the tank will be needed to fill the
-            pool to a depth of <m>2.5</m> feet?
-          </p>
         </statement>
       </exercise>
-    </subsection>
-
-    <subsection>
-      <title>Maintain Prerequisites</title>
-      <exercise>
+<exercise>
         <statement>
           <p>
             Find the area of the shaded triangular region.
@@ -886,6 +835,185 @@
         </statement>
       </exercise>
 
+      
+    </subsection>
+
+    <subsection>
+      <title>Determine the domain and range of functions</title>
+      <exercise>
+        <statement>
+          <p>
+            Give examples of functions with the following domains:
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  The set of real numbers such that <m>x \geq 0</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  The set of real numbers such that <m>x \neq 2</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  The set of real numbers such that <m>x \neq 2</m> and
+                  <m>x \geq 5</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+    </subsection>
+
+    <subsection>
+      <title>Exponential Functions and Constant Percent Change</title>
+
+      <exercise>
+        <statement>
+          <p>
+            An investment earns <m>2 \%</m> each week
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  What is the percent change on the investment value after
+                  <m>5</m> weeks?
+                </p>
+              </li>
+              <li>
+                <p>
+                  What is the overall percent change on the investment value
+                  after <m>10</m> weeks?
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            A heat source is placed on a flat plate initially at <m>25</m>
+            degrees Celsius. As the heat spreads across the plate the temperature
+            of the plate increases over time. Let <m>H(t)</m> be the temperature
+            at a particular point on the plate in degrees Celsius as a function
+            of time <m>t</m> (measured in minutes).
+          </p>
+          <p>
+            Suppose <m>H(5)=27</m>.
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Write an linear formula for <m>H(t)</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  What is <m>H(50)</m> if we assume <m>H(t)</m> is a linear function?
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  At what rate does the linear model predict the temperature is
+                  increasing each minute?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Write an exponential formula for <m>H(t)</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  What is <m>H(50)</m> if we assume <m>H(t)</m> is an exponential
+                  function?
+                </p>
+              </li>
+              <li>
+                <p>
+                  At what rate does the exponential model predict the temperature
+                  is increasing each minute?
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+    </subsection>
+
+    <subsection>
+      <title>Solve equations algebraically using properties of exponents and logarithms</title>
+      <exercise>
+        <statement>
+          <p>
+            A famous application involving the number <m>e</m> comes from Optimal Stopping  theory. Known as the Best Choice Problem, it concerns hiring someone for a job under the following conditions:
+          </p>
+            <p>
+               <ul>
+                 <li>
+                   <p>
+                    You have n people to interview.
+                   </p>
+                 </li>
+                 <li>
+                   <p>
+                     You interview them one-by-one.
+                   </p>
+                 </li>
+                 <li>
+                   <p>
+                     After each person is interviewed, you must immediately make the decision of whether to hire them or not. If you decide to hire someone, you’re done and you cannot interview any more candidates.
+                   </p>
+                 </li>
+                 <li>
+                   <p>
+                     If you reject a candidate (decide not to hire them), you can’t change your mind later.
+                   </p>
+                 </li>
+               </ul>
+             </p>
+          <p>
+            Under these conditions, you may wonder how to actually choose the best person for the job. If you choose a good candidate early on, you may miss the opportunity to hire a really great candidate later. If you wait too long, you may only be left with mediocre candidates from which to choose. 
+          </p>
+          <p>
+            The solution is to interview the first <m>\frac{n}/{e}</m> candidates but reject all of them, regardless of their qualifications. Then, continue interviewing candidates until you find the first one that is “better” than the first group you rejected. Then hire this person. 
+          </p>
+          <p>
+            Interestingly, this simple rule has been shown to find the best candidate in a group approximately 37% of the time, no matter the size of the group!
+          </p>
+          <p>
+            <em>Question:</em>
+          </p>
+          <p>
+            Suppose a group of people line up to be chosen as an extra in a movie. The casting director only has time to interview people one at a time and make a decision -- yes or no. Suppose the casting director is familiar with the Best Choice Problem, and she interviews and rejects the first 25 people in line. How many people are in line? Round your answer to the closest whole number.
+          </p>
+        </statement>
+      </exercise>
+
+    </subsection>
+
+    <subsection>
+      <title>Horizontal and Vertical Translations</title>
+      
+
+    </subsection>
+
+
+
+    <subsection>
+      <title>Composition and Inverse</title>
+
       <exercise>
         <statement>
           <p>
@@ -980,6 +1108,370 @@
           </p>
         </statement>
       </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            As the temperature drops, so does the speed of sound. The function
+            <me>v=f(T)=740.4+1.34T</me> models the speed of sound (in miles per
+            hour) when the temperature is <m>T</m> degrees Celsius. On a
+            particular day between <m>6:00</m> <init>p.m.</init> and midnight,
+            suppose the temperature outside is modeled by the function
+            <me>=g(h)=24-3h</me> where <m>h</m> is the number of hours after
+            <m>6{:}00</m> <init>p.m.</init>
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Determine the speed of sound at <m>9</m> <init>p.m.</init>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Determine a formula for the function that will find the speed
+                  of sound, <m>h</m> hours after <m>6{:}00</m> <init>p.m.</init>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Let <m>f(x)</m> represent the number of people who visit your
+            restaurant chain in a month, where <m>x</m> is the amount of money <m>x</m>
+            (in dollars) that you spend on advertising. You know from experience
+            that about <m>25 \%</m> of the people who visit your restaurant chain
+            will order the daily special meal, which costs <m>\$ 12.00</m>.
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Use function notation to write an expression that represents
+                  how much money your restaurant chain will earn in one month
+                  from the meal special if you spend <m>\$ 8,000</m> on advertising.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            On your popular YouTube channel, you earn a small amount of money
+            (due to advertising) for each time your video is viewed.
+          </p>
+          <p>
+            Suppose the function <m>f(x)</m> represents how many times your video
+            is viewed on the <m>x^{\rm{th}}</m> day of the month, and <m>g(x)</m>
+            represents how much you earn per view on the <m>x^{\rm{th}}</m> day
+            of the month.
+          </p>
+          <p>
+            Finally, suppose the function <m>h(x)</m> represents how much you
+            must pay in taxes for earning <m>x</m> dollars from your YouTube channel.
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Write an expression to represent how much money you earn on
+                  the <m>5^{\rm{th}}</m> day of the month.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Write an expression to represent how much you must pay in your
+                  taxes from your earnings on the <m>5^{\rm{th}}</m> day of the month.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            On a cold day, when the wind blows, it feels colder than it actually
+            is outside. The temperature you feel is called the <em>wind chill</em>
+            temperature.
+          </p>
+          <p>
+            The table shows values of the function <m>W(s)</m>, which
+            calculates the wind chill temperature when it is <m>40</m>
+            degrees Fahrenheit outside, and the wind is blowing at <m>s</m>
+            miles per hour.
+          </p>
+          <sidebyside>
+            <tabular top="medium" bottom="medium" left="medium" right="medium">
+              <col halign="center"/>
+              <col halign="center"/>
+              <row>
+                <cell><em>s</em>, Wind Speed <m>(mph)</m></cell>
+                <cell><m>W(s)</m> (degrees Fahrenheit)</cell>
+              </row>
+              <row>
+                <cell><m>0</m></cell>
+                <cell><m>40</m></cell>
+              </row>
+              <row>
+                <cell><m>10</m></cell>
+                <cell><m>34</m></cell>
+              </row>
+              <row>
+                <cell><m>20</m></cell>
+                <cell><m>30</m></cell>
+              </row>
+              <row>
+                <cell><m>30</m></cell>
+                <cell><m>28</m></cell>
+              </row>
+              <row>
+                <cell><m>40</m></cell>
+                <cell><m>27</m></cell>
+              </row>
+              <row>
+                <cell><m>50</m></cell>
+                <cell><m>26</m></cell>
+              </row>
+              <row>
+                <cell><m>60</m></cell>
+                <cell><m>25</m></cell>
+              </row>
+            </tabular>
+          </sidebyside>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Which pair of statements is true?
+                  <p>
+                    <ul>
+                      <li>
+                        <p>
+                          <m>W(25)=60</m> and <m>W^{-1}(50)=26</m>
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <m>W(40)=27</m> and <m>W^{-1}(34)=10</m>
+                        </p>
+                      </li>
+                    </ul>
+                  </p>
+
+                </p>
+              </li>
+              <li>
+                <p>
+                  Explain in words the meaning of the expression <m>W^{-1}(30)=20</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+    </subsection>
+
+    <subsection>
+      <title>
+        Use the characteristics of basic functions (linear, constant, polynomial, exponential, logarithmic, power, piece-wise), especially slope, intercepts, rate of change, percent change and average change, to answer questions in application situations, to write equations and to create graphs by hand and on the calculator.
+      </title>
+      
+      <exercise>
+        <statement>
+          <p>
+            The function <m>g(x)=kx^{2}+ \frac{1}{x}</m> passes through the point <m>(2,5)</m>. Find the value of <m>k</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            The function <m>p(x)=k(x+2)(x-3)^{2}</m> passes through the point <m>(2,10)</m>. Find the value of <m>k</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            The function <m>T(x)=mx^{2}+b</m> passes through the points <m>(0,3)</m> and <m>(2,12)</m>. Find the value of <m>m</m> and <m>b</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            If you pull on a spring to extend it, Hooke’s Law says that the Force you must exert is directly proportional to the distance you are trying to stretch the spring.
+          </p>
+          <p>
+            Assign variable names to the two quantities, and write an equation involving a proportionality constant, k.
+          </p>
+          <sidebyside widths="30%">
+            <image source="images/spring_hookes_law.png">
+              <description>
+                Picture of extended spring
+              </description>
+            </image>
+          </sidebyside>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Each line in the figures has a slope of <m>\frac{1}{2}</m>. For each graph, determine the value of <m>a</m> within the given coordinates.
+          </p>
+          <p>
+            <sidebyside widths="47% 47%">
+              <image>
+                <description>
+                  Linear Graphs with slope <m>\frac{1}{2}</m>
+                </description>
+                <latex-image>
+                  \begin{tikzpicture}
+                    \begin{axis}[
+                      xmin=-2,
+                      xmax=12,
+                      ymin=-2,
+                      ymax=12,
+                      grid=none,
+                      xtick={0},
+                      minor xtick={0},
+                      ytick={0},
+                      minor ytick={0},
+                      ]
+                      \addplot[primarycurve,-] coordinates {(-2, 4) (12,11)};
+                      \addplot[soldot] coordinates {(4,7)} node[below right] {$(4,7)$};
+                      \addplot[soldot] coordinates {(9,9.5)} node[below right] {$(9,a)$};
+                    \end{axis}
+                  \end{tikzpicture}
+                </latex-image>
+              </image>
+              <image>
+                <latex-image>
+                  \begin{tikzpicture}
+                    \begin{axis}[
+                      xmin=-2,
+                      xmax=12,
+                      ymin=-2,
+                      ymax=12,
+                      grid=none,
+                      xtick={0},
+                      minor xtick={0},
+                      ytick={0},
+                      minor ytick={0},
+                      ]
+                      \addplot[primarycurve,-] coordinates {(-2, 3) (12,10)};
+                      \addplot[soldot] coordinates {(2,5)} node[below right] {$(2,5)$};
+                      \addplot[soldot] coordinates {(8,8)} node[below right] {$(a,8)$};
+                    \end{axis}
+                  \end{tikzpicture}
+                </latex-image>
+              </image>
+            </sidebyside>
+          </p>
+        </statement>
+      </exercise>
+    </subsection>
+    <subsection>
+      <title>Recognize an exponential relationship given numerically or verbally, determine the growth/decay rate and use this information to write an equation to model the relationship</title>
+
+      <exercise>
+        <statement>
+          <p>
+            At time <m>t = 0</m>, a right triangle initially has legs of <m>3 cm</m> and <m>4 cm</m> and a hypotenuse of <m>5 cm</m>. Each minute, the <m>3 cm</m> leg grows by <m>50 \%</m>, and the <m>4 cm</m> leg shrinks by <m>50 \%</m>. The shape remains a right triangle, so the hypotenuse must grow or shrink to accommodate.
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Find the perimeter of the triangle after <m>2</m> minutes.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the area of the triangle after <m>2</m> minutes.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Use algebra to determine when the area will be exactly <m>1 cm^{2}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            A circle grows so that its perimeter increases by <m>50 \%</m>. By what percent does its area increase?
+          </p>
+        </statement>
+      </exercise>
+      
+      <exercise>
+        <statement>
+          <p>
+            A square begins with an area of <m>400 cm^{2}</m>. The square grows so that its sides increase in length by <m>50 \%</m> per minute. What will be the area of the square after <m>3</m>minutes?
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            The Rule of <m>70</m> says that if money (or anything else, really) is growing exponentially at a rate of <m>r \%</m> per year, then the number of years until the original amount will double in size is approximately <m>\frac{70}{t}</m>.
+          </p>
+          <p>
+            Choose a starting amount of money, and suppose it grows exponentially by either <m>5 \%</m>per year or <m>12 \%</m> per year. Use algebra to find how many years until the original amount of money will double in size. Then compare your answer to what the Rule of <m>70</m> says.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            In the early days of Oregon history, the town of Oregon City competed with Portland for industry and population. If things had gone differently, Portland might have stayed relatively small and Oregon City might have become the largest city in Oregon.
+          </p>
+          <p>
+            Now, imagine two other neighboring cities that were established in the year 1825. City <m>\# 1</m> begins small and grows exponentially. The town started with a group of <m>50</m> people, and after <m>17</m> years, the population had grown to <m>185</m> people. City <m>\# 2</m> starts larger than City <m>\# 1</m> and grows linearly. After <m>6</m> years, the population had grown to <m>3200</m>, and after <m>19</m> years, the population was <m>5800</m>.
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Write equations for the population of each city. Let your independent variable <m>t</m> represent the number of years after <m>1825</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  What were the starting populations for the towns? What would the populations be this year?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Determine in what year the population of Town <m>\# 1</m> exceeds the population of Town <m>\# 2</m>. Explain how you determined this.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
     </subsection>
 
   </exercises>
