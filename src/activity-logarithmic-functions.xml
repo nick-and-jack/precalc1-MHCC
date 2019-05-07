@@ -2008,12 +2008,14 @@
         Using the property of the <m>log</m> of a product, we can easily write a rule for the <m>log</m> of a quotient.
       </p>
 
-      <!-- <exercise>
+      <exercise>
         <webwork>
             <setup>
 
             <pg-code>
                 Context()->variables->add(A=>'Real', B=>'Real');
+                Context()->variables->set(A=>{limits=>[0.2,4]});
+                Context()->variables->set(B=>{limits=>[0.2,4]});
                 $prod=Compute("A*B^-1");
                 $term1=Compute("log(A)");
                 $term2=Compute("log(B^-1)");
@@ -2027,7 +2029,7 @@
               </p>
 
               <p>
-                Use a negative exponent to rewrite the fraction inside the log function as a product.
+                Use a negative exponent on <m>B</m> to rewrite the fraction inside the log function as a product.
               </p>
 
               <p>
@@ -2063,7 +2065,7 @@
               </p>
             </statement>
         </webwork>
-      </exercise> -->
+      </exercise>
 
       <assemblage>
         <p>For any base, where <m>b>0</m></p>
