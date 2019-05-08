@@ -2005,6 +2005,7 @@
         <me>
           \frac{Q}{P}=Q \cdot P^{-1}
         </me>
+        Using the property of the <m>log</m> of a product, we can easily write a rule for the <m>log</m> of a quotient.
       </p>
 
       <exercise>
@@ -2013,7 +2014,9 @@
 
             <pg-code>
                 Context()->variables->add(A=>'Real', B=>'Real');
-                $prod=Compute("log(A*B^-1)");
+                Context()->variables->set(A=>{limits=>[0.2,4]});
+                Context()->variables->set(B=>{limits=>[0.2,4]});
+                $prod=Compute("A*B^-1");
                 $term1=Compute("log(A)");
                 $term2=Compute("log(B^-1)");
                 $term3=Compute("-log(B)");
@@ -2022,15 +2025,15 @@
             </setup>
             <statement>
               <p>
-                Consider the expression <m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}</m>
+                Consider the expression <m>\log\mathopen{}\left(\frac{A}{B}\right)\mathclose{}</m>
               </p>
 
               <p>
-                Use a negative exponent to rewrite the fraction inside the log function as a product.
+                Use a negative exponent on <m>B</m> to rewrite the fraction inside the log function as a product.
               </p>
 
               <p>
-                <m>\log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=\log_{b}\Big(</m><var name="$prod" width="10" /><m>\Big)</m>
+                <m>\log\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=\log\Big(</m><var name="$prod" width="10" /><m>\Big)</m>
               </p>
 
               <p>
@@ -2038,22 +2041,22 @@
               </p>
 
               <p>
-                Use the rule <m>\log_b(A\cdot B)=\log_b(A)+\log_b(B)</m> to rewrite the right side as the sum of two log terms.
+                Use the rule <m>\log(A\cdot B)=\log(A)+\log(B)</m> to rewrite the right side as the sum of two log terms.
               </p>
 
               <p>
-                <m><var name="$prod" />=</m><var name="$term1" width="10" /><m>+</m><var name="$term2" width="10" />
+                <m>\log(AB^{-1})=</m><var name="$term1" width="10" /><m>+</m><var name="$term2" width="10" />
               </p>
 
               <p>
-                The last term on the right side has a value with a negative exponent.
-                Use the rule <m>\log_{b}(N^{x})=x \log_{b}(N)</m> to bring down the negative exponent so the second term is now
+                The second term on the right side has a value with a negative exponent.
+                Use the rule <m>\log_{b}(N^{x})=x \log_{b}(N)</m>, where <m>b>0</m>, to bring down the negative exponent. Now the second term is simply
                 <q>adding a negative</q>.
-                Rewrite the right side after the negative exponent is brought down.
+                Rewrite the right side after the negative exponent is brought down in front of the <m>log</m> term.
               </p>
 
               <p>
-                <m><var name="$prod" />=</m><var name="$term1" width="10" /><m>+</m><var name="$term3" width="10" />
+                <m>\log(AB^{-1})=</m><var name="$term1" width="10" /><m>+</m><var name="$term3" width="10" />
               </p>
 
               <p>
@@ -2065,6 +2068,7 @@
       </exercise>
 
       <assemblage>
+        <p>For any base, where <m>b>0</m></p>
         <p>
           <me>
             \log_{b}\mathopen{}\left(\frac{A}{B}\right)\mathclose{}=\log_{b}(A)-\log_{b}(B)

@@ -21,6 +21,72 @@
     <subsection>
       <title>Evaluate, apply and interpret function notation, including the notation for inverse functions and composition of Functions</title>
 
+        <exercise>
+        <statement>
+          <p>
+            The graph in the figure models the amount of drug, <m>A(t)</m> <init>mg</init>, in a patient’s body after ingestion as a function of time, <m>t</m> hours.  The body absorbs the drug at a linear rate, but then eliminates the drug at an exponential rate  
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  Estimate the interval over which <m>A(t)</m> is decreasing.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Evaluate <m>A(10)</m>.  Use units to interpret the meaning of your answer in the context of the situation.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Solve <m>A(t) = 100</m>.  Use units to interpret the meaning of your answer in the context of the situation.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Calculate  on the interval <m>\frac{\Delta A}{\Delta t}</m> on the interval <m>3 \leq x \leq 6</m>.  Show your work.  
+                </p>
+              </li>
+              <li>
+                <p>
+                  What does your answer to part <m>(d)</m> mean in terms of the situation? Use units to interpret the meaning of your answer in the context of the situation.
+                </p>
+              </li>
+            </ol>
+          </p>
+          <sidebyside widths="47%">
+            <image>
+              <description>
+                Interpreting function notation from a graph.
+              </description>
+              <latex-image>
+                \begin{tikzpicture}
+                \begin{axis}[
+                  xmin=-1,
+                  xmax=20,
+                  ymin=-0.2,
+                  ymax=215,
+                  grid=both,
+                  xtick={5,10,...,20},
+                  minor xtick={1,2,...,20},
+                  ytick={50,100,...,215},
+                  minor ytick={5, 10,...,200},
+                  xlabel={$t{}$, hours},
+                  ylabel={$A(t){}$, mg of drug},
+                  every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
+                  width=1.5*\axisdefaultwidth,
+                  height=\axisdefaultheight,
+                  ]
+                \addplot[primarycurve,domain=0:20] [smooth] {200*x*e^(-0.4*x)};
+                \end{axis}
+              \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
+        </statement>
+      </exercise>
+
       <exercise>
         <statement>
           <p>
@@ -249,29 +315,32 @@
       </exercise>
 
       <exercise>
-            <statement>
-              <p>
-                Suppose the function represents the population of a certain town,
-                where   represents the population and   represents the year.
-              </p>
-              <p>
-                <ol label="a">
-                  <li>
-                    <p>
-                      Choose the equation that means, <q>There were <m>2015</m>
-                      people in the town in <m>2010</m>.</q>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      Write an equation using function notation that means,
-                      <q>There were <m>2017</m> people in <m>2018</m>.</q>
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </exercise>
+        <statement>
+          <p>
+            Suppose the function <m>p=f(t)</m> represents the population of a certain town,
+            where <m>p</m> represents the population and <m>t</m> represents the year.
+          </p>
+          <p>
+            Choose the equation that means, <q>There were <m>2015</m>
+            people in the town in <m>2010</m>.</q>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  <m>f(2010)=2015</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(2015)=2010</m>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </statement>
+      </exercise>
+      
       <exercise>
         <statement>
           <p>
@@ -954,7 +1023,7 @@
 
     <subsection>
       <title>Solve equations algebraically using properties of exponents and logarithms</title>
-      <exercise>
+<!--       <exercise>
         <statement>
           <p>
             A famous application involving the number <m>e</m> comes from Optimal Stopping  theory. Known as the Best Choice Problem, it concerns hiring someone for a job under the following conditions:
@@ -996,10 +1065,10 @@
             <em>Question:</em>
           </p>
           <p>
-            Suppose a group of people line up to be chosen as an extra in a movie. The casting director only has time to interview people one at a time and make a decision -- yes or no. Suppose the casting director is familiar with the Best Choice Problem, and she interviews and rejects the first 25 people in line. How many people are in line? Round your answer to the closest whole number.
+            Suppose a group of people line up to be chosen as an extra in a movie. The casting director only has time to interview people one at a time and make a decision - yes or no. Suppose the casting director is familiar with the Best Choice Problem, and she interviews and rejects the first 25 people in line. How many people are in line? Round your answer to the closest whole number.
           </p>
         </statement>
-      </exercise>
+      </exercise> -->
 
     </subsection>
 
@@ -1286,6 +1355,57 @@
         Use the characteristics of basic functions (linear, constant, polynomial, exponential, logarithmic, power, piece-wise), especially slope, intercepts, rate of change, percent change and average change, to answer questions in application situations, to write equations and to create graphs by hand and on the calculator.
       </title>
       
+        <exercise>
+        <statement>
+          <p>
+            A doctor disconnects the intravenous flow of a drug into a patient’s body at <m>10</m> <init>a.m.</init>  At noon she measures the amount of drug in the patient’s body to be <m>180</m> <init>mg</init>. At <m>5</m> <init>p.m.</init> she measures <m>35</m> <init>mg</init> of drug in the patient’s body.
+          </p>
+          <p>
+            <ol label="a">
+              <li>
+                <p>Find a linear formula, <m>L(t)</m>, that models the amount of drug, in <init>mg</init>,  in the patient’s body as a function of time, <m>t</m> hours after <m>10</m> <init>a.m.</init>
+                </p>
+              </li>
+              <li>
+                <p>Find an exponential formula, <m>E(t)</m>,  that models the amount of drug, <init>mg</init>, in the patient’s body as a function of time, <m>t</m> hours after <m>10</m> <init>a.m.</init> 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Sketch a graph of each equation <m>L(t)</m> and <m>E(t)</m> on the same set of axes. Limit the domain between <m>0</m> and <m>12</m> hours after <m>10</m> <init>a.m.</init>. Use a ruler to draw the axes and label your axes including units.
+                  (One picture, two graphs in the same picture)
+                </p>
+              </li>
+              <li>
+                <p>
+                  Evaluate <m>L(0)</m> and <m>E(0)</m>.  What do these values represent in terms of the actual situation? Explain why they must be the same or why they must be different values.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Evaluate <m>L(10)</m> and <m>E(10)</m>.  What is the meaning of each result?  Based on the values for each, explain which of the two formulas best models the elimination of the drug from the patient’s body?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Use your exponential equation to calculate the half-life of the drug in the body. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Calculate the hourly percent decay of the amount of drug in the body. Show your work.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Use your exponential equation to calculate <m>\frac{\Delta E}{\Delta t}</m> on the interval <m>1 \leq x \leq 3</m>.  Show your work on each
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
       <exercise>
         <statement>
           <p>

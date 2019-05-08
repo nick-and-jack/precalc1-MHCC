@@ -15,54 +15,66 @@
     <exercise>
       <statement>
         <p>
-          <sidebyside widths="47% 47%">
-            <image>
-              <description>
-                Linear Graphs with slope <m>\frac{1}{2}</m>
-              </description>
-              <latex-image>
-                \begin{tikzpicture}
-                  \begin{axis}[
-                    xmin=-2,
-                    xmax=12,
-                    ymin=-2,
-                    ymax=12,
-                    grid=none,
-                    xtick={0},
-                    minor xtick={0},
-                    ytick={0},
-                    minor ytick={0},
-                    ]
-                    \addplot[primarycurve,-] coordinates {(-2, 4) (12,11)};
-                    \addplot[soldot] coordinates {(4,7)} node[below right] {$(4,7)$};
-                    \addplot[soldot] coordinates {(9,9.5)} node[below right] {$(9,a)$};
-                  \end{axis}
-                \end{tikzpicture}
-              </latex-image>
-            </image>
-            <image>
-              <latex-image>
-                \begin{tikzpicture}
-                  \begin{axis}[
-                    xmin=-2,
-                    xmax=12,
-                    ymin=-2,
-                    ymax=12,
-                    grid=none,
-                    xtick={0},
-                    minor xtick={0},
-                    ytick={0},
-                    minor ytick={0},
-                    ]
-                    \addplot[primarycurve,-] coordinates {(-2, 3) (12,10)};
-                    \addplot[soldot] coordinates {(2,5)} node[below right] {$(2,5)$};
-                    \addplot[soldot] coordinates {(8,8)} node[below right] {$(a,8)$};
-                  \end{axis}
-                \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+          The graph in the figure models the amount of drug, <m>A(t)</m> <init>mg</init>, in a patient’s body after ingestion as a function of time, <m>t</m> hours.  The body absorbs the drug at a linear rate, but then eliminates the drug at an exponential rate  
         </p>
+        <p>
+          <ol label="a">
+            <li>
+              <p>
+                Estimate the interval over which <m>A(t)</m> is decreasing.
+              </p>
+            </li>
+            <li>
+              <p>
+                Evaluate <m>A(10)</m>.  Use units to interpret the meaning of your answer in the context of the situation.
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve <m>A(t) = 100</m>.  Use units to interpret the meaning of your answer in the context of the situation.
+              </p>
+            </li>
+            <li>
+              <p>
+                Calculate  on the interval <m>\frac{\Delta A}{\Delta t}</m> on the interval <m>3 \leq x \leq 6</m>.  Show your work.  
+              </p>
+            </li>
+            <li>
+              <p>
+                What does your answer to part <m>(d)</m> mean in terms of the situation? Use units to interpret the meaning of your answer in the context of the situation.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <sidebyside widths="47%">
+          <image>
+            <description>
+              Interpreting function notation from a graph.
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+              \begin{axis}[
+                xmin=-1,
+                xmax=20,
+                ymin=-0.2,
+                ymax=215,
+                grid=both,
+                xtick={5,10,...,20},
+                minor xtick={1,2,...,20},
+                ytick={50,100,...,215},
+                minor ytick={5, 10,...,200},
+                xlabel={$t{}$, hours},
+                ylabel={$A(t){}$, mg of drug},
+                every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
+                width=1.5*\axisdefaultwidth,
+                height=\axisdefaultheight,
+                ]
+              \addplot[primarycurve,domain=0:20] [smooth] {200*x*e^(-0.4*x)};
+              \end{axis}
+            \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
       </statement>
     </exercise>
   </exercises>
