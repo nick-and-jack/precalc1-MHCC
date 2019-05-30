@@ -259,63 +259,62 @@
 
   <exercise>
     <webwork>
-        <setup>
-
+      <setup>
         <pg-code>
           Context()->variables->are(a=>'Real', b=>'Real', c=>'Real', d=>'Real');
           $num=random(3,20,1);
           @letters = ('a'..'d');
-          $total=@letters;
+          list_random(@letters);  
           $var=$letters[random($total)];
         </pg-code>
-        </setup>
-        <statement>
-          <p>
-            Let <m>w</m> be a function and <m>w^{-1}</m> be its inverse.
-          </p>
+      </setup>
+      <statement>
+        <p>
+          Let <m>w</m> be a function and <m>w^{-1}</m> be its inverse.
+        </p>
 
-          <p>
-            Evaluate each of the following.
-          </p>
+        <p>
+          Evaluate each of the following.
+        </p>
 
-          <p>
-            <ol label="a">
-              <li>
-                <p>
-                  <m>w^{-1}(w(<var name="$num" />)) = </m><var name="$num" width="5" />
-                </p>
-              </li>
+        <p>
+          <ol label="a">
+            <li>
+              <p>
+                <m>w^{-1}(w(<var name="$num" />)) = </m><var name="$num" width="5" />
+              </p>
+            </li>
 
-              <li>
-                <p>
-                  <m>w^{-1}(w(<var name="$var" />)) = </m><var name="$var" width="5" />
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        <hint>
-          <p>
-            The function <m>w</m> does something to <var name="$num" />, and then <m>w^{-1}</m> undoes what <m>w</m> did.
-          </p>
-        </hint>
-        <solution>
-          <p>
-            <ol label="a">
-              <li>
-                <p>
-                  <m>w^{-1}(w(<var name="$num" />)) = <var name="$num" /></m>
-                </p>
-              </li>
+            <li>
+              <p>
+                <m>w^{-1}(w(<var name="$var" />)) = </m><var name="$var" width="5" />
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <hint>
+        <p>
+          The function <m>w</m> does something to <var name="$num" />, and then <m>w^{-1}</m> undoes what <m>w</m> did.
+        </p>
+      </hint>
+      <solution>
+        <p>
+          <ol label="a">
+            <li>
+              <p>
+                <m>w^{-1}(w(<var name="$num" />)) = <var name="$num" /></m>
+              </p>
+            </li>
 
-              <li>
-                <p>
-                  <m>w^{-1}(w(<var name="$var" />)) = <var name="$var" /></m>
-                </p>
-              </li>
-            </ol>
-          </p>
-        </solution>
+            <li>
+              <p>
+                <m>w^{-1}(w(<var name="$var" />)) = <var name="$var" /></m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
     </webwork>
   </exercise>
 
