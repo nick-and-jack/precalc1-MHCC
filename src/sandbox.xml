@@ -13,69 +13,65 @@
   <title>Sandbox</title>
   <exercises>
     <exercise>
-      <statement>
-        <p>
-          The graph in the figure models the amount of drug, <m>A(t)</m> <init>mg</init>, in a patient’s body after ingestion as a function of time, <m>t</m> hours.  The body absorbs the drug at a linear rate, but then eliminates the drug at an exponential rate  
-        </p>
-        <p>
-          <ol label="a">
-            <li>
-              <p>
-                Estimate the interval over which <m>A(t)</m> is decreasing.
-              </p>
-            </li>
-            <li>
-              <p>
-                Evaluate <m>A(10)</m>.  Use units to interpret the meaning of your answer in the context of the situation.
-              </p>
-            </li>
-            <li>
-              <p>
-                Solve <m>A(t) = 100</m>.  Use units to interpret the meaning of your answer in the context of the situation.
-              </p>
-            </li>
-            <li>
-              <p>
-                Calculate  on the interval <m>\frac{\Delta A}{\Delta t}</m> on the interval <m>3 \leq x \leq 6</m>.  Show your work.  
-              </p>
-            </li>
-            <li>
-              <p>
-                What does your answer to part <m>(d)</m> mean in terms of the situation? Use units to interpret the meaning of your answer in the context of the situation.
-              </p>
-            </li>
-          </ol>
-        </p>
-        <sidebyside widths="47%">
-          <image>
-            <description>
-              Interpreting function notation from a graph.
-            </description>
-            <latex-image>
-              \begin{tikzpicture}
-              \begin{axis}[
-                xmin=-1,
-                xmax=20,
-                ymin=-0.2,
-                ymax=215,
-                grid=both,
-                xtick={5,10,...,20},
-                minor xtick={1,2,...,20},
-                ytick={50,100,...,215},
-                minor ytick={5, 10,...,200},
-                xlabel={$t{}$, hours},
-                ylabel={$A(t){}$, mg of drug},
-                every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
-                width=1.5*\axisdefaultwidth,
-                height=\axisdefaultheight,
-                ]
-              \addplot[primarycurve,domain=0:20] [smooth] {200*x*e^(-0.4*x)};
-              \end{axis}
-            \end{tikzpicture}
-            </latex-image>
-          </image>
-        </sidebyside>
-      </statement>
-    </exercise>
+    <webwork>
+        <setup>
+
+        <pg-code>
+          Context()->variables->are(a=>'Real', b=>'Real', c=>'Real', d=>'Real');
+          $num=random(3,20,1);
+          @letters = ('a'..'d');
+          list_random(@letters);  
+          $var=$letters[random($total)];
+        </pg-code>
+        </setup>
+        <statement>
+          <p>
+            Let <m>w</m> be a function and <m>w^{-1}</m> be its inverse.
+          </p>
+
+          <p>
+            Evaluate each of the following.
+          </p>
+
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  <m>w^{-1}(w(<var name="$num" />)) = </m><var name="$num" width="5" />
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>w^{-1}(w(<var name="$var" />)) = </m><var name="$var" width="5" />
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The function <m>w</m> does something to <var name="$num" />, and then <m>w^{-1}</m> undoes what <m>w</m> did.
+          </p>
+        </hint>
+        <solution>
+          <p>
+            <ol label="a">
+              <li>
+                <p>
+                  <m>w^{-1}(w(<var name="$num" />)) = <var name="$num" /></m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>w^{-1}(w(<var name="$var" />)) = <var name="$var" /></m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+    </webwork>
+  </exercise>
   </exercises>
 </chapter>
