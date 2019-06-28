@@ -164,8 +164,7 @@
     <p>
       For instance if we start with the number <m>8</m>,
       then <m>8(1.25)</m> will increase the number <m>8</m> by
-      <em>one and a quarter of itself</em>.
-      You get all of the <m>8</m> and <m>25 \%</m> more.
+      <m>25 \%</m>.
     </p>
 
     <p>
@@ -625,97 +624,8 @@
         An exponential formula counts how many times you multiply by the same number.
       </p>
     </assemblage>
-<!--     <todo>Not sure If I need these next questions. I'm trying to clean up and shorten the activity to get the point more quickly. Let me think about it.</todo>
-    <exercise>
-      <webwork>
-        <setup>
 
-          <pg-code>
-            $mult = PopUp(["?", "multiply", "subtract", "add", "square root"], "multiply");
-            $add = PopUp(["?", "multiply", "subtract", "add", "square root"], "add");
-          </pg-code>
-        </setup>
-
-        <statement>
-          <p>Decide if each expression is repeated addition or repeated multiplication.  In each case, state how many times the given value is repeated.</p>
-          <p>
-            <ol label="a" >
-              <li>
-                <p>The expression <m>(1.91)^{5}</m> means to <var name="$mult" form="popup" /> <m>1.91</m> by itself <var name="5" width="5" /> times.</p>
-              </li>
-              <li>
-                <p>The expression <m>5(2.41)</m> means to <var name="$add" form="popup" /> <m>2.41</m> to itself <var name="5" width="5" /> times.</p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <ol label="a" >
-              <li>
-                <p>The number <m>5</m> is the exponent of <m>1.91</m>. Exponents are short-cuts for multiplication, they count how many times you multiply the same number.</p>
-                <p><m>1.91^{5} = 1.91\cdot 1.91\cdot 1.91\cdot 1.91\cdot 1.91</m></p>
-              </li>
-              <li>
-                <p>The number <m>5</m> is the <em>coefficient</em> of <m>2.41</m>. Coefficients are short-cuts for addition, they count how many times you add the same number.</p>
-                <p><m>5(2.41) = 2.41+2.41+2.41+2.41+2.41</m></p>
-              </li>
-            </ol>
-          </p>
-        </solution>
-      </webwork>
-    </exercise>
     <exercise>
-      <webwork>
-        <statement>
-          <p>
-            <ol label="a" >
-              <li>
-                <p>What do you add to get from <m>155.6</m> to <m>182.9</m>?</p>
-                <p>add <var name="27.3" width="4" /></p>
-              </li>
-              <li>
-                <p>What do you add to get from <m>155.6</m> to <m>112.9</m>?</p>
-                <p>add <var name="-42.7" width="4" /></p>
-              </li>
-              <li>
-                <p>What do you multiply to get from <m>155.6</m> to <m>182.9</m>? <em>round to <m>3</m> decimal places.</em></p>
-                <p>Multiply by <var name="1.175" width="4" /></p>
-              </li>
-              <li>
-                <p>What do you multiply to get from <m>155.6</m> to <m>154.1</m>? <em>round to <m>3</m> decimal places.</em></p>
-                <p>Multiply by <var name="0.990" width="4" /></p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <ol label="a" >
-              <li>
-                <p>To find what you add, do the opposite: subtract.</p>
-                  <p><m>182.9 - 155.6 = 27.3</m></p>
-              </li>
-              <li>
-                <p>To find what you add, do the opposite: subtract.</p>
-                  <p><m>112.9 - 155.6 = -42.7</m></p>
-              </li>
-              <li>
-                <p>To find what you multiply by, do the oppostie: divide.</p>
-                  <p><m>\frac{182.9}{155.6}=1.175</m></p>
-              </li>
-              <li>
-                <p>To find what you multiply by, do the oppostie: divide.</p>
-                  <p><m>\frac{154.1}{155.6}=0.990</m></p>
-              </li>
-            </ol>
-          </p>
-          <p>Notice that in each case you take the <q>new value</q> and subtract or divide by the <q>old value</q>. You are always comparing the value you have with the value you had initially.</p>
-        </solution>
-      </webwork>
-    </exercise> -->
-    <exercise>
-
       <introduction>
         <p>
           Repeated addition or repeated multiplication?
@@ -724,7 +634,6 @@
 
       <webwork>
           <setup>
-
           <pg-code>
             $add = RadioButtons(
             ["repeated multiplication","repeated addition"],
@@ -772,7 +681,7 @@
             </sidebyside>
 
             <p>
-              Are the outputs are changing by repeated addtion or by repeated multiplication?
+              Are the outputs changing by repeated addtion or by repeated multiplication?
             </p>
 
             <p>
@@ -806,7 +715,7 @@
               </me>
             </p>
           </solution>
-          </stage>
+        </stage>
       </webwork>
     </exercise>
 
@@ -820,7 +729,6 @@
 
       <webwork>
           <setup>
-
           <pg-code>
             $mult = RadioButtons(
             ["repeated multiplication","repeated addition"],
@@ -1289,8 +1197,6 @@
     <p>
       As a way to convince you, here is an experiment.
     </p>
-
-    <todo>Write an "if" statement so that if NEXT1 is the actual value or "0" for "I don't know" then it is correct.</todo>
 
     <exercise>
 
@@ -1915,8 +1821,6 @@
       </ul>
     </p>
 
-    <todo>Reduce the displayed results to 4 decimal places.</todo>
-
     <exercise>
 
       <introduction>
@@ -2081,8 +1985,6 @@
           </stage>
       </webwork>
     </exercise>
-
-    <todo>Make the results render as rounded to 4 decimal places.</todo>
 
     <exercise>
 
@@ -2843,14 +2745,14 @@
       <ul>
         <li>
           <p>
-            The linear function graphs as a staight line while the exponential function graphs as a concave-up curve.
+            The linear function graphs as a straight line while the exponential function graphs as a concave-up curve.
           </p>
         </li>
 
         <li>
           <p>
             The linear function has a horizontal intercept,
-            but the exponential fucntion appears not to touch the horizontal axis.
+            but the exponential function appears not to touch the horizontal axis.
           </p>
         </li>
       </ul>
