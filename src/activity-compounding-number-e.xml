@@ -130,12 +130,10 @@
     <exercise>
       <title><q>Counting</q> the Growth Factor</title>
       <webwork>
-          <setup>
 
           <pg-code>
             $drop = PopUp(["?", "is constant", "increases", "decreases", "none of the above"], "decreases");
           </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the expression
@@ -276,7 +274,6 @@
     <exercise>
       <title>Interpret the meaning of the fractional exponent</title>
       <webwork>
-          <setup>
 
           <pg-code>
               $init= Real(1350);
@@ -286,7 +283,6 @@
               $per=Real(8.20);
               $m3 = PopUp(["?", "An 8.2 percent increase occurs every five years", "An 8.2 percent increase occurs five times each year", "An 8.2 percent increase is divided into five equal parts", "An 8.2 percent increase is multiplied by 5"], "An 8.2 percent increase occurs every five years");
           </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -663,7 +659,6 @@
     <!-- <exercise>
       <title>Review of Fractional Exponents</title>
       <webwork>
-        <setup>
           <pg-code>
             $fifth = RadioButtons(
             ["False","True"],
@@ -678,7 +673,6 @@
             1, labels => ["False","True"],displayLabels => 0
             );
           </pg-code>
-        </setup>
         <statement>
           <p><m>\frac{t}{1/5} = 5t</m></p>
           <p><var name="$fifth" form="buttons" /></p>
@@ -767,7 +761,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $true = RadioButtons(
@@ -775,7 +768,6 @@
             0, labels => ["true","false"],displayLabels => 0
             );
           </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -1087,7 +1079,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
                 $num= Real(12);
@@ -1095,7 +1086,6 @@
                 $times2 = PopUp(["?", "Investment is compounded continously thoughout the year", "Investment is compounded every 12 years", "Investment is compounded 12 times each year", "Investment grows by 12 percent"], "Investment is compounded every 12 years");
                 $times3 = PopUp(["?", "Investment is compounded continously thoughout the year", "Investment is compounded every 12 years", "Investment is compounded 12 times each year", "Investment grows by 12 percent"], "Investment is compounded continously thoughout the year");
             </pg-code>
-          </setup>
           <statement>
             <p>
               The value of an investment is modeled by the equation

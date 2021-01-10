@@ -20,7 +20,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $heat=random(80,120,5);
@@ -33,7 +32,6 @@
             parserFunction("f(x)"=>"(sin(x)+2)/pi");
             $billExpression=Formula("h(x)+w(x)");
           </pg-code>
-        </setup>
         <stage>
         <statement>
           <p>
@@ -122,7 +120,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $x=random(2,4,1);
@@ -133,7 +130,6 @@
           $p=$M*$N;
           $q=$M/$N;
         </pg-code>
-        </setup>
         <stage>
         <statement>
           <p>
@@ -259,7 +255,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $revenue=PopUp(
@@ -272,7 +267,6 @@
           ["?","You sell it for 40 cents more than you paid for it.","You sell it for 40 percent more than you paid for it.","You paid 1.40 for the item."],"You sell it for 40 percent more than you paid for it."
           );
         </pg-code>
-        </setup>
         <stage>
         <statement>
           <p>
@@ -449,7 +443,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           @x=(-4,0,2,4,6,8);
@@ -460,7 +453,6 @@
           ["?","yes","no"],"yes"
           );
         </pg-code>
-        </setup>
         <stage>
         <statement>
           <p>
@@ -665,7 +657,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $f=Compute("-1+0.5*x");
@@ -673,7 +664,6 @@
           $P=Compute("$f*$g");
 
         </pg-code>
-        </setup>
         <statement>
           <p>
             The graph below shows the functions <m>f</m> and <m>g</m>.
@@ -756,14 +746,12 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $hZero=Real(4.4);
           $hPositive=OneOf(0,2.1);
           $hNegative=OneOf(-3,7);
         </pg-code>
-        </setup>
         <statement>
           <p>
             In this problem,

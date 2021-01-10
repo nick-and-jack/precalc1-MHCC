@@ -64,7 +64,6 @@
             <introduction><p>You may use inequality or interval notation to answer the questions below.</p>
             </introduction>
             <webwork>
-                <setup>
 
                     <pg-code>
                         Context("Inequalities");
@@ -72,7 +71,6 @@
                         $answer2 = Compute("x&lt;-2orx&gt;=1");
                         $answer3 = Compute("x&lt;=-2orx&gt;=1");
                     </pg-code>
-                </setup>
 
                 <statement>
                     <p>Remember that open circles mean <q>include</q> while closed circles mean <q>not include</q>.</p>
@@ -99,7 +97,6 @@
 -->
     <exercise>
       <webwork>
-          <setup>
             <pg-code>
                       @ticks = ();
                       for my $j (-5..5) {push(@ticks,$j);};
@@ -145,7 +142,6 @@
                       $in[1] = Compute("x&lt;-2orx&gt;=1");
                       $in[2] = Compute("x&lt;=-2orx&gt;=1");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Remember that closed circles mean <q>include</q>
@@ -315,13 +311,11 @@
     <exercise xml:id="exercise-pos-neg">
       <title>Positive or Negative</title>
       <webwork>
-          <setup>
 
             <pg-code>
                 $positive = RadioButtons(["below the horizontal axis.","above the horizontal axis."],1);
                 $negative = RadioButtons(["below the horizontal axis.","above the horizontal axis."],0);
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/sHzc76gr/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -387,7 +381,6 @@
     <exercise xml:id="exercise-inc-dec">
       <title>Increasing or Decreasing</title>
       <webwork>
-          <setup>
 
             <pg-code>
               $Increasing = RadioButtons(["as input increases, output increases.","as input increases, output decreases."],0);
@@ -398,7 +391,6 @@
               $dec1 = Compute("2&lt;=x&lt;=4");
               $dec2 = Compute("6&lt;=x&lt;=8");
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pbwn6UAF/width/431/height/230/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -483,13 +475,11 @@
     <exercise xml:id="exercise-concavity">
       <title>Concave Up or Concave Down</title>
       <webwork>
-          <setup>
 
             <pg-code>
                 $cUp = RadioButtons(["concave up.","concave down."],0);
                 $cDwn = RadioButtons(["concave up.","concave down."],1);
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NrncRJR3/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -534,7 +524,6 @@
 
     <exercise xml:id="exercise-increasing-decreasing">
       <webwork>
-          <setup>
 
             <pg-code>
                 Context("Inequalities");
@@ -549,7 +538,6 @@
                 $cUp2 = Compute("21&lt;=t&lt;=24");
                 $cDwn = Compute("9&lt;=t&lt;=21");
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tmanmNPG/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -699,7 +687,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $positive=PopUp(
@@ -718,7 +705,6 @@
               ["?","concave up","concave down"],"concave up"
               );
             </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>

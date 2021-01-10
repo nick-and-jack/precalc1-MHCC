@@ -22,7 +22,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $timeToCharge=Real(6);
@@ -31,7 +30,6 @@
               );
               $period=Real(24);
             </pg-code>
-          </setup>
           <statement>
             <p>
               The following graph shows the &#37;
@@ -130,7 +128,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $per=Real(4);
@@ -168,7 +165,6 @@
               );
               add_functions($gr2, "2*sin(2*pi/3*x)-2*cos(2*pi/1.5*x)-2 for x in &lt;-2,12&gt; using color:red and weight:2");
             </pg-code>
-          </setup>
           <statement>
             <p>
               The period of each function below is a whole number.
@@ -233,14 +229,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $vertStretch=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the radius of the wheel");
               $vertShift=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the platform height");
               $horizontalStretch=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the period");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Suppose a person boards at the bottom of a Ferris Wheel and rides around for <m>35</m> seconds.
@@ -405,7 +399,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $period=Real(4);
@@ -418,7 +411,6 @@
               );
               add_functions($gr, "-1.5*cos(2*pi/4*x)-3.5 for x in &lt;-2,12&gt; using color:red and weight:2");
             </pg-code>
-          </setup>
           <statement>
             <sidebyside>
               <image pg-name="$gr" />
@@ -586,7 +578,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $amplitude=Real(30);
@@ -603,7 +594,6 @@
               parser::Assignment->Allow;
               $midline=Formula("y=40");
             </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -805,7 +795,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $radius=Real(60);
@@ -818,7 +807,6 @@
               );
               add_functions($gr, "-60*cos(2*pi/15*x)+80 for x in &lt;0,45&gt; using color:red and weight:2");
             </pg-code>
-          </setup>
           <statement>
             <p>
               A person boards a Ferris Wheel at the <m>6</m>

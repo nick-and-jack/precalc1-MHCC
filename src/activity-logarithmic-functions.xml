@@ -67,7 +67,6 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 $a[0]=random(2,4,1);
@@ -110,7 +109,6 @@
                 if($envir{problemSeed}==1){$a[6]=2;};
                 $answer[6]=Compute("DNE");
             </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -251,14 +249,12 @@
     <exercise>
       <title>Powers of <m>10</m></title>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 $a=list_random(2,4,5,10,20);
                 if($envir{problemSeed}==1){$a=10;};
                 @tabout=map{$a**$_}(-2..2);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use the equation <m>y=<var name="$a" />^x</m> to complete the table.
@@ -357,7 +353,6 @@
     <exercise>
       <title>Guess-and-Check</title>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 $a=list_random(2,4,5,10,20);
@@ -369,7 +364,6 @@
                 $low=$a**$lowx;
                 $high=$a**$highx;
             </pg-code>
-          </setup>
           <statement>
             <p>
               We wish to solve the equation <m><var name="$a"/>^x=<var name="$b"/></m>.
@@ -500,7 +494,6 @@
       </introduction>
 
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 $a=10;
@@ -510,7 +503,6 @@
                 $answer=Real(ln($b)/ln(10));
                 $answer2=Real(ln($c)/ln(10));
             </pg-code>
-          </setup>
           <statement>
             <p>
               We wish to solve the equation <m><var name="$a"/>^x=<var name="$b"/></m>.
@@ -663,7 +655,6 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 Context("LimitedNumeric");
@@ -671,7 +662,6 @@
                 if($envir{problemSeed}==1){$b=2};
                 $c=10**$b;
             </pg-code>
-          </setup>
           <statement>
             <p>
               The power of <m>10</m> that gives you <m>100</m> is written in math as:
@@ -730,7 +720,6 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 do{@b=map{$_+2}NchooseK(7,4);
@@ -741,7 +730,6 @@
                 Context()->strings->add(logarithm=>{alias=>'log'});
                 $log=String('log');
             </pg-code>
-          </setup>
           <statement>
             <p>
               How would you say each expression below using logarithms?
@@ -825,7 +813,6 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 Parser::Number::NoDecimals();
@@ -837,7 +824,6 @@
                 $answer[2]=Formula("ln($c[2])");
                 $answer[3]=Formula("ln($c[3])");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Write the following English statements using the equivalent Math statements using logarithms.
@@ -921,7 +907,6 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 @b=map{$_+2}NchooseK(7,2);
@@ -930,7 +915,6 @@
                 $c[1]=Fraction(1,$b[1]**random(2,4,1));
                 if($envir{problemSeed}==1){$b[0]=3;$c[0]=9;$b[1]=5;$c[1]=Fraction(1,25);};
             </pg-code>
-          </setup>
           <statement>
             <p>
               Translate each math expression below into its meaning in English.
@@ -986,7 +970,6 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 $b[0]=10;
@@ -997,7 +980,6 @@
                 if($envir{problemSeed}==1){@b=(10,5,2,2);@c=(120,15,18,0.7)};
                 for my $i(0..3){$low[$i]=floor(ln($c[$i])/ln($b[$i]));$high[$i]=$low[$i]+1;};
             </pg-code>
-          </setup>
           <statement>
             <p>
               For each logarithm expression below,
@@ -1085,14 +1067,12 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 $b=10;
                 $c=-$b**random(-2,4,1);
                 if($envir{problemSeed}==1){$c=-100;};
             </pg-code>
-          </setup>
           <statement>
             <p>
               Translate the math expression below into what it would mean in English
@@ -1135,14 +1115,12 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 $b=10;
                 $c=-$b**random(-2,4,1);
                 if($envir{problemSeed}==1){$c=0;};
             </pg-code>
-          </setup>
           <statement>
             <p>
               Translate the math expression below into what it would mean in English
@@ -1187,13 +1165,11 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 Context("InequalitySetBuilder");
                 $domain=Compute("(0,inf)");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use an inequality or an interval to complete the statement below:
@@ -1488,7 +1464,6 @@
     <exercise>
       <title>Comparing Graphs of Various Bases</title>
       <webwork>
-          <setup>
 
             <pg-code>
                 Context('Numeric');
@@ -1497,7 +1472,6 @@
                 1, labels => ["log(x)","log2(x)"],displayLabels => 0
                 );
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/RdRRdBJM/width/431/height/360/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="360px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -1623,7 +1597,6 @@
 
       <exercise>
         <webwork seed="1">
-            <setup>
 
             <pg-code>
                 Context()->variables->are(x=>'Real',y=>'Real',b=>'Real');
@@ -1634,7 +1607,6 @@
                 $exp2=Formula("2^{-1}");
                 $exp3=Formula("2^{0}");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 An exponential equation
@@ -1707,7 +1679,6 @@
 
       <exercise>
         <webwork seed="1">
-            <setup>
 
             <pg-code>
                 Context()->operators->set(
@@ -1740,7 +1711,6 @@
                 $by=Real($b**$y);
                 $bz=Real($b**$z);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Simplify and rewrite the product <m><var name="$b" />^<var name="$x" />\cdot <var name="$b" />^<var name="$y" /></m> as one exponential expression.
@@ -1791,12 +1761,10 @@
 
       <exercise>
         <webwork seed="1">
-            <setup>
 
             <pg-code>
                 $seven=7;
             </pg-code>
-            </setup>
             <statement>
               <p>
                 What power of <m>2</m> gives you <m>128</m>?
@@ -1940,7 +1908,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
                 Context("LimitedRadical");
@@ -1948,7 +1915,6 @@
                 $c=4;
                 $N=Formula("x");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Multiplication is shorthand for repeated addition.
@@ -2010,7 +1976,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
                 Context()->variables->add(A=>'Real', B=>'Real');
@@ -2022,7 +1987,6 @@
                 $term3=Compute("-log(B)");
                 $N=Formula("x");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Consider the expression <m>\log\mathopen{}\left(\frac{A}{B}\right)\mathclose{}</m>

@@ -14,7 +14,6 @@
   <exercises>
     <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           Context()->variables->are(a=>'Real', b=>'Real', c=>'Real', d=>'Real');
@@ -23,7 +22,6 @@
           list_random(@letters);  
           $var=$letters[random($total)];
         </pg-code>
-        </setup>
         <statement>
           <p>
             Let <m>w</m> be a function and <m>w^{-1}</m> be its inverse.

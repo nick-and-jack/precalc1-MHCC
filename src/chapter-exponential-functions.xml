@@ -885,13 +885,11 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $exponential=PopUp(["?","linear","exponential"],"exponential");
               $linear=PopUp(["?","linear","exponential"],"linear");
             </pg-code>
-          </setup>
           <statement>
             <p>
               For each verbal description, decide if a <em>linear</em> or
@@ -956,13 +954,11 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $isExponential=PopUp(["?","is exponential","is not exponential"],"is exponential");
               $isNotExponential=PopUp(["?","is exponential","is not exponential"],"is not exponential");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Decide if each function below is exponential or not.
@@ -1141,7 +1137,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr1=init_graph(-2,-2,2,10,axes=>[0,0],grid=>[4,12],size=>[240,240]);
@@ -1155,7 +1150,6 @@
               $gr3 -> lb(new Label (-1.5,7,'C','red','right','top'));
               $whichGraph=PopUp(["?","A","B","C"],"C");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the graphs below:
@@ -1192,7 +1186,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr1=init_graph(-2,-2,2,10,axes=>[0,0],grid=>[4,12],size=>[240,240]);
@@ -1220,7 +1213,6 @@
               $C=PopUp(["?","A","B","C","D"],"C");
               $D=PopUp(["?","A","B","C","D"],"D");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the graphs below:
@@ -1309,12 +1301,10 @@
 
       <exercise>
         <webwork>
-          <setup>
             <pg-code>
               $yesAsymptote=PopUp(["?","has a horizontal asymptote","does not have a horizontal asymptote"],"has a horizontal asymptote");
               $noAsymptote=PopUp(["?","has a horizontal asymptote","does not have a horizontal asymptote"],"does not have a horizontal asymptote");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Which of the functions below have a horizontal asymptote?
@@ -1421,13 +1411,11 @@
 
       <exercise>
         <webwork>
-          <setup>
             <pg-code>
               $zero=Real(0);
               $three=Real(3);
               $yVar=PopUp(["?","x","y"],"y");
             </pg-code>
-          </setup>
           <statement>
             <p>
               For each function, determine the horizontal asymptote.
@@ -1499,7 +1487,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $a=Real(20);
@@ -1509,7 +1496,6 @@
               $increasing=PopUp(["?","increasing","decreasing"],"increasing");
               $decreasing=PopUp(["?","increasing","decreasing"],"decreasing");
             </pg-code>
-          </setup>
           <statement>
             <p>
               In the functions below, the input <m>t</m> represents years. Describe
@@ -1602,13 +1588,11 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $yes=PopUp(["?","yes","no"],"yes");
               $no=PopUp(["?","yes","no"],"no");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Decide if each expression below will <em>increase</em> <m>x</m> by <m>5\%</m>.
@@ -1698,7 +1682,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $A=PopUp(["?","A","B","C","D"],"A");
@@ -1706,7 +1689,6 @@
               $C=PopUp(["?","A","B","C","D"],"C");
               $D=PopUp(["?","A","B","C","D"],"D");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Each function below represents the population of a different city,
@@ -1776,14 +1758,12 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               Context()->variables->add(t => 'Real');
               $form1=Compute("75*1.046**t");
               $form2=Compute("6.5*0.97**t");
             </pg-code>
-          </setup>
           <statement>
             <p>
               The populations of two cities are described below. For each city, write a
@@ -1986,14 +1966,12 @@
 <!-- application problems -->
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $bounce=random(3,5,1);
               $formula=Compute("15*0.8**x");
               $height=Compute("15*0.8**$bounce");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   A ball is dropped from a height of <m>15</m> feet and begins bouncing on the ground.
@@ -2054,7 +2032,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $nominal=random(12,25,1)/10;
@@ -2063,7 +2040,6 @@
               $fiveYearGrowthFactor=Compute("(1+$nominal/100)^$years");
               $effectiveRounded=sprintf("%.2f",$effective);
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   An investment grows by <m><var name="$nominal" /> \%</m> each year.
@@ -2111,7 +2087,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $lengthPercent=random(3,8,1);
@@ -2120,7 +2095,6 @@
               $effectiveRounded=sprintf("%.2f",$effectiveArea);
               $threeHourGrowthFactor=Compute("(1+$lengthPercent/100)^(2*$hours)");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   If the side lengths of a square are each increasing by <var name="$lengthPercent" /><m>\%</m> per hour,

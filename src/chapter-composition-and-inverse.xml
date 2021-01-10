@@ -155,12 +155,10 @@
 
       <exercise xml:id="exercise-composition-formulas">
         <webwork>
-            <setup>
 
             <pg-code>
               Context("LimitedRadical");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Let <m>f(x) = 3x + 4</m> and <m>g(x) = x^2 + x</m>.
@@ -378,7 +376,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               Context('Numeric');
@@ -386,7 +383,6 @@
               $conAtHours=Compute("5*2.718282**(-0.058*$hours)");
               $bpAtHours=Compute("-12.5*$conAtHours+172.5");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 The blood pressure drug <em>lisinopril</em>
@@ -490,7 +486,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               Context()->variables->are(t=>'Real', C=>'Real');
@@ -498,7 +493,6 @@
                 ["\(-12.5\left(5e^{-0.058t}\right)+172.5\)",
                  "\(5e^{-0.058(-12.5C+172.5)}\)"],0);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 If we wanted to,
@@ -799,7 +793,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $m=random(25,35,1);
@@ -810,7 +803,6 @@
               $year=2000+$x[0];
               $interpret=PopUp(["?","When the population was $y[0], it was the year $year","In the year $y[0], the population was $x[0]"],"When the population was $y[0], it was the year $year");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Let <m>P(t)</m> be the function which calculates the population of a small town,
@@ -1027,13 +1019,11 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $didItGraph=PopUp(["?","No","Yes"],2);
               $reflection=PopUp(["?","line y = x","x-axis","y-axis"],1);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ssqjr6pZ/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -1470,12 +1460,10 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $reason=PopUp(["?","A horizontal line would cross the graph of y=f(x) twice.","A vertical line would cross the graph of the inverse twice.","All of the above."],3);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/fTMWxxhS/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -1621,12 +1609,10 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $interval=PopUp(["?","x >= 0","x >= -2"],1);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jGC9Xk8r/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -1697,7 +1683,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               Context('Numeric');
@@ -1710,7 +1695,6 @@
               $b=Formula("f(13)");
               $c=Formula("g(f(19))");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Suppose <m>M = f(t)</m> represents the number of members in the voting party,
@@ -1786,7 +1770,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $distance=random(4,7,1);
@@ -1804,7 +1787,6 @@
               $composite=Formula("f(g(2.5))");
 
             </pg-code>
-          </setup>
           <statement>
             <p>
               Your favorite peer-to-peer ridehailing service has the following price
@@ -1948,7 +1930,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               @a=map{$_+3}NchooseK(7,5);
@@ -1957,7 +1938,6 @@
               $y1=Compute("$a[0]*($a[3]*$x1-$a[4])**2-$a[1]*($a[3]*$x1-$a[4])+$a[2]");
               $y2=Compute("$a[3]*($a[0]*($x2)**2-$a[1]*$x2+$a[2])-$a[4]");
             </pg-code>
-          </setup>
           <statement>
             <p>
               In this problem, use the functions
@@ -2017,7 +1997,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               Context('Numeric');
@@ -2034,7 +2013,6 @@
               $formula4=Formula("j(g(x))");
               $formula5=Formula("f(f(x))");
             </pg-code>
-          </setup>
           <statement>
             <p>
               In this problem, use the functions
@@ -2129,7 +2107,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $a=2*random(1,5,1);
@@ -2139,7 +2116,6 @@
               do{$y2=random(2,15,1);}until($y2!=$y1);
               $x2=Compute("($y2+$b)/$a");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use the function <m>f(x) = <var name="$a" />x - <var name="$b" /></m>
@@ -2200,7 +2176,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $formula1 = RadioButtons(
@@ -2215,7 +2190,6 @@
                   displayLabels => 0
               );
             </pg-code>
-          </setup>
           <statement>
             <p>
               For each equation involving a logarithm, choose the corresponding exponential
@@ -2275,7 +2249,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $formula1 = RadioButtons(
@@ -2290,7 +2263,6 @@
                   displayLabels => 0
               );
             </pg-code>
-          </setup>
           <statement>
             <p>
               For each equation involving an exponent, choose the corresponding logarithm
@@ -2350,13 +2322,11 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $true=PopUp(["?","true","false"],"true");
               $false=PopUp(["?","true","false"],"false");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Remembering that exponential functions and logarithms (with the same base)
@@ -2465,7 +2435,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
           <pg-code>
             $num=random(2,8,1);
@@ -2474,7 +2443,6 @@
             $fog=Compute("4*$g-3");
             $gof=Compute("$f**2-1");
           </pg-code>
-            </setup>
             <statement>
               <p>
                 Let <m>f(x)=4x-3</m> and <m>g(x)=x^2-1</m>.
@@ -2519,7 +2487,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
       <pg-code>
         @x=(0,1,2,3,4,5);
@@ -2532,7 +2499,6 @@
         $QofP[4]=$Q[$P[4]];
         $QofP[5]=$Q[$P[5]];
       </pg-code>
-              </setup>
               <statement>
                 <p>
                   The table below has values for functions <m>P(x)</m> and <m>Q(x)</m>.
@@ -2691,7 +2657,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
       <pg-code>
         $GofF=Compute("(x/(x+4))^2");
@@ -2699,7 +2664,6 @@
         $G=Compute("x^2");
         $FofG=Compute("x^2/(x^2+4)");
       </pg-code>
-              </setup>
               <statement>
                 <p>
                   Let <m>f(x) = \frac{x}{x+4}</m> and <m>g(x) = x^2</m>.
@@ -2988,7 +2952,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
       <pg-code>
         Context("Inequalities");
@@ -3011,7 +2974,6 @@
           return 0;
         });
       </pg-code>
-              </setup>
               <statement>
                 <p>
                   An important use of restricting the domain is in finding the inverse of a
@@ -3066,13 +3028,11 @@
 
         <exercise>
           <webwork>
-              <setup>
 
       <pg-code>
         $totalCost=PopUp(["?","A(V(w)) + B(T(w))","V(w) + T(w)","T(V(w)) + B(A(m))","V(w)T(w)"],"A(V(w)) + B(T(w))");
         $totalMiles=PopUp(["?","V(T(w)) + T(V(w))","V(A(m))","V(w)T(w)","V(w) + T(w)"],"V(w) + T(w)");
       </pg-code>
-              </setup>
               <statement>
                 <p>
                   Your company has a fleet of vehicles that transport goods around the metropolitan area.
@@ -3167,13 +3127,11 @@
 
         <exercise>
           <webwork>
-              <setup>
 
       <pg-code>
         $revenue=PopUp(["?","f(g(5))","g(f(5))","f(5) + g(5)","f(5)g(5)"],"f(5)g(5)");
         $taxes=PopUp(["?","h(5)","h(f(5)g(5))","h(f(5))","h(g(f(5)))"],"h(f(5)g(5))");
       </pg-code>
-              </setup>
               <statement>
                 <p>
                   On your popular YouTube channel,
@@ -3239,7 +3197,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
         <pg-code>
           @rand=map{$_+1}NchooseK(6,4);
@@ -3251,7 +3208,6 @@
              "\($w[1]\) and \($i[1]\)");
           $statements=RadioButtons(~~@s,1);
       </pg-code>
-              </setup>
               <statement>
                 <p>
                   On a cold day, when the wind blows,

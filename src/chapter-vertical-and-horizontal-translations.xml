@@ -78,13 +78,11 @@
     -->
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $eqn1=Compute("(x-3)^2-5(x-3)");
                 $eqn2=Compute("x^2-5x+4");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Given the function <m>f(x) = x^2 - 5x</m>,
@@ -163,13 +161,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $neg=PopUp(["?","positive","negative"],2);
                 $pos=PopUp(["?","positive","negative"],1);
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/paqqv23d/width/438/height/474/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="438px" height="474px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -506,7 +502,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $h1 = Real(random(1, 9, 1));
@@ -516,7 +511,6 @@
                 $f = Compute("(x - $h1)^2 + $k1");
                 $g = Compute("(x - $h2)^2 + $k2");
             </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -569,7 +563,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 Context('Numeric');
@@ -579,7 +572,6 @@
                     displayLabels => 0
                 );
             </pg-code>
-          </setup>
           <statement>
             <p>
               The dashed green graph below shows <m>f(x) = x^2 - \sqrt{x}</m>.
@@ -642,7 +634,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $formula2 = RadioButtons(
@@ -651,7 +642,6 @@
                     displayLabels => 0
                 );
             </pg-code>
-          </setup>
           <statement>
             <p>
               The dashed green graph below shows <m>f(x) = 5\left\lvert x\right\rvert - x^2</m>.
@@ -758,7 +748,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $first=PopUp(
@@ -768,7 +757,6 @@
                 ["?","T(d + 14) + 5","T(d - 14) + 5","T(d + 14) - 5","T(d - 14) - 5"],"T(d - 14) + 5"
                 );
             </pg-code>
-          </setup>
           <statement>
             <p>
               Suppose this is the first week of the year,
@@ -865,7 +853,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
@@ -920,7 +907,6 @@
               $cOnly=PopUp(["?","A only","B only","C only","D only","A and B","A and C","B and D","C and D","A,B,C and D","None of the graphs"],"C only");
               $bAndD=PopUp(["?","A only","B only","C only","D only","A and B","A and C","B and D","C and D","A,B,C and D","None of the graphs"],"B and D");
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph <m>y=f(x)=x^3</m> is graphed below.
@@ -1009,7 +995,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr=init_graph(-6,-30,6,30,axes=>[0,0],grid=>[12,12],size=>[240,240]);
@@ -1066,7 +1051,6 @@
               $cFormula=Compute("x**3-5");
               $dFormula=Compute("(x+1)**3-2");
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph <m>y=f(x)=x^3</m> is graphed below.
@@ -1176,7 +1160,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr=init_graph(-8,-8,8,8,axes=>[0,0],grid=>[16,16],size=>[240,240]);
@@ -1194,7 +1177,6 @@
               $xVar=PopUp(["?","x","y"],"x");
               $yVar=PopUp(["?","x","y"],"y");
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph of a function <m>y = g(x)</m> is shown below.
@@ -1270,7 +1252,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               @a=map{2*$_+3}NchooseK(7,3);
@@ -1278,7 +1259,6 @@
               $form1=PopUp(["?","$a[0](x-$a[1])+$a[2]","$a[1](x-$a[2])+$a[0]","$a[2](x-$a[1])+$a[0]"],"$a[0](x-$a[1])+$a[2]");
               $form2=PopUp(["?","$b[1](x-$b[2])+$b[0]","$b[1](x-$b[0])+$b[2]","$b[0](x-$b[1])+$b[2]"],"$b[0](x-$b[1])+$b[2]");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use horizontal and/or vertical translations to choose the correct
@@ -1339,7 +1319,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               @a=map{2*$_+3}NchooseK(7,3);
@@ -1347,7 +1326,6 @@
               $form1=Compute("$a[0]*(x-$a[1])+$a[2]");
               $form2=Compute("$b[0]*(x-$b[1])+$b[2]");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use horizontal and/or vertical translations to choose the correct
@@ -1412,7 +1390,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               Context('Numeric');
@@ -1425,7 +1402,6 @@
                 ["?","Input","Output"],"Input"
               );
             </pg-code>
-            </setup>
             <statement>
               <p>
                 The function <m>h(t) = -4.9t^2 + 10t + 40</m> will approximate the height of an object which was thrown straight upward at a speed of 10 meters per second at time <m>t = 0</m> seconds from a height of 40 meters.
@@ -1514,7 +1490,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               Context()->variables->are(t=>'Real');
@@ -1522,7 +1497,6 @@
               $addOrSubtract=PopUp(["?","add","subtract"],"add");
               $outputChange=Real(12);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Again, the function <m>f(t) = -4.9t^2 + 10t + 40</m> represents the height of an object which was thrown straight upward at a speed of 10 meters per second,

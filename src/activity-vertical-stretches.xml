@@ -34,7 +34,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           Context('Numeric');
@@ -46,7 +45,6 @@
           $output=Formula("$num[0]*g($num[1])");
           $output1=Formula("$num[2]*f(x)");
         </pg-code>
-        </setup>
         <statement>
           <p>
             If <m>g</m> is a function,
@@ -99,7 +97,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $interpret1=PopUp(
@@ -109,7 +106,6 @@
           ["?","the output divided by 3","the output multiplied by 1/3","all of the above"],"all of the above"
           );
         </pg-code>
-        </setup>
         <statement>
           <p>
             <ol label="a">
@@ -167,14 +163,12 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $exp=PopUp(
           ["?","f(0.5x)","0.5f(x)"],"0.5f(x)"
           );
         </pg-code>
-        </setup>
         <statement>
           <p>
             Suppose the function <m>f(x)</m> represents the price of your favorite whole bean coffee,
@@ -214,7 +208,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
         <pg-code>
           @x=(0,1,4,7,11);
@@ -223,7 +216,6 @@
           @b=map{2*$_}@a;
           @c=map{0.5*$_}@a;
         </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dAA6utJV/width/433/height/376/border/888888/sri/true/sdz/false/" width="433px" height="376px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -300,14 +292,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
         <pg-code>
           $didItGraph=PopUp(
           ["?","no","yes"],"yes"
           );
         </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -386,7 +376,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
         <pg-code>
           $verticalStretch = PopUp(
@@ -396,7 +385,6 @@
           ["?","stretch it away from","compress it toward"],"compress it toward"
           );
         </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows a function <m>y = f(x)</m>.
@@ -448,13 +436,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
         <pg-code>
           $reflection=PopUp(["?","reflected over the x-axis","reflected over the y-axis"],"reflected over the x-axis");
           $stretch=PopUp(["?","vertically compressed by a factor of 1/2","vertically stretched by a factor of 2"],"vertically stretched by a factor of 2");
         </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows a function <m>y = f(x)</m>.
@@ -488,14 +474,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
       <pg-code>
         $val=random(1.5,2.5,3.5,4.5);
         $height=$val*8;
         $formula=Compute("$val*x^3");
       </pg-code>
-          </setup>
           <statement>
             <p>
               The function <m>y = f(x) = x^3</m> contains the points <m>(0, 0)</m> and <m>(2, 8)</m>.
@@ -556,12 +540,10 @@
 
     <exercise>
       <webwork>
-          <setup>
 
         <pg-code>
           $description=RadioButtons(["The transformations \(a*f(x)\) and \(f(x) + a\) are really the same thing.","The transformation \(a*f(x)\) stretches or compresses the graph vertically, but \(f(x) + a\) shifts the graph up or down.","The transformation \(a*f(x)\) shifts the graph up or down, but \(f(x) + a\) stretches or compresses the graph vertically.","The transformation \(a*f(x)\) changes the graph vertically, but \(f(x) + a\) changes the graph horizontally."],1,labels => ["Same","af(x) stretches, f(x)+a shifts","af(x) shifts, f(x)+a stretches","af(x) vertical change, f(x)+a horizontal change"],displayLabels => 0);
         </pg-code>
-          </setup>
           <statement>
             <p>
               Which statement below correctly describes the difference between the transformations <m>a\cdot f(x)</m> and <m>f(x) + a</m>?

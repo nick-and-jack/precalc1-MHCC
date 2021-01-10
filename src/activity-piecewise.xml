@@ -75,7 +75,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
          <pg-code>
           $A = RadioButtons(
@@ -105,7 +104,6 @@
               $answer2 = Compute("-3&lt;=x&lt;=2");
               $answer3 = Compute("2&lt;x&lt;=8");
          </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -309,7 +307,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             Context()->variables->are(x=>'Real',y=>'Real');
@@ -328,7 +325,6 @@
               $answer2 = Compute("-3&lt;=x&lt;=2");
               $answer3 = Compute("2&lt;x&lt;=8");
           </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -577,12 +573,10 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $answer1 = Real(1);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use the axes below to plot three points for each function on its given domain.

@@ -109,7 +109,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               @a=map{$_+1}NchooseK(4,2);
@@ -120,7 +119,6 @@
               $f10=$a[0]*10+$a[1];
               $f102=2*($a[0]*10+$a[1]);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Let <m>f(x) = <var name="$a[0]" />x + <var name="$a[1]" /></m> and <m>g(x) = <var name="$b[0]" />x + <var name="$b[1]" /></m>.
@@ -247,7 +245,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $profitIsZero=Real(5);
@@ -260,7 +257,6 @@
               $p1=$r1-$c1;
               $p2=$r2-$c2;
             </pg-code>
-          </setup>
           <statement>
             <p>
               In business, we use the equation
@@ -555,11 +551,9 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
             </pg-code>
-            </setup>
             <statement>
               <p>
                 The graphs of <m>f(x) = x - 1</m> and <m>g(x) = 2 - x</m> are shown below.
@@ -666,11 +660,9 @@
 <!--
         <exercise>
           <webwork>
-            <setup>
               <pg-code>
                 $itemCost=Compute("24-0.25*(x-1)");
               </pg-code>
-            </setup>
 
             <statement>
               <p>Write a formula for the unit cost, <m>C(x)</m>, of each item when the customer orders <m>x</m> of the items.</p>
@@ -687,13 +679,11 @@
 
         <exercise>
           <webwork>
-            <setup>
               <pg-code>
                 $x=random(10,20,1);
                 $itemCost=24-0.25*($x-1);
                 $totalCost=$x*$itemCost;
               </pg-code>
-            </setup>
             <statement>
               <p>If a customer ordered <var name="$x" /> items, what would be the unit cost?</p>
               <p><m>C(</m><var name="$x" /><m>) = </m><var name="$itemCost" width="15"/> $/item</p>
@@ -714,14 +704,12 @@
 
         <exercise>
           <webwork>
-            <setup>
 
               <pg-code>
                 $sold=Compute("x");
                 $unitCost=Compute("24-0.25*(x-1)");
                 $totalCost=Compute("(24-0.25*(x-1))*x");
               </pg-code>
-            </setup>
 
             <statement>
               <p>The total cost function, <m>T(x)</m>, may be thought of as a combination of two different functions, <m>C(x)</m> and <m>Q(x)</m>.</p>
@@ -853,13 +841,11 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $yValues=PopUp(["?","x values","y values"],"y values");
               $false=PopUp(["?","true","false"],"false");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider functions <m>y = f(x)</m> and <m>y = g(x)</m>.
@@ -902,13 +888,11 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $ans1=PopUp(["?","c(3)","c(5)","c(6)","c(7)"],"c(5)");
               $ans2=Real(1);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the functions <m>a(x)</m>, <m>b(x)</m>, <m>c(x)=a(x)+b(x)</m>
@@ -999,7 +983,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $ans1=PopUp(["?","12R(x)+12D(x)","R(12)D(12)","R(12)+D(12)","R(D(12))"],"R(12)+D(12)");
@@ -1014,7 +997,6 @@
               Context()->flags->set(formatStudentAnswer=>"parsed");
               $ans3=Formula("R(12)r(12)+D(12)d(12)");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the functions below:
@@ -1105,7 +1087,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               @x=(2,4);
@@ -1115,7 +1096,6 @@
               @N=map{$f[$_]-$g[$_]}0..$#f;
               @P=map{$f[$_]*$g[$_]}0..$#f;
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   The table below shows values of two functions, <m>f</m> and <m>g</m>.

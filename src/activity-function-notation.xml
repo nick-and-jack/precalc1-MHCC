@@ -102,7 +102,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
                 for my $i (0,1) {
@@ -134,7 +133,6 @@
                 parser::Assignment->Allow;
                 $solve=Formula("F=-7.6");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Our function is a graph,
@@ -296,7 +294,6 @@
 
     <exercise>
       <webwork seed="1">
-          <setup>
 
             <pg-code>
                 $time = Real(random(2,7,1));
@@ -304,7 +301,6 @@
                 $position = Real(40*exp(2.6*($time-2))/(1+exp(2.6*($time-2)))+10);
                 $units = PopUp(["?", "miles", "hours", "miles per hour", "hours per mile"], "miles");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the graph below.
@@ -535,14 +531,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $tarzan = PopUp(["?","Tarzan times the jungle","Tarzan jungle","Tarzan of the jungle","Jungle after Tarzan"],"Tarzan of the jungle");
                 $helen = PopUp(["?","Helen loves Troy","Helen multiplied by Troy","Helen next to Troy","Helen of Troy"],"Helen of Troy");
                 $f = PopUp(["?","f of x","f times x","f parentheses x","f x"],"f of x");
             </pg-code>
-          </setup>
           <statement>
             <p>
               How would you say the function notation in each statement below?
@@ -634,7 +628,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $distance = Real(10);
@@ -648,7 +641,6 @@
                 $f2=Formula("f(2)");
                 $evf2=$f2->cmp()->withPostFilter(AnswerHints(Compute("30") => "That's the actual value, but respond by using function notation."));
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below is a function that illustrates a train's distance from downtown,
@@ -706,7 +698,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $squarefeet= Real(900);
@@ -715,7 +706,6 @@
                 $units = PopUp(["?", "cents", "turtles", "yen", "dollars"], "dollars");
                 $meaning = PopUp(["?", "900 houses have 209,700 dollars", "A 900 dollar house is 209,700 sq. feet", "A 900 sq. ft. house has a value of 209,700 dollars", "Multiply the sq. ft. by 900 to get the value of 209,700 dollars"], "A 900 sq. ft. house has a value of 209,700 dollars");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Let <m>V = f(A)</m> be a function in which the input is the area of a house
@@ -805,7 +795,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $situation1 = RadioButtons(
@@ -817,7 +806,6 @@
                      0,
                 );
             </pg-code>
-          </setup>
           <statement>
             <p>
               In this problem, we have the function <m>y = f(x)</m>,
@@ -914,13 +902,11 @@
     <exercise>
       <title>Determine if the relation in each table is a function or not</title>
       <webwork>
-          <setup>
 
             <pg-code>
               $table1 = RadioButtons(["y is a function of x","y is not a function of x"],1);
               $table2 = RadioButtons(["y is a function of x","y is not a function of x"],0);
             </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="A">
@@ -1029,13 +1015,11 @@
     <exercise>
       <title>Determine if each equation makes <m>y</m> a function of <m>x</m></title>
       <webwork>
-          <setup>
 
             <pg-code>
               $eq1 = RadioButtons(["y is a function of x","y is not a function of x"],0);
               $eq2 = RadioButtons(["y is a function of x","y is not a function of x"],1);
             </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -1121,13 +1105,11 @@
     <exercise>
       <title>Determine if the graph is a function</title>
       <webwork>
-          <setup>
 
             <pg-code>
               $nopass = RadioButtons(["This graph is a function","This graph is not a function"],1);
               $pass = RadioButtons(["This graph is a function","This graph is not a function"],0);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Drag the input left or right to see the results on each graph.
@@ -1207,14 +1189,12 @@
 
     <exercise xml:id="exercise-vertical-line-test">
       <webwork>
-          <setup>
 
             <pg-code>
                 $none = Real(1);
                 $no = RadioButtons(["Passes Vertical Line Test","Does not pass Vertical Line Test"],1);
                 $yes = RadioButtons(["Passes Vertical Line Test","Does not pass Vertical Line Test"],0);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Drag the input to change the position of the vertical line.
@@ -1281,13 +1261,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $dist= Real(40);
                 $miles = PopUp(["?", "feet", "miles", "light years", "meters"], "miles");
             </pg-code>
-          </setup>
           <statement>
             <sidebyside>
 
@@ -1374,7 +1352,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $in1 = Real(1);
@@ -1382,7 +1359,6 @@
                 $output1 = Real(60);
                 $output2 = Real(110);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Let <m>f(x) = 50x + 10</m>.
@@ -1426,7 +1402,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $output1 = Real(0);
@@ -1434,7 +1409,6 @@
                 $output3 = Real(0);
                 $output4 = Real(-1.54);
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph the the function <m>y = f(x)</m> is shown below.
@@ -1546,7 +1520,6 @@
 
     <exercise>
       <webwork>
-          <setup>
             <pg-code>
                 $five = Real(5);
                 $out = Real(20);
@@ -1558,7 +1531,6 @@
                 $Qexp=Compute("Q**2-Q");
                 $expression=Compute("(x-12)**2-(x-12)");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use the function <m>f(x) = x^2 - x</m> to evaluate <m>f(5)</m>.
@@ -1762,7 +1734,6 @@
     <exercise>
       <webwork>
           <title>Solving Graphically</title>
-          <setup>
 
             <pg-code>
                 $numZeros = 3;
@@ -1775,7 +1746,6 @@
                 $minNumSolutions = 1;
 
             </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -2009,7 +1979,6 @@
 <!-- In the following exercise, the graph tries to show b=1 as giving just one solution, but it is actually approximately 1.0020338293068. Maybe the equation should be rewritten so it has one, nice, unrounded value of b. -->
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $b = 0.55/ln(2) - 0.55*ln(0.5/ln(2)) / ln(2);
@@ -2029,7 +1998,6 @@
                    return (($student = $b)?1:0);
                  });
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graphs of two functions are shown.
@@ -2177,7 +2145,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               Context('Numeric');
@@ -2190,7 +2157,6 @@
               $soln2 = Compute("($out2-$b)/$m");
               $soln3 = Compute("$m*$in+$b");
             </pg-code>
-          </setup>
           <statement>
             <p>
               For the function <m>f(x) = <var name="$m" />x + <var name="$b" /></m>,
