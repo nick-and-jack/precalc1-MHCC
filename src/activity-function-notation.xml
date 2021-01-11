@@ -311,7 +311,7 @@
               Adjust the time by sliding cross-hairs left and right.
               Notice that the train's distance, in miles,
               from downtown depends on the time, in hours,
-              after <m>8</m> <init>a.m.</init>
+              after <m>8</m> <am/>
             </p>
 
             <p>
@@ -319,7 +319,7 @@
             </p>
 
             <p>
-              How far from downtown is the train <m><var name="$time" /></m> hours after <m>8</m> <init>a.m.</init>?
+              How far from downtown is the train <m><var name="$time" /></m> hours after <m>8</m> <am/>?
             </p>
 
             <p>
@@ -395,7 +395,7 @@
 
     <blockquote>
       <p>
-        <m>2</m> hours after <m>8</m> <init>a.m.</init> the train is <m>30</m> miles from downtown.
+        <m>2</m> hours after <m>8</m> <am/> the train is <m>30</m> miles from downtown.
       </p>
     </blockquote>
 
@@ -450,7 +450,7 @@
       so we can let the dependent variable <m>D</m> represent the
       <q>Train's distance in miles from downtown</q>.
       Similarly, we can use the independent variable <m>t</m> to represent the
-      <q>number of hours after <m>8</m> <init>a.m.</init></q>.
+      <q>number of hours after <m>8</m> <am/></q>.
     </p>
 
     <p>
@@ -600,14 +600,14 @@
         f(\text{input}) = \mathit{output}
       </me>
       The function notation <m>f(0)</m> is telling us the input is <m>0</m>.
-      That means, <q><m>0</m> hours after <m>8</m> <init>a.m.</init></q> In other words,
-      it's <m>8</m> <init>a.m.</init>
+      That means, <q><m>0</m> hours after <m>8</m> <am/></q> In other words,
+      it's <m>8</m> <am/>
     </p>
 
     <p>
       On the other hand, <m>f(0)</m> represents an output.
       It is <q>the train's distance from downtown,
-      <m>0</m> hours after <m>8</m> <init>a.m.</init></q>
+      <m>0</m> hours after <m>8</m> <am/></q>
       But we don't know what that distance actually is yet.
       In this case, the notation <m>f(0)</m> means
       <q>Whatever the distance is at t = 0</q>.
@@ -629,7 +629,7 @@
                 $distance = Real(10);
                 $units = PopUp(["?", "miles", "hours", "miles per hour", "hours per mile"], "miles");
                 $start = 8;
-                $ampm = PopUp(["?", "a.m.", "p.m."], "a.m.");
+                $ampm = PopUp(["?", "AM", "PM"], 1);
                 $meanings = PopUp(["?", "the initial position of the train", "the final position of the train", "the distance is zero", "the distance times zero"], 1);
                 parserFunction("f(x)"=>"(sin(x)+2)/pi");
                 Context()->flags->set(reduceConstantFunctions=>0);
@@ -641,8 +641,8 @@
             <p>
               The graph below is a function that illustrates a train's distance from downtown,
               in miles,
-              as a function of time in hours after <m>8</m> <init>a.m.</init> When using a graph the best you can do is estimate.
-              Since <m>f(0)</m> represents a distance at <m>8</m> <init>a.m.</init>,
+              as a function of time in hours after <m>8</m> <am/> When using a graph the best you can do is estimate.
+              Since <m>f(0)</m> represents a distance at <m>8</m> <am/>,
               we can use the graph to find what the distance is.
             </p>
 
@@ -678,7 +678,7 @@
 
             <p>
               How would you represent the statement,
-              <q>train's distance at <m>10</m> <init>a.m.</init></q> using function notation?
+              <q>train's distance at <m>10</m> <am/></q> using function notation?
             </p>
 
             <p>
@@ -1232,7 +1232,7 @@
   <subsection>
     <title>Evaluate</title>
     <p>
-      It is one thing to talk about <q>The train's distance from downtown <m>2</m> hours after <m>8</m> <init>a.m.</init></q>
+      It is one thing to talk about <q>The train's distance from downtown <m>2</m> hours after <m>8</m> <am/></q>
       and a completely different thing to say what that distance actually is.
     </p>
 
@@ -1242,7 +1242,7 @@
           <idx><h>function</h><h>evaluation</h></idx>
       means <q>use an input value in order to find an output value.</q> Therefore,
       evaluating <m>f(2)</m> in our train example means
-      <q>Find the value of the train's distance from downtown <m>2</m> hours after <m>8</m> <init>a.m.</init></q>
+      <q>Find the value of the train's distance from downtown <m>2</m> hours after <m>8</m> <am/></q>
     </p>
 
     <p>
@@ -1267,7 +1267,7 @@
                 <col halign="center"/>
                 <col halign="center"/>
                 <row>
-                  <cell><m>t</m> (hours after <m>8</m> <init>a.m.</init>)</cell>
+                  <cell><m>t</m> (hours after <m>8</m> <am/>)</cell>
                   <cell><m>D = f(t)</m> (miles from downtown)</cell>
                 </row>
                 <row>
@@ -1707,7 +1707,7 @@
 
     <p>
       You could answer the question with actual times if you had a
-      <em>time <init>vs.</init> temperature</em> graph,
+      <em>time vs.<nbsp/>temperature</em> graph,
       or a formula, or a table of times and temperatures.
     </p>
 
