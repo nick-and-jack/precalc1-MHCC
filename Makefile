@@ -51,17 +51,21 @@ include Makefile.paths
 PRJSRC    = $(PRJ)/src
 OUTPUT    = $(PRJ)/output
 IMAGESSRC = $(PRJSRC)/images
+PUB       = $(PRJ)/publication
 
 # The project's main hub file
 MAINFILE  = $(PRJSRC)/precalc1-MHCC.xml
 
+# The project's styling files
+PUBFILE   = $(PUB)/publication.xml
+
 # These paths are subdirectories of
 # the Mathbook XML distribution
-# MBUSR is where extension files get copied
+# PTXUSR is where extension files get copied
 # so relative paths work properly
-MBXSL = $(MB)/xsl
-MBUSR = $(MB)/user
-DTD   = $(MB)/schema/dtd
+PTXXSL = $(PTX)/xsl
+PTXUSR = $(PTX)/user
+DTD   = $(PTX)/schema/dtd
 
 # These paths are subdirectories of
 # the scratch directory
@@ -69,7 +73,7 @@ PGOUT      = $(OUTPUT)/pg
 HTMLOUT    = $(OUTPUT)/html
 PDFOUT     = $(OUTPUT)/pdf
 IMAGESOUT  = $(OUTPUT)/images
-WWOUT      = $(OUTPUT)/webwork-extraction
+WWOUT      = $(OUTPUT)/webwork-representations
 
 # Some aspects of producing these examples require a WeBWorK server.
 SERVER = "https://webwork-ptx.aimath.org"
@@ -81,21 +85,13 @@ SERVER = "https://webwork-ptx.aimath.org"
 ################
 
 #  Extract webwork problems into a single XML file called
-#  webwork-extraction.xml which holds multiple versions of each problem.
+#  webwork-representations.xml which holds multiple versions of each problem.
 #  Also locally store images from the WeBWorK server.
 
-webwork-extraction:
+webwork-representations:
+	-rm -r $(WWOUT) || :
 	install -d $(WWOUT)
-	-rm $(WWOUT)/webwork-extraction.xml
-	$(MB)/script/mbx -vv -c webwork -d $(WWOUT) -s $(SERVER) $(MAINFILE)
-
-#  Make a new PTX file from the source tree, with webwork elements replaced
-#  by the webwork-reps from webwork-extraction.xml. (So run the above at
-#  least once first.) Subsequent templates are applied to the result.
-
-merge:
-	cd $(OUTPUT); \
-	xsltproc -xinclude --stringparam webwork.extraction $(WWOUT)/webwork-extraction.xml $(MBXSL)/pretext-merge.xsl $(MAINFILE) > merge.ptx
+	$(PTX)/pretext/pretext -vv -a -c webwork -d $(WWOUT) -s $(SERVER) $(MAINFILE)
 
 # LaTeX and PDF versions
 # See prerequisite above about merge files.
@@ -108,7 +104,7 @@ pdf:
 	-rm $(PDFOUT)/images/*
 	cp -a $(WWOUT)/*.png $(PDFOUT)/images
 	cd $(PDFOUT); \
-	xsltproc $(MBXSL)/mathbook-latex.xsl $(OUTPUT)/merge.ptx; \
+	xsltproc $(PTXXSL)/pretext-latex.xsl $(OUTPUT)/merge.ptx; \
 	xelatex precalc1-MHCC.tex; \
 	xelatex precalc1-MHCC.tex; \
 	open precalc1-MHCC.pdf
@@ -117,18 +113,24 @@ pdf:
 images:
 	install -d $(IMAGESOUT)
 	-rm $(IMAGESOUT)/*.svg
-	$(MB)/script/mbx -c latex-image -f svg -d $(IMAGESOUT) $(OUTPUT)/merge.ptx
+	$(PTX)/script/mbx -c latex-image -f svg -d $(IMAGESOUT) $(OUTPUT)/merge.ptx
 
 # HTML output
 # See prerequisite above about merge files.
 html:
+	install -d $(OUTPUT)
+	-rm -r $(HTMLOUT) || :
 	install -d $(HTMLOUT)
-	-rm $(HTMLOUT)/*.html
-	-rm $(HTMLOUT)/knowl/*.html
-	cp -a $(IMAGESOUT) $(HTMLOUT)
-	cp -a $(IMAGESSRC) $(HTMLOUT)
+	install -d $(HTMLOUT)/images
+	install -d $(IMGOUT)
+	install -d $(IMGSRC)
+	cp -a $(IMGOUT) $(HTMLOUT) || :
+	cp -a $(IMGSRC) $(HTMLOUT) || :
+	cp -a $(WWOUT)/*.png $(HTMLOUT)/images || :
+	cp -a $(SRC)/favicon $(HTMLOUT) || :
+	cp -r $(CSS) $(HTMLOUT) || :
 	cd $(HTMLOUT); \
-	xsltproc --stringparam html.calculator geogebra-graphing --stringparam webwork.divisional.static no $(MBXSL)/mathbook-html.xsl $(OUTPUT)/merge.ptx;
+	xsltproc --xinclude --stringparam publisher $(PUBFILE) --stringparam webwork.divisional.static no $(PTXXSL)/pretext-html.xsl $(MAINFILE); \
 	open -a $(HTMLVIEWER) $(HTMLOUT)/precalc1-MHCC.html
 
 ###########
@@ -141,5 +143,5 @@ html:
 check:
 	install -d $(OUTPUT)
 	-rm $(OUTPUT)/jingreport.txt
-	-java -classpath ~/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar ~/jing-trang/build/jing.jar $(MB)/schema/pretext.rng $(MAINFILE) > $(OUTPUT)/jingreport.txt
+	-java -classpath ~/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar ~/jing-trang/build/jing.jar $(PTX)/schema/pretext.rng $(MAINFILE) > $(OUTPUT)/jingreport.txt
 	less $(OUTPUT)/jingreport.txt

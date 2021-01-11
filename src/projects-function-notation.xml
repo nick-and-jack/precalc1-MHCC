@@ -55,35 +55,33 @@
               </li>
             </ol>
           </p>
-          <sidebyside widths="47%">
-            <image>
-              <description>
-                Interpreting function notation from a graph.
-              </description>
-              <latex-image>
-                \begin{tikzpicture}
-                \begin{axis}[
-                  xmin=-1,
-                  xmax=20,
-                  ymin=-0.2,
-                  ymax=215,
-                  grid=both,
-                  xtick={5,10,...,20},
-                  minor xtick={1,2,...,20},
-                  ytick={50,100,...,215},
-                  minor ytick={5, 10,...,200},
-                  xlabel={$t{}$, hours},
-                  ylabel={$A(t){}$, mg of drug},
-                  every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
-                  width=1.5*\axisdefaultwidth,
-                  height=\axisdefaultheight,
-                  ]
-                \addplot[primarycurve,domain=0:20] [smooth] {200*x*e^(-0.4*x)};
-                \end{axis}
-              \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+          <image width="47%">
+            <description>
+              Interpreting function notation from a graph.
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+              \begin{axis}[
+                xmin=-1,
+                xmax=20,
+                ymin=-0.2,
+                ymax=215,
+                grid=both,
+                xtick={5,10,...,20},
+                minor xtick={1,2,...,20},
+                ytick={50,100,...,215},
+                minor ytick={5, 10,...,200},
+                xlabel={$t{}$, hours},
+                ylabel={$A(t){}$, mg of drug},
+                every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
+                width=1.5*\axisdefaultwidth,
+                height=\axisdefaultheight,
+                ]
+              \addplot[primarycurve,domain=0:20] [smooth] {200*x*e^(-0.4*x)};
+              \end{axis}
+            \end{tikzpicture}
+            </latex-image>
+          </image>
         </statement>
       </exercise>
 
@@ -153,32 +151,30 @@
           <p>
             The graph in the figure shows two functions <m>f(x)</m>, linear, and <m>g(x)</m>, quadratic.
           </p>
-            <sidebyside widths="47%">
-              <image>
-                <description>
-                  Linear and Exponential Graphs (Combinations)
-                </description>
-                <latex-image>
-                  \begin{tikzpicture}
-                    \begin{axis}[
-                      xmin=-3,
-                      xmax=10,
-                      ymin=-8,
-                      ymax=8,
-                      grid=major,
-                      xtick={-2,-1,...,9},
-                      minor xtick={0},
-                      ytick={-7,-6,...,7},
-                      minor ytick={0},
-                      ]
-                      \addplot[primarycurve,-] coordinates {(-4, -5) (9,8)};
-                      \addplot[secondarycurve,-,domain=-3.5:10] {-1/4*(x-4)^2+6};
-                      \addplot[soldot,color=black] coordinates {(-2,-3) (0,-1) (2,1) (4,3) (6,5) (8,7) (0,2) (2,5) (4,6) (6,5) (8,2)};
-                    \end{axis}
-                  \end{tikzpicture}
-                </latex-image>
-              </image>
-            </sidebyside>
+          <image width="47%">
+            <description>
+              Linear and Exponential Graphs (Combinations)
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  xmin=-3,
+                  xmax=10,
+                  ymin=-8,
+                  ymax=8,
+                  grid=major,
+                  xtick={-2,-1,...,9},
+                  minor xtick={0},
+                  ytick={-7,-6,...,7},
+                  minor ytick={0},
+                  ]
+                  \addplot[primarycurve,-] coordinates {(-4, -5) (9,8)};
+                  \addplot[secondarycurve,-,domain=-3.5:10] {-1/4*(x-4)^2+6};
+                  \addplot[soldot,color=black] coordinates {(-2,-3) (0,-1) (2,1) (4,3) (6,5) (8,7) (0,2) (2,5) (4,6) (6,5) (8,2)};
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
           <p>
             <ol label="a">
               <li>
@@ -465,34 +461,32 @@
             the ball was kicked, and <m>f(x)</m> is its height above the ground
             (measured in feet).
           </p>
-          <sidebyside widths="47%">
-            <image>
-              <description>
-                Graph of height versus distance
-              </description>
-              <latex-image>
-                \begin{tikzpicture}
-                \begin{axis}[
-                  xmin=-0.1,
-                  xmax=2,
-                  ymin=-0.2,
-                  ymax=2,
-                  grid=none,
-                  xtick={0},
-                  minor xtick={0},
-                  ytick={0},
-                  minor ytick={0},
-                  xlabel={$x={}$ distance from the 30-yard line (in feet)},
-                  ylabel={$y={}$ height above the ground (in feet)},
-                  every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
-                  width=1.5*\axisdefaultwidth,
-                  height=\axisdefaultheight,
-                  ]
-                \end{axis}
-              \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+          <image width="47%">
+            <description>
+              Graph of height versus distance
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+              \begin{axis}[
+                xmin=-0.1,
+                xmax=2,
+                ymin=-0.2,
+                ymax=2,
+                grid=none,
+                xtick={0},
+                minor xtick={0},
+                ytick={0},
+                minor ytick={0},
+                xlabel={$x={}$ distance from the 30-yard line (in feet)},
+                ylabel={$y={}$ height above the ground (in feet)},
+                every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
+                width=1.5*\axisdefaultwidth,
+                height=\axisdefaultheight,
+                ]
+              \end{axis}
+            \end{tikzpicture}
+            </latex-image>
+          </image>
           <p>
             <ol label="a">
               <li>
@@ -702,36 +696,34 @@
           <p>
             The table shows the height of the water in a graduated cylinder as a function of the volume of water in the cylinder.
           </p>
-          <sidebyside>
-            <tabular top="medium" bottom="medium" left="medium" right="medium">
-              <col halign="center"/>
-              <col halign="center"/>
-              <row>
-                <cell>Volume <m>(cm^3)</m></cell>
-                <cell>Height <m>(cm)</m></cell>
-              </row>
-              <row>
-                <cell><m>50</m></cell>
-                <cell><m>0.6366</m></cell>
-              </row>
-              <row>
-                <cell><m>100</m></cell>
-                <cell><m>1.2732</m></cell>
-              </row>
-              <row>
-                <cell><m>150</m></cell>
-                <cell><m>1.9099</m></cell>
-              </row>
-              <row>
-                <cell><m>200</m></cell>
-                <cell><m>2.5465</m></cell>
-              </row>
-              <row>
-                <cell><m>250</m></cell>
-                <cell><m>3.1831</m></cell>
-              </row>
-            </tabular>
-          </sidebyside>
+          <tabular top="medium" bottom="medium" left="medium" right="medium">
+            <col halign="center"/>
+            <col halign="center"/>
+            <row>
+              <cell>Volume <m>(cm^3)</m></cell>
+              <cell>Height <m>(cm)</m></cell>
+            </row>
+            <row>
+              <cell><m>50</m></cell>
+              <cell><m>0.6366</m></cell>
+            </row>
+            <row>
+              <cell><m>100</m></cell>
+              <cell><m>1.2732</m></cell>
+            </row>
+            <row>
+              <cell><m>150</m></cell>
+              <cell><m>1.9099</m></cell>
+            </row>
+            <row>
+              <cell><m>200</m></cell>
+              <cell><m>2.5465</m></cell>
+            </row>
+            <row>
+              <cell><m>250</m></cell>
+              <cell><m>3.1831</m></cell>
+            </row>
+          </tabular>
           <p>
             <ol label="a">
               <li>
@@ -761,13 +753,11 @@
               </li>
             </ol>
           </p>
-          <sidebyside widths="15%">
-            <image source="images/graduated_cyl.png">
-              <description>
-                Picture of graduated cylinder
-              </description>
-            </image>
-          </sidebyside>
+          <image source="images/graduated_cyl.png" width="15%">
+            <description>
+              Picture of graduated cylinder
+            </description>
+          </image>
         </statement>
       </exercise>
 <exercise>
@@ -775,36 +765,34 @@
           <p>
             Find the area of the shaded triangular region.
           </p>
-          <sidebyside widths="47%">
-            <image>
-              <description>
-                area of triangle
-              </description>
-              <latex-image>
-                \begin{tikzpicture}
-                  \begin{axis}[
-                    xmin=-11,
-                    xmax=9,
-                    ymin=-7,
-                    ymax=9,
-                    grid=none,
-                    xtick={0},
-                    minor xtick={0},
-                    ytick={0},
-                    minor ytick={0},
-                    axis equal,
-                    ]
-                    \addplot[primarycurve] coordinates {(-7,-4) (-1,8)};
-                    \addplot[primarycurve] coordinates {(-7,6) (7,-1)};
-                    \addplot[soldot] coordinates {(-5,0)} node[above left] {$(-5,0)$};
-                    \addplot[soldot] coordinates {(-3,4)} node[left] {$(-3,4)$};
-                    \addplot[rightangle] coordinates {(-2, 3.5) (-2.5, 2.5) (-3.5,3)};
-                    \addplot[fill=secondcolor, opacity=0.5] coordinates {(0,0) (0,2.5) (5,0)};
-                  \end{axis}
-                \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+          <image width="47%">
+            <description>
+              area of triangle
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  xmin=-11,
+                  xmax=9,
+                  ymin=-7,
+                  ymax=9,
+                  grid=none,
+                  xtick={0},
+                  minor xtick={0},
+                  ytick={0},
+                  minor ytick={0},
+                  axis equal,
+                  ]
+                  \addplot[primarycurve] coordinates {(-7,-4) (-1,8)};
+                  \addplot[primarycurve] coordinates {(-7,6) (7,-1)};
+                  \addplot[soldot] coordinates {(-5,0)} node[above left] {$(-5,0)$};
+                  \addplot[soldot] coordinates {(-3,4)} node[left] {$(-3,4)$};
+                  \addplot[rightangle] coordinates {(-2, 3.5) (-2.5, 2.5) (-3.5,3)};
+                  \addplot[fill=secondcolor, opacity=0.5] coordinates {(0,0) (0,2.5) (5,0)};
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
         </statement>
       </exercise>
 
@@ -815,33 +803,31 @@
             The figure shows a rectangle whose sides are formed by four lines.
             Remember that sides of a rectangle are perpendicular.
           </p>
-          <sidebyside widths="47%">
-            <image>
-              <description>
-                Rectangle Area
-              </description>
-              <latex-image>
-                \begin{tikzpicture}
-                \begin{axis}[
-                  xmin=-26,
-                  xmax=10,
-                  ymin=-10,
-                  ymax=15,
-                  grid=none,
-                  xtick={0},
-                  minor xtick={0},
-                  ytick={0},
-                  minor ytick={0},
-                  axis equal,
-                  ]
-                  \addplot[color=firstcolor, fill=secondcolor, opacity=0.5] coordinates {(-16,4) (-10,12) (6,0) (0,-8) (-16,4)};
-                  \addplot[soldot] coordinates {(-16,4)} node[below left] {$(-16,4)$};
-                  \addplot[soldot] coordinates {(-10,12)} node[above] {$(-10,12)$};
-                \end{axis}
-              \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+          <image width="47%">
+            <description>
+              Rectangle Area
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+              \begin{axis}[
+                xmin=-26,
+                xmax=10,
+                ymin=-10,
+                ymax=15,
+                grid=none,
+                xtick={0},
+                minor xtick={0},
+                ytick={0},
+                minor ytick={0},
+                axis equal,
+                ]
+                \addplot[color=firstcolor, fill=secondcolor, opacity=0.5] coordinates {(-16,4) (-10,12) (6,0) (0,-8) (-16,4)};
+                \addplot[soldot] coordinates {(-16,4)} node[below left] {$(-16,4)$};
+                \addplot[soldot] coordinates {(-10,12)} node[above] {$(-10,12)$};
+              \end{axis}
+            \end{tikzpicture}
+            </latex-image>
+          </image>
           <p>
             Find the area of the rectangle.
           </p>
@@ -871,31 +857,29 @@
               </li>
             </ol>
           </p>
-            <sidebyside widths="47%">
-              <image>
-                <description>
-                  Parabola and point P
-                </description>
-                <latex-image>
-                  \begin{tikzpicture}
-                  \begin{axis}[
-                    xmin=-3,
-                    xmax=3,
-                    ymin=-2,
-                    ymax=5,
-                    grid=none,
-                    xtick={0},
-                    minor xtick={0},
-                    ytick={0},
-                    minor ytick={0},
-                    ]
-                    \addplot[primarycurve,domain=-2.8:1.8] {x*(x+1)};
-                    \addplot[soldot] coordinates {(1.5,3.75)} node[below right] {$P$};
-                  \end{axis}
-                \end{tikzpicture}
-                </latex-image>
-              </image>
-            </sidebyside>
+          <image width="47%">
+            <description>
+              Parabola and point P
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+              \begin{axis}[
+                xmin=-3,
+                xmax=3,
+                ymin=-2,
+                ymax=5,
+                grid=none,
+                xtick={0},
+                minor xtick={0},
+                ytick={0},
+                minor ytick={0},
+                ]
+                \addplot[primarycurve,domain=-2.8:1.8] {x*(x+1)};
+                \addplot[soldot] coordinates {(1.5,3.75)} node[below right] {$P$};
+              \end{axis}
+            \end{tikzpicture}
+            </latex-image>
+          </image>
         </statement>
       </exercise>
 
@@ -1273,44 +1257,42 @@
             degrees Fahrenheit outside, and the wind is blowing at <m>s</m>
             miles per hour.
           </p>
-          <sidebyside>
-            <tabular top="medium" bottom="medium" left="medium" right="medium">
-              <col halign="center"/>
-              <col halign="center"/>
-              <row>
-                <cell><em>s</em>, Wind Speed <m>(mph)</m></cell>
-                <cell><m>W(s)</m> (degrees Fahrenheit)</cell>
-              </row>
-              <row>
-                <cell><m>0</m></cell>
-                <cell><m>40</m></cell>
-              </row>
-              <row>
-                <cell><m>10</m></cell>
-                <cell><m>34</m></cell>
-              </row>
-              <row>
-                <cell><m>20</m></cell>
-                <cell><m>30</m></cell>
-              </row>
-              <row>
-                <cell><m>30</m></cell>
-                <cell><m>28</m></cell>
-              </row>
-              <row>
-                <cell><m>40</m></cell>
-                <cell><m>27</m></cell>
-              </row>
-              <row>
-                <cell><m>50</m></cell>
-                <cell><m>26</m></cell>
-              </row>
-              <row>
-                <cell><m>60</m></cell>
-                <cell><m>25</m></cell>
-              </row>
-            </tabular>
-          </sidebyside>
+          <tabular top="medium" bottom="medium" left="medium" right="medium">
+            <col halign="center"/>
+            <col halign="center"/>
+            <row>
+              <cell><em>s</em>, Wind Speed <m>(mph)</m></cell>
+              <cell><m>W(s)</m> (degrees Fahrenheit)</cell>
+            </row>
+            <row>
+              <cell><m>0</m></cell>
+              <cell><m>40</m></cell>
+            </row>
+            <row>
+              <cell><m>10</m></cell>
+              <cell><m>34</m></cell>
+            </row>
+            <row>
+              <cell><m>20</m></cell>
+              <cell><m>30</m></cell>
+            </row>
+            <row>
+              <cell><m>30</m></cell>
+              <cell><m>28</m></cell>
+            </row>
+            <row>
+              <cell><m>40</m></cell>
+              <cell><m>27</m></cell>
+            </row>
+            <row>
+              <cell><m>50</m></cell>
+              <cell><m>26</m></cell>
+            </row>
+            <row>
+              <cell><m>60</m></cell>
+              <cell><m>25</m></cell>
+            </row>
+          </tabular>
           <p>
             <ol label="a">
               <li>
@@ -1430,13 +1412,11 @@
           <p>
             Assign variable names to the two quantities, and write an equation involving a proportionality constant, k.
           </p>
-          <sidebyside widths="30%">
-            <image source="images/spring_hookes_law.png">
-              <description>
-                Picture of extended spring
-              </description>
-            </image>
-          </sidebyside>
+          <image source="images/spring_hookes_law.png" image="30%">
+            <description>
+              Picture of extended spring
+            </description>
+          </image>
         </statement>
       </exercise>
 
