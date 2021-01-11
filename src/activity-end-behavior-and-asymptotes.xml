@@ -19,7 +19,6 @@
     <p>In the next exercise, you will see how a horizontal <term>asymptote</term> of a function can be seen by a table of values.</p>
     <exercise>
       <webwork>
-        <setup>
           <pg-code>
             @x=(1, 10, 100, 1000, 10000);
             $a=12*random(2, 5, 1);
@@ -29,10 +28,9 @@
             $variable=PopUp(["?","x","y"],"y");
             $value=$a/$c;
           </pg-code>
-        </setup>
         <statement>
           <p>The table below shows values of the function: <me>f(x) = \frac{<var name="$a" />x + <var name="$b" />}{<var name="$c" />x}</me></p>
-          <table>
+          <figure>
             <tabular top="major" halign="center">
               <col halign="left" />
               <col halign="left" />
@@ -67,7 +65,7 @@
                 <cell><m><var name="$y[4]" /></m></cell>
               </row>
             </tabular>
-          </table>
+          </figure>
           <p>What appears to be the horizontal asymptote of <m>f(x)</m>?</p>
           <p>Answer:  <var name="$variable" form="popup" /> = <var name="$value" width="10" /></p>
 
@@ -78,15 +76,14 @@
         </solution>
       </webwork>
     </exercise>
-    <p>Now, this behavior shows up in the graph by the function <m>f(x)</m> "flattening out" to the left or the right. This is an example of what is called <term>end-behavior</term> (or <term>long-run behavior</term>). From a graphical perspective, <term>end-behavior</term> is about what the graph tends to do as the input <m>x</m> gets far from zero.</p>
-<todo>Make tikz pictures for y = 8*2^(-x^2) - 11 and y = (10x - 7)/(2x), sidebyside, with the labels "horizontal asymptote y = -3" and "horizontal asymptote y = 5" </todo>
-<todo>This will take the place of these GeoGebra graphs</todo>
+    <p>Now, this behavior shows up in the graph by the function <m>f(x)</m> "flattening out" to the left or the right. This is an example of what is called <term>end-behavior</term> (or <term>long-run behavior</term>). From a graphical perspective, <term>end-behavior</term> is about what the graph tends to do as the input <m>x</m> gets far from zero.</p> -->
+    <!-- TODO: Make tikz pictures for y = 8*2^(-x^2) - 11 and y = (10x - 7)/(2x), sidebyside, with the labels "horizontal asymptote y = -3" and "horizontal asymptote y = 5" -->
+    <!-- TODO: This will take the place of these GeoGebra graphs -->
 
-    <p>As you know, not every function has a horizontal asymptote. For example, power functions do not "flatten out", but rather they either increase toward <m>\infty</m> (point upward) or decrease toward <m>-\infty</m> (point downward). So, <term>end-behavior</term> may be just that &#8212; the graph increasing or decreasing forever.</p>
+    <!-- <p>As you know, not every function has a horizontal asymptote. For example, power functions do not "flatten out", but rather they either increase toward <m>\infty</m> (point upward) or decrease toward <m>-\infty</m> (point downward). So, <term>end-behavior</term> may be just that &#8212; the graph increasing or decreasing forever.</p>
     <p>In the next four exercises, you will examine the end-behavior of a polynomial and learn to predict this end-behavior by observing its formula.</p>
     <exercise>
       <webwork>
-        <setup>
 
           <pg-code>
             $compare=PopUp(["?","very different","very similar"],"very similar");
@@ -94,7 +91,6 @@
             $power=PopUp(["?","x^2","x^3"],"x^3");
             $term=Compute("x^3");
           </pg-code>
-        </setup>
         <statement>
           <p>The graph below shows: <me>f(x) = x(x+3)(x-4)</me></p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Abx2UAXB/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
@@ -115,12 +111,10 @@
 
     <exercise>
       <webwork>
-        <setup>
 
           <pg-code>
             $function=PopUp(["?","x^2","x^3","x^4","x^5"],"x^4");
           </pg-code>
-        </setup>
         <statement>
           <p>There is a lot going on in the following graph.</p>
           <p>The two "vertical" lines are actually just part of the graph of: <me>g(x) = (x-1)(x+4)(x-5)(x+2)</me></p>
@@ -151,7 +145,6 @@
     <p>So, in the next exercise, you will get practice finding the leading term of a polynomial.</p>
     <exercise>
       <webwork>
-        <setup>
 
           <pg-code>
             @a=map{2+$_}NchooseK(15,9);
@@ -161,7 +154,6 @@
             $vars4=PopUp(["?","x^2","x^3","x^4"],"x^4");
             $vars3=PopUp(["?","x^2","x^3","x^4"],"x^3");
           </pg-code>
-        </setup>
         <statement>
           <p>For each polynomial below, determine its leading term.</p>
           <p>Enter the coefficient in the blank, and then choose the correct power of <m>x</m> with the drop-down.</p>
@@ -187,14 +179,12 @@
 
     <exercise>
       <webwork>
-        <setup>
 
           <pg-code>
             $left=PopUp(["?","Up","Down"],"Down");
             $right=PopUp(["?","Up","Down"],"Up");
             $end=PopUp(["?","x","x^2","x^3"],"x^3");
           </pg-code>
-        </setup>
         <statement>
           <p>This problem concerns the polynomial <me>f(x) = x(x - 2)(x + 3)</me>and your goal is to predict the end-behavior. Think about the power function which has the same end-behavior as <m>f(x)</m>.</p>
           <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NcwafvMp/width/427/height/392/border/888888" width="427px" height="392px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>

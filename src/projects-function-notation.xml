@@ -11,20 +11,20 @@
 -->
 <section xml:id="projects-function-notation" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Projects: Functions and Notation</title>
-  <introduction>
+  <p>
     Show all your work when algebra is necessary or when making calculations.
     If reading a graph or table, briefly explain how you used the graph or the table
     to arrive at your answer.
-  </introduction>
+  </p>
 
   <exercises>
-    <subsection>
+    <subexercises>
       <title>Evaluate, apply and interpret function notation, including the notation for inverse functions and composition of Functions</title>
 
         <exercise>
         <statement>
           <p>
-            The graph in the figure models the amount of drug, <m>A(t)</m> <init>mg</init>, in a patient’s body after ingestion as a function of time, <m>t</m> hours.  The body absorbs the drug at a linear rate, but then eliminates the drug at an exponential rate  
+            The graph in the figure models the amount of drug, <m>A(t)</m> <init>mg</init>, in a patient’s body after ingestion as a function of time, <m>t</m> hours.  The body absorbs the drug at a linear rate, but then eliminates the drug at an exponential rate
           </p>
           <p>
             <ol label="a">
@@ -45,7 +45,7 @@
               </li>
               <li>
                 <p>
-                  Calculate  on the interval <m>\frac{\Delta A}{\Delta t}</m> on the interval <m>3 \leq x \leq 6</m>.  Show your work.  
+                  Calculate  on the interval <m>\frac{\Delta A}{\Delta t}</m> on the interval <m>3 \leq x \leq 6</m>.  Show your work.
                 </p>
               </li>
               <li>
@@ -55,35 +55,33 @@
               </li>
             </ol>
           </p>
-          <sidebyside widths="47%">
-            <image>
-              <description>
-                Interpreting function notation from a graph.
-              </description>
-              <latex-image>
-                \begin{tikzpicture}
-                \begin{axis}[
-                  xmin=-1,
-                  xmax=20,
-                  ymin=-0.2,
-                  ymax=215,
-                  grid=both,
-                  xtick={5,10,...,20},
-                  minor xtick={1,2,...,20},
-                  ytick={50,100,...,215},
-                  minor ytick={5, 10,...,200},
-                  xlabel={$t{}$, hours},
-                  ylabel={$A(t){}$, mg of drug},
-                  every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
-                  width=1.5*\axisdefaultwidth,
-                  height=\axisdefaultheight,
-                  ]
-                \addplot[primarycurve,domain=0:20] [smooth] {200*x*e^(-0.4*x)};
-                \end{axis}
-              \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+          <image width="47%">
+            <description>
+              Interpreting function notation from a graph.
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+              \begin{axis}[
+                xmin=-1,
+                xmax=20,
+                ymin=-0.2,
+                ymax=215,
+                grid=both,
+                xtick={5,10,...,20},
+                minor xtick={1,2,...,20},
+                ytick={50,100,...,215},
+                minor ytick={5, 10,...,200},
+                xlabel={$t{}$, hours},
+                ylabel={$A(t){}$, mg of drug},
+                every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
+                width=1.5*\axisdefaultwidth,
+                height=\axisdefaultheight,
+                ]
+              \addplot[primarycurve,domain=0:20] [smooth] {200*x*e^(-0.4*x)};
+              \end{axis}
+            \end{tikzpicture}
+            </latex-image>
+          </image>
         </statement>
       </exercise>
 
@@ -126,63 +124,57 @@
                 <p>
                   Match each expression to the correct phrase:
                 </p>
-                <statement>
-                  <table>
-                    <tabular top="medium" bottom="medium" left="medium" right="medium">
-                      <col halign="center"/>
-                      <col halign="center"/>
-                      <row>
-                        <cell><m>A(3r)</m></cell>
-                        <cell>The surface area of three cans of radius <m>r</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>3A(r)</m></cell>
-                        <cell>The surface area of a can of radius <m>r</m>, then add on <m>3</m> more square inches</cell>
-                      </row>
-                      <row>
-                        <cell><m>A(r)+3</m></cell>
-                        <cell>The surface area of a can whose radius is <m>3</m> times as large as <m>r</m></cell>
-                      </row>
-                    </tabular>
-                  </table>
-                </statement>
+                <tabular top="medium" bottom="medium" left="medium" right="medium">
+                  <col halign="center"/>
+                  <col halign="center"/>
+                  <row>
+                    <cell><m>A(3r)</m></cell>
+                    <cell>The surface area of three cans of radius <m>r</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>3A(r)</m></cell>
+                    <cell>The surface area of a can of radius <m>r</m>, then add on <m>3</m> more square inches</cell>
+                  </row>
+                  <row>
+                    <cell><m>A(r)+3</m></cell>
+                    <cell>The surface area of a can whose radius is <m>3</m> times as large as <m>r</m></cell>
+                  </row>
+                </tabular>
               </li>
             </ol>
           </p>
         </statement>
       </exercise>
-      
+
       <exercise>
         <statement>
           <p>
             The graph in the figure shows two functions <m>f(x)</m>, linear, and <m>g(x)</m>, quadratic.
           </p>
-            <sidebyside widths="47%">
-              <image>
-                <description>
-                  Linear and Exponential Graphs (Combinations)
-                </description>
-                <latex-image>
-                  \begin{tikzpicture}
-                    \begin{axis}[
-                      xmin=-3,
-                      xmax=10,
-                      ymin=-8,
-                      ymax=8,
-                      grid=major,
-                      xtick={-2,-1,...,9},
-                      minor xtick={0},
-                      ytick={-7,-6,...,7},
-                      minor ytick={0},
-                      ]
-                      \addplot[primarycurve,-] coordinates {(-4, -5) (9,8)};
-                      \addplot[secondarycurve,-,domain=-3.5:10] {-1/4*(x-4)^2+6};
-                      \addplot[soldot,color=black] coordinates {(-2,-3) (0,-1) (2,1) (4,3) (6,5) (8,7) (0,2) (2,5) (4,6) (6,5) (8,2)};
-                    \end{axis}
-                  \end{tikzpicture}
-                </latex-image>
-              </image>
-            </sidebyside>
+          <image width="47%">
+            <description>
+              Linear and Exponential Graphs (Combinations)
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  xmin=-3,
+                  xmax=10,
+                  ymin=-8,
+                  ymax=8,
+                  grid=major,
+                  xtick={-2,-1,...,9},
+                  minor xtick={0},
+                  ytick={-7,-6,...,7},
+                  minor ytick={0},
+                  ]
+                  \addplot[primarycurve,-] coordinates {(-4, -5) (9,8)};
+                  \addplot[secondarycurve,-,domain=-3.5:10] {-1/4*(x-4)^2+6};
+                  \addplot[soldot,color=black] coordinates {(-2,-3) (0,-1) (2,1) (4,3) (6,5) (8,7) (0,2) (2,5) (4,6) (6,5) (8,2)};
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
           <p>
             <ol label="a">
               <li>
@@ -193,26 +185,25 @@
               <li>
                 <p>
                   Let <m>S(x)=f(x)+g(x)</m>, <m>P(x)=f(x)*g(x)</m> and <m>Q(x)= \frac{f(x)}{g(x)}</m>
-                <p/>
-                  <p>
-                    <ol label="i">
-                      <li>
-                        <p>
-                          Evaluate <m>S(-2)</m>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Evaluate <m>P(8)</m>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Solve <m>Q(x)=0</m>
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
+                </p>
+                <p>
+                  <ol label="i">
+                    <li>
+                      <p>
+                        Evaluate <m>S(-2)</m>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Evaluate <m>P(8)</m>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Solve <m>Q(x)=0</m>
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </li>
             </ol>
@@ -340,7 +331,7 @@
           </p>
         </statement>
       </exercise>
-      
+
       <exercise>
         <statement>
           <p>
@@ -470,34 +461,32 @@
             the ball was kicked, and <m>f(x)</m> is its height above the ground
             (measured in feet).
           </p>
-          <sidebyside widths="47%">
-            <image>
-              <description>
-                Graph of height versus distance
-              </description>
-              <latex-image>
-                \begin{tikzpicture}
-                \begin{axis}[
-                  xmin=-0.1,
-                  xmax=2,
-                  ymin=-0.2,
-                  ymax=2,
-                  grid=none,
-                  xtick={0},
-                  minor xtick={0},
-                  ytick={0},
-                  minor ytick={0},
-                  xlabel={$x={}$ distance from the 30-yard line (in feet)},
-                  ylabel={$y={}$ height above the ground (in feet)},
-                  every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
-                  width=1.5*\axisdefaultwidth,
-                  height=\axisdefaultheight,
-                  ]
-                \end{axis}
-              \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+          <image width="47%">
+            <description>
+              Graph of height versus distance
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+              \begin{axis}[
+                xmin=-0.1,
+                xmax=2,
+                ymin=-0.2,
+                ymax=2,
+                grid=none,
+                xtick={0},
+                minor xtick={0},
+                ytick={0},
+                minor ytick={0},
+                xlabel={$x={}$ distance from the 30-yard line (in feet)},
+                ylabel={$y={}$ height above the ground (in feet)},
+                every axis x label/.style={at={(current axis.right of origin)},anchor=north east},
+                width=1.5*\axisdefaultwidth,
+                height=\axisdefaultheight,
+                ]
+              \end{axis}
+            \end{tikzpicture}
+            </latex-image>
+          </image>
           <p>
             <ol label="a">
               <li>
@@ -656,12 +645,12 @@
         </statement>
       </exercise>
 
-      
-    </subsection>
 
-    <subsection>
+    </subexercises>
+
+    <subexercises>
       <title>Maintain and strengthen prerequisites, especially: percent, linear and quadratic functions, solving equations.</title>
-      
+
       <exercise>
         <statement>
           <p>
@@ -707,36 +696,34 @@
           <p>
             The table shows the height of the water in a graduated cylinder as a function of the volume of water in the cylinder.
           </p>
-          <sidebyside>
-            <tabular top="medium" bottom="medium" left="medium" right="medium">
-              <col halign="center"/>
-              <col halign="center"/>
-              <row>
-                <cell>Volume <m>(cm^3)</m></cell>
-                <cell>Height <m>(cm)</m></cell>
-              </row>
-              <row>
-                <cell><m>50</m></cell>
-                <cell><m>0.6366</m></cell>
-              </row>
-              <row>
-                <cell><m>100</m></cell>
-                <cell><m>1.2732</m></cell>
-              </row>
-              <row>
-                <cell><m>150</m></cell>
-                <cell><m>1.9099</m></cell>
-              </row>
-              <row>
-                <cell><m>200</m></cell>
-                <cell><m>2.5465</m></cell>
-              </row>
-              <row>
-                <cell><m>250</m></cell>
-                <cell><m>3.1831</m></cell>
-              </row>
-            </tabular>
-          </sidebyside>
+          <tabular top="medium" bottom="medium" left="medium" right="medium">
+            <col halign="center"/>
+            <col halign="center"/>
+            <row>
+              <cell>Volume <m>(cm^3)</m></cell>
+              <cell>Height <m>(cm)</m></cell>
+            </row>
+            <row>
+              <cell><m>50</m></cell>
+              <cell><m>0.6366</m></cell>
+            </row>
+            <row>
+              <cell><m>100</m></cell>
+              <cell><m>1.2732</m></cell>
+            </row>
+            <row>
+              <cell><m>150</m></cell>
+              <cell><m>1.9099</m></cell>
+            </row>
+            <row>
+              <cell><m>200</m></cell>
+              <cell><m>2.5465</m></cell>
+            </row>
+            <row>
+              <cell><m>250</m></cell>
+              <cell><m>3.1831</m></cell>
+            </row>
+          </tabular>
           <p>
             <ol label="a">
               <li>
@@ -766,13 +753,11 @@
               </li>
             </ol>
           </p>
-          <sidebyside widths="15%">
-            <image source="images/graduated_cyl.png">
-              <description>
-                Picture of graduated cylinder
-              </description>
-            </image>
-          </sidebyside>
+          <image source="images/graduated_cyl.png" width="15%">
+            <description>
+              Picture of graduated cylinder
+            </description>
+          </image>
         </statement>
       </exercise>
 <exercise>
@@ -780,36 +765,34 @@
           <p>
             Find the area of the shaded triangular region.
           </p>
-          <sidebyside widths="47%">
-            <image>
-              <description>
-                area of triangle
-              </description>
-              <latex-image>
-                \begin{tikzpicture}
-                  \begin{axis}[
-                    xmin=-11,
-                    xmax=9,
-                    ymin=-7,
-                    ymax=9,
-                    grid=none,
-                    xtick={0},
-                    minor xtick={0},
-                    ytick={0},
-                    minor ytick={0},
-                    axis equal,
-                    ]
-                    \addplot[primarycurve] coordinates {(-7,-4) (-1,8)};
-                    \addplot[primarycurve] coordinates {(-7,6) (7,-1)};
-                    \addplot[soldot] coordinates {(-5,0)} node[above left] {$(-5,0)$};
-                    \addplot[soldot] coordinates {(-3,4)} node[left] {$(-3,4)$};
-                    \addplot[rightangle] coordinates {(-2, 3.5) (-2.5, 2.5) (-3.5,3)};
-                    \addplot[fill=secondcolor, opacity=0.5] coordinates {(0,0) (0,2.5) (5,0)};
-                  \end{axis}
-                \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+          <image width="47%">
+            <description>
+              area of triangle
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  xmin=-11,
+                  xmax=9,
+                  ymin=-7,
+                  ymax=9,
+                  grid=none,
+                  xtick={0},
+                  minor xtick={0},
+                  ytick={0},
+                  minor ytick={0},
+                  axis equal,
+                  ]
+                  \addplot[primarycurve] coordinates {(-7,-4) (-1,8)};
+                  \addplot[primarycurve] coordinates {(-7,6) (7,-1)};
+                  \addplot[soldot] coordinates {(-5,0)} node[above left] {$(-5,0)$};
+                  \addplot[soldot] coordinates {(-3,4)} node[left] {$(-3,4)$};
+                  \addplot[rightangle] coordinates {(-2, 3.5) (-2.5, 2.5) (-3.5,3)};
+                  \addplot[fill=secondcolor, opacity=0.5] coordinates {(0,0) (0,2.5) (5,0)};
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
         </statement>
       </exercise>
 
@@ -820,33 +803,31 @@
             The figure shows a rectangle whose sides are formed by four lines.
             Remember that sides of a rectangle are perpendicular.
           </p>
-          <sidebyside widths="47%">
-            <image>
-              <description>
-                Rectangle Area
-              </description>
-              <latex-image>
-                \begin{tikzpicture}
-                \begin{axis}[
-                  xmin=-26,
-                  xmax=10,
-                  ymin=-10,
-                  ymax=15,
-                  grid=none,
-                  xtick={0},
-                  minor xtick={0},
-                  ytick={0},
-                  minor ytick={0},
-                  axis equal,
-                  ]
-                  \addplot[color=firstcolor, fill=secondcolor, opacity=0.5] coordinates {(-16,4) (-10,12) (6,0) (0,-8) (-16,4)};
-                  \addplot[soldot] coordinates {(-16,4)} node[below left] {$(-16,4)$};
-                  \addplot[soldot] coordinates {(-10,12)} node[above] {$(-10,12)$};
-                \end{axis}
-              \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+          <image width="47%">
+            <description>
+              Rectangle Area
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+              \begin{axis}[
+                xmin=-26,
+                xmax=10,
+                ymin=-10,
+                ymax=15,
+                grid=none,
+                xtick={0},
+                minor xtick={0},
+                ytick={0},
+                minor ytick={0},
+                axis equal,
+                ]
+                \addplot[color=firstcolor, fill=secondcolor, opacity=0.5] coordinates {(-16,4) (-10,12) (6,0) (0,-8) (-16,4)};
+                \addplot[soldot] coordinates {(-16,4)} node[below left] {$(-16,4)$};
+                \addplot[soldot] coordinates {(-10,12)} node[above] {$(-10,12)$};
+              \end{axis}
+            \end{tikzpicture}
+            </latex-image>
+          </image>
           <p>
             Find the area of the rectangle.
           </p>
@@ -876,38 +857,36 @@
               </li>
             </ol>
           </p>
-            <sidebyside widths="47%">
-              <image>
-                <description>
-                  Parabola and point P
-                </description>
-                <latex-image>
-                  \begin{tikzpicture}
-                  \begin{axis}[
-                    xmin=-3,
-                    xmax=3,
-                    ymin=-2,
-                    ymax=5,
-                    grid=none,
-                    xtick={0},
-                    minor xtick={0},
-                    ytick={0},
-                    minor ytick={0},
-                    ]
-                    \addplot[primarycurve,domain=-2.8:1.8] {x*(x+1)};
-                    \addplot[soldot] coordinates {(1.5,3.75)} node[below right] {$P$};
-                  \end{axis}
-                \end{tikzpicture}
-                </latex-image>
-              </image>
-            </sidebyside>
+          <image width="47%">
+            <description>
+              Parabola and point P
+            </description>
+            <latex-image>
+              \begin{tikzpicture}
+              \begin{axis}[
+                xmin=-3,
+                xmax=3,
+                ymin=-2,
+                ymax=5,
+                grid=none,
+                xtick={0},
+                minor xtick={0},
+                ytick={0},
+                minor ytick={0},
+                ]
+                \addplot[primarycurve,domain=-2.8:1.8] {x*(x+1)};
+                \addplot[soldot] coordinates {(1.5,3.75)} node[below right] {$P$};
+              \end{axis}
+            \end{tikzpicture}
+            </latex-image>
+          </image>
         </statement>
       </exercise>
 
-      
-    </subsection>
 
-    <subsection>
+    </subexercises>
+
+    <subexercises>
       <title>Determine the domain and range of functions</title>
       <exercise>
         <statement>
@@ -937,9 +916,9 @@
           </p>
         </statement>
       </exercise>
-    </subsection>
+    </subexercises>
 
-    <subsection>
+    <subexercises>
       <title>Exponential Functions and Constant Percent Change</title>
 
       <exercise>
@@ -1019,11 +998,11 @@
         </statement>
       </exercise>
 
-    </subsection>
+    </subexercises>
 
-    <subsection>
+    <!-- <subexercises>
       <title>Solve equations algebraically using properties of exponents and logarithms</title>
-<!--       <exercise>
+       <exercise>
         <statement>
           <p>
             A famous application involving the number <m>e</m> comes from Optimal Stopping  theory. Known as the Best Choice Problem, it concerns hiring someone for a job under the following conditions:
@@ -1053,10 +1032,10 @@
                </ul>
              </p>
           <p>
-            Under these conditions, you may wonder how to actually choose the best person for the job. If you choose a good candidate early on, you may miss the opportunity to hire a really great candidate later. If you wait too long, you may only be left with mediocre candidates from which to choose. 
+            Under these conditions, you may wonder how to actually choose the best person for the job. If you choose a good candidate early on, you may miss the opportunity to hire a really great candidate later. If you wait too long, you may only be left with mediocre candidates from which to choose.
           </p>
           <p>
-            The solution is to interview the first <m>\frac{n}/{e}</m> candidates but reject all of them, regardless of their qualifications. Then, continue interviewing candidates until you find the first one that is “better” than the first group you rejected. Then hire this person. 
+            The solution is to interview the first <m>\frac{n}/{e}</m> candidates but reject all of them, regardless of their qualifications. Then, continue interviewing candidates until you find the first one that is “better” than the first group you rejected. Then hire this person.
           </p>
           <p>
             Interestingly, this simple rule has been shown to find the best candidate in a group approximately 37% of the time, no matter the size of the group!
@@ -1068,19 +1047,19 @@
             Suppose a group of people line up to be chosen as an extra in a movie. The casting director only has time to interview people one at a time and make a decision - yes or no. Suppose the casting director is familiar with the Best Choice Problem, and she interviews and rejects the first 25 people in line. How many people are in line? Round your answer to the closest whole number.
           </p>
         </statement>
-      </exercise> -->
+      </exercise>
 
-    </subsection>
+    </subexercises> -->
 
-    <subsection>
+    <!-- <subexercises>
       <title>Horizontal and Vertical Translations</title>
-      
-
-    </subsection>
 
 
+    </subexercises> -->
 
-    <subsection>
+
+
+    <subexercises>
       <title>Composition and Inverse</title>
 
       <exercise>
@@ -1278,64 +1257,59 @@
             degrees Fahrenheit outside, and the wind is blowing at <m>s</m>
             miles per hour.
           </p>
-          <sidebyside>
-            <tabular top="medium" bottom="medium" left="medium" right="medium">
-              <col halign="center"/>
-              <col halign="center"/>
-              <row>
-                <cell><em>s</em>, Wind Speed <m>(mph)</m></cell>
-                <cell><m>W(s)</m> (degrees Fahrenheit)</cell>
-              </row>
-              <row>
-                <cell><m>0</m></cell>
-                <cell><m>40</m></cell>
-              </row>
-              <row>
-                <cell><m>10</m></cell>
-                <cell><m>34</m></cell>
-              </row>
-              <row>
-                <cell><m>20</m></cell>
-                <cell><m>30</m></cell>
-              </row>
-              <row>
-                <cell><m>30</m></cell>
-                <cell><m>28</m></cell>
-              </row>
-              <row>
-                <cell><m>40</m></cell>
-                <cell><m>27</m></cell>
-              </row>
-              <row>
-                <cell><m>50</m></cell>
-                <cell><m>26</m></cell>
-              </row>
-              <row>
-                <cell><m>60</m></cell>
-                <cell><m>25</m></cell>
-              </row>
-            </tabular>
-          </sidebyside>
+          <tabular top="medium" bottom="medium" left="medium" right="medium">
+            <col halign="center"/>
+            <col halign="center"/>
+            <row>
+              <cell><em>s</em>, Wind Speed <m>(mph)</m></cell>
+              <cell><m>W(s)</m> (degrees Fahrenheit)</cell>
+            </row>
+            <row>
+              <cell><m>0</m></cell>
+              <cell><m>40</m></cell>
+            </row>
+            <row>
+              <cell><m>10</m></cell>
+              <cell><m>34</m></cell>
+            </row>
+            <row>
+              <cell><m>20</m></cell>
+              <cell><m>30</m></cell>
+            </row>
+            <row>
+              <cell><m>30</m></cell>
+              <cell><m>28</m></cell>
+            </row>
+            <row>
+              <cell><m>40</m></cell>
+              <cell><m>27</m></cell>
+            </row>
+            <row>
+              <cell><m>50</m></cell>
+              <cell><m>26</m></cell>
+            </row>
+            <row>
+              <cell><m>60</m></cell>
+              <cell><m>25</m></cell>
+            </row>
+          </tabular>
           <p>
             <ol label="a">
               <li>
                 <p>
                   Which pair of statements is true?
-                  <p>
-                    <ul>
-                      <li>
-                        <p>
-                          <m>W(25)=60</m> and <m>W^{-1}(50)=26</m>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <m>W(40)=27</m> and <m>W^{-1}(34)=10</m>
-                        </p>
-                      </li>
-                    </ul>
-                  </p>
-
+                  <ul>
+                    <li>
+                      <p>
+                        <m>W(25)=60</m> and <m>W^{-1}(50)=26</m>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <m>W(40)=27</m> and <m>W^{-1}(34)=10</m>
+                      </p>
+                    </li>
+                  </ul>
                 </p>
               </li>
               <li>
@@ -1348,13 +1322,13 @@
         </statement>
       </exercise>
 
-    </subsection>
+    </subexercises>
 
-    <subsection>
+    <subexercises>
       <title>
         Use the characteristics of basic functions (linear, constant, polynomial, exponential, logarithmic, power, piece-wise), especially slope, intercepts, rate of change, percent change and average change, to answer questions in application situations, to write equations and to create graphs by hand and on the calculator.
       </title>
-      
+
         <exercise>
         <statement>
           <p>
@@ -1367,7 +1341,7 @@
                 </p>
               </li>
               <li>
-                <p>Find an exponential formula, <m>E(t)</m>,  that models the amount of drug, <init>mg</init>, in the patient’s body as a function of time, <m>t</m> hours after <m>10</m> <init>a.m.</init> 
+                <p>Find an exponential formula, <m>E(t)</m>,  that models the amount of drug, <init>mg</init>, in the patient’s body as a function of time, <m>t</m> hours after <m>10</m> <init>a.m.</init>
                 </p>
               </li>
               <li>
@@ -1388,7 +1362,7 @@
               </li>
               <li>
                 <p>
-                  Use your exponential equation to calculate the half-life of the drug in the body. 
+                  Use your exponential equation to calculate the half-life of the drug in the body.
                 </p>
               </li>
               <li>
@@ -1438,13 +1412,11 @@
           <p>
             Assign variable names to the two quantities, and write an equation involving a proportionality constant, k.
           </p>
-          <sidebyside widths="30%">
-            <image source="images/spring_hookes_law.png">
-              <description>
-                Picture of extended spring
-              </description>
-            </image>
-          </sidebyside>
+          <image source="images/spring_hookes_law.png" image="30%">
+            <description>
+              Picture of extended spring
+            </description>
+          </image>
         </statement>
       </exercise>
 
@@ -1453,59 +1425,57 @@
           <p>
             Each line in the figures has a slope of <m>\frac{1}{2}</m>. For each graph, determine the value of <m>a</m> within the given coordinates.
           </p>
-          <p>
-            <sidebyside widths="47% 47%">
-              <image>
-                <description>
-                  Linear Graphs with slope <m>\frac{1}{2}</m>
-                </description>
-                <latex-image>
-                  \begin{tikzpicture}
-                    \begin{axis}[
-                      xmin=-2,
-                      xmax=12,
-                      ymin=-2,
-                      ymax=12,
-                      grid=none,
-                      xtick={0},
-                      minor xtick={0},
-                      ytick={0},
-                      minor ytick={0},
-                      ]
-                      \addplot[primarycurve,-] coordinates {(-2, 4) (12,11)};
-                      \addplot[soldot] coordinates {(4,7)} node[below right] {$(4,7)$};
-                      \addplot[soldot] coordinates {(9,9.5)} node[below right] {$(9,a)$};
-                    \end{axis}
-                  \end{tikzpicture}
-                </latex-image>
-              </image>
-              <image>
-                <latex-image>
-                  \begin{tikzpicture}
-                    \begin{axis}[
-                      xmin=-2,
-                      xmax=12,
-                      ymin=-2,
-                      ymax=12,
-                      grid=none,
-                      xtick={0},
-                      minor xtick={0},
-                      ytick={0},
-                      minor ytick={0},
-                      ]
-                      \addplot[primarycurve,-] coordinates {(-2, 3) (12,10)};
-                      \addplot[soldot] coordinates {(2,5)} node[below right] {$(2,5)$};
-                      \addplot[soldot] coordinates {(8,8)} node[below right] {$(a,8)$};
-                    \end{axis}
-                  \end{tikzpicture}
-                </latex-image>
-              </image>
-            </sidebyside>
-          </p>
+          <sidebyside widths="47% 47%">
+            <image>
+              <description>
+                Linear Graphs with slope <m>\frac{1}{2}</m>
+              </description>
+              <latex-image>
+                \begin{tikzpicture}
+                  \begin{axis}[
+                    xmin=-2,
+                    xmax=12,
+                    ymin=-2,
+                    ymax=12,
+                    grid=none,
+                    xtick={0},
+                    minor xtick={0},
+                    ytick={0},
+                    minor ytick={0},
+                    ]
+                    \addplot[primarycurve,-] coordinates {(-2, 4) (12,11)};
+                    \addplot[soldot] coordinates {(4,7)} node[below right] {$(4,7)$};
+                    \addplot[soldot] coordinates {(9,9.5)} node[below right] {$(9,a)$};
+                  \end{axis}
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+            <image>
+              <latex-image>
+                \begin{tikzpicture}
+                  \begin{axis}[
+                    xmin=-2,
+                    xmax=12,
+                    ymin=-2,
+                    ymax=12,
+                    grid=none,
+                    xtick={0},
+                    minor xtick={0},
+                    ytick={0},
+                    minor ytick={0},
+                    ]
+                    \addplot[primarycurve,-] coordinates {(-2, 3) (12,10)};
+                    \addplot[soldot] coordinates {(2,5)} node[below right] {$(2,5)$};
+                    \addplot[soldot] coordinates {(8,8)} node[below right] {$(a,8)$};
+                  \end{axis}
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
         </statement>
       </exercise>
-    </subsection>
-    <subsection>
+    </subexercises>
+    <subexercises>
       <title>Recognize an exponential relationship given numerically or verbally, determine the growth/decay rate and use this information to write an equation to model the relationship</title>
 
       <exercise>
@@ -1542,7 +1512,7 @@
           </p>
         </statement>
       </exercise>
-      
+
       <exercise>
         <statement>
           <p>
@@ -1592,7 +1562,7 @@
         </statement>
       </exercise>
 
-    </subsection>
+    </subexercises>
 
   </exercises>
 </section>

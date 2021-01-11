@@ -54,13 +54,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $train = RadioButtons(["Blue Train (dotted line)","Red Train (dashed line)","Green Train (solid line)"],0);
                 $slope = RadioButtons(["mope","dope","slope","scope"],2);
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mYBwwJSp/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -184,7 +182,6 @@
       </introduction>
 
       <webwork>
-          <setup>
             <!-- Within parserFunction below the formula has nothing to do with the problem.  It's only there to be function to generate values for us -->
             <pg-code>
                 $speed = PopUp(["?", "hours", "miles", "hours per mile", "miles per hour"], "miles per hour");
@@ -199,7 +196,6 @@
                 Context()->flags->set(formatStudentAnswer=>"parsed");
                 $difference=Formula("f(5)-f(2)");
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -315,13 +311,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $chngDist = Real(19.5);
                 $meaning = PopUp(["?", "Change in hours since 8 a.m.", "Delta t", "Delta times t", "There is no meaning to this expression"], 1);
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -440,7 +434,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $in1=Real(7);
@@ -453,7 +446,6 @@
               $f2=Formula("f(2)");
               $evf2=$f2->cmp()->withPostFilter(AnswerHints(Compute("30") => "That's the actual value, but respond by using function notation."));
             </pg-code>
-          </setup>
           <statement>
             <p>
               Suppose <m>f(x)</m> is a function defined for all real numbers.
@@ -546,7 +538,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $slope1 = Real(-1);
@@ -562,7 +553,6 @@
                 $lineA = ImplicitPlane("y=-x+7");
                 $lineB = ImplicitPlane("y=2x+1");
             </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -771,7 +761,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
               $intMay = Real(2.6);
@@ -783,7 +772,6 @@
               Context()->variables->are(m => "Real");
               $intMarch = Compute("3&lt;=m&lt;=12");
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PPsZ6cgY/width/431/height/245/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="245px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -875,7 +863,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $deltaInput = Real(2);
@@ -886,7 +873,6 @@
                 $fzero = Real(-6);
                 $ftwo = Real(-4);
             </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -1001,13 +987,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $forward = Real(-1);
                 $backward = Real(-1);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Previously you were given the function <m>f(x) = (x-2)(x+3)</m> and you calculated
@@ -1052,7 +1036,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $delDist = Real(10);
@@ -1067,7 +1050,6 @@
                 $lastUnit = PopUp(["?", "miles", "hours per mile", "hours", "miles per hour"], 4);
                 $interval = PopUp(["?", "2 p.m. and 5 p.m.", "10 a.m. and 1 p.m.", "2 and 5", "2 mph and 5 mph"], 2);
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/413/height/250/border/888888" width="413px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*

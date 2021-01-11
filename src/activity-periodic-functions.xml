@@ -22,7 +22,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $timeToCharge=Real(6);
@@ -31,7 +30,6 @@
               );
               $period=Real(24);
             </pg-code>
-          </setup>
           <statement>
             <p>
               The following graph shows the &#37;
@@ -130,7 +128,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $per=Real(4);
@@ -168,32 +165,25 @@
               );
               add_functions($gr2, "2*sin(2*pi/3*x)-2*cos(2*pi/1.5*x)-2 for x in &lt;-2,12&gt; using color:red and weight:2");
             </pg-code>
-          </setup>
           <statement>
             <p>
               The period of each function below is a whole number.
               Find the period of each function.
             </p>
 
-            <sidebyside>
-              <image pg-name="$gr" />
-            </sidebyside>
+            <image pg-name="$gr"/>
 
             <p>
               Period = <var name="$per" width="10" />
             </p>
 
-            <sidebyside>
-              <image pg-name="$gr1" />
-            </sidebyside>
+            <image pg-name="$gr1"/>
 
             <p>
               Period = <var name="$per1" width="10" />
             </p>
 
-            <sidebyside>
-              <image pg-name="$gr2" />
-            </sidebyside>
+            <image pg-name="$gr2"/>
 
             <p>
               Period = <var name="$per2" width="10" />
@@ -233,14 +223,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $vertStretch=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the radius of the wheel");
               $vertShift=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the platform height");
               $horizontalStretch=PopUp(["?","Changing the radius of the wheel","Changing the platform height","Changing the period"],"Changing the period");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Suppose a person boards at the bottom of a Ferris Wheel and rides around for <m>35</m> seconds.
@@ -405,7 +393,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $period=Real(4);
@@ -418,11 +405,8 @@
               );
               add_functions($gr, "-1.5*cos(2*pi/4*x)-3.5 for x in &lt;-2,12&gt; using color:red and weight:2");
             </pg-code>
-          </setup>
           <statement>
-            <sidebyside>
-              <image pg-name="$gr" />
-            </sidebyside>
+            <image pg-name="$gr"/>
 
             <p>
               The graph above shows a periodic function.
@@ -586,7 +570,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $amplitude=Real(30);
@@ -603,7 +586,6 @@
               parser::Assignment->Allow;
               $midline=Formula("y=40");
             </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -624,8 +606,6 @@
             <p>
               Complete the table of values below for the function <m>f</m>.
             </p>
-
-            <sidebyside>
 
               <tabular top="major" halign="center">
                 <col halign="left" />
@@ -655,12 +635,8 @@
                   <cell><var name="$h[4]" width="10" /></cell>
                 </row>
               </tabular>
-
-            </sidebyside>
           </statement>
           <solution>
-            <sidebyside>
-
               <tabular top="major" halign="center">
                 <col halign="left" />
                 <col />
@@ -689,8 +665,6 @@
                   <cell><m>10</m></cell>
                 </row>
               </tabular>
-
-            </sidebyside>
           </solution>
           </stage>
           <stage>
@@ -699,8 +673,6 @@
               You found the heights in the following table:
             </p>
 
-            <sidebyside>
-
               <tabular top="major" halign="center">
                 <col halign="left" />
                 <col />
@@ -729,8 +701,6 @@
                   <cell><m>10</m></cell>
                 </row>
               </tabular>
-
-            </sidebyside>
 
             <p>
               In the graph below,
@@ -805,7 +775,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $radius=Real(60);
@@ -818,7 +787,6 @@
               );
               add_functions($gr, "-60*cos(2*pi/15*x)+80 for x in &lt;0,45&gt; using color:red and weight:2");
             </pg-code>
-          </setup>
           <statement>
             <p>
               A person boards a Ferris Wheel at the <m>6</m>
@@ -834,9 +802,7 @@
               Use the graph to help answer the questions that follow.
             </p>
 
-            <sidebyside>
-              <image pg-name="$gr" />
-            </sidebyside>
+            <image pg-name="$gr"/>
 
             <p>
               <ol label="a">

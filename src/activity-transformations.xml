@@ -43,7 +43,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $up=PopUp(
@@ -53,7 +52,6 @@
             ["?","It went up by 3 units.","It went down by 3 units."],"It went down by 3 units."
             );
           </pg-code>
-          </setup>
           <statement>
             <p>
               Let <m>f(x) = x^2</m>.
@@ -123,7 +121,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $left4=PopUp(
@@ -133,7 +130,6 @@
             ["?","right 5, and down 4","right 5, and up 4","left 5, and down 4","left 5, and up 4"],"right 5, and down 4"
             );
           </pg-code>
-          </setup>
           <statement>
             <p>
               Again, let <m>f(x) = x^2</m>.
@@ -202,7 +198,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $stretched=PopUp(
@@ -215,7 +210,6 @@
             ["?","x-axis","y-axis","line y = x"],"x-axis"
             );
           </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows a function <m>y = af(x)</m>,
@@ -322,7 +316,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $gr=init_graph(-3,-3,3,3,
@@ -347,11 +340,8 @@
             $grans1=Compute("(x-$shift[0])**2+$shift[1]");
             $grans2=Compute("(x-$shift[2])**2+$shift[3]");
           </pg-code>
-          </setup>
           <statement>
-            <sidebyside>
-              <image pg-name="$gr" />
-            </sidebyside>
+            <image pg-name="$gr"/>
 
             <p>
               The graph above shows <m>f(x) = x^2</m>.
@@ -363,18 +353,14 @@
               and write the formula for each graph.
             </p>
 
-            <sidebyside>
-              <image pg-name="$gr1" />
-            </sidebyside>
+            <image pg-name="$gr1"/>
 
             <p>
               The formula is:
               <m>y = </m><var name="$grans1" width="15" />
             </p>
 
-            <sidebyside>
-              <image pg-name="$gr2" />
-            </sidebyside>
+            <image pg-name="$gr2"/>
 
             <p>
               The formula is:
@@ -420,7 +406,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             @shift=map{$_+1}NchooseK(2,2);
@@ -436,35 +421,24 @@
             ["?","Graph 1","Graph 2","Graph 3","Graph 4"],"Graph 3"
             );
           </pg-code>
-          </setup>
           <statement>
             <p>
               The function <m>y = f(x)</m> is shown below.
             </p>
 
-            <sidebyside widths="50%">
-              <image pg-name="$gr[0]"/>
-            </sidebyside>
+            <image pg-name="$gr[0]" width="50%"/>
 
             <p>
               Which of the following graphs shows <m>y = f(x + <var name="$shift[0]" />) + <var name="$shift[1]" /></m>?
             </p>
 
-            <sidebyside widths="60%">
-              <image pg-name="$gr[1]"/>
-            </sidebyside>
+            <image pg-name="$gr[1]" width="60%"/>
 
-            <sidebyside widths="60%">
-              <image pg-name="$gr[2]"/>
-            </sidebyside>
+            <image pg-name="$gr[2]" width="60%"/>
 
-            <sidebyside widths="60%">
-              <image pg-name="$gr[3]"/>
-            </sidebyside>
+            <image pg-name="$gr[3]" width="60%"/>
 
-            <sidebyside widths="60%">
-              <image pg-name="$gr[4]"/>
-            </sidebyside>
+            <image pg-name="$gr[4]" width="60%"/>
 
             <p>
               Answer:
@@ -503,14 +477,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $formulas=PopUp(
             ["?","y=4(x+7)+15","y=4(x+7)-15","y=4(x-7)+15","y=4(x-7)-15"],"y=4(x-7)+15"
             );
           </pg-code>
-          </setup>
           <statement>
             <p>
               The linear function
@@ -575,13 +547,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             @a=map{1+$_}NchooseK(8,2);
             $whichLine=Compute("11*(x-$a[0])-$a[1]");
           </pg-code>
-          </setup>
           <statement>
             <p>
               The line with slope <m>11</m>,
@@ -618,7 +588,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $equation=PopUp(
@@ -626,7 +595,6 @@
             "y = m(x - a) + b"
             );
           </pg-code>
-          </setup>
           <statement>
             <p>
               The equation of a line with slope <m>m</m>,
@@ -713,7 +681,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $answer=PopUp(
@@ -725,7 +692,6 @@
             parserFunction("f(x)"=>"(sin(x)+2)/pi");
             $f2=Formula("f(2x)");
           </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows a function <m>y = f(x)</m>,
@@ -817,7 +783,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $compressed=PopUp(
@@ -833,7 +798,6 @@
             ["y = f(2x)","y = f(0.5x)"],1
             );
           </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pwsX4d5W/width/425/height/373/border/888888/sri/true/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -923,7 +887,7 @@
       for a function and one of its transformations.
     </p>
 
-    <todo>This problem does not recognize when answers have been submitted.</todo>
+    <!-- TODO: This problem does not recognize when answers have been submitted. -->
 
     <exercise>
       <statement>
@@ -994,6 +958,7 @@
 
         <p>
           The completed table looks like:
+        </p>
 
           <sidebyside>
 
@@ -1039,8 +1004,6 @@
             </tabular>
 
           </sidebyside>
-
-        </p>
 
         <p>
           [The function <m>f</m> is linear,
@@ -1218,32 +1181,27 @@
         You are already familiar with many basic functions:
       </p>
 
-      <p>
+      <sidebyside>
+        <tabular>
+          <col />
+          <row>
+            <cell><m>y = x</m></cell>
+          </row>
+          <row>
+            <cell><m>y = x^2</m></cell>
+          </row>
+          <row>
+            <cell><m>y = e^x</m></cell>
+          </row>
+          <row>
+            <cell><m>y = log_{10}(x)</m></cell>
+          </row>
+          <row>
+            <cell><m>y = \frac{1}{x}</m></cell>
+          </row>
+        </tabular>
+      </sidebyside>
 
-        <sidebyside>
-
-          <tabular>
-            <col />
-            <row>
-              <cell><m>y = x</m></cell>
-            </row>
-            <row>
-              <cell><m>y = x^2</m></cell>
-            </row>
-            <row>
-              <cell><m>y = e^x</m></cell>
-            </row>
-            <row>
-              <cell><m>y = log_{10}(x)</m></cell>
-            </row>
-            <row>
-              <cell><m>y = \frac{1}{x}</m></cell>
-            </row>
-          </tabular>
-
-        </sidebyside>
-
-      </p>
 
       <p>
         If you know these basic shapes,
@@ -1257,7 +1215,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
           <pg-code>
             $gr=init_graph(-1,-1,10,2,
@@ -1278,11 +1235,8 @@
             $gr1->stamps( closed_circle(5,0.125,'blue'));
             $formula=Compute("1/(0.625*x)");
           </pg-code>
-            </setup>
             <statement>
-              <sidebyside>
-                <image pg-name="$gr" />
-              </sidebyside>
+              <image pg-name="$gr"/>
 
               <p>
                 Above is the function <m>f(x) = \frac{1}{x}</m>.
@@ -1292,9 +1246,7 @@
                 Below, the graph shows a horizontal compression of <m>f</m>.
               </p>
 
-              <sidebyside>
-                <image pg-name="$gr1" />
-              </sidebyside>
+              <image pg-name="$gr1"/>
 
               <p>
                 Use what you know about compressions in order to write the formula for <m>g(x)</m>.
@@ -1329,14 +1281,12 @@
 
       <exercise>
         <webwork>
-            <setup>
 
           <pg-code>
             $formula=RadioButtons(
             ["\(2\log_2(x-4)\)","\(\frac{1}{2}\log_2(x-4)\)","\(\log_2(2x-4)\)","\(\log_2\left(\frac{x}{2}-4\right)\)"],2
             );
           </pg-code>
-            </setup>
             <statement>
               <p>
                 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/hkbdwXA3/width/425/height/373/border/888888/sri/true/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -1389,7 +1339,6 @@
 
             <webwork>
 
-                <setup>
                     <pg-code>
                         $answer = random(1,3,1);
                         $gr = init_graph(-1,-1,4,4,
@@ -1410,7 +1359,6 @@
                         $solgr->lineTo($answer,1,'black',3);
                         $solgr->arrowTo($answer,0,'black',3);
                     </pg-code>
-                </setup>
                 <statement>
                     <p>The graph below is a graph of <m>y=f(x)</m>. Use the graph to solve the equation <m>f(x)=1</m>.</p>
                     <figure>

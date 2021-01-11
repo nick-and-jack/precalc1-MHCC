@@ -34,7 +34,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $increase=random(3,7,1);
@@ -43,7 +42,6 @@
           $x=random(10,20,1);
           $y=Compute("$x+$increase");
         </pg-code>
-        </setup>
         <statement>
           <p>
             The function <m>f(x) = <var name="$f" /></m> can be described as the function which
@@ -151,13 +149,11 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           @x=map{$_+2}NchooseK(8,4);
           @y=map{$_+12}NchooseK(8,4);
         </pg-code>
-        </setup>
         <statement>
           <p>
             If <m>f</m> and <m>g</m> are functions,
@@ -259,15 +255,13 @@
 
   <exercise>
     <webwork>
-      <setup>
         <pg-code>
           Context()->variables->are(a=>'Real', b=>'Real', c=>'Real', d=>'Real');
           $num=random(3,20,1);
           @letters = ('a'..'d');
-          list_random(@letters);  
+          list_random(@letters);
           $var=$letters[random($total)];
         </pg-code>
-      </setup>
       <statement>
         <p>
           Let <m>w</m> be a function and <m>w^{-1}</m> be its inverse.
@@ -328,17 +322,15 @@
     See the next exercise.
   </p>
 
-  <todo>Should we make this a scaffolded problem?</todo>
+  <!-- TODO: Should we make this a scaffolded problem? -->
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           @x=map{$_+1}NchooseK(4,2);
           @fInverse=map{(12-2*$_)/($_)}@x;
         </pg-code>
-        </setup>
         <statement>
           <p>
             We already know that <m>f^{-1}</m> undoes the action of <m>f</m>:
@@ -428,13 +420,11 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $interpretF=PopUp(["?",'If the area is 1500 square feet, then the price is 4600 dollars.','If the area is 4600 square feet, then the price is 1500 dollars.'],1);
           $interpretFInverse=PopUp(["?",'If the price is 3500 dollars, then the area is 1000 square feet.','If the price is 1000 dollars, then the area is 3500 square feet.'],1);
         </pg-code>
-        </setup>
         <statement>
           <p>
             Let <m>f</m> be the function which will find the cost <m>C</m>,
@@ -508,7 +498,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           Context('Numeric');
@@ -523,7 +512,6 @@
               displayLabels => 0
           );
         </pg-code>
-        </setup>
         <statement>
           <p>
             Let <m>S = G(t)</m> be a function which will calculate the salary <m>S</m>,
@@ -638,14 +626,12 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $m=random(6,10,1);
           $b=random(1,5,1);
           $fInverse=Compute("(x+$b)/($m)");
         </pg-code>
-        </setup>
         <statement>
           <p>
             In this exercise,
@@ -707,12 +693,10 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $hInverse=Compute("5*x/7-3");
         </pg-code>
-        </setup>
         <statement>
           <p>
             Let
@@ -765,14 +749,12 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $point1=PopUp(["?",'(0, 3)','(3, 0)'],2);
           $point2=PopUp(["?",'(-1, -2)','(-2, -1)'],1);
           $correct=PopUp(["?","Yes","No"],1);
         </pg-code>
-        </setup>
         <statement>
           <p>
             The graph below shows the linear function
@@ -869,7 +851,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $interpretation=RadioButtons(
@@ -878,7 +859,6 @@
               displayLabels => 0
           );
         </pg-code>
-        </setup>
         <statement>
           <p>
             The next graph shows the dashed line <m>y = x</m>.
@@ -965,21 +945,17 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $a=Real(7);
           $why=PopUp(["?","f should never have that output","f had that output twice"],2);
 
         </pg-code>
-        </setup>
         <statement>
           <p>
             The following table <em>is</em> a function,
             but its inverse is <em>not</em> a function.
           </p>
-
-          <sidebyside>
 
             <tabular top="major" halign="center">
               <col halign="left" />
@@ -1005,8 +981,6 @@
                 <cell><m>7</m></cell>
               </row>
             </tabular>
-
-          </sidebyside>
 
           <p>
             There is an output value of <m>f</m> that is causing the inverse <m>f^{-1}</m> to
@@ -1074,21 +1048,17 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $non=PopUp(["?","At least one output value is repeated","No output values are repeated"],1);
           $inv=PopUp(["?","At least one output value is repeated","No output values are repeated"],2);
         </pg-code>
-        </setup>
         <statement>
           <p>
             Below are tables for two functions, <m>f</m> and <m>g</m>.
             The function <m>f</m> is <em>invertible</em>,
             but the function <m>g</m> is <em>non-invertible</em>.
           </p>
-
-          <sidebyside>
 
             <tabular top="major" halign="center" left="major">
               <col halign="left"/>
@@ -1130,8 +1100,6 @@
                 <cell><m>5</m></cell>
               </row>
             </tabular>
-
-          </sidebyside>
 
           <p>
             In the last problem,
@@ -1183,13 +1151,11 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $non=PopUp(['?','A horizontal line never intersects the graph more than once.','A horizontal line may intersect the graph more than once.'],2);
           $inv=PopUp(['?','A horizontal line never intersects the graph more than once.','A horizontal line may intersect the graph more than once.'],1);
         </pg-code>
-        </setup>
         <statement>
           <p>
             The graph of a non-invertible function <m>f</m> is shown below.

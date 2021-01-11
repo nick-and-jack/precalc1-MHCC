@@ -67,7 +67,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
               $yes = RadioButtons(
@@ -81,14 +80,11 @@
               $integers = PopUp(["?","all integers","all real numbers","only non-negative integers","only zero to 100"],"only non-negative integers");
               $thirteen = PopUp(["?","only positive numbers","all real numbers","only whole numbers","non-negative integer multiples of 13"],"non-negative integer multiples of 13");
             </pg-code>
-          </setup>
           <statement>
             <p>
               T-shirt cost function:
               Enter the cost of buying <m>N</m> t-shirts.
             </p>
-
-            <sidebyside>
 
               <tabular top="medium" bottom="medium" left="medium" right="medium">
                 <col halign="center"/>
@@ -122,8 +118,6 @@
                   <cell><var name="65" width="5" /></cell>
                 </row>
               </tabular>
-
-            </sidebyside>
 
             <p>
               <ol label="a">
@@ -279,7 +273,6 @@
     <exercise>
       <title>Polynomials</title>
       <webwork>
-          <setup>
 
           <pg-code>
             $yes1 = PopUp(["?","yes","no"],"yes");
@@ -287,7 +280,6 @@
             $no = PopUp(["?","yes","no"],"no");
             $domain = PopUp(["?","only positive numbers","all real numbers","only negative numbers","only numbers ending in C"],"all real numbers");
           </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -349,7 +341,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             $pos1 = PopUp(["?","positive","negative"],"positive");
@@ -357,7 +348,6 @@
             $no = PopUp(["?","yes","no"],"no");
             $range = PopUp(["?","only positive numbers","all real numbers","only negative numbers","all real numbers greater than or equal to zero"],"all real numbers greater than or equal to zero");
           </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FRZgk5eU/width/413/height/350/border/888888" width="413px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -682,7 +672,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               Context("Inequalities");
@@ -694,7 +683,6 @@
               displayLabels => 0
               );
             </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -766,7 +754,6 @@
     <exercise>
       <title>Practice with Roots and Denominators</title>
       <webwork>
-          <setup>
 
             <pg-code>
               Context("Inequalities");
@@ -776,7 +763,6 @@
               $dom3 = Compute("x!=7");
               $dom4 = Compute("x!= -3 and x!= 3");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Remember that typing <m>x!=a</m> means
@@ -899,7 +885,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
           <pg-code>
             Context("Inequalities");
@@ -909,7 +894,6 @@
             $rng1 = Compute("-3&lt;=y&lt;=-0.5");
             $rng2 = Compute("2&lt;y&lt;=8");
           </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -1010,7 +994,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               Context("Inequalities");
@@ -1019,7 +1002,6 @@
               $rng2 = Compute("0.78&lt;=y&lt;4.62");
               $rng3 = Compute("1.95&lt;=y&lt;4.62");
             </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>

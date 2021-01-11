@@ -39,7 +39,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $positive=PopUp(
@@ -50,7 +49,6 @@
             );
             @ans=(16,16,32,-32);
           </pg-code>
-        </setup>
         <statement>
           <p>
             Recall that a positive integer exponent refers to
@@ -148,14 +146,12 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $evenExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],2);
             $oddExponent=PopUp(["?",'points upward on the right and downward on the left','points upward on the right and the left'],1);
             $commonPoints=PopUp(["?",'(-1,1)','(0,0) and (1,1)','(-1,-1) and (0,0) and (1,1)'],2);
           </pg-code>
-        </setup>
         <statement>
           <p>
             The graph below shows a power function of the form <m>f(x) = x^n</m>,
@@ -209,7 +205,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $formula=RadioButtons(
@@ -224,15 +219,12 @@
             );
             add_functions($gr, "x**5 for x in &lt;-1.5,1.5&gt; using color:red and weight:2");
           </pg-code>
-        </setup>
         <statement>
           <p>
             The graph below shows a power function.
           </p>
 
-          <sidebyside>
-            <image pg-name="$gr" />
-          </sidebyside>
+          <image pg-name="$gr"/>
 
           <p>
             What is a possible formula for this function?
@@ -271,11 +263,10 @@
     Use this in the next exercise.
   </p>
 
-  <todo>At a future date, make this a sidebyside, once that is possible within a webwork</todo>
+  <!-- TODO: At a future date, make this a sidebyside, once that is possible within a webwork -->
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $posEven=PopUp(["?","A","B","C","D"],"D");
@@ -294,23 +285,14 @@
             add_functions($gr[3], "x^4 for x in &lt;-5,5> using color:blue and weight:2");
 
           </pg-code>
-        </setup>
         <statement>
-          <sidebyside widths="40%">
-            <image pg-name="$gr[0]" />
-          </sidebyside>
+          <image pg-name="$gr[0]" width="40%"/>
 
-          <sidebyside widths="40%">
-            <image pg-name="$gr[1]" />
-          </sidebyside>
+          <image pg-name="$gr[1]" width="40%"/>
 
-          <sidebyside widths="40%">
-            <image pg-name="$gr[2]" />
-          </sidebyside>
+          <image pg-name="$gr[2]" width="40%"/>
 
-          <sidebyside widths="40%">
-            <image pg-name="$gr[3]" />
-          </sidebyside>
+          <image pg-name="$gr[3]" width="40%"/>
 
           <p>
             The graphs show the following functions:
@@ -439,7 +421,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $false=PopUp(
@@ -449,7 +430,6 @@
             ["?","True","False"],"True"
             );
           </pg-code>
-        </setup>
         <statement>
           <p>
             True or False:
@@ -533,14 +513,12 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $evenExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],1);
             $oddExponent=PopUp(["?",'points upward on both sides','points in opposite directions'],2);
             $commonPoints=PopUp(["?",'(1,1)','(1,1) and (-1,1)'],1);
           </pg-code>
-        </setup>
         <statement>
           <p>
             The graph below shows a power function of the form <m>f(x) = x^n</m>,
@@ -617,7 +595,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $formula=RadioButtons(
@@ -633,15 +610,12 @@
             add_functions($gr, "x**(-4) for x in &lt;-6,-0.6&gt; using color:red and weight:2");
             add_functions($gr, "x**(-4) for x in &lt;0.6,6&gt; using color:red and weight:2");
           </pg-code>
-        </setup>
         <statement>
           <p>
             The graph below shows a power function.
           </p>
 
-          <sidebyside>
-            <image pg-name="$gr" />
-          </sidebyside>
+          <image pg-name="$gr"/>
 
           <p>
             What is a possible formula for this function?
@@ -664,11 +638,10 @@
     Use this in the next exercise.
   </p>
 
-  <todo>Use sidebyside when it is available</todo>
+  <!-- TODO: Use sidebyside when it is available -->
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $posEven=PopUp(["?","A","B","C","D"],"B");
@@ -690,23 +663,14 @@
             add_functions($gr[2], "x^(-4) for x in &lt;0.1,5> using color:blue and weight:2");
             add_functions($gr[3], "-x^(-3) for x in &lt;0.1,5> using color:blue and weight:2");
           </pg-code>
-        </setup>
         <statement>
-          <sidebyside widths="40%">
-            <image pg-name="$gr[0]" />
-          </sidebyside>
+          <image pg-name="$gr[0]" width="40%"/>
 
-          <sidebyside widths="40%">
-            <image pg-name="$gr[1]" />
-          </sidebyside>
+          <image pg-name="$gr[1]" width="40%"/>
 
-          <sidebyside widths="40%">
-            <image pg-name="$gr[2]" />
-          </sidebyside>
+          <image pg-name="$gr[2]" width="40%"/>
 
-          <sidebyside widths="40%">
-            <image pg-name="$gr[3]" />
-          </sidebyside>
+          <image pg-name="$gr[3]" width="40%"/>
 
           <p>
             Select the graph for each formula:
@@ -878,14 +842,12 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $evenExponent=PopUp(["?",'all real numbers',"x greater than or equal to 0"],2);
             $oddExponent=PopUp(["?",'all real numbers',"x greater than or equal to 0"],1);
             $commonPoints=PopUp(["?",'(-1,-1) and (0,0)','(0,0) and (1,1)'],2);
           </pg-code>
-        </setup>
         <statement>
           <p>
             The graph below shows a power function of the form <m>f(x) = x^{1/n}</m>,

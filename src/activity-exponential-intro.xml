@@ -260,7 +260,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
                 $thirtyNine = Real(39);
@@ -269,7 +268,6 @@
                 $Increase = PopUp(["?", "Increase", "Decrease", "None of the above", "All of the above"], "Increase");
                 $Decrease = PopUp(["?", "Increase", "Decrease", "None of the above", "All of the above"], "Decrease");
             </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -360,14 +358,12 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
                 $b = Compute(10000/2000);
                 $r = Compute(4);
                 $rPercent = Compute(400);
             </pg-code>
-          </setup>
           <statement>
             <p>
               A percent change implies multiplication by a growth factor.
@@ -445,14 +441,12 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
                 $b = Compute(0.20);
                 $r = Compute(0.80);
                 $rPercent = Compute(80);
             </pg-code>
-          </setup>
           <statement>
             <p>
               A percent change implies multiplication by a growth factor.
@@ -633,18 +627,14 @@
       </introduction>
 
       <webwork>
-          <setup>
           <pg-code>
             $add = RadioButtons(
             ["repeated multiplication","repeated addition"],
             1, labels => ["repeated multiplication","repeated addition"],displayLabels => 0
             );
           </pg-code>
-          </setup>
           <stage>
           <statement>
-            <sidebyside>
-
               <tabular top="medium" bottom="medium" left="medium" right="medium">
                 <col halign="center"/>
                 <col halign="center"/>
@@ -677,9 +667,6 @@
                   <cell><m>14.22</m></cell>
                 </row>
               </tabular>
-
-            </sidebyside>
-
             <p>
               Are the outputs changing by repeated addtion or by repeated multiplication?
             </p>
@@ -728,17 +715,14 @@
       </introduction>
 
       <webwork>
-          <setup>
           <pg-code>
             $mult = RadioButtons(
             ["repeated multiplication","repeated addition"],
             0, labels => ["repeated multiplication","repeated addition"],displayLabels => 0
             );
           </pg-code>
-          </setup>
           <stage>
           <statement>
-            <sidebyside>
 
               <tabular top="medium" bottom="medium" left="medium" right="medium">
                 <col halign="center"/>
@@ -772,8 +756,6 @@
                   <cell><m>14.90</m></cell>
                 </row>
               </tabular>
-
-            </sidebyside>
 
             <p>
               Are the outputs are changing by repeated addtion or by repeated multiplication?
@@ -858,13 +840,11 @@
       </introduction>
 
       <webwork>
-          <setup>
 
           <pg-code>
           Context()->variables->are(t=>'Real',D=>'Real');
             $line = ImplicitPlane("D=-5t+250");
           </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -877,8 +857,6 @@
                   <p>
                     Complete the table for a dosage rate reduced by <m>5</m> mg/hour each hour.
                   </p>
-
-                  <sidebyside>
 
                     <tabular top="medium" bottom="medium" left="medium" right="medium">
                       <col halign="center"/>
@@ -908,8 +886,6 @@
                         <cell><var name="230" width="5" /></cell>
                       </row>
                     </tabular>
-
-                  </sidebyside>
 
                 </li>
               </ol>
@@ -985,8 +961,6 @@
                     (<em>round your answers to <m>2</m> decimal places</em>).
                   </p>
 
-                  <sidebyside>
-
                     <tabular top="medium" bottom="medium" left="medium" right="medium">
                       <col halign="center"/>
                       <col halign="center"/>
@@ -1016,8 +990,6 @@
                       </row>
                     </tabular>
 
-                  </sidebyside>
-
                 </li>
               </ol>
             </p>
@@ -1041,9 +1013,6 @@
                 </li>
 
                 <li>
-
-                  <sidebyside>
-
                     <tabular top="medium" bottom="medium" left="medium" right="medium">
                       <col halign="center"/>
                       <col halign="center"/>
@@ -1073,8 +1042,6 @@
                       </row>
                     </tabular>
 
-                  </sidebyside>
-
                 </li>
               </ol>
             </p>
@@ -1097,8 +1064,6 @@
                     This time instead of the actual results,
                     write the initial value followed by multiples of the growth factor for every hour that passes.
                   </p>
-
-                  <sidebyside>
 
                     <tabular top="medium" bottom="medium" left="medium" right="medium">
                       <col halign="center"/>
@@ -1128,8 +1093,6 @@
                         <cell><m>250</m>(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)(<var name="0.98" width="3" />)</cell>
                       </row>
                     </tabular>
-
-                  </sidebyside>
 
                 </li>
               </ol>
@@ -1209,12 +1172,10 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
                 $Next1 = Real(165);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Sometimes, the way a list of values is written can make it easy or hard to determine the pattern.
@@ -1304,7 +1265,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
               <pg-code>
                 Context()->variables->are(t=>'Real');
@@ -1347,7 +1307,6 @@
                 return 1;
           });}
               </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -1373,8 +1332,6 @@
             <p>
               Use our growth factor <m><var name="$b" /></m> to continue the pattern in the table.
             </p>
-
-            <sidebyside>
 
               <tabular top="major" halign="center">
                 <col halign="left" />
@@ -1405,8 +1362,6 @@
                 </row>
               </tabular>
 
-            </sidebyside>
-
             <p>
               Notice there is a pattern emerging.
               For every hour that passes there is another multiple of the same growth factor.
@@ -1431,8 +1386,6 @@
                     on the right.
                   </p>
 
-                  <sidebyside>
-
                     <tabular top="major" halign="center">
                       <col halign="left" />
                       <col halign="left" />
@@ -1446,8 +1399,6 @@
                       </row>
                     </tabular>
 
-                  </sidebyside>
-
                 </li>
 
                 <li>
@@ -1455,8 +1406,6 @@
                     Finally, at any time <m>t</m>,
                     what is the resulting formula?
                   </p>
-
-                  <sidebyside>
 
                     <tabular top="major" halign="center">
                       <col halign="left" />
@@ -1470,8 +1419,6 @@
                         <cell><var name="$y[6]" width="20" evaluator="$ev[6]"/></cell>
                       </row>
                     </tabular>
-
-                  </sidebyside>
 
                   <p>
                     This is your formula to calculate the population at any time!
@@ -1581,7 +1528,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
           <pg-code>
             $same = RadioButtons(
@@ -1589,7 +1535,6 @@
             0, labels => ["yes","no"],displayLabels => 0
             );
           </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -1644,7 +1589,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
           <pg-code>
             $same = RadioButtons(
@@ -1652,7 +1596,6 @@
             1, labels => ["yes","no"],displayLabels => 0
             );
           </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -1839,7 +1782,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
             Context()->variables->are(t=>'Real');
@@ -1849,7 +1791,6 @@
               $b=Real(1+$r);
               $bRoot=Real($b**(1/3));
             </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -2006,7 +1947,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
             Context()->variables->are(t=>'Real');
@@ -2019,7 +1959,6 @@
               $p=Real($r*100);
               $pRoot=Real($rRoot*100);
             </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -2258,7 +2197,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
           <pg-code>
           Context()->variables->are(t=>'Real');
@@ -2273,7 +2211,6 @@
             $compounded=Real(5);
             $initialTemp=$a/($bRoot**3);
           </pg-code>
-          </setup>
           <stage>
           <statement>
             <p>
@@ -2511,7 +2448,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
                 $dInit = Real(150);
@@ -2526,7 +2462,6 @@
                 $a=Real(25);
                 @time=map{$dInit-$a*$_}(0..6);
             </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -2552,8 +2487,6 @@
                 </li>
 
                 <li>
-
-                  <sidebyside>
 
                     <tabular top="medium" bottom="medium" left="medium" right="medium">
                       <col halign="center"/>
@@ -2592,8 +2525,6 @@
                       </row>
                     </tabular>
 
-                  </sidebyside>
-
                 </li>
 
                 <li>
@@ -2629,7 +2560,6 @@
       </introduction>
 
       <webwork>
-          <setup>
 
             <pg-code>
                 $dInit = Real(150);
@@ -2645,7 +2575,6 @@
                 $b=1-$r;
                 @t2=map{$dInit*$b**$_}(0..6);
             </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -2667,8 +2596,6 @@
                 </li>
 
                 <li>
-
-                  <sidebyside>
 
                     <tabular top="medium" bottom="medium" left="medium" right="medium">
                       <col halign="center"/>
@@ -2706,8 +2633,6 @@
                         <cell><var name="$t2[6]" width="10"/></cell>
                       </row>
                     </tabular>
-
-                  </sidebyside>
 
                 </li>
 
@@ -2788,8 +2713,6 @@
               Round your answers to <m>3</m> decimal places.
             </p>
 
-            <sidebyside>
-
               <tabular top="medium" bottom="medium" left="medium" right="medium">
                 <col halign="center"/>
                 <col halign="center"/>
@@ -2815,8 +2738,6 @@
                 </row>
               </tabular>
 
-            </sidebyside>
-
             <p>
               Notice that even at <m>t=40</m> the answer is small, but it is not zero.
             </p>
@@ -2829,8 +2750,6 @@
             </p>
           </statement>
           <solution>
-            <sidebyside>
-
               <tabular top="medium" bottom="medium" left="medium" right="medium">
                 <col halign="center"/>
                 <col halign="center"/>
@@ -2855,8 +2774,6 @@
                   <cell><m>0.002</m></cell>
                 </row>
               </tabular>
-
-            </sidebyside>
           </solution>
           </stage>
           <stage>

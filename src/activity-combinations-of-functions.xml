@@ -20,7 +20,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $heat=random(80,120,5);
@@ -33,7 +32,6 @@
             parserFunction("f(x)"=>"(sin(x)+2)/pi");
             $billExpression=Formula("h(x)+w(x)");
           </pg-code>
-        </setup>
         <stage>
         <statement>
           <p>
@@ -122,7 +120,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $x=random(2,4,1);
@@ -133,7 +130,6 @@
           $p=$M*$N;
           $q=$M/$N;
         </pg-code>
-        </setup>
         <stage>
         <statement>
           <p>
@@ -259,7 +255,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $revenue=PopUp(
@@ -272,7 +267,6 @@
           ["?","You sell it for 40 cents more than you paid for it.","You sell it for 40 percent more than you paid for it.","You paid 1.40 for the item."],"You sell it for 40 percent more than you paid for it."
           );
         </pg-code>
-        </setup>
         <stage>
         <statement>
           <p>
@@ -449,7 +443,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           @x=(-4,0,2,4,6,8);
@@ -460,7 +453,6 @@
           ["?","yes","no"],"yes"
           );
         </pg-code>
-        </setup>
         <stage>
         <statement>
           <p>
@@ -479,8 +471,6 @@
             Use the graph to complete the table of values for the functions <m>f(x)</m>,
             <m>g(x)</m> and <m>P(x)</m>
           </p>
-
-          <sidebyside>
 
             <tabular top="major" halign="center">
               <col halign="left" />
@@ -530,8 +520,6 @@
                 <cell><var name="$P[5]" width="10" /></cell>
               </row>
             </tabular>
-
-          </sidebyside>
         </statement>
         <hint>
           <p>
@@ -544,8 +532,6 @@
           </p>
         </hint>
         <solution>
-          <sidebyside>
-
             <tabular top="major" halign="center">
               <col halign="left" />
               <col />
@@ -594,8 +580,6 @@
                 <cell><var name="$P[5]" /></cell>
               </row>
             </tabular>
-
-          </sidebyside>
         </solution>
         </stage>
         <stage>
@@ -603,9 +587,6 @@
           <p>
             You made the table:
           </p>
-
-          <sidebyside>
-
             <tabular top="major" halign="center">
               <col halign="left" />
               <col />
@@ -638,9 +619,6 @@
                 <cell><var name="$P[5]" /></cell>
               </row>
             </tabular>
-
-          </sidebyside>
-
           <p>
             Use the values from your table above to plot six points on the graph of <m>y= P(x)</m>.
             Move the six blue points to those locations and the graph of <m>P(x)</m> will appear.
@@ -665,7 +643,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $f=Compute("-1+0.5*x");
@@ -673,7 +650,6 @@
           $P=Compute("$f*$g");
 
         </pg-code>
-        </setup>
         <statement>
           <p>
             The graph below shows the functions <m>f</m> and <m>g</m>.
@@ -752,18 +728,16 @@
     Remember that this is all about combining the outputs of the <m>f</m> and <m>g</m> functions.
   </p>
 
-  <todo> Finish this problem </todo>
+  <!-- TODO: Finish this problem -->
 
   <exercise>
     <webwork>
-        <setup>
 
         <pg-code>
           $hZero=Real(4.4);
           $hPositive=OneOf(0,2.1);
           $hNegative=OneOf(-3,7);
         </pg-code>
-        </setup>
         <statement>
           <p>
             In this problem,
@@ -792,9 +766,6 @@
                 <p>
                   Consider the <m>x</m> values:
                 </p>
-
-                <sidebyside>
-
                   <tabular halign="left">
                     <row>
                       <cell><m>-3</m></cell>
@@ -804,9 +775,6 @@
                       <cell><m>7</m></cell>
                     </row>
                   </tabular>
-
-                </sidebyside>
-
               </li>
 
               <li>

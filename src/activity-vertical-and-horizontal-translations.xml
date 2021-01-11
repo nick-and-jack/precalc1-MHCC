@@ -57,14 +57,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $ans1=Compute("(x+6)^2+x+6");
                 $ans2=Compute("x^2+x+6");
                 $ans3=Compute("3*(x^2+x)");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Given the function <m>f(x) = x^2 + x</m>,
@@ -121,7 +119,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 Context()->variables->are(t=>'Real');
@@ -129,7 +126,6 @@
                 $ans2=Compute("5(-3(t-4)+7)");
                 $ans3=Compute("-5(-3(t-4)+7)");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Given the function <m>g(t) = -3t + 7</m>,
@@ -202,7 +198,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $ans1=PopUp(["?","adding 4 to the input","adding 4 to the output"],1);
@@ -210,7 +205,6 @@
                 $ans3=PopUp(["?","multiplying the input by 5","multiplying the output by 5"],2);
                 $ans4=PopUp(["?","multiplying the input by 9","multiplying the output by 9"],1);
             </pg-code>
-          </setup>
           <statement>
             <p>
               For each equation below, give a description of what we are changing
@@ -299,7 +293,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 Context('Numeric');
@@ -311,7 +304,6 @@
                 $ans2=Formula("g(2*t)-1");
                 $ans3=Formula("7*g(t)");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Beginning with the function <m>y = g(t)</m>,
@@ -483,7 +475,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $start=Real(10);
@@ -494,7 +485,6 @@
                 ["?","It increased slightly","It decreased slightly"],1
                 );
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows the swimmer's height above the water when she jumped off the regular diving board.
@@ -579,13 +569,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $change=PopUp(["?","added 7 to the input","added 7 to the output","subtracted 7 from the input","subtracted 7 from the output"],2);
                 $eqn=PopUp(["?","h = f(t + 7)","h = f(t) + 7","h = f(t - 7)","h = f(t) - 7"],2);
             </pg-code>
-          </setup>
           <statement>
             <p>
               <ol label="a">
@@ -659,14 +647,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 Context('Numeric');
                 Context()->variables->are(t=>'Real');
                 $eqn=Compute("-16t^2+15t+3+7");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Jumping off the regular diving board,
@@ -719,7 +705,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $describeup=PopUp(["?","go up by 25 feet","go down by 25 feet","stay the same"],1);
@@ -729,7 +714,6 @@
                 $eqn1=Compute("-16t^2+15t+3+25");
                 $eqn2=Compute("-16t^2+15t+3-2");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Recall that the swimmer's height above the water,
@@ -828,7 +812,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 Context('Numeric');
@@ -839,7 +822,6 @@
                 $eqn1=Formula("f(x)+k");
                 $eqn2=Formula("f(x)-k");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Complete each statement below.
@@ -887,7 +869,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $input=PopUp(
@@ -897,7 +878,6 @@
                 ["?","h = f(t + 2)","h = f(t - 2)"],"h = f(t - 2)"
                 );
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows
@@ -1015,14 +995,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 Context('Numeric');
                 Context()->variables->are(t=>'Real');
                 $eqn=Compute("-16(t-3)^2+15(t-3)+3+7");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Recall that the swimmer's height above the water,
@@ -1060,13 +1038,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $early=PopUp(["?","late","early"],2);
                 $board=PopUp(["?","high-dive","Mega high-dive","Nano"],3);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Recall that the swimmer's height above the water,
@@ -1161,7 +1137,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 Context('Numeric');
@@ -1176,7 +1151,6 @@
                     displayLabels => 0
                 );
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pXUT7wZS/width/431/height/313/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -1230,7 +1204,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 Context('Numeric');
@@ -1245,7 +1218,6 @@
                     displayLabels => 0
                 );
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/qHkxbUVg/width/431/height/313/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -1291,12 +1263,10 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $formulas=PopUp(["?","y=4(x+7)+15","y=4(x+7)-15","y=4(x-7)+15","y=4(x-7)-15"],3);
             </pg-code>
-          </setup>
           <statement>
             <p>
               The linear function
@@ -1357,13 +1327,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 @a=map{1+$_}NchooseK(8,2);
                 $whichLine=Compute("11*(x-$a[0])-$a[1]");
             </pg-code>
-          </setup>
           <statement>
             <p>
               The line with slope <m>11</m>,
@@ -1399,12 +1367,10 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
                 $equation=PopUp(["?","y = m(x - a) + b","y = mx - a + b","y = m(x - b) + a"],1);
             </pg-code>
-          </setup>
           <statement>
             <p>
               The equation of a line with slope <m>m</m>,

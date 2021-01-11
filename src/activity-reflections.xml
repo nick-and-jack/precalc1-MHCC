@@ -11,13 +11,14 @@
 -->
 <section xml:id="activity-reflections" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Reflections</title>
+  <subsection>
+    <title>Introduction</title>
   <p>
     To begin this activity, first an exercise about function notation.
   </p>
 
   <exercise>
     <webwork>
-        <setup>
 
             <pg-code>
               Context('Numeric');
@@ -28,7 +29,6 @@
               );
               $withNumbers = Real(42);
             </pg-code>
-        </setup>
         <statement>
           <p>
             <ol label ="a">
@@ -102,7 +102,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
             <pg-code>
               $x=random(3,30,1);
@@ -110,7 +109,6 @@
               $oppX=-1*$x;
               $oppY=-1*$y;
             </pg-code>
-        </setup>
         <statement>
           <p>
             Suppose <m>x = <var name="$x" /></m> and <m>y = <var name="$y" /></m>.
@@ -157,7 +155,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
             <pg-code>
               Context('Numeric');
@@ -167,7 +164,6 @@
                 displayLabels => 0
               );
             </pg-code>
-        </setup>
         <statement>
           <p>
             [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/rsSg5fd3/width/368/height/261/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/auto" width="368px" height="261px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -229,7 +225,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
             <pg-code>
               Context('Numeric');
@@ -243,7 +238,6 @@
               $output3=Formula("f(-x)");
               $output4=Formula("-f(x)");
             </pg-code>
-        </setup>
         <statement>
           <p>
             Use the function <m>f(x)</m> to write an expression to answer each question below.
@@ -343,6 +337,7 @@
         </solution>
     </webwork>
   </exercise>
+  </subsection>
 
   <subsection>
     <title>The transformation <m>y = -f(x)</m></title>
@@ -368,7 +363,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $pointOnH=PopUp(
@@ -378,7 +372,6 @@
               ["?","(-4,5)","(-4,-5)","(4,5)","(4,-5)"],"(-4,-5)"
               );
             </pg-code>
-          </setup>
           <statement>
             <p>
               Suppose <m>h(-4) = 5</m>.
@@ -436,7 +429,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $fof1=Real(2);
@@ -445,7 +437,6 @@
               ["?","x-axis","y-axis"],"x-axis"
               );
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/gGZwgNcU/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -511,7 +502,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $didItGraph=PopUp(
@@ -523,7 +513,6 @@
               displayLabels => 0
               );
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows <m>f(x) = \sqrt{x}</m>.
@@ -574,7 +563,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $point=PopUp(
@@ -584,7 +572,6 @@
               ["?","(-5, 9)","(-5, 13)"],"(-5, 9)"
               );
             </pg-code>
-          </setup>
           <statement>
             <p>
               Suppose <m>h(5) = 9</m> and
@@ -643,7 +630,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $gofneg2notation=PopUp(
@@ -658,7 +644,6 @@
               ["?","x-axis","y-axis"],"y-axis"
               );
             </pg-code>
-          </setup>
           <statement>
             <p>
               The function <m>y = g(x)</m> is shown below.
@@ -735,7 +720,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $didItGraph=PopUp(
@@ -747,7 +731,6 @@
               displayLabels => 0
               );
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows <m>g(x) = \sqrt{x}</m>.
@@ -786,7 +769,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               @x=(-9,-4,-1,0,1,4,9);
@@ -794,15 +776,12 @@
               @b=map{($_&lt;0)?Compute("DNE"):-sqrt($_)}@x;
               @c=map{($_&gt;0)?Compute("DNE"):sqrt(-$_)}@x;
             </pg-code>
-          </setup>
           <statement>
             <p>
               Complete the table below, using <m>f(x) = \sqrt{x}</m>.
               If an expression cannot be evaluated,
               write <em>DNE</em> ("does not exist") in that space.
             </p>
-
-            <sidebyside>
 
               <tabular top="major" halign="center">
                 <col halign="left" />
@@ -859,7 +838,6 @@
                 </row>
               </tabular>
 
-            </sidebyside>
           </statement>
       </webwork>
     </exercise>
@@ -875,7 +853,6 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $g=PopUp(
@@ -885,7 +862,6 @@
               ["?","-f(x)","f(-x)"],"f(-x)"
               );
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows <m>y = f(x)</m>.
@@ -925,14 +901,12 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $a=random(3,12,1);
               $g=Compute("-(x+$a)^4");
               $h=Compute("(-x+$a)^4");
             </pg-code>
-          </setup>
           <statement>
             <p>
               The graph below shows <m>f(x) = (x + <var name="$a" />)^4</m>.
@@ -1004,12 +978,10 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
 
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MvQnu5Vm/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -1038,12 +1010,10 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
 
             </pg-code>
-          </setup>
           <statement>
             <p>
               [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/e6ZcGJS3/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*

@@ -329,7 +329,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               Context("Inequalities");
@@ -338,7 +337,6 @@
               $rng1 = Compute("1.5&lt;=y&lt;3.5");
               $rng2 = Compute("3&lt;=y&lt;5");
             </pg-code>
-            </setup>
             <stage>
             <statement>
               <p>
@@ -520,11 +518,10 @@
         write each formula with its corresponding domain to its right.
       </p>
 
-      <todo>It would be nice if the student could enter their answers in such a way that in the end the answer looks like proper piecewise notation as shown in the solution.</todo>
+      <!-- TODO: It would be nice if the student could enter their answers in such a way that in the end the answer looks like proper piecewise notation as shown in the solution. -->
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
                 Context()->variables->are(x=>'Real',y=>'Real');
@@ -534,7 +531,6 @@
                 $answer1 = Compute("-5&lt;=x&lt;0");
                 $answer2 = Compute("1&lt;=x&lt;=4");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tVFj33nG/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -579,7 +575,6 @@
       <exercise>
         <title>Match the Graph to the Piecewise Formula</title>
         <webwork>
-            <setup>
 
             <pg-code>
               $one = RadioButtons(
@@ -587,7 +582,6 @@
               2, labels => ["Function A","Function B","Function C"],displayLabels => 0
               );
             </pg-code>
-            </setup>
             <statement>
               <p>
                 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/UY2xPaVW/width/413/height/300/border/888888" width="413px" height="300px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -647,7 +641,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $a=random(2,13);
@@ -655,7 +648,6 @@
               $gDomain=PopUp(["?","greater than zero","less than zero","greater than or equal to zero",
               "less than or equal to zero"],"greater than or equal to zero");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use the functions below to answer the questions that follow.
@@ -706,7 +698,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $a=random(3,10);
@@ -718,7 +709,6 @@
               $PDomain=Compute("$b/$a");
               $greaterThanOrEqual=PopUp(["?","greater than","less than","greater than or equal to","less than or equal to"],"greater than or equal to");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use the functions below to answer the questions that follow.
@@ -776,7 +766,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr=init_graph(-8,-8,8,8,axes=>[0,0],grid=>[16,16],size=>[240,240]);
@@ -792,12 +781,12 @@
               $xVar=PopUp(["?","x","y"],"x");
               $yVar=PopUp(["?","x","y"],"y");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the function <m>y=g(x)</m> below.
-              <image pg-name="$gr" />
             </p>
+
+            <image pg-name="$gr" />
 
             <p>
               <ol label="a">
@@ -845,7 +834,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr=init_graph(-10,-10,10,10,axes=>[0,0],grid=>[20,20],size=>[240,240]);
@@ -866,12 +854,12 @@
               $notInDomain=PopUp(["?","0","1","2","3","4","5","infinitely many"],"3");
               $notInRange=PopUp(["?","0","1","2","3","4","5","infinitely many"],"5");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the function <m>y=g(x)</m> below.
-              <image pg-name="$gr" />
             </p>
+
+            <image pg-name="$gr" />
 
             <p>
               <ol label="a">
@@ -943,7 +931,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr=init_graph(-10,-10,10,10,axes=>[0,0],grid=>[20,20],size=>[240,240]);
@@ -964,12 +951,12 @@
               $eqn2=Formula("4");
               $eqn3=Formula("x-2");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the function <m>y=g(x)</m> below.
-              <image pg-name="$gr" />
             </p>
+
+            <image pg-name="$gr" />
 
             <p>
               Determine the formulas for this function.
@@ -1022,7 +1009,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr=init_graph(-10,-10,10,10,axes=>[0,0],grid=>[20,20],size=>[240,240]);
@@ -1049,13 +1035,12 @@
               $point2=Compute("(4,8)");
               $fillCircle=OneOf($point1,$point2);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use the graph of <m>y=h(x)</m> below to answer the questions that follow.
               If a value does not exist, you should type <em>DNE</em>.
-              <image pg-name="$gr" />
             </p>
+            <image pg-name="$gr" />
             <p>
               <ol label="a">
                 <li>
@@ -1133,13 +1118,11 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $cost=Real(60);
               $units=PopUp(["?","dollars","hours"],"dollars");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 <em>Tools of the Trade</em> rental shop will rent a pressure washer for <m>\$35</m> for the first two hours,
@@ -1179,7 +1162,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $input1=random(5,19,1);
@@ -1189,7 +1171,6 @@
               $output2=Compute("250+($input2-20)*11");
               $input2units=PopUp(["?","dollars","shirts"],"shirts");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 A T-shirt printer sells custom-printed shirts for
@@ -1253,14 +1234,12 @@
 
       <exercise>
         <webwork>
-            <setup>
             <pg-code>
               $ans1=Real(3);
               $ans2=Real(2);
               $ans3=PopUp(["?","one","two","three","infinitely many"],"infinitely many");
               $ans4=PopUp(["?","one","two","three","infinitely many"],"two");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 <me>
@@ -1359,12 +1338,10 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $yes=PopUp(["?","yes","no"],"yes");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the function <m>y=f(x)</m> below.
@@ -1393,12 +1370,10 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $C=Real(7);
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the function <m>y=g(x)</m> below.
@@ -1436,7 +1411,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr=init_graph(-10,-10,10,10,axes=>[0,0],grid=>[20,20],size=>[240,240]);
@@ -1456,12 +1430,11 @@
               $notContinuous=PopUp(["?","Yes, it would be continuous","No, it would not be continuous","It would no longer be a function"],"No, it would not be continuous");
               $notAFunction=PopUp(["?","Yes, it would be continuous","No, it would not be continuous","It would no longer be a function"],"It would no longer be a function");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use the graph of <m>y=h(x)</m> below to answer the questions that follow.
-              <image pg-name="$gr" />
             </p>
+            <image pg-name="$gr" />
             <p>
               <ol label="a">
                 <li>
@@ -1565,13 +1538,11 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $cost=Real(60);
               $units=PopUp(["?","dollars","hours"],"dollars");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   <em>Tools of the Trade</em> rental shop will rent a pressure washer for <m>\$35</m> for the first two hours,
@@ -1611,7 +1582,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $input1=random(5,19,1);
@@ -1621,7 +1591,6 @@
               $output2=Compute("250+($input2-20)*11");
               $input2units=PopUp(["?","dollars","shirts"],"shirts");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   A T-shirt printer sells custom-printed shirts for
@@ -1685,14 +1654,12 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $height1=Real(0);
               $height2=Real(8);
               $units=PopUp(["?","feet","seconds"],"feet");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   A tennis ball is dropped from a height of <m>16</m> feet.
@@ -1764,7 +1731,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $height1=random(10,15,1);
@@ -1772,7 +1738,6 @@
               $units=PopUp(["?","feet","seconds"],"seconds");
               $time2=Real(2.5);
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   A tennis ball is dropped from a height of <m>16</m> feet.
@@ -1885,7 +1850,7 @@
         </exercise>
 
       </exercisegroup>
-      <exercisegroup>
+      <!-- <exercisegroup>
 
         <introduction>
           <p>
@@ -1893,7 +1858,7 @@
           </p>
         </introduction>
 
-      </exercisegroup>
+      </exercisegroup> -->
     </exercises>
   </section>
 </chapter>

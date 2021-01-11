@@ -573,8 +573,6 @@
             The answer (output) is the <m>y</m>-value.
           </p>
 
-          <sidebyside>
-
             <tabular top="medium" bottom="medium" left="medium" right="medium">
               <col halign="center"/>
               <col halign="center"/>
@@ -615,8 +613,6 @@
                 <cell>Because <m>3^{2}=9</m></cell>
               </row>
             </tabular>
-
-          </sidebyside>
 
           <p>
             For inputs between zero and one,
@@ -793,7 +789,6 @@
         </introduction>
 
         <webwork seed="1">
-            <setup>
 
             <pg-code>
                 $chdrp=random(11,31,1);
@@ -803,7 +798,6 @@
                 $hourlyrate=NumberWithUnits((1-exp(-$chdrp/100))*100,'%/hr');
                 $halflife=NumberWithUnits(ln(0.5)/-$chdrp*100,'hr');
             </pg-code>
-            </setup>
             <stage>
             <statement>
               <p>
@@ -925,7 +919,6 @@
         </introduction>
 
         <webwork seed="1">
-            <setup>
 
             <pg-code>
                 $arp=random(5,15,1);
@@ -935,7 +928,6 @@
                 $contrate=NumberWithUnits(ln(1+$arp/100)*100,'%/yr');
                 $triptime=NumberWithUnits(ln(3)/ln(1+$arp/100),'yr');
             </pg-code>
-            </setup>
             <stage>
             <statement>
               <p>
@@ -1039,7 +1031,6 @@
         </introduction>
 
         <webwork seed="1">
-            <setup>
 
             <pg-code>
                 $doublingdays=random(8,20,1);
@@ -1050,7 +1041,6 @@
                 Context()->variables->are(t=>'Real', P=>'Real');
                 $form=Compute("P*2^(t/$doublingdays)");
             </pg-code>
-            </setup>
             <stage>
             <statement>
               <p>
@@ -1141,7 +1131,6 @@
         </introduction>
 
         <webwork seed="1">
-            <setup>
 
             <pg-code>
                 %hl=('Magnesium-27'=>9.45,'Carbon-11'=>20.33,'Oxygen-15'=>2.04);
@@ -1153,7 +1142,6 @@
                 $time=NumberWithUnits(ln($target/100)/ln(1-ln(2)/$halflifemin),'min');
                 $b=Real(0.5**(1/$halflifemin));
             </pg-code>
-            </setup>
             <stage>
             <statement>
               <p>
@@ -1247,7 +1235,6 @@
         </introduction>
 
         <webwork>
-            <setup>
 
             <pg-code>
                 Context()->variables->are(P=>'Real', t=>'Real');
@@ -1255,7 +1242,6 @@
                 $step=Compute("ln(P/(1-P))");
                 $solution=Compute("e^t/(1+e^t)");
             </pg-code>
-            </setup>
             <stage>
             <statement>
               <p>
@@ -1387,14 +1373,12 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $noneOfThese=PopUp(["?","only f","only g","only h","f and g","f and h","g and j","f, g and h","f, g and j","all of these","none of these"],"none of these");
               $fgj=PopUp(["?","only f","only g","only h","f and g","f and h","g and j","f, g and h","f, g and j","all of these","none of these"],"f, g and j");
               $no=PopUp(["?","yes","no"],"no");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use the following functions to answer the questions below:
@@ -1458,7 +1442,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $gr1=init_graph(-2,-2,12,4,axes=>[0,0],grid=>[14,6],size=>[240,240]);
@@ -1486,21 +1469,15 @@
               $b=PopUp(["?","A","B","C"],"B");
               $c=PopUp(["?","A","B","C"],"C");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Consider the graphs below:
             </p>
 
-            <sidebyside widths="35%">
-              <image pg-name="$gr1" />
-              <image pg-name="$gr2" />
-            </sidebyside>
-
-            <sidebyside widths="35%">
-              <image pg-name="$gr3" />
-              <image pg-name="$gr4" />
-            </sidebyside>
+            <image pg-name="$gr1" width="35%"/>
+            <image pg-name="$gr2" width="35%"/>
+            <image pg-name="$gr3" width="35%"/>
+            <image pg-name="$gr4" width="35%"/>
 
             <p>
               <ul>
@@ -1561,7 +1538,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
           <pg-code>
             @x=(1, 10, 100, 1000, 10000);
@@ -1579,14 +1555,11 @@
             @xx=($a/12,$a/12+0.9,$a/12+0.99,$a/12+0.999,$a/12+0.9999);
             @yy=map{($c**2/($_-($a/12+1)))}@xx;
           </pg-code>
-          </setup>
           <statement>
             <p>
               The table below shows values of two functions: <m>y=f(x)</m>
               and <m>y=g(x)</m>
             </p>
-
-            <sidebyside>
 
               <tabular top="major" halign="center">
                 <col halign="left" />
@@ -1646,8 +1619,6 @@
                 </row>
               </tabular>
 
-            </sidebyside>
-
             <p>
               <ol label="a">
                 <li>
@@ -1690,7 +1661,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $a=random(2,6,.1);
@@ -1705,7 +1675,6 @@
               $vAsymptote=PopUp(["?","vertical asymptote","horizontal asymptote"],"vertical asymptote");
               $hAsymptote=PopUp(["?","vertical asymptote","horizontal asymptote"],"horizontal asymptote");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Each function below has either a <em>horizontal</em> or <em>vertical</em>
@@ -1816,14 +1785,12 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $a=list_random(350,400,450,500,550,600,650);
               $b=random(2,9);
               $c=Compute("ln($a)/ln($b)");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use properties of logarithms to solve for <m>x</m> in the equation
@@ -1849,14 +1816,12 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $a=random(2,7);
               do{$b=random(2,5);}until($b!=$a);
               $c=Compute("($a)**($b)");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Use properties of logarithms to solve for <m>x</m> in the equation
@@ -1881,7 +1846,6 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               $T0=Real(165.7);
@@ -1890,7 +1854,6 @@
               $a=random(95,130);
               $time=Compute("ln(($a-65)/100.7)/-0.042");
             </pg-code>
-          </setup>
           <statement>
             <p>
               According to <em>Newton's Law of Cooling</em>, the rate at which
@@ -1987,13 +1950,11 @@
 
       <exercise>
         <webwork>
-          <setup>
 
             <pg-code>
               Context()->variables->are(t=>'Real');
               $formula=Compute("9.624*(1.0192)**t");
             </pg-code>
-          </setup>
           <statement>
             <p>
               According to Wolfram|Alpha, the population of Texas has been
@@ -2230,14 +2191,12 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $digit=random(3,8,1);
               $prob=int(log(2)/log(1+1/$digit)+0.5);
               $rounded=100*sprintf("%.3f",log(1+1/$digit)/log(10));
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   <url href="https://en.wikipedia.org/wiki/Benford%27s_law">Benford's Law</url>
@@ -2283,7 +2242,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $percent=random(12,16,1)/10;
@@ -2293,7 +2251,6 @@
               $years=sprintf("%.1f",log(2800/1500)/log(1+$percent/100));
               $t=Compute("log(2800/1500)/log($b)");
             </pg-code>
-              </setup>
               <stage>
               <statement>
                 <p>
@@ -2359,7 +2316,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $percent=random(6,9,1);
@@ -2368,7 +2324,6 @@
               $b=Compute("1-$percent/100");
               $years=sprintf("%.1f",log(0.5)/log($b));
             </pg-code>
-              </setup>
               <stage>
               <statement>
                 <p>
@@ -2435,13 +2390,11 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $bRounded=sprintf("%.2f",4/(log(9)/log(2)));
               $options=Real(26);
             </pg-code>
-              </setup>
               <stage>
               <statement>
                 <p>
@@ -2517,24 +2470,22 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $note=PopUp(["?","A","B","C","D","E","F"],"C");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   The frequency of a musical tone defines the pitch we hear,
                   which we may give a note value
-                  (such as G or D<hash />).
+                  (such as G or D#).
                   Mathematically, frequency is measured in <em>hertz</em>.
                   A higher number of hertz for a tone means the tone sounds higher.
                 </p>
 
                 <p>
                   On a piano, we have the following notes:
-                  <em>A, A<hash />, B, C, C<hash />, D, D<hash />, E, F, F<hash />, G, G<hash />, A</em>.
+                  <em>A, A#, B, C, C#, D, D#, E, F, F#, G, G#, A</em>.
                   This is called one <em>octave</em> of notes,
                   and these same notes repeat in the next octave
                   (just at higher frequencies).
@@ -2589,7 +2540,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               @people=(30,38,41,49,57,68);
@@ -2598,7 +2548,6 @@
               $rejected=$choices/2.718281828459045;
               $rejectedRounded=sprintf("%.0f",$rejected);
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   A famous application involving the number <m>e</m> comes from
@@ -2705,14 +2654,12 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $rate=random(3,8,1)/100;
               $initial=random(3,7,1)*1000;
               $years=Compute("ln(2)/$rate");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   Suppose a population is given by
@@ -2748,14 +2695,12 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $rateF=random(6,9,1);
               $rateG=random(3,5,1);
               $solution=Compute("ln(450/700)/ln((1+$rateG/100)/(1+$rateF/100))");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   Suppose <m>f(t)</m> has an initial value of <m>450</m> and increases by <var name="$rateF" /> <m>\%</m> per year,
@@ -2784,14 +2729,12 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $rate=random(55,75,1)/10;
               $initial=random(55,85,1)*100;
               $k=Compute("ln(1+$rate/100)");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   The value of an asset is increasing by <var name="$rate" /><m>\%</m> per year and has an intial value of <m>\$</m><var name="$initial" />.
@@ -2834,13 +2777,11 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $left=random(30,50,1);
               $k=Compute("ln($left/100)/1000");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   Suppose a value is decaying,
@@ -2874,7 +2815,6 @@
 <!-- This problem returns the error: Can't generate enough valid points for comparison
       <exercise>
         <webwork>
-          <setup>
             <pg-code>
               $a=random(19,35,1)*100;
               $b=random(3,9,1)/100;
@@ -2883,7 +2823,6 @@
               Context()->variables->set(x=>{limits=>[40.01,40.99]});
               $inverse=Compute("ln((x-$c)/$a)/$b");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Determine a formula for the inverse function of <m>f(x) = <var name="$a" />e^{<var name="$b" />x} + <var name="$c" /></m>.
@@ -2902,7 +2841,6 @@
 -->
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $halfLife=random(25,45,1);
@@ -2911,7 +2849,6 @@
               $formula=Compute("$initial*(0.5)^(t/$halfLife)");
               $hours=Compute("ln(10/$initial)/ln(0.5)*$halfLife");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   A highly unstable element has a half-life of <var name="$halfLife" /> hours.
@@ -2972,7 +2909,6 @@
 
         <exercise>
           <webwork>
-              <setup>
 
             <pg-code>
               $cells=Compute("10^6*e^(0.495105)");
@@ -2980,7 +2916,6 @@
               $true=PopUp(["?","True","False"],"True");
               $concern=PopUp(["?","Yes, because her equation is different from yours.","No, because your formulas are equivalent."],"No, because your formulas are equivalent.");
             </pg-code>
-              </setup>
               <statement>
                 <p>
                   A colony of yeast cells is estimated to contain <m>10^6</m> cells at time <m>t = 0</m>.

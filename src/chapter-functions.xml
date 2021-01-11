@@ -150,7 +150,6 @@
       <exercise>
         <title>Using Function Notation</title>
         <webwork>
-            <setup>
 
             <pg-code>
             Context('Numeric');
@@ -170,7 +169,6 @@
                 displayLabels => 0
             );
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Suppose <m>f</m> is the rule that takes the area of a circle as its input and then outputs the radius of the circle.
@@ -234,7 +232,6 @@
       <exercise>
         <title>Function Notation Application</title>
         <webwork>
-            <setup>
 
             <pg-code>
                 $height=Real(78);
@@ -244,7 +241,6 @@
                 $height2=60;
                 $heightunits=PopUp(["?","inches","feet","none of these"],"inches");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 The function <m>h(y) = 24 + 18y</m> would find the height
@@ -420,7 +416,6 @@
       <exercise>
         <title>Well-Defined</title>
         <webwork>
-            <setup>
 
             <pg-code>
                 $choice = RadioButtons(
@@ -429,7 +424,6 @@
                     displayLabels => 0
                 );
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Suppose <m>f</m> is a function.
@@ -507,7 +501,7 @@
 
       <example>
         <p>
-          The <xref ref="speed-vs-efficiency" text="title">efficiency graph</xref>
+          The <xref ref="speed-vs-efficiency" text="custom">efficiency graph</xref>
           has varying <xref ref="exercise-concavity">concavity</xref>
           depending on what section of inputs we use:
 
@@ -548,12 +542,10 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
                 $f35 = Real(36.5);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KuW5Vbqz/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -593,13 +585,11 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
                 $sol1 = Real(45.2);
                 $sol2 = Real(70.4);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/shNZ7dsh/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -670,13 +660,11 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
                 $avrt1 = Real(1.1);
                 $avrt2 = Real(-0.8);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dGpvT5eC/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
@@ -825,12 +813,11 @@
         Because slope is just <q>rise over run</q> <mdash /> a fraction,
         the units of the average rate of change are also a fraction.
       </p>
-            <!-- <todo>The exercise below needs context.</todo>
+            <!-- TODO: The exercise below needs context. -->
 
-            <exercise>
+            <!-- <exercise>
               <title>Name the Units of Average Rate of Change</title>
               <webwork>
-                <setup>
                   <pg-code>
                     $output = RadioButtons(
                     ["psi","feet"],
@@ -845,7 +832,6 @@
                     $numer = Compute("psi");
                     $denom = Compute("ft");
                   </pg-code>
-                </setup>
                 <statement>
                   <p>The units of the output are <var name="$output" form="buttons" /></p>
                   <p>The units of the input are <var name="$input" form="buttons" /></p>
@@ -886,13 +872,11 @@
           </exercise>-->
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $is=PopUp(["?","Is","Is Not"],"Is Not");
               $isnt=PopUp(["?","Is","Is Not"],"Is");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Does each equation represent <m>y</m> as a function of <m>x</m>?
@@ -950,13 +934,11 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $solve=PopUp(["?","evaluate f(0)","solve f(x) = 0"],"solve f(x) = 0");
               $evaluate=PopUp(["?","evaluate f(0)","solve f(x) = 0"],"evaluate f(0)");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Consider the function <m>f(x)=12-3x^2</m>.
@@ -1002,7 +984,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $xory1=PopUp(["?","x","y","g(x)"],"x");
@@ -1010,7 +991,6 @@
               $ans1=Real(3/2);
               $ans2=Real(-1);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Let <m>f(x)=x^2+4x+5</m> and <m>g(x)=2x+4</m>.
@@ -1073,12 +1053,10 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $ans=PopUp(["?","Eight workers painted 7 houses.","It will take 7 workers 8 hours to paint a house.","It will take 8 workers 7 hours to paint a house.","For 8 houses, 7 workers will paint them."],"It will take 8 workers 7 hours to paint a house.");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Suppose the function <m>h = f(w)</m> represents the hours of labor it will take for <m>w</m> workers to paint a house.
@@ -1112,12 +1090,10 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $ans=PopUp(["?","f(2010) = 2015","f(2015) = 2010"],"f(2010) = 2015");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Suppose the function <m>p = f(t)</m> represents the population of a certain town,
@@ -1146,14 +1122,12 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $ans1=PopUp(["?","f(8)=8131","f(2018)=8131","f(8131)=2018"],"f(8)=8131");
               $ans2=PopUp(["?","f(2013)","f(3)"],"f(3)");
               $ans3=PopUp(["?","After 8 years, the value has decreased by 13929 dollars.","After 8 years, the value is -13929 dollars."],"After 8 years, the value has decreased by 13929 dollars.");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 A base model <m>2010</m> Ford F-150 had a new list price of <m>\$ 22{,}060</m>.
@@ -1235,13 +1209,11 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $ans1=Real(12);
               $ans2=Real(-1);
             </pg-code>
-            </setup>
             <statement>
               <p>
                 Let <m>g(w) = (w+1)^2+3</m>.
@@ -1304,7 +1276,6 @@
 
       <exercise>
         <webwork>
-            <setup>
 
             <pg-code>
               $aroc_num1=Compute("(400-45)/5");
@@ -1312,7 +1283,6 @@
               $aroc_unit1=PopUp(["?","students","years","students/year","years/student"],"students/year");
               $aroc_unit2=PopUp(["?","teachers","years","years/teacher","teachers/year"],"teachers/year");
             </pg-code>
-            </setup>
             <statement>
               <p>
                 In <m>2012</m> the new school had <m>45</m> students and <m>4</m> teachers,
@@ -1371,16 +1341,14 @@
             </solution>
         </webwork>
       </exercise>
-    </subsection>
 
-    <p>
-      Student Learning Outcome:
-      <em>Determine if a variable is dependent or independent.</em>
-    </p>
+      <p>
+        Student Learning Outcome:
+        <em>Determine if a variable is dependent or independent.</em>
+      </p>
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $ind1=PopUp(["?","z","t","f"],"f");
@@ -1388,7 +1356,6 @@
               $ind2=PopUp(["?","j","q","J"],"q");
               $dep2=PopUp(["?","j","q","J"],"J");
             </pg-code>
-          </setup>
           <statement>
             <p>
               In each function, determine the independent and dependent variables.
@@ -1460,120 +1427,114 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $f=PopUp(["?","f","g","both f and g","neither function"],"f");
               $g=PopUp(["?","f","g","both f and g","neither function"],"g");
               $both=PopUp(["?","f","g","both f and g","neither function"],"both f and g");
             </pg-code>
-          </setup>
           <statement>
             <p>
               Tables for functions <m>f</m> and <m>g</m> are shown below.
             </p>
 
-            <sidebyside widths="47% 47%">
+            <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <row bottom="medium">
+                <cell><m>x</m></cell>
+                <cell><m>f(x)</m></cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>12</m></cell>
+              </row>
+              <row>
+                <cell><m>2</m></cell>
+                <cell><m>10</m></cell>
+              </row>
+              <row>
+                <cell><m>3</m></cell>
+                <cell><m>8</m></cell>
+              </row>
+              <row>
+                <cell><m>4</m></cell>
+                <cell><m>6</m></cell>
+              </row>
+              <row>
+                <cell><m>5</m></cell>
+                <cell><m>5</m></cell>
+              </row>
+              <row>
+                <cell><m>6</m></cell>
+                <cell><m>4</m></cell>
+              </row>
+              <row>
+                <cell><m>7</m></cell>
+                <cell><m>5</m></cell>
+              </row>
+              <row>
+                <cell><m>8</m></cell>
+                <cell><m>12</m></cell>
+              </row>
+              <row>
+                <cell><m>9</m></cell>
+                <cell><m>25</m></cell>
+              </row>
+              <row>
+                <cell><m>10</m></cell>
+                <cell><m>119</m></cell>
+              </row>
+            </tabular>
 
-              <tabular top="major" halign="center">
-                <col halign="left" />
-                <col />
-                <row bottom="medium">
-                  <cell><m>x</m></cell>
-                  <cell><m>f(x)</m></cell>
-                </row>
-                <row>
-                  <cell><m>1</m></cell>
-                  <cell><m>12</m></cell>
-                </row>
-                <row>
-                  <cell><m>2</m></cell>
-                  <cell><m>10</m></cell>
-                </row>
-                <row>
-                  <cell><m>3</m></cell>
-                  <cell><m>8</m></cell>
-                </row>
-                <row>
-                  <cell><m>4</m></cell>
-                  <cell><m>6</m></cell>
-                </row>
-                <row>
-                  <cell><m>5</m></cell>
-                  <cell><m>5</m></cell>
-                </row>
-                <row>
-                  <cell><m>6</m></cell>
-                  <cell><m>4</m></cell>
-                </row>
-                <row>
-                  <cell><m>7</m></cell>
-                  <cell><m>5</m></cell>
-                </row>
-                <row>
-                  <cell><m>8</m></cell>
-                  <cell><m>12</m></cell>
-                </row>
-                <row>
-                  <cell><m>9</m></cell>
-                  <cell><m>25</m></cell>
-                </row>
-                <row>
-                  <cell><m>10</m></cell>
-                  <cell><m>119</m></cell>
-                </row>
-              </tabular>
-
-              <tabular top="major" halign="center">
-                <col halign="left" />
-                <col />
-                <row bottom="medium">
-                  <cell><m>x</m></cell>
-                  <cell><m>g(x)</m></cell>
-                </row>
-                <row>
-                  <cell><m>1</m></cell>
-                  <cell><m>45</m></cell>
-                </row>
-                <row>
-                  <cell><m>2</m></cell>
-                  <cell><m>49</m></cell>
-                </row>
-                <row>
-                  <cell><m>3</m></cell>
-                  <cell><m>51</m></cell>
-                </row>
-                <row>
-                  <cell><m>4</m></cell>
-                  <cell><m>53</m></cell>
-                </row>
-                <row>
-                  <cell><m>5</m></cell>
-                  <cell><m>50</m></cell>
-                </row>
-                <row>
-                  <cell><m>6</m></cell>
-                  <cell><m>45</m></cell>
-                </row>
-                <row>
-                  <cell><m>7</m></cell>
-                  <cell><m>40</m></cell>
-                </row>
-                <row>
-                  <cell><m>8</m></cell>
-                  <cell><m>41</m></cell>
-                </row>
-                <row>
-                  <cell><m>9</m></cell>
-                  <cell><m>42</m></cell>
-                </row>
-                <row>
-                  <cell><m>10</m></cell>
-                  <cell><m>44</m></cell>
-                </row>
-              </tabular>
-
-            </sidebyside>
+            <tabular top="major" halign="center">
+              <col halign="left" />
+              <col />
+              <row bottom="medium">
+                <cell><m>x</m></cell>
+                <cell><m>g(x)</m></cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>45</m></cell>
+              </row>
+              <row>
+                <cell><m>2</m></cell>
+                <cell><m>49</m></cell>
+              </row>
+              <row>
+                <cell><m>3</m></cell>
+                <cell><m>51</m></cell>
+              </row>
+              <row>
+                <cell><m>4</m></cell>
+                <cell><m>53</m></cell>
+              </row>
+              <row>
+                <cell><m>5</m></cell>
+                <cell><m>50</m></cell>
+              </row>
+              <row>
+                <cell><m>6</m></cell>
+                <cell><m>45</m></cell>
+              </row>
+              <row>
+                <cell><m>7</m></cell>
+                <cell><m>40</m></cell>
+              </row>
+              <row>
+                <cell><m>8</m></cell>
+                <cell><m>41</m></cell>
+              </row>
+              <row>
+                <cell><m>9</m></cell>
+                <cell><m>42</m></cell>
+              </row>
+              <row>
+                <cell><m>10</m></cell>
+                <cell><m>44</m></cell>
+              </row>
+            </tabular>
 
             <p>
               <ol label="a">
@@ -1640,13 +1601,11 @@
 
     <exercise>
       <webwork>
-          <setup>
 
             <pg-code>
               $stops=Real(2.5);
               $units=PopUp(["?","feet","seconds"],"seconds");
             </pg-code>
-          </setup>
           <statement>
             <p>
               If a ball is held <m>3</m> feet above the ground and kicked straight
@@ -1683,7 +1642,6 @@
 
           <exercise>
             <webwork>
-              <setup>
                 <pg-code>
                   $fof2=Real(4);
                   $solve2=List(-2,0,3);
@@ -1708,12 +1666,9 @@
                   $gr -> lb(new Label (5.5,0.3,'x','black','left','bottom'));
                   $gr -> lb(new Label (0.5,5.5,'y','black','left','bottom'));
                 </pg-code>
-              </setup>
               <statement>
                 <p>The graph below shows the function <m>y=f(x)</m>.</p>
-                <sidebyside widths="40%">
-                  <image pg-name="$gr" />
-                </sidebyside>
+                <image pg-name="$gr" width="40%"/>
                 <p><ol label="a">
                   <li><p>Evaluate <m>f(2)</m>.</p>
                   <p>Answer:  <m>f(2) = </m><var name="$fof2" width="10" /></p></li>
@@ -1818,14 +1773,12 @@
 
           <exercise>
             <webwork>
-              <setup>
                 <pg-code>
                   $aroc_num1=Compute("(400-45)/5");
                   $aroc_num2=Compute("(23-4)/5");
                   $aroc_unit1=PopUp(["?","students","years","students/year","years/student"],"students/year");
                   $aroc_unit2=PopUp(["?","teachers","years","years/teacher","teachers/year"],"teachers/year");
                 </pg-code>
-              </setup>
               <statement>
                 <p>In <m>2012</m> the new school had <m>45</m> students and <m>4</m> teachers, and by <m>2017</m> it had grown to <m>400</m> students and <m>23</m> teachers.</p>
                 <p>Let <m>S = f(y)</m> represent the number of students in the school, and let <m>T = g(y)</m> represent the number of teachers in the school. In both functions, the input variable <m>y</m> represents the number of years after <m>2012</m>.</p>
@@ -1847,13 +1800,11 @@
 
           <exercise>
             <webwork>
-              <setup>
                 <pg-code>
                   $aroc=Real(-2);
                   Context()->variables->are(m=>'Real');
                   $arocm=Formula("m");
                 </pg-code>
-              </setup>
               <statement>
                 <p><ol label="a">
                   <li><p>What is the average rate of change for the function <m>g(x) = -2x + 7</m> on the interval <m>0\leq x \leq 5</m>?</p>
@@ -1876,12 +1827,10 @@
 
           <exercise>
             <webwork>
-              <setup>
                 <pg-code>
                   Context()->variables->are(x=>'Real');
                   $form=Formula("5*x+3");
                 </pg-code>
-              </setup>
               <statement>
                 <p>For a certain linear function <m>f(x)</m>, suppose we know that <m>f(0) = 3</m> and the average rate of change of <m>f</m> is <m>5</m> on the interval <m>1 \leq x \leq 8</m>.</p>
                 <p>Find the formula for the function <m>f(x)</m>.</p>
@@ -1900,7 +1849,6 @@
 
           <exercise>
             <webwork>
-              <setup>
                 <pg-code>
                   $b=random(3,7,1);
                   $c=random(8,12,1);
@@ -1908,7 +1856,6 @@
                   $run=Compute("$b-1");
                   $rise=Compute("5*$run");
                 </pg-code>
-              </setup>
               <statement>
                 <p>Suppose the average rate of change of a function <m>g</m> on the interval <m>1 \leq x \leq <var name="$b" /></m> is <m>5</m>. If <m>g(1) = <var name="$c" /></m>, what is <m>g\left(<var name="$b" />\right)</m>?</p>
                 <p>Answer:  <m>g\left(<var name="$b" />\right) = </m><var name="$d" width="10" /></p>
@@ -1931,12 +1878,10 @@
 
           <exercise>
             <webwork>
-              <setup>
                 <pg-code>
                   $false=PopUp(["?","True","False"],"False");
                   $true=PopUp(["?","True","False"],"True");
                 </pg-code>
-              </setup>
               <statement>
                 <p>True or False:</p>
                 <p><ol label="a">
@@ -2072,5 +2017,6 @@
 
         </exercises>
 -->
+    </subsection>
   </section>
 </chapter>

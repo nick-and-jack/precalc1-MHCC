@@ -29,14 +29,12 @@
 
   <exercise xml:id="area-of-spill">
     <webwork>
-        <setup>
 
           <pg-code>
             Context()->variables->are(t=>'Real', r=>'Real');
             $radiusNum=Real(38);
             $areaNum=Compute("pi*38**2");
           </pg-code>
-        </setup>
         <statement>
           <p>
             An oil spill is in the shape of a circular disk,
@@ -117,7 +115,6 @@
 
   <exercise xml:id="exercise-oil-spill-formulas">
     <webwork>
-        <setup>
 
           <pg-code>
             Context()->variables->are(t=>'Real', r=>'Real');
@@ -125,7 +122,6 @@
             $radiusForm=Compute("10+4t");
             $areaComposed=Compute("pi($radiusForm)^2");
           </pg-code>
-        </setup>
         <statement>
           <p>
             The radius of the circular spill started at <m>10</m> meters,
@@ -208,13 +204,11 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $goff=Real(24);
             $fofg=Real(6);
           </pg-code>
-        </setup>
         <statement>
           <p>
             Let <m>f(x)=x+3</m> and <m>g(x)=x^2-1</m>.
@@ -275,7 +269,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             @x=map{$_+1}NchooseK(8,4);
@@ -284,7 +277,6 @@
             $g[0]=random(16,20,1);
             $g[1]=$x[1];
           </pg-code>
-        </setup>
         <statement>
           <p>
             Consider two functions <m>f</m> and <m>g</m>,
@@ -374,14 +366,12 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $input=random(1,10,1);
             $g=Compute("3*$input");
             $fofg=Compute("$g**2-$g");
           </pg-code>
-        </setup>
         <statement>
           <p>
             Think about a function like a <em>machine</em>
@@ -553,7 +543,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             $a=random(5,9,1);
@@ -563,7 +552,6 @@
             $BofL=Compute("x^$b+$a");
             $LofB=Compute("(x+$a)^$b");
           </pg-code>
-        </setup>
         <statement>
           <p>
             Let <m>B(x) = <var name="$B" /></m> and <m>L(x) = <var name="$L" /></m>.
@@ -623,7 +611,6 @@
 
   <exercise>
     <webwork>
-        <setup>
 
           <pg-code>
             @xg=map{($_-6)}NchooseK(14,2);
@@ -635,7 +622,6 @@
             $FofF=abs($F[1]-1)-4;
             $GofG=2-abs($G[1]);
           </pg-code>
-        </setup>
         <statement>
           <p>
             [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WJymUNhx/width/432/height/373/border/888888/sdz/false/" width="432px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
