@@ -279,11 +279,12 @@
             $yes2 = PopUp(["?","yes","no"],"yes");
             $no = PopUp(["?","yes","no"],"no");
             $domain = PopUp(["?","only positive numbers","all real numbers","only negative numbers","only numbers ending in C"],"all real numbers");
+            $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FRZgk5eU/width/413/height/350/border/888888" width="413px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
           </pg-code>
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FRZgk5eU/width/413/height/350/border/888888" width="413px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -347,10 +348,11 @@
             $pos2 = PopUp(["?","positive","negative"],"positive");
             $no = PopUp(["?","yes","no"],"no");
             $range = PopUp(["?","only positive numbers","all real numbers","only negative numbers","all real numbers greater than or equal to zero"],"all real numbers greater than or equal to zero");
+            $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FRZgk5eU/width/413/height/350/border/888888" width="413px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
           </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/FRZgk5eU/width/413/height/350/border/888888" width="413px" height="350px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -475,9 +477,12 @@
 
     <exercise>
       <webwork>
+          <pg-code>
+            $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KeUqTgkB/width/413/height/410/border/888888" width="413px" height="410px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+          </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/KeUqTgkB/width/413/height/410/border/888888" width="413px" height="410px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -893,11 +898,14 @@
             $dom2 = Compute("2&lt;x&lt;=5");
             $rng1 = Compute("-3&lt;=y&lt;=-0.5");
             $rng2 = Compute("2&lt;y&lt;=8");
+            $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/AsPd6ZyS/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+            $ggb2 = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/sVku4sA4/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+            $ggb3 = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WhcSmWsn/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
           </pg-code>
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/AsPd6ZyS/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -934,7 +942,7 @@
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/sVku4sA4/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb2" data="pgml"/>
             </p>
 
             <p>
@@ -969,7 +977,7 @@
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/WhcSmWsn/width/413/height/370/border/888888" width="413px" height="370px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb3" data="pgml"/>
             </p>
 
             <p>
@@ -1001,11 +1009,14 @@
               $rng1 = Compute("0.78&lt;=y&lt;4.62");
               $rng2 = Compute("0.78&lt;=y&lt;4.62");
               $rng3 = Compute("1.95&lt;=y&lt;4.62");
+              $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+              $ggb2 = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+              $ggb3 = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -1032,7 +1043,7 @@
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb2" data="pgml"/>
             </p>
 
             <p>
@@ -1060,7 +1071,7 @@
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/TdQ8ajW3/width/413/height/270/border/888888" width="413px" height="270px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb3" data="pgml"/>
             </p>
 
             <p>

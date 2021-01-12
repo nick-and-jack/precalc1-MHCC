@@ -58,10 +58,11 @@
             <pg-code>
                 $train = RadioButtons(["Blue Train (dotted line)","Red Train (dashed line)","Green Train (solid line)"],0);
                 $slope = RadioButtons(["mope","dope","slope","scope"],2);
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mYBwwJSp/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mYBwwJSp/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -195,10 +196,11 @@
                 Context()->flags->set(reduceConstantFunctions=>0);
                 Context()->flags->set(formatStudentAnswer=>"parsed");
                 $difference=Formula("f(5)-f(2)");
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -315,10 +317,11 @@
             <pg-code>
                 $chngDist = Real(19.5);
                 $meaning = PopUp(["?", "Change in hours since 8 AM.", "Delta t", "Delta times t", "There is no meaning to this expression"], 1);
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/431/height/250/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -552,11 +555,14 @@
                 Context()->variables->are(x=>'Real',y=>'Real');
                 $lineA = ImplicitPlane("y=-x+7");
                 $lineB = ImplicitPlane("y=2x+1");
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vB6mAHUg/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+                $ggb2 = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vdbw2XUs/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+                $ggb3 = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GxRSTPsw/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vB6mAHUg/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -621,7 +627,7 @@
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/vdbw2XUs/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb2" data="pgml"/>
             </p>
 
             <p>
@@ -705,7 +711,7 @@
           <stage>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/GxRSTPsw/width/413/height/331/border/888888" width="413px" height="331px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb3" data="pgml"/>
             </p>
 
             <p>
@@ -771,10 +777,11 @@
               Context("Inequalities");
               Context()->variables->are(m => "Real");
               $intMarch = Compute("3&lt;=m&lt;=12");
+              $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PPsZ6cgY/width/431/height/245/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="245px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/PPsZ6cgY/width/431/height/245/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="245px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -1049,10 +1056,11 @@
                 $meaning = PopUp(["?", "distance of the train from downtown", "time the train has traveled", "average speed of the train", "triangle D divided by triangle t"], 3);
                 $lastUnit = PopUp(["?", "miles", "hours per mile", "hours", "miles per hour"], 4);
                 $interval = PopUp(["?", "2 PM and 5 PM", "10 AM and 1 PM", "2 and 5", "2 mph and 5 mph"], 2);
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/413/height/250/border/888888" width="413px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ZVx2N298/width/413/height/250/border/888888" width="413px" height="250px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>

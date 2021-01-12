@@ -492,13 +492,14 @@
                 if($envir{problemSeed}==1){$b=36;$c=0.6;};
                 $answer=Real(ln($b)/ln(10));
                 $answer2=Real(ln($c)/ln(10));
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/SPx8Srb3/width/431/height/275/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="275px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
               We wish to solve the equation <m><var name="$a"/>^x=<var name="$b"/></m>.
               To that end, examine the graph:
             </p>
-            <!-- <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/SPx8Srb3/width/431/height/275/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="275px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p> -->
+            <!-- <p><var name="$ggb" data="pgml"/></p> -->
             <p>
               Click on this link to
               <url href="https://www.desmos.com/calculator/soxcvqkg9i">Desmos.com</url>
@@ -1300,6 +1301,9 @@
     <exercise>
       <title>Graph of <m>f(x)=\log_{2}(x)</m></title>
       <webwork>
+        <pg-code>
+          $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mJYWSCfb/width/431/height/300/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="300px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+        </pg-code>
           <statement>
             <p>
               <m>\log_{2}</m> is <q>Log base <m>2</m></q>
@@ -1355,7 +1359,7 @@
               </tabular>
 
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/mJYWSCfb/width/431/height/300/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="300px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -1369,6 +1373,9 @@
     <exercise>
       <title>Zoom in on <m>f(x)=\log_{2}(x)</m> for small values of <m>x</m></title>
       <webwork>
+        <pg-code>
+          $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MrhswJHV/width/431/height/360/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="360px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+        </pg-code>
           <statement>
             <p>
               <m>\log_{2}</m> is <q>Log base <m>2</m></q>
@@ -1420,7 +1427,7 @@
               </tabular>
 
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/MrhswJHV/width/431/height/360/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="360px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -1449,10 +1456,11 @@
                 ["\(\log(6.1)\)","\(\log_{2}(6.1)\)"],
                 1, labels => ["log(x)","log2(x)"],displayLabels => 0
                 );
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/RdRRdBJM/width/431/height/360/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="360px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/RdRRdBJM/width/431/height/360/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="360px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
