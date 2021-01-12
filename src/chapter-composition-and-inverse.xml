@@ -1023,10 +1023,11 @@
             <pg-code>
               $didItGraph=PopUp(["?","No","Yes"],2);
               $reflection=PopUp(["?","line y = x","x-axis","y-axis"],1);
+              $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ssqjr6pZ/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
             <statement>
               <p>
-                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/ssqjr6pZ/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+                <var name="$ggb" data="pgml"/>
               </p>
 
               <p>
@@ -1463,10 +1464,11 @@
 
             <pg-code>
               $reason=PopUp(["?","A horizontal line would cross the graph of y=f(x) twice.","A vertical line would cross the graph of the inverse twice.","All of the above."],3);
+              $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/fTMWxxhS/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
             <statement>
               <p>
-                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/fTMWxxhS/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+                <var name="$ggb" data="pgml"/>
               </p>
 
               <p>
@@ -1612,10 +1614,11 @@
 
             <pg-code>
               $interval=PopUp(["?","x >= 0","x >= -2"],1);
+              $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jGC9Xk8r/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
             <statement>
               <p>
-                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/jGC9Xk8r/width/425/height/373/border/888888/sdz/false/" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+                <var name="$ggb" data="pgml"/>
               </p>
 
               <p>
@@ -1852,16 +1855,16 @@
                 <li>
                   <p>
                     From your experience, you know that if you leave at your usual
-                    time (<m>6{:}00</m> <init>a.m.</init>), the ride takes about <m>6</m>
+                    time (<m>6{:}00</m> <am/>), the ride takes about <m>6</m>
                     minutes. The ride time increases when you leave later in the
                     morning, taking about <m>12</m> minutes if you leave at
-                    <m>9{:}00</m> <init>a.m.</init>.
+                    <m>9{:}00</m> <am/>.
                   </p>
 
                   <p>
                     Let <m>L = g(T)</m> represent the length of time (in minutes)
                     the trip takes you, where the input <m>T</m> is the number of
-                    hours after <m>6{:}00</m> <init>a.m.</init>
+                    hours after <m>6{:}00</m> <am/>.
                   </p>
 
                   <p>

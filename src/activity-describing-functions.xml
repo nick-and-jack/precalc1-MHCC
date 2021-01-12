@@ -70,23 +70,26 @@
                         $answer1 = Compute("-2&lt;x&lt;=1");
                         $answer2 = Compute("x&lt;-2orx&gt;=1");
                         $answer3 = Compute("x&lt;=-2orx&gt;=1");
+                        $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/XT6ddYvA/width/431/height/100/border/888888" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+                        $ggb2 = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xBQKE3fm/width/431/height/100/border/888888/sri/true" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
+                        $ggb3 = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dDq6e5G4/width/431/height/100/border/888888/sri/true" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
                     </pg-code>
 
                 <statement>
                     <p>Remember that open circles mean <q>include</q> while closed circles mean <q>not include</q>.</p>
                     <p><ol label="a">
                         <li>
-                            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/XT6ddYvA/width/431/height/100/border/888888" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+                            <p><var name="$ggb" data="pgml"/></p>
                             <p>Represent the shaded region above with inequalities using the variable <m>x</m>.</p>
                             <p><var name="$answer1" width="30" /></p>
                         </li>
                         <li>
-                            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/xBQKE3fm/width/431/height/100/border/888888/sri/true" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+                            <p><var name="$ggb2" data="pgml"/></p>
                             <p>Represent the shaded region above with inequalities using the variable <m>x</m>.</p>
                             <p><var name="$answer2" width="30" /></p>
                         </li>
                         <li>
-                            <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/dDq6e5G4/width/431/height/100/border/888888/sri/true" width="431px" height="100px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+                            <p><var name="$ggb3" data="pgml"/></p>
                             <p>Represent the shaded region above with inequalities using the variable <m>x</m>.</p>
                             <p><var name="$answer3" width="30" /></p>
                         </li>
@@ -309,10 +312,11 @@
             <pg-code>
                 $positive = RadioButtons(["below the horizontal axis.","above the horizontal axis."],1);
                 $negative = RadioButtons(["below the horizontal axis.","above the horizontal axis."],0);
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/sHzc76gr/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/sHzc76gr/width/431/height/313/border/888888/sri/true" width="431px" height="313px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -384,10 +388,11 @@
               $inc2 = Compute("4&lt;=x&lt;=6");
               $dec1 = Compute("2&lt;=x&lt;=4");
               $dec2 = Compute("6&lt;=x&lt;=8");
+              $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pbwn6UAF/width/431/height/230/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/pbwn6UAF/width/431/height/230/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="431px" height="230px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -473,10 +478,11 @@
             <pg-code>
                 $cUp = RadioButtons(["concave up.","concave down."],0);
                 $cDwn = RadioButtons(["concave up.","concave down."],1);
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NrncRJR3/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NrncRJR3/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -531,10 +537,11 @@
                 $cUp = Compute("0&lt;=t&lt;=9");
                 $cUp2 = Compute("21&lt;=t&lt;=24");
                 $cDwn = Compute("9&lt;=t&lt;=21");
+                $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tmanmNPG/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tmanmNPG/width/431/height/300/border/888888/sri/true" width="431px" height="300px" style="border:0px;" width="431px" height="313px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -596,7 +603,7 @@
                     On what intervals is the function increasing?
                     For increasing or decreasing intervals of continuous functions,
                     we always include the ends of the intervals
-                    (unless the interval is unbounded <init>i.e.</init> is at infinity).
+                    (unless the interval is unbounded i.e.<nbsp/>is at infinity).
                   </p>
 
                   <p>
@@ -619,7 +626,7 @@
                     On what intervals is the function concave up?
                     For concave up or down intervals of continuous functions,
                     we always include the ends of the intervals
-                    (unless the interval is unbounded <init>i.e.</init> is at infinity).
+                    (unless the interval is unbounded i.e.<nbsp/>is at infinity).
                   </p>
 
                   <p>

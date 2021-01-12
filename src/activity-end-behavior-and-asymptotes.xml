@@ -90,10 +90,11 @@
             $endBehavior=PopUp(["?","end behavior"],"end behavior");
             $power=PopUp(["?","x^2","x^3"],"x^3");
             $term=Compute("x^3");
+            $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Abx2UAXB/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
           </pg-code>
         <statement>
           <p>The graph below shows: <me>f(x) = x(x+3)(x-4)</me></p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Abx2UAXB/width/425/height/373/border/888888" width="425px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+          <p><var name="$ggb" data="pgml"/></p>
           <p>Use the checkbox to graph the power function <m>y = x^3</m>.</p>
           <p>Now use the slider to zoom out, and observe the shape of the graph.</p>
           <p>After zooming out, how do the graphs of <m>y = x(x+3)(x-4)</m> and <m>y = x^3</m> compare to each other?</p>
@@ -114,6 +115,7 @@
 
           <pg-code>
             $function=PopUp(["?","x^2","x^3","x^4","x^5"],"x^4");
+            $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Swe8tMPk/width/416/height/373/border/888888" width="416px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
           </pg-code>
         <statement>
           <p>There is a lot going on in the following graph.</p>
@@ -124,7 +126,7 @@
           <mrow>y \amp= x^4</mrow>
           <mrow>y \amp= x^5</mrow></md></p>
           <p>Before maniuplating the graph, make a guess:  Which of these power functions will the function <m>g(x)</m> resemble if we zoom out?</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/Swe8tMPk/width/416/height/373/border/888888" width="416px" height="373px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+          <p><var name="$ggb" data="pgml"/></p>
           <p>Make your choice from among the power functions by selecting its checkbox. Then, use the slider to zoom out.</p>
           <p>If you guessed correctly, the graph of <m>g(x)</m> will begin to look more and more like your power function.</p>
           <p>Which power function has the same end behavior as <m>g(x)</m>?</p>
@@ -184,10 +186,11 @@
             $left=PopUp(["?","Up","Down"],"Down");
             $right=PopUp(["?","Up","Down"],"Up");
             $end=PopUp(["?","x","x^2","x^3"],"x^3");
+            $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NcwafvMp/width/427/height/392/border/888888" width="427px" height="392px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
           </pg-code>
         <statement>
           <p>This problem concerns the polynomial <me>f(x) = x(x - 2)(x + 3)</me>and your goal is to predict the end-behavior. Think about the power function which has the same end-behavior as <m>f(x)</m>.</p>
-          <p>[@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/NcwafvMp/width/427/height/392/border/888888" width="427px" height="392px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*</p>
+          <p><var name="$ggb" data="pgml"/></p>
           <p>Use the checkboxes to choose whether the graph will point upward or downward as <m>x</m> gets far from zero on the left and right.</p>
           <p>On the left-hand side, the graph points <var name="$left" form="popup" /></p>
           <p>On the right-hand side, the graph points <var name="$right" form="popup" /></p>

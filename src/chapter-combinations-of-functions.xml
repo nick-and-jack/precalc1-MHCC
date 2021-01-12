@@ -258,6 +258,7 @@
               $r2=40*$u2;
               $p1=$r1-$c1;
               $p2=$r2-$c2;
+              $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/YsPBmPHE/width/434/height/440/border/888888/sri/true/sdz/false/" width="434px" height="440px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
           <statement>
             <p>
@@ -278,7 +279,7 @@
             </p>
 
             <p>
-              [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/YsPBmPHE/width/434/height/440/border/888888/sri/true/sdz/false/" width="434px" height="440px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+              <var name="$ggb" data="pgml"/>
             </p>
 
             <p>
@@ -556,6 +557,7 @@
         <webwork>
 
             <pg-code>
+              $ggb = q![@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tAcMxrpj/width/411/height/410/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="411px" height="410px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*!;
             </pg-code>
             <statement>
               <p>
@@ -568,7 +570,7 @@
               </p>
 
               <p>
-                [@MODES(HTML=&gt;'&lt;iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/tAcMxrpj/width/411/height/410/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="411px" height="410px" style="border:0px;"&gt; &lt;/iframe&gt;', TeX =&gt;"A GeoGebra applet.", PTX =&gt;"A GeoGebra applet.");@]*
+                <var name="$ggb" data="pgml"/>
               </p>
 
               <p>
@@ -785,12 +787,12 @@
           </p>
 
           <p>
-            On a particular day between <m>6{:}00</m> P.M. and midnight,
+            On a particular day between <m>6{:}00</m> <pm/> and midnight,
             suppose the temperature outside is modeled by the function
             <me>
               T = g(h) = 24 - 3h
             </me>
-            where <m>h</m> is the number of hours after <m>6{:}00</m> P.M.
+            where <m>h</m> is the number of hours after <m>6{:}00</m> <pm/>.
           </p>
 
           <p>
